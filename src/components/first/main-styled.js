@@ -1,4 +1,9 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const rotate = keyframes`
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+`;
 
 export const Wrapper = styled.div`
   position: absolute;
@@ -73,7 +78,7 @@ export const WrapPhone = styled.div`
 `;
 
 export const WrapTitle = styled.div`
-  margin-top: 8.6rem;
+  margin-top: 3.6rem;
   position: relative;
   z-index: 99999999;
   text-align: center;
@@ -97,5 +102,61 @@ export const WrapTitle = styled.div`
     font-family: 'Inter', sans-serif;
     font-weight: 300;
     margin-top: 1.063rem;
+  }
+`;
+
+export const WrapLoadMore = styled.div`
+  margin-top: 4.25rem;
+  position: relative;
+  z-index: 99999999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const InnerLoadMore = styled.div`
+  width: 177px;
+  height: 177px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .rotated {
+    animation: ${rotate} 8s infinite linear;
+    position: relative;
+    left: inherit;
+    top: inherit;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 177px;
+    height: 177px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    transition: border 1s;
+  }
+  &:hover {
+    background: #000;
+    border-radius: 50%;
+    
+    cursor: pointer;
+    .rotated {
+      opacity: 1;
+      width: 135%;
+    }
+  }
+  &:hover:after { 
+    border: none 
   }
 `;

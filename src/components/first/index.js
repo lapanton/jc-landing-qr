@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
-import { Wrapper, Inner, WrapSocial, WrapPhone, WrapList, WrapTitle } from './main-styled';
+import { Wrapper, Inner, WrapSocial, WrapPhone, WrapList, WrapTitle, WrapLoadMore, InnerLoadMore } from './main-styled';
 import logo from "./logo.png";
 import vk from "./vk.svg";
 import insta from "./insta.svg";
 import youtube from "./youtube.svg";
 import email from "./email.svg";
+import arrowDown from "./arrow-down.svg";
+import rotateText from "./rotate-text.svg";
 
 export const Main = () => {
   useEffect(() => {
@@ -21,7 +23,7 @@ export const Main = () => {
       MOUSE_IMPACT_RADIUS: 0, //positive number; measured in pixels
 
       //brick color settings
-      BRICK_COLOR: "#333636", //any color code like "green", "#e4f2c4", "rgb(249, 250, 251)" or "hsl(120, 75%, 50%)"
+      BRICK_COLOR: "#3e4040", //any color code like "green", "#e4f2c4", "rgb(249, 250, 251)" or "hsl(120, 75%, 50%)"
       BRICK_COLOR_RANDOMIZATION: 0, //number between 0 and 1
       BRICK_COLOR_HUE_RANDOMIZATION: 1, //number between 0 and 1
       BRICK_COLOR_SATURATION_RANDOMIZATION: 1, //number between 0 and 1
@@ -97,6 +99,12 @@ export const Main = () => {
           <h2>Дизайнерские ювелирные украшения в стиле Русский авангард</h2>
           <p>Мы отказались от классических форм ювелирных украшений, предлагая вместо этого современный<br/> минимализм, естественность и возможность эксперементировать с образами. </p>
         </WrapTitle>
+        <WrapLoadMore>
+            <InnerLoadMore>
+              <img src={arrowDown} alt="JewelCocktail" className="arrowDown"/>
+              <img src={rotateText} alt="JewelCocktail" className="rotated"/>
+            </InnerLoadMore>
+        </WrapLoadMore>
       </Wrapper>
     </div>
   );
