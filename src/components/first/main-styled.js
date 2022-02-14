@@ -117,6 +117,7 @@ export const WrapLoadMore = styled.div`
 export const InnerLoadMore = styled.div`
   width: 177px;
   height: 177px;
+  overflow: hidden;
   position: relative;
   display: flex;
   align-items: center;
@@ -140,8 +141,8 @@ export const InnerLoadMore = styled.div`
     position: absolute;
     top: 0;
     left: 0;
-    width: 177px;
-    height: 177px;
+    width: 175px;
+    height: 175px;
     border-radius: 50%;
     border: 1px solid #fff;
     transition: border 1s;

@@ -21,10 +21,23 @@
 
     <script src="js/libs/jsband-min.js"></script>
     <script src="js/pave-min.js"></script>
+    <script src="js/dat.gui.min.js"></script>
 
   </head>
   <body style="font-size: 16px">
+  <style>
+    #main-canvas {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 999;
+    }
+  </style>
+    <canvas id="main-canvas"></canvas>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script src="js/script.js"></script>
   </body>
 </html>
