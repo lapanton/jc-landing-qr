@@ -1,12 +1,19 @@
 import React, { useEffect } from 'react';
-import { Wrapper, Inner, WrapSocial, WrapPhone, WrapList, WrapTitle, WrapLoadMore, InnerLoadMore } from './main-styled';
+import { Wrapper, Inner, WrapSocial, WrapPhone, WrapList, WrapTitle, WrapLoadMore, InnerLoadMore, WrapMobile } from './main-styled';
 import logo from "./logo.png";
-import vk from "./vk.svg";
-import insta from "./insta.svg";
-import youtube from "./youtube.svg";
+import instan from "./instagram-n.svg";
+import instao from "./instagram-o.svg";
+import googlen from "./google-n.svg";
+import googleo from "./google-o.svg";
+import telegramn from "./telegram-n.svg";
+import telegramo from "./telegram-o.svg";
+import youtubeo from "./youtube-o.svg";
 import email from "./email.svg";
 import arrowDown from "./arrow-down.svg";
 import rotateText from "./rotate-text.svg";
+import mobMenu from "./mob-menu.svg";
+import phoneMobile from "./phone-icon.svg";
+
 
 export const Main = () => {
   useEffect(() => {
@@ -62,10 +69,10 @@ export const Main = () => {
   }, []);
 
   return (
-    <div id="container" style={{position: "absolute", width: "100%", height: "43rem"}}>
+    <div id="container" style={{position: "absolute", width: "100%", height: "43rem", zIndex: 99999 }}>
       <Wrapper>
         <Inner>
-          <a href="/">
+          <a href="/" className="wrapLogo">
             <img src={logo} alt="JewelCocktail" />
           </a>
           <WrapList>
@@ -75,17 +82,17 @@ export const Main = () => {
             <div>Контакты</div>
           </WrapList>
           <WrapSocial>
-            <a href="https://vk.com/jewelrycocktail" target="_blank" rel="noopener noreferrer" className="vk-social">
-              <img src={vk} alt="JewelCocktail"  />
-            </a>
             <a href="https://www.instagram.com/jewelcocktail_official/" target="_blank" rel="noopener noreferrer" className="insta-social">
-              <img src={insta} alt="JewelCocktail" />
+              <img src={instao} alt="JewelCocktail" />
             </a>
             <a href="https://www.youtube.com/channel/UC44U3iU75Nx-Fv8LFb28I6w" target="_blank" rel="noopener noreferrer" className="youtube-social">
-              <img src={youtube} alt="JewelCocktail" />
+              <img src={youtubeo} alt="JewelCocktail" />
             </a>
             <a href="mailto:info@jewelcocktail.com" className="email-social">
-              <img src={email} alt="JewelCocktail" />
+              <img src={googleo} alt="JewelCocktail" />
+            </a>
+            <a href="https://vk.com/jewelrycocktail" target="_blank" rel="noopener noreferrer" className="vk-social">
+              <img src={telegramo} alt="JewelCocktail"  />
             </a>
           </WrapSocial>
           <WrapPhone>
@@ -93,6 +100,14 @@ export const Main = () => {
               +7 999 123 45 67
             </a>
           </WrapPhone>
+          <WrapMobile>
+            <a href="tel:+79991234567">
+              <img src={phoneMobile} alt="JewelCocktail"/>
+            </a>
+            <div className="menuMobWrapper">
+              <img src={mobMenu} alt="JewelCocktail"/>
+            </div>
+          </WrapMobile>
         </Inner>
         <WrapTitle>
           <h1>Jewel Cocktail</h1>
