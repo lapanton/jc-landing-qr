@@ -153,6 +153,7 @@ export const WrapTitle = styled.div`
     color: #fff;
     @media screen and (max-width: 768px) {
       font-size: 1rem;
+      padding: 0 36px;
     }
   }
   p {
@@ -162,6 +163,9 @@ export const WrapTitle = styled.div`
     margin-top: 1.063rem;
     @media screen and (max-width: 768px) {
       padding: 20px;
+      br {
+        display: none;
+      }
     }
   }
 `;
@@ -198,6 +202,9 @@ export const InnerLoadMore = styled.div`
     transition: opacity 1s;
     @media screen and (max-width: 768px) {
       opacity: 1;
+      width: 157px;
+      height: 157px;
+      animation: ${rotate} 12s infinite linear;
     }
   }
   &:after {
@@ -225,10 +232,15 @@ export const InnerLoadMore = styled.div`
     border: none 
   }
   @media screen and (max-width: 768px) {
+    width: 135px;
+    height: 135px;
     &:after {
-      width: 135px;
-      height: 135px;
+      width: 131px;
+      height: 131px;
       border-radius: 50%;
+    }
+    .arrowDown {
+      width: 20px;
     }
   }
 `;
@@ -237,6 +249,7 @@ export const WrapMobile = styled.div`
   display: none;
   @media screen and (max-width: 768px) {
     display: flex;
+    align-items: center;
   }
   a {
     width: 27px;
