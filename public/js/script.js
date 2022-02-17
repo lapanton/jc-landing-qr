@@ -28,13 +28,6 @@ SOFTWARE.
 
 const promoPopup = document.getElementsByClassName('promo')[0];
 
-
-if (isMobile()) {
-    setTimeout(() => {
-        promoPopup.style.display = 'table';
-    }, 20000);
-}
-
 // Simulation section
 
 const canvas = document.getElementById('main-canvas');

@@ -1,14 +1,10 @@
 import React, { useEffect } from 'react';
 import { Wrapper, Inner, WrapSocial, WrapPhone, WrapList, WrapTitle, WrapLoadMore, InnerLoadMore, WrapMobile } from './main-styled';
 import logo from "./logo.png";
-import instan from "./instagram-n.svg";
 import instao from "./instagram-o.svg";
-import googlen from "./google-n.svg";
 import googleo from "./google-o.svg";
-import telegramn from "./telegram-n.svg";
 import telegramo from "./telegram-o.svg";
 import youtubeo from "./youtube-o.svg";
-import email from "./email.svg";
 import arrowDown from "./arrow-down.svg";
 import rotateText from "./rotate-text.svg";
 import mobMenu from "./mob-menu.svg";
@@ -69,7 +65,7 @@ export const Main = () => {
   }, []);
 
   return (
-    <div id="container" style={{position: "absolute", width: "100%", height: "43rem", zIndex: 99999 }}>
+    <div id="container" style={{position: "absolute", top: "0", width: "100%", height: "43rem", zIndex: 99999 }}>
       <Wrapper>
         <Inner>
           <a href="/" className="wrapLogo">

@@ -1,6 +1,7 @@
 import React from 'react';
 import { createGlobalStyle } from "styled-components";
 import { Main } from "./components/first";
+import  {BlackSquare } from "./components/blackSquare";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -18,6 +19,7 @@ export const App = () => {
     <div>
       <GlobalStyle />
       <Main />
+      <BlackSquare />
     </div>
   );
 }
