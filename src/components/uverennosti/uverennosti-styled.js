@@ -12,6 +12,8 @@ export const Wrapper = styled.div`
     color: #fff;
     display: flex;
     width: 100%;
+    letter-spacing: 0.425em;
+    text-transform: uppercase;
   }
   p {
     font-family: 'Inter', sans-serif;
@@ -43,13 +45,17 @@ export const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     img {
-      max-width: 16rem;
-      height: 13rem;
+      max-width: 100%;
+      height: auto;
       margin: 0 auto 2rem auto;
     }
     p {
-      margin: 0;
+      margin: 0 !important;
       padding: 20px;
+    }
+    h3 {
+      font-size: 1rem;
+      line-height: 1.2rem;
     }
   }
 `;

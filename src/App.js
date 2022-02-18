@@ -4,6 +4,7 @@ import { Main } from "./components/first";
 import  {BlackSquare } from "./components/blackSquare";
 import {WithUs} from "./components/withUs";
 import {Uverenosti} from "./components/uverennosti";
+import {Freedom} from "./components/freedom";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -24,6 +25,7 @@ export const App = () => {
       <BlackSquare />
       <WithUs/>
       <Uverenosti/>
+      <Freedom/>
     </div>
   );
 }
