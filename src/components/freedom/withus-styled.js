@@ -60,3 +60,19 @@ export const Inner = styled.div`
 export const InnerContent = styled.div`
 
 `;
+
+export const WrapperMob = styled.div`
+  position: relative;
+  z-index: 99998;
+  background: #181515;
+  color: #fff;
+  h3 {
+    color: #fff;
+    padding-left: 15px;
+    padding-top: 3rem;
+  }
+  p {
+    color: #fff;
+    padding: 20px 20px 3rem 15px;
+  }
+`;

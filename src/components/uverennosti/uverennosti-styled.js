@@ -56,7 +56,7 @@ export const Wrapper = styled.div`
     }
     h3 {
       font-size: 1rem;
-      line-height: 1.2rem;
+      line-height: 1.4rem;
       text-align: left;
     }
   }
@@ -99,6 +99,7 @@ export const WrapText = styled.div`
     padding-left: 0;
     text-align: center;
     h3 {
+      width: auto;
       margin: 0 auto;
       display: flex;
       align-items: center;
