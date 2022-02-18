@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components";
 import { Main } from "./components/first";
 import  {BlackSquare } from "./components/blackSquare";
 import {WithUs} from "./components/withUs";
+import {Uverenosti} from "./components/uverennosti";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -22,6 +23,7 @@ export const App = () => {
       <Main />
       <BlackSquare />
       <WithUs/>
+      <Uverenosti/>
     </div>
   );
 }

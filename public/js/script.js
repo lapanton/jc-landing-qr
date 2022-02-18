@@ -1,36 +1,6 @@
-/*
-MIT License
-
-Copyright (c) 2017 Pavel Dobryakov
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-*/
-
 'use strict';
 
-// Mobile promo section
-
-const promoPopup = document.getElementsByClassName('promo')[0];
-
-// Simulation section
-
-const canvas = document.getElementById('main-canvas');
+const canvas = document.getElementsByTagName('canvas')[0];
 resizeCanvas();
 
 let config = {
@@ -39,7 +9,7 @@ let config = {
     CAPTURE_RESOLUTION: 512,
     DENSITY_DISSIPATION: 1,
     VELOCITY_DISSIPATION: 0.2,
-    PRESSURE: 0.8,
+    PRESSURE: 0.28,
     PRESSURE_ITERATIONS: 20,
     CURL: 30,
     SPLAT_RADIUS: 0.25,
@@ -49,7 +19,7 @@ let config = {
     COLOR_UPDATE_SPEED: 10,
     PAUSED: false,
     BACK_COLOR: { r: 0, g: 0, b: 0 },
-    TRANSPARENT: false,
+    TRANSPARENT: true,
     BLOOM: true,
     BLOOM_ITERATIONS: 8,
     BLOOM_RESOLUTION: 256,
@@ -130,7 +100,6 @@ function getWebGLContext (canvas) {
         formatR = getSupportedFormat(gl, gl.RGBA, gl.RGBA, halfFloatTexType);
     }
 
-    // ga('send', 'event', isWebGL2 ? 'webgl2' : 'webgl', formatRGBA == null ? 'not supported' : 'supported');
 
     return {
         gl,
@@ -196,8 +165,8 @@ function startGUI () {
     gui.add(config, 'PAUSED').name('paused').listen();
 
     gui.add({ fun: () => {
-        splatStack.push(parseInt(Math.random() * 20) + 5);
-    } }, 'fun').name('Random splats');
+            splatStack.push(parseInt(Math.random() * 20) + 5);
+        } }, 'fun').name('Random splats');
 
     let bloomFolder = gui.addFolder('Bloom');
     bloomFolder.add(config, 'BLOOM').name('enabled').onFinishChange(updateKeywords);
@@ -214,9 +183,9 @@ function startGUI () {
     captureFolder.add({ fun: captureScreenshot }, 'fun').name('take screenshot');
 
     let github = gui.add({ fun : () => {
-        window.open('https://github.com/PavelDoGreat/WebGL-Fluid-Simulation');
-        ga('send', 'event', 'link button', 'github');
-    } }, 'fun').name('Github');
+            window.open('https://github.com/PavelDoGreat/WebGL-Fluid-Simulation');
+            ga('send', 'event', 'link button', 'github');
+        } }, 'fun').name('Github');
     github.__li.className = 'cr function bigFont';
     github.__li.style.borderLeft = '3px solid #8C8C8C';
     let githubIcon = document.createElement('span');
@@ -224,9 +193,9 @@ function startGUI () {
     githubIcon.className = 'icon github';
 
     let twitter = gui.add({ fun : () => {
-        ga('send', 'event', 'link button', 'twitter');
-        window.open('https://twitter.com/PavelDoGreat');
-    } }, 'fun').name('Twitter');
+            ga('send', 'event', 'link button', 'twitter');
+            window.open('https://twitter.com/PavelDoGreat');
+        } }, 'fun').name('Twitter');
     twitter.__li.className = 'cr function bigFont';
     twitter.__li.style.borderLeft = '3px solid #8C8C8C';
     let twitterIcon = document.createElement('span');
@@ -234,9 +203,9 @@ function startGUI () {
     twitterIcon.className = 'icon twitter';
 
     let discord = gui.add({ fun : () => {
-        ga('send', 'event', 'link button', 'discord');
-        window.open('https://discordapp.com/invite/CeqZDDE');
-    } }, 'fun').name('Discord');
+            ga('send', 'event', 'link button', 'discord');
+            window.open('https://discordapp.com/invite/CeqZDDE');
+        } }, 'fun').name('Discord');
     discord.__li.className = 'cr function bigFont';
     discord.__li.style.borderLeft = '3px solid #8C8C8C';
     let discordIcon = document.createElement('span');
@@ -244,9 +213,9 @@ function startGUI () {
     discordIcon.className = 'icon discord';
 
     let app = gui.add({ fun : () => {
-        ga('send', 'event', 'link button', 'app');
-        window.open('http://onelink.to/5b58bn');
-    } }, 'fun').name('Check out mobile app');
+            ga('send', 'event', 'link button', 'app');
+            window.open('http://onelink.to/5b58bn');
+        } }, 'fun').name('Check out mobile app');
     app.__li.className = 'cr function appBigFont';
     app.__li.style.borderLeft = '3px solid #00FF7F';
     let appIcon = document.createElement('span');
@@ -757,7 +726,7 @@ const advectionShader = compileShader(gl.FRAGMENT_SHADER, `
         float decay = 1.0 + dissipation * dt;
         gl_FragColor = result / decay;
     }`,
-    ext.supportLinearFiltering ? null : ['MANUAL_FILTERING']
+  ext.supportLinearFiltering ? null : ['MANUAL_FILTERING']
 );
 
 const divergenceShader = compileShader(gl.FRAGMENT_SHADER, `
