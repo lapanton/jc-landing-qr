@@ -6,6 +6,8 @@ import {WithUs} from "./components/withUs";
 import {Uverenosti} from "./components/uverennosti";
 import {Freedom} from "./components/freedom";
 import {Different} from "./components/different";
+import {Slider} from "./components/slidier";
+import {SelfProduct} from "./components/selfProduct";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -28,6 +30,8 @@ export const App = () => {
       <Uverenosti/>
       <Freedom/>
       <Different/>
+      <Slider/>
+      <SelfProduct/>
     </div>
   );
 }
