@@ -5,6 +5,7 @@ import  {BlackSquare } from "./components/blackSquare";
 import {WithUs} from "./components/withUs";
 import {Uverenosti} from "./components/uverennosti";
 import {Freedom} from "./components/freedom";
+import {Different} from "./components/different";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -26,6 +27,7 @@ export const App = () => {
       <WithUs/>
       <Uverenosti/>
       <Freedom/>
+      <Different/>
     </div>
   );
 }
