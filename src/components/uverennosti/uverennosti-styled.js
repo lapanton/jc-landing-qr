@@ -41,21 +41,23 @@ export const Wrapper = styled.div`
     }
   }
   @media screen and (max-width: 768px) {
-    padding: 0 0 6rem 0;
+    padding: 0 0 0 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     img {
       max-width: 100%;
       height: auto;
-      margin: 0 auto 2rem auto;
+      margin: 0 auto 0 auto;
     }
     p {
       margin: 0 !important;
-      padding: 20px;
+      padding: 20px 20px 120px 15px;
+      text-align: left;
     }
     h3 {
       font-size: 1rem;
       line-height: 1.2rem;
+      text-align: left;
     }
   }
 `;
@@ -76,8 +78,9 @@ export const WrapImage = styled.div`
     }
   }
   @media screen and (max-width: 768px) {
-    bottom: 0;
-    left: 0%;
+    bottom: inherit;
+    top: 260px;
+    left: 0;
     width: 100%;
   }
 `;
@@ -100,6 +103,10 @@ export const WrapText = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
+      padding-left: 15px;
+      br {
+        display: none;
+      }
     }
   }
 `;
