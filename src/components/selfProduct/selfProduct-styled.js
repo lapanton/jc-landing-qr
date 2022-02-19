@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  background: #181515;
-  z-index: 99998;
-  position: relative;
+  background: transparent;
   color: #fff;
   display: flex;
   .boldp {
@@ -17,6 +15,8 @@ export const Wrapper = styled.div`
     width: 100%;
     letter-spacing: 0.425em;
     text-transform: uppercase;
+    z-index: 99998;
+    position: relative;
   }
   p {
     font-family: 'Inter', sans-serif;
@@ -28,11 +28,15 @@ export const Wrapper = styled.div`
       font-weight: bold;
       color: #fff;
     }
+    z-index: 99998;
+    position: relative;
   }
   img {
     max-width: 30rem;
     max-height: 38rem;
     padding: 80px 80px 80px 178px;
+    z-index: 99998;
+    position: relative;
   }
   @media screen and (max-width: 1200px) {
     img {
@@ -56,6 +60,8 @@ export const Wrapper = styled.div`
       max-width: 100%;
       height: auto;
       margin: 0 auto 0 auto;
+      z-index: 99998;
+      position: relative;
     }
     p {
       margin: 0 !important;
@@ -64,11 +70,15 @@ export const Wrapper = styled.div`
       .boldp {
         padding-bottom: 5px;
       }
+      z-index: 99998;
+      position: relative;
     }
     h3 {
       font-size: 1rem;
       line-height: 2.4rem;
       text-align: center;
+      z-index: 99998;
+      position: relative;
     }
     .desktopImg {
       display: none;
@@ -77,6 +87,8 @@ export const Wrapper = styled.div`
       max-width: 100%;
       display: block;
       text-align: center;
+      z-index: 99998;
+      position: relative;
       img {
         width: 70%;
         padding: 0;
@@ -92,6 +104,8 @@ export const WrapText = styled.div`
   p {
     margin-top: 1.875rem;
     max-width: 500px;
+    z-index: 99998;
+    position: relative;
   }
   @media screen and (max-width: 1200px) {
     margin-top: 3rem;
@@ -109,6 +123,8 @@ export const WrapText = styled.div`
       br {
         display: none;
       }
+      z-index: 99998;
+      position: relative;
     }
   }
 `;

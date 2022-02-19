@@ -10,6 +10,7 @@ import {Slider} from "./components/slidier";
 import {SelfProduct} from "./components/selfProduct";
 import {OsobennostiTehnologii} from "./components/osobennostiTehnologii";
 import {ImgBottom} from "./components/imgBottom";
+import MoveStuffAround from "./components/blackSquare/lineTicker";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -27,6 +28,7 @@ export const App = () => {
     <div>
       <GlobalStyle />
       <Main />
+      <MoveStuffAround/>
       <BlackSquare />
       <WithUs/>
       <Uverenosti/>

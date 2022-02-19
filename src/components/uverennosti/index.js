@@ -19,14 +19,16 @@ export const Uverenosti = () => {
         <p>
           Вы получаете то, что регулярно повторяете. Ваш финансовое состояние результат привычек в отношении денег. Ваш веш результат пищевых привычек. Ваши знания результат привычек в отношении обучения. Хаос в доме результат привычек уборки в доме.
         </p>
+        <div style={{position: "relative", zIndex: "9999999"}}>
+          <WrapImage>
+            <img src={one} alt="JewelCocktail"/>
+            <img src={two} alt="JewelCocktail"/>
+            <img src={three} alt="JewelCocktail"/>
+            <img src={four} alt="JewelCocktail"/>
+            <img src={five} alt="JewelCocktail"/>
+          </WrapImage>
+        </div>
       </WrapText>
-      <WrapImage>
-        <img src={one} alt="JewelCocktail"/>
-        <img src={two} alt="JewelCocktail"/>
-        <img src={three} alt="JewelCocktail"/>
-        <img src={four} alt="JewelCocktail"/>
-        <img src={five} alt="JewelCocktail"/>
-      </WrapImage>
     </Wrapper>
   )
 }

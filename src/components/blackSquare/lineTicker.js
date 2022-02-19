@@ -6,7 +6,8 @@ const Wrapper = styled.div`
   min-width: 100%;
   position: absolute;
   left: 0;
-  top: 15rem;
+  top: 57rem;
+  z-index: 999999;
   h6 {
     color: #fff;
     letter-spacing: 0.425em;
@@ -14,7 +15,7 @@ const Wrapper = styled.div`
     text-transform: uppercase;
   }
   @media screen and (max-width: 768px) {
-    top: 5rem;
+    top: 47rem;
     h6 {
       font-size: 1rem;
       white-space: nowrap;

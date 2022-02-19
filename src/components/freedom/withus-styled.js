@@ -62,17 +62,23 @@ export const InnerContent = styled.div`
 `;
 
 export const WrapperMob = styled.div`
-  position: relative;
-  z-index: 99998;
-  background: #181515;
+  background: transparent;
   color: #fff;
   h3 {
     color: #fff;
     padding-left: 15px;
     padding-top: 3rem;
+    position: relative;
+    z-index: 99998;
   }
   p {
     color: #fff;
     padding: 20px 20px 3rem 15px;
+    position: relative;
+    z-index: 99998;
+  }
+  img {
+    position: relative;
+    z-index: 99998;
   }
 `;

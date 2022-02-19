@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  background: #181515;
-  z-index: 99998;
-  position: relative;
+  background: transparent;
   color: #fff;
   display: flex;
   h3 {
@@ -14,6 +12,8 @@ export const Wrapper = styled.div`
     width: 100%;
     letter-spacing: 0.425em;
     text-transform: uppercase;
+    z-index: 99998;
+    position: relative;
   }
   p {
     font-family: 'Inter', sans-serif;
@@ -25,10 +25,14 @@ export const Wrapper = styled.div`
       font-weight: bold;
       color: #fff;
     }
+    z-index: 99998;
+    position: relative;
   }
   img {
     max-width: 30rem;
     max-height: 38rem;
+    z-index: 99998;
+    position: relative;
   }
   @media screen and (max-width: 1200px) {
     img {
@@ -69,8 +73,8 @@ export const WrapImage = styled.div`
   width: 84px;
   height: 84px;
   position: absolute;
-  left: 20%;
-  bottom: 11%;
+  left: -174px;
+  bottom: -150px;
   @media screen and (max-width: 1200px) {
     img {
       width: 52px;
@@ -79,7 +83,7 @@ export const WrapImage = styled.div`
   }
   @media screen and (max-width: 768px) {
     bottom: inherit;
-    top: 260px;
+    top: -99px;
     left: 0;
     width: 100%;
   }

@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  background: #181515;
-  z-index: 99998;
-  position: relative;
+  background: transparent;
   color: #fff;
   display: flex;
   .boldp {
@@ -17,6 +15,8 @@ export const Wrapper = styled.div`
     width: 100%;
     letter-spacing: 0.425em;
     text-transform: uppercase;
+    z-index: 99998;
+    position: relative;
   }
   p {
     font-family: 'Inter', sans-serif;
@@ -24,6 +24,8 @@ export const Wrapper = styled.div`
     color: #fff;
     font-size: 1rem;
     line-height: 1.25rem;
+    z-index: 99998;
+    position: relative;
     span {
       font-weight: bold;
       color: #fff;
@@ -32,6 +34,8 @@ export const Wrapper = styled.div`
   img {
     max-width: 30rem;
     max-height: 38rem;
+    z-index: 99998;
+    position: relative;
   }
   @media screen and (max-width: 1200px) {
     img {
