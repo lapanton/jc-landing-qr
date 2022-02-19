@@ -8,6 +8,8 @@ import {Freedom} from "./components/freedom";
 import {Different} from "./components/different";
 import {Slider} from "./components/slidier";
 import {SelfProduct} from "./components/selfProduct";
+import {OsobennostiTehnologii} from "./components/osobennostiTehnologii";
+import {ImgBottom} from "./components/imgBottom";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -32,6 +34,8 @@ export const App = () => {
       <Different/>
       <Slider/>
       <SelfProduct/>
+      <OsobennostiTehnologii/>
+      <ImgBottom/>
     </div>
   );
 }
