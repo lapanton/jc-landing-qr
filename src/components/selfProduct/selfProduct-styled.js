@@ -45,6 +45,9 @@ export const Wrapper = styled.div`
 
     }
   }
+  .mobileImg {
+    display: none;
+  }
   @media screen and (max-width: 768px) {
     padding: 0 0 0 0;
     display: flex;
@@ -64,8 +67,21 @@ export const Wrapper = styled.div`
     }
     h3 {
       font-size: 1rem;
-      line-height: 1.4rem;
-      text-align: left;
+      line-height: 2.4rem;
+      text-align: center;
+    }
+    .desktopImg {
+      display: none;
+    }
+    .mobileImg {
+      max-width: 100%;
+      display: block;
+      text-align: center;
+      img {
+        width: 70%;
+        padding: 0;
+        margin: 20px auto 10px auto;
+      }
     }
   }
 `;
