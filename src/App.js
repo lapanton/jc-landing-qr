@@ -11,6 +11,7 @@ import {SelfProduct} from "./components/selfProduct";
 import {OsobennostiTehnologii} from "./components/osobennostiTehnologii";
 import {ImgBottom} from "./components/imgBottom";
 import MoveStuffAround from "./components/blackSquare/lineTicker";
+import {Contacts} from "./components/contacts";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -38,6 +39,7 @@ export const App = () => {
       <SelfProduct/>
       <OsobennostiTehnologii/>
       <ImgBottom/>
+      <Contacts/>
     </div>
   );
 }
