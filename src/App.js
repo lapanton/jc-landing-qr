@@ -35,22 +35,22 @@ export const App = () => {
     <Router>
         <Routes>
             <Route path="/" element={
-            <div>
-              <GlobalStyle />
-              <Main />
-              <MoveStuffAround/>
-              <BlackSquare />
-              <WithUs/>
-              <Uverenosti/>
-              <Freedom/>
-              <Different/>
-              <Slider/>
-              <SelfProduct/>
-              <OsobennostiTehnologii/>
-              <ImgBottom/>
-              <Contacts/>
-            </div>}
-            exact/>
+              <div>
+                <GlobalStyle />
+                <Main />
+                <MoveStuffAround/>
+                <BlackSquare />
+                <WithUs/>
+                <Uverenosti/>
+                <Freedom/>
+                <Different/>
+                <Slider/>
+                <SelfProduct/>
+                <OsobennostiTehnologii/>
+                <ImgBottom/>
+                <Contacts/>
+              </div>
+            } exact/>
 
             <Route path="/qr1001" element={<>
                 <Qr1001/>
