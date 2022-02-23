@@ -44,9 +44,9 @@ export const Main = () => {
       MOVING_SHADOW_SIZE_RATIO: 3, //positive number
 
       //brick swinging settings
-      SWING_TYPE: "sine", //allowable values: "sine", "pulse" and "linear"
+      SWING_TYPE: "linear", //allowable values: "sine", "pulse" and "linear"
       SWING_DISTRIBUTION: "random", //allowable values: "random" and "wave"
-      SWING_AMPLITUDE: 0, //any number; measured in pixels
+      SWING_AMPLITUDE: 2, //any number; measured in pixels
       SWING_FREQUENCY: 0.3, //positive number; considered as a number of oscillations per second
       SWING_FREQUENCY_RANDOMIZATION: 0.2, //positive number
       SWING_WAVE_DIRECTION: "bottom-right", //allowable values: "left", "right", "bottom", "top", "bottom-right", "bottom-left", "top-right" and "top-left"

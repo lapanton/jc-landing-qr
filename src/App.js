@@ -8,7 +8,6 @@ import {WithUs} from "./components/withUs";
 import {Uverenosti} from "./components/uverennosti";
 import {Freedom} from "./components/freedom";
 import {Different} from "./components/different";
-import {Slider} from "./components/slidier";
 import {SelfProduct} from "./components/selfProduct";
 import {OsobennostiTehnologii} from "./components/osobennostiTehnologii";
 import {ImgBottom} from "./components/imgBottom";
@@ -18,6 +17,7 @@ import {Qr1001} from "./giftMessage/qr1001";
 import {Qr1002} from "./giftMessage/qr1002";
 import {Qr00001} from "./giftMessage/qr00001";
 import {Qr1} from "./giftMessage/qr1";
+import {Slider} from "./components/slider";
 
 const GlobalStyle = createGlobalStyle`
   * {
