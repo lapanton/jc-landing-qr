@@ -4,7 +4,7 @@ import bgfr from './bgfr.png';
 export const Wrapper = styled.div`
   background: url(${bgfr}) no-repeat;
   background-size: cover;
-  height: 42rem;
+  height: 52rem;
   position: relative;
   z-index: 99998;
   background-position: bottom center;

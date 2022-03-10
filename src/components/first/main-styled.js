@@ -1,8 +1,25 @@
 import styled, { keyframes } from 'styled-components';
+import ins from "./instagram.png";
+import you from "./youtube.png";
+import goo from "./google.png";
+import insn from "./instatgram-n.png";
+import youn from "./youtube-n.png";
+import googn from "./google-n.png";
 
 const rotate = keyframes`
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+`;
+
+export const ConttainerWrap = styled.div`
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 43rem;
+  z-index: 99999;
+  &.sticky {
+    z-index: 99999999999999;
+  }
 `;
 
 export const Wrapper = styled.div`
@@ -33,6 +50,22 @@ export const Inner = styled.div`
   }
   @media screen and (max-width: 968px) {
     padding: 2.625rem 2rem;
+  }
+  &.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #2e2c2c;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    img {
+      width: 3.5rem;
+      height: auto;
+    }
+    .wrapLogo {
+      padding: 10px 0;
+    }
   }
 `;
 
@@ -74,39 +107,58 @@ export const WrapSocial = styled.div`
     }
   }
   .insta-social {
-    margin-right: 15px;
-    width: 1.25rem;
+    width: 28px;
     display: inline-block;
-    img {
-      max-width: 100%;
+    div {
+      background: url(${insn});
+      width: 28px;
+      height: 28px;
+      background-size: contain;
     }
-    filter: grayscale(1);
     &:hover {
-      filter: grayscale(0);
+      div {
+        background: url(${ins});
+        width: 28px;
+        height: 28px;
+        background-size: contain;
+      }
     }
   }
   .youtube-social {
-    margin-right: 15px;
-    width: 1.25rem;
+    width: 28px;
     display: inline-block;
-    img {
-      max-width: 100%;
+    margin: 0 20px;
+    div {
+      background: url(${youn});
+      width: 28px;
+      height: 28px;
+      background-size: contain;  
     }
-    filter: grayscale(1);
     &:hover {
-      filter: grayscale(0);
+      div {
+        background: url(${you});
+        width: 28px;
+        height: 28px;
+        background-size: contain;
+      }
     }
   }
   .email-social {
-    margin-right: 15px;
-    width: 1.25rem;
+    width: 28px;
     display: inline-block;
-    img {
-      max-width: 100%;
+    div {
+      background: url(${googn});
+      width: 28px;
+      height: 28px;
+      background-size: contain;
     }
-    filter: grayscale(1);
     &:hover {
-      filter: grayscale(0);
+      div {
+        background: url(${goo});
+        width: 28px;
+        height: 28px;
+        background-size: contain;
+      }
     }
   }
   @media screen and (max-width: 868px) {

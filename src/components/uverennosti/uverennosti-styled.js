@@ -91,7 +91,7 @@ export const WrapImage = styled.div`
 
 export const WrapText = styled.div`
   padding-left: 4rem;
-  margin-top: 7rem;
+  margin-top: 3rem;
   p {
     margin-top: 1.875rem;
     max-width: 500px;

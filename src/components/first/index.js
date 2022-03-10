@@ -1,10 +1,6 @@
-import React, { useEffect } from 'react';
-import { Wrapper, Inner, WrapSocial, WrapPhone, WrapList, WrapTitle, WrapLoadMore, InnerLoadMore, WrapMobile } from './main-styled';
+import React, {useEffect, useState} from 'react';
+import { ConttainerWrap, Wrapper, Inner, WrapSocial, WrapPhone, WrapList, WrapTitle, WrapLoadMore, InnerLoadMore, WrapMobile } from './main-styled';
 import logo from "./logo.png";
-import instao from "./instagram-o.svg";
-import googleo from "./google-o.svg";
-import telegramo from "./telegram-o.svg";
-import youtubeo from "./youtube-o.svg";
 import arrowDown from "./arrow-down.svg";
 import rotateText from "./rotate-text.svg";
 import mobMenu from "./mob-menu.svg";
@@ -64,31 +60,41 @@ export const Main = () => {
     paves.resize();
   }, []);
 
+  useEffect(() => {
+    window.addEventListener('scroll', isSticky);
+    return () => {
+      window.removeEventListener('scroll', isSticky);
+    };
+  });
+
+  const [sticky, setSticky] = useState(false);
+
+  const isSticky = () => {
+    const scrollTop = window.scrollY;
+    scrollTop >= 250 ? setSticky(true) : setSticky(false);
+  };
+
   return (
-    <div id="container" style={{position: "absolute", top: "0", width: "100%", height: "43rem", zIndex: 99999 }}>
+    <ConttainerWrap id="container" className={sticky ? 'sticky' : ' '}>
       <Wrapper>
-        <Inner>
+        <Inner className={sticky ? 'sticky' : ' '}>
           <a href="/" className="wrapLogo">
             <img src={logo} alt="JewelCocktail" />
           </a>
           <WrapList>
             <div>О нас</div>
             <div>Галерея</div>
-            <div>Наше производство</div>
             <div>Контакты</div>
           </WrapList>
           <WrapSocial>
             <a href="https://www.instagram.com/jewelcocktail_official/" target="_blank" rel="noopener noreferrer" className="insta-social">
-              <img src={instao} alt="JewelCocktail" />
+              <div/>
             </a>
             <a href="https://www.youtube.com/channel/UC44U3iU75Nx-Fv8LFb28I6w" target="_blank" rel="noopener noreferrer" className="youtube-social">
-              <img src={youtubeo} alt="JewelCocktail" />
+              <div/>
             </a>
             <a href="mailto:info@jewelcocktail.com" className="email-social">
-              <img src={googleo} alt="JewelCocktail" />
-            </a>
-            <a href="https://vk.com/jewelrycocktail" target="_blank" rel="noopener noreferrer" className="vk-social">
-              <img src={telegramo} alt="JewelCocktail"  />
+              <div/>
             </a>
           </WrapSocial>
           <WrapPhone>
@@ -107,16 +113,16 @@ export const Main = () => {
         </Inner>
         <WrapTitle>
           <h1>Jewel Cocktail</h1>
-          <h2>Дизайнерские ювелирные украшения в стиле Русский авангард</h2>
+          <h2>Дизайнерские НАБОРНЫЕ ювелирные украшения в стиле Русский авангард</h2>
           <p>Мы отказались от классических форм ювелирных украшений, предлагая вместо этого современный<br/> минимализм, естественность и возможность эксперементировать с образами. </p>
         </WrapTitle>
         <WrapLoadMore>
-            <InnerLoadMore>
+            <InnerLoadMore onClick={() =>  window.scrollTo({top: 650, left: 0, behavior: 'smooth'})}>
               <img src={arrowDown} alt="JewelCocktail" className="arrowDown"/>
               <img src={rotateText} alt="JewelCocktail" className="rotated"/>
             </InnerLoadMore>
         </WrapLoadMore>
       </Wrapper>
-    </div>
+    </ConttainerWrap>
   );
 };
