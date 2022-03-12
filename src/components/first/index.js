@@ -1,10 +1,17 @@
 import React, {useEffect, useState} from 'react';
-import { ConttainerWrap, Wrapper, Inner, WrapSocial, WrapPhone, WrapList, WrapTitle, WrapLoadMore, InnerLoadMore, WrapMobile } from './main-styled';
+import { ConttainerWrap, Wrapper, Inner, WrapSocial, WrapPhone, WrapList, WrapTitle, WrapLoadMore, InnerLoadMore, WrapMobile, WrapMenu, WrpaMobSocial } from './main-styled';
 import logo from "./logo.png";
 import arrowDown from "./arrow-down.svg";
 import rotateText from "./rotate-text.svg";
 import mobMenu from "./mob-menu.svg";
 import phoneMobile from "./phone-icon.svg";
+
+import ins from "./instagram.png";
+import you from "./youtube.png";
+import goo from "./google.png";
+import insn from "./instatgram-n.png";
+import youn from "./youtube-n.png";
+import googn from "./google-n.png";
 
 
 export const Main = () => {
@@ -73,6 +80,10 @@ export const Main = () => {
     const scrollTop = window.scrollY;
     scrollTop >= 250 ? setSticky(true) : setSticky(false);
   };
+  const [show, setShow] = useState(false)
+  const handleMenu = () => {
+    setShow(!show);
+  };
 
   return (
     <ConttainerWrap id="container" className={sticky ? 'sticky' : ' '}>
@@ -82,9 +93,9 @@ export const Main = () => {
             <img src={logo} alt="JewelCocktail" />
           </a>
           <WrapList>
-            <div>О нас</div>
-            <div>Галерея</div>
-            <div>Контакты</div>
+            <div onClick={() => window.scrollTo({top: 4600, left: 0, behavior: 'smooth'})}>О нас</div>
+            <div onClick={() => window.scrollTo({top: 3800, left: 0, behavior: 'smooth'})}>Галерея</div>
+            <div onClick={() => window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })}>Контакты</div>
           </WrapList>
           <WrapSocial>
             <a href="https://www.instagram.com/jewelcocktail_official/" target="_blank" rel="noopener noreferrer" className="insta-social">
@@ -106,12 +117,36 @@ export const Main = () => {
             <a href="tel:+79991234567">
               <img src={phoneMobile} alt="JewelCocktail"/>
             </a>
-            <div className="menuMobWrapper">
+            <div className="menuMobWrapper" onClick={handleMenu}>
               <img src={mobMenu} alt="JewelCocktail"/>
+              <div className={show ? 'show-menu' : 'hide-menu'}>
+                <WrapMenu>
+                  <div className="closeIcon">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect x="13.9999" y="31.0001" width="24" height="3" rx="1" transform="rotate(-45 13.9999 31.0001)" fill="#ffffff"/>
+                      <rect x="15.9999" y="14" width="24" height="3" rx="1" transform="rotate(45 15.9999 14)" fill="#ffffff"/>
+                    </svg>
+                  </div>
+                  <div onClick={() => window.scrollTo({top: 5120, left: 0, behavior: 'smooth'})}>О нас</div>
+                  <div onClick={() => window.scrollTo({top: 4465, left: 0, behavior: 'smooth'})}>Галерея</div>
+                  <div onClick={() => window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })}>Контакты</div>
+                  <WrpaMobSocial>
+                    <a href="https://www.instagram.com/jewelcocktail_official/" target="_blank" rel="noopener noreferrer" className="insta-social">
+                      <img src={insn} alt="JewelCocktail"/>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UC44U3iU75Nx-Fv8LFb28I6w" target="_blank" rel="noopener noreferrer" className="youtube-social">
+                      <img src={youn} alt="JewelCocktail"/>
+                    </a>
+                    <a href="mailto:info@jewelcocktail.com" className="email-social">
+                      <img src={googn} alt="JewelCocktail"/>
+                    </a>
+                  </WrpaMobSocial>
+                </WrapMenu>
+              </div>
             </div>
           </WrapMobile>
         </Inner>
-        <WrapTitle>
+        <WrapTitle className={show ? 'removeZindex' : 'addit'}>
           <h1>Jewel Cocktail</h1>
           <h2>Дизайнерские НАБОРНЫЕ ювелирные украшения в стиле Русский авангард</h2>
           <p>Мы отказались от классических форм ювелирных украшений, предлагая вместо этого современный<br/> минимализм, естественность и возможность эксперементировать с образами. </p>

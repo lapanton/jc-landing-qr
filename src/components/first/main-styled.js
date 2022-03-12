@@ -88,6 +88,11 @@ export const WrapList = styled.div`
   @media screen and (max-width: 768px) {
     display: none;
   }
+  div {
+    &:hover {
+      cursor: pointer;
+    }
+  }
 `;
 
 export const WrapSocial = styled.div`
@@ -186,6 +191,9 @@ export const WrapTitle = styled.div`
   position: relative;
   z-index: 99999999;
   text-align: center;
+  &.removeZindex {
+    z-index: -1;
+  }
   h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 200;
@@ -315,5 +323,54 @@ export const WrapMobile = styled.div`
     img {
       max-width: 100%;
     }
+    .show-menu {
+      display: block;
+      z-index: 99999999999;
+      //position: relative;
+    }
+    .hide-menu {
+      display: none;
+    }
+  }
+`;
+
+export const WrapMenu = styled.div`
+  padding: 50px 0;
+  text-align: left;
+  position: absolute;
+  z-index: 999999;
+  background: #181515;
+  color: #fff;
+  left: 0;
+  width: 100%;
+  top: 0;
+  height: 400px;
+  div {
+    color: #fff;
+    padding: 20px 0;
+    margin: 0 20px;
+    font-size: 16px;
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  .closeIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-bottom: none;
+    padding: 0;
+    margin: 0;
+  }
+`;
+
+export const WrpaMobSocial = styled.div`
+  border-bottom: none !important;
+  display: flex !important;
+  margin: 160px 0 0 0 !important;
+  justify-content: space-around !important;
+  border-bottom: none !important;
+  div {
+    border-bottom: none !important;
+    padding: 0 !important;
   }
 `;
