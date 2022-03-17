@@ -12,11 +12,9 @@ const rotate = keyframes`
 `;
 
 export const ConttainerWrap = styled.div`
-  position: absolute;
-  top: 0;
+  position: relative;
   width: 100%;
-  height: 43rem;
-  z-index: 99999;
+  height: 16rem;
   &.sticky {
     z-index: 99999999999999;
   }

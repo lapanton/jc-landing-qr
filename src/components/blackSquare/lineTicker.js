@@ -6,16 +6,25 @@ const Wrapper = styled.div`
   min-width: 100%;
   position: absolute;
   left: 0;
-  top: 57rem;
+  top: 30rem;
   z-index: 999999;
   h6 {
     color: #fff;
     letter-spacing: 0.425em;
     font-size: 1.875rem;
     text-transform: uppercase;
+    text-shadow:
+            0.01em 0 black,
+            0 0.01em black,
+            -0.01em 0 black,
+              0 -0.01em black;
+  }
+  @media screen and (max-width: 1200px) {
+    font-size: 1rem;
+    white-space: nowrap;
   }
   @media screen and (max-width: 768px) {
-    top: 47rem;
+    top: 20rem;
     h6 {
       font-size: 1rem;
       white-space: nowrap;

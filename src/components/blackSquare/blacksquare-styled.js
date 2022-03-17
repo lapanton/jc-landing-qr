@@ -4,7 +4,6 @@ export const Wrapper = styled.div`
   padding: 8.875rem 10.5rem 8.563rem 10.5rem;
   background: transparent;
   color: #fff;
-  margin-top: 43rem;
   display: flex;
   p {
     font-family: 'Inter', sans-serif;
@@ -50,6 +49,27 @@ export const Wrapper = styled.div`
     p {
       margin: 0;
       padding: 20px;
+    }
+  }
+  .malevich {
+    position: absolute;
+    background: #2e2c2c;
+    color: #fff;
+    padding: 3px 9px;
+    z-index: 99999;
+    margin: 0;
+    left: 50%;
+    transform: translate(-50%);
+    white-space: nowrap;
+    bottom: 10px;
+    border-radius: 2px;
+  }
+  .wrapMalevich {
+    @media screen and (max-width: 768px) {
+      text-align: center;
+      .malevich {
+        bottom: 0;
+      }
     }
   }
 `;

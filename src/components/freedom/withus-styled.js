@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
 
 export const Inner = styled.div`
   height: 20rem;
-  top: 7.938rem;
+  top: 0;
   left: 0;
   position: absolute;
   background: rgba(30, 31, 31, 0.48);
