@@ -17,7 +17,7 @@ import {Qr1001} from "./giftMessage/qr1001";
 import {Qr1002} from "./giftMessage/qr1002";
 import {Qr00001} from "./giftMessage/qr00001";
 import {Qr1} from "./giftMessage/qr1";
-import {Slider} from "./components/slider";
+import {SliderGalerry} from "./components/slider";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -44,7 +44,7 @@ export const App = () => {
                 <Uverenosti/>
                 <Freedom/>
                 <Different/>
-                <Slider/>
+                <SliderGalerry/>
                 <SelfProduct/>
                 <OsobennostiTehnologii/>
                 <ImgBottom/>
