@@ -19,7 +19,7 @@ const Wrapper = styled.div`
             -0.01em 0 black,
               0 -0.01em black;
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1550px) {
     font-size: 1rem;
     white-space: nowrap;
   }
