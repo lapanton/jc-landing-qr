@@ -7,7 +7,7 @@ import NewsTicker from "react-advanced-news-ticker";
 export const WithUs = () => {
   return (
     <Wrapper>
-      <div>С НАШИМИ УКРАШЕНИЯМИ ТЫ МОЖЕШЬ БЫТЬ <NewsTicker
+      <div>НАШИ УКРАШЕНИЯ СОЗДАНЫ ДЛЯ <NewsTicker
           rowHeight = {48}
           maxRows = {1}
           speed = {600}
@@ -18,14 +18,14 @@ export const WithUs = () => {
           className = "tickerAnim"
           style = {{marginTop: 34}}
         >
-          <p>ОСОБОЙ</p>
-          <p>ЕСТЕСТВЕННОЙ</p>
-          <p>СМЕЛОЙ</p>
-          <p>НЕПОВТОРИМОЙ</p>
-          <p>СИЛЬНОЙ</p>
-          <p>ТВОРЧЕССКОЙ</p>
-          <p>ДЕЛОВОЙ</p>
-        </NewsTicker></div>
+          <p>УВЕРЕННЫХ</p>
+          <p>СОВРЕМЕННЫХ</p>
+          <p>ТВОРЧЕСКИХ</p>
+          <p>ОСОБЕННЫХ</p>
+          <p>ЯРКИХ</p>
+          <p>УСПЕШНЫХ</p>
+          <p>ОСОЗНАННЫХ</p>
+        </NewsTicker> ЛИЧНОСТЕЙ</div>
       <img src={log} alt="JewelCocktail"/>
     </Wrapper>
   )

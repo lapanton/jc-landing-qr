@@ -36,8 +36,7 @@ export const Inner = styled.div`
   display: flex;
   justify-content: space-between;
   img {
-    width: 5.938rem;
-    height: 5.125rem;
+    width: 5rem;
     @media screen and (max-width: 968px) {
       width: 3.938rem;
       height: auto;
@@ -113,16 +112,16 @@ export const WrapSocial = styled.div`
     width: 28px;
     display: inline-block;
     div {
-      background: url(${insn});
+      background: url(${insn}) no-repeat;
       width: 28px;
-      height: 28px;
+      height: 21px;
       background-size: contain;
     }
     &:hover {
       div {
-        background: url(${ins});
+        background: url(${ins}) no-repeat;
         width: 28px;
-        height: 28px;
+        height: 21px;
         background-size: contain;
       }
     }
@@ -150,16 +149,16 @@ export const WrapSocial = styled.div`
     width: 28px;
     display: inline-block;
     div {
-      background: url(${googn});
+      background: url(${googn}) no-repeat;
       width: 28px;
-      height: 28px;
+      height: 21px;
       background-size: contain;
     }
     &:hover {
       div {
-        background: url(${goo});
+        background: url(${goo}) no-repeat;
         width: 28px;
-        height: 28px;
+        height: 21px;
         background-size: contain;
       }
     }
@@ -193,7 +192,7 @@ export const WrapTitle = styled.div`
     z-index: -1;
   }
   h1 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'organetto';
     font-weight: 200;
     font-size: 4rem;
     color: #fff;
