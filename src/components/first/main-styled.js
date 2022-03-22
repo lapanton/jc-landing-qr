@@ -30,7 +30,7 @@ export const Wrapper = styled.div`
 
 export const Inner = styled.div`
   position: relative;
-  z-index: 99999999;
+  z-index: 999999999;
   max-width: 106rem;
   padding: 2.625rem 10.125rem;
   display: flex;
@@ -47,6 +47,9 @@ export const Inner = styled.div`
   }
   @media screen and (max-width: 968px) {
     padding: 2.625rem 2rem;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 0.625rem 2rem;
   }
   &.sticky {
     position: fixed;

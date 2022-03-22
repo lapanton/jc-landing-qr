@@ -5,9 +5,27 @@ import {
   WrapLiveProjecct,
   WrapInner
 } from './style/Carousel-style';
-import first from "../slider/1.png";
-import two from "../slider/2.png";
-import three from "../slider/3.png";
+import first from "./image/1.jpg";
+import two from "./image/2.jpg";
+import three from "./image/3.jpg";
+import four from "./image/4.jpg";
+import five from "./image/5.jpg";
+import six from "./image/6.jpg";
+import seven from "./image/7.jpg";
+import eight from "./image/8.jpg";
+import nine from "./image/9.jpg";
+import ten from "./image/10.jpg";
+import eleven from "./image/11.jpg";
+import twelve from "./image/12.png";
+import thirteen from "./image/13.png";
+import fourteen from "./image/14.png";
+import fifteen from "./image/15.png";
+import sixteen from "./image/16.png";
+import seventeen from "./image/17.png";
+import eigtteen from "./image/18.png";
+import nineteen from "./image/19.png";
+import twenty from "./image/20.png";
+import twentyone from "./image/21.png";
 
 export const Carousel = () => {
   const settings = {
@@ -57,25 +75,66 @@ export const Carousel = () => {
 
 
               <WrapInner className="innerSliderItems">
-                <img src={first} alt="JewelCocktail"/>
+                <img src={four} alt="JewelCocktail"/>
               </WrapInner>
               <WrapInner className="innerSliderItems">
-                <img src={two} alt="JewelCocktail"/>
+                <img src={five} alt="JewelCocktail"/>
               </WrapInner>
               <WrapInner className="innerSliderItems">
-                <img src={three} alt="JewelCocktail"/>
+                <img src={six} alt="JewelCocktail"/>
               </WrapInner>
 
 
               <WrapInner className="innerSliderItems">
-                <img src={first} alt="JewelCocktail"/>
+                <img src={seven} alt="JewelCocktail"/>
               </WrapInner>
               <WrapInner className="innerSliderItems">
-                <img src={two} alt="JewelCocktail"/>
+                <img src={eight} alt="JewelCocktail"/>
               </WrapInner>
               <WrapInner className="innerSliderItems">
-                <img src={three} alt="JewelCocktail"/>
+                <img src={nine} alt="JewelCocktail"/>
               </WrapInner>
+
+              <WrapInner className="innerSliderItems">
+                <img src={ten} alt="JewelCocktail"/>
+              </WrapInner>
+              <WrapInner className="innerSliderItems">
+                <img src={eleven} alt="JewelCocktail"/>
+              </WrapInner>
+              <WrapInner className="innerSliderItems">
+                <img src={twelve} alt="JewelCocktail"/>
+              </WrapInner>
+
+              <WrapInner className="innerSliderItems">
+                <img src={thirteen} alt="JewelCocktail"/>
+              </WrapInner>
+              <WrapInner className="innerSliderItems">
+                <img src={fourteen} alt="JewelCocktail"/>
+              </WrapInner>
+              <WrapInner className="innerSliderItems">
+                <img src={fifteen} alt="JewelCocktail"/>
+              </WrapInner>
+
+              <WrapInner className="innerSliderItems">
+                <img src={sixteen} alt="JewelCocktail"/>
+              </WrapInner>
+              <WrapInner className="innerSliderItems">
+                <img src={seventeen} alt="JewelCocktail"/>
+              </WrapInner>
+              <WrapInner className="innerSliderItems">
+                <img src={eigtteen} alt="JewelCocktail"/>
+              </WrapInner>
+
+              <WrapInner className="innerSliderItems">
+                <img src={nineteen} alt="JewelCocktail"/>
+              </WrapInner>
+              <WrapInner className="innerSliderItems">
+                <img src={twenty} alt="JewelCocktail"/>
+              </WrapInner>
+              <WrapInner className="innerSliderItems">
+                <img src={twentyone} alt="JewelCocktail"/>
+              </WrapInner>
+
             </Slider>
           </div>
         </div>

@@ -19,8 +19,7 @@ export const Contacts = () => {
         </WrapText>
       </WrapCart>
       <Copyright>
-        Все права защищены
-        © ООО «НАЗВАНИЕ ООО», 2022.
+        Все права защищены JEWEL COCKTAIL, 2022.
       </Copyright>
     </Wrapper>
   )

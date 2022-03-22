@@ -93,6 +93,7 @@ export const Copyright = styled.div`
   margin-top: 40px;
   @media screen and (max-width: 768px) {
     margin-bottom: 40px;
+    padding-bottom: 40px;
   }
 `;
 

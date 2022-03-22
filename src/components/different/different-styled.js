@@ -91,8 +91,16 @@ export const WrapText = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
-      padding-left: 15px;
+      padding-left: 30px;
       br {
+        display: none;
+      }
+    }
+    p{
+      text-align: left;
+      padding-left: 30px;
+      padding-right: 30px;
+      span {
         display: none;
       }
     }

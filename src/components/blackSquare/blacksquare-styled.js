@@ -48,7 +48,10 @@ export const Wrapper = styled.div`
     }
     p {
       margin: 0;
-      padding: 20px;
+      padding: 20px 30px;
+    }
+    .hideMobile {
+      display: none;
     }
   }
   .malevich {

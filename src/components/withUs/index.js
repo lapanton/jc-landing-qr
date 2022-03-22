@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wrapper } from "./withus-styled";
+import { Wrapper, WrapImg } from "./withus-styled";
 import log from './logo.png';
 import NewsTicker from "react-advanced-news-ticker";
 
@@ -8,7 +8,7 @@ export const WithUs = () => {
   return (
     <Wrapper>
       <div>НАШИ УКРАШЕНИЯ СОЗДАНЫ ДЛЯ <NewsTicker
-          rowHeight = {48}
+          rowHeight = {window.innerWidth > 768 ? 48 : 28}
           maxRows = {1}
           speed = {600}
           duration = {2000}
@@ -26,7 +26,9 @@ export const WithUs = () => {
           <p>УСПЕШНЫХ</p>
           <p>ОСОЗНАННЫХ</p>
         </NewsTicker> ЛИЧНОСТЕЙ</div>
-      <img src={log} alt="JewelCocktail"/>
+      <WrapImg>
+        <img src={log} alt="JewelCocktail"/>
+      </WrapImg>
     </Wrapper>
   )
 }

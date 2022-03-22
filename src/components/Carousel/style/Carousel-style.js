@@ -45,6 +45,10 @@ export const WrapLiveProjecct = styled.div`
   padding: 50px 0 80px 0px;
   z-index: 99999;
   position: relative;
+  @media screen and (max-width: 768px) {
+    max-width: 100%;
+    overflow: hidden;
+  }
   h3{
     font-size: 1.75rem;
     line-height: 2.563rem;

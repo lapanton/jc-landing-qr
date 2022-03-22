@@ -10,11 +10,6 @@ export const Wrapper = styled.div`
   background-size: cover;
   height: 20rem;
   img {
-    position: absolute;
-    bottom: 0;
-    right: 10rem;
-    width: 154px;
-    height: 154px;
   }
   div {
     position: absolute;
@@ -38,11 +33,6 @@ export const Wrapper = styled.div`
   }
 }
   @media screen and (max-width: 1200px) {
-    img {
-      right: 0;
-      width: 100px;
-      height: 100px;
-    }
     div {
       left: 30%;
     }
@@ -69,4 +59,27 @@ export const Wrapper = styled.div`
     .tickerAnim {
       transform: none;
     }
+`;
+
+export const WrapImg = styled.div`
+  position: absolute;
+  bottom: 0 !important;
+  top: inherit !important;
+  left: inherit !important;
+  right: 10rem !important;
+  width: 154px !important;
+  height: 154px !important;
+  background: #2e2c2c;
+  img {
+    max-width: 100px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
+  @media screen and (max-width: 768px) {
+    width: 64px !important;
+    height: 64px !important;
+    right: 2rem !important;
+  }
 `;

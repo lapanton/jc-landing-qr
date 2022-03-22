@@ -29,8 +29,8 @@ export const Wrapper = styled.div`
     position: relative;
   }
   img {
-    max-width: 30rem;
-    max-height: 38rem;
+    //max-width: 30rem;
+    //max-height: 38rem;
     z-index: 99998;
     position: relative;
   }
@@ -90,7 +90,7 @@ export const WrapImage = styled.div`
 `;
 
 export const WrapText = styled.div`
-  padding-left: 4rem;
+  padding-left: 7rem;
   margin-top: 3rem;
   p {
     margin-top: 1.875rem;
@@ -108,15 +108,44 @@ export const WrapText = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
-      padding-left: 15px;
+      padding-left: 30px;
       br {
+        display: none;
+      }
+    }
+    p {
+      padding-left: 30px;
+      padding-right: 30px;
+      span {
         display: none;
       }
     }
   }
 `;
 
-
+export const Wrapslider = styled.div`
+  position: relative;
+  width: 30rem;
+  height: 38rem;
+  z-index: 99998;
+  img {
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    &.active {
+      opacity: 1;
+      z-index: 2;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
+`;
 
 
 

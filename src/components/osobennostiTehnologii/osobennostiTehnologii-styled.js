@@ -182,7 +182,7 @@ export const BottomArea = styled.div`
     p{
       font-size: 1rem;
       line-height: 1.2rem;
-      padding: 0 15px;
+      padding: 0 30px;
       text-align: left;
     }
   }

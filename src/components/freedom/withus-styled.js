@@ -80,5 +80,17 @@ export const WrapperMob = styled.div`
   img {
     position: relative;
     z-index: 99998;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    h3 {
+      padding-left: 30px;
+    }
+    p {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
   }
 `;

@@ -31,7 +31,7 @@ export const Main = () => {
 
   const isSticky = () => {
     const scrollTop = window.scrollY;
-    scrollTop >= 250 ? setSticky(true) : setSticky(false);
+    scrollTop >= 50 ? setSticky(true) : setSticky(false);
   };
   const [show, setShow] = useState(false)
   const handleMenu = () => {
@@ -100,8 +100,9 @@ export const Main = () => {
           </WrapMobile>
         </Inner>
         <WrapTitle className={show ? 'removeZindex' : 'addit'}>
+          {sticky && window.innerWidth >= '768' ? <div style={{ marginTop: "180px"}}/> : <span/>}
           <h1>Jewel Cocktail</h1>
-          <h2>Дизайнерские нвборные ювелирные украшения в стиле Русский авангард</h2>
+          <h2>Дизайнерские наборные ювелирные украшения в стиле Русский авангард</h2>
           {/*<p>Мы отказались от классических форм ювелирных украшений, предлагая вместо этого современный<br/> минимализм, естественность и возможность эксперементировать с образами. </p>*/}
         </WrapTitle>
         {/*<WrapLoadMore>*/}
