@@ -144,6 +144,7 @@ export const Wrapslider = styled.div`
   }
   @media screen and (max-width: 768px) {
     width: 100%;
+    max-height: 30rem;
   }
 `;
 

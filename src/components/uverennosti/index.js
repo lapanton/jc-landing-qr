@@ -7,9 +7,9 @@ import three from './3.png';
 import four from './4.png';
 import five from './5.png';
 
-import slone from './slider/1.png';
-import sltwo from './slider/2.png';
-import slthree from './slider/3.png';
+import slone from './slider/1.jpg';
+import sltwo from './slider/2.jpg';
+import slthree from './slider/3.jpg';
 
 export const Uverenosti = () => {
 
