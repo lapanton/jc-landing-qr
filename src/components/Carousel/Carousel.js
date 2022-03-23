@@ -5,17 +5,17 @@ import {
   WrapLiveProjecct,
   WrapInner
 } from './style/Carousel-style';
-import first from "./image/1.jpg";
-import two from "./image/2.jpg";
-import three from "./image/3.jpg";
-import four from "./image/4.jpg";
-import five from "./image/5.jpg";
-import six from "./image/6.jpg";
-import seven from "./image/7.jpg";
-import eight from "./image/8.jpg";
-import nine from "./image/9.jpg";
-import ten from "./image/10.jpg";
-import eleven from "./image/11.jpg";
+import first from "./image/1.png";
+import two from "./image/2.png";
+import three from "./image/3.png";
+import four from "./image/4.png";
+import five from "./image/5.png";
+import six from "./image/6.png";
+import seven from "./image/7.png";
+import eight from "./image/8.png";
+import nine from "./image/9.png";
+import ten from "./image/10.png";
+import eleven from "./image/11.png";
 import twelve from "./image/12.png";
 import thirteen from "./image/13.png";
 import fourteen from "./image/14.png";
