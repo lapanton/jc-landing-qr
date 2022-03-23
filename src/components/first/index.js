@@ -80,8 +80,8 @@ export const Main = () => {
                       <rect x="15.9999" y="14" width="24" height="3" rx="1" transform="rotate(45 15.9999 14)" fill="#ffffff"/>
                     </svg>
                   </div>
-                  <div onClick={() => window.scrollTo({top: 5120, left: 0, behavior: 'smooth'})}>О нас</div>
-                  <div onClick={() => window.scrollTo({top: 4465, left: 0, behavior: 'smooth'})}>Галерея</div>
+                  <div onClick={() => window.scrollTo({top: 4800, left: 0, behavior: 'smooth'})}>О нас</div>
+                  <div onClick={() => window.scrollTo({top: 4225, left: 0, behavior: 'smooth'})}>Галерея</div>
                   <div onClick={() => window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })}>Контакты</div>
                   <WrpaMobSocial>
                     <a href="https://www.instagram.com/jewelcocktail_official/" target="_blank" rel="noopener noreferrer" className="insta-social">
