@@ -46,8 +46,8 @@ export const Main = () => {
             <img src={logo} alt="JewelCocktail" />
           </a>
           <WrapList>
-            <div onClick={() => window.scrollTo({top: 4600, left: 0, behavior: 'smooth'})}>О нас</div>
-            <div onClick={() => window.scrollTo({top: 3800, left: 0, behavior: 'smooth'})}>Галерея</div>
+            <div onClick={() => window.scrollTo({top: 4000, left: 0, behavior: 'smooth'})}>О нас</div>
+            <div onClick={() => window.scrollTo({top: 3300, left: 0, behavior: 'smooth'})}>Галерея</div>
             <div onClick={() => window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })}>Контакты</div>
           </WrapList>
           <WrapSocial>
