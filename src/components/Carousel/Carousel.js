@@ -85,55 +85,55 @@ export const Carousel = () => {
               </WrapInner>
 
 
-              {/*<WrapInner className="innerSliderItems">*/}
-              {/*  <img src={seven} alt="JewelCocktail"/>*/}
-              {/*</WrapInner>*/}
-              {/*<WrapInner className="innerSliderItems">*/}
-              {/*  <img src={eight} alt="JewelCocktail"/>*/}
-              {/*</WrapInner>*/}
-              {/*<WrapInner className="innerSliderItems">*/}
-              {/*  <img src={nine} alt="JewelCocktail"/>*/}
-              {/*</WrapInner>*/}
+              <WrapInner className="innerSliderItems">
+                <img src={seven} alt="JewelCocktail"/>
+              </WrapInner>
+              <WrapInner className="innerSliderItems">
+                <img src={eight} alt="JewelCocktail"/>
+              </WrapInner>
+              <WrapInner className="innerSliderItems">
+                <img src={nine} alt="JewelCocktail"/>
+              </WrapInner>
 
-              {/*<WrapInner className="innerSliderItems">*/}
-              {/*  <img src={ten} alt="JewelCocktail"/>*/}
-              {/*</WrapInner>*/}
-              {/*<WrapInner className="innerSliderItems">*/}
-              {/*  <img src={eleven} alt="JewelCocktail"/>*/}
-              {/*</WrapInner>*/}
-              {/*<WrapInner className="innerSliderItems">*/}
-              {/*  <img src={twelve} alt="JewelCocktail"/>*/}
-              {/*</WrapInner>*/}
+              <WrapInner className="innerSliderItems">
+                <img src={ten} alt="JewelCocktail"/>
+              </WrapInner>
+              <WrapInner className="innerSliderItems">
+                <img src={eleven} alt="JewelCocktail"/>
+              </WrapInner>
+              <WrapInner className="innerSliderItems">
+                <img src={twelve} alt="JewelCocktail"/>
+              </WrapInner>
 
-              {/*<WrapInner className="innerSliderItems">*/}
-              {/*  <img src={thirteen} alt="JewelCocktail"/>*/}
-              {/*</WrapInner>*/}
-              {/*<WrapInner className="innerSliderItems">*/}
-              {/*  <img src={fourteen} alt="JewelCocktail"/>*/}
-              {/*</WrapInner>*/}
-              {/*<WrapInner className="innerSliderItems">*/}
-              {/*  <img src={fifteen} alt="JewelCocktail"/>*/}
-              {/*</WrapInner>*/}
+              <WrapInner className="innerSliderItems">
+                <img src={thirteen} alt="JewelCocktail"/>
+              </WrapInner>
+              <WrapInner className="innerSliderItems">
+                <img src={fourteen} alt="JewelCocktail"/>
+              </WrapInner>
+              <WrapInner className="innerSliderItems">
+                <img src={fifteen} alt="JewelCocktail"/>
+              </WrapInner>
 
-              {/*<WrapInner className="innerSliderItems">*/}
-              {/*  <img src={sixteen} alt="JewelCocktail"/>*/}
-              {/*</WrapInner>*/}
-              {/*<WrapInner className="innerSliderItems">*/}
-              {/*  <img src={seventeen} alt="JewelCocktail"/>*/}
-              {/*</WrapInner>*/}
-              {/*<WrapInner className="innerSliderItems">*/}
-              {/*  <img src={eigtteen} alt="JewelCocktail"/>*/}
-              {/*</WrapInner>*/}
+              <WrapInner className="innerSliderItems">
+                <img src={sixteen} alt="JewelCocktail"/>
+              </WrapInner>
+              <WrapInner className="innerSliderItems">
+                <img src={seventeen} alt="JewelCocktail"/>
+              </WrapInner>
+              <WrapInner className="innerSliderItems">
+                <img src={eigtteen} alt="JewelCocktail"/>
+              </WrapInner>
 
-              {/*<WrapInner className="innerSliderItems">*/}
-              {/*  <img src={nineteen} alt="JewelCocktail"/>*/}
-              {/*</WrapInner>*/}
-              {/*<WrapInner className="innerSliderItems">*/}
-              {/*  <img src={twenty} alt="JewelCocktail"/>*/}
-              {/*</WrapInner>*/}
-              {/*<WrapInner className="innerSliderItems">*/}
-              {/*  <img src={twentyone} alt="JewelCocktail"/>*/}
-              {/*</WrapInner>*/}
+              <WrapInner className="innerSliderItems">
+                <img src={nineteen} alt="JewelCocktail"/>
+              </WrapInner>
+              <WrapInner className="innerSliderItems">
+                <img src={twenty} alt="JewelCocktail"/>
+              </WrapInner>
+              <WrapInner className="innerSliderItems">
+                <img src={twentyone} alt="JewelCocktail"/>
+              </WrapInner>
 
             </Slider>
           </div>
