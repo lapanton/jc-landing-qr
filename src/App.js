@@ -19,6 +19,7 @@ import {Qr00001} from "./giftMessage/qr00001";
 import {Qr1} from "./giftMessage/qr1";
 import {SliderGalerry} from "./components/slider";
 import {Carousel} from "./components/Carousel/Carousel";
+import {ConstructorQr} from './components/ConstructorQr/ConstructorQr';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -52,7 +53,9 @@ export const App = () => {
                 <Contacts/>
               </div>
             } exact/>
-
+            <Route path="/qrcode/:id"
+                   element={<ConstructorQr exact/>}
+            />
             <Route path="/qr1001" element={<>
                 <Qr1001/>
                 <Footer exact />
