@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import {useNavigate, useParams} from 'react-router-dom';
+import {useParams} from 'react-router-dom';
 import {useDropzone} from 'react-dropzone';
 import Slider from "react-slick";
 // Import css files
@@ -59,10 +59,10 @@ import two from './photo/17.png';
 import three from './photo/21.png';
 
 
-
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 export const Constructor = () => {
   const { id } = useParams();
-  const navigate = useNavigate();
+
     const [files, setFiles] = useState([]);
     const [message, setMessage] = useState("");
     const [borderType, setBorderType] = useState(1);
@@ -70,6 +70,7 @@ export const Constructor = () => {
 
     const {getRootProps, getInputProps} = useDropzone({
       accept: 'image/*',
+      maxFiles: 3,
       onDrop: acceptedFiles => {
         setFiles(acceptedFiles.map(file => Object.assign(file, {
           preview: URL.createObjectURL(file)
@@ -87,11 +88,16 @@ export const Constructor = () => {
       </Thumb>
     ));
 
-    useEffect(() => {
-      // Make sure to revoke the data uris to avoid memory leaks
-      files.forEach(file => URL.revokeObjectURL(file.preview));
-    }, [files]);
-
+  useEffect(() => {
+    // Make sure to revoke the data uris to avoid memory leaks
+    const cleanup = async () => {
+      await sleep(100)
+      files.forEach((file) => URL.revokeObjectURL(file.preview))
+      console.log("revoked");
+    }
+    cleanup()
+  }, [files])
+  console.log('files', files);
   const handleChangeMessage = (e) => {
     if (e.target.value.length <= 400) {
       setMessage(e.target.value)
@@ -110,8 +116,7 @@ export const Constructor = () => {
         sign: signature
       }
       try {
-        await axios.patch(`/v1/qrcodes/${id}`, rest);
-        navigate('/qrcode/{id}');
+        await axios.patch(`https://admin.jewelcocktail.com/v1/qrcodes/${id}`, rest);
       } catch (error) {
         console.log('something goes wroong, error: ', error);
       } finally {
