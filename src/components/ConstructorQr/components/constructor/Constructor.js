@@ -232,7 +232,7 @@ export const Constructor = () => {
                 </ResultPrewievMob>
                 <p>Вид послания, которое увидит ваш адресат</p>
                 <MessageView>{message}</MessageView>
-                <div>
+                <div className="emptyHeight">
                   <WrapSlider>
                     <WrapBorderView>
                       <WrapInnerBorder>
@@ -243,39 +243,21 @@ export const Constructor = () => {
                       </WrapInnerBorder>
                       <InnerWrapSlider>
                         <Slider {...settings}>
-                          <div>
-                            <div
-                              className="imageInnerSlider"
-                              style={{
-                                backgroundImage: `url(${one})`,
-                                backgroundPosition: 'center',
-                                backgroundSize: 'cover',
-                                backgroundRepeat: 'no-repeat'
-                              }}
-                            />
-                          </div>
-                          <div>
-                            <div
-                              className="imageInnerSlider"
-                              style={{
-                                backgroundImage: `url(${two})`,
-                                backgroundPosition: 'center',
-                                backgroundSize: 'cover',
-                                backgroundRepeat: 'no-repeat'
-                              }}
-                            />
-                          </div>
-                          <div>
-                            <div
-                              className="imageInnerSlider"
-                              style={{
-                                backgroundImage: `url(${three})`,
-                                backgroundPosition: 'center',
-                                backgroundSize: 'cover',
-                                backgroundRepeat: 'no-repeat'
-                              }}
-                            />
-                          </div>
+                          {files.length > 0 && files.map((item) => {
+                            return (
+                              <div>
+                                <div
+                                  className="imageInnerSlider"
+                                  style={{
+                                    backgroundImage: `url(${item.preview})`,
+                                    backgroundPosition: 'center',
+                                    backgroundSize: 'cover',
+                                    backgroundRepeat: 'no-repeat'
+                                  }}
+                                />
+                              </div>
+                              )
+                          })}
                         </Slider>
                       </InnerWrapSlider>
                       <WrapName className={"color_"+borderType}>

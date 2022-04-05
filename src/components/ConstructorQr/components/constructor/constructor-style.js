@@ -395,6 +395,12 @@ export const PodpsiMob = styled.div`
 
 export const WrapPreviewResult = styled.div`
   margin-top: 50px;
+  .emptyHeight {
+    height: 531px;
+    @media screen and (max-width: 768px) {
+      height: 180px;
+    }
+  }
 `;
 export const InnerPreviewResult = styled.div`
   text-align: center;
