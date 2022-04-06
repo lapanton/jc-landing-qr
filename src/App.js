@@ -35,6 +35,7 @@ const GlobalStyle = createGlobalStyle`
 export const App = () => {
   return (
     <Router>
+
         <Routes>
             <Route path="/" element={
               <div>

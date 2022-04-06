@@ -57,6 +57,7 @@ import borderfour from './borderfour.png';
 import one from './photo/14.png';
 import two from './photo/17.png';
 import three from './photo/21.png';
+import {useAsync} from "react-use";
 
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -67,6 +68,11 @@ export const Constructor = () => {
     const [message, setMessage] = useState("");
     const [borderType, setBorderType] = useState(1);
     const [signature, setSignature] = useState("");
+
+  const state = useAsync(async () => {
+    const result = await axios.get(`https://admin.jewelcocktail.com/v1/qrcodes/${id}`);
+    return result.data;
+  }, [id]);
 
     const {getRootProps, getInputProps} = useDropzone({
       accept: 'image/*',
@@ -113,7 +119,8 @@ export const Constructor = () => {
   const handleSubmit = async () => {
       const rest = {
         msg: message,
-        sign: signature
+        sign: signature,
+        border: borderType
       }
       try {
         await axios.patch(`https://admin.jewelcocktail.com/v1/qrcodes/${id}`, rest);
@@ -133,6 +140,12 @@ export const Constructor = () => {
     slidesToScroll: 1
   };
 
+  const  { value, loading } = state;
+
+  if (loading) return null;
+
+  const {msg, sign, border} = value;
+  console.log('files', files);
   return (
     <Wrapper>
         <h2>Конструктор послания</h2>
