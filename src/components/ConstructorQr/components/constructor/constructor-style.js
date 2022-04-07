@@ -1,6 +1,12 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
+  .completed {
+    display: none;
+  }
+  .noMarging {
+    margin: 0;
+  }
   margin-top: 5rem;
   @media screen and (max-width: 768px) {
     margin-top: 2.5rem;
@@ -401,6 +407,12 @@ export const WrapPreviewResult = styled.div`
       height: 180px;
     }
   }
+  .emptyHeightCompl{
+    height: 531px;
+    @media screen and (max-width: 768px) {
+      height: 310px;
+    }
+  }
 `;
 export const InnerPreviewResult = styled.div`
   text-align: center;
@@ -411,6 +423,11 @@ export const MessageView = styled.div`
   margin-bottom: 40px;
   @media screen and (max-width: 768px) {
     padding: 0 22px;
+  }
+  &.morePadding{
+    @media screen and (max-width: 768px) {
+      padding-top: 40px;
+    }
   }
 `;
 
@@ -603,5 +620,23 @@ export const WrapInnerBorder = styled.div`
   @media screen and (max-width: 768px) {
     max-width: 290px;
     min-width: 290px;
+  }
+`;
+
+export const WrapperPending = styled.div`
+  text-align: center;
+  margin-top: 7rem;
+  background: #673E37;
+  padding: 10px;
+  color: #fff;
+  h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    @media screen and (max-width: 768px) {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
   }
 `;

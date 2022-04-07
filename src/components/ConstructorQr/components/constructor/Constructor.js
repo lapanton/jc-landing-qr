@@ -41,7 +41,8 @@ import {
   ResultPrewievMob,
   WrapBorderView,
   InnerWrapSlider,
-  WrapInnerBorder
+  WrapInnerBorder,
+  WrapperPending
 } from "./constructor-style";
 import t from './t.png';
 import fon from './fon.png';
@@ -54,25 +55,18 @@ import bordertwo from './bordertwo.png';
 import borderthree from './borderthree.png';
 import borderfour from './borderfour.png';
 
-import one from './photo/14.png';
-import two from './photo/17.png';
-import three from './photo/21.png';
 import {useAsync} from "react-use";
 
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-export const Constructor = () => {
+export const Constructor = (props) => {
+  const value = props.value;
   const { id } = useParams();
-
+    const [filledForm, setFilledForm] = useState(false);
     const [files, setFiles] = useState([]);
     const [message, setMessage] = useState("");
     const [borderType, setBorderType] = useState(1);
     const [signature, setSignature] = useState("");
-
-  const state = useAsync(async () => {
-    const result = await axios.get(`https://admin.jewelcocktail.com/v1/qrcodes/${id}`);
-    return result.data;
-  }, [id]);
 
     const {getRootProps, getInputProps} = useDropzone({
       accept: 'image/*',
@@ -103,7 +97,6 @@ export const Constructor = () => {
     }
     cleanup()
   }, [files])
-  console.log('files', files);
   const handleChangeMessage = (e) => {
     if (e.target.value.length <= 400) {
       setMessage(e.target.value)
@@ -124,6 +117,7 @@ export const Constructor = () => {
       }
       try {
         await axios.patch(`https://admin.jewelcocktail.com/v1/qrcodes/${id}`, rest);
+        window.location.reload();
       } catch (error) {
         console.log('something goes wroong, error: ', error);
       } finally {
@@ -140,18 +134,22 @@ export const Constructor = () => {
     slidesToScroll: 1
   };
 
-  const  { value, loading } = state;
+  // if (value === undefined) return null;
 
-  if (loading) return null;
-
-  const {msg, sign, border} = value;
-  console.log('files', files);
+  if (value?.status === 'pending' && value?.msg?.length > 0) {
+    return (
+      <WrapperPending>
+      <h2>вы успешно сохранили ваше послание! Через некоторое время выше послание будет доступно</h2>
+    </WrapperPending>
+    );
+  }
+  console.log('xxxx', value?.status === 'completed');
   return (
     <Wrapper>
-        <h2>Конструктор послания</h2>
+        <h2 className={value?.status === 'completed' ? "completed": "notcompleted"}>Конструктор послания</h2>
 
         <WrapConstructorArea>
-          <SideArea>
+          <SideArea className={value?.status === 'completed' ? "completed": "notcompleted"}>
 
             <TextMessage>
               <img src={t} alt="JewelCocktail"/>
@@ -185,15 +183,15 @@ export const Constructor = () => {
 
           </SideArea>
 
-          <ConstructorArea>
-            <TextMessageMob>
+          <ConstructorArea className={value?.status === 'completed' ? "noMarging": "notcompleted"}>
+            <TextMessageMob className={value?.status === 'completed' ? "completed": "notcompleted"}>
               <img src={t} alt="JewelCocktail"/>
               <div>Текст послания</div>
             </TextMessageMob>
-            <p>Заполните текст послания до 400 символов</p>
-            <textarea value={message} name="message" cols="30" rows="5" onChange={handleChangeMessage} />
+            <p className={value?.status === 'completed' ? "completed": "notcompleted"}>Заполните текст послания до 400 символов</p>
+            <textarea value={message} name="message" cols="30" rows="5" onChange={handleChangeMessage} className={value?.status === 'completed' ? "completed": "notcompleted"} />
 
-            <WrapPhotoUpload>
+            <WrapPhotoUpload className={value?.status === 'completed' ? "completed": "notcompleted"}>
               <FonMobile>
                 <img src={fon} alt="JewelCocktail"/>
                 <div>Фон</div>
@@ -212,7 +210,7 @@ export const Constructor = () => {
               </InnerPhoto>
             </WrapPhotoUpload>
 
-            <WrapBoardSelect>
+            <WrapBoardSelect className={value?.status === 'completed' ? "completed": "notcompleted"}>
                 <InnerBoard>
                   <RamkaMob>
                     <img src={ramka} alt="JewelCocktail" className='iconBorder'/>
@@ -226,7 +224,7 @@ export const Constructor = () => {
                 </InnerBoard>
             </WrapBoardSelect>
 
-            <WrapSignature>
+            <WrapSignature className={value?.status === 'completed' ? "completed": "notcompleted"}>
               <InnerSignatture>
                 <PodpsiMob>
                   <img src={podpsi} alt="JewelCocktail"/>
@@ -239,13 +237,13 @@ export const Constructor = () => {
 
             <WrapPreviewResult>
               <InnerPreviewResult>
-                <ResultPrewievMob>
+                <ResultPrewievMob className={value?.status === 'completed' ? "completed": "notcompleted"}>
                   <img src={result} alt="JewelCocktail"/>
                   <div>Предварительный результат</div>
                 </ResultPrewievMob>
-                <p>Вид послания, которое увидит ваш адресат</p>
-                <MessageView>{message}</MessageView>
-                <div className="emptyHeight">
+                <p className={value?.status === 'completed' ? "completed": "notcompleted"}>Вид послания, которое увидит ваш адресат</p>
+                <MessageView className={value?.status === 'completed' ? "morePadding": "notcompleted"}>{value?.status === 'completed' ? value.msg : message}</MessageView>
+                <div className={value?.status === 'completed' ? "emptyHeightCompl": "emptyHeight"} >
                   <WrapSlider>
                     <WrapBorderView>
                       <WrapInnerBorder>
@@ -274,14 +272,14 @@ export const Constructor = () => {
                         </Slider>
                       </InnerWrapSlider>
                       <WrapName className={"color_"+borderType}>
-                        {signature}
+                        {value?.status === 'completed' ? value.sign : signature}
                       </WrapName>
                     </WrapBorderView>
 
                   </WrapSlider>
 
                 </div>
-                <ButtonSubmit onClick={handleSubmit}>
+                <ButtonSubmit onClick={handleSubmit} className={value?.status === 'completed' ? "completed": "notcompleted"}>
                   Создать послание
                 </ButtonSubmit>
               </InnerPreviewResult>
