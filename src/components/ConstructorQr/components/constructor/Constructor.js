@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
 import {useParams} from 'react-router-dom';
 import {useDropzone} from 'react-dropzone';
@@ -110,19 +110,28 @@ export const Constructor = (props) => {
   };
 
   const handleSubmit = async () => {
-      const rest = {
-        msg: message,
-        sign: signature,
-        border: borderType
-      }
-      try {
-        await axios.patch(`https://admin.jewelcocktail.com/v1/qrcodes/${id}`, rest);
-        window.location.reload();
-      } catch (error) {
-        console.log('something goes wroong, error: ', error);
-      } finally {
-        console.log('finaly')
-      }
+    const formData = new FormData();
+
+    const rest = {
+      msg: message,
+      sign: signature,
+      border: borderType
+    }
+
+    files.forEach(file => formData.append('img', file));
+
+    Object.entries(rest).forEach(([key, value]) => {
+      formData.append(key, value);
+    });
+
+    try {
+      await axios.patch(`https://admin.jewelcocktail.com/v1/qrcodes/${id}`, formData);
+      window.location.reload();
+    } catch (error) {
+      console.log('something goes wroong, error: ', error);
+    } finally {
+      console.log('finaly')
+    }
 
   };
 
@@ -134,8 +143,6 @@ export const Constructor = (props) => {
     slidesToScroll: 1
   };
 
-  // if (value === undefined) return null;
-
   if (value?.status === 'pending' && value?.msg?.length > 0) {
     return (
       <WrapperPending>
@@ -143,7 +150,7 @@ export const Constructor = (props) => {
     </WrapperPending>
     );
   }
-  console.log('xxxx', value?.status === 'completed');
+  const images = value?.status === 'completed' ? value.img : files;
   return (
     <Wrapper>
         <h2 className={value?.status === 'completed' ? "completed": "notcompleted"}>Конструктор послания</h2>
@@ -254,13 +261,14 @@ export const Constructor = (props) => {
                       </WrapInnerBorder>
                       <InnerWrapSlider>
                         <Slider {...settings}>
-                          {files.length > 0 && files.map((item) => {
+
+                          {images.length > 0 && images.map((item) => {
                             return (
                               <div>
                                 <div
                                   className="imageInnerSlider"
                                   style={{
-                                    backgroundImage: `url(${item.preview})`,
+                                    backgroundImage: value?.status === 'completed' ?  `url(https://admin.jewelcocktail.com/media/${item.file})` : `url(${item.preview})`,
                                     backgroundPosition: 'center',
                                     backgroundSize: 'cover',
                                     backgroundRepeat: 'no-repeat'
