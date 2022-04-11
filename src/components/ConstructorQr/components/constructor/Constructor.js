@@ -143,7 +143,7 @@ export const Constructor = (props) => {
     slidesToScroll: 1
   };
 
-  if (value?.status === 'pending' && value?.msg?.length > 0) {
+  if (value?.msg?.length > 0) {
     return (
       <WrapperPending>
       <h2>вы успешно сохранили ваше послание! Через некоторое время выше послание будет доступно</h2>
