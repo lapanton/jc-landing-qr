@@ -19,7 +19,7 @@ export const ConstructorQr = () =>   {
 
   if (loading) return null;
   return (
-    <div style={{ zIndex: 99999, position: 'relative' }}>
+    <div style={{ zIndex: 99999, position: 'relative', padding: '0 40px' }}>
       <Header />
       {value?.status !== 'completed' && <Description /> }
       <Constructor value={value} />

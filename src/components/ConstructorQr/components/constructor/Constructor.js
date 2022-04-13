@@ -62,20 +62,31 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 export const Constructor = (props) => {
   const value = props.value;
   const { id } = useParams();
-    const [filledForm, setFilledForm] = useState(false);
     const [files, setFiles] = useState([]);
     const [message, setMessage] = useState("");
     const [borderType, setBorderType] = useState(1);
     const [signature, setSignature] = useState("");
 
+  const onDrop = useCallback(acceptedFiles => {
+
+   const newFiles = acceptedFiles.map(file => Object.assign(file, {
+      preview: URL.createObjectURL(file)
+    }))
+    console.log('files.length', files.length);
+    console.log('newFiles.length', newFiles.length);
+    const totalfiles = files.length + newFiles.length;
+    console.log('totalfiles', totalfiles);
+    if (totalfiles >= 11) return;
+
+    setFiles([...files, ...newFiles]);
+
+  }, [files])
+
     const {getRootProps, getInputProps} = useDropzone({
       accept: 'image/*',
-      maxFiles: 3,
-      onDrop: acceptedFiles => {
-        setFiles(acceptedFiles.map(file => Object.assign(file, {
-          preview: URL.createObjectURL(file)
-        })));
-      }
+      maxFiles: 10,
+      maxSize: 31457280,
+      onDrop,
     });
 
     const thumbs = files.map(file => (

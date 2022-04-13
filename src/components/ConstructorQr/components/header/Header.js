@@ -29,7 +29,7 @@ export const Header = () => {
         <a href="/" className="you">
           <img src={youtube} alt="JewelCocktail"/>
         </a>
-        <a href="/" className="goo">
+        <a href="mailto:contact@jewelcocktail.com" className="goo">
           <img src={google} alt="JewelCocktail"/>
         </a>
       </Social>

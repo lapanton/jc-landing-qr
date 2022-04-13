@@ -20,6 +20,7 @@ import {Qr1} from "./giftMessage/qr1";
 import {SliderGalerry} from "./components/slider";
 import {Carousel} from "./components/Carousel/Carousel";
 import {ConstructorQr} from './components/ConstructorQr/ConstructorQr';
+import CheckStatusQR from "./hocs/CheckStatusQR";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -55,8 +56,12 @@ export const App = () => {
               </div>
             } exact/>
             <Route path="/qrcode/:id"
-                   element={<ConstructorQr exact/>}
-            />
+                   element={
+                     <CheckStatusQR>
+                      <ConstructorQr />
+                     </CheckStatusQR>
+                   }
+                     exact />
             <Route path="/qr1001" element={<>
                 <Qr1001/>
                 <Footer exact />
