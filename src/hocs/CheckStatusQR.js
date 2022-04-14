@@ -12,7 +12,7 @@ const CheckStatusQR = ({ children }) => {
   const location = useLocation();
   const { status } = state.value || {};
   if (state.loading) return null;
-  return ["default", "complete"].includes(status) ? children : window.location = "/";
+  return ["default", "completed"].includes(status) ? children : window.location = "/";
 };
 
 export default CheckStatusQR;
