@@ -403,6 +403,7 @@ export const WrapPreviewResult = styled.div`
   margin-top: 50px;
   .emptyHeight {
     height: 531px;
+    position: relative;
     @media screen and (max-width: 768px) {
       height: 180px;
     }
@@ -458,11 +459,11 @@ export const WrapName =styled.div`
   font-size: 14px;
   position: absolute;
   left: 50%;
-  bottom: 15px;
+  bottom: 4px;
   transform: translateX(-50%);
   z-index: 3;
   @media screen and (max-width: 768px) {
-    padding: 12px 10px;
+    padding: 10px 12px;
   }
   &.color_1 {
     
@@ -473,7 +474,7 @@ export const WrapName =styled.div`
     color: #000;
     background: linear-gradient(270deg,#d6d6d6 -4.63%,#d0d0d0 10.8%,#dedede 36.14%,#cecece 39.44%,#d0d0d0 52.67%,#c9c9c9 55.97%,#cbcbcb 68.09%,#d3d3d3 69.19%,#c6c6c6 82.42%,#d0d0d0 87.93%,#d0d0d0 104.45%);
     @media screen and (max-width: 768px) {
-      padding: 12px 10px;
+      padding: 10px 12px;
     }
   }
   &.color_3 {
@@ -491,7 +492,7 @@ export const WrapName =styled.div`
     }
   }
   @media screen and (max-width: 768px) {
-    bottom: -12px;
+    bottom: -43px;
   }
 `;
 

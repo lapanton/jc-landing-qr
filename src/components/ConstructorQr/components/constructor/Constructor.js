@@ -62,7 +62,7 @@ export const Constructor = (props) => {
     const [files, setFiles] = useState([]);
     const [message, setMessage] = useState("");
     const [borderType, setBorderType] = useState(1);
-    const [signature, setSignature] = useState("");
+    const [signature, setSignature] = useState(" ");
 
   const onDrop = useCallback(acceptedFiles => {
 
@@ -288,13 +288,11 @@ export const Constructor = (props) => {
                           })}
                         </Slider>
                       </InnerWrapSlider>
-                      <WrapName className={"color_"+borderType}>
-                        {value?.status === 'completed' ? value.sign : signature}
-                      </WrapName>
                     </WrapBorderView>
-
                   </WrapSlider>
-
+                  <WrapName className={"color_"+borderType}>
+                    {value?.status === 'completed' ? value.sign : signature}
+                  </WrapName>
                 </div>
                 <ButtonSubmit onClick={handleSubmit} className={value?.status === 'completed' ? "completed": "notcompleted"}>
                   Создать послание
