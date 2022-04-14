@@ -64,17 +64,16 @@ export const Constructor = (props) => {
     const [files, setFiles] = useState([]);
     const [message, setMessage] = useState("");
     const [borderType, setBorderType] = useState(1);
-    const [signature, setSignature] = useState(" ");
+    const [signature, setSignature] = useState("");
 
   const onDrop = useCallback(acceptedFiles => {
 
    const newFiles = acceptedFiles.map(file => Object.assign(file, {
       preview: URL.createObjectURL(file)
     }))
-    console.log('files.length', files.length);
-    console.log('newFiles.length', newFiles.length);
+
     const totalfiles = files.length + newFiles.length;
-    console.log('totalfiles', totalfiles);
+
     if (totalfiles >= 11) return;
 
     setFiles([...files, ...newFiles]);
@@ -120,6 +119,13 @@ export const Constructor = (props) => {
   };
 
   const handleSubmit = async () => {
+
+    if (message === "") return alert('Пожалустаа введите послание');
+
+    if (signature === "") return alert('Пожалустаа введите Имя');
+
+    if (files.length === 0) return alert('Пожалустаа загрузитее фото');
+
     const formData = new FormData();
 
     const rest = {

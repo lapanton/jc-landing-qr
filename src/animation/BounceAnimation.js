@@ -16,7 +16,7 @@ const bounce = keyframes`
 
 export const Wrapper = styled.div`
   position: fixed;
-  background: rgba(255,255,255,0.6);
+  background: rgba(255,255,255,1);
   top: 0;
   left: 0;
   width: 100%;
