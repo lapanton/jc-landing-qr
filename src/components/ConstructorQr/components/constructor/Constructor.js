@@ -53,12 +53,14 @@ import plus from './plus.png';
 import borderone from './border-one.png';
 import bordertwo from './border-two.png';
 import borderthree from './no-border.png';
+import {BounceAnimation} from "../../../../animation/BounceAnimation";
 
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 export const Constructor = (props) => {
   const value = props.value;
   const { id } = useParams();
+    const [sendData, setSendData] = useState(false);
     const [files, setFiles] = useState([]);
     const [message, setMessage] = useState("");
     const [borderType, setBorderType] = useState(1);
@@ -133,6 +135,7 @@ export const Constructor = (props) => {
     });
 
     try {
+      setSendData(true);
       await axios.patch(`https://admin.jewelcocktail.com/v1/qrcodes/${id}`, formData);
       window.location.reload();
     } catch (error) {
@@ -142,6 +145,10 @@ export const Constructor = (props) => {
     }
 
   };
+
+  if (sendData) {
+    return  <BounceAnimation />
+  }
 
   const settings = {
     dots: true,
@@ -279,7 +286,7 @@ export const Constructor = (props) => {
                                   style={{
                                     backgroundImage: value?.status === 'completed' ?  `url(https://admin.jewelcocktail.com/media/${item.file})` : `url(${item.preview})`,
                                     backgroundPosition: 'center',
-                                    backgroundSize: 'cover',
+                                    backgroundSize: 'contain',
                                     backgroundRepeat: 'no-repeat'
                                   }}
                                 />
