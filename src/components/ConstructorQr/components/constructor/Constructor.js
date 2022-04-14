@@ -50,12 +50,9 @@ import ramka from './ramka.png';
 import podpsi from './podpisi.png';
 import result from './result.png';
 import plus from './plus.png';
-import borderone from './borderone.png';
-import bordertwo from './bordertwo.png';
-import borderthree from './borderthree.png';
-import borderfour from './borderfour.png';
-
-import {useAsync} from "react-use";
+import borderone from './border-one.png';
+import bordertwo from './border-two.png';
+import borderthree from './no-border.png';
 
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -238,7 +235,6 @@ export const Constructor = (props) => {
                   <img className={borderType === 1 ? "active" : "notactive"} src={borderone} alt="JewelCocktaail" onClick={() => setBorderType(1)} />
                   <img className={borderType === 2 ? "active" : "notactive"} src={bordertwo} alt="JewelCocktaail" onClick={() => setBorderType(2)} />
                   <img className={borderType === 3 ? "active" : "notactive"} src={borderthree} alt="JewelCocktaail" onClick={() => setBorderType(3)} />
-                  <img className={borderType === 4 ? "active" : "notactive"} src={borderfour} alt="JewelCocktaail" onClick={() => setBorderType(4)} />
                 </InnerBoard>
             </WrapBoardSelect>
 
@@ -265,10 +261,12 @@ export const Constructor = (props) => {
                   <WrapSlider>
                     <WrapBorderView>
                       <WrapInnerBorder>
-                        {borderType === 1 && <img src={borderone} alt="JewelCocktail"/>}
-                        {borderType === 2 && <img src={bordertwo} alt="JewelCocktail"/>}
-                        {borderType === 3 && <img src={borderthree} alt="JewelCocktail"/>}
-                        {borderType === 4 && <img src={borderfour} alt="JewelCocktail"/>}
+
+                        {borderType === 1 && value?.status !== 'completed' && <img src={borderone} alt="JewelCocktail"/>}
+                        {borderType === 2  && value?.status !== 'completed' && <img src={bordertwo} alt="JewelCocktail"/>}
+
+                        {value?.status === 'completed' && value?.border === 1 && <img src={borderone} alt="JewelCocktail"/>}
+                        {value?.status === 'completed' && value?.border === 2 && <img src={bordertwo} alt="JewelCocktail"/>}
                       </WrapInnerBorder>
                       <InnerWrapSlider>
                         <Slider {...settings}>

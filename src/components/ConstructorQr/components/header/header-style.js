@@ -15,6 +15,8 @@ export const Wrapper = styled.div`
 `;
 
 export const Menu = styled.div`
+  opacity: 0;
+  pointer-events: none;
   div {
     display: inline-block;
     font-family: 'Inter', sans-serif;
