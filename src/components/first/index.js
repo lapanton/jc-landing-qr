@@ -17,10 +17,6 @@ import googn from "./google-n.png";
 
 export const Main = ({langProps}) => {
   const { locale, onLocaleChange } = langProps;
-  useEffect(() => {
-    const Pave = window.Pave;
-
-  }, []);
 
   useEffect(() => {
     window.addEventListener('scroll', isSticky);

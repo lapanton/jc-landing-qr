@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { FormattedMessage } from "react-intl";
 import { Wrapper, WrapImage, WrapText, Wrapslider } from "./uverennosti-styled";
 import bg from './bguv.png';
 import one from './1.png';
@@ -35,12 +36,10 @@ export const Uverenosti = () => {
       </Wrapslider>
       <WrapText>
         <h3>
-          уверенность<br/>
-          и
-          самодостаточность
+          <FormattedMessage id="message.uveren" values={{br: <br />}} />
         </h3>
         <p>
-          <span>&nbsp;&nbsp;</span>&nbsp;&nbsp;Мы предлагаем Вам стать стилистом и творцом своего образа благодаря большому разнообразию основ и ассортименту съемных элементов. Шарм-элементы можно подобрать под любые образы и запросы, их можно быстро сменить, если поменялись планы. Все украшения и варианты декоративных элементов прекрасно сочетаются между собой. С нашей коллекцией Вы можете бесконечно экспериментировать с образами, став сама себе стилистом.<br/>Самодостаточность – эталон стиля.
+          <span>&nbsp;&nbsp;</span>&nbsp;&nbsp;<FormattedMessage id="message.miPredlagaem" values={{br: <br />}} />
         </p>
         <div style={{position: "relative", zIndex: "9999999"}}>
           <WrapImage>

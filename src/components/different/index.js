@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from "react-intl";
 import { Wrapper, WrapText } from "./different-styled";
 import bg from './bg.png';
 
@@ -8,11 +9,10 @@ export const Different = () => {
       <img src={bg} alt="JewelCocktail"/>
       <WrapText>
         <h3>
-
-          УКРАШЕНИЯ С МЕТА-ПОСЛАНИЕМ
+          <FormattedMessage id="message.ukrashenia"/>
         </h3>
-        <p className="boldp"><span>&nbsp;&nbsp;</span>&nbsp;&nbsp;Вы можете создать не только оригинальное украшение, но и сделать подарок с МЕТА-посланием – на обратной стороне сменной вставки делается гравировка с уникальным QR-кодом невидимой для окружающих.</p>
-        <p><span>&nbsp;&nbsp;</span>&nbsp;&nbsp;Этот код ведет на цифровое послание любого типа – открытка, поздравление, изображение, видеоролик, признание в любви, фотография, любой формат пожеланий в цифровом виде. Это уникальная возможность сделать подарок с личным посланием и смыслом, сохранить важные и дорогие сердцу моменты или передать свои признания и эмоции близким на собственном украшении с душой.</p>
+        <p className="boldp"><span>&nbsp;&nbsp;</span>&nbsp;&nbsp;<FormattedMessage id="message.youcan"/></p>
+        <p><span>&nbsp;&nbsp;</span>&nbsp;&nbsp;<FormattedMessage id="message.codego"/></p>
       </WrapText>
     </Wrapper>
   )

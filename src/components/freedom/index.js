@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { FormattedMessage } from "react-intl";
 import { Wrapper, Inner, WrapperMob } from "./withus-styled";
 import star from './star.png';
 import bgmob from './bgmob.png';
@@ -23,16 +24,16 @@ export const Freedom = () => {
       {
         isMobile ?
           <WrapperMob>
-            <h3>СВОБОДА И ТВОРЧЕСТВО</h3>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;Вы можете приобрести одно украшение или же составить набор из колец, серег, подвесок и браслетов. Используя различные миксы декоративных съемных вставок, каждый день набор может выглядеть совершенно по-новому, отражая требования этого дня или ваше настроение. Ограничения в возможностях выражения собственного стиля теперь стерты. Новая эксклюзивная шарм-коллекция ювелирных украшений поможет подчеркнуть именно Ваше настроение, исключая вероятность встретить такой же образ на улице.</p>
+            <h3><FormattedMessage id="message.freedom" /></h3>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;<FormattedMessage id="message.purchase" /></p>
             <img src={bgmob} alt="JewelCocktail"/>
           </WrapperMob>
           :
           <Wrapper>
             <Inner>
               <img src={star} alt="JewelCocktail" className="freedomStar"/>
-              <h3>СВОБОДА И ТВОРЧЕСТВО</h3>
-              <p>&nbsp;&nbsp;&nbsp;&nbsp;Вы можете приобрести одно украшение или же составить набор из колец, серег, подвесок и браслетов. Используя различные миксы декоративных съемных вставок, каждый день набор может выглядеть совершенно по-новому, отражая требования этого дня или ваше настроение. Ограничения в возможностях выражения собственного стиля теперь стерты. Новая эксклюзивная шарм-коллекция ювелирных украшений поможет подчеркнуть именно Ваше настроение, исключая вероятность встретить такой же образ на улице.</p>
+              <h3><FormattedMessage id="message.freedom" /></h3>
+              <p>&nbsp;&nbsp;&nbsp;&nbsp;<FormattedMessage id="message.purchase" /></p>
             </Inner>
           </Wrapper>
       }

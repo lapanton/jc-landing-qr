@@ -1,4 +1,5 @@
 import React from "react";
+import { FormattedMessage } from "react-intl";
 import Slider from "react-slick";
 
 import {
@@ -56,7 +57,7 @@ export const Carousel = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-12 text-center">
-            <h3>НАША ГАЛЕРЕЯ</h3>
+            <h3><FormattedMessage id="message.ourgal" /></h3>
             <br/>
           </div>
         </div>

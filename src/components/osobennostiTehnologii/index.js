@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { FormattedMessage } from "react-intl";
 import { WrapContainer, Wrapper, WrapTitle, WrapItems, InnerOne, InnerTwo, InnerThree, BottomArea } from './osobennostiTehnologii-styled';
 import oneImg from './one.png';
 import twoImg from './two.png';
@@ -62,25 +63,25 @@ export const OsobennostiTehnologii = () => {
     <WrapContainer id="containerTwo" style={{ position: "relative", width: "100%", zIndex: 99999 }} className="wrapContainerTwo">
       <Wrapper>
         <WrapTitle>
-          <h3>Особенность технологии</h3>
-          <h6>Уникальность наших ювелирных украшений не только в творческой идее и истории создания,<br/> но также в особенностях технологии:</h6>
+          <h3><FormattedMessage id="message.veryspecial" /></h3>
+          <h6><FormattedMessage id="message.uniqjew" values={{br:<br/>}} /></h6>
         </WrapTitle>
         <WrapItems>
           <InnerOne>
             <img src={oneImg} alt="JewelCocktail"/>
-            <p>Разнообразие сменных вставок - используются различные натуральные камни, жемчуг, серебро, дерево, эмаль и керамика.</p>
+            <p><FormattedMessage id="message.raznoobr" /></p>
           </InnerOne>
           <InnerTwo>
             <img src={twoImg} alt="JewelCocktail"/>
-            <p>Смена образа возможна одним легким движением благодаря запатентованной системе креплений вставок.</p>
+            <p><FormattedMessage id="message.smena" /></p>
           </InnerTwo>
           <InnerThree>
             <img src={threeImg} alt="JewelCocktail"/>
-            <p>Украшения с цифровым посланием - это новая технология мета-посланий, которая делает каждое изделие совершенно уникальным.</p>
+            <p><FormattedMessage id="message.poslanie" /></p>
           </InnerThree>
         </WrapItems>
         <BottomArea>
-          <p>Jewel Cocktail украшения со съемными вставками, которые можно поменять, когда захочется — это личная ювелирная история для каждого.</p>
+          <p><FormattedMessage id="message.inserts" /></p>
         </BottomArea>
       </Wrapper>
     </WrapContainer>
