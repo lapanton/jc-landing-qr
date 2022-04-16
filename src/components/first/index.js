@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import { ConttainerWrap, Wrapper, Inner, WrapSocial, WrapPhone, WrapList, WrapTitle, WrapLoadMore, InnerLoadMore, WrapMobile, WrapMenu, WrpaMobSocial } from './main-styled';
+import { FormattedMessage } from "react-intl";
+import { ConttainerWrap, Wrapper, Inner, WrapSocial, WrapPhone, WrapList, WrapTitle, WrapLoadMore, InnerLoadMore, WrapMobile, WrapMenu, WrpaMobSocial, WrapLang } from './main-styled';
 import logo from "./logo.png";
 import arrowDown from "./arrow-down.svg";
 import rotateText from "./rotate-text.svg";
@@ -14,7 +15,8 @@ import youn from "./youtube-n.png";
 import googn from "./google-n.png";
 
 
-export const Main = () => {
+export const Main = ({langProps}) => {
+  const { locale, onLocaleChange } = langProps;
   useEffect(() => {
     const Pave = window.Pave;
 
@@ -46,9 +48,9 @@ export const Main = () => {
             <img src={logo} alt="JewelCocktail" />
           </a>
           <WrapList>
-            <div onClick={() => window.scrollTo({top: 4000, left: 0, behavior: 'smooth'})}>О нас</div>
-            <div onClick={() => window.scrollTo({top: 3300, left: 0, behavior: 'smooth'})}>Галерея</div>
-            <div onClick={() => window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })}>Контакты</div>
+            <div onClick={() => window.scrollTo({top: 4000, left: 0, behavior: 'smooth'})}><FormattedMessage id="message.aboutUs" /></div>
+            <div onClick={() => window.scrollTo({top: 3300, left: 0, behavior: 'smooth'})}><FormattedMessage id="message.gallery" /></div>
+            <div onClick={() => window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })}><FormattedMessage id="message.contacts" /></div>
           </WrapList>
           <WrapSocial>
             <a href="https://www.instagram.com/jewelcocktail_official/" target="_blank" rel="noopener noreferrer" className="insta-social">
@@ -61,6 +63,11 @@ export const Main = () => {
               <div/>
             </a>
           </WrapSocial>
+          <WrapLang>
+            <div className="en_lang" onClick={() => onLocaleChange('en')}>EN</div>
+            <div className="ru_lang" onClick={() => onLocaleChange('ru')}>РУ</div>
+            <div className="cn_lang" onClick={() => onLocaleChange('zh')}>CN</div>
+          </WrapLang>
           <WrapPhone>
             <a href="tel:+74993777919">
               +7 499 377 79 19
@@ -80,9 +87,9 @@ export const Main = () => {
                       <rect x="15.9999" y="14" width="24" height="3" rx="1" transform="rotate(45 15.9999 14)" fill="#ffffff"/>
                     </svg>
                   </div>
-                  <div onClick={() => window.scrollTo({top: 4800, left: 0, behavior: 'smooth'})}>О нас</div>
-                  <div onClick={() => window.scrollTo({top: 4225, left: 0, behavior: 'smooth'})}>Галерея</div>
-                  <div onClick={() => window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })}>Контакты</div>
+                  <div onClick={() => window.scrollTo({top: 4800, left: 0, behavior: 'smooth'})}><FormattedMessage id="message.aboutUs" /></div>
+                  <div onClick={() => window.scrollTo({top: 4225, left: 0, behavior: 'smooth'})}><FormattedMessage id="message.gallery" /></div>
+                  <div onClick={() => window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })}><FormattedMessage id="message.contacts" /></div>
                   <WrpaMobSocial>
                     <a href="https://www.instagram.com/jewelcocktail_official/" target="_blank" rel="noopener noreferrer" className="insta-social">
                       <img src={insn} alt="JewelCocktail"/>
@@ -102,7 +109,7 @@ export const Main = () => {
         <WrapTitle className={show ? 'removeZindex' : 'addit'}>
           {sticky && window.innerWidth >= '768' ? <div style={{ marginTop: "180px"}}/> : <span/>}
           <h1>Jewel Cocktail</h1>
-          <h2>Дизайнерские наборные ювелирные украшения в стиле Русский авангард</h2>
+          <h2><FormattedMessage id="message.subtitle" /></h2>
           {/*<p>Мы отказались от классических форм ювелирных украшений, предлагая вместо этого современный<br/> минимализм, естественность и возможность эксперементировать с образами. </p>*/}
         </WrapTitle>
         {/*<WrapLoadMore>*/}

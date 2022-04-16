@@ -374,3 +374,21 @@ export const WrpaMobSocial = styled.div`
     padding: 0 !important;
   }
 `;
+
+export const WrapLang = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  div {
+    color: #fff;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .en_lang {
+    margin-right: 5px;
+  }
+  .cn_lang {
+    margin-left: 5px;
+  }
+`;
