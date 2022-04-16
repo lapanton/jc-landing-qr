@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from "react-intl";
 import { Wrapper } from "./blacksquare-styled";
 import square from './square.png';
 import MoveStuffAround from "./lineTicker";
@@ -7,13 +8,13 @@ export const BlackSquare = () => {
   return (
     <Wrapper>
       <div style={{ position: "relative" }} className="wrapMalevich">
-        <p className="malevich">К.C. Малевич – «Чёрный квадрат»</p>
+        <p className="malevich"><FormattedMessage id="message.blackSquare" /></p>
         <img src={square} alt="JewelCocktail"/>
       </div>
       <p>
-        <span><span className="hideMobile">&nbsp;&nbsp;</span>&nbsp;&nbsp;Особенность бренда в том, что все изделия имеют квадратную форму, которая отсылает к известному квадрату Казимира Малевича.</span> <br/><br/>
-        <span className="hideMobile">&nbsp;&nbsp;</span>&nbsp;&nbsp;Поскольку сам авторский стиль предполагает высокую степень свободы и самовыражения в рамках минимализма, то все ювелирные украшения Jewel Cocktail имеют технологию сменных вставок, позволяющих менять дизайн в зависимости от настроения или события, которое вы собираетесь посетить.<br/><br/>
-        <span className="hideMobile">&nbsp;&nbsp;</span>&nbsp;&nbsp;Наши изделия - это не просто украшения, а ювелирные произведения искусства со своей историей и индивидуальностью.<br/>
+        <span><span className="hideMobile">&nbsp;&nbsp;</span>&nbsp;&nbsp;<FormattedMessage id="message.specialBrand" /></span> <br/><br/>
+        <span className="hideMobile">&nbsp;&nbsp;</span>&nbsp;&nbsp;<FormattedMessage id="message.poskoliku" /><br/><br/>
+        <span className="hideMobile">&nbsp;&nbsp;</span>&nbsp;&nbsp;<FormattedMessage id="message.nashiIzdelia" /><br/>
       </p>
     </Wrapper>
   )

@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from "react-intl";
 import Ticker from 'react-ticker';
 import styled from 'styled-components';
 
@@ -37,7 +38,7 @@ const MoveStuffAround = () => (
     <Ticker>
       {({ index }) => (
         <>
-          <h6>СВОБОДА - ЛИЧНОСТЬ - АРТ – НЕЗАВИСИМОСТЬ – ИСТОРИЯ - </h6>
+          <h6><FormattedMessage id="message.lineTicker" /></h6>
         </>
       )}
     </Ticker>

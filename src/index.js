@@ -23,7 +23,6 @@ const LocalizationWrapper = () => {
   const [locale, setLocale] = useState(initLocale);
   const [messages, setMessages] = useState(null);
   useEffect(() => {
-    console.log('changed');
     loadMessages(locale).then(setMessages);
   }, [locale]);
 
