@@ -160,7 +160,7 @@ export const PrivacyPolicy = () => {
 
           <span>4.1. Пользователь может получить любые разъяснения по интересующим вопросам, касающимся обработки его персональных данных, обратившись к Оператору с помощью электронной почты <a href="mailto:contact@jewelcocktail.com">contact@jewelcocktail.com</a> .</span><br/>
           <span>14.2. В данном документе будут отражены любые изменения политики обработки персональных данных Оператором. Политика действует бессрочно до замены ее новой версией.</span><br/>
-          <span>14.3. Актуальная версия Политики в свободном доступе расположена в сети Интернет по адресу <a href="https://www.jewelcocktail.com">https://www.jewelcocktail.com</a> .</span><br/>
+          <span>14.3. Актуальная версия Политики в свободном доступе расположена в сети Интернет по адресу <a href="https://jewelcocktail.com/privacy">https://jewelcocktail.com/privacy</a> .</span><br/>
         </WrapContent>
       </Wrapper>
   )
