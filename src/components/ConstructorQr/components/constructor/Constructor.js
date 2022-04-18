@@ -165,12 +165,9 @@ export const Constructor = (props) => {
   };
 
   if (value?.msg?.length > 0 && value?.status !== 'completed') {
-    return (
-      <WrapperPending>
-      <h2>вы успешно сохранили ваше послание! Через некоторое время выше послание будет доступно</h2>
-    </WrapperPending>
-    );
+    return null;
   }
+
   const images = value?.status === 'completed' ? value.img : files;
   return (
     <Wrapper>
@@ -303,7 +300,7 @@ export const Constructor = (props) => {
                       </InnerWrapSlider>
                     </WrapBorderView>
                   </WrapSlider>
-                  <WrapName className={value?.status === 'completed' ? "iscompeleted color_"+borderType : "color_"+borderType}>
+                  <WrapName className={value?.status === 'completed' ? "iscompeleted color_"+value?.border : "color_"+borderType}>
                     {value?.status === 'completed' ? value.sign : signature}
                   </WrapName>
                 </div>

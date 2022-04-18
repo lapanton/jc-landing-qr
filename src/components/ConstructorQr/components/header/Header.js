@@ -4,6 +4,7 @@ import logo from './logo.png';
 import vk from './vk.png';
 import youtube from './youtube.png';
 import google from './google.png';
+import {WrapperPending} from "../constructor/constructor-style";
 
 export const Header = () => {
   return (
@@ -37,6 +38,9 @@ export const Header = () => {
       <WrapPhone>
         <a href="tel:+74993777919">
           +7 499 377 79 19
+        </a>
+        <a href="mailto:contact@jewelcocktail.com">
+          contact@jewelcocktail.com
         </a>
       </WrapPhone>
 

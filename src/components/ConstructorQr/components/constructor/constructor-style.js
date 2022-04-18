@@ -476,6 +476,9 @@ export const WrapName =styled.div`
     @media screen and (max-width: 768px) {
       padding: 10px 12px;
     }
+    &.iscompeleted {
+      bottom: 34px;
+    }
   }
   &.color_3 {
     bottom: -12px;
@@ -629,7 +632,7 @@ export const WrapInnerBorder = styled.div`
 
 export const WrapperPending = styled.div`
   text-align: center;
-  margin-top: 7rem;
+  margin-top: 2rem;
   background: #673E37;
   padding: 10px;
   color: #fff;

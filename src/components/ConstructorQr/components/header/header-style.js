@@ -57,12 +57,14 @@ export const WrapPhone = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  flex-direction: column;
   a {
     white-space: nowrap;
     color: #000;
     align-items: center;
     justify-content: center;
     display: flex;
+    height: auto;
+    text-decoration: none;
   }
 `;

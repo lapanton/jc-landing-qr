@@ -68,6 +68,9 @@ export const Main = ({langProps}) => {
             <a href="tel:+74993777919">
               +7 499 377 79 19
             </a>
+            <a href="mailto:contact@jewelcocktail.com">
+              contact@jewelcocktail.com
+            </a>
           </WrapPhone>
           <WrapMobile>
             <a href="tel:+74993777919">

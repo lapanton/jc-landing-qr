@@ -178,7 +178,10 @@ export const WrapSocial = styled.div`
 export const WrapPhone = styled.div`
   display: flex;
   align-items: center;
+  flex-direction: column;
+  justify-content: center;
   a {
+    text-decoration: none;
     color: #fff;
   }
   @media screen and (max-width: 768px) {

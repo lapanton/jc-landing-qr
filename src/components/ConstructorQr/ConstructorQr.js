@@ -7,6 +7,7 @@ import { Header } from "./components/header/Header";
 import { Description } from "./components/description/Description";
 import {Constructor} from "./components/constructor/Constructor";
 import {BottomSlider} from "./components/bottomSlider/BottomSlider";
+import {WrapperPending} from "./components/constructor/constructor-style";
 
 
 export const ConstructorQr = () =>   {
@@ -20,7 +21,13 @@ export const ConstructorQr = () =>   {
   if (loading) return null;
   return (
     <div style={{ zIndex: 99999, position: 'relative', padding: '0 40px' }}>
-      <Header />
+      <Header value={value} />
+
+      { (value?.msg?.length > 0 && value?.status !== 'completed') && (
+      <WrapperPending>
+        <h2>вы успешно сохранили ваше послание! Через некоторое время выше послание будет доступно</h2>
+      </WrapperPending>)
+    }
       {value?.status !== 'completed' && <Description /> }
       <Constructor value={value} />
       {value?.status !== 'completed' && <BottomSlider /> }

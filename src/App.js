@@ -31,6 +31,11 @@ const GlobalStyle = createGlobalStyle`
     color: #000;
     button:focus {outline:0;}
   }
+  #root {
+    @media screen and (max-width: 768px) {
+      overflow: hidden;
+    }
+  }
 `;
 
 export const App = (props) => {
