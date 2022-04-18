@@ -442,7 +442,7 @@ export const ButtonSubmit = styled.div`
   @media screen and (max-width: 768px) {
     padding: 20px 40px;
     margin-bottom: 30px;
-    margin-top: 80px;
+    margin-top: 100px;
   }
   &:hover {
     cursor: pointer;
@@ -493,6 +493,9 @@ export const WrapName =styled.div`
   }
   @media screen and (max-width: 768px) {
     bottom: -43px;
+    &.iscompeleted {
+      bottom: 83px;
+    }
   }
 `;
 

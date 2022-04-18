@@ -33,7 +33,8 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-export const App = () => {
+export const App = (props) => {
+
   return (
     <Router>
 
@@ -41,7 +42,7 @@ export const App = () => {
             <Route path="/" element={
               <div>
                 <GlobalStyle />
-                <Main />
+                <Main langProps={props} />
                 <MoveStuffAround/>
                 <BlackSquare />
                 <WithUs/>

@@ -181,9 +181,7 @@ export const WrapLiveProjecct = styled.div`
   transform: translate(0, -50%) rotate(90deg);
   z-index: 98;
   padding: 10px;
-  ${breakpoint('sm')`
-      left: -5px;
-  `}
+  left: -5px;
   &:hover {
     cursor: pointer;
   }
@@ -205,9 +203,7 @@ export const WrapLiveProjecct = styled.div`
   transform: translate(0, -50%) rotate(-90deg);
   z-index: 98;
   padding: 10px;
-   ${breakpoint('sm')`
-      right: -5px;
-  `}
+  right: -5px;
 }
 `;
 

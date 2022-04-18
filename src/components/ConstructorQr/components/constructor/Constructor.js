@@ -303,7 +303,7 @@ export const Constructor = (props) => {
                       </InnerWrapSlider>
                     </WrapBorderView>
                   </WrapSlider>
-                  <WrapName className={"color_"+borderType}>
+                  <WrapName className={value?.status === 'completed' ? "iscompeleted color_"+borderType : "color_"+borderType}>
                     {value?.status === 'completed' ? value.sign : signature}
                   </WrapName>
                 </div>
