@@ -442,7 +442,7 @@ export const ButtonSubmit = styled.div`
   @media screen and (max-width: 768px) {
     padding: 20px 40px;
     margin-bottom: 30px;
-    margin-top: 100px;
+    margin-top: 20px;
   }
   &:hover {
     cursor: pointer;
@@ -645,5 +645,40 @@ export const WrapperPending = styled.div`
       font-size: 1.5rem;
       line-height: 2rem;
     }
+  }
+`;
+export const WrapInputCheckBox = styled.div`
+  display: inline-block;
+  .checkbox-round {
+    width: 1.3em;
+    height: 1.3em;
+    background-color: white;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .checkbox-round:checked {
+    background-color: #A55248;
+  }
+  span {
+    text-align: left;
+    color: #fff;
+    max-width: 260px;
+    display: inline-block;
+    transform: translateY(19px);
+    padding-left: 15px;
+  }
+  @media screen and (max-width: 768px) {
+    margin-top: 100px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+  }
+  a {
+    color: #fff;
   }
 `;

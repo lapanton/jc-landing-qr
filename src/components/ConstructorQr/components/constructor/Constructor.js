@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
-import {useParams} from 'react-router-dom';
+import {useParams, Link} from 'react-router-dom';
 import {useDropzone} from 'react-dropzone';
 import Slider from "react-slick";
 // Import css files
@@ -42,7 +42,8 @@ import {
   WrapBorderView,
   InnerWrapSlider,
   WrapInnerBorder,
-  WrapperPending
+  WrapperPending,
+  WrapInputCheckBox
 } from "./constructor-style";
 import t from './t.png';
 import fon from './fon.png';
@@ -60,12 +61,13 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 export const Constructor = (props) => {
   const value = props.value;
   const { id } = useParams();
+  const [checked, setChecked] = useState(false);
     const [sendData, setSendData] = useState(false);
     const [files, setFiles] = useState([]);
     const [message, setMessage] = useState("");
     const [borderType, setBorderType] = useState(1);
     const [signature, setSignature] = useState("");
-
+  console.log('checked', checked);
   const onDrop = useCallback(acceptedFiles => {
 
    const newFiles = acceptedFiles.map(file => Object.assign(file, {
@@ -125,6 +127,8 @@ export const Constructor = (props) => {
     if (signature === "") return alert('Пожалустаа введите Имя');
 
     if (files.length === 0) return alert('Пожалустаа загрузитее фото');
+
+  if (!checked) return alert('Пожалустаа поставьте галочку на согласие: Политикой в отношении обработки персональных данных');
 
     const formData = new FormData();
 
@@ -304,7 +308,12 @@ export const Constructor = (props) => {
                     {value?.status === 'completed' ? value.sign : signature}
                   </WrapName>
                 </div>
-                <ButtonSubmit onClick={handleSubmit} className={value?.status === 'completed' ? "completed": "notcompleted"}>
+                <WrapInputCheckBox>
+                  <input name="checked" type="checkbox" checked={checked}
+                         onChange={e => setChecked(!checked)} className="checkbox-round" />
+                  <span>Подтверждая вы соглавшаетесь с <a href="/privacy" target="_blank"> политикой в отношении обработки персональных данных</a></span>
+                </WrapInputCheckBox>
+                  <ButtonSubmit onClick={handleSubmit} className={value?.status === 'completed' ? "completed": "notcompleted"}>
                   Создать послание
                 </ButtonSubmit>
               </InnerPreviewResult>

@@ -21,6 +21,7 @@ import {SliderGalerry} from "./components/slider";
 import {Carousel} from "./components/Carousel/Carousel";
 import {ConstructorQr} from './components/ConstructorQr/ConstructorQr';
 import CheckStatusQR from "./hocs/CheckStatusQR";
+import {PrivacyPolicy} from "./components/PrivacyPolicy";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -90,6 +91,12 @@ export const App = (props) => {
                 <Footer />
             </>
             } exact />
+
+          <Route path="/privacy" element={<>
+            <PrivacyPolicy/>
+            <Footer />
+          </>
+          } exact />
 
         </Routes>
     </Router>
