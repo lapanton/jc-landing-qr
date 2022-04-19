@@ -23,14 +23,14 @@ export const ConstructorQr = () =>   {
     <div style={{ zIndex: 99999, position: 'relative', padding: '0 40px' }}>
       <Header value={value} />
 
-      { (value?.msg?.length > 0 && value?.status !== 'completed') && (
+      { (value?.status === 'pending') && (
       <WrapperPending>
         <h2>вы успешно сохранили ваше послание! Через некоторое время выше послание будет доступно</h2>
       </WrapperPending>)
     }
-      {value?.status !== 'completed' && <Description /> }
+      {['pending', 'default'].includes(value?.status) && <Description /> }
       <Constructor value={value} />
-      {value?.status !== 'completed' && <BottomSlider /> }
+      {['pending', 'default'].includes(value?.status) && <BottomSlider /> }
     </div>
   )
 };

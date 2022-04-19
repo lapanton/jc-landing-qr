@@ -67,7 +67,6 @@ export const Constructor = (props) => {
     const [message, setMessage] = useState("");
     const [borderType, setBorderType] = useState(1);
     const [signature, setSignature] = useState("");
-  console.log('checked', checked);
   const onDrop = useCallback(acceptedFiles => {
 
    const newFiles = acceptedFiles.map(file => Object.assign(file, {
@@ -128,14 +127,15 @@ export const Constructor = (props) => {
 
     if (files.length === 0) return alert('Пожалустаа загрузитее фото');
 
-  if (!checked) return alert('Пожалустаа поставьте галочку на согласие: Политикой в отношении обработки персональных данных');
+    if (!checked) return alert('Пожалустаа поставьте галочку на согласие: Политикой в отношении обработки персональных данных');
 
     const formData = new FormData();
 
     const rest = {
       msg: message,
-      sign: signature,
-      border: borderType
+      author: signature,
+      border: borderType,
+      status: "pending"
     }
 
     files.forEach(file => formData.append('img', file));
@@ -168,7 +168,7 @@ export const Constructor = (props) => {
     slidesToScroll: 1
   };
 
-  if (value?.msg?.length > 0 && value?.status !== 'completed') {
+  if (value?.status === 'pending') {
     return null;
   }
 
@@ -248,7 +248,7 @@ export const Constructor = (props) => {
                   <p>Выберите одну из предложенных рамок</p>
                   <img className={borderType === 1 ? "active" : "notactive"} src={borderone} alt="JewelCocktaail" onClick={() => setBorderType(1)} />
                   <img className={borderType === 2 ? "active" : "notactive"} src={bordertwo} alt="JewelCocktaail" onClick={() => setBorderType(2)} />
-                  <img className={borderType === 3 ? "active" : "notactive"} src={borderthree} alt="JewelCocktaail" onClick={() => setBorderType(3)} />
+                  <img className={borderType === 0 ? "active" : "notactive"} src={borderthree} alt="JewelCocktaail" onClick={() => setBorderType(0)} />
                 </InnerBoard>
             </WrapBoardSelect>
 
@@ -305,17 +305,21 @@ export const Constructor = (props) => {
                     </WrapBorderView>
                   </WrapSlider>
                   <WrapName className={value?.status === 'completed' ? "iscompeleted color_"+value?.border : "color_"+borderType}>
-                    {value?.status === 'completed' ? value.sign : signature}
+                    {value?.status === 'completed' ? value.author : signature}
                   </WrapName>
                 </div>
-                <WrapInputCheckBox>
-                  <input name="checked" type="checkbox" checked={checked}
-                         onChange={e => setChecked(!checked)} className="checkbox-round" />
-                  <span>Подтверждая вы соглавшаетесь с <a href="/privacy" target="_blank"> политикой в отношении обработки персональных данных</a></span>
-                </WrapInputCheckBox>
-                  <ButtonSubmit onClick={handleSubmit} className={value?.status === 'completed' ? "completed": "notcompleted"}>
-                  Создать послание
-                </ButtonSubmit>
+                  {value?.status === 'default' && (
+                    <>
+                      <WrapInputCheckBox>
+                        <input name="checked" type="checkbox" checked={checked}
+                               onChange={e => setChecked(!checked)} className="checkbox-round" />
+                        <span>Подтверждая вы соглавшаетесь с <a href="/privacy" target="_blank"> политикой в отношении обработки персональных данных</a></span>
+                      </WrapInputCheckBox>
+                      <ButtonSubmit onClick={handleSubmit} className={value?.status === 'completed' ? "completed": "notcompleted"}>
+                      Создать послание
+                      </ButtonSubmit>
+                    </>
+                  )}
               </InnerPreviewResult>
             </WrapPreviewResult>
 
