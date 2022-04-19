@@ -43,7 +43,8 @@ import {
   InnerWrapSlider,
   WrapInnerBorder,
   WrapperPending,
-  WrapInputCheckBox
+  WrapInputCheckBox,
+  WrapPhoneEmail
 } from "./constructor-style";
 import t from './t.png';
 import fon from './fon.png';
@@ -67,6 +68,8 @@ export const Constructor = (props) => {
     const [message, setMessage] = useState("");
     const [borderType, setBorderType] = useState(1);
     const [signature, setSignature] = useState("");
+    const [phone, setPhone] = useState("");
+    const [authorEmail, setAuthorEmail] = useState("");
   const onDrop = useCallback(acceptedFiles => {
 
    const newFiles = acceptedFiles.map(file => Object.assign(file, {
@@ -119,6 +122,18 @@ export const Constructor = (props) => {
     }
   };
 
+  const handleChangePhone = (e) => {
+    if (e.target.value.length <= 15) {
+      setPhone(e.target.value)
+    }
+  };
+
+  const handleChangeAuthorEmail = (e) => {
+    if (e.target.value.length <= 30) {
+      setAuthorEmail(e.target.value)
+    }
+  };
+
   const handleSubmit = async () => {
 
     if (message === "") return alert('Пожалустаа введите послание');
@@ -135,7 +150,9 @@ export const Constructor = (props) => {
       msg: message,
       author: signature,
       border: borderType,
-      status: "pending"
+      status: "pending",
+      email: authorEmail,
+      phone: phone
     }
 
     files.forEach(file => formData.append('img', file));
@@ -310,6 +327,10 @@ export const Constructor = (props) => {
                 </div>
                   {value?.status === 'default' && (
                     <>
+                      <WrapPhoneEmail>
+                        <div className="numberPhone"><div>Номер Телефона:</div> <input value={phone} type="tel" name="phone" onChange={handleChangePhone} /></div>
+                        <div className="emailUser"><div>Email:</div> <input value={authorEmail} type="email" name="authorEmail" onChange={handleChangeAuthorEmail} /></div>
+                      </WrapPhoneEmail>
                       <WrapInputCheckBox>
                         <input name="checked" type="checkbox" checked={checked}
                                onChange={e => setChecked(!checked)} className="checkbox-round" />

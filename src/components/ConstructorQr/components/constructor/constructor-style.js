@@ -438,7 +438,7 @@ export const ButtonSubmit = styled.div`
   border-radius: 5px;
   display: inline-block;
   color: #fff;
-  margin-top: 60px;
+  margin-top: 20px;
   @media screen and (max-width: 768px) {
     padding: 20px 40px;
     margin-bottom: 30px;
@@ -674,11 +674,40 @@ export const WrapInputCheckBox = styled.div`
     padding-left: 15px;
   }
   @media screen and (max-width: 768px) {
-    margin-top: 100px;
+    margin-top: 20px;
     padding-left: 10px;
     margin-bottom: 20px;
   }
   a {
     color: #fff;
+  }
+`;
+
+export const WrapPhoneEmail = styled.div`
+  color: #fff;
+  text-align: left;
+  margin: 20px auto 0 auto;
+  max-width: 400px;
+  input {
+    border-radius: 5px;
+    background: transparent;
+    padding: 11px 22px;
+    border: 1px solid #fff;
+    color: #fff;
+    width: 100%
+  }
+  .numberPhone {
+    margin-bottom: 20px;
+  }
+  .emailUser {
+    
+  }
+  @media screen and (max-width: 768px) {
+    margin-top: 80px;
+    max-width: 100%;
+    padding: 0 20px;
+    input {
+      width: calc(100% - 60px);
+    }
   }
 `;
