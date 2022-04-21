@@ -28,7 +28,7 @@ export const ConstructorQr = () =>   {
         <h2>вы успешно сохранили ваше послание! Через некоторое время выше послание будет доступно</h2>
       </WrapperPending>)
     }
-      {['pending', 'default'].includes(value?.status) && <Description /> }
+      {['pending', 'default'].includes(value?.status) && <Description value={value} /> }
       <Constructor value={value} />
       {['pending', 'default'].includes(value?.status) && <BottomSlider /> }
     </div>

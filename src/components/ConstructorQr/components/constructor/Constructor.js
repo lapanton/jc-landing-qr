@@ -299,7 +299,7 @@ export const Constructor = (props) => {
                         {value?.status === 'completed' && value?.border === 1 && <img src={borderone} alt="JewelCocktail"/>}
                         {value?.status === 'completed' && value?.border === 2 && <img src={bordertwo} alt="JewelCocktail"/>}
                       </WrapInnerBorder>
-                      <InnerWrapSlider>
+                      <InnerWrapSlider className={value?.status === 'completed' ? "iscompeletedSl colorSl_"+value?.border : "colorSl_"+borderType}>
                         <Slider {...settings}>
 
                           {images.length > 0 && images.map((item) => {

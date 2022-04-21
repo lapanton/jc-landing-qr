@@ -467,7 +467,7 @@ export const WrapName =styled.div`
   }
   &.color_0 {
     @media screen and (max-width: 768px) {
-      bottom: -63px;
+      bottom: -130px;
     }
   }
   &.color_1 {
@@ -480,6 +480,7 @@ export const WrapName =styled.div`
     background: linear-gradient(270deg,#d6d6d6 -4.63%,#d0d0d0 10.8%,#dedede 36.14%,#cecece 39.44%,#d0d0d0 52.67%,#c9c9c9 55.97%,#cbcbcb 68.09%,#d3d3d3 69.19%,#c6c6c6 82.42%,#d0d0d0 87.93%,#d0d0d0 104.45%);
     @media screen and (max-width: 768px) {
       padding: 10px 12px;
+      bottom: -47px;
     }
     &.iscompeleted {
       bottom: 34px;
@@ -503,6 +504,9 @@ export const WrapName =styled.div`
     bottom: -43px;
     &.iscompeleted {
       bottom: 83px;
+    }
+    &.iscompeleted.color_0 {
+      bottom: 57px;
     }
   }
 `;
@@ -615,6 +619,11 @@ export const InnerWrapSlider = styled.div`
       margin: 15px;
     }
   }
+  &.iscompeletedSl.colorSl_0 {
+    .slick-dots {
+      bottom: -80px;
+    }
+  }
 `;
 
 export const WrapInnerBorder = styled.div`
@@ -708,7 +717,7 @@ export const WrapPhoneEmail = styled.div`
     
   }
   @media screen and (max-width: 768px) {
-    margin-top: 100px;
+    margin-top: 140px;
     max-width: 100%;
     padding: 0 20px;
     input {
