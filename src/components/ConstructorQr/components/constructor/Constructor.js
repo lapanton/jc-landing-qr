@@ -66,7 +66,7 @@ export const Constructor = (props) => {
     const [sendData, setSendData] = useState(false);
     const [files, setFiles] = useState([]);
     const [message, setMessage] = useState("");
-    const [borderType, setBorderType] = useState(1);
+    const [borderType, setBorderType] = useState(0);
     const [signature, setSignature] = useState("");
     const [phone, setPhone] = useState("");
     const [authorEmail, setAuthorEmail] = useState("");
@@ -263,9 +263,9 @@ export const Constructor = (props) => {
                     <div>Рамка</div>
                   </RamkaMob>
                   <p>Выберите одну из предложенных рамок</p>
+                  <img className={borderType === 0 ? "active" : "notactive"} src={borderthree} alt="JewelCocktaail" onClick={() => setBorderType(0)} />
                   <img className={borderType === 1 ? "active" : "notactive"} src={borderone} alt="JewelCocktaail" onClick={() => setBorderType(1)} />
                   <img className={borderType === 2 ? "active" : "notactive"} src={bordertwo} alt="JewelCocktaail" onClick={() => setBorderType(2)} />
-                  <img className={borderType === 0 ? "active" : "notactive"} src={borderthree} alt="JewelCocktaail" onClick={() => setBorderType(0)} />
                 </InnerBoard>
             </WrapBoardSelect>
 

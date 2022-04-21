@@ -465,6 +465,11 @@ export const WrapName =styled.div`
   @media screen and (max-width: 768px) {
     padding: 10px 12px;
   }
+  &.color_0 {
+    @media screen and (max-width: 768px) {
+      bottom: -63px;
+    }
+  }
   &.color_1 {
     
   }
@@ -703,7 +708,7 @@ export const WrapPhoneEmail = styled.div`
     
   }
   @media screen and (max-width: 768px) {
-    margin-top: 80px;
+    margin-top: 100px;
     max-width: 100%;
     padding: 0 20px;
     input {

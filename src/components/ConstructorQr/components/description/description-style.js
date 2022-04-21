@@ -62,4 +62,18 @@ export const Wrapper = styled.div`
   .textThree {
     font-weight: 300;
   }
+  .mobButtonCreate {
+    display: none;
+    @media screen and (max-width: 768px) {
+      background: #A55248;
+      border-radius: 5px;
+      color: #fff;
+      padding: 20px 40px;
+      margin: 20px auto 0 auto;
+      font-family: 'Inter',sans-serif;
+      text-transform: uppercase;
+      display: flex;
+      width: 76px;
+    }
+  }
 `;
