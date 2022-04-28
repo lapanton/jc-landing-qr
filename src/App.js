@@ -62,7 +62,7 @@ export const App = (props) => {
                 <Contacts/>
               </div>
             } exact/>
-            <Route path="/qrcode/:id"
+            <Route path="/qr/:id"
                    element={
                      <CheckStatusQR>
                       <ConstructorQr />
