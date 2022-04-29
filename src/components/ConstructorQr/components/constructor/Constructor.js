@@ -152,7 +152,8 @@ export const Constructor = (props) => {
       border: borderType,
       status: "pending",
       email: authorEmail,
-      phone: phone
+      phone: phone,
+      sendEmail: true
     }
 
     files.forEach(file => formData.append('img', file));
