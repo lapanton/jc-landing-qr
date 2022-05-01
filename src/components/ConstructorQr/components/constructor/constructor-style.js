@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import cover from './cover.png';
 
 export const Wrapper = styled.div`
   .completed {
@@ -412,7 +413,7 @@ export const WrapPreviewResult = styled.div`
   .emptyHeightCompl{
     height: auto;
     @media screen and (max-width: 768px) {
-      height: 310px;
+      height: 330px;
     }
   }
 `;
@@ -451,19 +452,28 @@ export const ButtonSubmit = styled.div`
 `;
 
 export const WrapName =styled.div`
-  background: linear-gradient(270deg, #B27C2C -4.63%, #FDC760 10.8%, #FFFDDF 36.14%, #FFF3CA 39.44%, #FDCA6E 52.67%, #FDCF7A 55.97%, #FEE2A5 68.09%, #FEDF9E 69.19%, #FDCE71 82.42%, #FDC760 87.93%, #B27C2C 104.45%);
   padding: 12px 55px;
   display: inline-block;
-  color: #96651D;
+  color: #000;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
   margin: 40px 0 20px 0;
   font-size: 14px;
-  //position: absolute;
-  //left: 50%;
-  //bottom: 4px;
-  //transform: translateX(-50%);
   z-index: 3;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    background-image: url(${cover});
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left: 0;
+    top: 4px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
   @media screen and (max-width: 768px) {
     padding: 10px 12px;
   }
@@ -479,7 +489,7 @@ export const WrapName =styled.div`
     bottom: -8px;
     padding: 8px 55px;
     color: #000;
-    background: linear-gradient(270deg,#d6d6d6 -4.63%,#d0d0d0 10.8%,#dedede 36.14%,#cecece 39.44%,#d0d0d0 52.67%,#c9c9c9 55.97%,#cbcbcb 68.09%,#d3d3d3 69.19%,#c6c6c6 82.42%,#d0d0d0 87.93%,#d0d0d0 104.45%);
+    //background: linear-gradient(270deg,#d6d6d6 -4.63%,#d0d0d0 10.8%,#dedede 36.14%,#cecece 39.44%,#d0d0d0 52.67%,#c9c9c9 55.97%,#cbcbcb 68.09%,#d3d3d3 69.19%,#c6c6c6 82.42%,#d0d0d0 87.93%,#d0d0d0 104.45%);
     @media screen and (max-width: 768px) {
       padding: 10px 12px;
       bottom: -47px;
@@ -503,12 +513,13 @@ export const WrapName =styled.div`
     }
   }
   @media screen and (max-width: 768px) {
-    bottom: -43px;
+    bottom: 0px;
+    width: 220px;
     &.iscompeleted {
       bottom: 83px;
     }
     &.iscompeleted.color_0 {
-      bottom: 57px;
+      bottom: -10px;
     }
   }
 `;
@@ -601,7 +612,7 @@ export const InnerWrapSlider = styled.div`
   .slick-dots {
     bottom: 0;
     @media screen and (max-width: 768px) {
-      bottom: -20px;
+      bottom: -40px;
     }
   }
   .slick-dots li.slick-active button:before {
@@ -623,7 +634,7 @@ export const InnerWrapSlider = styled.div`
   }
   &.iscompeletedSl.colorSl_0 {
     .slick-dots {
-      bottom: -20px;
+      bottom: -43px;
     }
   }
 `;
