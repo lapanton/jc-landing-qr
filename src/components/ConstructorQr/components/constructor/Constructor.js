@@ -257,7 +257,7 @@ export const Constructor = (props) => {
               </InnerPhoto>
             </WrapPhotoUpload>
 
-            <WrapBoardSelect className={value?.status === 'completed' ? "completed": "notcompleted"}>
+            <WrapBoardSelect className={value?.status === 'completed' ? "completed": "notcompleted"} style={{display: "none"}}>
                 <InnerBoard>
                   <RamkaMob>
                     <img src={ramka} alt="JewelCocktail" className='iconBorder'/>

@@ -146,6 +146,7 @@ export const Ramka = styled.div`
   img {
     position: absolute;
   }
+  display: none
 `;
 
 export const ResultPrewiev = styled.div`
@@ -402,14 +403,14 @@ export const PodpsiMob = styled.div`
 export const WrapPreviewResult = styled.div`
   margin-top: 50px;
   .emptyHeight {
-    height: 531px;
+    height: auto;
     position: relative;
     @media screen and (max-width: 768px) {
       height: 180px;
     }
   }
   .emptyHeightCompl{
-    height: 531px;
+    height: auto;
     @media screen and (max-width: 768px) {
       height: 310px;
     }
@@ -456,18 +457,19 @@ export const WrapName =styled.div`
   color: #96651D;
   font-family: 'Inter', sans-serif;
   font-weight: 500;
+  margin: 40px 0 20px 0;
   font-size: 14px;
-  position: absolute;
-  left: 50%;
-  bottom: 4px;
-  transform: translateX(-50%);
+  //position: absolute;
+  //left: 50%;
+  //bottom: 4px;
+  //transform: translateX(-50%);
   z-index: 3;
   @media screen and (max-width: 768px) {
     padding: 10px 12px;
   }
   &.color_0 {
     @media screen and (max-width: 768px) {
-      bottom: -130px;
+      //bottom: -130px;
     }
   }
   &.color_1 {
@@ -585,7 +587,7 @@ export const InnerWrapSlider = styled.div`
     }
   }
   .slick-list{
-    max-height: 531px;
+    max-height: auto;
   }
   .imageInnerSlider {
     min-height: 510px;
@@ -597,9 +599,9 @@ export const InnerWrapSlider = styled.div`
     }
   }
   .slick-dots {
-    bottom: -38px;
+    bottom: 0;
     @media screen and (max-width: 768px) {
-      bottom: -58px;
+      bottom: -20px;
     }
   }
   .slick-dots li.slick-active button:before {
@@ -621,7 +623,7 @@ export const InnerWrapSlider = styled.div`
   }
   &.iscompeletedSl.colorSl_0 {
     .slick-dots {
-      bottom: -80px;
+      bottom: -20px;
     }
   }
 `;
