@@ -164,8 +164,10 @@ export const Constructor = (props) => {
 
     try {
       setSendData(true);
-      await axios.patch(`https://admin.jewelcocktail.com/v1/qrcodes/${id}`, formData);
-      window.location.reload();
+      await axios.patch(`https://admin.jewelcocktail.com/v1/qrcodes/${id}`, formData).then(() => {
+        setSendData(false);
+        window.location.reload();
+      });
     } catch (error) {
       console.log('something goes wroong, error: ', error);
     } finally {
