@@ -424,6 +424,10 @@ export const InnerPreviewResult = styled.div`
 export const MessageView = styled.div`
   color: #FFFFFF;
   margin-bottom: 40px;
+  .poezi {
+    padding: 0;
+    margin: 0;
+  }
   @media screen and (max-width: 768px) {
     padding: 0 22px;
   }
@@ -451,7 +455,7 @@ export const ButtonSubmit = styled.div`
   }
 `;
 
-export const WrapName =styled.div`
+export const WrapName = styled.div`
   padding: 12px 55px;
   display: inline-block;
   color: #000;

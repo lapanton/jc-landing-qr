@@ -144,6 +144,10 @@ export const Constructor = (props) => {
 
     if (!checked) return alert('Пожалустаа поставьте галочку на согласие: Политикой в отношении обработки персональных данных');
 
+    if (phone === "" && phone.length < 6) return alert('Пожалуста введите корректный номер телефона');
+
+    if (authorEmail === "" && !authorEmail.includes('@')) return alert('Пожалуста корректный адресс почты');
+
     const formData = new FormData();
 
     const rest = {
@@ -165,7 +169,6 @@ export const Constructor = (props) => {
     try {
       setSendData(true);
       await axios.patch(`https://admin.jewelcocktail.com/v1/qrcodes/${id}`, formData).then(() => {
-        setSendData(false);
         window.location.reload();
       });
     } catch (error) {
@@ -193,6 +196,12 @@ export const Constructor = (props) => {
   }
 
   const images = value?.status === 'completed' ? value.img : files;
+
+  const messageBr = value.msg.split("<br/>").join("\n");
+
+  console.log('messageBr', messageBr);
+
+
   return (
     <Wrapper>
         <h2 className={value?.status === 'completed' ? "completed": "notcompleted"}>Конструктор послания</h2>
@@ -290,7 +299,7 @@ export const Constructor = (props) => {
                   <div>Предварительный результат</div>
                 </ResultPrewievMob>
                 <p className={value?.status === 'completed' ? "completed": "notcompleted"}>Вид послания, которое увидит ваш адресат</p>
-                <MessageView className={value?.status === 'completed' ? "morePadding": "notcompleted"}>{value?.status === 'completed' ? value.msg : message}</MessageView>
+                <MessageView className={value?.status === 'completed' ? "morePadding": "notcompleted"}>{value?.status === 'completed' ? messageBr.split('\n').map((item, i) => <p className="poezi" key={i}>{item}</p>) : message}</MessageView>
                 <div className={value?.status === 'completed' ? "emptyHeightCompl": "emptyHeight"} >
                   <WrapSlider>
                     <WrapBorderView>
@@ -324,9 +333,13 @@ export const Constructor = (props) => {
                       </InnerWrapSlider>
                     </WrapBorderView>
                   </WrapSlider>
-                  <WrapName className={value?.status === 'completed' ? "iscompeleted color_"+value?.border : "color_"+borderType}>
-                    {value?.status === 'completed' ? value.author : signature}
-                  </WrapName>
+                  { (signature.length !== 0 || signature.length !== 0) && (
+                    <WrapName className={value?.status === 'completed' ? "iscompeleted color_"+value?.border : "color_"+borderType}>
+                      {value?.status === 'completed' ? value.author : signature}
+                    </WrapName>
+                    )
+                  }
+
                 </div>
                   {value?.status === 'default' && (
                     <>
