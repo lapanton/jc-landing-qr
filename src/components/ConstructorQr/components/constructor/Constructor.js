@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
-import {useParams, Link} from 'react-router-dom';
+import {useParams} from 'react-router-dom';
 import {useDropzone} from 'react-dropzone';
 import Slider from "react-slick";
 // Import css files
@@ -154,7 +154,7 @@ export const Constructor = (props) => {
       msg: message,
       author: signature,
       border: borderType,
-      status: "pending",
+      status: "completed",
       email: authorEmail,
       phone: phone,
       sendEmail: true
@@ -197,10 +197,7 @@ export const Constructor = (props) => {
 
   const images = value?.status === 'completed' ? value.img : files;
 
-  const messageBr = value.msg.split("<br/>").join("\n");
-
-  console.log('messageBr', messageBr);
-
+  const messageBr = value.msg?.split("<br/>").join("\n");
 
   return (
     <Wrapper>

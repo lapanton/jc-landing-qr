@@ -69,6 +69,13 @@ export const App = (props) => {
                      </CheckStatusQR>
                    }
                      exact />
+          <Route path="/letter/:id"
+                 element={
+                   <CheckStatusQR>
+                     <ConstructorQr />
+                   </CheckStatusQR>
+                 }
+                 exact />
             <Route path="/qr1001" element={<>
                 <Qr1001/>
                 <Footer exact />

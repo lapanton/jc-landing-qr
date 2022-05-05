@@ -76,4 +76,9 @@ export const Wrapper = styled.div`
       width: 76px;
     }
   }
+  .letter-image {
+    @media screen and (min-width: 768px) {
+      width: 210px;
+    }
+  }
 `;
