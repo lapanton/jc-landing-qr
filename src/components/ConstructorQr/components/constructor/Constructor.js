@@ -296,7 +296,7 @@ export const Constructor = (props) => {
                   <div>Предварительный результат</div>
                 </ResultPrewievMob>
                 <p className={value?.status === 'completed' ? "completed": "notcompleted"}>Вид послания, которое увидит ваш адресат</p>
-                <MessageView className={value?.status === 'completed' ? "morePadding": "notcompleted"}>{value?.status === 'completed' ? messageBr.split('\n').map((item, i) => <p className="poezi" key={i}>{item}</p>) : message}</MessageView>
+                <MessageView className={value?.status === 'completed' ? "morePadding": "notcompleted"}>{value?.status === 'completed' ? messageBr.split('\n').map((item, i) => <p className="poezi" key={i}>{item}</p>) : message.split('\n').map((item, i) => <p className="poezi" key={i}>{item}</p>)}</MessageView>
                 <div className={value?.status === 'completed' ? "emptyHeightCompl": "emptyHeight"} >
                   <WrapSlider>
                     <WrapBorderView>
