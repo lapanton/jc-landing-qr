@@ -11,7 +11,6 @@ export const Different = () => {
         <h3>
           <FormattedMessage id="message.ukrashenia"/>
         </h3>
-        <p className="boldp"><span>&nbsp;&nbsp;</span>&nbsp;&nbsp;<FormattedMessage id="message.youcan"/></p>
         <p><span>&nbsp;&nbsp;</span>&nbsp;&nbsp;<FormattedMessage id="message.codego"/></p>
       </WrapText>
     </Wrapper>
