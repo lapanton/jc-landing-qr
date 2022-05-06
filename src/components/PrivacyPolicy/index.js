@@ -21,6 +21,14 @@ export const PrivacyPolicy = () => {
           </WrapContacts>
         </HeaderDiv>
         <WrapContent>
+          <h2>Оферта:</h2>
+          <p>Предложения на сайте https://jewelcocktail.com не является публичной офертой.</p>
+          <h2>Размещение запрещённого контента:</h2>
+          <p>Информация, документы и материалы, размещённые пользователями на сайте <a href="https://jewelcocktail.com" target="_blank" style={{color: "#fff", textDecoration: "underline"}}>https://jewelcocktail.com</a>, не должны нарушать закон № 149-ФЗ (<a
+            href="https://cga.mos.ru/upload/medialibrary/83f/fz-ot-27.07.2006-_-149_fz-_red.-ot-08.06.2020_.pdf" target="_blank" style={{color: "#fff", textDecoration: "underline"}}>https://cga.mos.ru/upload/medialibrary/83f/fz-ot-27.07.2006-_-149_fz-_red.-ot-08.06.2020_.pdf</a> ).</p>
+          <p>Вся ответственность за контент, нарушающий закон № 149-ФЗ, перекладывается на автора.</p>
+          <p>Компания Jewel Cocktail оставляет за собой право удалять запрещённый контент, без предварительного уведомления автора.</p>
+          <br/>
           <h1>Политика в отношении обработки персональных данных</h1>
           <h5>1. Общие положения</h5>
 
