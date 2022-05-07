@@ -198,7 +198,7 @@ export const Constructor = (props) => {
   const images = value?.status === 'completed' ? value.img : files;
 
   const messageBr = value.msg?.split("<br/>").join("\n");
-
+  console.log(value?.status === 'completed', value.author, signature);
   return (
     <Wrapper>
         <h2 className={value?.status === 'completed' ? "completed": "notcompleted"}>Конструктор послания</h2>
@@ -330,7 +330,7 @@ export const Constructor = (props) => {
                       </InnerWrapSlider>
                     </WrapBorderView>
                   </WrapSlider>
-                  { (signature.length !== 0 || signature.length !== 0) && (
+                  { (signature.length !== 0 || value.author.length !== 0) && (
                     <WrapName className={value?.status === 'completed' ? "iscompeleted color_"+value?.border : "color_"+borderType}>
                       {value?.status === 'completed' ? value.author : signature}
                     </WrapName>

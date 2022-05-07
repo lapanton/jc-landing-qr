@@ -425,6 +425,7 @@ export const MessageView = styled.div`
   color: #FFFFFF;
   margin-bottom: 40px;
   .poezi {
+    display: block !important;
     padding: 0;
     margin: 0;
   }
