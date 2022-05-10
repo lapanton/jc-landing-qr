@@ -6,7 +6,6 @@ import imgGift from './gift.png';
 export const Description = (props) => {
   const value = props.value;
   const { pathname } = useLocation();
-  console.log('pathname', pathname.includes('/letter'))
   return (
     <Wrapper>
       {pathname.includes('/letter') ?
