@@ -16,10 +16,18 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Дизайнерские ювелирные украшения в стиле Русский авангард"
-    />
+<!--    <meta-->
+<!--      name="description"-->
+<!--      content="Дизайнерские ювелирные украшения в стиле Русский авангард"-->
+<!--    />-->
+    <script>
+      if (window.location.href.indexOf("letter") > -1) {
+        document.querySelector('meta[name="description"]').setAttribute("content", "Твоя цифровая открытка");
+      } else {
+        document.querySelector('meta[name="description"]').setAttribute("content", "Дизайнерские ювелирные украшения в стиле Русский авангард");
+      }
+
+    </script>
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>Jewel Cocktail</title>

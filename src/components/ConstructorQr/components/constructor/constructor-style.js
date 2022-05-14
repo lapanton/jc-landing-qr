@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
   }
   margin-top: 5rem;
   @media screen and (max-width: 768px) {
-    margin-top: 2.5rem;
+    margin-top: 0rem;
   }
   h2 {
     font-family: 'Montserrat', sans-serif;
@@ -189,6 +189,9 @@ export const Podpsi = styled.div`
   }
   img {
     position: absolute;
+  }
+  @media screen and (max-width: 768px) {
+    margin-top: 50px;
   }
 `;
 
@@ -407,13 +410,13 @@ export const WrapPreviewResult = styled.div`
     height: auto;
     position: relative;
     @media screen and (max-width: 768px) {
-      height: 180px;
+      height: auto;
     }
   }
   .emptyHeightCompl{
     height: auto;
     @media screen and (max-width: 768px) {
-      height: 330px;
+      height: auto;
     }
   }
 `;
@@ -481,6 +484,7 @@ export const WrapName = styled.div`
   }
   @media screen and (max-width: 768px) {
     padding: 10px 12px;
+    margin: 60px 0 60px 0;
   }
   &.color_0 {
     @media screen and (max-width: 768px) {
@@ -570,6 +574,9 @@ export const InnerWrapSlider = styled.div`
     max-width: 240px;
     min-width: 240px
   }
+  @media screen and (max-width: 768px) {
+    max-width: inherit;
+  }
   margin: 0 auto;
   img {
     max-width: 610px;
@@ -581,6 +588,9 @@ export const InnerWrapSlider = styled.div`
     @media screen and (max-width: 1080px) {
       max-width: 240px;
       min-width: 240px;
+    }
+    @media screen and (max-width: 768px) {
+      max-width: inherit;
     }
   }
   .slick-track {
@@ -608,10 +618,10 @@ export const InnerWrapSlider = styled.div`
   .imageInnerSlider {
     min-height: 510px;
     @media screen and (max-width: 1080px) {
-      min-height: 230px;
+      min-height: 340px;
     }
     @media screen and (max-width: 768px) {
-      min-height: 210px;
+      min-height: 340px;
     }
   }
   .slick-dots {
@@ -640,6 +650,9 @@ export const InnerWrapSlider = styled.div`
   &.iscompeletedSl.colorSl_0 {
     .slick-dots {
       bottom: -43px;
+      @media screen and (max-width: 768px) {
+        bottom: -48px;
+      }
     }
   }
 `;
@@ -735,7 +748,7 @@ export const WrapPhoneEmail = styled.div`
     
   }
   @media screen and (max-width: 768px) {
-    margin-top: 140px;
+    margin-top: 0px;
     max-width: 100%;
     padding: 0 20px;
     input {

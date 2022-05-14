@@ -1,5 +1,6 @@
 import React from 'react';
 import Slider from "react-slick";
+import {useLocation} from "react-router-dom";
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -54,83 +55,87 @@ export const BottomSlider = () => {
         }
       }]
   };
+  const { pathname } = useLocation();
   return (
-    <Wrapper>
-        <h5>Красивые решения</h5>
-      <Slider {...settings}>
-        <div className="innerSliderItems">
-          <img src={first} alt="JewelCocktail"/>
-        </div>
-        <div className="innerSliderItems">
-          <img src={two} alt="JewelCocktail"/>
-        </div>
-        <div className="innerSliderItems">
-          <img src={three} alt="JewelCocktail"/>
-        </div>
+    <>
+    {!pathname.includes('/letter') ?
+      <Wrapper>
+          <h5>Красивые решения</h5>
+        <Slider {...settings}>
+          <div className="innerSliderItems">
+            <img src={first} alt="JewelCocktail"/>
+          </div>
+          <div className="innerSliderItems">
+            <img src={two} alt="JewelCocktail"/>
+          </div>
+          <div className="innerSliderItems">
+            <img src={three} alt="JewelCocktail"/>
+          </div>
 
 
-        <div className="innerSliderItems">
-          <img src={four} alt="JewelCocktail"/>
-        </div>
-        <div className="innerSliderItems">
-          <img src={five} alt="JewelCocktail"/>
-        </div>
-        <div className="innerSliderItems">
-          <img src={six} alt="JewelCocktail"/>
-        </div>
+          <div className="innerSliderItems">
+            <img src={four} alt="JewelCocktail"/>
+          </div>
+          <div className="innerSliderItems">
+            <img src={five} alt="JewelCocktail"/>
+          </div>
+          <div className="innerSliderItems">
+            <img src={six} alt="JewelCocktail"/>
+          </div>
 
 
-        <div className="innerSliderItems">
-          <img src={seven} alt="JewelCocktail"/>
-        </div>
-        <div className="innerSliderItems">
-          <img src={eight} alt="JewelCocktail"/>
-        </div>
-        <div className="innerSliderItems">
-          <img src={nine} alt="JewelCocktail"/>
-        </div>
+          <div className="innerSliderItems">
+            <img src={seven} alt="JewelCocktail"/>
+          </div>
+          <div className="innerSliderItems">
+            <img src={eight} alt="JewelCocktail"/>
+          </div>
+          <div className="innerSliderItems">
+            <img src={nine} alt="JewelCocktail"/>
+          </div>
 
-        <div className="innerSliderItems">
-          <img src={ten} alt="JewelCocktail"/>
-        </div>
-        <div className="innerSliderItems">
-          <img src={eleven} alt="JewelCocktail"/>
-        </div>
-        <div className="innerSliderItems">
-          <img src={twelve} alt="JewelCocktail"/>
-        </div>
+          <div className="innerSliderItems">
+            <img src={ten} alt="JewelCocktail"/>
+          </div>
+          <div className="innerSliderItems">
+            <img src={eleven} alt="JewelCocktail"/>
+          </div>
+          <div className="innerSliderItems">
+            <img src={twelve} alt="JewelCocktail"/>
+          </div>
 
-        <div className="innerSliderItems">
-          <img src={thirteen} alt="JewelCocktail"/>
-        </div>
-        <div className="innerSliderItems">
-          <img src={fourteen} alt="JewelCocktail"/>
-        </div>
-        <div className="innerSliderItems">
-          <img src={fifteen} alt="JewelCocktail"/>
-        </div>
+          <div className="innerSliderItems">
+            <img src={thirteen} alt="JewelCocktail"/>
+          </div>
+          <div className="innerSliderItems">
+            <img src={fourteen} alt="JewelCocktail"/>
+          </div>
+          <div className="innerSliderItems">
+            <img src={fifteen} alt="JewelCocktail"/>
+          </div>
 
-        <div className="innerSliderItems">
-          <img src={sixteen} alt="JewelCocktail"/>
-        </div>
-        <div className="innerSliderItems">
-          <img src={seventeen} alt="JewelCocktail"/>
-        </div>
-        <div className="innerSliderItems">
-          <img src={eigtteen} alt="JewelCocktail"/>
-        </div>
+          <div className="innerSliderItems">
+            <img src={sixteen} alt="JewelCocktail"/>
+          </div>
+          <div className="innerSliderItems">
+            <img src={seventeen} alt="JewelCocktail"/>
+          </div>
+          <div className="innerSliderItems">
+            <img src={eigtteen} alt="JewelCocktail"/>
+          </div>
 
-        <div className="innerSliderItems">
-          <img src={nineteen} alt="JewelCocktail"/>
-        </div>
-        <div className="innerSliderItems">
-          <img src={twenty} alt="JewelCocktail"/>
-        </div>
-        <div className="innerSliderItems">
-          <img src={twentyone} alt="JewelCocktail"/>
-        </div>
+          <div className="innerSliderItems">
+            <img src={nineteen} alt="JewelCocktail"/>
+          </div>
+          <div className="innerSliderItems">
+            <img src={twenty} alt="JewelCocktail"/>
+          </div>
+          <div className="innerSliderItems">
+            <img src={twentyone} alt="JewelCocktail"/>
+          </div>
 
-      </Slider>
-    </Wrapper>
+        </Slider>
+      </Wrapper> : null }
+    </>
   );
 };

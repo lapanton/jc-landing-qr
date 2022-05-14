@@ -138,8 +138,6 @@ export const Constructor = (props) => {
 
     if (message === "") return alert('Пожалустаа введите послание');
 
-    if (signature === "") return alert('Пожалустаа введите Имя');
-
     if (files.length === 0) return alert('Пожалустаа загрузитее фото');
 
     if (!checked) return alert('Пожалустаа поставьте галочку на согласие: Политикой в отношении обработки персональных данных');
@@ -157,7 +155,8 @@ export const Constructor = (props) => {
       status: "completed",
       email: authorEmail,
       phone: phone,
-      sendEmail: true
+      sendEmail: true,
+      shortId: id,
     }
 
     files.forEach(file => formData.append('img', file));

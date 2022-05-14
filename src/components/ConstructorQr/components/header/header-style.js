@@ -67,4 +67,7 @@ export const WrapPhone = styled.div`
     height: auto;
     text-decoration: none;
   }
+  @media screen and (max-width: 768px) {
+    transform: translateX(-25px);
+  }
 `;
