@@ -3,7 +3,7 @@ import Particles from "react-tsparticles";
 
 export const ConfettiAnimation = () => {
   return (
-    <div>
+    <div style={{ zIndex: "9999999", position: "relative"}}>
       <Particles options={
         {
           background: { color: { value: "transparent" } },

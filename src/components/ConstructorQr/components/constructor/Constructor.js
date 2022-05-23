@@ -56,6 +56,7 @@ import borderone from './border-one.png';
 import bordertwo from './border-two.png';
 import borderthree from './no-border.png';
 import {BounceAnimation} from "../../../../animation/BounceAnimation";
+import {ConfettiAnimation} from "../../../../animation/Confetti";
 
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -151,7 +152,6 @@ export const Constructor = (props) => {
     const rest = {
       msg: message,
       author: signature,
-      border: borderType,
       status: "completed",
       email: authorEmail,
       phone: phone,
@@ -198,10 +198,18 @@ export const Constructor = (props) => {
 
   const messageBr = value.msg?.split("<br/>").join("\n");
 
+  const [hide, setHide] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {setHide(false)}, 3500);
+  },[]);
+
   return (
     <Wrapper>
         <h2 className={value?.status === 'completed' ? "completed": "notcompleted"}>Конструктор послания</h2>
-
+      {value?.status === 'completed' && hide &&  (
+        <ConfettiAnimation/>
+      )}
         <WrapConstructorArea>
           <SideArea className={value?.status === 'completed' ? "completed": "notcompleted"}>
 
@@ -328,7 +336,7 @@ export const Constructor = (props) => {
                       </InnerWrapSlider>
                     </WrapBorderView>
                   </WrapSlider>
-                  {(signature?.length !== 0 || value.author !== undefined) && (
+                  {(signature?.length !== 0 || (value.author !== undefined && value.author !== "")) && (
                     <WrapName className={value?.status === 'completed' ? "iscompeleted color_"+value?.border : "color_"+borderType}>
                       {value?.status === 'completed' ? value.author : signature}
                     </WrapName>

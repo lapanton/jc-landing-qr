@@ -525,7 +525,7 @@ export const WrapName = styled.div`
     bottom: 0px;
     width: 220px;
     &.iscompeleted {
-      bottom: 83px;
+      bottom: 0;
     }
     &.iscompeleted.color_0 {
       bottom: -10px;
