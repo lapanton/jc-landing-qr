@@ -118,7 +118,7 @@ export const Constructor = (props) => {
   };
 
   const handleChangeSignature = (e) => {
-    if (e.target.value.length <= 15) {
+    if (e.target.value.length <= 25) {
       setSignature(e.target.value)
     }
   };
