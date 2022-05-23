@@ -67,7 +67,7 @@ export const Constructor = (props) => {
     const [sendData, setSendData] = useState(false);
     const [files, setFiles] = useState([]);
     const [message, setMessage] = useState("");
-    const [borderType, setBorderType] = useState(0);
+    const [borderType, setBorderType] = useState(10);
     const [signature, setSignature] = useState("");
     const [phone, setPhone] = useState("");
     const [authorEmail, setAuthorEmail] = useState("");
@@ -168,7 +168,9 @@ export const Constructor = (props) => {
     try {
       setSendData(true);
       await axios.patch(`https://admin.jewelcocktail.com/v1/qrcodes/${id}`, formData).then(() => {
-        window.location.reload();
+        setTimeout(() => {
+          window.location.reload();
+        }, 100);
       });
     } catch (error) {
       console.log('something goes wroong, error: ', error);
@@ -177,6 +179,12 @@ export const Constructor = (props) => {
     }
 
   };
+
+  const [hide, setHide] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {setHide(false)}, 3500);
+  },[]);
 
   if (sendData) {
     return  <BounceAnimation />
@@ -197,12 +205,6 @@ export const Constructor = (props) => {
   const images = value?.status === 'completed' ? value.img : files;
 
   const messageBr = value.msg?.split("<br/>").join("\n");
-
-  const [hide, setHide] = useState(true);
-
-  useEffect(() => {
-    setTimeout(() => {setHide(false)}, 3500);
-  },[]);
 
   return (
     <Wrapper>
@@ -346,7 +348,7 @@ export const Constructor = (props) => {
                 </div>
                   {value?.status === 'default' && (
                     <>
-                      <WrapPhoneEmail>
+                      <WrapPhoneEmail style={signature?.length !== 0 ? {marginTop: "0px"} : {marginTop: "50px"}}>
                         <div className="numberPhone"><div>Номер Телефона:</div> <input value={phone} type="tel" name="phone" onChange={handleChangePhone} /></div>
                         <div className="emailUser"><div>Email:</div> <input value={authorEmail} type="email" name="authorEmail" onChange={handleChangeAuthorEmail} /></div>
                       </WrapPhoneEmail>
