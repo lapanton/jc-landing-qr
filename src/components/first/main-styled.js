@@ -389,9 +389,22 @@ export const WrapLang = styled.div`
     }
   }
   .en_lang {
-    margin-right: 5px;
+    //margin-right: 5px;
   }
   .cn_lang {
-    margin-left: 5px;
+    //margin-left: 5px;
+  }
+  .en_lang {
+    margin: 0 20px;
+  }
+  .en_lang,
+  .ru_lang,
+  .cn_lang {
+    img {
+      width: 18px;
+      height: 18px;
+      border: 1px solid #fff;
+      border-radius: 50%;
+    }
   }
 `;

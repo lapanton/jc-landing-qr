@@ -12,7 +12,7 @@ export const BlackSquare = () => {
         <img src={square} alt="JewelCocktail"/>
       </div>
       <p>
-        <span><span className="hideMobile">&nbsp;&nbsp;</span>&nbsp;&nbsp;<FormattedMessage id="message.specialBrand" /></span> <br/><br/>
+        <span><span className="hideMobile">&nbsp;&nbsp;</span>&nbsp;&nbsp;<FormattedMessage id="message.specialBrand" values={{br: <br />}} /></span> <br/><br/>
         <span className="hideMobile">&nbsp;&nbsp;</span>&nbsp;&nbsp;<FormattedMessage id="message.poskoliku" /><br/><br/>
         <span className="hideMobile">&nbsp;&nbsp;</span>&nbsp;&nbsp;<FormattedMessage id="message.nashiIzdelia" /><br/>
       </p>

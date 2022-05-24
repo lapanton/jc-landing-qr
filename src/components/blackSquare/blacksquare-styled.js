@@ -66,6 +66,7 @@ export const Wrapper = styled.div`
     white-space: nowrap;
     bottom: 10px;
     border-radius: 2px;
+    display: none;
   }
   .wrapMalevich {
     @media screen and (max-width: 768px) {

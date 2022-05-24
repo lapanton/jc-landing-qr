@@ -4,7 +4,7 @@ import { IntlProvider } from "react-intl";
 import { App } from './App';
 
 
-let initLocale = "en";
+let initLocale = "ru";
 
 const loadMessages = (locale) => {
   switch (locale) {
@@ -15,7 +15,7 @@ const loadMessages = (locale) => {
     case "zh":
       return import("./lang/zh.json");
     default:
-      return import("./lang/en.json");
+      return import("./lang/ru.json");
   }
 };
 

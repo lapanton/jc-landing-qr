@@ -14,6 +14,10 @@ import insn from "./instatgram-n.png";
 import youn from "./youtube-n.png";
 import googn from "./google-n.png";
 
+import enimg from './en.svg';
+import ruimg from './ru.svg';
+import cnimg from './cn.svg';
+
 
 export const Main = ({langProps}) => {
   const { locale, onLocaleChange } = langProps;
@@ -35,7 +39,6 @@ export const Main = ({langProps}) => {
   const handleMenu = () => {
     setShow(!show);
   };
-
   return (
     <ConttainerWrap  className={sticky ? 'sticky' : ' '}>
       <Wrapper>
@@ -60,9 +63,9 @@ export const Main = ({langProps}) => {
             </a>
           </WrapSocial>
           <WrapLang>
-            <div className="en_lang" onClick={() => onLocaleChange('en')}>EN</div>
-            <div className="ru_lang" onClick={() => onLocaleChange('ru')}>РУ</div>
-            <div className="cn_lang" onClick={() => onLocaleChange('zh')}>CN</div>
+            <div className="ru_lang" onClick={() => onLocaleChange('ru')}><img style={locale !== "ru" ? {opacity: 0.5} : {opacity: 1, transform: "scale(1.2)"}} src={ruimg} alt="JewelCocktail"/></div>
+            <div className="en_lang" onClick={() => onLocaleChange('en')}><img style={locale !== "en" ? {opacity: 0.5} : {opacity: 1, transform: "scale(1.2)"}} src={enimg} alt="JewelCocktail"/></div>
+            <div className="cn_lang" onClick={() => onLocaleChange('zh')}><img style={locale !== "zh" ? {opacity: 0.5} : {opacity: 1, transform: "scale(1.2)"}} src={cnimg} alt="JewelCocktail"/></div>
           </WrapLang>
           <WrapPhone>
             <a href="tel:+74993777919">
