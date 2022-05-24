@@ -13,7 +13,7 @@ export const BlackSquare = () => {
       </div>
       <p>
         <span><span className="hideMobile">&nbsp;&nbsp;</span>&nbsp;&nbsp;<FormattedMessage id="message.specialBrand" values={{br: <br />}} /></span> <br/><br/>
-        <span className="hideMobile">&nbsp;&nbsp;</span>&nbsp;&nbsp;<FormattedMessage id="message.poskoliku" /><br/><br/>
+        <span className="hideMobile">&nbsp;&nbsp;</span>&nbsp;&nbsp;<FormattedMessage id="message.poskoliku" values={{br: <br />}} /><br/><br/>
         <span className="hideMobile">&nbsp;&nbsp;</span>&nbsp;&nbsp;<FormattedMessage id="message.nashiIzdelia" /><br/>
       </p>
     </Wrapper>
