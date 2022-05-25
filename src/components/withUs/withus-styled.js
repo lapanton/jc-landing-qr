@@ -53,7 +53,7 @@ export const Wrapper = styled.div`
     div {
       font-size: 14px;
       line-height: 15px;
-      left: 5%;
+      left: 7px;
       text-align: center;
     }
     .tickerAnim {
