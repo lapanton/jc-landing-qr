@@ -52,9 +52,6 @@ import ramka from './ramka.png';
 import podpsi from './podpisi.png';
 import result from './result.png';
 import plus from './plus.png';
-import borderone from './border-one.png';
-import bordertwo from './border-two.png';
-import borderthree from './no-border.png';
 import {BounceAnimation} from "../../../../animation/BounceAnimation";
 import {ConfettiAnimation} from "../../../../animation/Confetti";
 
@@ -274,19 +271,6 @@ export const Constructor = (props) => {
               </InnerPhoto>
             </WrapPhotoUpload>
 
-            <WrapBoardSelect className={value?.status === 'completed' ? "completed": "notcompleted"} style={{display: "none"}}>
-                <InnerBoard>
-                  <RamkaMob>
-                    <img src={ramka} alt="JewelCocktail" className='iconBorder'/>
-                    <div>Рамка</div>
-                  </RamkaMob>
-                  <p>Выберите одну из предложенных рамок</p>
-                  <img className={borderType === 0 ? "active" : "notactive"} src={borderthree} alt="JewelCocktaail" onClick={() => setBorderType(0)} />
-                  <img className={borderType === 1 ? "active" : "notactive"} src={borderone} alt="JewelCocktaail" onClick={() => setBorderType(1)} />
-                  <img className={borderType === 2 ? "active" : "notactive"} src={bordertwo} alt="JewelCocktaail" onClick={() => setBorderType(2)} />
-                </InnerBoard>
-            </WrapBoardSelect>
-
             <WrapSignature className={value?.status === 'completed' ? "completed": "notcompleted"}>
               <InnerSignatture>
                 <PodpsiMob>
@@ -309,14 +293,6 @@ export const Constructor = (props) => {
                 <div className={value?.status === 'completed' ? "emptyHeightCompl": "emptyHeight"} >
                   <WrapSlider>
                     <WrapBorderView>
-                      <WrapInnerBorder>
-
-                        {borderType === 1 && value?.status !== 'completed' && <img src={borderone} alt="JewelCocktail"/>}
-                        {borderType === 2  && value?.status !== 'completed' && <img src={bordertwo} alt="JewelCocktail"/>}
-
-                        {value?.status === 'completed' && value?.border === 1 && <img src={borderone} alt="JewelCocktail"/>}
-                        {value?.status === 'completed' && value?.border === 2 && <img src={bordertwo} alt="JewelCocktail"/>}
-                      </WrapInnerBorder>
                       <InnerWrapSlider className={value?.status === 'completed' ? "iscompeletedSl colorSl_"+value?.border : "colorSl_"+borderType}>
                         <Slider {...settings}>
                           {images?.length > 0 && images.map((item) => {
