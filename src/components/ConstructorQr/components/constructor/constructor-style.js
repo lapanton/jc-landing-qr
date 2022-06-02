@@ -433,7 +433,8 @@ export const MessageView = styled.div`
     margin: 0;
   }
   @media screen and (max-width: 768px) {
-    padding: 0 22px;
+    padding: 0 22px 40px 22px;
+    margin-bottom: 0;
   }
   &.morePadding{
     @media screen and (max-width: 768px) {
@@ -750,7 +751,7 @@ export const WrapPhoneEmail = styled.div`
   @media screen and (max-width: 768px) {
     margin-top: 0px;
     max-width: 100%;
-    padding: 0 20px;
+    padding: 10px 20px 0 20px;
     input {
       width: calc(100% - 60px);
     }

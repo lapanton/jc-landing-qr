@@ -16,7 +16,6 @@ export const Wrapper = styled.div`
     z-index: 99998;
     position: relative;
     span {
-      font-weight: bold;
       color: #fff;
     }
   }

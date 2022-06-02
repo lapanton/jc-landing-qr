@@ -11,7 +11,7 @@ export const WithUs = () => {
       <div><FormattedMessage id="message.withtitle" /><NewsTicker
           rowHeight = {window.innerWidth > 768 ? 48 : 28}
           maxRows = {1}
-          speed = {600}
+          speed = {800}
           duration = {2000}
           autoStart = {true}
           pauseOnHover = {false}

@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
-import {useParams} from 'react-router-dom';
+import {useLocation, useParams} from 'react-router-dom';
 import {useDropzone} from 'react-dropzone';
 import Slider from "react-slick";
 // Import css files
@@ -58,6 +58,7 @@ import {ConfettiAnimation} from "../../../../animation/Confetti";
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 export const Constructor = (props) => {
+  const { pathname } = useLocation();
   const value = props.value;
   const { id } = useParams();
   const [checked, setChecked] = useState(false);
@@ -140,7 +141,7 @@ export const Constructor = (props) => {
 
     if (!checked) return alert('Пожалустаа поставьте галочку на согласие: Политикой в отношении обработки персональных данных');
 
-    if (phone === "" && phone.length < 6) return alert('Пожалуста введите корректный номер телефона');
+    if (phone === "" && phone.length < 6 && !pathname.includes('/letter')) return alert('Пожалуста введите корректный номер телефона');
 
     if (authorEmail === "" && !authorEmail.includes('@')) return alert('Пожалуста корректный адресс почты');
 
@@ -325,7 +326,9 @@ export const Constructor = (props) => {
                   {value?.status === 'default' && (
                     <>
                       <WrapPhoneEmail style={signature?.length !== 0 ? {marginTop: "0px"} : {marginTop: "50px"}}>
-                        <div className="numberPhone"><div>Номер Телефона:</div> <input value={phone} type="tel" name="phone" onChange={handleChangePhone} /></div>
+                        {!pathname.includes('/letter') && (
+                          <div className="numberPhone"><div>Номер Телефона:</div> <input value={phone} type="tel" name="phone" onChange={handleChangePhone} /></div>
+                        )}
                         <div className="emailUser"><div>Email:</div> <input value={authorEmail} type="email" name="authorEmail" onChange={handleChangeAuthorEmail} /></div>
                       </WrapPhoneEmail>
                       <WrapInputCheckBox>
