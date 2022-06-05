@@ -411,6 +411,12 @@ export const WrapPreviewResult = styled.div`
     position: relative;
     @media screen and (max-width: 768px) {
       height: auto;
+      margin: 0 6px;
+      border-bottom: 4px solid #fff;
+      border-left: 4px solid #fff;
+      border-right: 4px solid #fff;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
     }
   }
   .emptyHeightCompl{
@@ -439,6 +445,16 @@ export const MessageView = styled.div`
   &.morePadding{
     @media screen and (max-width: 768px) {
       padding-top: 40px;
+    }
+  }
+  &.messageInit {
+    @media screen and (max-width: 768px) {
+      margin: 0 6px;
+      border-top: 4px solid #fff;
+      border-left: 4px solid #fff;
+      border-right: 4px solid #fff;
+      border-top-left-radius: 4px;
+      border-top-right-radius: 4px;
     }
   }
 `;
