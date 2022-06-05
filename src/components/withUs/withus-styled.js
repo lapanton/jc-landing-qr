@@ -27,6 +27,10 @@ export const Wrapper = styled.div`
     line-height: 2.875rem;
     margin-top: 0;
     transform: translateY(13px);
+    @media screen and (max-width: 768px) {
+      line-height: 1.25rem;
+      transform: translateY(4px);
+    }
     p {
       color: #fff;
     }
@@ -57,7 +61,7 @@ export const Wrapper = styled.div`
       text-align: center;
     }
     .tickerAnim {
-      transform: none;
+      
     }
 `;
 

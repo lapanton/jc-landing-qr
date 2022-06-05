@@ -9,9 +9,9 @@ export const WithUs = () => {
   return (
     <Wrapper>
       <div><FormattedMessage id="message.withtitle" /><NewsTicker
-          rowHeight = {window.innerWidth > 768 ? 48 : 28}
+          rowHeight = {window.innerWidth > 768 ? 48 : 20}
           maxRows = {1}
-          speed = {800}
+          speed = {600}
           duration = {2000}
           autoStart = {true}
           pauseOnHover = {false}
