@@ -7,6 +7,7 @@ export const Wrapper = styled.div`
   flex-direction: column;
   z-index: 99998;
   position: relative;
+  font-family: 'Montserrat', sans-serif;
 `;
 
 export const HeaderDiv = styled.div`
