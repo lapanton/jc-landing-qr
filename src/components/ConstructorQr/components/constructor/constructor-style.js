@@ -379,6 +379,7 @@ export const InnerSignatture = styled.div`
       padding: 11px 22px;
       width: calc(100% - 88px);
       margin: 0 22px 30px 22px;
+      font-size: 18px;
     }
   }
 `;
