@@ -58,7 +58,7 @@ export const BottomSlider = () => {
   const { pathname } = useLocation();
   return (
     <>
-    {!pathname.includes('/letter') ?
+    {!(pathname.includes('/letter') || pathname.includes('/qr/')) ?
       <Wrapper>
           <h5>Красивые решения</h5>
         <Slider {...settings}>

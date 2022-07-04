@@ -8,7 +8,7 @@ export const Description = (props) => {
   const { pathname } = useLocation();
   return (
     <Wrapper>
-      {pathname.includes('/letter') ?
+      {(pathname.includes('/letter') || pathname.includes('/qr/')) ?
         <>
           <h1><span>МЕТА - послание</span></h1>
           <img className="letter-image" src={imgGift} alt="JewelCocktail"/>
