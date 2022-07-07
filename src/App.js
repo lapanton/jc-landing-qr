@@ -40,7 +40,8 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export const App = (props) => {
-
+  // http://localhost:3000/qr/PU7H9Gx3ly
+  // http://localhost:3000/letter/piJ2N1KiBC
   return (
     <Router>
 

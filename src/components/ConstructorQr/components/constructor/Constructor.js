@@ -141,8 +141,6 @@ export const Constructor = (props) => {
 
     if (!checked) return alert('Пожалустаа поставьте галочку на согласие: Политикой в отношении обработки персональных данных');
 
-    if (phone === "" && phone.length < 6 && !pathname.includes('/letter')) return alert('Пожалуста введите корректный номер телефона');
-
     if (authorEmail === "" && !authorEmail.includes('@')) return alert('Пожалуста корректный адресс почты');
 
     const formData = new FormData();
@@ -326,7 +324,7 @@ export const Constructor = (props) => {
                   {value?.status === 'default' && (
                     <>
                       <WrapPhoneEmail style={signature?.length !== 0 ? {marginTop: "0px"} : {marginTop: "50px"}}>
-                        {!pathname.includes('/letter') && (
+                        {!(pathname.includes('/letter') || pathname.includes('/qr/')) && (
                           <div className="numberPhone"><div>Номер Телефона:</div> <input value={phone} type="tel" name="phone" onChange={handleChangePhone} /></div>
                         )}
                         <div className="emailUser"><div>Email:</div> <input value={authorEmail} type="email" name="authorEmail" onChange={handleChangeAuthorEmail} /></div>
