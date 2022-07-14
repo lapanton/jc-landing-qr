@@ -40,7 +40,7 @@ export const ShowHideSection = () => {
         {
           !show && (
             <ButtonShow onClick={() => {
-              window.scrollTo({top: 1250, left: 0, behavior: 'smooth'});
+              window.scrollTo({top: 750, left: 0, behavior: 'smooth'});
               setShow(!show);
             }}>
               <img src={arrowDown} alt="JewelCocktail"/>
@@ -50,8 +50,8 @@ export const ShowHideSection = () => {
         { (show || !isMobile) &&  (
           <>
             <p className="podarok-s-dushoi">подарок с душой</p>
-            <Descr>украшения в стиле минимализм, где На обратной стороне сменного камня нанесена гравировка с QR-кодом, невидимым для окружающих.
-              qr-код ведёт на твою цифровую открытку – это уникальная возможность сделать оригинальный <span>подарок с личным посланием</span> и сохранить важные сердцу моменты.
+            <Descr>&nbsp;&nbsp;&nbsp;&nbsp;украшения в стиле минимализм, где На обратной стороне сменного камня нанесена гравировка с QR-кодом, невидимым для окружающих.<br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;qr-код ведёт на твою цифровую открытку – это уникальная возможность сделать оригинальный <span>подарок с личным посланием</span> и сохранить важные сердцу моменты.
             </Descr>
             <YouTube videoId="XLzYEUDEk-k" opts={opts} />
             <BuyButton onClick={() => handleScroll()}>
@@ -69,7 +69,7 @@ export const ShowHideSection = () => {
             <div className="text-three">лучший подарок – это внимание и забота
               украшения Jewel Cocktail помогут сохранить яркие моменты и чувства</div>
             <ButtonHide onClick={() => {
-              window.scrollTo({top: 1000, left: 0, behavior: 'smooth'});
+              window.scrollTo({top: 300, left: 0, behavior: 'smooth'});
               setShow(!show);
             }}>
               <img src={arrowUp} alt="JewelCocktail"/>

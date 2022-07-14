@@ -5,6 +5,7 @@ export const Wrapper = styled.div`
   color: #fff;
   padding: 4rem;
   h3 {
+    font-family: 'Organetto';
     font-size: 1.75rem;
     line-height: 2.563rem;
     color: #fff;
