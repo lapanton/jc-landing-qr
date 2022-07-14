@@ -1,15 +1,16 @@
 import React, {useEffect, useState} from 'react';
+import { Link } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
-import { ConttainerWrap, Wrapper, Inner, WrapSocial, WrapPhone, WrapList, WrapTitle, WrapLoadMore, InnerLoadMore, WrapMobile, WrapMenu, WrpaMobSocial, WrapLang } from './main-styled';
+import { ConttainerWrap, Wrapper, Inner, WrapSocial, WrapPhone, WrapList, WrapTitle, WrapMobile, WrapMenu, WrpaMobSocial, WrapLang } from './main-styled'; // WrapLoadMore, InnerLoadMore,
 import logo from "./logo.png";
-import arrowDown from "./arrow-down.svg";
-import rotateText from "./rotate-text.svg";
+// import arrowDown from "./arrow-down.svg";
+// import rotateText from "./rotate-text.svg";
 import mobMenu from "./mob-menu.svg";
 import phoneMobile from "./phone-icon.svg";
 
-import ins from "./instagram.png";
-import you from "./youtube.png";
-import goo from "./google.png";
+// import ins from "./instagram.png";
+// import you from "./youtube.png";
+// import goo from "./google.png";
 import insn from "./instatgram-n.png";
 import youn from "./youtube-n.png";
 import googn from "./google-n.png";
@@ -48,6 +49,7 @@ export const Main = ({langProps}) => {
           </a>
           <WrapList>
             <div onClick={() => window.scrollTo({top: 4000, left: 0, behavior: 'smooth'})}><FormattedMessage id="message.aboutUs" /></div>
+            <Link to="/shop" className="link-to-shop-desktop"><FormattedMessage id="message.shop" /></Link>
             <div onClick={() => window.scrollTo({top: 3300, left: 0, behavior: 'smooth'})}><FormattedMessage id="message.gallery" /></div>
             <div onClick={() => window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })}><FormattedMessage id="message.contacts" /></div>
           </WrapList>
@@ -90,6 +92,7 @@ export const Main = ({langProps}) => {
                     </svg>
                   </div>
                   <div onClick={() => window.scrollTo({top: 4800, left: 0, behavior: 'smooth'})}><FormattedMessage id="message.aboutUs" /></div>
+                  <Link to="/shop" className="link-to-shop"><FormattedMessage id="message.shop" /></Link>
                   <div onClick={() => window.scrollTo({top: 4225, left: 0, behavior: 'smooth'})}><FormattedMessage id="message.gallery" /></div>
                   <div onClick={() => window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })}><FormattedMessage id="message.contacts" /></div>
                   <WrpaMobSocial>

@@ -93,6 +93,15 @@ export const WrapList = styled.div`
       cursor: pointer;
     }
   }
+  .link-to-shop-desktop {
+    margin-right: 4.3rem;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1rem;
+    display: block;
+    text-decoration: none;
+  }
 `;
 
 export const WrapSocial = styled.div`
@@ -363,6 +372,17 @@ export const WrapMenu = styled.div`
     border-bottom: none;
     padding: 0;
     margin: 0;
+  }
+  .link-to-shop {
+    color: #fff;
+    padding: 20px 0;
+    margin: 0 20px;
+    font-size: 16px;
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    text-decoration: none;
+    width: 100%;
+    display: block;
   }
 `;
 

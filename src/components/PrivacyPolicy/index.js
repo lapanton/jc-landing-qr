@@ -12,10 +12,10 @@ export const PrivacyPolicy = () => {
             </a>
           </WrapLogo>
           <WrapContacts>
-            <a href="tel:+74993777919">
+            <a href="tel:+74993777919" rel="noreferrer" >
               +7 499 377 79 19
             </a>
-            <a href="mailto:contact@jewelcocktail.com">
+            <a href="mailto:contact@jewelcocktail.com" rel="noreferrer" >
               contact@jewelcocktail.com
             </a>
           </WrapContacts>

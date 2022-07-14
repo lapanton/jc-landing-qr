@@ -2,7 +2,6 @@ import React from 'react';
 import { FormattedMessage } from "react-intl";
 import { Wrapper } from "./blacksquare-styled";
 import square from './square.png';
-import MoveStuffAround from "./lineTicker";
 
 export const BlackSquare = () => {
   return (

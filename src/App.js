@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {BrowserRouter as Router, Routes, Route, Link, Navigate} from 'react-router-dom';
 import { Footer } from "./footer";
 import { createGlobalStyle } from "styled-components";
@@ -23,6 +23,19 @@ import {ConstructorQr} from './components/ConstructorQr/ConstructorQr';
 import CheckStatusQR from "./hocs/CheckStatusQR";
 import {PrivacyPolicy} from "./components/PrivacyPolicy";
 
+// Shop
+import { SelfProductShop } from "./shop/selfProduct";
+import { OsobennostiTehnologiiShop } from "./shop/osobennostiTehnologii";
+import { ContactsShop } from "./shop/contacts";
+import { MainShop } from "./shop/first";
+import { Second } from "./shop/second";
+import { Info } from "./shop/info/iindex";
+import { ShowHideSection } from "./shop/showHideSection/iindex";
+import { WrapProducts } from "./shop/products/wrap-products";
+import {Preloader} from "./shop/preloader";
+import ScrollArrow from "./shop/arrowToTop";
+// /shop
+
 const GlobalStyle = createGlobalStyle`
   * {
     padding: 0;
@@ -42,6 +55,9 @@ const GlobalStyle = createGlobalStyle`
 export const App = (props) => {
   // http://localhost:3000/qr/PU7H9Gx3ly
   // http://localhost:3000/letter/piJ2N1KiBC
+
+  const [showPopup, setShowPopup] = useState(null);
+
   return (
     <Router>
 
@@ -104,6 +120,20 @@ export const App = (props) => {
             <PrivacyPolicy/>
             <Footer />
           </>
+          } exact />
+
+          <Route path="/shop" element={
+            <>
+              <MainShop langProps={props} setShowPopup={setShowPopup} showPopup={showPopup} />
+              <Second/>
+              <Info />
+              <ShowHideSection />
+              <WrapProducts showPopup={showPopup} setShowPopup={setShowPopup} />
+              <SelfProductShop />
+              <OsobennostiTehnologiiShop />
+              <ContactsShop />
+              <ScrollArrow />
+            </>
           } exact />
 
         </Routes>

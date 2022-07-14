@@ -1,0 +1,86 @@
+import styled from 'styled-components';
+
+export const Wrapper = styled.div`
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  transition: top .3s linear, oppacity .3s linear;
+  max-width: 100vw;
+  max-height: 100vh;
+  z-index: 999999999999999;
+  opacity: 1;
+  &.show {
+    top: 0;
+    opacity: 1;
+    background-color: rgba(0,0,0,.5);
+   
+  }
+  &.hide {
+    top: -110%;
+    opacity: 0;
+    background-color: transparent;
+  }
+`;
+
+export const Inner = styled.div`
+  max-width: 30rem;
+  padding: 4.58rem 1.5rem 3.75rem;
+  top: 0;
+  background: #fff;
+  margin: 10vh 15px;
+  height: 70vh;
+  max-height: 70vh;
+  position: relative;
+  overflow-y: scroll;
+  @media screen and (min-width: 768px) {
+    margin: 10vh auto;
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #909090;
+      border-radius: 8px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #FFFFFF;
+    }
+  }
+`;
+
+export const CloseButton = styled.div`
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 20px;
+  opacity: 0.7;
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+export const RemoveItem = styled.div`
+  &:hover {
+    cursor: pointer;
+  }
+`;
+export const WrapProductDescription = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  font-family: 'Organetto';
+  font-size: 16px;
+  img {
+    max-width: 15px;
+  }
+`;
+
+export const CardName = styled.div`
+  font-family: 'Organetto';
+  text-align: center;
+  text-transform: uppercase;
+  transform: translateY(-15px);
+  color: #ef6770;
+`;

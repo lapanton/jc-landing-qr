@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { FormattedMessage } from "react-intl";
 import { Wrapper, WrapImage, WrapText, Wrapslider } from "./uverennosti-styled";
-import bg from './bguv.png';
+// import bg from './bguv.png';
 import one from './1.png';
 import two from './2.png';
 import three from './3.png';
