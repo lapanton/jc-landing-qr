@@ -28,6 +28,12 @@ import nineteen from "./image/19.png";
 import twenty from "./image/20.png";
 import twentyone from "./image/21.png";
 
+import twentytwo from "./image/22.png";
+import twentythree from "./image/23.png";
+import twentyfour from "./image/24.png";
+import twentyfive from "./image/25.png";
+import twentysix from "./image/26.png";
+
 export const Carousel = () => {
   const settings = {
     dots: false,
@@ -134,6 +140,22 @@ export const Carousel = () => {
               </WrapInner>
               <WrapInner className="innerSliderItems">
                 <img src={twentyone} alt="JewelCocktail"/>
+              </WrapInner>
+
+              <WrapInner className="innerSliderItems">
+                <img src={twentytwo} alt="JewelCocktail"/>
+              </WrapInner>
+              <WrapInner className="innerSliderItems">
+                <img src={twentythree} alt="JewelCocktail"/>
+              </WrapInner>
+              <WrapInner className="innerSliderItems">
+                <img src={twentyfour} alt="JewelCocktail"/>
+              </WrapInner>
+              <WrapInner className="innerSliderItems">
+                <img src={twentyfive} alt="JewelCocktail"/>
+              </WrapInner>
+              <WrapInner className="innerSliderItems">
+                <img src={twentysix} alt="JewelCocktail"/>
               </WrapInner>
 
             </Slider>
