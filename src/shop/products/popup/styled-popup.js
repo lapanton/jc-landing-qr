@@ -114,7 +114,7 @@ export const WrapCardPrice = styled.div`
       width: 100%;
       left: 1px;
       bottom: 9px;
-      border: 1px solid #A55248;
+      border-bottom: 1px solid #A55248;
       transform: rotate(-5deg);
     }
     }
