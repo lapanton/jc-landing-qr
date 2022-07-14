@@ -145,7 +145,7 @@ export const OrderForm = (props) => {
         <div style={{ display: "flex"}}>
           Оформляя заказ, я принимаю условия конфиденциальности персональной информации. Не является публичной офертой.
         </div>
-        <input disabled={card.length === 0} className='makeorder' type="submit" value="Оплатить"/>
+        <input disabled={card.length === 0} className='makeorder' type="submit" value="ЗАКАЗАТЬ"/>
       </form>
     </WrapForm>
   )

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wrapper, Inner, CloseButton, RemoveItem, WrapProductDescription, CardName } from "./styled-popup";
+import { Wrapper, Inner, CloseButton, RemoveItem, WrapProductDescription, CardName, WrapCardPrice } from "./styled-popup";
 import close from './cross.svg';
 
 import oneStoneM from './stone/m/1.png';
@@ -21,6 +21,8 @@ import gidorImg from '../gidor/img/1.png';
 import dorsImg from '../dors/img/1.png';
 
 import giftIcon from './gift_icon.png';
+
+import sales from '../sale.png';
 
 export const Popup = (props) => {
   const { showPopup, setShowPopup, card, setCard } = props;
@@ -85,7 +87,10 @@ export const Popup = (props) => {
                             </>}
                           </div>
                         </div>
-                        <div style={{ marginTop: "10px" }}>Цена: {currentPrice} ₽</div>
+                        <WrapCardPrice>
+                          <div className="price-card">Цена: <span className="card-line-old">  14 000 ₽</span> <span className="price-card-new">= {currentPrice} ₽ </span></div>
+                          <img src={sales} alt="JewelCocktail" className="card-icon-sale" />
+                        </WrapCardPrice>
                       </div>
 
                     </WrapProductDescription>
@@ -133,7 +138,10 @@ export const Popup = (props) => {
                             </>}
                           </div>
                         </div>
-                        <div style={{ marginTop: "10px" }}>Цена: {currentPrice} ₽</div>
+                        <WrapCardPrice>
+                          <div className="price-card">Цена: <span className="card-line-old">  12 700 ₽</span> <span className="price-card-new">= {currentPrice} ₽ </span></div>
+                          <img src={sales} alt="JewelCocktail" className="card-icon-sale" />
+                        </WrapCardPrice>
                       </div>
 
                     </WrapProductDescription>
@@ -181,7 +189,10 @@ export const Popup = (props) => {
                             </>}
                           </div>
                         </div>
-                        <div style={{ marginTop: "10px" }}>Цена: {currentPrice} ₽</div>
+                        <WrapCardPrice>
+                          <div className="price-card">Цена: <span className="card-line-old"> 9 570 ₽</span> <span className="price-card-new">= {currentPrice} ₽ </span></div>
+                          <img src={sales} alt="JewelCocktail" className="card-icon-sale" />
+                        </WrapCardPrice>
                       </div>
 
                     </WrapProductDescription>
@@ -229,7 +240,10 @@ export const Popup = (props) => {
                             </>}
                           </div>
                         </div>
-                        <div style={{ marginTop: "10px" }}>Цена: {currentPrice} ₽</div>
+                        <WrapCardPrice>
+                          <div className="price-card">Цена: <span className="card-line-old">  12 700 ₽</span> <span className="price-card-new">= {currentPrice} ₽ </span></div>
+                          <img src={sales} alt="JewelCocktail" className="card-icon-sale" />
+                        </WrapCardPrice>
                       </div>
 
                     </WrapProductDescription>
@@ -277,7 +291,10 @@ export const Popup = (props) => {
                             </>}
                           </div>
                         </div>
-                        <div style={{ marginTop: "10px" }}>Цена: {currentPrice} ₽</div>
+                        <WrapCardPrice>
+                          <div className="price-card">Цена: <span className="card-line-old">  9 850 ₽</span> <span className="price-card-new">= {currentPrice} ₽ </span></div>
+                          <img src={sales} alt="JewelCocktail" className="card-icon-sale" />
+                        </WrapCardPrice>
                       </div>
 
                     </WrapProductDescription>

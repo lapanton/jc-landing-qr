@@ -84,3 +84,39 @@ export const CardName = styled.div`
   transform: translateY(-15px);
   color: #ef6770;
 `;
+
+export const WrapCardPrice = styled.div`
+  position: relative;
+  margin: 10px 0 20px 0;
+  .card-icon-sale {
+    position: absolute;
+    left: 200px;
+    bottom: -10px;
+    width: 60px;
+    max-width: 100%;
+  }
+  .price-card {
+    position: relative;
+  }
+  .price-card-new {
+    position: absolute;
+    left: 65px;
+    bottom: -28px;
+    font-size: 18px;
+  }
+  .card-line-old {
+    position: relative;
+    transform: translateX(10px);
+    display: inline-block;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      left: 1px;
+      bottom: 9px;
+      border: 1px solid #A55248;
+      transform: rotate(-5deg);
+    }
+    }
+  }
+`;
