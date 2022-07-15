@@ -141,7 +141,7 @@ export const OrderForm = (props) => {
         <input placeholder="Телефон" type="tel" name="to_phone" required />
         <input placeholder="Email" type="email" name="to_email" />
         <input placeholder="Адрес отправки" type="text" name="to_address"/>
-        <input placeholder="Комментарий" type="email" name="to_comment"/>
+        <input placeholder="Комментарий" type="text" name="to_comment"/>
         <div style={{ display: "flex"}}>
           Оформляя заказ, я принимаю условия конфиденциальности персональной информации. Не является публичной офертой.
         </div>
