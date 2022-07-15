@@ -24,6 +24,9 @@ export const WrapForm = styled.div`
     align-items: center;
     font-size: 16px;
     margin: 25px auto 15px auto;
+    &:hover {
+      cursor: pointer;
+    }
   }
   p {
     font-weight: bold;
