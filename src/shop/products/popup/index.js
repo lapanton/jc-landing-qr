@@ -219,7 +219,7 @@ export const Popup = (props) => {
                         <div>
                           <div style={{ textAlign: "left", textTransform: "inherit" }}>
                             {item.stone === "1g" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "РОЗА": <img src={oneStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "ОГОНЬ": <img src={oneStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
                               <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                             {item.stone === "2g" && <>
@@ -227,15 +227,15 @@ export const Popup = (props) => {
                               <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                             {item.stone === "3g" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "ЖЕМЧУГ": <img src={threeStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "ЖЕЛТЫЙ ОРГАНИК": <img src={threeStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
                               <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                             {item.stone === "4g" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "РОДОХРОЗИТ": <img src={fourStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "ЧЕРНЫЙ САНДАЛ": <img src={fourStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
                               <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                             {item.stone === "5g" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "АВАНТЮРИН": <img src={fiveStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "БЕЛЫЙ ОНИКС": <img src={fiveStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
                               <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                           </div>
@@ -270,7 +270,7 @@ export const Popup = (props) => {
                         <div>
                           <div style={{ textAlign: "left", textTransform: "inherit" }}>
                             {item.stone === "1d" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "РОЗА": <img src={oneStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "ОГОНЬ": <img src={oneStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
                               <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                             {item.stone === "2d" && <>
@@ -278,15 +278,15 @@ export const Popup = (props) => {
                               <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                             {item.stone === "3d" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "ЖЕМЧУГ": <img src={threeStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "ЖЕЛТЫЙ ОРГАНИК": <img src={threeStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
                               <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                             {item.stone === "4d" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "РОДОХРОЗИТ": <img src={fourStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "ЧЕРНЫЙ САНДАЛ": <img src={fourStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
                               <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                             {item.stone === "5d" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "АВАНТЮРИН": <img src={fiveStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "БЕЛЫЙ ОНИКС": <img src={fiveStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
                               <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                           </div>
