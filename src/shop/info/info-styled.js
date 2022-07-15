@@ -37,6 +37,11 @@ export const Wrapper = styled.div`
     @media screen and (min-width: 768px) {
       max-width: 970px;
     }
+    h3 {
+      @media screen and (min-width: 768px) {
+        white-space: nowrap;
+      }
+    }
   }
   .how-it-works {
     font-family: 'Organetto';
@@ -50,6 +55,9 @@ export const Wrapper = styled.div`
     text-transform: uppercase;
 
     color: rgba(255, 255, 255, 0.76);
+    @media screen and (min-width: 768px) {
+      transform: translateX(-120px);
+    }
   }
 `;
 

@@ -24,7 +24,7 @@ export const ShowHideSection = () => {
   }, []);
   const isMobile = width <= 768;
   const handleScroll = () => {
-    window.scrollTo({top: (isMobile ? 2580 : 2430), left: 0, behavior: 'smooth'});
+    window.scrollTo({top: (isMobile ? 2580 : 3400), left: 0, behavior: 'smooth'});
   };
   const opts = {
     height: '300',

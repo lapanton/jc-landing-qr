@@ -183,6 +183,25 @@ export const ChooseStone = styled.div`
     position: absolute;
     top: 140px;
   }
+  @media screen and (min-width: 768px) {
+    .not {
+      width: 64px;
+      height: 64px;
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .active {
+      width: 64px;
+      height: 64px;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
 `;
 
 export const WrapStone = styled.div`
@@ -423,5 +442,8 @@ export const WrapPrices = styled.div`
     left: 7px;
     top: 44px;
     max-width: 62px;
+    @media screen and (min-width: 768px) {
+      left: -14px;
+    }
   }
 `;
