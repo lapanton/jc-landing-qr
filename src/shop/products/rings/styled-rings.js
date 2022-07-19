@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const Wrapper = styled.div`
   @media screen and (min-width: 768px) {
@@ -320,6 +320,19 @@ export const DescriptionProduct = styled.div`
     padding: 0 100px 20px 100px;
   }
 `;
+const pulse= keyframes`
+  0% {
+    transform: scale(.9);
+    box-shadow: 0 0 0 #fff;
+}
+  70% {
+  transform: scale(1);
+    box-shadow: 0 0 17px #fff;
+}
+  100% {
+  transform: scale(.9);
+    box-shadow: 0 0 0 #fff;
+  }`;
 export const DescriptionButton = styled.div`
   display: flex;
   justify-content: left;
@@ -344,6 +357,10 @@ export const DescriptionButton = styled.div`
     transform: translateX(-50%);
     @media screen and (min-width: 768px) {
       display: none;
+    }
+    img {
+      animation: ${pulse} 1.5s infinite;
+      border-radius: 50%;
     }
   }
   @media screen and (min-width: 768px) {
