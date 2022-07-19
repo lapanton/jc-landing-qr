@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import {BrowserRouter as Router, Routes, Route, Link, Navigate} from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import {BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Link, Navigate
 import { Footer } from "./footer";
 import { createGlobalStyle } from "styled-components";
 import { Main } from "./components/first";
@@ -17,7 +17,7 @@ import {Qr1001} from "./giftMessage/qr1001";
 import {Qr1002} from "./giftMessage/qr1002";
 import {Qr00001} from "./giftMessage/qr00001";
 import {Qr1} from "./giftMessage/qr1";
-import {SliderGalerry} from "./components/slider";
+// import {SliderGalerry} from "./components/slider";
 import {Carousel} from "./components/Carousel/Carousel";
 import {ConstructorQr} from './components/ConstructorQr/ConstructorQr';
 import CheckStatusQR from "./hocs/CheckStatusQR";
@@ -32,7 +32,7 @@ import { Second } from "./shop/second";
 import { Info } from "./shop/info/iindex";
 import { ShowHideSection } from "./shop/showHideSection/iindex";
 import { WrapProducts } from "./shop/products/wrap-products";
-import {Preloader} from "./shop/preloader";
+// import {Preloader} from "./shop/preloader";
 import ScrollArrow from "./shop/arrowToTop";
 // /shop
 
@@ -57,6 +57,27 @@ export const App = (props) => {
   // http://localhost:3000/letter/piJ2N1KiBC
 
   const [showPopup, setShowPopup] = useState(null);
+  const isMobile = window.innerWidth <= 768;
+  useEffect(() => {
+    if (window.location.pathname === "/about") {
+      setTimeout(() => {
+        const toHeight = isMobile ? 4300 : 3950;
+        window.scrollTo({top: toHeight, left: 0, behavior: 'smooth'});
+      }, 1000);
+    }
+    if (window.location.pathname === "/gallery") {
+      setTimeout(() => {
+        const toHeight = isMobile ? 3850 : 3500;
+        window.scrollTo({top: toHeight, left: 0, behavior: 'smooth'});
+      }, 1000);
+    }
+    if (window.location.pathname === "/contact") {
+      setTimeout(() => {
+        const toHeight = isMobile ? 5850 : 8900;
+        window.scrollTo({top: toHeight, left: 0, behavior: 'smooth'});
+      }, 1000);
+    }
+  }, [isMobile]);
 
   return (
     <Router>
@@ -134,6 +155,61 @@ export const App = (props) => {
               <ContactsShop />
               <ScrollArrow />
             </>
+          } exact />
+
+          <Route path="/about" element={
+            <div>
+              <GlobalStyle />
+              <Main langProps={props} />
+              <MoveStuffAround/>
+              <BlackSquare />
+              <WithUs/>
+              <Uverenosti/>
+              <Freedom/>
+              <Different/>
+              <Carousel/>
+              <SelfProduct/>
+              <OsobennostiTehnologii/>
+              <ImgBottom/>
+              <Contacts/>
+            </div>
+          } exact />
+
+          <Route path="/gallery" element={
+            <div>
+              <GlobalStyle />
+              <Main langProps={props} />
+              <MoveStuffAround/>
+              <BlackSquare />
+              <WithUs/>
+              <Uverenosti/>
+              <Freedom/>
+              <Different/>
+              <Carousel/>
+              <SelfProduct/>
+              <OsobennostiTehnologii/>
+              <ImgBottom/>
+              <Contacts/>
+            </div>
+          } exact />
+
+
+          <Route path="/contact" element={
+            <div>
+              <GlobalStyle />
+              <Main langProps={props} />
+              <MoveStuffAround/>
+              <BlackSquare />
+              <WithUs/>
+              <Uverenosti/>
+              <Freedom/>
+              <Different/>
+              <Carousel/>
+              <SelfProduct/>
+              <OsobennostiTehnologii/>
+              <ImgBottom/>
+              <Contacts/>
+            </div>
           } exact />
 
         </Routes>
