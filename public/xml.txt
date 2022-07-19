@@ -19,7 +19,7 @@
 <param name="Пол">Женский</param>
     <model>Кольцо с цифровой гравировкой</model>
     <description> Оригинальный необычный подарок Hi-Tech украшения Jewel Cocktail. Кольцо Mellish c QR гравировкой для личного послания. Возможность выразить свои чувства в новом удобном формате-украшение с душой. Памятные, интересные украшенияи для близких и родных. Набор: фирменная подарочная упаковка, кольцо, особенная втсавка с QR + вставка в подарок, магнитная подложка. </description>
-<picture>https://jewelcocktail.com/static/media/1.2114f620d7a156414b09.png</picture>
+<picture>https://jewelcocktail.com/img/1.png</picture>
 <video>https://youtu.be/XLzYEUDEk-k</video>
  </offer>
 <offers>
@@ -33,7 +33,7 @@
 <param name="Пол">Женский</param>
     <model>Подвеска с цифровой гравировкой</model>
     <description>Новинка! Оригинальный необычный подарок Hi-Tech украшения Jewel Cocktail. Подвеска Quasar c QR гравировкой для личного послания. Возможность выразить свои чувства в новом удобном формате-украшение с душой. Памятные, интересные украшенияи для близких и родных. Набор: фирменная подарочная упаковка, кольцо, особенная втсавка с QR + вставка в подарок, магнитная подложка. </description>
-<picture>https://jewelcocktail.com/static/media/2.726a793ea01ca5fe8c1a.png</picture>
+<picture>https://jewelcocktail.com/img/2.png</picture>
 <video>https://youtu.be/XLzYEUDEk-k</video>
  </offer>
 offers>
@@ -47,7 +47,7 @@ offers>
 <param name="Пол">Женский</param>
     <model>Браслет с цифровой гравировкой</model>
     <description>Новинка! Оригинальный необычный подарок Hi-Tech украшения Jewel Cocktail. Браслет Alcor c QR гравировкой для личного послания. Возможность выразить свои чувства в новом удобном формате-украшение с душой. Памятные, интересные украшенияи для близких и родных. Набор: фирменная подарочная упаковка, кольцо, особенная втсавка с QR + вставка в подарок, магнитная подложка. </description>
-<picture>https://jewelcocktail.com/static/media/3.e85a6abb4bd07c5f7f40.png</picture>
+<picture>https://jewelcocktail.com/img/3.png</picture>
 <video>https://youtu.be/XLzYEUDEk-k</video>
  </offer>
 offers>
@@ -61,7 +61,7 @@ offers>
 <param name="Пол">Мужской</param>
     <model>Кулон с цифровой гравировкой</model>
     <description>Новинка! Оригинальный необычный подарок Hi-Tech украшения Jewel Cocktail. Подвеска Gidor c QR гравировкой для личного послания. Возможность выразить свои чувства в новом удобном формате-украшение с душой. Памятные, интересные украшенияи для близких и родных. Набор: фирменная подарочная упаковка, кольцо, особенная втсавка с QR + вставка в подарок, магнитная подложка. </description>
-<picture>https://jewelcocktail.com/static/media/4.618bff369d5cf7debecb.png</picture>
+<picture>https://jewelcocktail.com/img/4.png</picture>
 <video>https://youtu.be/XLzYEUDEk-k</video>
  </offer>
 offers>
@@ -75,6 +75,6 @@ offers>
 <param name="Пол">Мужской</param>
     <model>Браслет с цифровой гравировкой</model>
     <description>Новинка! Оригинальный необычный подарок Hi-Tech украшения Jewel Cocktail. Подвеска Gidor c QR гравировкой для личного послания. Возможность выразить свои чувства в новом удобном формате-украшение с душой. Памятные, интересные украшенияи для близких и родных. Набор: фирменная подарочная упаковка, кольцо, особенная втсавка с QR + вставка в подарок, магнитная подложка. </description>
-<picture>https://jewelcocktail.com/static/media/5.55cc7cab57d340cd9d8a.png</picture>
+<picture>https://jewelcocktail.com/img/5.png</picture>
 <video>https://youtu.be/XLzYEUDEk-k</video>
  </offer>
