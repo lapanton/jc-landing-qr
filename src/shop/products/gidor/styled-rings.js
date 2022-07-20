@@ -138,7 +138,7 @@ export const Wrapper = styled.div`
     letter-spacing: 0.27em;
     @media screen and (min-width: 768px) {
       position: absolute;
-      top: 90px;
+      top: 70px;
       right: 16%;
     }
   }
