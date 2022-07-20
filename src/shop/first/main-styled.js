@@ -36,7 +36,7 @@ export const Wrapper = styled.div`
 export const Inner = styled.div`
   position: relative;
   z-index: 999999999;
-  max-width: 106rem;
+  //max-width: 106rem;
   padding: 2.625rem 10.125rem;
   display: flex;
   justify-content: space-between;
