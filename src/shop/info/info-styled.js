@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   position: relative;
   z-index: 999999999;
-  height: 30rem;
+  height: 20rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,6 +62,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Descr = styled.div`
+  text-align: left;
   font-family: 'Organetto';
   color: #fff;
   font-style: normal;
@@ -73,12 +74,14 @@ export const Descr = styled.div`
     text-transform: uppercase;
     font-family: 'Organetto';
   }
+  transform: translateY(-90px);
   @media screen and (max-width: 768px) {
     font-size: 12px;
     margin-bottom: 20px;
     margin-left: 15px;
     margin-right: 15px;
     text-align: left;
+    transform: translateY(0);
   }
 `;
 

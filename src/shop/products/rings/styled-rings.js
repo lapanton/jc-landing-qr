@@ -317,7 +317,7 @@ export const PriceBuySection = styled.div`
 
 export const DescriptionProduct = styled.div`
   @media screen and (min-width: 768px) {
-    padding: 0 100px 20px 100px;
+    padding: 20px 100px 20px 100px;
   }
 `;
 const pulse= keyframes`
@@ -417,7 +417,7 @@ export const ToRightMoveDesktop = styled.span`
     position: absolute;
     left: 108%;
     z-index: 999999999999;
-    top: -28px;
+    top: -48px;
     width: 100%;
   }
 `;

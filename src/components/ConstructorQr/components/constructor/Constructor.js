@@ -313,14 +313,14 @@ export const Constructor = (props) => {
                       </InnerWrapSlider>
                     </WrapBorderView>
                   </WrapSlider>
-                  {(signature?.length !== 0 || (value.author !== undefined && value.author !== "")) && (
-                    <WrapName className={value?.status === 'completed' ? "iscompeleted color_"+value?.border : "color_"+borderType}>
-                      {value?.status === 'completed' ? value.author : signature}
-                    </WrapName>
-                    )
-                  }
 
                 </div>
+                {(signature?.length !== 0 || (value.author !== undefined && value.author !== "")) && (
+                  <WrapName className={value?.status === 'completed' ? "iscompeleted color_"+value?.border : "color_"+borderType}>
+                    {value?.status === 'completed' ? value.author : signature}
+                  </WrapName>
+                )
+                }
                   {value?.status === 'default' && (
                     <>
                       <WrapPhoneEmail style={signature?.length !== 0 ? {marginTop: "0px"} : {marginTop: "50px"}}>

@@ -2,6 +2,14 @@ import styled, { keyframes } from 'styled-components';
 
 export const Wrapper = styled.div`
   background: transparent;
+  max-width: 58rem;
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (max-width: 768px) {
+      max-width: inherit;
+    margin-left: inherit;
+    margin-right: inherit;
+  }
   &.mobileHeight {
     height: 70rem;
   }
@@ -71,9 +79,6 @@ export const Wrapper = styled.div`
         margin-right: auto;
       }
     }
-  @media screen and (max-width: 768px) {
-    
-  }
   .videoTag {
     height: 360px;
   }
@@ -122,6 +127,10 @@ export const Inner = styled.div`
     line-height: 180.8%;
     color: #fff;
     margin-bottom: 15px;
+    transform: translateY(-90px);
+    @media screen and (max-width: 768px) {
+      transform: translateY(0);
+    }
   }
 `;
 

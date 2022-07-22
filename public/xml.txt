@@ -2,20 +2,20 @@
 <shop>
 <shopid>11235711123</shopid>
 <name>Jewel Cocktail</name>
-<url>https://jewelcocktail.com/shop</url>
+<url>https://jewelcocktail.com/shop</url> 
  <offers>
 <offer available="true" id="1" spc="9">
-<url>https://jewelcocktail.com/shop</url>
+<url>https://jewelcocktail.com/shop</url> 
 <price>9800</price>
 <picture>https://jewelcocktail.com/img/1.png</picture>
 <video>https://youtu.be/XLzYEUDEk-k</video>
 <name>Кольцо с цифровой гравировкой</name>
-<description>Новинка! Оригинальный необычный подарок Hi-Tech украшения Jewel Cocktail.
+<description>Новинка! Оригинальный необычный подарок Hi-Tech украшения Jewel Cocktail. 
 Кольцо Mellish c QR гравировкой для личного послания. Возможность выразить свои чувства в новом удобном формате-украшение с душой. Памятные, интересные украшенияи для близких и родных. Набор: фирменная подарочная упаковка, кольцо, особенная втсавка с QR + вставка в подарок, магнитная подложка. </description>
 <action id="add"></action>
 </offer>
 <offer available="true" id="2" spc="9">
-<url>https://jewelcocktail.com/shop</url>
+<url>https://jewelcocktail.com/shop</url> 
 <price>8900</price>
 <picture>https://jewelcocktail.com/img/2.png</picture>
 <video>https://youtu.be/XLzYEUDEk-k</video>
@@ -25,29 +25,28 @@
 <action id="add"></action>
 </offer>
 <offer available="true" id="3" spc="9">
-<url>https://jewelcocktail.com/shop</url>
+<url>https://jewelcocktail.com/shop</url> 
 <price>6700</price>
 <picture>https://jewelcocktail.com/img/3.png</picture>
 <video>https://youtu.be/XLzYEUDEk-k</video>
 <name>Браслет с цифровой гравировкой</name>
-<description>Новинка! Оригинальный необычный подарок Hi-Tech украшения Jewel Cocktail.
+<description>Новинка! Оригинальный необычный подарок Hi-Tech украшения Jewel Cocktail. 
 Браслет Alcor c QR гравировкой для личного послания. Возможность выразить свои чувства в новом удобном формате-украшение с душой. Памятные, интересные украшенияи для близких и родных. Набор: фирменная подарочная упаковка, кольцо, особенная втсавка с QR + вставка в подарок, магнитная подложка.</description>
 <action id="add"></action>
 </offer>
 <offer available="true" id="4" spc="9">
-<url>https://jewelcocktail.com/shop</url>
+<url>https://jewelcocktail.com/shop</url> 
 <price>8900</price>
 <picture>https://jewelcocktail.com/img/4.png</picture>
 <video>https://youtu.be/XLzYEUDEk-k</video>
 <name>Кулон с цифровой гравировкой</name>
-<description>Новинка! Оригинальный необычный подарок Hi-Tech украшения Jewel Cocktail.
+<description>Новинка! Оригинальный необычный подарок Hi-Tech украшения Jewel Cocktail. 
 Подвеска Gidor c QR гравировкой для личного послания. Возможность выразить свои чувства в новом удобном формате-украшение с душой. Памятные, интересные украшенияи для близких и родных. Набор: фирменная подарочная упаковка, кольцо, особенная втсавка с QR + вставка в подарок, магнитная подложка.</description>
 <action id="add"></action>
 </offer>
 <offer available="true" id="5" spc="9">
-<url>https://jewelcocktail.com/shop</url>
-<price>9850</price>
-<discount>6900</discount>
+<url>https://jewelcocktail.com/shop</url> 
+<price>6900</price>
 <picture>https://jewelcocktail.com/img/5.png</picture>
 <video>https://youtu.be/XLzYEUDEk-k</video>
 <name>Браслет с цифровой гравировкой</name>

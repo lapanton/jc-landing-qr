@@ -101,7 +101,7 @@ export const WrapCardPrice = styled.div`
   .price-card-new {
     position: absolute;
     left: 65px;
-    bottom: -28px;
+    bottom: -48px;
     font-size: 18px;
   }
   .card-line-old {

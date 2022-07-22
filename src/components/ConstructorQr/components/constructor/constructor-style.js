@@ -502,7 +502,7 @@ export const WrapName = styled.div`
   }
   @media screen and (max-width: 768px) {
     padding: 10px 12px;
-    margin: 60px 0 60px 0;
+    margin: 60px 0 0 0;
   }
   &.color_0 {
     @media screen and (max-width: 768px) {
@@ -645,7 +645,7 @@ export const InnerWrapSlider = styled.div`
   .slick-dots {
     bottom: 0;
     @media screen and (max-width: 768px) {
-      bottom: -40px;
+      bottom: -45px;
     }
   }
   .slick-dots li.slick-active button:before {
