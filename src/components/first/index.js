@@ -48,7 +48,7 @@ export const Main = ({langProps}) => {
             <img src={logo} alt="JewelCocktail" />
           </a>
           <WrapList>
-            <div><a href="https://jewelcocktail.com/about" target="_blank" rel="noreferrer"><FormattedMessage id="message.aboutUs" /></a></div>
+            <div onClick={() => window.scrollTo({top: 4000, left: 0, behavior: 'smooth'})}><FormattedMessage id="message.aboutUs" /></div>
             <Link to="/shop" className="link-to-shop-desktop"><FormattedMessage id="message.shop" /></Link>
             <div onClick={() => window.scrollTo({top: 3300, left: 0, behavior: 'smooth'})}><FormattedMessage id="message.gallery" /></div>
             <div onClick={() => window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })}><FormattedMessage id="message.contacts" /></div>

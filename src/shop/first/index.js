@@ -72,7 +72,7 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
             <img src={logo} alt="JewelCocktail" />
           </a>
           <WrapList>
-            <div onClick={() => window.scrollTo({top: 4000, left: 0, behavior: 'smooth'})}><FormattedMessage id="message.aboutUs" /></div>
+            <div><a href="https://jewelcocktail.com/about" target="_blank" rel="noreferrer"><FormattedMessage id="message.aboutUs" /></a></div>
             <div onClick={() => window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })}><FormattedMessage id="message.contacts" /></div>
           </WrapList>
           <WrapSocial>
