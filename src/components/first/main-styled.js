@@ -80,6 +80,13 @@ export const WrapList = styled.div`
     font-weight: 300;
     font-size: 1rem;
   }
+  a {
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1rem;
+    text-decoration: none;
+  }
   @media screen and (max-width: 1200px) {
     div{
       margin-right: 2rem;
