@@ -9,7 +9,7 @@ import qrcode from './qrcode.png';
 import { SecondVideo } from "./prev";
 
 export const ShowHideSection = () => {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
 
   const [width, setWidth] = useState(window.innerWidth);
 
