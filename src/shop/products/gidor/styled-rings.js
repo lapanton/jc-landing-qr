@@ -24,6 +24,21 @@ export const Wrapper = styled.div`
   .slick-current {
 
   }
+  
+  .gidor-slider-two {
+    @media screen and (max-width: 768px) {
+      margin-top: 10px;
+      .slick-slide {
+        border-radius: 10px;
+        transform: scale(0.8);
+        opacity: 0.8;
+        &.slick-center {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+  }
   position: relative;
   z-index: 999999999;
   overflow: hidden;

@@ -98,6 +98,9 @@ export const Gidor = (props) => {
         breakpoint: 780,
         settings: {
           arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 3,
         },
       },
     ],
