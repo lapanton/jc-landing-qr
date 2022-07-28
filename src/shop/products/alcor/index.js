@@ -5,6 +5,9 @@ import two from './img/2.png';
 import three from './img/3.png';
 import four from './img/4.png';
 import five from './img/5.png';
+import six from './img/6.png';
+import seven from './img/7.png';
+import eight from './img/8.png';
 
 import oneStone from './stone/1.png';
 import twoStone from './stone/2.png';
@@ -126,6 +129,15 @@ export const Alcor = (props) => {
             <div>
               <img src={five} alt="JewelCocktail"/>
             </div>
+            <div>
+              <img src={six} alt="JewelCocktail"/>
+            </div>
+            <div>
+              <img src={seven} alt="JewelCocktail"/>
+            </div>
+            <div>
+              <img src={eight} alt="JewelCocktail"/>
+            </div>
           </Slider>
           <Slider {...settingsTwo} asNavFor={nav1} ref={(slider2) => setNav2(slider2)} swipeToSlide={true} focusOnSelect={true}>
             <div>
@@ -142,6 +154,15 @@ export const Alcor = (props) => {
             </div>
             <div>
               <img src={five} alt="JewelCocktail"/>
+            </div>
+            <div>
+              <img src={six} alt="JewelCocktail"/>
+            </div>
+            <div>
+              <img src={seven} alt="JewelCocktail"/>
+            </div>
+            <div>
+              <img src={eight} alt="JewelCocktail"/>
             </div>
           </Slider>
         </div>

@@ -150,6 +150,11 @@ export const Inner = styled.div`
       overflow: hidden;
     }
   }
+  //.rings-slider-two {
+  //  .slick-current {
+  //    border: 2px solid #fff;
+  //  }
+  //}
 `;
 export const ChooseStone = styled.div`
   p {
