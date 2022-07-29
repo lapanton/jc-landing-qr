@@ -1,4 +1,5 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+import ReactDOM from "react-dom";
 import Slider from "react-slick";
 import one from './img/1.png';
 import two from './img/2.png';
@@ -21,7 +22,9 @@ import arUp from './arrowUp.png';
 
 import sale from '../sale.png';
 
-import { Wrapper, Inner, ChooseStone, WrapStone, PriceBuySection, DescriptionProduct, DescriptionButton, DescriptionView, ToRightMoveDesktop, WrapPrices } from "./styled-rings";
+import { Wrapper, Inner, ChooseStone, WrapStone, PriceBuySection, DescriptionProduct, DescriptionButton, DescriptionView, ToRightMoveDesktop, WrapPrices,  WrapperZoom, WrapZoomSlider } from "./styled-rings";
+import whiteArrow from "../rings/img/white-arrow.svg";
+import closeIcon from "../rings/img/cross_white.svg";
 
 export const Dors = (props) => {
   const { card, setCard, setShowPopup } = props;
@@ -29,6 +32,9 @@ export const Dors = (props) => {
   const [nav2, setNav2] = useState();
   const [dorsStone, setDorsStone] = useState('1d');
   const [showDescr, setShowDescr] = useState(false);
+  const [openZoomImage, setOpenZoomImage] = useState(false);
+  const [indexImg, setIndexImg] = useState(1);
+  const [moveTo, setMoveTo] = useState("stop");
 
 
   const [width, setWidth] = useState(window.innerWidth);
@@ -113,6 +119,101 @@ export const Dors = (props) => {
    setShowPopup(true);
  };
 
+
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowRight") {
+      setMoveTo("next");
+      setTimeout(() => {
+        setMoveTo("stop");
+      }, 100);
+    }
+    if (e.key === "ArrowLeft") {
+      setMoveTo("back");
+      setTimeout(() => {
+        setMoveTo("stop");
+      }, 100);
+    }
+  });
+
+  const Next = (props) => {
+    const { style, onClick } = props;
+    return (
+      <div
+        className="customNext whiteBg"
+        style={{ ...style, display: "block" }}
+        onClick={() => {
+          onClick();
+        }}
+      >
+        <img src={whiteArrow} alt="JewelCocktail" />
+      </div>
+    );
+  };
+
+  const Prev = (props) => {
+    const { style, onClick } = props;
+    return (
+      <div
+        className="customPrev whiteBg"
+        style={{ ...style, display: "block" }}
+        onClick={() => {
+          onClick();
+        }}
+      >
+        <img src={whiteArrow} alt="JewelCocktail" />
+      </div>
+    );
+  };
+
+  const sliderReferral = useRef<Slider | null>(null);
+
+  useEffect(() => {
+    // @ts-ignore
+
+    if (moveTo === "next") {
+      sliderReferral.current?.slickNext();
+    }
+    if (moveTo === "back") {
+      sliderReferral.current?.slickPrev();
+    }
+
+    // eslint-disable-next-line no-use-before-define
+  }, [moveTo, sliderReferral]);
+
+  const settingsZoom = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    autoplaySpeed: 80000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: false,
+    nextArrow: <Next />,
+    prevArrow: <Prev />,
+    initialSlide: indexImg - 1,
+    responsive: [
+      {
+        breakpoint: 780,
+        settings: {
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: indexImg - 1,
+          arrows: true,
+          swipeToSlide: true,
+        },
+      },
+    ],
+  };
+
+  const openZoom = (index) => {
+    setIndexImg(index);
+    setOpenZoomImage(true);
+    sliderReferral.current?.slickGoTo(index);
+  };
+
+
   return (
     <Wrapper>
       <Inner>
@@ -120,30 +221,72 @@ export const Dors = (props) => {
           <h4>мужской браслет <br/>Dors</h4>
           <Slider {...settings} asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
             <div>
-              <img src={one} alt="JewelCocktail"/>
+              <img src={one} alt="JewelCocktail" onClick={() => openZoom(1)} />
             </div>
             <div>
-              <img src={two} alt="JewelCocktail"/>
+              <img src={two} alt="JewelCocktail" onClick={() => openZoom(2)} />
             </div>
             <div>
-              <img src={three} alt="JewelCocktail"/>
+              <img src={three} alt="JewelCocktail" onClick={() => openZoom(3)} />
             </div>
             <div>
-              <img src={four} alt="JewelCocktail"/>
+              <img src={four} alt="JewelCocktail" onClick={() => openZoom(4)} />
             </div>
             <div>
-              <img src={five} alt="JewelCocktail"/>
+              <img src={five} alt="JewelCocktail" onClick={() => openZoom(5)} />
             </div>
             <div>
-              <img src={six} alt="JewelCocktail"/>
+              <img src={six} alt="JewelCocktail" onClick={() => openZoom(6)} />
             </div>
             <div>
-              <img src={seven} alt="JewelCocktail"/>
+              <img src={seven} alt="JewelCocktail" onClick={() => openZoom(7)} />
             </div>
             <div>
-              <img src={eight} alt="JewelCocktail"/>
+              <img src={eight} alt="JewelCocktail" onClick={() => openZoom(8)} />
             </div>
           </Slider>
+          {
+            openZoomImage &&
+            ReactDOM.createPortal(
+              <WrapperZoom>
+                <span
+                  onClick={() => setOpenZoomImage(false)}
+                  style={{ position: "absolute", top: "2rem", right: "15px", cursor: "pointer", zIndex: 9999999 }}
+                >
+                  <img src={closeIcon} alt="JewelCocktail" className="closeIcon" />
+                </span>
+                <WrapZoomSlider>
+                  <Slider {...settingsZoom}>
+                    <div>
+                      <img src={one} alt="JewelCocktail" />
+                    </div>
+                    <div>
+                      <img src={two} alt="JewelCocktail" />
+                    </div>
+                    <div>
+                      <img src={three} alt="JewelCocktail"  />
+                    </div>
+                    <div>
+                      <img src={four} alt="JewelCocktail" />
+                    </div>
+                    <div>
+                      <img src={five} alt="JewelCocktail" />
+                    </div>
+                    <div>
+                      <img src={six} alt="JewelCocktail" />
+                    </div>
+                    <div>
+                      <img src={seven} alt="JewelCocktail" />
+                    </div>
+                    <div>
+                      <img src={eight} alt="JewelCocktail" />
+                    </div>
+                  </Slider>
+                </WrapZoomSlider>
+              </WrapperZoom>,
+              document.body
+            )}
+          }
           <Slider {...settingsTwo} asNavFor={nav1} ref={(slider2) => setNav2(slider2)} swipeToSlide={true} focusOnSelect={true}>
           <div>
             <img src={one} alt="JewelCocktail"/>

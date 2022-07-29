@@ -168,6 +168,9 @@ export const Inner = styled.div`
       display: inline-block;
       width: 49.9%;
       overflow: hidden;
+      img:hover {
+        cursor: pointer;
+      }
     }
   }
 `;
@@ -480,3 +483,127 @@ export const WrapPrices = styled.div`
   }
 `;
 
+export const WrapperZoom = styled.div`
+  min-height: 0;
+  min-width: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 9999999999;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .slick-slide img {
+    max-height: initial;
+    margin: 0 auto;
+  }
+`;
+
+export const WrapZoomSlider = styled.div`
+  position: relative;
+  max-width: 100%;
+  display: block;
+  width: 100%;
+  .slick-track {
+    display: flex !important;
+  }
+  .slick-slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+    @media screen and (min-width: 768px) {
+      max-width: 70%;
+    }
+    &.recom-page-zoom {
+      width: 40%;
+      margin: 80px auto 40px auto;
+      max-height: inherit;
+      cursor: default;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        margin: 80px auto;
+      }
+    }
+  }
+  .slick-slide {
+    height: auto;
+  }
+  .customPrev,
+  .customNext {
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    transform: translate(0, -50%);
+    transform-origin: center center;
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    background: transparent;
+    &.whiteBg {
+      img {
+        @media screen and (min-width: 768px) {
+          background: rgba(0, 0, 0, 0.2);
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+  .customPrev {
+    right: 34px;
+    width: 1.25rem;
+    top: 51%;
+    z-index: 1;
+    left: 0;
+    &::before {
+      display: none;
+    }
+    &:hover {
+      opacity: 1;
+    }
+    &:active {
+      opacity: 0.5;
+    }
+    &.whiteBg {
+      transform: rotate(-180deg);
+    }
+  }
+  .customNext {
+    transform: rotate(-180deg);
+    top: 50%;
+    z-index: 1;
+    right: 0;
+    &::before {
+      display: none;
+    }
+    &:hover {
+      opacity: 1;
+    }
+    &:active {
+      opacity: 0.5;
+    }
+    &.whiteBg {
+      transform: rotate(0deg);
+    }
+  }
+  .customNext,
+  .customPrev {
+    &.whiteBg {
+      width: 60px;
+      height: 80px;
+      background: rgba(0, 0, 0, 0.2);
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+      }
+    }
+  }
+`;
