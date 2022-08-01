@@ -4,7 +4,7 @@ export const Wrapper = styled.div`
   @media screen and (min-width: 768px) {
     margin-top: 70px;
     .slick-slider {
-      max-width: 550px;
+      max-width: 450px;
       overflow: hidden;
       margin: auto;
     }
