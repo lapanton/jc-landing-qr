@@ -171,3 +171,110 @@ export const ButtonHide = styled.div`
     display: inline-block !important;
   }
 `;
+
+export const WrapDesktop = styled.div`
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 999999999;
+  width: 100%;
+  color: #fff;
+  h1 {
+    max-width: 530px;
+    margin: 0 auto 30px auto;
+    font-family: 'organetto';
+    font-size: 30px;
+    letter-spacing: 0.425em;
+    white-space: nowrap;
+    text-transform: uppercase;
+    @media screen and (max-width: 980px) {
+      font-size: 22px;
+    }
+  }
+`;
+
+export const LeftPart = styled.div`
+  flex-grow: 1;
+  flex-basis: calc(100% / 2);
+  text-align: center;
+`;
+export const RightPart = styled.div`
+  flex-grow: 1;
+  flex-basis: calc(100% / 2);
+  text-align: center;
+  h2 {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'organetto';
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 180.8%;
+    text-align: center;
+    letter-spacing: 0.21em;
+    max-width: 80%;
+  }
+  p {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    font-family: 'Organetto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 144.5%;
+    span {
+      color: rgba(165, 82, 72, 1);
+    }
+  }
+`;
+
+export const SecondWrapDesktop = styled.div`
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 999999999;
+  width: 100%;
+  color: #fff;
+  margin-bottom: 80px;
+`;
+export const LeftPartSecond = styled.div`
+  flex-grow: 1;
+  flex-basis: calc(100% / 2);
+  text-align: center;
+  h3 {
+    margin: 0 auto;
+    max-width: 80%;
+    font-family: 'Organetto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 180.8%;
+    text-align: center;
+    letter-spacing: 0.21em;
+    margin-bottom: 40px;
+  }
+  p {
+    margin: 0 auto;
+    max-width: 80%;
+    font-family: 'Organetto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 19px;
+    line-height: 184.52%;
+    text-align: center;
+  }
+`;
+export const RighhtPartSecond = styled.div`
+  flex-grow: 1;
+  flex-basis: calc(100% / 2);
+  text-align: center;
+  margin: 40px auto;
+  video {
+    max-width: 400px !important;
+  }
+  span {
+    max-width: 80%;
+  }
+`;

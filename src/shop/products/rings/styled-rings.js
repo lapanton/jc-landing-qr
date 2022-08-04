@@ -334,7 +334,7 @@ export const PriceBuySection = styled.div`
   @media screen and (min-width: 768px) {
     max-width: 390px;
     position: absolute;
-    top: 370px;
+    top: 340px;
     right: 14%;
   }
 `;

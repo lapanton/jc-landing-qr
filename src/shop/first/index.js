@@ -64,8 +64,20 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
     setShowPopup(true);
   };
 
+  const [width, setWidth] = useState(window.innerWidth);
+  const handleWindowSizeChange = () => {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener('resize', handleWindowSizeChange);
+    return () => {
+      window.removeEventListener('resize', handleWindowSizeChange);
+    }
+  }, []);
+  const isMobile = width <= 768;
+
   return (
-    <ConttainerWrap  className={sticky ? 'sticky' : ' '}>
+    <ConttainerWrap className={sticky ? 'sticky' : ' '} style={!isMobile ? {height: "15rem"} : {}}>
       <Wrapper>
         <Inner className={sticky ? 'sticky' : ' '}>
           <a href="/" className="wrapLogo">
@@ -147,18 +159,14 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
             </WrapCardIconMobile>
           </WrapMobile>
         </Inner>
-        <WrapTitle className={show ? 'removeZindex' : 'addit'}>
-          {sticky && window.innerWidth >= '768' ? <div style={{ marginTop: "180px"}}/> : <span/>}
-          <h1>Jewel Cocktail</h1>
-          <h2>дизайнерские hi-tech УКРАШЕНИЯ</h2>
-          {/*<p>Мы отказались от классических форм ювелирных украшений, предлагая вместо этого современный<br/> минимализм, естественность и возможность эксперементировать с образами. </p>*/}
-        </WrapTitle>
-        {/*<WrapLoadMore>*/}
-        {/*    <InnerLoadMore onClick={() =>  window.scrollTo({top: 650, left: 0, behavior: 'smooth'})}>*/}
-        {/*      <img src={arrowDown} alt="JewelCocktail" className="arrowDown"/>*/}
-        {/*      <img src={rotateText} alt="JewelCocktail" className="rotated"/>*/}
-        {/*    </InnerLoadMore>*/}
-        {/*</WrapLoadMore>*/}
+        {isMobile && (
+          <WrapTitle className={show ? 'removeZindex' : 'addit'}>
+            {sticky && window.innerWidth >= '768' ? <div style={{ marginTop: "180px"}}/> : <span/>}
+            <h1>Jewel Cocktail</h1>
+            <h2>дизайнерские hi-tech УКРАШЕНИЯ</h2>
+            {/*<p>Мы отказались от классических форм ювелирных украшений, предлагая вместо этого современный<br/> минимализм, естественность и возможность эксперементировать с образами. </p>*/}
+          </WrapTitle>
+        )}
       </Wrapper>
     </ConttainerWrap>
   );
