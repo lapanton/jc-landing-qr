@@ -93,4 +93,7 @@ export const GiftButton = styled.div`
   font-family: 'Organetto';
   font-size: 15px;
   line-height: 40%;
+  &:hover {
+    cursor: pointer;
+  }
 `;

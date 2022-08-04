@@ -29,7 +29,7 @@ export const Second = () => {
             <h1>Jewel Cocktail</h1>
             <WrapSubtitle>Живые hi-tech УКРАШЕНИЯ</WrapSubtitle>
             <WrapDescription>особый <span>подарок</span><br/>с твоим цифровым посланием</WrapDescription>
-            <GiftButton>подарить</GiftButton>
+            <GiftButton onClick={() => window.scrollTo({top: 1800, left: 0, behavior: 'smooth'})}>подарить</GiftButton>
           </LeftPart>
           <RightPart>
             <WrapVideo>
