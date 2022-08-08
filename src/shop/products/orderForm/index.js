@@ -110,7 +110,7 @@ export const OrderForm = (props) => {
               }
               {item.product === "gidor" ?
                 <div key={index}>
-                  <input type="hidden" name="product_gidor" value="Мужской  кулон Gidor" />
+                  <input type="hidden" name="product_gidor" value="Мужской кулон Gidor" />
                   {item.stone === "1g" && <><input type="hidden" name="gidor_stone" value="Огонь" /></>}
                   {item.stone === "2g" && <><input type="hidden" name="gidor_stone" value="Океан" /></>}
                   {item.stone === "3g" && <><input type="hidden" name="gidor_stone" value="Жёлтый органик" /></>}
@@ -122,7 +122,7 @@ export const OrderForm = (props) => {
               }
               {item.product === "dors" ?
                 <div key={index}>
-                  <input type="hidden" name="product_dors" value="мужской  кулон Gidor" />
+                  <input type="hidden" name="product_dors" value="Мужской браслет Dors" />
                   {item.stone === "1d" && <><input type="hidden" name="dors_stone" value="Огонь" /></>}
                   {item.stone === "2d" && <><input type="hidden" name="dors_stone" value="Океан" /></>}
                   {item.stone === "3d" && <><input type="hidden" name="dors_stone" value="Жёлтый органик" /></>}
