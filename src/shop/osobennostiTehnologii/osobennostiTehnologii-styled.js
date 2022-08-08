@@ -76,7 +76,7 @@ export const InnerOne = styled.div`
     content: "";
     position: absolute;
     right: 10%;
-    bottom: -9%;
+    bottom: 0%;
     width: 1px;
     height: 110px;
     background: #fff;
@@ -124,7 +124,7 @@ export const InnerTwo = styled.div`
     content: "";
     position: absolute;
     right: 10%;
-    bottom: -9%;
+    bottom: 0;
     width: 1px;
     height: 110px;
     background: #fff;
@@ -173,8 +173,6 @@ export const InnerThree = styled.div`
   flex: 0 0 33.333333%;
   margin-top: 30px;
   position: relative;
-  padding-top: 35px;
-  border-top: 1px solid #fff;
   p {
     font-size: 0.938rem;
     line-height: 1.7rem;
@@ -192,7 +190,9 @@ export const InnerThree = styled.div`
     }
   }
   @media screen and (max-width: 768px) {
+    border-top: 1px solid #fff;
     flex: 0 0 100%;
+    padding-top: 35px;
     img {
       margin: 0 auto;
       display: block;
@@ -201,7 +201,6 @@ export const InnerThree = styled.div`
       line-height: 1.2rem;
       padding: 0;
       text-align: center;
-      c
       font-size: 12px;
       font-weight: 300;
     }
