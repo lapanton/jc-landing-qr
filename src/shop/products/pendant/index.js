@@ -215,7 +215,7 @@ export const Pendants = (props) => {
     <Wrapper>
       <Inner>
         <div className="slider-wrap">
-          <h4>подвеска quasar</h4>
+          <h4>женская подвеска<br/> quasar</h4>
           <Slider {...settings} asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
             <div>
               <img src={one} alt="JewelCocktail" onClick={() => openZoom(1)}/>

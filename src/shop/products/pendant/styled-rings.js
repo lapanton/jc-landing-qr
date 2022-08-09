@@ -148,14 +148,15 @@ export const Wrapper = styled.div`
     font-family: 'Organetto';
     font-style: normal;
     font-weight: 400;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 26px;
     text-align: center;
     letter-spacing: 0.27em;
     @media screen and (min-width: 768px) {
       position: absolute;
-      top: 90px;
-      right: 16%;
+      top: 70px;
+      right: 15.5%;
+      font-size: 17px;
     }
   }
 `;

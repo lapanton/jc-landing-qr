@@ -9,9 +9,7 @@ export const Wrapper = styled.div`
       margin: auto;
     }
   }
-
-  border-top: 1px solid #444545;
-  padding-top: 20px;
+  
   /* the slides */
   .slick-slide {
     margin: 0 10px;

@@ -9,6 +9,12 @@ export const Wrapper = styled.div`
       margin: auto;
     }
   }
+  border-top: 1px solid #444545;
+
+  padding-top: 20px;
+  @media screen and (min-width: 768px) {
+    padding-top: 70px;
+  }
   /* the slides */
   .slick-slide {
     margin: 0 10px;
@@ -151,8 +157,8 @@ export const Wrapper = styled.div`
     letter-spacing: 0.27em;
     @media screen and (min-width: 768px) {
       position: absolute;
-      top: 90px;
-      right: 16%;
+      top: 70px;
+      right: 15.5%;
     }
   }
 `;

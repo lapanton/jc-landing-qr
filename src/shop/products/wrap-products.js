@@ -21,11 +21,15 @@ export const WrapProducts = (props) => {
 
   return (
       <WrapperProducts className={showPopup ? "showPopup": "noPopup"}>
-        <Rings setCard={setCard} setShowPopup={setShowPopup} card={card} />
-        <Pendants setCard={setCard} setShowPopup={setShowPopup} card={card} />
+        <Dors setCard={setCard} setShowPopup={setShowPopup} card={card} />
         <Alcor setCard={setCard} setShowPopup={setShowPopup} card={card} />
         <Gidor setCard={setCard} setShowPopup={setShowPopup} card={card} />
-        <Dors setCard={setCard} setShowPopup={setShowPopup} card={card} />
+        <Pendants setCard={setCard} setShowPopup={setShowPopup} card={card} />
+        <Rings setCard={setCard} setShowPopup={setShowPopup} card={card} />
+
+
+
+
         <Popup showPopup={showPopup} setShowPopup={setShowPopup} card={card} setCard={setCard} />,
       </WrapperProducts>
   );
