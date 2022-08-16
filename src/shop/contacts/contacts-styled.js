@@ -85,6 +85,8 @@ export const WrapText = styled.div`
     font-weight: lighter;
     white-space: nowrap;
     &.laast {
+      font-family: 'Organetto';
+      font-size: 12px;
       padding-left: 34px;
     }
 

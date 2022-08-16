@@ -85,12 +85,13 @@ export const InnerOne = styled.div`
     }
   }
   p {
-    font-size: 0.938rem;
-    line-height: 1.7rem;
     color: #fff;
     padding: 0 30px 0 0;
     max-width: 350px;
     margin-top: 40px;
+    font-family: 'Organetto';
+    font-size: 12px;
+    line-height: 192.52%;
     @media screen and (min-width: 768px) {
       margin-top: 0;
     }
@@ -133,12 +134,13 @@ export const InnerTwo = styled.div`
     }
   }
   p {
-    font-size: 0.938rem;
-    line-height: 1.7rem;
     color: #fff;
     padding: 0 30px 0 0;
     max-width: 350px;
     margin-top: 40px;
+    font-family: 'Organetto';
+    font-size: 12px;
+    line-height: 192.52%;
     @media screen and (min-width: 768px) {
       margin-top: 0;
     }

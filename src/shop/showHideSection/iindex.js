@@ -32,7 +32,7 @@ export const ShowHideSection = () => {
     width: isMobile ? '360px' : '600px',
     playerVars: {
       // https://developers.google.com/youtube/player_parameters
-      autoplay: 1, mute: 1
+      autoplay: 0, mute: 1
     },
   };
   return (

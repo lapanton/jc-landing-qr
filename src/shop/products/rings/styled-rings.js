@@ -347,7 +347,7 @@ export const PriceBuySection = styled.div`
 
 export const DescriptionProduct = styled.div`
   @media screen and (min-width: 768px) {
-    padding: 20px 100px 20px 100px;
+    padding: 20px 100px 40px 100px;
   }
 `;
 const pulse= keyframes`
