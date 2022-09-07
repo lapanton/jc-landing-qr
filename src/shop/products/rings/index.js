@@ -353,15 +353,16 @@ export const Rings = (props) => {
           <span>
             Размер кольца
           </span>
-          <SizeButton onClick={() => setSizeRing('sizes')} className={sizeRing === 'sizes' ? 'active' : 'no'}>
-            S
-          </SizeButton>
-          <SizeButton onClick={() => setSizeRing('sizem')} className={sizeRing === 'sizem' ? 'active' : 'no'}>
-            M
-          </SizeButton>
-          <SizeButton onClick={() => setSizeRing('sizel')} className={sizeRing === 'sizel' ? 'active' : 'no'}>
-            L
-          </SizeButton>
+          <SizeButton>ONE SIZE</SizeButton>
+          {/*<SizeButton onClick={() => setSizeRing('sizes')} className={sizeRing === 'sizes' ? 'active' : 'no'}>*/}
+          {/*  S*/}
+          {/*</SizeButton>*/}
+          {/*<SizeButton onClick={() => setSizeRing('sizem')} className={sizeRing === 'sizem' ? 'active' : 'no'}>*/}
+          {/*  M*/}
+          {/*</SizeButton>*/}
+          {/*<SizeButton onClick={() => setSizeRing('sizel')} className={sizeRing === 'sizel' ? 'active' : 'no'}>*/}
+          {/*  L*/}
+          {/*</SizeButton>*/}
         </ChooseSize>
         <PriceBuySection>
           <WrapPrices>
@@ -400,11 +401,11 @@ export const Rings = (props) => {
               </p>
 
               <ToRightMoveDesktop>
-              <p className="main-text">
+              <p className="main-text" style={{ display: "none" }}>
                 Размер кольца:
               </p>
-              <p className="slave-text">
-                S: 16-18 M: 17-19 L: 18-20
+              <p className="slave-text" style={{ display: "none" }}>
+                ONE SIZE
               </p>
               <p className="main-text">
                 Материал и цвет основы:

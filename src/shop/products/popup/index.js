@@ -61,7 +61,8 @@ export const Popup = (props) => {
                       <div style={{ textAlign: "left" }}>
                         <span style={{ color: "#727070", marginBottom: "10px", display: "inline-block" }}>
                           Кольцо Mellish
-                          Рамер: {item.size === "sizes" && "S" } {item.size === "sizem" && "M" } {item.size === "sizel" && "L" }
+                          Рамер: ONE SIZE
+                          {/*Рамер: {item.size === "sizes" && "S" } {item.size === "sizem" && "M" } {item.size === "sizel" && "L" }*/}
                         </span>
                         <div>
                           <div style={{ textAlign: "left", textTransform: "inherit" }}>
