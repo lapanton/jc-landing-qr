@@ -19,6 +19,10 @@ import pendantImg from '../pendant/img/1.png';
 import alcorImg from '../alcor/img/1.png';
 import gidorImg from '../gidor/img/1.png';
 import dorsImg from '../dors/img/1.png';
+import coupleImg from '../coupleBracelets/img/1.png';
+import oneStoneCouple from '../coupleBracelets/stone/1.png';
+import twoStoneCouple from '../coupleBracelets/stone/2.png';
+import threeStoneCouple from '../coupleBracelets/stone/3.png';
 
 import giftIcon from './gift_icon.png';
 
@@ -294,6 +298,49 @@ export const Popup = (props) => {
                         </div>
                         <WrapCardPrice>
                           <div className="price-card">Цена: <span className="card-line-old">  9 850 ₽</span> <span className="price-card-new">= {currentPrice} ₽ </span></div>
+                          <img src={sales} alt="JewelCocktail" className="card-icon-sale" />
+                        </WrapCardPrice>
+                      </div>
+
+                    </WrapProductDescription>
+                    <br/>
+                    <hr/>
+                    <br/>
+                  </>
+                  :
+                  null
+                }
+                {item.product === "couple" ?
+                  <>
+                    <RemoveItem onClick={() => removeItem(item)}>
+                      <div style={{ textAlign: "right" }}>
+                        <img src={close} alt="JewelCocktail" style={{ maxWidth: "18px", opacity: "0.7" }}/>
+                      </div>
+                    </RemoveItem>
+                    <div style={{ textAlign: "center" }}><img style={{maxWidth: "100px"}} src={coupleImg} alt="JewelCocktail"/></div>
+                    <WrapProductDescription>
+                      <div style={{ textAlign: "left" }}>
+                        <span style={{ color: "#727070", marginBottom: "10px", display: "inline-block" }}>
+                          парные браслеты
+                        </span>
+                        <div>
+                          <div style={{ textAlign: "left", textTransform: "inherit" }}>
+                            {item.stone === "1co" && <>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "Огонь и Роза": <img src={oneStoneCouple} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}>Два камня в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                            </>}
+                            {item.stone === "2co" && <>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "Жемчуг и Оникс": <img src={twoStoneCouple} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}>Два камня в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                            </>}
+                            {item.stone === "3co" && <>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "Жёлтый органик": <img src={threeStoneCouple} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}>Два камня в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                            </>}
+                          </div>
+                        </div>
+                        <WrapCardPrice>
+                          <div className="price-card">Цена: <span className="card-line-old"> 14 140 ₽</span> <span className="price-card-new">= {currentPrice} ₽ </span></div>
                           <img src={sales} alt="JewelCocktail" className="card-icon-sale" />
                         </WrapCardPrice>
                       </div>

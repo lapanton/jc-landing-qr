@@ -132,6 +132,16 @@ export const OrderForm = (props) => {
                 :
                 null
               }
+              {item.product === "couple" ?
+                <div key={index}>
+                  <input type="hidden" name="product_couple" value="парные браслеты" />
+                  {item.stone === "1co" && <><input type="hidden" name="couple_stone" value="Огонь и Роза" /></>}
+                  {item.stone === "2co" && <><input type="hidden" name="couple_stone" value="Жемчуг и Оникс" /></>}
+                  {item.stone === "3co" && <><input type="hidden" name="couple_stone" value="Жёлтый органик" /></>}
+                </div>
+                :
+                null
+              }
             </>
           )
         })}

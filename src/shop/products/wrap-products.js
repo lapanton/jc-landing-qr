@@ -6,6 +6,7 @@ import { Alcor } from "./alcor";
 import { Gidor } from "./gidor";
 import { Dors } from "./dors";
 import { Popup } from "./popup";
+import { CoupleBracelets } from "./coupleBracelets";
 
 export const WrapProducts = (props) => {
   const dataFromStorage = localStorage.getItem('card-data');
@@ -26,7 +27,7 @@ export const WrapProducts = (props) => {
         <Gidor setCard={setCard} setShowPopup={setShowPopup} card={card} />
         <Pendants setCard={setCard} setShowPopup={setShowPopup} card={card} />
         <Rings setCard={setCard} setShowPopup={setShowPopup} card={card} />
-
+        <CoupleBracelets setCard={setCard} setShowPopup={setShowPopup} card={card} />
 
 
 
