@@ -55,6 +55,7 @@ export const Inner = styled.div`
   }
   @media screen and (max-width: 768px) {
     padding: 0.625rem 2rem;
+    margin: 0;
   }
   &.sticky {
     position: fixed;
@@ -428,6 +429,10 @@ export const WrapMenu = styled.div`
     font-weight: lighter;
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   }
+  div a {
+    color: #fff;
+    text-decoration: none;
+  }
   .closeIcon {
     position: absolute;
     top: 0;
@@ -441,7 +446,7 @@ export const WrapMenu = styled.div`
 export const WrpaMobSocial = styled.div`
   border-bottom: none !important;
   display: flex !important;
-  margin: 30px 0 0 0 !important;
+  margin: 0px 0 0 0 !important;
   justify-content: space-around !important;
   border-bottom: none !important;
   div {

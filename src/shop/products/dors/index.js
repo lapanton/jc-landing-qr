@@ -286,7 +286,7 @@ export const Dors = (props) => {
               </WrapperZoom>,
               document.body
             )}
-          }
+
           <Slider {...settingsTwo} asNavFor={nav1} ref={(slider2) => setNav2(slider2)} swipeToSlide={true} focusOnSelect={true}>
           <div>
             <img src={one} alt="JewelCocktail"/>
