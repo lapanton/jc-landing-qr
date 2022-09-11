@@ -48,10 +48,10 @@ export const Inner = styled.div`
     }
   }
   @media screen and (max-width: 1200px) {
-    padding: 2.625rem 4rem;
+    padding: 0;
   }
   @media screen and (max-width: 968px) {
-    padding: 2.625rem 2rem;
+    padding: 0;
   }
   @media screen and (max-width: 768px) {
     padding: 0.625rem 2rem;
@@ -260,6 +260,11 @@ export const CounterCart = styled.div`
 `;
 
 export const WrapTitle = styled.div`
+  .glass-title {
+    @media screen and (max-width: 1200px) {
+      font-size: 3rem;
+    }
+  }
   margin-top: 0.6rem;
   position: relative;
   z-index: 99999999;

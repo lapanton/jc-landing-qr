@@ -167,7 +167,7 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
         </Inner>
         {location.pathname === "/glass" && (
           <WrapTitle className={show ? 'removeZindex' : 'addit'}>
-            <h1>Jewel Cocktail</h1>
+            <h1 className="glass-title">Jewel Cocktail</h1>
           </WrapTitle>
         )}
 

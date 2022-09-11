@@ -1,7 +1,7 @@
 import styled, {keyframes} from 'styled-components';
 
 export const Wrapper = styled.div`
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 900px) {
     margin-top: 70px;
     .slick-slider {
       max-width: 450px;
@@ -25,8 +25,22 @@ export const Wrapper = styled.div`
 
   }
 
-  .alcor-slider-two {
-    @media screen and (max-width: 768px) {
+  .glass-slider-two{
+    @media screen and (min-width: 900px) {
+      position: absolute;
+      top: 92px;
+      left: -7%;
+      transform: rotate(90deg);
+      max-width: 250px;
+    }
+    @media screen and (min-width: 1200px) {
+      top: 91px;
+      left: -3%;
+    }
+    @media screen and (min-width: 1200px) {
+      
+    }
+    @media screen and (max-width: 900px) {
       margin-top: 10px;
       .slick-slide {
         border-radius: 10px;
@@ -58,7 +72,7 @@ export const Wrapper = styled.div`
       margin: 80px auto 40px auto;
       max-height: inherit;
       cursor: default;
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 900px) {
         width: 100%;
         margin: 80px auto;
       }
@@ -83,7 +97,7 @@ export const Wrapper = styled.div`
     background: transparent;
     &.whiteBg {
       img {
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 900px) {
           background: rgba(0, 0, 0, 0.2);
           opacity: 0.8;
         }
@@ -153,16 +167,19 @@ export const Wrapper = styled.div`
     line-height: 26px;
     text-align: center;
     letter-spacing: 0.27em;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 1200px) {
+      right: 15.5%;
+    }
+    @media screen and (min-width: 900px) {
       position: absolute;
       top: 70px;
-      right: 15.5%;
+      right: 14.5%;
     }
   }
 `;
 
 export const Inner = styled.div`
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 900px) {
     position: relative;
     margin-top: 70px;
     .slider-wrap {
@@ -176,7 +193,7 @@ export const Inner = styled.div`
   }
 `;
 export const ChooseStone = styled.div`
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     margin: 0 15px;
   }
   p {
@@ -189,7 +206,11 @@ export const ChooseStone = styled.div`
     max-width: 620px;
     text-align: center;
     margin: 10px auto;
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1200px) {
+      font-size: 16px;
+      line-height: 23px;
+    }
+    @media screen and (max-width: 900px) {
       font-size: 16px;
       line-height: 23px;
     }
@@ -204,14 +225,14 @@ export const ChooseStone = styled.div`
     color: rgba(255, 255, 255, 0.76);
     white-space: break-spaces;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 900px) {
     width: 49.9%;
     display: inline-block;
     position: absolute;
     top: 140px;
  
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 900px) {
     .not {
       width: 64px;
       height: 64px;
@@ -240,14 +261,14 @@ export const WrapStone = styled.div`
     transform: scale(1.3);
   }
   img {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 900px) {
       width: 44px;
     }
     &:hover {
       cursor: pointer;
     }
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 900px) {
     max-width: 426px;
     margin: 20px auto;
   }
@@ -282,7 +303,7 @@ export const SizeButton = styled.span`
 export const PriceBuySection = styled.div`
   text-align: center;
   position: relative;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     margin: 0 15px;
   }
   
@@ -335,19 +356,22 @@ export const PriceBuySection = styled.div`
       cursor: pointer
     }
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1200px) {
+    right: 14%;
+  }
+  @media screen and (min-width: 900px) {
     max-width: 390px;
     position: absolute;
     top: 327px;
-    right: 14%;
+    right: 12%;
   }
 `;
 
 export const DescriptionProduct = styled.div`
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 900px) {
     padding: 20px 100px 20px 100px;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     margin-left: 15px;
     margin-right: 15px;
   }
@@ -387,7 +411,7 @@ export const DescriptionButton = styled.div`
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 900px) {
       display: none;
     }
     img {
@@ -395,7 +419,7 @@ export const DescriptionButton = styled.div`
       border-radius: 50%;
     }
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 900px) {
     max-width: 50%;
     margin: 0;
   }
@@ -421,7 +445,7 @@ export const DescriptionView = styled.div`
   .bottomButton {
     text-align: center;
     margin: 20px 0 40px 0;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 900px) {
       display: none;
     }
   }
@@ -434,7 +458,7 @@ export const DescriptionView = styled.div`
     line-height: 15px;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 900px) {
     max-width: 50%;
     margin: 0;
     position: relative;
@@ -452,7 +476,7 @@ export const ToRightMoveDesktop = styled.span`
   img {
     transform: translateX(-25px);
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 900px) {
     position: absolute;
     left: 108%;
     z-index: 999999999999;
@@ -504,7 +528,7 @@ export const WrapPrices = styled.div`
     left: 7px;
     top: 44px;
     max-width: 62px;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 900px) {
       left: -14px;
     }
   }
@@ -541,7 +565,7 @@ export const WrapZoomSlider = styled.div`
     display: block;
     width: 100%;
     height: auto;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 900px) {
       max-width: 70%;
     }
     &.recom-page-zoom {
@@ -549,7 +573,7 @@ export const WrapZoomSlider = styled.div`
       margin: 80px auto 40px auto;
       max-height: inherit;
       cursor: default;
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 900px) {
         width: 100%;
         margin: 80px auto;
       }
@@ -574,7 +598,7 @@ export const WrapZoomSlider = styled.div`
     background: transparent;
     &.whiteBg {
       img {
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 900px) {
           background: rgba(0, 0, 0, 0.2);
           opacity: 0.8;
         }

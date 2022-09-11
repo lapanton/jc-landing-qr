@@ -76,7 +76,7 @@ export const Glass = (props) => {
   };
 
   const settingsTwo = {
-    className: "alcor-slider-two",
+    className: "glass-slider-two",
     dots: false,
     infinite: true,
     speed: 500,
@@ -88,11 +88,7 @@ export const Glass = (props) => {
     arrows: false,
     responsive: [
       {
-        breakpoint: 1300,
-        settings: { slidesToShow: 3 },
-      },
-      {
-        breakpoint: 968,
+        breakpoint: 900,
         settings: { slidesToShow: 2 },
       },
       {
@@ -211,10 +207,10 @@ export const Glass = (props) => {
     <Wrapper>
       <Inner>
         <div className="slider-wrap">
-          <h4>Бокалы-декантор JC</h4>
+          <h4>Бокал-декантор JC</h4>
           <Slider {...settings} asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
             <div>
-              <video width="100%" height="100%" autoPlay loop muted playsInline>
+              <video width="100%" height="100%" autoPlay loop muted playsInline style={{maxHeight: "500px"}}>
                 <source src={vid} type="video/mp4"/>
               </video>
             </div>
@@ -272,7 +268,7 @@ export const Glass = (props) => {
               </WrapperZoom>,
               document.body
             )}
-          }
+
           <Slider {...settingsTwo} asNavFor={nav1} ref={(slider2) => setNav2(slider2)} swipeToSlide={true} focusOnSelect={true}>
             <div>
               <img src={one} alt="JewelCocktail"/>
@@ -304,7 +300,7 @@ export const Glass = (props) => {
         <PriceBuySection>
           <WrapPrices>
             <p className="price">6 400 <span>₽</span></p>
-            <p className="old-price">14 400 ₽</p>
+            <p className="old-price">9 150 ₽</p>
             <img src={sale} alt="JewelCocktail" className="sale-icon"/>
           </WrapPrices>
           <div className="buy-button" onClick={() => buyGlass()}>Купить</div>
@@ -316,11 +312,7 @@ export const Glass = (props) => {
         <DescriptionProduct>
           <DescriptionButton>
             <span>Описание</span>
-            <div onClick={() => setShowDescr(!showDescr)} className={showDescr ? 'hide' : 'show'}>
-              <img src={arDown} alt="JewelCocktail"/>
-            </div>
           </DescriptionButton>
-          {showDescr && (
             <DescriptionView>
               <p className="slave-text">Изящная минималистичная пара бокалов-декантер на длинной ножке для красных и белых вин.
                 Уникальная форма позволяет насытить вино кислородом для раскрытия аромата напитка.
@@ -329,21 +321,16 @@ export const Glass = (props) => {
                 Характеристики:
               </p>
               <p className="slave-text">
-                Комплектация: Бокалы 2 шт., подарочная упаковка
-                Высота: 280 мм
-                Объем: 636 мл
-                Материла: закалённое Стекло
+                Комплектация: Бокал 2 шт., подарочная упаковка<br/>
+                Высота: 280 мм<br/>
+                Объем: 636 мл<br/>
+                Материл: закалённое Стекло<br/>
                 Производство: Россия
               </p>
               <ToRightMoveDesktop>
                 <img src={schema} alt="JewelCocktail" style={{maxWidth: "200px"}}/>
               </ToRightMoveDesktop>
-
-              <div onClick={() => setShowDescr(!showDescr)} className="bottomButton">
-                <img src={arUp} alt="JewelCocktail"/>
-              </div>
             </DescriptionView>
-          )}
         </DescriptionProduct>
       </Inner>
       <Popup showPopup={showPopup} setShowPopup={setShowPopup} card={card} setCard={setCard} />
