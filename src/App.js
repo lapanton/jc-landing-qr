@@ -34,6 +34,7 @@ import { ShowHideSection } from "./shop/showHideSection/iindex";
 import { WrapProducts } from "./shop/products/wrap-products";
 // import {Preloader} from "./shop/preloader";
 import ScrollArrow from "./shop/arrowToTop";
+import { Glass } from "./shop/products/glass";
 // /shop
 
 const GlobalStyle = createGlobalStyle`
@@ -56,7 +57,17 @@ export const App = (props) => {
   // http://localhost:3000/qr/PU7H9Gx3ly
   // http://localhost:3000/letter/piJ2N1KiBC
 
+  const dataFromStorage = localStorage.getItem('card-data');
+  const [card, setCard] = useState((dataFromStorage?.length > 0) ? JSON.parse(dataFromStorage) : []);
   const [showPopup, setShowPopup] = useState(null);
+
+  useEffect(() => {
+    if (dataFromStorage === null) localStorage.setItem("card-data", JSON.stringify(card));
+    if (card?.length > 0) {
+      localStorage.setItem("card-data", JSON.stringify(card));
+    }
+  }, [card, showPopup, dataFromStorage]);
+
   const isMobile = window.innerWidth <= 768;
   useEffect(() => {
     if (window.location.pathname === "/about") {
@@ -149,8 +160,18 @@ export const App = (props) => {
               <Second/>
               <Info />
               <ShowHideSection />
-              <WrapProducts showPopup={showPopup} setShowPopup={setShowPopup} />
+              <WrapProducts showPopup={showPopup} setShowPopup={setShowPopup} card={card} setCard={setCard} />
               <SelfProductShop />
+              <OsobennostiTehnologiiShop />
+              <ContactsShop />
+              <ScrollArrow />
+            </>
+          } exact />
+
+          <Route path="/glass" element={
+            <>
+              <MainShop langProps={props} setShowPopup={setShowPopup} showPopup={showPopup} />
+              <Glass card={card} setCard={setCard} setShowPopup={setShowPopup} showPopup={showPopup} />
               <OsobennostiTehnologiiShop />
               <ContactsShop />
               <ScrollArrow />

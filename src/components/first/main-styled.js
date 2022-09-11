@@ -32,7 +32,7 @@ export const Inner = styled.div`
   position: relative;
   z-index: 999999999;
   //max-width: 106rem;
-  padding: 2.625rem 10.125rem;
+  margin: 2.625rem 10.125rem;
   display: flex;
   justify-content: space-between;
   img {
@@ -56,7 +56,7 @@ export const Inner = styled.div`
     top: 0;
     width: 100%;
     background: #2e2c2c;
-    padding: 0;
+    margin: 0;
     display: flex;
     justify-content: space-around;
     img {
@@ -74,7 +74,8 @@ export const WrapList = styled.div`
   justify-content: space-between;
   align-items: center;
   div{
-    margin-right: 4.3rem;
+    white-space: nowrap;
+    margin-right: 3rem;
     font-family: 'Inter', sans-serif;
     color: #fff;
     font-weight: 300;
@@ -207,6 +208,7 @@ export const WrapTitle = styled.div`
     z-index: -1;
   }
   h1 {
+    cursor: default;
     font-family: 'organetto';
     font-weight: 200;
     font-size: 4rem;
@@ -389,7 +391,7 @@ export const WrapMenu = styled.div`
 export const WrpaMobSocial = styled.div`
   border-bottom: none !important;
   display: flex !important;
-  margin: 160px 0 0 0 !important;
+  margin: 30px 0 0 0 !important;
   justify-content: space-around !important;
   border-bottom: none !important;
   div {
@@ -426,5 +428,12 @@ export const WrapLang = styled.div`
       border: 1px solid #fff;
       border-radius: 50%;
     }
+  }
+`;
+
+export const WrapDesktopLinks = styled.span`
+  white-space: nowrap;
+  a:first-child {
+    margin-bottom: 10px;
   }
 `;

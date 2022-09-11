@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Rings } from "./rings";
 import { WrapperProducts } from "./wrap-products-styled";
 import { Pendants } from "./pendant";
@@ -9,17 +9,7 @@ import { Popup } from "./popup";
 import { CoupleBracelets } from "./coupleBracelets";
 
 export const WrapProducts = (props) => {
-  const dataFromStorage = localStorage.getItem('card-data');
-  const [card, setCard] = useState((dataFromStorage?.length > 0) ? JSON.parse(dataFromStorage) : []);
-  const {showPopup, setShowPopup} = props
-
-  useEffect(() => {
-    if (dataFromStorage === null) localStorage.setItem("card-data", JSON.stringify(card));
-    if (card?.length > 0) {
-      localStorage.setItem("card-data", JSON.stringify(card));
-    }
-  }, [card, showPopup, dataFromStorage]);
-
+  const {showPopup, setShowPopup, card, setCard} = props
   return (
       <WrapperProducts className={showPopup ? "showPopup": "noPopup"}>
         <Dors setCard={setCard} setShowPopup={setShowPopup} card={card} />
@@ -31,7 +21,7 @@ export const WrapProducts = (props) => {
 
 
 
-        <Popup showPopup={showPopup} setShowPopup={setShowPopup} card={card} setCard={setCard} />,
+        <Popup showPopup={showPopup} setShowPopup={setShowPopup} card={card} setCard={setCard} />
       </WrapperProducts>
   );
 }

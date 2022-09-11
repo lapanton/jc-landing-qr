@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { Link } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
-import { ConttainerWrap, Wrapper, Inner, WrapSocial, WrapPhone, WrapList, WrapTitle, WrapMobile, WrapMenu, WrpaMobSocial, WrapLang } from './main-styled'; // WrapLoadMore, InnerLoadMore,
+import { ConttainerWrap, Wrapper, Inner, WrapSocial, WrapPhone, WrapList, WrapTitle, WrapMobile, WrapMenu, WrpaMobSocial, WrapLang, WrapDesktopLinks } from './main-styled'; // WrapLoadMore, InnerLoadMore,
 import logo from "./logo.png";
 // import arrowDown from "./arrow-down.svg";
 // import rotateText from "./rotate-text.svg";
@@ -49,7 +49,10 @@ export const Main = ({langProps}) => {
           </a>
           <WrapList>
             <div onClick={() => window.scrollTo({top: 4000, left: 0, behavior: 'smooth'})}><FormattedMessage id="message.aboutUs" /></div>
-            <Link to="/shop" className="link-to-shop-desktop"><FormattedMessage id="message.shop" /></Link>
+            <WrapDesktopLinks>
+              <Link to="/shop" className="link-to-shop-desktop"><FormattedMessage id="message.shop" /></Link>
+              <Link to="/glass" className="link-to-shop-desktop"><FormattedMessage id="message.glass" /></Link>
+            </WrapDesktopLinks>
             <div onClick={() => window.scrollTo({top: 3300, left: 0, behavior: 'smooth'})}><FormattedMessage id="message.gallery" /></div>
             <div onClick={() => window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })}><FormattedMessage id="message.contacts" /></div>
           </WrapList>
@@ -93,6 +96,7 @@ export const Main = ({langProps}) => {
                   </div>
                   <div onClick={() => window.scrollTo({top: 4800, left: 0, behavior: 'smooth'})}><FormattedMessage id="message.aboutUs" /></div>
                   <Link to="/shop" className="link-to-shop"><FormattedMessage id="message.shop" /></Link>
+                  <Link to="/glass" className="link-to-shop"><FormattedMessage id="message.glass" /></Link>
                   <div onClick={() => window.scrollTo({top: 4225, left: 0, behavior: 'smooth'})}><FormattedMessage id="message.gallery" /></div>
                   <div onClick={() => window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })}><FormattedMessage id="message.contacts" /></div>
                   <WrpaMobSocial>

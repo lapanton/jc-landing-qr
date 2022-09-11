@@ -37,7 +37,7 @@ export const Inner = styled.div`
   position: relative;
   z-index: 999999999;
   //max-width: 106rem;
-  padding: 2.625rem 10.125rem;
+  margin: 2.625rem 10.125rem;
   display: flex;
   justify-content: space-between;
   img {
@@ -61,7 +61,7 @@ export const Inner = styled.div`
     top: 0;
     width: 100%;
     background: #2e2c2c;
-    padding: 0;
+    margin: 0;
     display: flex;
     justify-content: space-around;
     img {
@@ -79,7 +79,7 @@ export const WrapList = styled.div`
   justify-content: space-between;
   align-items: center;
   div{
-    margin-right: 4.3rem;
+    margin-right: 3.3rem;
     font-family: 'Inter', sans-serif;
     color: #fff;
     font-weight: 300;
@@ -441,7 +441,7 @@ export const WrapMenu = styled.div`
 export const WrpaMobSocial = styled.div`
   border-bottom: none !important;
   display: flex !important;
-  margin: 160px 0 0 0 !important;
+  margin: 30px 0 0 0 !important;
   justify-content: space-around !important;
   border-bottom: none !important;
   div {

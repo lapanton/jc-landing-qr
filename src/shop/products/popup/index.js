@@ -23,6 +23,7 @@ import coupleImg from '../coupleBracelets/img/1.png';
 import oneStoneCouple from '../coupleBracelets/stone/1.png';
 import twoStoneCouple from '../coupleBracelets/stone/2.png';
 import threeStoneCouple from '../coupleBracelets/stone/3.png';
+import glass from '../glass/img/1.png';
 
 import giftIcon from './gift_icon.png';
 
@@ -341,6 +342,33 @@ export const Popup = (props) => {
                         </div>
                         <WrapCardPrice>
                           <div className="price-card">Цена: <span className="card-line-old"> 14 140 ₽</span> <span className="price-card-new">= {currentPrice} ₽ </span></div>
+                          <img src={sales} alt="JewelCocktail" className="card-icon-sale" />
+                        </WrapCardPrice>
+                      </div>
+
+                    </WrapProductDescription>
+                    <br/>
+                    <hr/>
+                    <br/>
+                  </>
+                  :
+                  null
+                }
+                {item.product === "glass" ?
+                  <>
+                    <RemoveItem onClick={() => removeItem(item)}>
+                      <div style={{ textAlign: "right" }}>
+                        <img src={close} alt="JewelCocktail" style={{ maxWidth: "18px", opacity: "0.7" }}/>
+                      </div>
+                    </RemoveItem>
+                    <div style={{ textAlign: "center" }}><img style={{maxWidth: "100px"}} src={glass} alt="JewelCocktail"/></div>
+                    <WrapProductDescription>
+                      <div style={{ textAlign: "left" }}>
+                        <span style={{ color: "#727070", marginBottom: "10px", display: "inline-block" }}>
+                          Бокалы-декантор JC
+                        </span>
+                        <WrapCardPrice>
+                          <div className="price-card">Цена: <span className="card-line-old"> 14 400 ₽</span> <span className="price-card-new">= {currentPrice} ₽ </span></div>
                           <img src={sales} alt="JewelCocktail" className="card-icon-sale" />
                         </WrapCardPrice>
                       </div>

@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import {Link, useLocation} from "react-router-dom";
 import { FormattedMessage } from "react-intl";
 import {
   ConttainerWrap,
@@ -75,7 +76,8 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
     }
   }, []);
   const isMobile = width <= 768;
-
+  const location = useLocation();
+  // console.log('location.pathname', location.pathname === "/glass");
   return (
     <ConttainerWrap className={sticky ? 'sticky' : ' '} style={!isMobile ? {height: "15rem"} : {}}>
       <Wrapper>
@@ -84,6 +86,8 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
             <img src={logo} alt="JewelCocktail" />
           </a>
           <WrapList>
+            {location.pathname === "/glass" && <div><Link to="/shop" className="link-to-shop-desktop"><FormattedMessage id="message.shop" /></Link></div>}
+            {location.pathname === "/shop" && <div><Link to="/glass" className="link-to-shop-desktop"><FormattedMessage id="message.glass" /></Link></div>}
             <div><a href="https://jewelcocktail.com/about" target="_blank" rel="noreferrer"><FormattedMessage id="message.aboutUs" /></a></div>
             <div onClick={() => window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })}><FormattedMessage id="message.contacts" /></div>
           </WrapList>
@@ -159,7 +163,14 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
             </WrapCardIconMobile>
           </WrapMobile>
         </Inner>
-        {isMobile && (
+        {location.pathname === "/glass" && (
+          <WrapTitle className={show ? 'removeZindex' : 'addit'}>
+            <h1>Jewel Cocktail</h1>
+          </WrapTitle>
+        )}
+
+        }
+        {isMobile && location.pathname !== "/glass" && (
           <WrapTitle className={show ? 'removeZindex' : 'addit'}>
             {sticky && window.innerWidth >= '768' ? <div style={{ marginTop: "180px"}}/> : <span/>}
             <h1>Jewel Cocktail</h1>
