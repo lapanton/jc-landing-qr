@@ -56,6 +56,7 @@ export const Inner = styled.div`
   @media screen and (max-width: 768px) {
     padding: 0.625rem 2rem;
     margin: 0;
+    z-index: 99999999999;
   }
   &.sticky {
     position: fixed;
