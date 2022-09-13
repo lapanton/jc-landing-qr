@@ -473,6 +473,9 @@ export const ToRightMoveDesktop = styled.span`
   text-align: center;
   display: inherit;
   margin: 30px 0 20px;
+  @media screen and (max-width: 900px) {
+    margin: 60px 0 20px;
+  }
   img {
     transform: translateX(-25px);
   }

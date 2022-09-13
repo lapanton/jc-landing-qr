@@ -108,7 +108,8 @@ export const App = (props) => {
                 <SelfProduct/>
                 <OsobennostiTehnologii/>
                 <ImgBottom/>
-                <Contacts/>
+                {/*<Contacts/>*/}
+                <ContactsShop />
               </div>
             } exact/>
             <Route path="/qr/:id"
@@ -172,6 +173,7 @@ export const App = (props) => {
             <>
               <MainShop langProps={props} setShowPopup={setShowPopup} showPopup={showPopup} />
               <Glass card={card} setCard={setCard} setShowPopup={setShowPopup} showPopup={showPopup} />
+              <OsobennostiTehnologiiShop />
               <ContactsShop />
               <ScrollArrow />
             </>

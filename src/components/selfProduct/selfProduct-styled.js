@@ -31,14 +31,41 @@ export const Wrapper = styled.div`
     z-index: 99998;
     position: relative;
   }
-  img {
-    max-width: 30rem;
-    max-height: 38rem;
-    padding: 80px 80px 80px 178px;
+  .logoDesktop {
+    max-width: 100%;
+    max-height: 30rem;
+    padding: 80px 80px 80px 20px;
     z-index: 99998;
     position: relative;
+    @media screen and (max-width: 1390px) {
+      max-height: 20rem;
+      padding-top: 130px;
+    }
+    @media screen and (max-width: 1150px) {
+      padding-top: 90px;
+    }
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
-  @media screen and (max-width: 1200px) {
+  .magazin {
+    max-width: 20rem;
+    max-height: 38rem;
+    padding: 80px 0 80px 178px;
+    z-index: 99998;
+    position: relative;
+    @media screen and (max-width: 1390px) {
+      padding-left: 20px;
+    }
+    @media screen and (max-width: 1150px) {
+      max-width: 100%;
+      max-height: 22rem;
+    }
+    @media screen and (max-width: 768px) { 
+      padding-left: 0;
+    }
+  }
+  @media screen and (max-width: 1390px) {
     img {
       max-width: 22rem;
       padding: 30px;
@@ -107,8 +134,14 @@ export const WrapText = styled.div`
     z-index: 99998;
     position: relative;
   }
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1390px) {
     margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  @media screen and (max-width: 1150px) {
+    margin-top: 0;
   }
   @media screen and (max-width: 768px) {
     padding-left: 0;

@@ -35,6 +35,7 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
   const { locale, onLocaleChange} = langProps;
 
   useEffect(() => {
+    window.scrollTo({top: 0});
     window.addEventListener('scroll', isSticky);
     return () => {
       window.removeEventListener('scroll', isSticky);

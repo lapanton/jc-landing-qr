@@ -307,7 +307,7 @@ export const CoupleBracelets = (props) => {
           </WrapStone>
           <p className="description">
             { coupleStone === '1co' && "огонь и роза - символ страсти, любви и красоты"}
-            { coupleStone === '2co' && "жемчуг и оникс - символ благополучия, энергии и созидания"}
+            { coupleStone === '2co' && "белый оникс - символ благополучия, энергии и созидания"}
             { coupleStone === '3co' && "жёлтый органик - символ тепла, солнца и радости"}
           </p>
         </ChooseStone>

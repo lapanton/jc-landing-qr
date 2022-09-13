@@ -2,6 +2,12 @@ import styled from 'styled-components';
 
 export const WrapContainer = styled.div`
   height: 43rem;
+  &.onGlassPage {
+    height: 22rem;
+    @media screen and (max-width: 768px) {
+      height: 52rem;
+    }
+  }
   @media screen and (max-width: 768px) {
     height: 61rem;
   }

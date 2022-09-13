@@ -49,7 +49,7 @@ export const Inner = styled.div`
     padding: 2.625rem 2rem;
   }
   @media screen and (max-width: 768px) {
-    padding: 0.625rem 2rem;
+    padding: 0;
     margin: 0;
   }
   &.sticky {

@@ -331,7 +331,7 @@ export const Popup = (props) => {
                               <div style={{fontSize: "14px"}}>Два камня в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                             {item.stone === "2co" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "Жемчуг и Оникс": <img src={twoStoneCouple} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "Белый оникс": <img src={twoStoneCouple} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
                               <div style={{fontSize: "14px"}}>Два камня в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                             {item.stone === "3co" && <>

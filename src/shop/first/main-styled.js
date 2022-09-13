@@ -264,6 +264,9 @@ export const WrapTitle = styled.div`
     @media screen and (max-width: 1200px) {
       font-size: 3rem;
     }
+    @media screen and (max-width: 1200px) {
+      font-size: 2rem;
+    }
   }
   margin-top: 0.6rem;
   position: relative;

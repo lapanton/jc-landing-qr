@@ -90,6 +90,7 @@ export const InnerOne = styled.div`
     }
     p {
       line-height: 1.2rem;
+      margin: 25px 0;
     }
     &:after {
       display: none;
@@ -128,6 +129,7 @@ export const InnerTwo = styled.div`
     }
     p {
       line-height: 1.2rem;
+      margin: 25px 0;
     }
     &:after {
       display: none;
@@ -154,6 +156,7 @@ export const InnerThree = styled.div`
     }
     p {
       line-height: 1.2rem;
+      margin: 25px 0;
     }
     &:after {
       display: none;
