@@ -145,9 +145,9 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
                       <rect x="15.9999" y="14" width="24" height="3" rx="1" transform="rotate(45 15.9999 14)" fill="#ffffff"/>
                     </svg>
                   </div>
-                  {location.pathname === "/glass" && <div><Link to="/shop" className="link-to-shop-desktop"><FormattedMessage id="message.shop" /></Link></div>}
-                  {location.pathname === "/shop" && <div><Link to="/glass" className="link-to-shop-desktop"><FormattedMessage id="message.glass" /></Link></div>}
-                  <div onClick={() => window.scrollTo({top: 6145, left: 0, behavior: 'smooth'})}><FormattedMessage id="message.aboutUs" /></div>
+                  {location.pathname === "/glass" && <Link to="/shop" className="link-to-shop-desktop"><div><FormattedMessage id="message.shop" /></div></Link>}
+                  {location.pathname === "/shop" && <Link to="/glass" className="link-to-shop-desktop"><div><FormattedMessage id="message.glass" /></div></Link>}
+                  <Link to="/#aboutus"><div><FormattedMessage id="message.aboutUs" /></div></Link>
                   <div onClick={() => window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })}><FormattedMessage id="message.contacts" /></div>
                   <WrpaMobSocial>
                     <a href="https://www.instagram.com/jewelcocktail_official/" target="_blank" rel="noopener noreferrer" className="insta-social">

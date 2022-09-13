@@ -49,6 +49,7 @@ const GlobalStyle = createGlobalStyle`
     button:focus {outline:0;}
   }
   #root {
+    background: #000;
     @media screen and (max-width: 768px) {
       overflow: hidden;
     }

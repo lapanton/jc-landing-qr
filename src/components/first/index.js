@@ -102,7 +102,7 @@ export const Main = ({langProps}) => {
                       <rect x="15.9999" y="14" width="24" height="3" rx="1" transform="rotate(45 15.9999 14)" fill="#ffffff"/>
                     </svg>
                   </div>
-                  <div onClick={() => window.scrollTo({top: 4800, left: 0, behavior: 'smooth'})}><FormattedMessage id="message.aboutUs" /></div>
+                  <div onClick={() => window.scrollTo({top: 4300, left: 0, behavior: 'smooth'})}><FormattedMessage id="message.aboutUs" /></div>
                   <Link to="/shop" className="link-to-shop"><FormattedMessage id="message.shop" /></Link>
                   <Link to="/glass" className="link-to-shop"><FormattedMessage id="message.glass" /></Link>
                   <div onClick={() => window.scrollTo({top: 4225, left: 0, behavior: 'smooth'})}><FormattedMessage id="message.gallery" /></div>

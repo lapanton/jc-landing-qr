@@ -437,7 +437,7 @@ export const WrapMenu = styled.div`
     font-weight: lighter;
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   }
-  div a {
+  a div, a {
     color: #fff;
     text-decoration: none;
   }
