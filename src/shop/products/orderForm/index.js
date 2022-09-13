@@ -144,7 +144,7 @@ export const OrderForm = (props) => {
               }
               {item.product === "glass" ?
                 <div key={index}>
-                  <input type="hidden" name="product_glass" value="Бокал-декантор JC (2 шт.)" />
+                  <input type="hidden" name="product_glass" value="Бокал-декантер JC (2 шт.)" />
                 </div>
                 :
                 null

@@ -207,7 +207,7 @@ export const Glass = (props) => {
     <Wrapper>
       <Inner>
         <div className="slider-wrap">
-          <h4>Бокал-декантор JC (2 шт.)</h4>
+          <h4>Бокал-декантер JC (2 шт.)</h4>
           <Slider {...settings} asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
             <div>
               <video width="100%" height="100%" autoPlay loop muted playsInline style={{maxHeight: "500px"}}>

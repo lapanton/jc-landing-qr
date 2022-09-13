@@ -365,7 +365,7 @@ export const Popup = (props) => {
                     <WrapProductDescription>
                       <div style={{ textAlign: "left" }}>
                         <span style={{ color: "#727070", marginBottom: "10px", display: "inline-block" }}>
-                          Бокал-декантор JC
+                          Бокал-декантер JC
                         </span>
                         <WrapCardPrice>
                           <div className="price-card">Цена: <span className="card-line-old"> 9 150 ₽</span> <span className="price-card-new">= {currentPrice} ₽ </span></div>
