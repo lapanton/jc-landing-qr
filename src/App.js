@@ -37,6 +37,8 @@ import ScrollArrow from "./shop/arrowToTop";
 import { Glass } from "./shop/products/glass";
 // /shop
 
+import ScrollToTop from "./ScrollToTop";
+
 const GlobalStyle = createGlobalStyle`
   * {
     padding: 0;
@@ -92,7 +94,7 @@ export const App = (props) => {
 
   return (
     <Router>
-
+        <ScrollToTop />
         <Routes>
             <Route path="/" element={
               <div>

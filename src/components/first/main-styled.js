@@ -49,8 +49,11 @@ export const Inner = styled.div`
     padding: 2.625rem 2rem;
   }
   @media screen and (max-width: 768px) {
-    padding: 0;
+    padding: 15px 15px;
     margin: 0;
+    &.sticky {
+      padding: 0;
+    }
   }
   &.sticky {
     position: fixed;
@@ -375,6 +378,10 @@ export const WrapMenu = styled.div`
     border-bottom: none;
     padding: 0;
     margin: 0;
+    @media screen and (max-width: 768px) {
+      top: 20px;
+      right: 20px;
+    }
   }
   .link-to-shop {
     color: #fff;

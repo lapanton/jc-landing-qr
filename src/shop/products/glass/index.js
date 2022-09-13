@@ -7,6 +7,8 @@ import three from './img/3.png';
 import four from './img/4.png';
 import five from './img/5.png';
 import six from './img/6.png';
+import seven from './img/7.png';
+import vidprev from './img/vidprev.png';
 import vid from './img/1.MOV';
 
 import schema from './img/schema.png';
@@ -232,6 +234,9 @@ export const Glass = (props) => {
             <div>
               <img src={six} alt="JewelCocktail" onClick={() => openZoom(6)}/>
             </div>
+            <div>
+              <img src={seven} alt="JewelCocktail" onClick={() => openZoom(7)}/>
+            </div>
           </Slider>
           {
             openZoomImage &&
@@ -263,6 +268,9 @@ export const Glass = (props) => {
                     <div>
                       <img src={six} alt="JewelCocktail" />
                     </div>
+                    <div>
+                      <img src={seven} alt="JewelCocktail" />
+                    </div>
                   </Slider>
                 </WrapZoomSlider>
               </WrapperZoom>,
@@ -270,6 +278,9 @@ export const Glass = (props) => {
             )}
 
           <Slider {...settingsTwo} asNavFor={nav1} ref={(slider2) => setNav2(slider2)} swipeToSlide={true} focusOnSelect={true}>
+            <div>
+              <img src={vidprev} alt="JewelCocktail"/>
+            </div>
             <div>
               <img src={one} alt="JewelCocktail"/>
             </div>
@@ -287,6 +298,9 @@ export const Glass = (props) => {
             </div>
             <div>
               <img src={six} alt="JewelCocktail"/>
+            </div>
+            <div>
+              <img src={seven} alt="JewelCocktail"/>
             </div>
           </Slider>
         </div>

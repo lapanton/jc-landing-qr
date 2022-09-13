@@ -448,6 +448,10 @@ export const WrapMenu = styled.div`
     border-bottom: none;
     padding: 0;
     margin: 0;
+    @media screen and (max-width: 768px) {
+      top: 20px;
+      right: 20px;
+    }
   }
 `;
 

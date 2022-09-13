@@ -40,6 +40,14 @@ export const Main = ({langProps}) => {
   const handleMenu = () => {
     setShow(!show);
   };
+
+  useEffect(() => {
+    if (show) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [show]);
   return (
     <ConttainerWrap  className={sticky ? 'sticky' : ' '}>
       <Wrapper>
