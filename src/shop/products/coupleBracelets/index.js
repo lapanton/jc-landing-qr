@@ -7,6 +7,7 @@ import three from './img/3.png';
 import four from './img/4.png';
 import five from './img/5.png';
 import six from './img/6.png';
+import seven from './img/7.png';
 
 import oneStone from './stone/1.png';
 import twoStone from './stone/2.png';
@@ -234,6 +235,9 @@ export const CoupleBracelets = (props) => {
             <div>
               <img src={six} alt="JewelCocktail" onClick={() => openZoom(6)} />
             </div>
+            <div>
+              <img src={seven} alt="JewelCocktail" onClick={() => openZoom(7)} />
+            </div>
           </Slider>
           {
             openZoomImage &&
@@ -265,6 +269,9 @@ export const CoupleBracelets = (props) => {
                     <div>
                       <img src={six} alt="JewelCocktail" />
                     </div>
+                    <div>
+                      <img src={seven} alt="JewelCocktail" />
+                    </div>
                   </Slider>
                 </WrapZoomSlider>
               </WrapperZoom>,
@@ -290,6 +297,9 @@ export const CoupleBracelets = (props) => {
           <div>
             <img src={six} alt="JewelCocktail"/>
           </div>
+            <div>
+              <img src={seven} alt="JewelCocktail"/>
+            </div>
         </Slider>
         </div>
         <ChooseStone>
