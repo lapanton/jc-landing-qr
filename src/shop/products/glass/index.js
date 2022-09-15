@@ -211,11 +211,7 @@ export const Glass = (props) => {
         <div className="slider-wrap">
           <h4>Бокал-декантер JC (2 шт.)</h4>
           <Slider {...settings} asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
-            <div>
-              <video width="100%" height="100%" autoPlay loop muted playsInline style={{maxHeight: "500px"}}>
-                <source src={vid} type="video/mp4"/>
-              </video>
-            </div>
+
             <div>
               <img src={one} alt="JewelCocktail" onClick={() => openZoom(1)}/>
             </div>
@@ -232,11 +228,16 @@ export const Glass = (props) => {
               <img src={five} alt="JewelCocktail" onClick={() => openZoom(5)}/>
             </div>
             <div>
-              <img src={six} alt="JewelCocktail" onClick={() => openZoom(6)}/>
+              <video width="100%" height="100%" autoPlay loop muted playsInline style={{maxHeight: "500px"}}>
+                <source src={vid} type="video/mp4"/>
+              </video>
             </div>
-            <div>
-              <img src={seven} alt="JewelCocktail" onClick={() => openZoom(7)}/>
-            </div>
+            {/*<div>*/}
+            {/*  <img src={six} alt="JewelCocktail" onClick={() => openZoom(6)}/>*/}
+            {/*</div>*/}
+            {/*<div>*/}
+            {/*  <img src={seven} alt="JewelCocktail" onClick={() => openZoom(7)}/>*/}
+            {/*</div>*/}
           </Slider>
           {
             openZoomImage &&
@@ -265,12 +266,12 @@ export const Glass = (props) => {
                     <div>
                       <img src={five} alt="JewelCocktail" />
                     </div>
-                    <div>
-                      <img src={six} alt="JewelCocktail" />
-                    </div>
-                    <div>
-                      <img src={seven} alt="JewelCocktail" />
-                    </div>
+                    {/*<div>*/}
+                    {/*  <img src={six} alt="JewelCocktail" />*/}
+                    {/*</div>*/}
+                    {/*<div>*/}
+                    {/*  <img src={seven} alt="JewelCocktail" />*/}
+                    {/*</div>*/}
                   </Slider>
                 </WrapZoomSlider>
               </WrapperZoom>,
@@ -278,9 +279,7 @@ export const Glass = (props) => {
             )}
 
           <Slider {...settingsTwo} asNavFor={nav1} ref={(slider2) => setNav2(slider2)} swipeToSlide={true} focusOnSelect={true}>
-            <div>
-              <img src={vidprev} alt="JewelCocktail"/>
-            </div>
+
             <div>
               <img src={one} alt="JewelCocktail"/>
             </div>
@@ -297,11 +296,14 @@ export const Glass = (props) => {
               <img src={five} alt="JewelCocktail"/>
             </div>
             <div>
-              <img src={six} alt="JewelCocktail"/>
+              <img src={vidprev} alt="JewelCocktail"/>
             </div>
-            <div>
-              <img src={seven} alt="JewelCocktail"/>
-            </div>
+            {/*<div>*/}
+            {/*  <img src={six} alt="JewelCocktail"/>*/}
+            {/*</div>*/}
+            {/*<div>*/}
+            {/*  <img src={seven} alt="JewelCocktail"/>*/}
+            {/*</div>*/}
           </Slider>
         </div>
         <ChooseStone>
