@@ -42,6 +42,7 @@ import ScrollToTop from "./ScrollToTop";
 import {CustomScripts} from "./CustomScripts";
 import {TalismanPage} from "./talisman";
 import {TalismanStone} from "./talisman/talismanStone";
+import {SecondTalisman} from "./talisman/second";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -251,7 +252,10 @@ export const App = (props) => {
                 }}
               />
               <MainShop langProps={props} setShowPopup={setShowPopup} showPopup={showPopup} />
-              <TalismanPage card={card} setCard={setCard} setShowPopup={setShowPopup} showPopup={showPopup} />
+              <SecondTalisman />
+              <ShowHideSection />
+              <WrapProducts showPopup={showPopup} setShowPopup={setShowPopup} card={card} setCard={setCard} />
+              <SelfProductShop />
               <OsobennostiTehnologiiShop />
               <ContactsShop />
               <ScrollArrow />
