@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Link, Navigate
+import StarfieldAnimation from 'react-starfield-animation';
 import { Footer } from "./footer";
 import { createGlobalStyle } from "styled-components";
 import { Main } from "./components/first";
@@ -40,6 +41,7 @@ import { Glass } from "./shop/products/glass";
 import ScrollToTop from "./ScrollToTop";
 import {CustomScripts} from "./CustomScripts";
 import {TalismanPage} from "./talisman";
+import {TalismanStone} from "./talisman/talismanStone";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -241,9 +243,31 @@ export const App = (props) => {
           } exact />
           <Route path="/talisman" element={
             <div>
+              <StarfieldAnimation
+                style={{
+                  position: 'fixed',
+                  width: '100%',
+                  height: '100%'
+                }}
+              />
               <MainShop langProps={props} setShowPopup={setShowPopup} showPopup={showPopup} />
               <TalismanPage card={card} setCard={setCard} setShowPopup={setShowPopup} showPopup={showPopup} />
               <OsobennostiTehnologiiShop />
+              <ContactsShop />
+              <ScrollArrow />
+            </div>
+          } />
+          <Route path="/talisman/stone" element={
+            <div>
+              <StarfieldAnimation
+                style={{
+                  position: 'fixed',
+                  width: '100%',
+                  height: '100%'
+                }}
+              />
+              <MainShop langProps={props} setShowPopup={setShowPopup} showPopup={showPopup} />
+              <TalismanStone />
               <ContactsShop />
               <ScrollArrow />
             </div>

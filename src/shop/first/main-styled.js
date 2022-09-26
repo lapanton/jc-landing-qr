@@ -287,6 +287,12 @@ export const WrapTitle = styled.div`
       font-size: 1.5rem;
     }
   }
+  .stone-title {
+    font-size: 38px;
+    @media screen and (max-width: 768px) {
+      font-size: 18px;
+    }
+  }
   h2 {
     font-family: 'organetto';
     text-transform: uppercase;

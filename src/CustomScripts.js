@@ -5,7 +5,6 @@ import {useLocation} from "react-router-dom";
 export const CustomScripts = () => {
   const location = useLocation();
   if (location.pathname === "/glass" || location.pathname === "/" || location.pathname === "/shop") {
-    alert("BBBBB")
     return (
       <>
         <Helmet>

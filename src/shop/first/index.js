@@ -179,8 +179,20 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
           </WrapTitle>
         )}
 
+        {location.pathname === "/talisman" && (
+          <WrapTitle className={show ? 'removeZindex' : 'addit'}>
+            <h1 className="glass-title">Jewel Cocktail</h1>
+          </WrapTitle>
+        )}
 
-        {isMobile && location.pathname !== "/glass" && (
+        {location.pathname === "/talisman/stone" && (
+          <WrapTitle className={show ? 'removeZindex' : 'addit'}>
+            <h1 className="stone-title">Jewel Cocktail <br/>Коллекция талисманов</h1>
+          </WrapTitle>
+        )}
+
+
+        {isMobile && location.pathname !== "/glass" && location.pathname !== "/talisman" && location.pathname !== "/talisman/stone" &&  (
           <WrapTitle className={show ? 'removeZindex' : 'addit'}>
             {sticky && window.innerWidth >= '768' ? <div style={{ marginTop: "180px"}}/> : <span/>}
             <h1>Jewel Cocktail</h1>
