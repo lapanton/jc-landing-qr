@@ -179,7 +179,7 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
           </WrapTitle>
         )}
 
-        }
+
         {isMobile && location.pathname !== "/glass" && (
           <WrapTitle className={show ? 'removeZindex' : 'addit'}>
             {sticky && window.innerWidth >= '768' ? <div style={{ marginTop: "180px"}}/> : <span/>}

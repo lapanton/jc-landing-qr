@@ -38,6 +38,8 @@ import { Glass } from "./shop/products/glass";
 // /shop
 
 import ScrollToTop from "./ScrollToTop";
+import {CustomScripts} from "./CustomScripts";
+import {TalismanPage} from "./talisman";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -95,6 +97,7 @@ export const App = (props) => {
 
   return (
     <Router>
+        <CustomScripts />
         <ScrollToTop />
         <Routes>
             <Route path="/" element={
@@ -236,7 +239,15 @@ export const App = (props) => {
               <Contacts/>
             </div>
           } exact />
-
+          <Route path="/talisman" element={
+            <div>
+              <MainShop langProps={props} setShowPopup={setShowPopup} showPopup={showPopup} />
+              <TalismanPage card={card} setCard={setCard} setShowPopup={setShowPopup} showPopup={showPopup} />
+              <OsobennostiTehnologiiShop />
+              <ContactsShop />
+              <ScrollArrow />
+            </div>
+          } />
         </Routes>
     </Router>
   );
