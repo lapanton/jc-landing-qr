@@ -86,13 +86,13 @@ export const TalismanStone = () => {
       <WrapGenderButton>
         <GenderSelected className={gender === "wom" ? "woman": "no"} onClick={() => setGender("wom")}>
           <img src={wonIcon} alt="JewelCocktail.com"/>
-          женская<br/>
+          женские<br/>
           10х10 мм
         </GenderSelected>
 
         <GenderSelected className={gender === "man" ? "man": "no"} onClick={() => setGender("man")}>
           <img src={manIcon} alt="JewelCocktail.com"/>
-          мужская<br/>
+          мужские<br/>
           12х12 мм
         </GenderSelected>
       </WrapGenderButton>

@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
+  @media screen and (max-width: 768px) {
+    transform: translateY(-70px);
+  }
   h1 {
     text-align: center;
     font-family: 'organetto';
@@ -86,6 +89,7 @@ export const InnerItemStones = styled.div`
   .stone-inner {
     max-height: 103px;
     z-index: 999999999;
+    border: 1px solid #fff;
   }
   @media screen and (max-width: 768px) {
     flex-direction: column;
