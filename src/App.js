@@ -244,13 +244,6 @@ export const App = (props) => {
           } exact />
           <Route path="/talisman" element={
             <div>
-              <StarfieldAnimation
-                style={{
-                  position: 'fixed',
-                  width: '100%',
-                  height: '100%'
-                }}
-              />
               <MainShop langProps={props} setShowPopup={setShowPopup} showPopup={showPopup} />
               <SecondTalisman />
               <ShowHideSection />
@@ -263,13 +256,6 @@ export const App = (props) => {
           } />
           <Route path="/talisman/stone" element={
             <div>
-              <StarfieldAnimation
-                style={{
-                  position: 'fixed',
-                  width: '100%',
-                  height: '100%'
-                }}
-              />
               <MainShop langProps={props} setShowPopup={setShowPopup} showPopup={showPopup} />
               <TalismanStone />
               <ContactsShop />
