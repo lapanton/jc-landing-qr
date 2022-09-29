@@ -85,6 +85,7 @@ export const InnerItemStones = styled.div`
   align-items: center;
   .stone-inner {
     max-height: 103px;
+    z-index: 999999999;
   }
   @media screen and (max-width: 768px) {
     flex-direction: column;
