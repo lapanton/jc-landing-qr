@@ -14,7 +14,7 @@ export const CustomScripts = () => {
       </>
     )
   }
-  if (location.pathname === "/talisman" || location.pathname === "/talisman/stone") {
+  if (location.pathname === "/talisman" || location.pathname === "/talisman/stone" || location.pathname.indexOf("/qrt/") > -1) {
     return (
       <StarfieldAnimation
         style={{

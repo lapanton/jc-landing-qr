@@ -15,7 +15,6 @@ import {
   TextMessage,
   Fon,
   Ramka,
-  Podpsi,
   ResultPrewiev,
   TextMessageMob,
   WrapPhotoUpload,
@@ -25,14 +24,10 @@ import {
   ThumbInner,
   Img,
   FonMobile,
-  WrapSignature,
-  InnerSignatture,
-  PodpsiMob,
   WrapPreviewResult,
   InnerPreviewResult,
   MessageView,
   ButtonSubmit,
-  WrapName,
   WrapSlider,
   ResultPrewievMob,
   WrapBorderView,
@@ -43,7 +38,6 @@ import {
 import t from './t.png';
 import fon from './fon.png';
 import ramka from './ramka.png';
-import podpsi from './podpisi.png';
 import result from './result.png';
 import plus from './plus.png';
 import {BounceAnimation} from "../../../../animation/BounceAnimation";
@@ -51,7 +45,7 @@ import {ConfettiAnimation} from "../../../../animation/Confetti";
 
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-export const Constructor = (props) => {
+export const ConstructorTalisman = (props) => {
   const { pathname } = useLocation();
   const value = props.value;
   const { id } = useParams();
@@ -59,7 +53,6 @@ export const Constructor = (props) => {
     const [sendData, setSendData] = useState(false);
     const [files, setFiles] = useState([]);
     const [message, setMessage] = useState("");
-    const [signature, setSignature] = useState("");
     const [phone, setPhone] = useState("");
     const [authorEmail, setAuthorEmail] = useState("");
   const onDrop = useCallback(acceptedFiles => {
@@ -108,12 +101,6 @@ export const Constructor = (props) => {
     }
   };
 
-  const handleChangeSignature = (e) => {
-    if (e.target.value.length <= 25) {
-      setSignature(e.target.value)
-    }
-  };
-
   const handleChangePhone = (e) => {
     if (e.target.value.length <= 15) {
       setPhone(e.target.value)
@@ -140,7 +127,7 @@ export const Constructor = (props) => {
 
     const rest = {
       msg: message,
-      author: signature,
+      author: "",
       status: "completed",
       email: authorEmail,
       phone: phone,
@@ -195,6 +182,13 @@ export const Constructor = (props) => {
 
   const messageBr = value.msg?.split("<br/>").join("\n");
 
+  if (pathname.indexOf("/qrt/") > -1) {
+    document.body.style.background = "#000";
+  }
+
+  if (pathname.indexOf("/qrt/") > -1) {
+    document.body.style.background = "#000";
+  }
   return (
     <Wrapper>
         <h2 className={value?.status === 'completed' ? "completed": "notcompleted"}>Конструктор послания</h2>
@@ -221,12 +215,6 @@ export const Constructor = (props) => {
               <div>Рамка</div>
               <span>Выберите одну из предложенных рамок</span>
             </Ramka>
-
-            <Podpsi>
-              <img src={podpsi} alt="JewelCocktail"/>
-              <div>Подпись</div>
-              <span>Подпишите ваше послание</span>
-            </Podpsi>
 
             <ResultPrewiev>
               <img src={result} alt="JewelCocktail"/>
@@ -263,17 +251,6 @@ export const Constructor = (props) => {
               </InnerPhoto>
             </WrapPhotoUpload>
 
-            <WrapSignature className={value?.status === 'completed' ? "completed": "notcompleted"}>
-              <InnerSignatture>
-                <PodpsiMob>
-                  <img src={podpsi} alt="JewelCocktail"/>
-                  <div>Подпись</div>
-                </PodpsiMob>
-                <p>Подпишите ваше послание</p>
-                <input value={signature} type="text" name="signature" onChange={handleChangeSignature} />
-              </InnerSignatture>
-            </WrapSignature>
-
             <WrapPreviewResult>
               <InnerPreviewResult>
                 <ResultPrewievMob className={value?.status === 'completed' ? "completed": "notcompleted"}>
@@ -308,15 +285,10 @@ export const Constructor = (props) => {
                   </WrapSlider>
 
                 </div>
-                {(signature?.length !== 0 || (value.author !== undefined && value.author !== "")) && (
-                  <WrapName className={value?.status === 'completed' ? "iscompeleted color_"+value?.border : "color_"+10}>
-                    {value?.status === 'completed' ? value.author : signature}
-                  </WrapName>
-                )
-                }
+
                   {value?.status === 'default' && (
                     <>
-                      <WrapPhoneEmail style={signature?.length !== 0 ? {marginTop: "0px"} : {marginTop: "50px"}}>
+                      <WrapPhoneEmail style={{marginTop: "50px"}}>
                         {!(pathname.includes('/letter') || pathname.includes('/qr/')) && (
                           <div className="numberPhone"><div>Номер Телефона:</div> <input value={phone} type="tel" name="phone" onChange={handleChangePhone} /></div>
                         )}

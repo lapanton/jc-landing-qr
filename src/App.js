@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {BrowserRouter as Router, Routes, Route } from 'react-router-dom'; // Link, Navigate
-import StarfieldAnimation from 'react-starfield-animation';
+// import StarfieldAnimation from 'react-starfield-animation';
 import { Footer } from "./footer";
 import { createGlobalStyle } from "styled-components";
 import { Main } from "./components/first";
@@ -40,9 +40,10 @@ import { Glass } from "./shop/products/glass";
 
 import ScrollToTop from "./ScrollToTop";
 import {CustomScripts} from "./CustomScripts";
-import {TalismanPage} from "./talisman";
+// import {TalismanPage} from "./talisman";
 import {TalismanStone} from "./talisman/talismanStone";
 import {SecondTalisman} from "./talisman/second";
+import {ConstructorQrTalisman} from "./components/ConstructorQrTalisman/ConstructorQrTalisman";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -64,6 +65,7 @@ const GlobalStyle = createGlobalStyle`
 export const App = (props) => {
   // http://localhost:3000/qr/PU7H9Gx3ly
   // http://localhost:3000/letter/piJ2N1KiBC
+  // http://localhost:3000/qrt/uLuFx_XfzO
 
   const dataFromStorage = localStorage.getItem('card-data');
   const [card, setCard] = useState((dataFromStorage?.length > 0) ? JSON.parse(dataFromStorage) : []);
@@ -128,6 +130,13 @@ export const App = (props) => {
                      </CheckStatusQR>
                    }
                      exact />
+          <Route path="/qrt/:id"
+                 element={
+                   <CheckStatusQR>
+                     <ConstructorQrTalisman />
+                   </CheckStatusQR>
+                 }
+                 exact />
           <Route path="/letter/:id"
                  element={
                    <CheckStatusQR>
