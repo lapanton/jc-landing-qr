@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  @media screen and (max-width: 768px) {
-    transform: translateY(-70px);
-  }
   h1 {
     text-align: center;
     font-family: 'organetto';

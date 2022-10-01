@@ -77,7 +77,6 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
   }, []);
   const isMobile = width <= 768;
   const location = useLocation();
-  // console.log('location.pathname', location.pathname === "/glass");
 
   useEffect(() => {
     if (show) {
@@ -86,8 +85,9 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
       document.body.style.overflow = 'unset';
     }
   }, [show]);
+  const talismanUrlStone  = location.pathname === "/talisman/stone";
   return (
-    <ConttainerWrap className={sticky ? 'sticky' : ' '} style={!isMobile ? {height: "15rem"} : {}}>
+    <ConttainerWrap className={sticky ? 'sticky' : ' '} style={!isMobile ? {height: "15rem"} : talismanUrlStone ? {height: "15rem"} : {}}>
       <Wrapper>
         <Inner className={sticky ? 'sticky' : ' '}>
           <a href="/" className="wrapLogo">
