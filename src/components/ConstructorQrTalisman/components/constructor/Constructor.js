@@ -200,14 +200,14 @@ export const ConstructorTalisman = (props) => {
 
             <TextMessage>
               <img src={t} alt="JewelCocktail"/>
-              <div>Текст послания</div>
-              <span>Заполните текст послания до 400 символов</span>
+              <div>Текст/символы</div>
+              <span>Заполните талисман<br/> до 400 символов</span>
             </TextMessage>
 
             <Fon>
               <img src={fon} alt="JewelCocktail"/>
-              <div>Фон</div>
-              <span>Добавьте до 3 фото или 1 видео для фона </span>
+              <div>Изображение</div>
+              <span>Добавьте до 3 изображений </span>
             </Fon>
 
             <Ramka>
@@ -219,7 +219,7 @@ export const ConstructorTalisman = (props) => {
             <ResultPrewiev>
               <img src={result} alt="JewelCocktail"/>
               <div>Предварительный результат</div>
-              <span>Вид послания, которое увидит ваш адресат</span>
+              <span>Вид цифрового талисмана</span>
             </ResultPrewiev>
 
           </SideArea>
@@ -227,17 +227,17 @@ export const ConstructorTalisman = (props) => {
           <ConstructorArea className={value?.status === 'completed' ? "noMarging": "notcompleted"}>
             <TextMessageMob className={value?.status === 'completed' ? "completed": "notcompleted"}>
               <img src={t} alt="JewelCocktail"/>
-              <div>Текст послания</div>
+              <div>Текст/символы</div>
             </TextMessageMob>
-            <p className={value?.status === 'completed' ? "completed": "notcompleted"}>Заполните текст послания до 400 символов</p>
+            <p className={value?.status === 'completed' ? "completed": "notcompleted"}>Заполните талисман до 400 символов</p>
             <textarea value={message} name="message" cols="30" rows="5" onChange={handleChangeMessage} className={value?.status === 'completed' ? "completed": "notcompleted"} />
 
             <WrapPhotoUpload className={value?.status === 'completed' ? "completed": "notcompleted"}>
               <FonMobile>
                 <img src={fon} alt="JewelCocktail"/>
-                <div>Фон</div>
+                <div>Изображение</div>
               </FonMobile>
-              <p>Добавьте до 3 фото или 1 видео для фона</p>
+              <p>Добавьте до 3 изображений</p>
               <InnerPhoto>
                 <section className="container">
                   <ThumbsContainer>
@@ -257,7 +257,7 @@ export const ConstructorTalisman = (props) => {
                   <img src={result} alt="JewelCocktail"/>
                   <div>Предварительный результат</div>
                 </ResultPrewievMob>
-                <p className={value?.status === 'completed' ? "completed": "notcompleted"}>Вид послания, которое увидит ваш адресат</p>
+                <p className={value?.status === 'completed' ? "completed": "notcompleted"}>Вид цифрового талисмана</p>
                 <MessageView className={value?.status === 'completed' ? "morePadding": "notcompleted messageInit"}>{value?.status === 'completed' ? messageBr.split('\n').map((item, i) => <p className="poezi" key={i}>{item}</p>) : message.split('\n').map((item, i) => <p className="poezi" key={i}>{item}</p>)}</MessageView>
                 <div className={value?.status === 'completed' ? "emptyHeightCompl": "emptyHeight"}>
                   <WrapSlider>
