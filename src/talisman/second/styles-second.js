@@ -17,7 +17,7 @@ export const WrapperDesktop = styled.div`
   z-index: 999999999;
   width: 100%;
   color: #fff;
-  margin: 0 auto 120px auto;
+  margin: 20px auto 120px auto;
   h1 {
     max-width: 530px;
     margin: 0 auto 30px auto;

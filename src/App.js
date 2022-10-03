@@ -44,6 +44,7 @@ import {CustomScripts} from "./CustomScripts";
 import {TalismanStone} from "./talisman/talismanStone";
 import {SecondTalisman} from "./talisman/second";
 import {ConstructorQrTalisman} from "./components/ConstructorQrTalisman/ConstructorQrTalisman";
+import {ExampleTalisman} from "./talisman/exampleTalisman";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -255,7 +256,7 @@ export const App = (props) => {
             <div>
               <MainShop langProps={props} setShowPopup={setShowPopup} showPopup={showPopup} />
               <SecondTalisman />
-              <ShowHideSection />
+              <ExampleTalisman />
               <WrapProducts showPopup={showPopup} setShowPopup={setShowPopup} card={card} setCard={setCard} />
               <SelfProductShop />
               <OsobennostiTehnologiiShop />
