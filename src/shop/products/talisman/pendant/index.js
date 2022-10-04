@@ -44,7 +44,7 @@ export const PendantsTalisman = (props) => {
   const { card, setCard, setShowPopup } = props;
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
-  const [quasarStone, setQuasarStone] = useState('1p');
+  const [quasarStone, setQuasarStone] = useState('1p-t'); // 1pendant-talisman
   const [showDescr, setShowDescr] = useState(false);
   const [openZoomImage, setOpenZoomImage] = useState(false);
   const [indexImg, setIndexImg] = useState(1);
@@ -66,7 +66,7 @@ export const PendantsTalisman = (props) => {
   }, [isMobile]);
 
   const settings = {
-    className: "rings-slider",
+    className: "pendant-talisman-slider",
     dots: false,
     infinite: true,
     speed: 500,
@@ -95,7 +95,7 @@ export const PendantsTalisman = (props) => {
   };
 
   const settingsTwo = {
-    className: "rings-slider-two",
+    className: "pendant-talisman-two",
     dots: false,
     infinite: true,
     speed: 500,
@@ -126,8 +126,8 @@ export const PendantsTalisman = (props) => {
     ],
   };
   const buyPendant = () => {
-    const arr1 = [{ product: "quasar", stone: quasarStone, price: 8900 }];
-    const checkedItem = card.filter((value) => value.product !== "quasar");
+    const arr1 = [{ product: "pendantTalisman", stone: quasarStone, price: 11700 }];
+    const checkedItem = card.filter((value) => value.product !== "pendantTalisman");
     setCard(() => [...checkedItem, ...arr1]);
     setShowPopup(true);
   };
@@ -329,28 +329,28 @@ export const PendantsTalisman = (props) => {
         <ChooseStone>
           <p>выбери вставку</p>
           <WrapStone>
-            <div onClick={() => setQuasarStone('1p')} className={quasarStone === '1p' ? 'active' : 'not' }>
+            <div onClick={() => setQuasarStone('1p-t')} className={quasarStone === '1p-t' ? 'active' : 'not' }>
               <img src={oneStone} alt="JewelCocktail"/>
             </div>
-            <div onClick={() => setQuasarStone('2p')} className={quasarStone === '2p' ? 'active' : 'not' }>
+            <div onClick={() => setQuasarStone('2p-t')} className={quasarStone === '2p-t' ? 'active' : 'not' }>
               <img src={twoStone} alt="JewelCocktail"/>
             </div>
-            <div onClick={() => setQuasarStone('3p')} className={quasarStone === '3p' ? 'active' : 'not' }>
+            <div onClick={() => setQuasarStone('3p-t')} className={quasarStone === '3p-t' ? 'active' : 'not' }>
               <img src={threeStone} alt="JewelCocktail"/>
             </div>
-            <div onClick={() => setQuasarStone('4p')} className={quasarStone === '4p' ? 'active' : 'not' }>
+            <div onClick={() => setQuasarStone('4p-t')} className={quasarStone === '4p-t' ? 'active' : 'not' }>
               <img src={fourStone} alt="JewelCocktail"/>
             </div>
-            <div onClick={() => setQuasarStone('5p')} className={quasarStone === '5p' ? 'active' : 'not' }>
+            <div onClick={() => setQuasarStone('5p-t')} className={quasarStone === '5p-t' ? 'active' : 'not' }>
               <img src={fiveStone} alt="JewelCocktail"/>
             </div>
           </WrapStone>
           <p className="description">
-            { quasarStone === '1p' && "роза - символ страсти, красоты, энергии и любви"}
-            { quasarStone === '2p' && "океан - символ творчества,мечты, свободы и созидания"}
-            { quasarStone === '3p' && "жемчуг - символизирует чистоту, силу воли и благополучие"}
-            { quasarStone === '4p' && "родохрозит - романтичный камень, олицетворяет нежность и любовь"}
-            { quasarStone === '5p' && "авантюрин - оптимизм, успех и удача на вашей стороне"}
+            { quasarStone === '1p-t' && "роза - символ страсти, красоты, энергии и любви"}
+            { quasarStone === '2p-t' && "океан - символ творчества,мечты, свободы и созидания"}
+            { quasarStone === '3p-t' && "жемчуг - символизирует чистоту, силу воли и благополучие"}
+            { quasarStone === '4p-t' && "родохрозит - романтичный камень, олицетворяет нежность и любовь"}
+            { quasarStone === '5p-t' && "авантюрин - оптимизм, успех и удача на вашей стороне"}
           </p>
         </ChooseStone>
         <PriceBuySection>

@@ -24,7 +24,7 @@ export const Wrapper = styled.div`
 
   }
 
-  .rings-slider-two {
+  .pendant-talisman-two {
     @media screen and (max-width: 768px) {
       margin-top: 10px;
       .slick-slide {
