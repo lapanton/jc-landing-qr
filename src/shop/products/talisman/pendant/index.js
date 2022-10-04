@@ -358,14 +358,14 @@ export const PendantsTalisman = (props) => {
             <Link to="/talisman/stone">каталог</Link>
           </p>
           <WrapPrices>
-            <p className="price">9 700 <span>₽</span></p>
+            <p className="price">11700 <span>₽</span></p>
             {/*<p className="old-price" style={{ visibility: "hidden" }}>12 700 ₽</p>*/}
             {/*<img src={sale} alt="JewelCocktail" className="sale-icon" style={{ visibility: "hidden" }}/>*/}
           </WrapPrices>
           <div className="buy-button" onClick={() => buyPendant()}>Купить</div>
           <div className="actsia" style={{ visibility: "hidden" }}>
             <img src={fire} alt="JewelCocktail"/>
-            <p className="actsia-text"><span>Акция!</span> второй камень <span>в подарок</span></p>
+            <p className="actsia-text" style={{ visibility: "hidden" }}><span>Акция!</span> второй камень <span>в подарок</span></p>
           </div>
         </PriceBuySection>
         <DescriptionProduct>

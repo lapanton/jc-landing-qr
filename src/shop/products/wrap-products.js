@@ -28,7 +28,6 @@ export const WrapProducts = (props) => {
             <AlcorTalisman setCard={setCard} setShowPopup={setShowPopup} card={card} />
             <GidorTalisman setCard={setCard} setShowPopup={setShowPopup} card={card} />
             <DorsTalisman setCard={setCard} setShowPopup={setShowPopup} card={card} />
-            <CoupleBraceletsTalisman setCard={setCard} setShowPopup={setShowPopup} card={card} />
           </>
         ) : (
           <>

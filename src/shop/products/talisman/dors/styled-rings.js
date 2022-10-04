@@ -279,6 +279,21 @@ export const PriceBuySection = styled.div`
     text-align: center;
     color: rgba(255, 255, 255, 0.76);
     margin: 17px 0 10px 0;
+
+    @media screen and (max-width: 768px) {
+      line-height: 28px;
+    }
+    a {
+      background: rgba(255,255,255,0.17);
+      border-radius: 5px;
+      text-transform: uppercase;
+      color: #FFFFFF;
+      font-size: 15px;
+      padding: 5px 10px;
+      text-decoration: none;
+      letter-spacing: -0.02em;
+      margin-left: 10px;
+    }
   }
   .actsia {
     display: flex;

@@ -25,6 +25,7 @@ import sale from '../sale.png';
 import { Wrapper, Inner, ChooseStone, WrapStone, PriceBuySection, DescriptionProduct, DescriptionButton, DescriptionView, ToRightMoveDesktop, WrapPrices,  WrapperZoom, WrapZoomSlider } from "./styled-rings";
 import whiteArrow from "../rings/img/white-arrow.svg";
 import closeIcon from "../rings/img/cross_white.svg";
+import {Link} from "react-router-dom";
 
 export const AlcorTalisman = (props) => {
   const { card, setCard, setShowPopup } = props;
@@ -216,7 +217,7 @@ export const AlcorTalisman = (props) => {
     <Wrapper>
       <Inner>
         <div className="slider-wrap">
-          <h4>женский браслет<br/> Alcor</h4>
+          <h4>женский<br/> браслет-талисман</h4>
           <Slider {...settings} asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
             <div>
               <img src={one} alt="JewelCocktail" onClick={() => openZoom(1)}/>
@@ -313,7 +314,7 @@ export const AlcorTalisman = (props) => {
           </Slider>
         </div>
         <ChooseStone>
-          <p>выбери камень с qr-посланием</p>
+          <p>выбери вставку</p>
           <WrapStone>
             <div onClick={() => setAlcorStone('1a')} className={alcorStone === '1a' ? 'active' : 'not' }>
               <img src={oneStone} alt="JewelCocktail"/>
@@ -340,14 +341,16 @@ export const AlcorTalisman = (props) => {
           </p>
         </ChooseStone>
         <PriceBuySection>
+          <p className="bonus">описание материалов в
+            <Link to="/talisman/stone">каталог</Link>
+          </p>
           <WrapPrices>
             <p className="price">6 700 <span>₽</span></p>
-            <p className="old-price">9 570 ₽</p>
-            <img src={sale} alt="JewelCocktail" className="sale-icon"/>
+            {/*<p className="old-price">9 570 ₽</p>*/}
+            {/*<img src={sale} alt="JewelCocktail" className="sale-icon"/>*/}
           </WrapPrices>
-          <p className="bonus">браслет + 2 разных камня</p>
           <div className="buy-button" onClick={() => buyAlcor()}>Купить</div>
-          <div className="actsia">
+          <div className="actsia" style={{ visibility: "hidden" }}>
             <img src={fire} alt="JewelCocktail"/>
             <p className="actsia-text"><span>Акция!</span> второй камень <span>в подарок</span></p>
           </div>

@@ -26,6 +26,7 @@ import closeIcon from "./img/cross_white.svg";
 import whiteArrow from "./img/white-arrow.svg";
 
 import { Wrapper, Inner, ChooseStone, WrapStone, ChooseSize, SizeButton, PriceBuySection, DescriptionProduct, DescriptionButton, DescriptionView, ToRightMoveDesktop, WrapPrices, WrapperZoom, WrapZoomSlider } from "./styled-rings";
+import {Link} from "react-router-dom";
 
 export const RingsTalisman = (props) => {
   const { card, setCard, setShowPopup } = props;
@@ -226,7 +227,7 @@ export const RingsTalisman = (props) => {
     <Wrapper>
       <Inner>
         <div className="slider-wrap">
-          <h4>женское Кольцо<br/> Mellish</h4>
+          <h4>женское<br/>Кольцо-талисман</h4>
           <Slider {...settings} asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
             <div>
               <img src={one} alt="JewelCocktail" onClick={() => openZoom(1)}/>
@@ -323,7 +324,7 @@ export const RingsTalisman = (props) => {
           </Slider>
         </div>
         <ChooseStone>
-          <p>выбери камень с qr-посланием</p>
+          <p>выбери вставку</p>
           <WrapStone>
             <div onClick={() => setRingStone('1r')} className={ringStone === '1r' ? 'active' : 'not' }>
               <img src={oneStone} alt="JewelCocktail"/>
@@ -365,16 +366,18 @@ export const RingsTalisman = (props) => {
           {/*</SizeButton>*/}
         </ChooseSize>
         <PriceBuySection>
+          <p className="bonus">описание материалов в
+            <Link to="/talisman/stone">каталог</Link>
+          </p>
           <WrapPrices>
-            <p className="price">9 800 <span>₽</span></p>
-            <p className="old-price">14 000 ₽</p>
-            <img src={sale} alt="JewelCocktail" className="sale-icon"/>
+            <p className="price">12900 <span>₽</span></p>
+            {/*<p className="old-price">14 000 ₽</p>*/}
+            {/*<img src={sale} alt="JewelCocktail" className="sale-icon"/>*/}
           </WrapPrices>
-          <p className="bonus">кольцо + 2 разных камня</p>
           <div className="buy-button" onClick={() => buyRing()}>Купить</div>
-          <div className="actsia">
+          <div className="actsia" style={{ visibility: "hidden" }}>
             <img src={fire} alt="JewelCocktail"/>
-            <p className="actsia-text"><span>Акция!</span> второй камень <span>в подарок</span></p>
+            <p className="actsia-text" style={{ visibility: "hidden" }}><span>Акция!</span> второй камень <span>в подарок</span></p>
           </div>
         </PriceBuySection>
         <DescriptionProduct>
