@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import ReactDOM from "react-dom";
+import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import one from './img/1.png';
 import two from './img/2.png';
@@ -228,7 +229,8 @@ export const PendantsTalisman = (props) => {
     <Wrapper>
       <Inner>
         <div className="slider-wrap">
-          <h4>женская подвеска<br/> quasar</h4>
+          <h4>талисман-кулон<br/>
+            женский</h4>
           <Slider {...settings} asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
             <div>
               <img src={one} alt="JewelCocktail" onClick={() => openZoom(1)}/>
@@ -325,7 +327,7 @@ export const PendantsTalisman = (props) => {
           </Slider>
         </div>
         <ChooseStone>
-          <p>выбери камень с qr-посланием</p>
+          <p>выбери вставку</p>
           <WrapStone>
             <div onClick={() => setQuasarStone('1p')} className={quasarStone === '1p' ? 'active' : 'not' }>
               <img src={oneStone} alt="JewelCocktail"/>
@@ -352,14 +354,16 @@ export const PendantsTalisman = (props) => {
           </p>
         </ChooseStone>
         <PriceBuySection>
+          <p className="bonus">описание материалов в
+            <Link to="/talisman/stone">каталог</Link>
+          </p>
           <WrapPrices>
-            <p className="price">8 900 <span>₽</span></p>
-            <p className="old-price">12 700 ₽</p>
-            <img src={sale} alt="JewelCocktail" className="sale-icon"/>
+            <p className="price">9 700 <span>₽</span></p>
+            {/*<p className="old-price" style={{ visibility: "hidden" }}>12 700 ₽</p>*/}
+            {/*<img src={sale} alt="JewelCocktail" className="sale-icon" style={{ visibility: "hidden" }}/>*/}
           </WrapPrices>
-          <p className="bonus">подвеска + 2 разных камня</p>
           <div className="buy-button" onClick={() => buyPendant()}>Купить</div>
-          <div className="actsia">
+          <div className="actsia" style={{ visibility: "hidden" }}>
             <img src={fire} alt="JewelCocktail"/>
             <p className="actsia-text"><span>Акция!</span> второй камень <span>в подарок</span></p>
           </div>
@@ -373,36 +377,33 @@ export const PendantsTalisman = (props) => {
           </DescriptionButton>
           {showDescr && (
             <DescriptionView>
-              <p className="slave-text">дизайнерская подвеска
-                в стиле минимализм
-                на каждый день со сменными вставками (камнями)</p>
+              <p className="slave-text">подвескаJewel Cocktail в стиле минимализм. Со сменными вставками из натуральных материалов.
+                Особенная вставка с QR ссылкой на персональный талисман.</p>
               <p className="main-text">
                 Комплектация:
               </p>
               <p className="slave-text">
-                подвеска, 2 сменных камня, система хранения камней фирменная коробка и пакет.
+                подвеска, 2 сменные вставки (на выбор с QR-ссылкой), система хранения камней фирменная коробка и пакет.
               </p>
-              <p className="main-text">
-                Размер камня:
-              </p>
-              <p className="slave-text">
-                10x10 мм
-              </p>
+              {/*<p className="main-text">*/}
+              {/*  материал вставки:*/}
+              {/*</p>*/}
+              {/*<p className="slave-text">*/}
+              {/*  камень, дерево или серебро*/}
+              {/*</p>*/}
 
               <ToRightMoveDesktop>
               <p className="main-text">
-                Материал и цвет основы:
+                материал вставки:
               </p>
               <p className="slave-text">
-                Натуральный или органический
-                камень ручной огранки
+                камень, дерево или серебро
               </p>
               <p className="main-text">
-                Тип вставки:
+                Размер вставки:
               </p>
               <p className="slave-text">
-                Натуральный или органический
-                камень ручной огранки
+                10x10 мм
               </p>
               <p className="main-text">
                 бессрочная гарантия:
