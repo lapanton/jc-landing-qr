@@ -10,17 +10,38 @@ import six from './img/6.png';
 import seven from './img/7.png';
 import eight from './img/8.png';
 
-import oneStone from './stone/1.png';
-import twoStone from './stone/2.png';
-import threeStone from './stone/3.png';
-import fourStone from './stone/4.png';
-import fiveStone from './stone/5.png';
+// import oneStone from './stone/1.png';
+// import twoStone from './stone/2.png';
+// import threeStone from './stone/3.png';
+// import fourStone from './stone/4.png';
+// import fiveStone from './stone/5.png';
 
 import fire from './fire.png';
 import arDown from './arrowDown.png';
 import arUp from './arrowUp.png';
 
-import sale from '../sale.png';
+// import sale from '../sale.png';
+
+import Mone from "../../../../talisman/talismanStone/man-stones/IMG_6046.png";
+import Mtwo from "../../../../talisman/talismanStone/man-stones/IMG_6052.png";
+import Mthree from "../../../../talisman/talismanStone/man-stones/IMG_6061.png";
+import Mfour from "../../../../talisman/talismanStone/man-stones/IMG_6066.png";
+import Mfive from "../../../../talisman/talismanStone/man-stones/IMG_6059.png";
+import Msix from "../../../../talisman/talismanStone/man-stones/IMG_6045.png";
+import Mseven from "../../../../talisman/talismanStone/man-stones/IMG_6051.png";
+import Meight from "../../../../talisman/talismanStone/man-stones/IMG_6057.png";
+import Mnine from "../../../../talisman/talismanStone/man-stones/IMG_6058.png";
+import Mten from "../../../../talisman/talismanStone/man-stones/IMG_6050.png";
+import Meleven from "../../../../talisman/talismanStone/man-stones/IMG_6043.png";
+import Mtwelve from "../../../../talisman/talismanStone/man-stones/IMG_6044.png";
+import Mthirteen from "../../../../talisman/talismanStone/man-stones/IMG_6060.png";
+import Mfourteen from "../../../../talisman/talismanStone/man-stones/IMG_6047.png";
+import Mfifteen from "../../../../talisman/talismanStone/man-stones/IMG_6112.png";
+import Msixteen from "../../../../talisman/talismanStone/man-stones/IMG_6049.png";
+import Mseventeen from "../../../../talisman/talismanStone/man-stones/IMG_6053.png";
+import Meightteen from "../../../../talisman/talismanStone/man-stones/IMG_6056.png";
+import Mnineteen from "../../../../talisman/talismanStone/man-stones/IMG_6055.png";
+import Mtwenty from "../../../../talisman/talismanStone/man-stones/IMG_6054.png";
 
 import { Wrapper, Inner, ChooseStone, WrapStone, PriceBuySection, DescriptionProduct, DescriptionButton, DescriptionView, ToRightMoveDesktop, WrapPrices,  WrapperZoom, WrapZoomSlider } from "./styled-rings";
 import whiteArrow from "../rings/img/white-arrow.svg";
@@ -31,7 +52,7 @@ export const DorsTalisman = (props) => {
   const { card, setCard, setShowPopup } = props;
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
-  const [dorsStone, setDorsStone] = useState('1d');
+  const [dorsStone, setDorsStone] = useState('1d-t');
   const [showDescr, setShowDescr] = useState(false);
   const [openZoomImage, setOpenZoomImage] = useState(false);
   const [indexImg, setIndexImg] = useState(1);
@@ -113,9 +134,27 @@ export const DorsTalisman = (props) => {
       },
     ],
   };
+  const settingsStones = {
+    className: "stones-slider",
+    dots: false,
+    infinite: true,
+    speed: 500,
+    autoplaySpeed: 3000,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    accessibility: false,
+    autoplay: false,
+    arrows: true,
+    centerMode: true,
+    focusOnSelect: true,
+    centerPadding: 0,
+    beforeChange: (current, next) => {
+      setDorsStone(`${next + 1}d-t`)
+    }
+  };
  const buyDors = () => {
-   const arr1 = [{ product: "dors", stone: dorsStone, price: 6900 }];
-   const checkedItem = card.filter((value) => value.product !== "dors");
+   const arr1 = [{ product: "dorsTalisman", stone: dorsStone, price: 8950 }];
+   const checkedItem = card.filter((value) => value.product !== "dorsTalisman");
    setCard(() => [...checkedItem, ...arr1]);
    setShowPopup(true);
  };
@@ -166,7 +205,7 @@ export const DorsTalisman = (props) => {
       </div>
     );
   };
-
+  /*eslint-disable no-self-compare */
   const sliderReferral = useRef<Slider | null>(null);
 
   useEffect(() => {
@@ -318,28 +357,90 @@ export const DorsTalisman = (props) => {
         <ChooseStone>
           <p>выбери вставку</p>
           <WrapStone>
-            <div onClick={() => setDorsStone('1d')} className={dorsStone === '1d' ? 'active' : 'not' }>
-              <img src={oneStone} alt="JewelCocktail"/>
-            </div>
-            <div onClick={() => setDorsStone('2d')} className={dorsStone === '2d' ? 'active' : 'not' }>
-              <img src={twoStone} alt="JewelCocktail"/>
-            </div>
-            <div onClick={() => setDorsStone('3d')} className={dorsStone === '3d' ? 'active' : 'not' }>
-              <img src={threeStone} alt="JewelCocktail"/>
-            </div>
-            <div onClick={() => setDorsStone('4d')} className={dorsStone === '4d' ? 'active' : 'not' }>
-              <img src={fourStone} alt="JewelCocktail"/>
-            </div>
-            <div onClick={() => setDorsStone('5d')} className={dorsStone === '5d' ? 'active' : 'not' }>
-              <img src={fiveStone} alt="JewelCocktail"/>
-            </div>
+            <Slider {...settingsStones}>
+              <div>
+                <img src={Mone} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={Mtwo} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={Mthree} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={Mfour} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={Mfive} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={Msix} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={Mseven} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={Meight} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={Mnine} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={Mten} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={Meleven} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={Mtwelve} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={Mthirteen} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={Mfourteen} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={Mfifteen} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={Msixteen} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={Mseventeen} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={Meightteen} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={Mnineteen} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={Mtwenty} alt="JewelCocktail"/>
+              </div>
+            </Slider>
           </WrapStone>
           <p className="description">
-            { dorsStone === '1d' && "огонь - символизирует страсть, красоту, энергию и любовь"}
-            { dorsStone === '2d' && "океан - символизирует творчество,мечты, свободу и свежесть ума"}
-            { dorsStone === '3d' && "жёлтый органик - символ тепла, лета, солнца и радости"}
-            { dorsStone === '4d' && "черный сандал - символ мудрости, силы духа и гармонии"}
-            { dorsStone === '5d' && "белый оникс - символ энергии света, добра, созидания"}
+            { dorsStone === '1d-t' && "Яшма — источник доброй энергии."}
+            { dorsStone === '2d-t' && "Агат - приносит здоровье, счастье и долголетие."}
+            { dorsStone === '3d-t' && "Агат - приносит здоровье, счастье и долголетие."}
+            { dorsStone === '4d-t' && "Агат - приносит здоровье, счастье и долголетие."}
+            { dorsStone === '5d-t' && "Яшма — источник доброй энергии."}
+            { dorsStone === '6d-t' && "Лазурит имеет способность помогать своему владельцу."}
+            { dorsStone === '7d-t' && "Обсидиан является мощным поглотителем энерги."}
+            { dorsStone === '8d-t' && "Обсидиан является мощным поглотителем энерги."}
+            { dorsStone === '9d-t' && "Пирит — укрепляющего нервную систему."}
+            { dorsStone === '10d-t' && "Тигровый глаз — камень мудрецов и правителей."}
+            { dorsStone === '11d-t' && "Тигровый глаз — камень мудрецов и правителей."}
+            { dorsStone === '12d-t' && "Тигровый глаз — камень мудрецов и правителей."}
+            { dorsStone === '13d-t' && "Гематит - один из сильнейших магических камней."}
+            { dorsStone === '14d-t' && "Орех — дерево победы над внешними обстоятельствами."}
+            { dorsStone === '15d-t' && "Сандалу - могущественная стихия Воздуха."}
+            { dorsStone === '16d-t' && "Красное дерево - помогает человеку жить в гармонии с природой."}
+            { dorsStone === '17d-t' && "Оникс — обладает сильной энергетикой."}
+            { dorsStone === '18d-t' && "Серебро - это лунный металл."}
+            { dorsStone === '19d-t' && "Серебро - это лунный металл."}
+            { dorsStone === '20d-t' && "Серебро - это лунный металл."}
           </p>
         </ChooseStone>
         <PriceBuySection>
@@ -347,7 +448,7 @@ export const DorsTalisman = (props) => {
             <Link to="/talisman/stone">каталог</Link>
           </p>
           <WrapPrices>
-            <p className="price">8750 <span>₽</span></p>
+            <p className="price">8 950 <span>₽</span></p>
             {/*<p className="old-price">9 850 ₽</p>*/}
             {/*<img src={sale} alt="JewelCocktail" className="sale-icon"/>*/}
           </WrapPrices>

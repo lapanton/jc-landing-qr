@@ -1,4 +1,6 @@
 import styled, {keyframes} from 'styled-components';
+import arrowSlider from "../arrowSlider.png";
+import arrowSliderNext from "../arrowSliderNext.png";
 
 export const Wrapper = styled.div`
   @media screen and (min-width: 768px) {
@@ -9,7 +11,9 @@ export const Wrapper = styled.div`
       margin: auto;
     }
   }
-  
+
+  border-top: 1px solid #444545;
+  padding-top: 20px;
   /* the slides */
   .slick-slide {
     margin: 0 10px;
@@ -23,7 +27,7 @@ export const Wrapper = styled.div`
 
   }
 
-  .gidor-slider-two {
+  .alcor-slider-two {
     @media screen and (max-width: 768px) {
       margin-top: 10px;
       .slick-slide {
@@ -37,6 +41,7 @@ export const Wrapper = styled.div`
       }
     }
   }
+
   position: relative;
   z-index: 999999999;
   overflow: hidden;
@@ -152,7 +157,7 @@ export const Wrapper = styled.div`
     @media screen and (min-width: 768px) {
       position: absolute;
       top: 70px;
-      right: 16%;
+      right: 15.5%;
     }
   }
 `;
@@ -187,7 +192,7 @@ export const ChooseStone = styled.div`
     font-family: 'Organetto';
     font-style: normal;
     font-weight: 300;
-    font-size: 9px;
+    font-size: 12px;
     line-height: 184.52%;
     text-align: center;
     color: rgba(255, 255, 255, 0.76);
@@ -224,20 +229,83 @@ export const WrapStone = styled.div`
   margin: 20px 15px;
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
   .active {
     transform: scale(1.3);
   }
   img {
+    border: 1px solid #fff;
     @media screen and (max-width: 768px) {
-      width: 44px;
+      width: 40px;
     }
     &:hover {
       cursor: pointer;
     }
   }
+  .slick-slide {
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 50px;
+      @media screen and (max-width: 768px) {
+        width: 40px;
+      }
+    }
+  }
+  .slick-center {
+    img {
+      width: 70px;
+      @media screen and (max-width: 768px) {
+        width: 50px;
+      }
+    }
+  }
   @media screen and (min-width: 768px) {
     max-width: 426px;
     margin: 20px auto;
+    padding: 0 50px;
+  }
+  .slick-slider {
+    overflow: inherit;
+    max-width: 360px;
+    @media screen and (max-width: 768px) {
+      max-width: 250px;
+    }
+  }
+  .slick-prev {
+    left: -30px;
+    width: 8.89px;
+    height: 31.6px;
+    background-image: url(${arrowSlider});
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    &:after {
+      font-size: 27px;
+    }
+    &:before {
+      content: "";
+    }
+  }
+  .slick-next {
+    right: -31px;
+    width: 8.89px;
+    height: 31.6px;
+    background-image: url(${arrowSliderNext});
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    &:after {
+      font-size: 27px;
+    }
+    &:before {
+      content: "";
+    }
   }
 `;
 
@@ -293,6 +361,10 @@ export const PriceBuySection = styled.div`
       text-decoration: none;
       letter-spacing: -0.02em;
       margin-left: 10px;
+      &:hover {
+        background: rgba(255,255,255,0.1);
+        cursor: pointer;
+      }
     }
   }
   .actsia {
@@ -337,7 +409,7 @@ export const PriceBuySection = styled.div`
   @media screen and (min-width: 768px) {
     max-width: 390px;
     position: absolute;
-    top: 327px;
+    top: 307px;
     right: 14%;
   }
 `;
@@ -351,13 +423,13 @@ const pulse= keyframes`
   0% {
     transform: scale(.9);
     box-shadow: 0 0 0 #fff;
-}
+  }
   70% {
-  transform: scale(1);
+    transform: scale(1);
     box-shadow: 0 0 17px #fff;
-}
+  }
   100% {
-  transform: scale(.9);
+    transform: scale(.9);
     box-shadow: 0 0 0 #fff;
   }`;
 export const DescriptionButton = styled.div`
@@ -466,6 +538,10 @@ export const WrapPrices = styled.div`
       color: rgba(255,255,255,0.76);
     }
     margin-right: 10px;
+    @media screen and (min-width: 768px) {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
   }
   .old-price {
     font-family: 'Organetto';
@@ -620,3 +696,4 @@ export const WrapZoomSlider = styled.div`
     }
   }
 `;
+

@@ -10,17 +10,56 @@ import six from './img/6.png';
 import seven from './img/7.png';
 import eight from './img/8.png';
 
-import oneStone from './stone/1.png';
-import twoStone from './stone/2.png';
-import threeStone from './stone/3.png';
-import fourStone from './stone/4.png';
-import fiveStone from './stone/5.png';
+// import oneStone from './stone/1.png';
+// import twoStone from './stone/2.png';
+// import threeStone from './stone/3.png';
+// import fourStone from './stone/4.png';
+// import fiveStone from './stone/5.png';
 
 import fire from './fire.png';
 import arDown from './arrowDown.png';
 import arUp from './arrowUp.png';
 
-import sale from '../sale.png';
+// import sale from '../sale.png';
+
+import oneS from "../../../../talisman/talismanStone/wom-stones/IMG_6136.png";
+import twoS from "../../../../talisman/talismanStone/wom-stones/IMG_6061.png";
+import threeS from "../../../../talisman/talismanStone/wom-stones/IMG_6066.png";
+import fourS from "../../../../talisman/talismanStone/wom-stones/IMG_6130.png";
+import fiveS from "../../../../talisman/talismanStone/wom-stones/IMG_6127.png";
+import sixS from "../../../../talisman/talismanStone/wom-stones/IMG_6051.png";
+import sevenS from "../../../../talisman/talismanStone/wom-stones/IMG_6137.png";
+import eighS from "../../../../talisman/talismanStone/wom-stones/IMG_6058.png";
+import nine from "../../../../talisman/talismanStone/wom-stones/IMG_6050.png";
+import ten from "../../../../talisman/talismanStone/wom-stones/IMG_6118.png";
+import eleven from "../../../../talisman/talismanStone/wom-stones/IMG_6114.png";
+import twelve from "../../../../talisman/talismanStone/wom-stones/IMG_6120.png";
+import thirteen from "../../../../talisman/talismanStone/wom-stones/IMG_6126.png";
+import fourteen from "../../../../talisman/talismanStone/wom-stones/IMG_6133.png";
+import fifteen from "../../../../talisman/talismanStone/wom-stones/IMG_6129.png";
+import sixteen from "../../../../talisman/talismanStone/wom-stones/IMG_6131.png";
+import seventeen from "../../../../talisman/talismanStone/wom-stones/IMG_6047.png";
+import eightteen from "../../../../talisman/talismanStone/wom-stones/IMG_6112.png";
+import nineteen from "../../../../talisman/talismanStone/wom-stones/IMG_6049.png";
+import twenty from "../../../../talisman/talismanStone/wom-stones/IMG_6134.png";
+import twentyone from "../../../../talisman/talismanStone/wom-stones/IMG_6135.png";
+import twentytwo from "../../../../talisman/talismanStone/wom-stones/IMG_6053.png";
+import twentythree from "../../../../talisman/talismanStone/wom-stones/IMG_6119.png";
+import twentyfour from "../../../../talisman/talismanStone/wom-stones/IMG_6125.png";
+import twentyfive from "../../../../talisman/talismanStone/wom-stones/IMG_6125.png";
+import twentysix from "../../../../talisman/talismanStone/wom-stones/IMG_6128.png";
+import twentyseven from "../../../../talisman/talismanStone/wom-stones/IMG_6128.png";
+import twentyeight from "../../../../talisman/talismanStone/wom-stones/IMG_6138.png";
+import twentynine from "../../../../talisman/talismanStone/wom-stones/IMG_6121.png";
+import thirty from "../../../../talisman/talismanStone/wom-stones/IMG_6124.png";
+import thirtyone from "../../../../talisman/talismanStone/wom-stones/IMG_6115.png";
+import thirtytwo from "../../../../talisman/talismanStone/wom-stones/IMG_6123.png";
+import thirtythree from "../../../../talisman/talismanStone/wom-stones/IMG_6132.png";
+import thirtyfour from "../../../../talisman/talismanStone/wom-stones/IMG_6113.png";
+import thirtyfive from "../../../../talisman/talismanStone/wom-stones/IMG_6116.png";
+import thirtysix from "../../../../talisman/talismanStone/wom-stones/IMG_6117.png";
+
+
 
 import { Wrapper, Inner, ChooseStone, WrapStone, PriceBuySection, DescriptionProduct, DescriptionButton, DescriptionView, ToRightMoveDesktop, WrapPrices,  WrapperZoom, WrapZoomSlider } from "./styled-rings";
 import whiteArrow from "../rings/img/white-arrow.svg";
@@ -31,7 +70,7 @@ export const AlcorTalisman = (props) => {
   const { card, setCard, setShowPopup } = props;
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
-  const [alcorStone, setAlcorStone] = useState('1a');
+  const [alcorStone, setAlcorStone] = useState('1a-t');
   const [showDescr, setShowDescr] = useState(false);
   const [openZoomImage, setOpenZoomImage] = useState(false);
   const [indexImg, setIndexImg] = useState(1);
@@ -112,9 +151,27 @@ export const AlcorTalisman = (props) => {
       },
     ],
   };
+  const settingsStones = {
+    className: "stones-slider",
+    dots: false,
+    infinite: true,
+    speed: 500,
+    autoplaySpeed: 3000,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    accessibility: false,
+    autoplay: false,
+    arrows: true,
+    centerMode: true,
+    focusOnSelect: true,
+    centerPadding: 0,
+    beforeChange: (current, next) => {
+      setAlcorStone(`${next + 1}a-t`)
+    }
+  };
   const buyAlcor = () => {
-    const arr1 = [{ product: "alcor", stone: alcorStone, price: 6700 }];
-    const checkedItem = card.filter((value) => value.product !== "alcor");
+    const arr1 = [{ product: "alcorTalisman", stone: alcorStone, price: 8750 }];
+    const checkedItem = card.filter((value) => value.product !== "alcorTalisman");
     setCard(() => [...checkedItem, ...arr1]);
     setShowPopup(true);
   };
@@ -165,7 +222,7 @@ export const AlcorTalisman = (props) => {
       </div>
     );
   };
-
+  /*eslint-disable no-self-compare */
   const sliderReferral = useRef<Slider | null>(null);
 
   useEffect(() => {
@@ -285,7 +342,7 @@ export const AlcorTalisman = (props) => {
               </WrapperZoom>,
               document.body
             )}
-          }
+
           <Slider {...settingsTwo} asNavFor={nav1} ref={(slider2) => setNav2(slider2)} swipeToSlide={true} focusOnSelect={true}>
             <div>
               <img src={one} alt="JewelCocktail"/>
@@ -316,28 +373,155 @@ export const AlcorTalisman = (props) => {
         <ChooseStone>
           <p>выбери вставку</p>
           <WrapStone>
-            <div onClick={() => setAlcorStone('1a')} className={alcorStone === '1a' ? 'active' : 'not' }>
-              <img src={oneStone} alt="JewelCocktail"/>
-            </div>
-            <div onClick={() => setAlcorStone('2a')} className={alcorStone === '2a' ? 'active' : 'not' }>
-              <img src={twoStone} alt="JewelCocktail"/>
-            </div>
-            <div onClick={() => setAlcorStone('3a')} className={alcorStone === '3a' ? 'active' : 'not' }>
-              <img src={threeStone} alt="JewelCocktail"/>
-            </div>
-            <div onClick={() => setAlcorStone('4a')} className={alcorStone === '4a' ? 'active' : 'not' }>
-              <img src={fourStone} alt="JewelCocktail"/>
-            </div>
-            <div onClick={() => setAlcorStone('5a')} className={alcorStone === '5a' ? 'active' : 'not' }>
-              <img src={fiveStone} alt="JewelCocktail"/>
-            </div>
+            <Slider {...settingsStones}>
+              <div>
+                <img src={oneS} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={twoS} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={threeS} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={fourS} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={fiveS} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={sixS} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={sevenS} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={eighS} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={nine} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={ten} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={eleven} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={twelve} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={thirteen} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={fourteen} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={fifteen} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={sixteen} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={seventeen} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={eightteen} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={nineteen} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={twenty} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={twentyone} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={twentytwo} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={twentythree} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={twentyfour} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={twentyfive} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={twentysix} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={twentyseven} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={twentyeight} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={twentynine} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={thirty} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={thirtyone} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={thirtytwo} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={thirtythree} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={thirtyfour} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={thirtyfive} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={thirtysix} alt="JewelCocktail"/>
+              </div>
+
+            </Slider>
           </WrapStone>
           <p className="description">
-            { alcorStone === '1a' && "роза - символ страсти, красоты, энергии и любви"}
-            { alcorStone === '2a' && "океан - символ творчества,мечты, свободы и созидания"}
-            { alcorStone === '3a' && "жемчуг - символизирует чистоту, силу воли и благополучие"}
-            { alcorStone === '4a' && "родохрозит - романтичный камень, олицетворяет нежность и любовь"}
-            { alcorStone === '5a' && "авантюрин - оптимизм, успех и удача на вашей стороне"}
+            { alcorStone === '1a-t' && "Змеевик — поглотитель негативной энергии и защитник."}
+            { alcorStone === '2a-t' && "Агат - приносит здоровье, счастье и долголетие."}
+            { alcorStone === '3a-t' && "Агат - приносит здоровье, счастье и долголетие."}
+            { alcorStone === '4a-t' && "Яшма — источник доброй энергии. "}
+            { alcorStone === '5a-t' && "Говлит - официально был описан только в конце XIX века"}
+            { alcorStone === '6a-t' && "Обсидиан - является мощным поглотителем энергии и хранителем информации."}
+            { alcorStone === '7a-t' && "Яшма — источник доброй энергии."}
+            { alcorStone === '8a-t' && "Пирит - укрепляющет нервную систему"}
+            { alcorStone === '9a-t' && "Тигровый глаз — камень мудрецов и правителей."}
+            { alcorStone === '10a-t' && "Натуральный жемчуг — кладезь ценных микроэлементов."}
+            { alcorStone === '11a-t' && "Натуральный жемчуг — кладезь ценных микроэлементов."}
+            { alcorStone === '12a-t' && "Натуральный жемчуг — кладезь ценных микроэлементов."}
+            { alcorStone === '13a-t' && "Гематит - один из сильнейших магических камней."}
+            { alcorStone === '14a-t' && "Родохрозит - имеет удивительные свойства"}
+            { alcorStone === '15a-t' && "Яшма — источник доброй энергии."}
+            { alcorStone === '16a-t' && "Нефрит - является олицетворением пяти качеств человека."}
+            { alcorStone === '17a-t' && "Орех — дерево победы над внешними обстоятельствами."}
+            { alcorStone === '18a-t' && "Сандалу - могущественная стихия Воздуха."}
+            { alcorStone === '19a-t' && "Красное дерево - помогает человеку жить в гармонии с природой."}
+            { alcorStone === '20a-t' && "Авантюрин - является амулетом в любовных отношениях."}
+            { alcorStone === '21a-t' && "Оникс - обладает сильной энергетикой."}
+            { alcorStone === '22a-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
+            { alcorStone === '23a-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
+            { alcorStone === '24a-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
+            { alcorStone === '25a-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
+            { alcorStone === '26a-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
+            { alcorStone === '27a-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
+            { alcorStone === '28a-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
+            { alcorStone === '29a-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
+            { alcorStone === '30a-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
+            { alcorStone === '31a-t' && "Голубой опал - способен поддерживать таланты своего владельца."}
+            { alcorStone === '32a-t' && "Огненно-снежный опал - способен поддерживать таланты своего владельца."}
+            { alcorStone === '33a-t' && "Мрамор - быстро подстраивается под энергетику хозяина."}
+            { alcorStone === '34a-t' && "Мрамор - быстро подстраивается под энергетику хозяина."}
+            { alcorStone === '35a-t' && "Серебро — это лунный металл."}
+            { alcorStone === '36a-t' && "Серебро — это лунный металл."}
           </p>
         </ChooseStone>
         <PriceBuySection>
@@ -345,7 +529,7 @@ export const AlcorTalisman = (props) => {
             <Link to="/talisman/stone">каталог</Link>
           </p>
           <WrapPrices>
-            <p className="price">6 700 <span>₽</span></p>
+            <p className="price">8 750 <span>₽</span></p>
             {/*<p className="old-price">9 570 ₽</p>*/}
             {/*<img src={sale} alt="JewelCocktail" className="sale-icon"/>*/}
           </WrapPrices>

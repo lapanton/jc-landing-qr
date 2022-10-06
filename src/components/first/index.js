@@ -59,6 +59,7 @@ export const Main = ({langProps}) => {
             <div onClick={() => window.scrollTo({top: 4000, left: 0, behavior: 'smooth'})}><FormattedMessage id="message.aboutUs" /></div>
             <WrapDesktopLinks>
               <Link to="/shop" className="link-to-shop-desktop"><FormattedMessage id="message.shop" /></Link>
+              <Link to="/talisman" className="link-to-shop-desktop"><FormattedMessage id="message.talisman" /></Link>
               <Link to="/glass" className="link-to-shop-desktop"><FormattedMessage id="message.glass" /></Link>
             </WrapDesktopLinks>
             <div onClick={() => window.scrollTo({top: 3300, left: 0, behavior: 'smooth'})}><FormattedMessage id="message.gallery" /></div>
@@ -104,6 +105,7 @@ export const Main = ({langProps}) => {
                   </div>
                   <div onClick={() => window.scrollTo({top: 4300, left: 0, behavior: 'smooth'})}><FormattedMessage id="message.aboutUs" /></div>
                   <Link to="/shop" className="link-to-shop"><FormattedMessage id="message.shop" /></Link>
+                  <Link to="/talisman" className="link-to-shop"><FormattedMessage id="message.talisman" /></Link>
                   <Link to="/glass" className="link-to-shop"><FormattedMessage id="message.glass" /></Link>
                   <div onClick={() => window.scrollTo({top: 4225, left: 0, behavior: 'smooth'})}><FormattedMessage id="message.gallery" /></div>
                   <div onClick={() => window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })}><FormattedMessage id="message.contacts" /></div>

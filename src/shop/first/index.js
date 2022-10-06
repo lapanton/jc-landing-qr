@@ -15,7 +15,8 @@ import {
   WrapLang,
   WrapCardIcon,
   CounterCart,
-  WrapCardIconMobile
+  WrapCardIconMobile,
+  WrapDesktopLinks
 } from './main-styled'; // WrapLoadMore, InnerLoadMore,
 import logo from "./logo.png";
 import mobMenu from "./mob-menu.svg";
@@ -29,6 +30,7 @@ import enimg from './en.svg';
 import ruimg from './ru.svg';
 import cnimg from './cn.svg';
 import cardicon from './cart-icon.png';
+
 
 
 export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
@@ -86,16 +88,21 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
     }
   }, [show]);
   const talismanUrlStone  = location.pathname === "/talisman/stone";
+  const talismanUrl  = location.pathname === "/talisman";
+  const valueHeader = talismanUrl ? {height: "19rem"} : {height: "15rem"};
   return (
-    <ConttainerWrap className={sticky ? 'sticky' : ' '} style={!isMobile ? {height: "15rem"} : talismanUrlStone ? {height: "15rem"} : {}}>
+    <ConttainerWrap className={sticky ? 'sticky' : ' '} style={!isMobile ? valueHeader : talismanUrlStone ? {height: "15rem"} : {}}>
       <Wrapper>
         <Inner className={sticky ? 'sticky' : ' '}>
           <a href="/" className="wrapLogo">
             <img src={logo} alt="JewelCocktail" />
           </a>
           <WrapList>
-            {location.pathname === "/glass" && <div><Link to="/shop" className="link-to-shop-desktop"><FormattedMessage id="message.shop" /></Link></div>}
-            {location.pathname === "/shop" && <div><Link to="/glass" className="link-to-shop-desktop"><FormattedMessage id="message.glass" /></Link></div>}
+            <WrapDesktopLinks>
+              <Link to="/shop" className="link-to-shop-desktop"><FormattedMessage id="message.shop" /></Link>
+              <Link to="/talisman" className="link-to-shop-desktop"><FormattedMessage id="message.talisman" /></Link>
+              <Link to="/glass" className="link-to-shop-desktop"><FormattedMessage id="message.glass" /></Link>
+            </WrapDesktopLinks>
             <div><a href="https://jewelcocktail.com/about" target="_blank" rel="noreferrer"><FormattedMessage id="message.aboutUs" /></a></div>
             <div onClick={() => window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })}><FormattedMessage id="message.contacts" /></div>
           </WrapList>
@@ -145,8 +152,9 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
                       <rect x="15.9999" y="14" width="24" height="3" rx="1" transform="rotate(45 15.9999 14)" fill="#ffffff"/>
                     </svg>
                   </div>
-                  {location.pathname === "/glass" && <Link to="/shop" className="link-to-shop-desktop"><div><FormattedMessage id="message.shop" /></div></Link>}
-                  {location.pathname === "/shop" && <Link to="/glass" className="link-to-shop-desktop"><div><FormattedMessage id="message.glass" /></div></Link>}
+                  <Link to="/shop" className="link-to-shop"><FormattedMessage id="message.shop" /></Link>
+                  <Link to="/talisman" className="link-to-shop"><FormattedMessage id="message.talisman" /></Link>
+                  <Link to="/glass" className="link-to-shop"><FormattedMessage id="message.glass" /></Link>
                   <Link to="/#aboutus"><div><FormattedMessage id="message.aboutUs" /></div></Link>
                   <div onClick={() => window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })}><FormattedMessage id="message.contacts" /></div>
                   <WrpaMobSocial>

@@ -353,6 +353,7 @@ export const WrapMobile = styled.div`
 `;
 
 export const WrapMenu = styled.div`
+  font-family: 'organetto';
   padding: 50px 0;
   text-align: left;
   position: absolute;
@@ -367,7 +368,7 @@ export const WrapMenu = styled.div`
     color: #fff;
     padding: 20px 0;
     margin: 0 20px;
-    font-size: 16px;
+    font-size: 15px;
     font-weight: lighter;
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   }
@@ -399,9 +400,10 @@ export const WrapMenu = styled.div`
 export const WrpaMobSocial = styled.div`
   border-bottom: none !important;
   display: flex !important;
-  margin: 30px 0 0 0 !important;
+  margin: 23px 0 0 0 !important;
   justify-content: space-around !important;
   border-bottom: none !important;
+  padding-top: 0 !important;
   div {
     border-bottom: none !important;
     padding: 0 !important;
@@ -442,6 +444,12 @@ export const WrapLang = styled.div`
 export const WrapDesktopLinks = styled.span`
   white-space: nowrap;
   a:first-child {
-    margin-bottom: 10px;
+    margin-bottom: 7px;
+  }
+  a:nth-child(2n) {
+    margin-bottom: 7px;
+  }
+  a:hover {
+    text-decoration: underline;
   }
 `;

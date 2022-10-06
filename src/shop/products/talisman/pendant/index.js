@@ -23,6 +23,44 @@ import arUp from './arrowUp.png';
 
 import sale from '../sale.png';
 
+import oneS from "../../../../talisman/talismanStone/wom-stones/IMG_6136.png";
+import twoS from "../../../../talisman/talismanStone/wom-stones/IMG_6061.png";
+import threeS from "../../../../talisman/talismanStone/wom-stones/IMG_6066.png";
+import fourS from "../../../../talisman/talismanStone/wom-stones/IMG_6130.png";
+import fiveS from "../../../../talisman/talismanStone/wom-stones/IMG_6127.png";
+import sixS from "../../../../talisman/talismanStone/wom-stones/IMG_6051.png";
+import sevenS from "../../../../talisman/talismanStone/wom-stones/IMG_6137.png";
+import eighS from "../../../../talisman/talismanStone/wom-stones/IMG_6058.png";
+import nine from "../../../../talisman/talismanStone/wom-stones/IMG_6050.png";
+import ten from "../../../../talisman/talismanStone/wom-stones/IMG_6118.png";
+import eleven from "../../../../talisman/talismanStone/wom-stones/IMG_6114.png";
+import twelve from "../../../../talisman/talismanStone/wom-stones/IMG_6120.png";
+import thirteen from "../../../../talisman/talismanStone/wom-stones/IMG_6126.png";
+import fourteen from "../../../../talisman/talismanStone/wom-stones/IMG_6133.png";
+import fifteen from "../../../../talisman/talismanStone/wom-stones/IMG_6129.png";
+import sixteen from "../../../../talisman/talismanStone/wom-stones/IMG_6131.png";
+import seventeen from "../../../../talisman/talismanStone/wom-stones/IMG_6047.png";
+import eightteen from "../../../../talisman/talismanStone/wom-stones/IMG_6112.png";
+import nineteen from "../../../../talisman/talismanStone/wom-stones/IMG_6049.png";
+import twenty from "../../../../talisman/talismanStone/wom-stones/IMG_6134.png";
+import twentyone from "../../../../talisman/talismanStone/wom-stones/IMG_6135.png";
+import twentytwo from "../../../../talisman/talismanStone/wom-stones/IMG_6053.png";
+import twentythree from "../../../../talisman/talismanStone/wom-stones/IMG_6119.png";
+import twentyfour from "../../../../talisman/talismanStone/wom-stones/IMG_6125.png";
+import twentyfive from "../../../../talisman/talismanStone/wom-stones/IMG_6125.png";
+import twentysix from "../../../../talisman/talismanStone/wom-stones/IMG_6128.png";
+import twentyseven from "../../../../talisman/talismanStone/wom-stones/IMG_6128.png";
+import twentyeight from "../../../../talisman/talismanStone/wom-stones/IMG_6138.png";
+import twentynine from "../../../../talisman/talismanStone/wom-stones/IMG_6121.png";
+import thirty from "../../../../talisman/talismanStone/wom-stones/IMG_6124.png";
+import thirtyone from "../../../../talisman/talismanStone/wom-stones/IMG_6115.png";
+import thirtytwo from "../../../../talisman/talismanStone/wom-stones/IMG_6123.png";
+import thirtythree from "../../../../talisman/talismanStone/wom-stones/IMG_6132.png";
+import thirtyfour from "../../../../talisman/talismanStone/wom-stones/IMG_6113.png";
+import thirtyfive from "../../../../talisman/talismanStone/wom-stones/IMG_6116.png";
+import thirtysix from "../../../../talisman/talismanStone/wom-stones/IMG_6117.png";
+
+
 import {
   Wrapper,
   Inner,
@@ -124,6 +162,24 @@ export const PendantsTalisman = (props) => {
         },
       },
     ],
+  };
+  const settingsStones = {
+    className: "stones-slider",
+    dots: false,
+    infinite: true,
+    speed: 500,
+    autoplaySpeed: 3000,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    accessibility: false,
+    autoplay: false,
+    arrows: true,
+    centerMode: true,
+    focusOnSelect: true,
+    centerPadding: 0,
+    beforeChange: (current, next) => {
+      setQuasarStone(`${next + 1}p-t`)
+    }
   };
   const buyPendant = () => {
     const arr1 = [{ product: "pendantTalisman", stone: quasarStone, price: 11700 }];
@@ -298,7 +354,7 @@ export const PendantsTalisman = (props) => {
               </WrapperZoom>,
               document.body
             )}
-          }
+
           <Slider {...settingsTwo} asNavFor={nav1} ref={(slider2) => setNav2(slider2)} swipeToSlide={true} focusOnSelect={true}>
             <div>
               <img src={one} alt="JewelCocktail"/>
@@ -329,28 +385,155 @@ export const PendantsTalisman = (props) => {
         <ChooseStone>
           <p>выбери вставку</p>
           <WrapStone>
-            <div onClick={() => setQuasarStone('1p-t')} className={quasarStone === '1p-t' ? 'active' : 'not' }>
-              <img src={oneStone} alt="JewelCocktail"/>
-            </div>
-            <div onClick={() => setQuasarStone('2p-t')} className={quasarStone === '2p-t' ? 'active' : 'not' }>
-              <img src={twoStone} alt="JewelCocktail"/>
-            </div>
-            <div onClick={() => setQuasarStone('3p-t')} className={quasarStone === '3p-t' ? 'active' : 'not' }>
-              <img src={threeStone} alt="JewelCocktail"/>
-            </div>
-            <div onClick={() => setQuasarStone('4p-t')} className={quasarStone === '4p-t' ? 'active' : 'not' }>
-              <img src={fourStone} alt="JewelCocktail"/>
-            </div>
-            <div onClick={() => setQuasarStone('5p-t')} className={quasarStone === '5p-t' ? 'active' : 'not' }>
-              <img src={fiveStone} alt="JewelCocktail"/>
-            </div>
+            <Slider {...settingsStones}>
+              <div>
+                <img src={oneS} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={twoS} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={threeS} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={fourS} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={fiveS} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={sixS} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={sevenS} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={eighS} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={nine} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={ten} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={eleven} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={twelve} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={thirteen} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={fourteen} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={fifteen} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={sixteen} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={seventeen} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={eightteen} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={nineteen} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={twenty} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={twentyone} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={twentytwo} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={twentythree} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={twentyfour} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={twentyfive} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={twentysix} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={twentyseven} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={twentyeight} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={twentynine} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={thirty} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={thirtyone} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={thirtytwo} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={thirtythree} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={thirtyfour} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={thirtyfive} alt="JewelCocktail"/>
+              </div>
+              <div>
+                <img src={thirtysix} alt="JewelCocktail"/>
+              </div>
+
+            </Slider>
           </WrapStone>
           <p className="description">
-            { quasarStone === '1p-t' && "роза - символ страсти, красоты, энергии и любви"}
-            { quasarStone === '2p-t' && "океан - символ творчества,мечты, свободы и созидания"}
-            { quasarStone === '3p-t' && "жемчуг - символизирует чистоту, силу воли и благополучие"}
-            { quasarStone === '4p-t' && "родохрозит - романтичный камень, олицетворяет нежность и любовь"}
-            { quasarStone === '5p-t' && "авантюрин - оптимизм, успех и удача на вашей стороне"}
+            { quasarStone === '1p-t' && "Змеевик — поглотитель негативной энергии и защитник."}
+            { quasarStone === '2p-t' && "Агат - приносит здоровье, счастье и долголетие."}
+            { quasarStone === '3p-t' && "Агат - приносит здоровье, счастье и долголетие."}
+            { quasarStone === '4p-t' && "Яшма — источник доброй энергии. "}
+            { quasarStone === '5p-t' && "Говлит - официально был описан только в конце XIX века"}
+            { quasarStone === '6p-t' && "Обсидиан - является мощным поглотителем энергии и хранителем информации."}
+            { quasarStone === '7p-t' && "Яшма — источник доброй энергии."}
+            { quasarStone === '8p-t' && "Пирит - укрепляющет нервную систему"}
+            { quasarStone === '9p-t' && "Тигровый глаз — камень мудрецов и правителей."}
+            { quasarStone === '10p-t' && "Натуральный жемчуг — кладезь ценных микроэлементов."}
+            { quasarStone === '11p-t' && "Натуральный жемчуг — кладезь ценных микроэлементов."}
+            { quasarStone === '12p-t' && "Натуральный жемчуг — кладезь ценных микроэлементов."}
+            { quasarStone === '13p-t' && "Гематит - один из сильнейших магических камней."}
+            { quasarStone === '14p-t' && "Родохрозит - имеет удивительные свойства"}
+            { quasarStone === '15p-t' && "Яшма — источник доброй энергии."}
+            { quasarStone === '16p-t' && "Нефрит - является олицетворением пяти качеств человека."}
+            { quasarStone === '17p-t' && "Орех — дерево победы над внешними обстоятельствами."}
+            { quasarStone === '18p-t' && "Сандалу - могущественная стихия Воздуха."}
+            { quasarStone === '19p-t' && "Красное дерево - помогает человеку жить в гармонии с природой."}
+            { quasarStone === '20p-t' && "Авантюрин - является амулетом в любовных отношениях."}
+            { quasarStone === '21p-t' && "Оникс - обладает сильной энергетикой."}
+            { quasarStone === '22p-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
+            { quasarStone === '23p-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
+            { quasarStone === '24p-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
+            { quasarStone === '25p-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
+            { quasarStone === '26p-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
+            { quasarStone === '27p-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
+            { quasarStone === '28p-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
+            { quasarStone === '29p-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
+            { quasarStone === '30p-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
+            { quasarStone === '31p-t' && "Голубой опал - способен поддерживать таланты своего владельца."}
+            { quasarStone === '32p-t' && "Огненно-снежный опал - способен поддерживать таланты своего владельца."}
+            { quasarStone === '33p-t' && "Мрамор - быстро подстраивается под энергетику хозяина."}
+            { quasarStone === '34p-t' && "Мрамор - быстро подстраивается под энергетику хозяина."}
+            { quasarStone === '35p-t' && "Серебро — это лунный металл."}
+            { quasarStone === '36p-t' && "Серебро — это лунный металл."}
           </p>
         </ChooseStone>
         <PriceBuySection>

@@ -49,6 +49,7 @@ export const Inner = styled.div`
   }
   @media screen and (max-width: 1200px) {
     padding: 0;
+margin: 20px 30px;
   }
   @media screen and (max-width: 968px) {
     padding: 0;
@@ -426,6 +427,7 @@ export const WrapMobile = styled.div`
 `;
 
 export const WrapMenu = styled.div`
+  font-family: 'organetto';
   padding: 50px 0;
   text-align: left;
   position: absolute;
@@ -444,10 +446,6 @@ export const WrapMenu = styled.div`
     font-weight: lighter;
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   }
-  a div, a {
-    color: #fff;
-    text-decoration: none;
-  }
   .closeIcon {
     position: absolute;
     top: 0;
@@ -460,7 +458,22 @@ export const WrapMenu = styled.div`
       right: 20px;
     }
   }
+  .link-to-shop {
+    color: #fff;
+    padding: 20px 0;
+    margin: 0 20px;
+    font-size: 15px;
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    text-decoration: none;
+    width: 100%;
+    display: block;
+  }
+  a  {
+    text-decoration: none;
+  }
 `;
+
 
 export const WrpaMobSocial = styled.div`
   border-bottom: none !important;
@@ -502,5 +515,19 @@ export const WrapLang = styled.div`
       border: 1px solid #fff;
       border-radius: 50%;
     }
+  }
+`;
+export const WrapDesktopLinks = styled.span`
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  a:first-child {
+    margin-bottom: 7px;
+  }
+  a:nth-child(2n) {
+    margin-bottom: 7px;
+  }
+  a:hover {
+    text-decoration: underline;
   }
 `;

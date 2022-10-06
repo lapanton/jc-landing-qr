@@ -381,6 +381,147 @@ export const Popup = (props) => {
                   :
                   null
                 }
+
+                {item.product === "pendantTalisman" ?
+                  <>
+                    <RemoveItem onClick={() => removeItem(item)}>
+                      <div style={{ textAlign: "right" }}>
+                        <img src={close} alt="JewelCocktail" style={{ maxWidth: "18px", opacity: "0.7" }}/>
+                      </div>
+                    </RemoveItem>
+                    <div style={{ textAlign: "center" }}><img style={{maxWidth: "100px"}} src={pendantImg} alt="JewelCocktail"/></div>
+                    <WrapProductDescription>
+                      <div style={{ textAlign: "left" }}>
+                        <span style={{ color: "#727070", marginBottom: "10px", display: "inline-block", textAlign: "center", marginTop: "10px" }}>
+                          талисман-кулон женский
+                        </span>
+                        <WrapCardPrice>
+                          <div className="price-card">Цена: <span style={{ bottom: 0, left: "inherit", right: 0 }} className="price-card-new">{currentPrice} ₽ </span></div>
+                          {/*<img src={sales} alt="JewelCocktail" className="card-icon-sale" />*/}
+                        </WrapCardPrice>
+                      </div>
+
+                    </WrapProductDescription>
+                    <br/>
+                    <hr/>
+                    <br/>
+                  </>
+                  :
+                  null
+                }
+
+                {item.product === "ringTalisman" ?
+                  <>
+                    <RemoveItem onClick={() => removeItem(item)}>
+                      <div style={{ textAlign: "right" }}>
+                        <img src={close} alt="JewelCocktail" style={{ maxWidth: "18px", opacity: "0.7" }}/>
+                      </div>
+                    </RemoveItem>
+                    <div style={{ textAlign: "center" }}><img style={{maxWidth: "100px"}} src={ringImg} alt="JewelCocktail"/></div>
+                    <WrapProductDescription>
+                      <div style={{ textAlign: "left" }}>
+                        <span style={{ color: "#727070", marginBottom: "10px", display: "inline-block", textAlign: "center", marginTop: "10px" }}>
+                          женское Кольцо-талисман
+                        </span>
+                        <WrapCardPrice>
+                          <div className="price-card">Цена: <span style={{ bottom: 0, left: "inherit", right: 0 }} className="price-card-new">{currentPrice} ₽ </span></div>
+                          {/*<img src={sales} alt="JewelCocktail" className="card-icon-sale" />*/}
+                        </WrapCardPrice>
+                      </div>
+
+                    </WrapProductDescription>
+                    <br/>
+                    <hr/>
+                    <br/>
+                  </>
+                  :
+                  null
+                }
+
+                {item.product === "alcorTalisman" ?
+                  <>
+                    <RemoveItem onClick={() => removeItem(item)}>
+                      <div style={{ textAlign: "right" }}>
+                        <img src={close} alt="JewelCocktail" style={{ maxWidth: "18px", opacity: "0.7" }}/>
+                      </div>
+                    </RemoveItem>
+                    <div style={{ textAlign: "center" }}><img style={{maxWidth: "100px"}} src={alcorImg} alt="JewelCocktail"/></div>
+                    <WrapProductDescription>
+                      <div style={{ textAlign: "left" }}>
+                        <span style={{ color: "#727070", marginBottom: "10px", display: "inline-block", textAlign: "center", marginTop: "10px" }}>
+                          женскии браслет-талисман
+                        </span>
+                        <WrapCardPrice>
+                          <div className="price-card">Цена: <span style={{ bottom: 0, left: "inherit", right: 0 }} className="price-card-new">{currentPrice} ₽ </span></div>
+                          {/*<img src={sales} alt="JewelCocktail" className="card-icon-sale" />*/}
+                        </WrapCardPrice>
+                      </div>
+
+                    </WrapProductDescription>
+                    <br/>
+                    <hr/>
+                    <br/>
+                  </>
+                  :
+                  null
+                }
+
+                {item.product === "gidorTalisman" ?
+                  <>
+                    <RemoveItem onClick={() => removeItem(item)}>
+                      <div style={{ textAlign: "right" }}>
+                        <img src={close} alt="JewelCocktail" style={{ maxWidth: "18px", opacity: "0.7" }}/>
+                      </div>
+                    </RemoveItem>
+                    <div style={{ textAlign: "center" }}><img style={{maxWidth: "100px"}} src={gidorImg} alt="JewelCocktail"/></div>
+                    <WrapProductDescription>
+                      <div style={{ textAlign: "left" }}>
+                        <span style={{ color: "#727070", marginBottom: "10px", display: "inline-block", textAlign: "center", marginTop: "10px" }}>
+                          мужской кулон-талисман
+                        </span>
+                        <WrapCardPrice>
+                          <div className="price-card">Цена: <span style={{ bottom: 0, left: "inherit", right: 0 }} className="price-card-new">{currentPrice} ₽ </span></div>
+                          {/*<img src={sales} alt="JewelCocktail" className="card-icon-sale" />*/}
+                        </WrapCardPrice>
+                      </div>
+
+                    </WrapProductDescription>
+                    <br/>
+                    <hr/>
+                    <br/>
+                  </>
+                  :
+                  null
+                }
+
+                {item.product === "dorsTalisman" ?
+                  <>
+                    <RemoveItem onClick={() => removeItem(item)}>
+                      <div style={{ textAlign: "right" }}>
+                        <img src={close} alt="JewelCocktail" style={{ maxWidth: "18px", opacity: "0.7" }}/>
+                      </div>
+                    </RemoveItem>
+                    <div style={{ textAlign: "center" }}><img style={{maxWidth: "100px"}} src={dorsImg} alt="JewelCocktail"/></div>
+                    <WrapProductDescription>
+                      <div style={{ textAlign: "left" }}>
+                        <span style={{ color: "#727070", marginBottom: "10px", display: "inline-block", textAlign: "center", marginTop: "10px" }}>
+                          мужской браслет-талисман
+                        </span>
+                        <WrapCardPrice>
+                          <div className="price-card">Цена: <span style={{ bottom: 0, left: "inherit", right: 0 }} className="price-card-new">{currentPrice} ₽ </span></div>
+                          {/*<img src={sales} alt="JewelCocktail" className="card-icon-sale" />*/}
+                        </WrapCardPrice>
+                      </div>
+
+                    </WrapProductDescription>
+                    <br/>
+                    <hr/>
+                    <br/>
+                  </>
+                  :
+                  null
+                }
+
               </div>
             )
           })
