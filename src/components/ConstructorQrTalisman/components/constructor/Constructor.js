@@ -290,7 +290,7 @@ export const ConstructorTalisman = (props) => {
                     <>
                       <WrapPhoneEmail style={{marginTop: "50px"}}>
                         {!(pathname.includes('/letter') || pathname.includes('/qr/')) && (
-                          <div className="numberPhone"><div>Номер Телефона:</div> <input value={phone} type="tel" name="phone" onChange={handleChangePhone} /></div>
+                          <div className="numberPhone" style={{display: "none"}}><div>Номер Телефона:</div> <input value={phone} type="tel" name="phone" onChange={handleChangePhone} /></div>
                         )}
                         <div className="emailUser"><div>Email:</div> <input value={authorEmail} type="email" name="authorEmail" onChange={handleChangeAuthorEmail} /></div>
                       </WrapPhoneEmail>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Wrapper, WrapText, InnerWrapSelfProduct, WrapRight } from "./selfProduct-styled";
 import conselation from './constellation.png';
-import telPhone from './telPhone.png';
+import telPhone from './phone_preview.gif';
 
 export const ExampleTalisman = () => {
   return (

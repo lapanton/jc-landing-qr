@@ -36,6 +36,29 @@ import cardicon from './cart-icon.png';
 export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
   const { locale, onLocaleChange} = langProps;
 
+  const [width, setWidth] = useState(window.innerWidth);
+  const [sticky, setSticky] = useState(false);
+
+  const isMobile = width <= 768;
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname !== "/talisman" || location.pathname !== "/talisman/stone") {
+      // const canv = document.createElement("canvas");
+      // canv.setAttribute("id", "main-canvas");
+      // document.body.appendChild(canv);
+      document.getElementById('main-canvas').style.display = "block";
+    }
+    if (location.pathname === "/talisman" || location.pathname === "/talisman/stone") {
+      // document.getElementsByTagName('canvas')[0].remove();
+      // document.body.style.background = '#000';
+      document.getElementById('main-canvas').style.display = "none";
+
+    }
+
+  }, []);
+
+
   useEffect(() => {
     window.addEventListener('scroll', isSticky);
     return () => {
@@ -43,7 +66,6 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
     };
   });
 
-  const [sticky, setSticky] = useState(false);
 
   const isSticky = () => {
     const scrollTop = window.scrollY;
@@ -67,7 +89,6 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
     setShowPopup(true);
   };
 
-  const [width, setWidth] = useState(window.innerWidth);
   const handleWindowSizeChange = () => {
     setWidth(window.innerWidth);
   }
@@ -77,8 +98,7 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
       window.removeEventListener('resize', handleWindowSizeChange);
     }
   }, []);
-  const isMobile = width <= 768;
-  const location = useLocation();
+
 
   useEffect(() => {
     if (show) {

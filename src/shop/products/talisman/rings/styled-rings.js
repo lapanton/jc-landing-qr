@@ -335,19 +335,19 @@ export const ChooseSize = styled.div`
 `;
 
 export const SizeButton = styled.span`
-  background: rgba(255, 255, 255, 0.17);
-  border-radius: 5px;
+  //background: rgba(255, 255, 255, 0.17);
+  //border-radius: 5px;
   text-transform: uppercase;
   color: #FFFFFF;
   font-size: 15px;
   padding: 5px 10px;
-  &.active {
-    background: #fff;
-    color: #363636;
-  }
-  &:hover {
-    cursor: pointer;
-  }
+  //&.active {
+  //  background: #fff;
+  //  color: #363636;
+  //}
+  //&:hover {
+  //  cursor: pointer;
+  //}
 `;
 
 export const PriceBuySection = styled.div`
