@@ -7,6 +7,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import removeIcon from "./remove.png";
+
 import {
   Wrapper,
   WrapConstructorArea,
@@ -41,7 +43,7 @@ import ramka from './ramka.png';
 import result from './result.png';
 import plus from './plus.png';
 import {BounceAnimation} from "../../../../animation/BounceAnimation";
-import {ConfettiAnimation} from "../../../../animation/Confetti";
+// import {ConfettiAnimation} from "../../../../animation/Confetti";
 
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -67,13 +69,20 @@ export const ConstructorTalisman = (props) => {
 
     setFiles([...files, ...newFiles]);
 
-  }, [files])
+  }, [files]);
+
+  const remove = file => {
+    // console.log('file', file, files);
+    const newArray = files.filter((val) => val.name !== file.name);
+    setFiles(newArray);
+  };
 
     const {getRootProps, getInputProps} = useDropzone({
       accept: 'image/*',
       maxFiles: 10,
       maxSize: 31457280,
       onDrop,
+      remove
     });
 
     const thumbs = files.map(file => (
@@ -83,6 +92,9 @@ export const ConstructorTalisman = (props) => {
             src={file.preview}
           />
         </ThumbInner>
+        <div className="remove-xxxx" onClick={() => remove(file)}>
+          <img src={removeIcon} alt="JewelCocktail"/>
+        </div>
       </Thumb>
     ));
 
@@ -192,9 +204,9 @@ export const ConstructorTalisman = (props) => {
   return (
     <Wrapper>
         <h2 className={value?.status === 'completed' ? "completed": "notcompleted"}>Конструктор послания</h2>
-      {value?.status === 'completed' && hide &&  (
-        <ConfettiAnimation/>
-      )}
+      {/*{value?.status === 'completed' && hide &&  (*/}
+      {/*  <ConfettiAnimation/>*/}
+      {/*)}*/}
         <WrapConstructorArea>
           <SideArea className={value?.status === 'completed' ? "completed": "notcompleted"}>
 
@@ -240,6 +252,7 @@ export const ConstructorTalisman = (props) => {
               <p>Добавьте до 3 изображений</p>
               <InnerPhoto>
                 <section className="container">
+
                   <ThumbsContainer>
                     {thumbs}
                   </ThumbsContainer>

@@ -275,6 +275,7 @@ export const ThumbsContainer = styled.aside`
 `;
 
 export const Thumb = styled.div`
+  position: relative;
   display: inline-flex;
   border-radius: 2px;
   border: 1px solid #eaeaea;
@@ -284,6 +285,21 @@ export const Thumb = styled.div`
   height: 100px;
   padding: 4px;
   box-sizing: border-box;
+  img {
+    max-width: 100%;
+  }
+  .remove-xxxx {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    border-radius: 50%;
+    max-width: 50px;
+    width: 15px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
 `;
 
 export const ThumbInner = styled.div`
