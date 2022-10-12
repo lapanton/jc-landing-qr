@@ -30,30 +30,28 @@ import ten from "../../../../talisman/talismanStone/wom-stones/IMG_6118.png";
 import eleven from "../../../../talisman/talismanStone/wom-stones/IMG_6114.png";
 import twelve from "../../../../talisman/talismanStone/wom-stones/IMG_6120.png";
 import thirteen from "../../../../talisman/talismanStone/wom-stones/IMG_6126.png";
-import fourteen from "../../../../talisman/talismanStone/wom-stones/IMG_6133.png";
-import fifteen from "../../../../talisman/talismanStone/wom-stones/IMG_6129.png";
-import sixteen from "../../../../talisman/talismanStone/wom-stones/IMG_6131.png";
-import seventeen from "../../../../talisman/talismanStone/wom-stones/IMG_6047.png";
-import eightteen from "../../../../talisman/talismanStone/wom-stones/IMG_6112.png";
-import nineteen from "../../../../talisman/talismanStone/wom-stones/IMG_6049.png";
-import twenty from "../../../../talisman/talismanStone/wom-stones/IMG_6134.png";
-import twentyone from "../../../../talisman/talismanStone/wom-stones/IMG_6135.png";
-import twentytwo from "../../../../talisman/talismanStone/wom-stones/IMG_6053.png";
-import twentythree from "../../../../talisman/talismanStone/wom-stones/IMG_6119.png";
-import twentyfour from "../../../../talisman/talismanStone/wom-stones/IMG_6125.png";
+import fourteen from "../../../../talisman/talismanStone/wom-stones/IMG_6060.png";
+import fifteen from "../../../../talisman/talismanStone/wom-stones/IMG_6133.png";
+import sixteen from "../../../../talisman/talismanStone/wom-stones/IMG_6129.png";
+import seventeen from "../../../../talisman/talismanStone/wom-stones/IMG_6131.png";
+import eightteen from "../../../../talisman/talismanStone/wom-stones/IMG_6047.png";
+import nineteen from "../../../../talisman/talismanStone/wom-stones/IMG_6112.png";
+import twenty from "../../../../talisman/talismanStone/wom-stones/IMG_6049.png";
+import twentyone from "../../../../talisman/talismanStone/wom-stones/IMG_6134.png";
+import twentytwo from "../../../../talisman/talismanStone/wom-stones/IMG_6135.png";
+import twentythree from "../../../../talisman/talismanStone/wom-stones/IMG_6053.png";
+import twentyfour from "../../../../talisman/talismanStone/wom-stones/IMG_6119.png";
 import twentyfive from "../../../../talisman/talismanStone/wom-stones/IMG_6125.png";
 import twentysix from "../../../../talisman/talismanStone/wom-stones/IMG_6128.png";
-import twentyseven from "../../../../talisman/talismanStone/wom-stones/IMG_6128.png";
-import twentyeight from "../../../../talisman/talismanStone/wom-stones/IMG_6138.png";
-import twentynine from "../../../../talisman/talismanStone/wom-stones/IMG_6121.png";
-import thirty from "../../../../talisman/talismanStone/wom-stones/IMG_6124.png";
-import thirtyone from "../../../../talisman/talismanStone/wom-stones/IMG_6115.png";
-import thirtytwo from "../../../../talisman/talismanStone/wom-stones/IMG_6123.png";
-import thirtythree from "../../../../talisman/talismanStone/wom-stones/IMG_6132.png";
-import thirtyfour from "../../../../talisman/talismanStone/wom-stones/IMG_6113.png";
-import thirtyfive from "../../../../talisman/talismanStone/wom-stones/IMG_6116.png";
-import thirtysix from "../../../../talisman/talismanStone/wom-stones/IMG_6117.png";
-
+import twentyseven from "../../../../talisman/talismanStone/wom-stones/IMG_6138.png";
+import twentyeight from "../../../../talisman/talismanStone/wom-stones/IMG_6121.png";
+import twentynine from "../../../../talisman/talismanStone/wom-stones/IMG_6124.png";
+import thirty from "../../../../talisman/talismanStone/wom-stones/IMG_6115.png";
+import thirtyone from "../../../../talisman/talismanStone/wom-stones/IMG_6123.png";
+import thirtytwo from "../../../../talisman/talismanStone/wom-stones/IMG_6132.png";
+import thirtythree from "../../../../talisman/talismanStone/wom-stones/IMG_6113.png";
+import thirtyfour from "../../../../talisman/talismanStone/wom-stones/IMG_6116.png";
+import thirtyfive from "../../../../talisman/talismanStone/wom-stones/IMG_6117.png";
 
 
 // import sale from '../sale.png';
@@ -166,6 +164,7 @@ export const RingsTalisman = (props) => {
     centerMode: true,
     focusOnSelect: true,
     centerPadding: 0,
+    swipeToSlide: true,
     beforeChange: (current, next) => {
       setRingStone(`${next + 1}r-t`)
     }
@@ -462,9 +461,6 @@ export const RingsTalisman = (props) => {
               <div>
                 <img src={thirtyfive} alt="JewelCocktail"/>
               </div>
-              <div>
-                <img src={thirtysix} alt="JewelCocktail"/>
-              </div>
 
             </Slider>
           </WrapStone>
@@ -481,30 +477,29 @@ export const RingsTalisman = (props) => {
             { ringStone === '10r-t' && "Натуральный жемчуг — кладезь ценных микроэлементов."}
             { ringStone === '11r-t' && "Натуральный жемчуг — кладезь ценных микроэлементов."}
             { ringStone === '12r-t' && "Натуральный жемчуг — кладезь ценных микроэлементов."}
-            { ringStone === '13r-t' && "Гематит - один из сильнейших магических камней."}
-            { ringStone === '14r-t' && "Родохрозит - имеет удивительные свойства"}
-            { ringStone === '15r-t' && "Яшма — источник доброй энергии."}
-            { ringStone === '16r-t' && "Нефрит - является олицетворением пяти качеств человека."}
-            { ringStone === '17r-t' && "Орех — дерево победы над внешними обстоятельствами."}
-            { ringStone === '18r-t' && "Сандалу - могущественная стихия Воздуха."}
-            { ringStone === '19r-t' && "Красное дерево - помогает человеку жить в гармонии с природой."}
-            { ringStone === '20r-t' && "Авантюрин - является амулетом в любовных отношениях."}
-            { ringStone === '21r-t' && "Оникс - обладает сильной энергетикой."}
-            { ringStone === '22r-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
-            { ringStone === '23r-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
+            { ringStone === '13r-t' && "Яшма — источник доброй энергии."}
+            { ringStone === '14r-t' && "Гематит - один из сильнейших магических камней."}
+            { ringStone === '15r-t' && "Родохрозит - имеет удивительные свойства."}
+            { ringStone === '16r-t' && "Яшма — источник доброй энергии."}
+            { ringStone === '17r-t' && "Нефрит - является олицетворением пяти качеств человека."}
+            { ringStone === '18r-t' && "Орех — дерево победы над внешними обстоятельствами."}
+            { ringStone === '19r-t' && "Сандалу - могущественная стихия Воздуха."}
+            { ringStone === '20r-t' && "Красное дерево - помогает человеку жить в гармонии с природой."}
+            { ringStone === '21r-t' && "Авантюрин - является амулетом в любовных отношениях."}
+            { ringStone === '22r-t' && "Авантюрин - является амулетом в любовных отношениях."}
+            { ringStone === '23r-t' && "Оникс - обладает сильной энергетикой."}
             { ringStone === '24r-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
             { ringStone === '25r-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
             { ringStone === '26r-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
             { ringStone === '27r-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
             { ringStone === '28r-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
-            { ringStone === '29r-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
-            { ringStone === '30r-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
-            { ringStone === '31r-t' && "Голубой опал - способен поддерживать таланты своего владельца."}
-            { ringStone === '32r-t' && "Огненно-снежный опал - способен поддерживать таланты своего владельца."}
-            { ringStone === '33r-t' && "Мрамор - быстро подстраивается под энергетику хозяина."}
-            { ringStone === '34r-t' && "Мрамор - быстро подстраивается под энергетику хозяина."}
+            { ringStone === '29r-t' && "Лунно-зеленый опал по древним поверьям способен поддерживать таланты своего владельца."}
+            { ringStone === '30r-t' && "Голубой опал - способен поддерживать таланты своего владельца."}
+            { ringStone === '31r-t' && "Огненно-снежный опал - способен поддерживать таланты своего владельца."}
+            { ringStone === '32r-t' && "Мрамор - быстро подстраивается под энергетику хозяина."}
+            { ringStone === '33r-t' && "Серебро — это лунный металл."}
+            { ringStone === '34r-t' && "Серебро — это лунный металл."}
             { ringStone === '35r-t' && "Серебро — это лунный металл."}
-            { ringStone === '36r-t' && "Серебро — это лунный металл."}
           </p>
         </ChooseStone>
         <ChooseSize>

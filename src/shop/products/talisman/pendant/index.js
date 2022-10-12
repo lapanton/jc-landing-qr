@@ -9,17 +9,17 @@ import four from './img/4.png';
 import five from './img/5.png';
 
 
-import oneStone from './stone/1.png';
-import twoStone from './stone/2.png';
-import threeStone from './stone/3.png';
-import fourStone from './stone/4.png';
-import fiveStone from './stone/5.png';
+// import oneStone from './stone/1.png';
+// import twoStone from './stone/2.png';
+// import threeStone from './stone/3.png';
+// import fourStone from './stone/4.png';
+// import fiveStone from './stone/5.png';
 
 import fire from './fire.png';
 import arDown from './arrowDown.png';
 import arUp from './arrowUp.png';
 
-import sale from '../sale.png';
+// import sale from '../sale.png';
 
 import oneS from "../../../../talisman/talismanStone/wom-stones/IMG_6136.png";
 import twoS from "../../../../talisman/talismanStone/wom-stones/IMG_6061.png";
@@ -34,29 +34,28 @@ import ten from "../../../../talisman/talismanStone/wom-stones/IMG_6118.png";
 import eleven from "../../../../talisman/talismanStone/wom-stones/IMG_6114.png";
 import twelve from "../../../../talisman/talismanStone/wom-stones/IMG_6120.png";
 import thirteen from "../../../../talisman/talismanStone/wom-stones/IMG_6126.png";
-import fourteen from "../../../../talisman/talismanStone/wom-stones/IMG_6133.png";
-import fifteen from "../../../../talisman/talismanStone/wom-stones/IMG_6129.png";
-import sixteen from "../../../../talisman/talismanStone/wom-stones/IMG_6131.png";
-import seventeen from "../../../../talisman/talismanStone/wom-stones/IMG_6047.png";
-import eightteen from "../../../../talisman/talismanStone/wom-stones/IMG_6112.png";
-import nineteen from "../../../../talisman/talismanStone/wom-stones/IMG_6049.png";
-import twenty from "../../../../talisman/talismanStone/wom-stones/IMG_6134.png";
-import twentyone from "../../../../talisman/talismanStone/wom-stones/IMG_6135.png";
-import twentytwo from "../../../../talisman/talismanStone/wom-stones/IMG_6053.png";
-import twentythree from "../../../../talisman/talismanStone/wom-stones/IMG_6119.png";
-import twentyfour from "../../../../talisman/talismanStone/wom-stones/IMG_6125.png";
+import fourteen from "../../../../talisman/talismanStone/wom-stones/IMG_6060.png";
+import fifteen from "../../../../talisman/talismanStone/wom-stones/IMG_6133.png";
+import sixteen from "../../../../talisman/talismanStone/wom-stones/IMG_6129.png";
+import seventeen from "../../../../talisman/talismanStone/wom-stones/IMG_6131.png";
+import eightteen from "../../../../talisman/talismanStone/wom-stones/IMG_6047.png";
+import nineteen from "../../../../talisman/talismanStone/wom-stones/IMG_6112.png";
+import twenty from "../../../../talisman/talismanStone/wom-stones/IMG_6049.png";
+import twentyone from "../../../../talisman/talismanStone/wom-stones/IMG_6134.png";
+import twentytwo from "../../../../talisman/talismanStone/wom-stones/IMG_6135.png";
+import twentythree from "../../../../talisman/talismanStone/wom-stones/IMG_6053.png";
+import twentyfour from "../../../../talisman/talismanStone/wom-stones/IMG_6119.png";
 import twentyfive from "../../../../talisman/talismanStone/wom-stones/IMG_6125.png";
 import twentysix from "../../../../talisman/talismanStone/wom-stones/IMG_6128.png";
-import twentyseven from "../../../../talisman/talismanStone/wom-stones/IMG_6128.png";
-import twentyeight from "../../../../talisman/talismanStone/wom-stones/IMG_6138.png";
-import twentynine from "../../../../talisman/talismanStone/wom-stones/IMG_6121.png";
-import thirty from "../../../../talisman/talismanStone/wom-stones/IMG_6124.png";
-import thirtyone from "../../../../talisman/talismanStone/wom-stones/IMG_6115.png";
-import thirtytwo from "../../../../talisman/talismanStone/wom-stones/IMG_6123.png";
-import thirtythree from "../../../../talisman/talismanStone/wom-stones/IMG_6132.png";
-import thirtyfour from "../../../../talisman/talismanStone/wom-stones/IMG_6113.png";
-import thirtyfive from "../../../../talisman/talismanStone/wom-stones/IMG_6116.png";
-import thirtysix from "../../../../talisman/talismanStone/wom-stones/IMG_6117.png";
+import twentyseven from "../../../../talisman/talismanStone/wom-stones/IMG_6138.png";
+import twentyeight from "../../../../talisman/talismanStone/wom-stones/IMG_6121.png";
+import twentynine from "../../../../talisman/talismanStone/wom-stones/IMG_6124.png";
+import thirty from "../../../../talisman/talismanStone/wom-stones/IMG_6115.png";
+import thirtyone from "../../../../talisman/talismanStone/wom-stones/IMG_6123.png";
+import thirtytwo from "../../../../talisman/talismanStone/wom-stones/IMG_6132.png";
+import thirtythree from "../../../../talisman/talismanStone/wom-stones/IMG_6113.png";
+import thirtyfour from "../../../../talisman/talismanStone/wom-stones/IMG_6116.png";
+import thirtyfive from "../../../../talisman/talismanStone/wom-stones/IMG_6117.png";
 
 
 import {
@@ -175,6 +174,7 @@ export const PendantsTalisman = (props) => {
     centerMode: true,
     focusOnSelect: true,
     centerPadding: 0,
+    swipeToSlide: true,
     beforeChange: (current, next) => {
       setQuasarStone(`${next + 1}p-t`)
     }
@@ -465,9 +465,6 @@ export const PendantsTalisman = (props) => {
               <div>
                 <img src={thirtyfive} alt="JewelCocktail"/>
               </div>
-              <div>
-                <img src={thirtysix} alt="JewelCocktail"/>
-              </div>
 
             </Slider>
           </WrapStone>
@@ -484,30 +481,29 @@ export const PendantsTalisman = (props) => {
             { quasarStone === '10p-t' && "Натуральный жемчуг — кладезь ценных микроэлементов."}
             { quasarStone === '11p-t' && "Натуральный жемчуг — кладезь ценных микроэлементов."}
             { quasarStone === '12p-t' && "Натуральный жемчуг — кладезь ценных микроэлементов."}
-            { quasarStone === '13p-t' && "Гематит - один из сильнейших магических камней."}
-            { quasarStone === '14p-t' && "Родохрозит - имеет удивительные свойства"}
-            { quasarStone === '15p-t' && "Яшма — источник доброй энергии."}
-            { quasarStone === '16p-t' && "Нефрит - является олицетворением пяти качеств человека."}
-            { quasarStone === '17p-t' && "Орех — дерево победы над внешними обстоятельствами."}
-            { quasarStone === '18p-t' && "Сандалу - могущественная стихия Воздуха."}
-            { quasarStone === '19p-t' && "Красное дерево - помогает человеку жить в гармонии с природой."}
-            { quasarStone === '20p-t' && "Авантюрин - является амулетом в любовных отношениях."}
-            { quasarStone === '21p-t' && "Оникс - обладает сильной энергетикой."}
-            { quasarStone === '22p-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
-            { quasarStone === '23p-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
+            { quasarStone === '13p-t' && "Яшма — источник доброй энергии."}
+            { quasarStone === '14p-t' && "Гематит - один из сильнейших магических камней."}
+            { quasarStone === '15p-t' && "Родохрозит - имеет удивительные свойства."}
+            { quasarStone === '16p-t' && "Яшма — источник доброй энергии."}
+            { quasarStone === '17p-t' && "Нефрит - является олицетворением пяти качеств человека."}
+            { quasarStone === '18p-t' && "Орех — дерево победы над внешними обстоятельствами."}
+            { quasarStone === '19p-t' && "Сандалу - могущественная стихия Воздуха."}
+            { quasarStone === '20p-t' && "Красное дерево - помогает человеку жить в гармонии с природой."}
+            { quasarStone === '21p-t' && "Авантюрин - является амулетом в любовных отношениях."}
+            { quasarStone === '22p-t' && "Авантюрин - является амулетом в любовных отношениях."}
+            { quasarStone === '23p-t' && "Оникс - обладает сильной энергетикой."}
             { quasarStone === '24p-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
             { quasarStone === '25p-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
             { quasarStone === '26p-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
             { quasarStone === '27p-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
             { quasarStone === '28p-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
-            { quasarStone === '29p-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
-            { quasarStone === '30p-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
-            { quasarStone === '31p-t' && "Голубой опал - способен поддерживать таланты своего владельца."}
-            { quasarStone === '32p-t' && "Огненно-снежный опал - способен поддерживать таланты своего владельца."}
-            { quasarStone === '33p-t' && "Мрамор - быстро подстраивается под энергетику хозяина."}
-            { quasarStone === '34p-t' && "Мрамор - быстро подстраивается под энергетику хозяина."}
+            { quasarStone === '29p-t' && "Лунно-зеленый опал по древним поверьям способен поддерживать таланты своего владельца."}
+            { quasarStone === '30p-t' && "Голубой опал - способен поддерживать таланты своего владельца."}
+            { quasarStone === '31p-t' && "Огненно-снежный опал - способен поддерживать таланты своего владельца."}
+            { quasarStone === '32p-t' && "Мрамор - быстро подстраивается под энергетику хозяина."}
+            { quasarStone === '33p-t' && "Серебро — это лунный металл."}
+            { quasarStone === '34p-t' && "Серебро — это лунный металл."}
             { quasarStone === '35p-t' && "Серебро — это лунный металл."}
-            { quasarStone === '36p-t' && "Серебро — это лунный металл."}
           </p>
         </ChooseStone>
         <PriceBuySection>

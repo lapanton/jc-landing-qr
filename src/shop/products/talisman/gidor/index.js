@@ -144,6 +144,7 @@ export const GidorTalisman = (props) => {
     centerMode: true,
     focusOnSelect: true,
     centerPadding: 0,
+    swipeToSlide: true,
     beforeChange: (current, next) => {
       setGidorStone(`${next + 1}g-t`)
     }

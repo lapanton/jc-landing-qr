@@ -521,6 +521,7 @@ export const WrapDesktopLinks = styled.span`
   white-space: nowrap;
   display: flex;
   flex-direction: column;
+  transform: translateX(-40px);
   a:first-child {
     margin-bottom: 7px;
   }

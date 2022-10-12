@@ -165,30 +165,29 @@ export const OrderForm = (props) => {
                   { item.stone === '10p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Натуральный жемчуг — кладезь ценных микроэлементов." /></>}
                   { item.stone === '11p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Натуральный жемчуг — кладезь ценных микроэлементов." /></>}
                   { item.stone === '12p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Натуральный жемчуг — кладезь ценных микроэлементов." /></>}
-                  { item.stone === '13p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Гематит - один из сильнейших магических камней." /></>}
-                  { item.stone === '14p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Родохрозит - имеет удивительные свойства" /></>}
-                  { item.stone === '15p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Яшма — источник доброй энергии." /></>}
-                  { item.stone === '16p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Нефрит - является олицетворением пяти качеств человека." /></>}
-                  { item.stone === '17p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Орех — дерево победы над внешними обстоятельствами." /></>}
-                  { item.stone === '18p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Сандалу - могущественная стихия Воздуха." /></>}
-                  { item.stone === '19p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Красное дерево - помогает человеку жить в гармонии с природой." /></>}
-                  { item.stone === '20p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Авантюрин - является амулетом в любовных отношениях." /></>}
-                  { item.stone === '21p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Оникс - обладает сильной энергетикой." /></>}
-                  { item.stone === '22p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
-                  { item.stone === '23p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
+                  { item.stone === '13p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Яшма — источник доброй энергии." /></>}
+                  { item.stone === '14p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Гематит - один из сильнейших магических камней." /></>}
+                  { item.stone === '15p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Родохрозит - имеет удивительные свойства." /></>}
+                  { item.stone === '16p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Яшма — источник доброй энергии." /></>}
+                  { item.stone === '17p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Нефрит - является олицетворением пяти качеств человека." /></>}
+                  { item.stone === '18p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Орех — дерево победы над внешними обстоятельствами." /></>}
+                  { item.stone === '19p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Сандалу - могущественная стихия Воздуха." /></>}
+                  { item.stone === '20p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Красное дерево - помогает человеку жить в гармонии с природой." /></>}
+                  { item.stone === '21p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Авантюрин - является амулетом в любовных отношениях." /></>}
+                  { item.stone === '22p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Авантюрин - является амулетом в любовных отношениях." /></>}
+                  { item.stone === '23p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Оникс - обладает сильной энергетикой." /></>}
                   { item.stone === '24p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
                   { item.stone === '25p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
                   { item.stone === '26p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
                   { item.stone === '27p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
                   { item.stone === '28p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
-                  { item.stone === '29p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
-                  { item.stone === '30p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
-                  { item.stone === '31p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Голубой опал - способен поддерживать таланты своего владельца." /></>}
-                  { item.stone === '32p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Огненно-снежный опал - способен поддерживать таланты своего владельца." /></>}
-                  { item.stone === '33p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Мрамор - быстро подстраивается под энергетику хозяина." /></>}
-                  { item.stone === '34p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Мрамор - быстро подстраивается под энергетику хозяина." /></>}
+                  { item.stone === '29p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Лунно-зеленый опал по древним поверьям способен поддерживать таланты своего владельца." /></>}
+                  { item.stone === '30p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Голубой опал - способен поддерживать таланты своего владельца." /></>}
+                  { item.stone === '31p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Огненно-снежный опал - способен поддерживать таланты своего владельца." /></>}
+                  { item.stone === '32p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Мрамор - быстро подстраивается под энергетику хозяина." /></>}
+                  { item.stone === '33p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Серебро — это лунный металл." /></>}
+                  { item.stone === '34p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Серебро — это лунный металл." /></>}
                   { item.stone === '35p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Серебро — это лунный металл." /></>}
-                  { item.stone === '36p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Серебро — это лунный металл." /></>}
                 </div>
                 :
                 null
@@ -198,42 +197,41 @@ export const OrderForm = (props) => {
               {item.product === "ringTalisman" ?
                 <div key={index}>
                   <input type="hidden" name="product_ringTalisman" value="женское кольцо-талисман" />
-                  { item.stone === '1r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Змеевик — поглотитель негативной энергии и защитник." /></>}
-                  { item.stone === '2r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Агат - приносит здоровье, счастье и долголетие." /></>}
-                  { item.stone === '3r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Агат - приносит здоровье, счастье и долголетие." /></>}
-                  { item.stone === '4r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Яшма — источник доброй энергии." /></>}
-                  { item.stone === '5r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Говлит - официально был описан только в конце XIX века" /></>}
-                  { item.stone === '6r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Обсидиан - является мощным поглотителем энергии и хранителем информации." /></>}
-                  { item.stone === '7r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Яшма — источник доброй энергии." /></>}
-                  { item.stone === '8r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Пирит - укрепляющет нервную систему" /></>}
-                  { item.stone === '9r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Тигровый глаз — камень мудрецов и правителей." /></>}
-                  { item.stone === '10r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Натуральный жемчуг — кладезь ценных микроэлементов." /></>}
-                  { item.stone === '11r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Натуральный жемчуг — кладезь ценных микроэлементов." /></>}
-                  { item.stone === '12r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Натуральный жемчуг — кладезь ценных микроэлементов." /></>}
-                  { item.stone === '13r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Гематит - один из сильнейших магических камней." /></>}
-                  { item.stone === '14r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Родохрозит - имеет удивительные свойства" /></>}
-                  { item.stone === '15r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Яшма — источник доброй энергии." /></>}
-                  { item.stone === '16r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Нефрит - является олицетворением пяти качеств человека." /></>}
-                  { item.stone === '17r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Орех — дерево победы над внешними обстоятельствами." /></>}
-                  { item.stone === '18r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Сандалу - могущественная стихия Воздуха." /></>}
-                  { item.stone === '19r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Красное дерево - помогает человеку жить в гармонии с природой." /></>}
-                  { item.stone === '20r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Авантюрин - является амулетом в любовных отношениях." /></>}
-                  { item.stone === '21r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Оникс - обладает сильной энергетикой." /></>}
-                  { item.stone === '22r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
-                  { item.stone === '23r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
-                  { item.stone === '24r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
-                  { item.stone === '25r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
-                  { item.stone === '26r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
-                  { item.stone === '27r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
-                  { item.stone === '28r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
-                  { item.stone === '29r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
-                  { item.stone === '30r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
-                  { item.stone === '31r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Голубой опал - способен поддерживать таланты своего владельца." /></>}
-                  { item.stone === '32r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Огненно-снежный опал - способен поддерживать таланты своего владельца." /></>}
-                  { item.stone === '33r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Мрамор - быстро подстраивается под энергетику хозяина." /></>}
-                  { item.stone === '34r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Мрамор - быстро подстраивается под энергетику хозяина." /></>}
-                  { item.stone === '35r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Серебро — это лунный металл." /></>}
-                  { item.stone === '36r-t' &&  <><input type="hidden" name="ringTalisman_stone" value="Талисман: Серебро — это лунный металл." /></>}
+                  { item.stone === '1r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Змеевик — поглотитель негативной энергии и защитник." /></>}
+                  { item.stone === '2r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Агат - приносит здоровье, счастье и долголетие." /></>}
+                  { item.stone === '3r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Агат - приносит здоровье, счастье и долголетие." /></>}
+                  { item.stone === '4r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Яшма — источник доброй энергии." /></>}
+                  { item.stone === '5r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Говлит - официально был описан только в конце XIX века" /></>}
+                  { item.stone === '6r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Обсидиан - является мощным поглотителем энергии и хранителем информации." /></>}
+                  { item.stone === '7r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Яшма — источник доброй энергии." /></>}
+                  { item.stone === '8r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Пирит - укрепляющет нервную систему" /></>}
+                  { item.stone === '9r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Тигровый глаз — камень мудрецов и правителей." /></>}
+                  { item.stone === '10r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Натуральный жемчуг — кладезь ценных микроэлементов." /></>}
+                  { item.stone === '11r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Натуральный жемчуг — кладезь ценных микроэлементов." /></>}
+                  { item.stone === '12r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Натуральный жемчуг — кладезь ценных микроэлементов." /></>}
+                  { item.stone === '13r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Яшма — источник доброй энергии." /></>}
+                  { item.stone === '14r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Гематит - один из сильнейших магических камней." /></>}
+                  { item.stone === '15r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Родохрозит - имеет удивительные свойства." /></>}
+                  { item.stone === '16r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Яшма — источник доброй энергии." /></>}
+                  { item.stone === '17r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Нефрит - является олицетворением пяти качеств человека." /></>}
+                  { item.stone === '18r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Орех — дерево победы над внешними обстоятельствами." /></>}
+                  { item.stone === '19r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Сандалу - могущественная стихия Воздуха." /></>}
+                  { item.stone === '20r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Красное дерево - помогает человеку жить в гармонии с природой." /></>}
+                  { item.stone === '21r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Авантюрин - является амулетом в любовных отношениях." /></>}
+                  { item.stone === '22r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Авантюрин - является амулетом в любовных отношениях." /></>}
+                  { item.stone === '23r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Оникс - обладает сильной энергетикой." /></>}
+                  { item.stone === '24r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
+                  { item.stone === '25r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
+                  { item.stone === '26r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
+                  { item.stone === '27r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
+                  { item.stone === '28r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
+                  { item.stone === '29r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Лунно-зеленый опал по древним поверьям способен поддерживать таланты своего владельца." /></>}
+                  { item.stone === '30r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Голубой опал - способен поддерживать таланты своего владельца." /></>}
+                  { item.stone === '31r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Огненно-снежный опал - способен поддерживать таланты своего владельца." /></>}
+                  { item.stone === '32r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Мрамор - быстро подстраивается под энергетику хозяина." /></>}
+                  { item.stone === '33r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Серебро — это лунный металл." /></>}
+                  { item.stone === '34r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Серебро — это лунный металл." /></>}
+                  { item.stone === '35r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Серебро — это лунный металл." /></>}
                 </div>
                 :
                 null
@@ -242,42 +240,41 @@ export const OrderForm = (props) => {
               {item.product === "alcorTalisman" ?
                 <div key={index}>
                   <input type="hidden" name="product_alcorTalisman" value="женское браслет-талисман" />
-                  { item.stone === '1a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Змеевик — поглотитель негативной энергии и защитник." /></>}
-                  { item.stone === '2a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Агат - приносит здоровье, счастье и долголетие." /></>}
-                  { item.stone === '3a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Агат - приносит здоровье, счастье и долголетие." /></>}
-                  { item.stone === '4a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Яшма — источник доброй энергии." /></>}
-                  { item.stone === '5a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Говлит - официально был описан только в конце XIX века" /></>}
-                  { item.stone === '6a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Обсидиан - является мощным поглотителем энергии и хранителем информации." /></>}
-                  { item.stone === '7a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Яшма — источник доброй энергии." /></>}
-                  { item.stone === '8a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Пирит - укрепляющет нервную систему" /></>}
-                  { item.stone === '9a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Тигровый глаз — камень мудрецов и правителей." /></>}
-                  { item.stone === '10a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Натуральный жемчуг — кладезь ценных микроэлементов." /></>}
-                  { item.stone === '11a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Натуральный жемчуг — кладезь ценных микроэлементов." /></>}
-                  { item.stone === '12a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Натуральный жемчуг — кладезь ценных микроэлементов." /></>}
-                  { item.stone === '13a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Гематит - один из сильнейших магических камней." /></>}
-                  { item.stone === '14a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Родохрозит - имеет удивительные свойства" /></>}
-                  { item.stone === '15a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Яшма — источник доброй энергии." /></>}
-                  { item.stone === '16a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Нефрит - является олицетворением пяти качеств человека." /></>}
-                  { item.stone === '17a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Орех — дерево победы над внешними обстоятельствами." /></>}
-                  { item.stone === '18a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Сандалу - могущественная стихия Воздуха." /></>}
-                  { item.stone === '19a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Красное дерево - помогает человеку жить в гармонии с природой." /></>}
-                  { item.stone === '20a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Авантюрин - является амулетом в любовных отношениях." /></>}
-                  { item.stone === '21a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Оникс - обладает сильной энергетикой." /></>}
-                  { item.stone === '22a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
-                  { item.stone === '23a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
-                  { item.stone === '24a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
-                  { item.stone === '25a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
-                  { item.stone === '26a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
-                  { item.stone === '27a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
-                  { item.stone === '28a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
-                  { item.stone === '29a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
-                  { item.stone === '30a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
-                  { item.stone === '31a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Голубой опал - способен поддерживать таланты своего владельца." /></>}
-                  { item.stone === '32a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Огненно-снежный опал - способен поддерживать таланты своего владельца." /></>}
-                  { item.stone === '33a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Мрамор - быстро подстраивается под энергетику хозяина." /></>}
-                  { item.stone === '34a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Мрамор - быстро подстраивается под энергетику хозяина." /></>}
-                  { item.stone === '35a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Серебро — это лунный металл." /></>}
-                  { item.stone === '36a-t' &&  <><input type="hidden" name="alcorTalisman_stone" value="Талисман: Серебро — это лунный металл." /></>}
+                  { item.stone === '1a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Змеевик — поглотитель негативной энергии и защитник." /></>}
+                  { item.stone === '2a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Агат - приносит здоровье, счастье и долголетие." /></>}
+                  { item.stone === '3a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Агат - приносит здоровье, счастье и долголетие." /></>}
+                  { item.stone === '4a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Яшма — источник доброй энергии." /></>}
+                  { item.stone === '5a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Говлит - официально был описан только в конце XIX века" /></>}
+                  { item.stone === '6a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Обсидиан - является мощным поглотителем энергии и хранителем информации." /></>}
+                  { item.stone === '7a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Яшма — источник доброй энергии." /></>}
+                  { item.stone === '8a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Пирит - укрепляющет нервную систему" /></>}
+                  { item.stone === '9a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Тигровый глаз — камень мудрецов и правителей." /></>}
+                  { item.stone === '10a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Натуральный жемчуг — кладезь ценных микроэлементов." /></>}
+                  { item.stone === '11a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Натуральный жемчуг — кладезь ценных микроэлементов." /></>}
+                  { item.stone === '12a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Натуральный жемчуг — кладезь ценных микроэлементов." /></>}
+                  { item.stone === '13a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Яшма — источник доброй энергии." /></>}
+                  { item.stone === '14a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Гематит - один из сильнейших магических камней." /></>}
+                  { item.stone === '15a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Родохрозит - имеет удивительные свойства." /></>}
+                  { item.stone === '16a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Яшма — источник доброй энергии." /></>}
+                  { item.stone === '17a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Нефрит - является олицетворением пяти качеств человека." /></>}
+                  { item.stone === '18a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Орех — дерево победы над внешними обстоятельствами." /></>}
+                  { item.stone === '19a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Сандалу - могущественная стихия Воздуха." /></>}
+                  { item.stone === '20a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Красное дерево - помогает человеку жить в гармонии с природой." /></>}
+                  { item.stone === '21a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Авантюрин - является амулетом в любовных отношениях." /></>}
+                  { item.stone === '22a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Авантюрин - является амулетом в любовных отношениях." /></>}
+                  { item.stone === '23a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Оникс - обладает сильной энергетикой." /></>}
+                  { item.stone === '24a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
+                  { item.stone === '25a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
+                  { item.stone === '26a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
+                  { item.stone === '27a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
+                  { item.stone === '28a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Кошачий глаз - минерал отводит от носителя смерть." /></>}
+                  { item.stone === '29a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Лунно-зеленый опал по древним поверьям способен поддерживать таланты своего владельца." /></>}
+                  { item.stone === '30a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Голубой опал - способен поддерживать таланты своего владельца." /></>}
+                  { item.stone === '31a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Огненно-снежный опал - способен поддерживать таланты своего владельца." /></>}
+                  { item.stone === '32a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Мрамор - быстро подстраивается под энергетику хозяина." /></>}
+                  { item.stone === '33a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Серебро — это лунный металл." /></>}
+                  { item.stone === '34a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Серебро — это лунный металл." /></>}
+                  { item.stone === '35a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Серебро — это лунный металл." /></>}
                 </div>
                 :
                 null
