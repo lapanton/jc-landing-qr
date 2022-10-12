@@ -469,6 +469,10 @@ export const WrapMenu = styled.div`
     width: 100%;
     display: block;
   }
+  .activeMenuDesctop {
+    font-weight: bolder;
+    text-shadow: 0 0 14px rgba(255,255,255,1);
+  }
   a  {
     text-decoration: none;
   }
@@ -530,5 +534,9 @@ export const WrapDesktopLinks = styled.span`
   }
   a:hover {
     text-decoration: underline;
+  }
+  .activeMenuDesctop {
+    font-weight: bolder;
+    text-shadow: 0 0 14px rgba(255,255,255,1);
   }
 `;

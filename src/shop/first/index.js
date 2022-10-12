@@ -119,9 +119,9 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
           </a>
           <WrapList>
             <WrapDesktopLinks>
-              <Link to="/shop" className="link-to-shop-desktop"><FormattedMessage id="message.shop" /></Link>
-              <Link to="/talisman" className="link-to-shop-desktop"><FormattedMessage id="message.talisman" /></Link>
-              <Link to="/glass" className="link-to-shop-desktop"><FormattedMessage id="message.glass" /></Link>
+              <Link to="/shop" className={ location.pathname === "/shop" ? "link-to-shop-desktop activeMenuDesctop" : "link-to-shop-desktop"}><FormattedMessage id="message.shop" /></Link>
+              <Link to="/talisman" className={ location.pathname === "/talisman" ? "link-to-shop-desktop activeMenuDesctop" : "link-to-shop-desktop"}><FormattedMessage id="message.talisman" /></Link>
+              <Link to="/glass" className={ location.pathname === "/glass" ? "link-to-shop-desktop activeMenuDesctop" : "link-to-shop-desktop"}><FormattedMessage id="message.glass" /></Link>
             </WrapDesktopLinks>
             <div><a href="https://jewelcocktail.com/about" target="_blank" rel="noreferrer"><FormattedMessage id="message.aboutUs" /></a></div>
             <div onClick={() => window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })}><FormattedMessage id="message.contacts" /></div>
@@ -172,9 +172,9 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
                       <rect x="15.9999" y="14" width="24" height="3" rx="1" transform="rotate(45 15.9999 14)" fill="#ffffff"/>
                     </svg>
                   </div>
-                  <Link to="/shop" className="link-to-shop"><FormattedMessage id="message.shop" /></Link>
-                  <Link to="/talisman" className="link-to-shop"><FormattedMessage id="message.talisman" /></Link>
-                  <Link to="/glass" className="link-to-shop"><FormattedMessage id="message.glass" /></Link>
+                  <Link to="/shop" className={ location.pathname === "/shop" ? "link-to-shop activeMenuDesctop" : "link-to-shop"}><FormattedMessage id="message.shop" /></Link>
+                  <Link to="/talisman" className={ location.pathname === "/talisman" ? "link-to-shop activeMenuDesctop" : "link-to-shop"}><FormattedMessage id="message.talisman" /></Link>
+                  <Link to="/glass" className={ location.pathname === "/glass" ? "link-to-shop activeMenuDesctop" : "link-to-shop"}><FormattedMessage id="message.glass" /></Link>
                   <Link to="/#aboutus"><div><FormattedMessage id="message.aboutUs" /></div></Link>
                   <div onClick={() => window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })}><FormattedMessage id="message.contacts" /></div>
                   <WrpaMobSocial>
