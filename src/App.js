@@ -67,6 +67,7 @@ export const App = (props) => {
   // http://localhost:3000/qr/PU7H9Gx3ly
   // http://localhost:3000/letter/piJ2N1KiBC
   // http://localhost:3000/qrt/uLuFx_XfzO
+  //http://localhost:3000/letter/Kpvjc99Hdg
 
   const dataFromStorage = localStorage.getItem('card-data');
   const [card, setCard] = useState((dataFromStorage?.length > 0) ? JSON.parse(dataFromStorage) : []);

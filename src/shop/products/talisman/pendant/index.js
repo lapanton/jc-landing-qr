@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from 'react';
 import ReactDOM from "react-dom";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
-import one from './img/1.jpg';
+import one from './img/1.png';
 import two from './img/2.png';
 import three from './img/3.png';
 import four from './img/4.png';

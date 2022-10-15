@@ -1,11 +1,12 @@
 import React, { useEffect, useState, useRef } from 'react';
 import ReactDOM from "react-dom";
 import Slider from "react-slick";
-import one from './img/1.jpg';
+import one from './img/1.png';
 import two from './img/2.png';
 import three from './img/3.png';
 import four from './img/4.png';
 import five from './img/5.png';
+import six from './img/6.png';
 
 
 // import oneStone from './stone/1.png';
@@ -274,6 +275,9 @@ export const DorsTalisman = (props) => {
             <div>
               <img src={five} alt="JewelCocktail" onClick={() => openZoom(5)} />
             </div>
+            <div>
+              <img src={six} alt="JewelCocktail" onClick={() => openZoom(6)} />
+            </div>
 
           </Slider>
           {
@@ -303,6 +307,9 @@ export const DorsTalisman = (props) => {
                     <div>
                       <img src={five} alt="JewelCocktail" />
                     </div>
+                    <div>
+                      <img src={six} alt="JewelCocktail" />
+                    </div>
 
                   </Slider>
                 </WrapZoomSlider>
@@ -326,6 +333,9 @@ export const DorsTalisman = (props) => {
           <div>
             <img src={five} alt="JewelCocktail"/>
           </div>
+            <div>
+              <img src={six} alt="JewelCocktail"/>
+            </div>
         </Slider>
         </div>
         <ChooseStone>

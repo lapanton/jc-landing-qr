@@ -4,8 +4,8 @@ import Slider from "react-slick";
 import one from './1.png';
 import two from './2.png';
 import three from './3.png';
-import four from './4.jpg';
-import five from './5.jpg';
+import four from './4.png';
+import five from './5.png';
 
 // import oneStone from './stone/1.png';
 // import twoStone from './stone/2.png';
