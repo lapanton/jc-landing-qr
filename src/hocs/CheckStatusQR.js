@@ -9,9 +9,9 @@ const CheckStatusQR = ({ children }) => {
     return result.data;
   }, [id]);
   // const location = useLocation();
-  const { status } = state.value || {};
+  const { status, typeMessage } = state.value || {};
   if (state.loading) return null;
-  return ["default", "completed", "pending"].includes(status) ? children : window.location = "/";
+  return ["default", "completed", "pending"].includes(status) ? children(typeMessage) : window.location = "/";
 };
 
 export default CheckStatusQR;

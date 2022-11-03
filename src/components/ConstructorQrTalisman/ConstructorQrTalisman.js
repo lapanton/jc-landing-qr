@@ -7,6 +7,7 @@ import { Header } from "./components/header/Header";
 import { Description } from "./components/description/Description";
 import {ConstructorTalisman} from "./components/constructor/Constructor";
 import {WrapperPending} from "./components/constructor/constructor-style";
+import StarfieldAnimation from "react-starfield-animation";
 
 
 export const ConstructorQrTalisman = () =>   {
@@ -20,6 +21,14 @@ export const ConstructorQrTalisman = () =>   {
   if (loading) return null;
   return (
     <div style={{ zIndex: 99999, position: 'relative', padding: '0 40px' }}>
+      <StarfieldAnimation
+        style={{
+          position: 'fixed',
+          width: '100vw',
+          height: '100vh'
+        }}
+        depth={4000}
+      />
       <Header value={value} />
 
       { (value?.status === 'pending') && (

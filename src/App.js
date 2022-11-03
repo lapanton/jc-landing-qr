@@ -67,7 +67,8 @@ export const App = (props) => {
   // http://localhost:3000/qr/PU7H9Gx3ly
   // http://localhost:3000/letter/piJ2N1KiBC
   // http://localhost:3000/qrt/uLuFx_XfzO
-  //http://localhost:3000/letter/Kpvjc99Hdg
+  // http://localhost:3000/letter/Kpvjc99Hdg
+  // http://localhost:3000/qr/nOccLPeW9C with typeMessage
 
   const dataFromStorage = localStorage.getItem('card-data');
   const [card, setCard] = useState((dataFromStorage?.length > 0) ? JSON.parse(dataFromStorage) : []);
@@ -128,10 +129,13 @@ export const App = (props) => {
             <Route path="/qr/:id"
                    element={
                      <CheckStatusQR>
-                      <ConstructorQr />
+                       { (typeMessage) => {
+                         return (typeMessage === "letter" || typeMessage === undefined) ? <ConstructorQr/> : <ConstructorQrTalisman/>;
+                       }}
                      </CheckStatusQR>
                    }
                      exact />
+          {/* TODO remove */}
           <Route path="/qrt/:id"
                  element={
                    <CheckStatusQR>
@@ -146,6 +150,7 @@ export const App = (props) => {
                    </CheckStatusQR>
                  }
                  exact />
+          {/* TODO remove */}
             <Route path="/qr1001" element={<>
                 <Qr1001/>
                 <Footer exact />

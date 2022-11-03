@@ -213,7 +213,13 @@ export const Constructor = (props) => {
             <Fon>
               <img src={fon} alt="JewelCocktail"/>
               <div>Фон</div>
-              <span>Добавьте до 3 фото или 1 видео для фона </span>
+              <span>Добавьте до 3 фото</span>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
             </Fon>
 
             <Ramka>
@@ -249,7 +255,7 @@ export const Constructor = (props) => {
                 <img src={fon} alt="JewelCocktail"/>
                 <div>Фон</div>
               </FonMobile>
-              <p>Добавьте до 3 фото или 1 видео для фона</p>
+              <p>Добавьте до 3 фото</p>
               <InnerPhoto>
                 <section className="container">
                   <ThumbsContainer>

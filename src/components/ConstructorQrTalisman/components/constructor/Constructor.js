@@ -194,13 +194,12 @@ export const ConstructorTalisman = (props) => {
 
   const messageBr = value.msg?.split("<br/>").join("\n");
 
-  if (pathname.indexOf("/qrt/") > -1) {
-    document.body.style.background = "#000";
-  }
 
-  if (pathname.indexOf("/qrt/") > -1) {
-    document.body.style.background = "#000";
-  }
+  document.body.style.background = "#000";
+
+  // if (pathname.indexOf("/qrt/") > -1) {
+  //   document.body.style.background = "#000";
+  // }
   return (
     <Wrapper>
         <h2 className={value?.status === 'completed' ? "completed": "notcompleted"}>Конструктор послания</h2>
@@ -220,6 +219,11 @@ export const ConstructorTalisman = (props) => {
               <img src={fon} alt="JewelCocktail"/>
               <div>Изображение</div>
               <span>Добавьте до 3 изображений </span>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
             </Fon>
 
             <Ramka>
