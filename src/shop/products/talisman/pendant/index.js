@@ -180,7 +180,7 @@ export const PendantsTalisman = (props) => {
     }
   };
   const buyPendant = () => {
-    const arr1 = [{ product: "pendantTalisman", stone: quasarStone, price: 11700 }];
+    const arr1 = [{ product: "pendantTalisman", stone: quasarStone, price: 9900 }];
     const checkedItem = card.filter((value) => value.product !== "pendantTalisman");
     setCard(() => [...checkedItem, ...arr1]);
     setShowPopup(true);
@@ -511,7 +511,7 @@ export const PendantsTalisman = (props) => {
             <Link to="/talisman/stone">каталог</Link>
           </p>
           <WrapPrices>
-            <p className="price">11700 <span>₽</span></p>
+            <p className="price">9 900 <span>₽</span></p>
             {/*<p className="old-price" style={{ visibility: "hidden" }}>12 700 ₽</p>*/}
             {/*<img src={sale} alt="JewelCocktail" className="sale-icon" style={{ visibility: "hidden" }}/>*/}
           </WrapPrices>

@@ -112,7 +112,7 @@ export const Gidor = (props) => {
     ],
   };
   const buyGidor = () => {
-    const arr1 = [{ product: "gidor", stone: gidorStone, price: 8900 }];
+    const arr1 = [{ product: "gidor", stone: gidorStone, price: 6900 }];
     const checkedItem = card.filter((value) => value.product !== "gidor");
     setCard(() => [...checkedItem, ...arr1]);
     setShowPopup(true);
@@ -341,8 +341,8 @@ export const Gidor = (props) => {
         </ChooseStone>
         <PriceBuySection>
           <WrapPrices>
-            <p className="price">8 900 <span>₽</span></p>
-            <p className="old-price">12 700 ₽</p>
+            <p className="price">6 900 <span>₽</span></p>
+            <p className="old-price">9 850 ₽</p>
             <img src={sale} alt="JewelCocktail" className="sale-icon"/>
           </WrapPrices>
           <p className="bonus">кулон + 2 разных камня</p>

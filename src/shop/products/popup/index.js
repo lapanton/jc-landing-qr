@@ -145,7 +145,7 @@ export const Popup = (props) => {
                           </div>
                         </div>
                         <WrapCardPrice>
-                          <div className="price-card">Цена: <span className="card-line-old">  12 700 ₽</span> <span className="price-card-new">= {currentPrice} ₽ </span></div>
+                          <div className="price-card">Цена: <span className="card-line-old">  9 850 ₽</span> <span className="price-card-new">= {currentPrice} ₽ </span></div>
                           <img src={sales} alt="JewelCocktail" className="card-icon-sale" />
                         </WrapCardPrice>
                       </div>
@@ -247,7 +247,7 @@ export const Popup = (props) => {
                           </div>
                         </div>
                         <WrapCardPrice>
-                          <div className="price-card">Цена: <span className="card-line-old">  12 700 ₽</span> <span className="price-card-new">= {currentPrice} ₽ </span></div>
+                          <div className="price-card">Цена: <span className="card-line-old">  9 850 ₽</span> <span className="price-card-new">= {currentPrice} ₽ </span></div>
                           <img src={sales} alt="JewelCocktail" className="card-icon-sale" />
                         </WrapCardPrice>
                       </div>

@@ -17,8 +17,8 @@
 </offer>
 <offer available="true" id="2" spc="12">
 <url>https://jewelcocktail.com/shop</url>
-<price>12700</price>
-<discount>8900</discount>
+<price>9850</price>
+<discount>6900</discount>
 <picture>https://jewelcocktail.com/img/2.png</picture>
 <video>https://youtu.be/XLzYEUDEk-k</video>
 <name>Женская Hi-Tech подвеска с живым посланием</name>
@@ -39,8 +39,8 @@
 </offer>
 <offer available="true" id="4" spc="12">
 <url>https://jewelcocktail.com/shop</url>
-<price>12700</price>
-<discount>8900</discount>
+<price>9850</price>
+<discount>6900</discount>
 <picture>https://jewelcocktail.com/img/4.png</picture>
 <video>https://youtu.be/XLzYEUDEk-k</video>
 <name>Мужской Hi-Tech кулон с живым посланием</name>

@@ -112,7 +112,7 @@ export const Pendants = (props) => {
     ],
   };
   const buyPendant = () => {
-    const arr1 = [{ product: "quasar", stone: quasarStone, price: 8900 }];
+    const arr1 = [{ product: "quasar", stone: quasarStone, price: 6900 }];
     const checkedItem = card.filter((value) => value.product !== "quasar");
     setCard(() => [...checkedItem, ...arr1]);
     setShowPopup(true);
@@ -340,8 +340,8 @@ export const Pendants = (props) => {
         </ChooseStone>
         <PriceBuySection>
           <WrapPrices>
-            <p className="price">8 900 <span>₽</span></p>
-            <p className="old-price">12 700 ₽</p>
+            <p className="price">6 900 <span>₽</span></p>
+            <p className="old-price">9 850 ₽</p>
             <img src={sale} alt="JewelCocktail" className="sale-icon"/>
           </WrapPrices>
           <p className="bonus">подвеска + 2 разных камня</p>

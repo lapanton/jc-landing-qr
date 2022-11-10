@@ -150,7 +150,7 @@ export const GidorTalisman = (props) => {
     }
   };
   const buyGidor = () => {
-    const arr1 = [{ product: "gidorTalisman", stone: gidorStone, price: 11700 }];
+    const arr1 = [{ product: "gidorTalisman", stone: gidorStone, price: 9900 }];
     const checkedItem = card.filter((value) => value.product !== "gidorTalisman");
     setCard(() => [...checkedItem, ...arr1]);
     setShowPopup(true);
@@ -420,7 +420,7 @@ export const GidorTalisman = (props) => {
             <Link to="/talisman/stone">каталог</Link>
           </p>
           <WrapPrices>
-            <p className="price">11 700 <span>₽</span></p>
+            <p className="price">9 900 <span>₽</span></p>
             {/*<p className="old-price">12 700 ₽</p>*/}
             {/*<img src={sale} alt="JewelCocktail" className="sale-icon"/>*/}
           </WrapPrices>
