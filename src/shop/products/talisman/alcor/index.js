@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import ReactDOM from "react-dom";
+import priceData from "../../../../prices/price.json";
 import Slider from "react-slick";
 import one from './img/1.png';
 import two from './img/2.png';
@@ -17,7 +18,7 @@ import fire from './fire.png';
 import arDown from './arrowDown.png';
 import arUp from './arrowUp.png';
 
-// import sale from '../sale.png';
+import sale from '../sale.png';
 
 import oneS from "../../../../talisman/talismanStone/wom-stones/IMG_6136.png";
 import twoS from "../../../../talisman/talismanStone/wom-stones/IMG_6061.png";
@@ -167,7 +168,7 @@ export const AlcorTalisman = (props) => {
     }
   };
   const buyAlcor = () => {
-    const arr1 = [{ product: "alcorTalisman", stone: alcorStone, price: 8750 }];
+    const arr1 = [{ product: "alcorTalisman", stone: alcorStone, price: +priceData["talisman-genskii-braslet"] }];
     const checkedItem = card.filter((value) => value.product !== "alcorTalisman");
     setCard(() => [...checkedItem, ...arr1]);
     setShowPopup(true);
@@ -498,9 +499,9 @@ export const AlcorTalisman = (props) => {
             <Link to="/talisman/stone">каталог</Link>
           </p>
           <WrapPrices>
-            <p className="price">8 750 <span>₽</span></p>
-            {/*<p className="old-price">9 570 ₽</p>*/}
-            {/*<img src={sale} alt="JewelCocktail" className="sale-icon"/>*/}
+            <p className="price">{priceData["talisman-genskii-braslet"]} <span>₽</span></p>
+            <p className="old-price">{priceData["talisman-genskii-braslet-old-price"]} ₽</p>
+            <img src={sale} alt="JewelCocktail" className="sale-icon"/>
           </WrapPrices>
           <div className="buy-button" onClick={() => buyAlcor()}>Купить</div>
           <div className="actsia" style={{ visibility: "hidden" }}>

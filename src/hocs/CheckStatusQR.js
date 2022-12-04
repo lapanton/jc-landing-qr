@@ -11,6 +11,8 @@ const CheckStatusQR = ({ children }) => {
   // const location = useLocation();
   const { status, typeMessage } = state.value || {};
   if (state.loading) return null;
+  // console.log('typeMessage', typeMessage);
+  // return (["default", "completed", "pending"].includes(status) && typeMessage !== undefined) ? children(typeMessage) : window.location = "/";
   return ["default", "completed", "pending"].includes(status) ? children(typeMessage) : window.location = "/";
 };
 

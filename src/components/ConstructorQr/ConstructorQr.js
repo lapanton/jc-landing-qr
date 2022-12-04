@@ -1,6 +1,7 @@
 import React  from 'react';
 import {useParams} from "react-router-dom";
 import {useAsync} from "react-use";
+import { Helmet } from "react-helmet";
 import axios from "axios";
 import './index.css';
 import { Header } from "./components/header/Header";
@@ -22,6 +23,12 @@ export const ConstructorQr = () =>   {
   return (
     <div style={{ zIndex: 99999, position: 'relative', padding: '0 40px' }}>
       <Header value={value} />
+      <Helmet>
+        <meta
+          name="description"
+          content="Живые Hi-Tech украшения с цифровым посланием"
+        />
+      </Helmet>
 
       { (value?.status === 'pending') && (
       <WrapperPending>

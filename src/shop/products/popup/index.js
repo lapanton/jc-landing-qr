@@ -2,6 +2,8 @@ import React from 'react';
 import { Wrapper, Inner, CloseButton, RemoveItem, WrapProductDescription, CardName, WrapCardPrice } from "./styled-popup";
 import close from './cross.svg';
 
+import priceData from "../../../prices/price.json";
+
 import oneStoneM from './stone/m/1.png';
 import twoStoneM from './stone/m/2.png';
 import threeStoneM from './stone/m/3.png';
@@ -396,8 +398,8 @@ export const Popup = (props) => {
                           талисман-кулон женский
                         </span>
                         <WrapCardPrice>
-                          <div className="price-card">Цена: <span style={{ bottom: 0, left: "inherit", right: 0 }} className="price-card-new">{currentPrice} ₽ </span></div>
-                          {/*<img src={sales} alt="JewelCocktail" className="card-icon-sale" />*/}
+                          <div className="price-card">Цена: <span className="card-line-old"> {priceData["talisman-kulon-genskii-old-price"]} ₽</span> <span className="price-card-new">{currentPrice} ₽ </span></div>
+                          <img src={sales} alt="JewelCocktail" className="card-icon-sale" />
                         </WrapCardPrice>
                       </div>
 
@@ -424,8 +426,8 @@ export const Popup = (props) => {
                           женское Кольцо-талисман
                         </span>
                         <WrapCardPrice>
-                          <div className="price-card">Цена: <span style={{ bottom: 0, left: "inherit", right: 0 }} className="price-card-new">{currentPrice} ₽ </span></div>
-                          {/*<img src={sales} alt="JewelCocktail" className="card-icon-sale" />*/}
+                          <div className="price-card">Цена: <span className="card-line-old"> {priceData["talisman-genskoe-kolitso-old-price"]} ₽</span> <span className="price-card-new">{currentPrice} ₽ </span></div>
+                          <img src={sales} alt="JewelCocktail" className="card-icon-sale" />
                         </WrapCardPrice>
                       </div>
 
@@ -452,8 +454,8 @@ export const Popup = (props) => {
                           женскии браслет-талисман
                         </span>
                         <WrapCardPrice>
-                          <div className="price-card">Цена: <span style={{ bottom: 0, left: "inherit", right: 0 }} className="price-card-new">{currentPrice} ₽ </span></div>
-                          {/*<img src={sales} alt="JewelCocktail" className="card-icon-sale" />*/}
+                          <div className="price-card">Цена: <span className="card-line-old"> {priceData["talisman-genskii-braslet-old-price"]} ₽</span> <span className="price-card-new">{currentPrice} ₽ </span></div>
+                          <img src={sales} alt="JewelCocktail" className="card-icon-sale" />
                         </WrapCardPrice>
                       </div>
 
@@ -480,8 +482,8 @@ export const Popup = (props) => {
                           мужской кулон-талисман
                         </span>
                         <WrapCardPrice>
-                          <div className="price-card">Цена: <span style={{ bottom: 0, left: "inherit", right: 0 }} className="price-card-new">{currentPrice} ₽ </span></div>
-                          {/*<img src={sales} alt="JewelCocktail" className="card-icon-sale" />*/}
+                          <div className="price-card">Цена: <span className="card-line-old"> {priceData["talisman-mugskoi-kulon-old-price"]} ₽</span> <span className="price-card-new">{currentPrice} ₽ </span></div>
+                          <img src={sales} alt="JewelCocktail" className="card-icon-sale" />
                         </WrapCardPrice>
                       </div>
 
@@ -508,8 +510,8 @@ export const Popup = (props) => {
                           мужской браслет-талисман
                         </span>
                         <WrapCardPrice>
-                          <div className="price-card">Цена: <span style={{ bottom: 0, left: "inherit", right: 0 }} className="price-card-new">{currentPrice} ₽ </span></div>
-                          {/*<img src={sales} alt="JewelCocktail" className="card-icon-sale" />*/}
+                          <div className="price-card">Цена: <span className="card-line-old"> {priceData["talisman-mugskoi-braslet-old-price"]} ₽</span><span className="price-card-new">{currentPrice} ₽ </span></div>
+                          <img src={sales} alt="JewelCocktail" className="card-icon-sale" />
                         </WrapCardPrice>
                       </div>
 

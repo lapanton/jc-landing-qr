@@ -79,7 +79,7 @@ export const ConstructorTalisman = (props) => {
 
     const {getRootProps, getInputProps} = useDropzone({
       accept: 'image/*',
-      maxFiles: 10,
+      maxFiles: 3,
       maxSize: 31457280,
       onDrop,
       remove
