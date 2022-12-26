@@ -81,6 +81,7 @@ export const ConstructorTalisman = (props) => {
       accept: 'image/*',
       maxFiles: 3,
       maxSize: 31457280,
+      multiple: false,
       onDrop,
       remove
     });
@@ -260,7 +261,7 @@ export const ConstructorTalisman = (props) => {
                   <ThumbsContainer>
                     {thumbs}
                   </ThumbsContainer>
-                  <div {...getRootProps({className: 'dropzone'})}>
+                  <div {...getRootProps({className: 'dropzone'})} style={files.length >= 3 ? {pointerEvents: "none", opacity: 0.4} : {pointerEvents: "inherit", opacity: 1}}>
                     <input {...getInputProps()} />
                     <img src={plus} alt="JewelCocktail"/>
                   </div>

@@ -1,12 +1,15 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
+// import Compressor from 'compressorjs';
+// import imageCompression from 'browser-image-compression';
 import {useLocation, useParams} from 'react-router-dom';
 import {useDropzone} from 'react-dropzone';
 import Slider from "react-slick";
 // Import css files
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+// https://codepen.io/mirco-bellagamba/pen/vYGpBGO resize codepen
+// https://github.com/fengyuanchen/compressorjs/issues/46
 import {
   Wrapper,
   WrapConstructorArea,
@@ -48,6 +51,7 @@ import result from './result.png';
 import plus from './plus.png';
 import {BounceAnimation} from "../../../../animation/BounceAnimation";
 import {ConfettiAnimation} from "../../../../animation/Confetti";
+import removeIcon from "../../../ConstructorQrTalisman/components/constructor/remove.png";
 
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -62,36 +66,63 @@ export const Constructor = (props) => {
     const [signature, setSignature] = useState("");
     const [phone, setPhone] = useState("");
     const [authorEmail, setAuthorEmail] = useState("");
-  const onDrop = useCallback(acceptedFiles => {
+  const onDrop = useCallback((acceptedFiles, fileRejections) => {
 
-   const newFiles = acceptedFiles.map(file => Object.assign(file, {
+
+    const reader = new FileReader();
+
+
+    // Ошибки
+    fileRejections.forEach((file) => {
+      file.errors.forEach((err) => {
+        if (err.code === "file-too-large") {
+          alert("Файл слишком большой")
+        }
+
+        if (err.code === "file-invalid-type") {
+          alert("Неверный тип файла")
+        }
+      });
+    });
+
+    const newFiles = acceptedFiles.map(file => Object.assign(file, {
       preview: URL.createObjectURL(file)
     }))
 
     const totalfiles = files.length + newFiles.length;
 
-    if (totalfiles >= 11) return;
+    if (totalfiles >= 4) alert("Максимально допустимое количество 3 фото");
 
     setFiles([...files, ...newFiles]);
 
-  }, [files])
+  }, [files]);
+
+  const remove = file => {
+    const newArray = files.filter((val) => val.name !== file.name);
+    setFiles(newArray);
+  };
 
     const {getRootProps, getInputProps} = useDropzone({
       accept: 'image/*',
       maxFiles: 3,
       maxSize: 31457280,
+      multiple: false,
       onDrop,
+      remove
     });
 
-    const thumbs = files.map(file => (
-      <Thumb key={file.name}>
-        <ThumbInner>
-          <Img
-            src={file.preview}
-          />
-        </ThumbInner>
-      </Thumb>
-    ));
+  const thumbs = files.map((file) => (
+    <Thumb key={file.name}>
+      <ThumbInner>
+        <Img
+          src={file.preview}
+        />
+      </ThumbInner>
+      <div className="remove-xxxx" onClick={() => remove(file)}>
+        <img src={removeIcon} alt="JewelCocktail"/>
+      </div>
+    </Thumb>
+  ));
 
   useEffect(() => {
     // Make sure to revoke the data uris to avoid memory leaks
@@ -261,10 +292,10 @@ export const Constructor = (props) => {
                   <ThumbsContainer>
                     {thumbs}
                   </ThumbsContainer>
-                  <div {...getRootProps({className: 'dropzone'})}>
-                    <input {...getInputProps()} />
-                    <img src={plus} alt="JewelCocktail"/>
-                  </div>
+                    <div {...getRootProps({className: 'dropzone'})} style={files.length >= 3 ? {pointerEvents: "none", opacity: 0.4} : {pointerEvents: "inherit", opacity: 1}}>
+                      <input {...getInputProps()} />
+                      <img src={plus} alt="JewelCocktail"/>
+                    </div>
                 </section>
               </InnerPhoto>
             </WrapPhotoUpload>
@@ -293,9 +324,9 @@ export const Constructor = (props) => {
                     <WrapBorderView>
                       <InnerWrapSlider className={value?.status === 'completed' ? "iscompeletedSl colorSl_"+value?.border : "colorSl_"+10}>
                         <Slider {...settings}>
-                          {images?.length > 0 && images.map((item) => {
+                          {images?.length > 0 && images.map((item, index) => {
                             return (
-                              <div>
+                              <div key={index}>
                                 <div
                                   className="imageInnerSlider"
                                   style={{

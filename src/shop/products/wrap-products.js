@@ -13,7 +13,7 @@ import { PendantsTalisman } from "./talisman/pendant";
 import { AlcorTalisman } from "./talisman/alcor";
 import { GidorTalisman } from "./talisman/gidor";
 import {DorsTalisman} from "./talisman/dors";
-import {CoupleBraceletsTalisman} from "./talisman/coupleBracelets";
+// import {CoupleBraceletsTalisman} from "./talisman/coupleBracelets";
 
 export const WrapProducts = (props) => {
   const {showPopup, setShowPopup, card, setCard} = props;
