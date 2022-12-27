@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
+import Compress from "browser-image-compression";
 // import Compressor from 'compressorjs';
 // import imageCompression from 'browser-image-compression';
 import {useLocation, useParams} from 'react-router-dom';
@@ -10,6 +11,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 // https://codepen.io/mirco-bellagamba/pen/vYGpBGO resize codepen
 // https://github.com/fengyuanchen/compressorjs/issues/46
+// https://github.com/josefrichter/resize/blob/master/public/preprocess.js
+// https://snyk.io/advisor/npm-package/browser-image-compression/example
+// https://stackoverflow.com/questions/73470404/how-to-use-browser-image-compression-script-with-ajax-post
 import {
   Wrapper,
   WrapConstructorArea,
@@ -68,15 +72,10 @@ export const Constructor = (props) => {
     const [authorEmail, setAuthorEmail] = useState("");
   const onDrop = useCallback((acceptedFiles, fileRejections) => {
 
-
-    const reader = new FileReader();
-
-
-    // Ошибки
     fileRejections.forEach((file) => {
       file.errors.forEach((err) => {
         if (err.code === "file-too-large") {
-          alert("Файл слишком большой")
+          alert("Оптимизируйте пожалуста ваше фото, максимально  допустимый размер фото 10mb")
         }
 
         if (err.code === "file-invalid-type") {
@@ -85,16 +84,25 @@ export const Constructor = (props) => {
       });
     });
 
-    const newFiles = acceptedFiles.map(file => Object.assign(file, {
-      preview: URL.createObjectURL(file)
-    }))
+    const options = {
+      maxSizeMB: 1.5,
+      maxWidthOrHeight: 800,
+      useWebWorker: true
+    }
 
-    const totalfiles = files.length + newFiles.length;
-
-    if (totalfiles >= 4) alert("Максимально допустимое количество 3 фото");
-
-    setFiles([...files, ...newFiles]);
-
+    Compress(acceptedFiles[0], options).then(compressedBlob => {
+        compressedBlob.lastModifiedDate = new Date()
+        const convertedBlobFile = new File([compressedBlob], acceptedFiles[0].name, { type: acceptedFiles[0].type, lastModified: Date.now()})
+        Object.assign(convertedBlobFile, {
+          preview: URL.createObjectURL(convertedBlobFile),
+          path: convertedBlobFile.name
+        })
+      setFiles(files.concat([convertedBlobFile]));
+      if (files.length >= 4) alert("Максимально допустимое количество 3 фото");
+      })
+      .catch((e) => {
+        console.log('Something goes wrong: ', e);
+      });
   }, [files]);
 
   const remove = file => {
@@ -105,13 +113,13 @@ export const Constructor = (props) => {
     const {getRootProps, getInputProps} = useDropzone({
       accept: 'image/*',
       maxFiles: 3,
-      maxSize: 4000000,
+      maxSize: 12000000,
       multiple: false,
       onDrop,
       remove
     });
 
-  const thumbs = files.map((file) => (
+  const thumbs = files?.map((file) => (
     <Thumb key={file.name}>
       <ThumbInner>
         <Img
