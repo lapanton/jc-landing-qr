@@ -105,7 +105,7 @@ export const Constructor = (props) => {
     const {getRootProps, getInputProps} = useDropzone({
       accept: 'image/*',
       maxFiles: 3,
-      maxSize: 31457280,
+      maxSize: 4000000,
       multiple: false,
       onDrop,
       remove
