@@ -85,7 +85,7 @@ export const Constructor = (props) => {
     });
 
     const options = {
-      maxSizeMB: 1.5,
+      maxSizeMB: 1,
       maxWidthOrHeight: 800,
       useWebWorker: true
     }

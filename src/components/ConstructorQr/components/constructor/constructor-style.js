@@ -283,7 +283,7 @@ export const Thumb = styled.div`
   margin-bottom: 8px;
   margin-right: 8px;
   width: 100px;
-  height: 100px;
+  //height: 100px;
   padding: 4px;
   box-sizing: border-box;
   img {
