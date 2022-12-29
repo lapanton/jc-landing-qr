@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
+import Compress from "browser-image-compression";
 import {useLocation, useParams} from 'react-router-dom';
 import {useDropzone} from 'react-dropzone';
 import Slider from "react-slick";
@@ -43,6 +44,7 @@ import ramka from './ramka.png';
 import result from './result.png';
 import plus from './plus.png';
 import {BounceAnimation} from "../../../../animation/BounceAnimation";
+import { NotifyPopup } from "../../../ConstructorQr/components/notify-popup";
 // import {ConfettiAnimation} from "../../../../animation/Confetti";
 
 
@@ -57,18 +59,39 @@ export const ConstructorTalisman = (props) => {
     const [message, setMessage] = useState("");
     const [phone, setPhone] = useState("");
     const [authorEmail, setAuthorEmail] = useState("");
-  const onDrop = useCallback(acceptedFiles => {
+  const onDrop = useCallback((acceptedFiles, fileRejections) => {
 
-   const newFiles = acceptedFiles.map(file => Object.assign(file, {
-      preview: URL.createObjectURL(file)
-    }))
+    fileRejections.forEach((file) => {
+      file.errors.forEach((err) => {
+        if (err.code === "file-too-large") {
+          alert("Оптимизируйте пожалуста ваше фото, максимально  допустимый размер фото 10mb")
+        }
 
-    const totalfiles = files.length + newFiles.length;
+        if (err.code === "file-invalid-type") {
+          alert("Неверный тип файла")
+        }
+      });
+    });
 
-    if (totalfiles >= 11) return;
+    const options = {
+      maxSizeMB: 1,
+      maxWidthOrHeight: 800,
+      useWebWorker: true
+    }
 
-    setFiles([...files, ...newFiles]);
-
+    Compress(acceptedFiles[0], options).then(compressedBlob => {
+      compressedBlob.lastModifiedDate = new Date()
+      const convertedBlobFile = new File([compressedBlob], acceptedFiles[0].name, { type: acceptedFiles[0].type, lastModified: Date.now()})
+      Object.assign(convertedBlobFile, {
+        preview: URL.createObjectURL(convertedBlobFile),
+        path: convertedBlobFile.name
+      })
+      setFiles(files.concat([convertedBlobFile]));
+      if (files.length >= 4) alert("Максимально допустимое количество 3 фото");
+    })
+      .catch((e) => {
+        console.log('Something goes wrong: ', e);
+      });
   }, [files]);
 
   const remove = file => {
@@ -126,15 +149,34 @@ export const ConstructorTalisman = (props) => {
     }
   };
 
+  const [showVediteText, setShowVediteText] = useState(false);
+  const [uplFoto, setUplFoto] = useState(false);
+  const [soglasie, setSeoglasie] = useState(false);
+  const [mailvalid, setMailValid] = useState(false);
+
   const handleSubmit = async () => {
 
-    if (message === "") return alert('Пожалустаа введите послание');
+    if (message === "") {
+      setShowVediteText(true);
+      return setTimeout(() => {setShowVediteText(false)}, 3000);
+    }
 
-    if (files.length === 0) return alert('Пожалустаа загрузитее фото');
+    if (files.length === 0) {
+      setUplFoto(true);
+      return setTimeout(() => {setUplFoto(false)}, 3000);
+    }
 
-    if (!checked) return alert('Пожалустаа поставьте галочку на согласие: Политикой в отношении обработки персональных данных');
+    if (authorEmail === "" && !authorEmail.includes('@')) {
+      setMailValid(true);
+      return setTimeout(() => {setMailValid(false)}, 3000);
+    }
 
-    if (authorEmail === "" && !authorEmail.includes('@')) return alert('Пожалуста корректный адресс почты');
+
+    if (!checked) {
+      setSeoglasie(true);
+      return setTimeout(() => {setSeoglasie(false)}, 3000);
+    }
+
 
     const formData = new FormData();
 
@@ -203,6 +245,10 @@ export const ConstructorTalisman = (props) => {
   // }
   return (
     <Wrapper>
+      {showVediteText && <NotifyPopup value={"Заполните талисман до 400 символов"} />}
+      {uplFoto && <NotifyPopup value={"Загрузите до 3 изображений"} />}
+      {soglasie && <NotifyPopup value={"Пожалуста поставьте галочку на согласие: Политикой в отношении обработки персональных данных"} />}
+      {mailvalid && <NotifyPopup value={"Пожалуйста введите корректный адрес почты"} />}
         <h2 className={value?.status === 'completed' ? "completed": "notcompleted"}>Конструктор послания</h2>
       {/*{value?.status === 'completed' && hide &&  (*/}
       {/*  <ConfettiAnimation/>*/}

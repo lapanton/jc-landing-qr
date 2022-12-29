@@ -56,6 +56,7 @@ import plus from './plus.png';
 import {BounceAnimation} from "../../../../animation/BounceAnimation";
 import {ConfettiAnimation} from "../../../../animation/Confetti";
 import removeIcon from "../../../ConstructorQrTalisman/components/constructor/remove.png";
+import { NotifyPopup } from "../notify-popup";
 
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -164,16 +165,33 @@ export const Constructor = (props) => {
       setAuthorEmail(e.target.value)
     }
   };
-
+  const [showVediteText, setShowVediteText] = useState(false);
+  const [uplFoto, setUplFoto] = useState(false);
+  const [soglasie, setSeoglasie] = useState(false);
+  const [mailvalid, setMailValid] = useState(false);
   const handleSubmit = async () => {
 
-    if (message === "") return alert('Пожалустаа введите послание');
+    if (message === "") {
+      setShowVediteText(true);
+      return setTimeout(() => {setShowVediteText(false)}, 3000);
+    }
 
-    if (files.length === 0) return alert('Пожалустаа загрузитее фото');
+    if (files.length === 0) {
+      setUplFoto(true);
+      return setTimeout(() => {setUplFoto(false)}, 3000);
+    }
 
-    if (!checked) return alert('Пожалустаа поставьте галочку на согласие: Политикой в отношении обработки персональных данных');
+    if (authorEmail === "" && !authorEmail.includes('@')) {
+      setMailValid(true);
+      return setTimeout(() => {setMailValid(false)}, 3000);
+    }
 
-    if (authorEmail === "" && !authorEmail.includes('@')) return alert('Пожалуста корректный адресс почты');
+
+    if (!checked) {
+      setSeoglasie(true);
+    return setTimeout(() => {setSeoglasie(false)}, 3000);
+    }
+
 
     const formData = new FormData();
 
@@ -236,6 +254,12 @@ export const Constructor = (props) => {
 
   return (
     <Wrapper>
+
+      {showVediteText && <NotifyPopup value={"Пожалуста введите текст послания"} />}
+      {uplFoto && <NotifyPopup value={"Пожалуста загрузите фото"} />}
+      {soglasie && <NotifyPopup value={"Пожалуста поставьте галочку на согласие: Политикой в отношении обработки персональных данных"} />}
+      {mailvalid && <NotifyPopup value={"Пожалуйста введите корректный адрес почты"} />}
+
         <h2 className={value?.status === 'completed' ? "completed": "notcompleted"}>Конструктор послания</h2>
       {value?.status === 'completed' && hide &&  (
         <ConfettiAnimation/>
