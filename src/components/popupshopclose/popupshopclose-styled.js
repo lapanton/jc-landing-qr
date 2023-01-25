@@ -17,10 +17,14 @@ export const Wrapper = styled.div`
     color: #fff;
   }
   p {
+    text-align: center;
     font-family: 'Inter',sans-serif;
     font-weight: 500;
     font-size: 2rem;
     margin: 2rem 0;
+    @media screen and (max-width: 900px) {
+      font-size: 1rem;
+    }
   }
   div {
     padding: 10px 25px;
