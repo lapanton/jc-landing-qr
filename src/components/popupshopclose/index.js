@@ -3,7 +3,7 @@ import { Wrapper } from "./popupshopclose-styled";
 
 
 export const PopupShopClose = () => {
-  const [hide, setHide] = useState(true);
+  const [hide, setHide] = useState(false);
   useEffect(() => {
     setTimeout(() => {
       setHide(false);
