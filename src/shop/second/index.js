@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import { FormattedMessage } from "react-intl";
 import { Wrapper,WrapperDesktop, LeftPart, RightPart, WrapVideo, WrapSubtitle, WrapDescription, GiftButton } from "./styles-second";
 import vid from './preview.mp4'
 
@@ -27,9 +28,9 @@ export const Second = () => {
         <WrapperDesktop>
           <LeftPart>
             <h1>Jewel Cocktail</h1>
-            <WrapSubtitle>Живые hi-tech УКРАШЕНИЯ</WrapSubtitle>
-            <WrapDescription>особый <span>подарок</span><br/>с твоим цифровым посланием</WrapDescription>
-            <GiftButton onClick={() => window.scrollTo({top: 1800, left: 0, behavior: 'smooth'})}>подарить</GiftButton>
+            <WrapSubtitle><FormattedMessage id="shop.live" /></WrapSubtitle>
+            <WrapDescription><FormattedMessage id="shop.oso" /> <span><FormattedMessage id="shop.gi" /></span><br/><FormattedMessage id="shop.me" /></WrapDescription>
+            <GiftButton onClick={() => window.scrollTo({top: 1800, left: 0, behavior: 'smooth'})}><FormattedMessage id="shop.pr" /></GiftButton>
           </LeftPart>
           <RightPart>
             <WrapVideo>

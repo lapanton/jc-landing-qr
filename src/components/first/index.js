@@ -81,7 +81,7 @@ export const Main = ({langProps}) => {
           <WrapLang>
             <div className="ru_lang" onClick={() => onLocaleChange('ru')}><img style={locale !== "ru" ? {opacity: 0.5} : {opacity: 1, transform: "scale(1.2)"}} src={ruimg} alt="JewelCocktail"/></div>
             <div className="en_lang" onClick={() => onLocaleChange('en')}><img style={locale !== "en" ? {opacity: 0.5} : {opacity: 1, transform: "scale(1.2)"}} src={enimg} alt="JewelCocktail"/></div>
-            <div className="cn_lang" onClick={() => onLocaleChange('zh')}><img style={locale !== "zh" ? {opacity: 0.5} : {opacity: 1, transform: "scale(1.2)"}} src={cnimg} alt="JewelCocktail"/></div>
+            <div className="cn_lang" onClick={() => onLocaleChange('zh')} style={{display: "none"}}><img style={locale !== "zh" ? {opacity: 0.5} : {opacity: 1, transform: "scale(1.2)"}} src={cnimg} alt="JewelCocktail"/></div>
           </WrapLang>
           <WrapPhone>
             <div>

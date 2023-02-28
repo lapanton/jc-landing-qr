@@ -189,7 +189,7 @@ export const App = (props) => {
               <PopupShopClose />
               <Second/>
               <Info />
-              <ShowHideSection />
+              <ShowHideSection langProps={props} />
               <WrapProducts showPopup={showPopup} setShowPopup={setShowPopup} card={card} setCard={setCard} />
               <SelfProductShop />
               <OsobennostiTehnologiiShop />

@@ -56,5 +56,12 @@
   "card.wrong": "Something went wrong!{br} Try again or contact us by phone",
   "card.total": "Total",
   "card.offer": "When placing an order, I accept the terms of confidentiality of personal information. It is not a public offer.",
-  "card.deliverycosts": "* the cost of delivery is calculated separately and depends on your country and terms."
+  "card.deliverycosts": "* the cost of delivery is calculated separately and depends on your country and terms.",
+  "shop.live": "Live Hi-Tech jewelry",
+  "shop.oso": "special",
+  "shop.gi": "gift",
+  "shop.me": "with your digital message",
+  "shop.pr": "present",
+  "shop.du": "Gift with Soul",
+  "shop.ra": "How does it work"
 }
