@@ -1,8 +1,10 @@
 import React, {useEffect, useState} from 'react';
+import { FormattedMessage } from "react-intl";
 import { Wrapper, Qr } from "./info-styled";
 import qr from './qr.png'
 
-export const Info = () => {
+export const Info = (props) => {
+  const { langProps } = props;
   const [width, setWidth] = useState(window.innerWidth);
   const handleWindowSizeChange = () => {
     setWidth(window.innerWidth);
@@ -22,8 +24,17 @@ export const Info = () => {
             <img src={qr} alt="JewelCocktail"/>
           </Qr>
           <div className="add-special-width">
-            <h3>особый <span>подарок</span> с цифровым посланием</h3>
-            <p className="how-it-works">как это работает</p>
+            {langProps.location === " ru" ?
+            <>
+              <h3>особый <span>подарок</span> с цифровым посланием</h3>
+              <p className="how-it-works">как это работает</p>
+            </>
+              :
+            <>
+              <h3>special <span>gift</span> with your digital message</h3>
+              <p className="how-it-works">How does it work</p>
+            </>}
+
 
           </div>
         </Wrapper>

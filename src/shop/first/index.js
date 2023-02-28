@@ -228,7 +228,7 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
           <WrapTitle className={show ? 'removeZindex' : 'addit'}>
             {sticky && window.innerWidth >= '768' ? <div style={{ marginTop: "180px"}}/> : <span/>}
             <h1>Jewel Cocktail</h1>
-            <h2>дизайнерские hi-tech УКРАШЕНИЯ</h2>
+            <h2><FormattedMessage id="message.diza" /></h2>
             {/*<p>Мы отказались от классических форм ювелирных украшений, предлагая вместо этого современный<br/> минимализм, естественность и возможность эксперементировать с образами. </p>*/}
           </WrapTitle>
         )}

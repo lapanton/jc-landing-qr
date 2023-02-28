@@ -188,7 +188,7 @@ export const App = (props) => {
               <MainShop langProps={props} setShowPopup={setShowPopup} showPopup={showPopup} />
               <PopupShopClose />
               <Second/>
-              <Info />
+              <Info langProps={props} />
               <ShowHideSection langProps={props} />
               <WrapProducts showPopup={showPopup} setShowPopup={setShowPopup} card={card} setCard={setCard} />
               <SelfProductShop />
