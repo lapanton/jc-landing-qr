@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { FormattedMessage, useIntl } from "react-intl";
 import emailjs from '@emailjs/browser';
 import { WrapForm } from './styled-order-form';
 import { BounceAnimation } from "../../animation/BounceAnimation";
@@ -9,6 +10,7 @@ export const OrderForm = (props) => {
   const [successMessage, setSuccessMessage] = useState(false);
   const [failMessage, setFailedMessage] = useState(false);
 
+  const intl = useIntl();
 
   useEffect(() => {
     if (showPopup) {
@@ -53,21 +55,25 @@ export const OrderForm = (props) => {
   if (successMessage) {
     return (
       <WrapForm>
-        <p>Спасибо за заказ!<br/> В ближайшее время с вами свяжется наш консультант! </p>
+        <p><FormattedMessage id="card.thankyou" values={{
+          br: (<br/>)
+        }} /></p>
       </WrapForm>
     )
   }
   if (failMessage) {
     return (
       <WrapForm>
-        <p>Что то пошло не так!<br/> Попробуйте снова или свяжить с нами по телефону: +7 968 811 67 11</p>
+        <p><FormattedMessage id="card.wrong" values={{
+          br: (<br/>)
+        }} />: +7 968 811 67 11</p>
       </WrapForm>
     )
   }
   return (
     <WrapForm>
       {showAnimationOrder && <BounceAnimation />}
-      <p>Данные для заказа</p>
+      <p><FormattedMessage id="card.details" /></p>
       <form ref={form} onSubmit={sendEmail}>
         {card.map((item, index) => {
           return (
@@ -343,15 +349,18 @@ export const OrderForm = (props) => {
         })}
 
         <input type="hidden" name="sum_order" value={sumPrice}/>
-        <input placeholder="Имя" type="text" name="to_name"/>
-        <input placeholder="Телефон" type="tel" name="to_phone" required />
+        <input placeholder={intl.formatMessage({ id: "card.name" })} type="text" name="to_name"/>
+        <input placeholder={intl.formatMessage({ id: "card.contact" })} type="tel" name="to_phone" required />
         <input placeholder="Email" type="email" name="to_email" />
-        <input placeholder="Адрес отправки" type="text" name="to_address"/>
-        <input placeholder="Комментарий" type="text" name="to_comment"/>
+        <input placeholder={intl.formatMessage({ id: "card.adress" })} type="text" name="to_address"/>
+        <input placeholder={intl.formatMessage({ id: "card.comment" })} type="text" name="to_comment"/>
         <div style={{ display: "flex"}}>
-          Оформляя заказ, я принимаю условия конфиденциальности персональной информации. Не является публичной офертой.
+          <FormattedMessage id="card.offer" />
         </div>
-        <input disabled={card.length === 0} className='makeorder' type="submit" value="ЗАКАЗАТЬ"/>
+        <div style={{ color: "#464343", marginTop: "5px"}}>
+          <FormattedMessage id="card.deliverycosts" />
+        </div>
+        <input disabled={card.length === 0} className='makeorder' type="submit" value={intl.formatMessage({ id: "card.doorder" })}/>
       </form>
     </WrapForm>
   )

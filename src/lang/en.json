@@ -43,5 +43,18 @@
   "message.adress": "Moscow, Prospect Vernadskogo 29 (Trade Center\"LETO\")",
   "message.timework": "Opening hours",
   "message.dayswork": "Mo-Fr:",
-  "message.rights": "All rights reserved Jewel Cocktail, 2022"
+  "message.rights": "All rights reserved Jewel Cocktail, 2022",
+  "card.corzina": "Shopping cart",
+  "card.details": "ORDER DETAILS",
+  "card.name": "Name",
+  "card.contact": "Contact",
+  "card.adress": "Delivery address",
+  "card.comment": "Comments",
+  "card.oformlia": "By placing an order, I accept the terms of confidentiality of personal information. It is not a public offer.",
+  "card.doorder": "Order",
+  "card.thankyou": "Thank you for the order,{br} we will contact you as soon as possible!",
+  "card.wrong": "Something went wrong!{br} Try again or contact us by phone",
+  "card.total": "Total",
+  "card.offer": "When placing an order, I accept the terms of confidentiality of personal information. It is not a public offer.",
+  "card.deliverycosts": "* the cost of delivery is calculated separately and depends on your country and terms."
 }

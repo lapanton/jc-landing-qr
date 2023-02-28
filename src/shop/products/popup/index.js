@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from "react-intl";
 import { Wrapper, Inner, CloseButton, RemoveItem, WrapProductDescription, CardName, WrapCardPrice } from "./styled-popup";
 import close from './cross.svg';
 
@@ -50,7 +51,7 @@ export const Popup = (props) => {
         <CloseButton onClick={() => handleClick()}>
           <img src={close} alt="JewelCocktail"/>
         </CloseButton>
-        <CardName>Корзина</CardName>
+        <CardName><FormattedMessage id="card.corzina" /></CardName>
         <div>
           {card.map((item, index) => {
             const currentPrice = item.price.toString().slice(0, -3) +" "+item.price.toString().slice(-3);
