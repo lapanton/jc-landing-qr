@@ -12,6 +12,23 @@ export const Wrapper = styled.div`
       max-width: 100%;
     }
   }
+  .itCloseText {
+    transform: translate(3%, 0%);
+    display: inline-block;
+    font-family: 'Organetto';
+    white-space: nowrap;
+    color: #000;
+    pointer-events: none;
+    position: absolute;
+    left: 5rem;
+    top: 50%;
+    &:hover {
+      text-decoration: none;
+    }
+    @media screen and (max-width: 768px) { 
+      font-size: 12px;
+    }
+  }
 `;
 
 export const Menu = styled.div`
@@ -40,7 +57,7 @@ export const Social = styled.div`
     height: inherit;
   }
   .vk {
-    width: 2rem;
+    width: 2.7rem;
   }
   .you {
     width: 2.8rem;

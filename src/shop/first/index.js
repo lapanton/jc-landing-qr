@@ -30,6 +30,8 @@ import enimg from './en.svg';
 import ruimg from './ru.svg';
 import cnimg from './cn.svg';
 import cardicon from './cart-icon.png';
+import whatsapp from "../../whatsapp.png";
+import telegram from "../../telegram.png";
 
 
 
@@ -56,7 +58,7 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
 
     }
 
-  }, []);
+  }, [location.pathname]);
 
 
   useEffect(() => {
@@ -121,13 +123,13 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
             <WrapDesktopLinks>
               <Link to="/shop" className={ location.pathname === "/shop" ? "link-to-shop-desktop activeMenuDesctop" : "link-to-shop-desktop"}><FormattedMessage id="message.shop" /></Link>
               <Link to="/talisman" className={ location.pathname === "/talisman" ? "link-to-shop-desktop activeMenuDesctop" : "link-to-shop-desktop"}><FormattedMessage id="message.talisman" /></Link>
-              <Link to="/glass" className={ location.pathname === "/glass" ? "link-to-shop-desktop activeMenuDesctop" : "link-to-shop-desktop"}><FormattedMessage id="message.glass" /></Link>
+              {/*<Link to="/glass" className={ location.pathname === "/glass" ? "link-to-shop-desktop activeMenuDesctop" : "link-to-shop-desktop"}><FormattedMessage id="message.glass" /></Link>*/}
             </WrapDesktopLinks>
             <div><a href="https://jewelcocktail.com/about" target="_blank" rel="noreferrer"><FormattedMessage id="message.aboutUs" /></a></div>
             <div onClick={() => window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })}><FormattedMessage id="message.contacts" /></div>
           </WrapList>
           <WrapSocial>
-            <a href="https://vk.com/jewelrycocktail" target="_blank" rel="noopener noreferrer" className="insta-social">
+            <a href="https://www.instagram.com/jewelcocktail_official/" target="_blank" rel="noopener noreferrer" className="insta-social">
               <div/>
             </a>
             <a href="https://www.youtube.com/channel/UC44U3iU75Nx-Fv8LFb28I6w" target="_blank" rel="noopener noreferrer" className="youtube-social">
@@ -137,7 +139,7 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
               <div/>
             </a>
           </WrapSocial>
-          <WrapLang style={{display: "none"}}>
+          <WrapLang>
             <div className="ru_lang" onClick={() => onLocaleChange('ru')}><img style={locale !== "ru" ? {opacity: 0.5} : {opacity: 1, transform: "scale(1.2)"}} src={ruimg} alt="JewelCocktail"/></div>
             <div className="en_lang" onClick={() => onLocaleChange('en')}><img style={locale !== "en" ? {opacity: 0.5} : {opacity: 1, transform: "scale(1.2)"}} src={enimg} alt="JewelCocktail"/></div>
             <div className="cn_lang" onClick={() => onLocaleChange('zh')}><img style={locale !== "zh" ? {opacity: 0.5} : {opacity: 1, transform: "scale(1.2)"}} src={cnimg} alt="JewelCocktail"/></div>
@@ -151,17 +153,15 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
             )}
           </WrapCardIcon>
           <WrapPhone>
-            <a href="tel:+74993777919">
-              +7 499 377 79 19
-            </a>
+            <div>
+              <a href="https://wa.me/79688116711" target="_blank" style={{ maxWidth: "27px", display: "inline-block", marginRight: "10px" }}><img src={whatsapp} alt="JewelCocktail" style={{ maxWidth: "100%" }} /></a>
+              <a href="https://t.me/AleksandraLuch" target="_blank" style={{ maxWidth: "27px", display: "inline-block", marginLeft: "10px" }}><img src={telegram} alt="JewelCockail" style={{ maxWidth: "100%" }} /></a>
+            </div>
             <a href="mailto:contact@jewelcocktail.com">
               contact@jewelcocktail.com
             </a>
           </WrapPhone>
           <WrapMobile>
-            <a href="tel:+74993777919">
-              <img src={phoneMobile} alt="JewelCocktail"/>
-            </a>
             <div className="menuMobWrapper" onClick={handleMenu}>
               <img src={mobMenu} alt="JewelCocktail"/>
               <div className={show ? 'show-menu' : 'hide-menu'}>
@@ -174,7 +174,7 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
                   </div>
                   <Link to="/shop" className={ location.pathname === "/shop" ? "link-to-shop activeMenuDesctop" : "link-to-shop"}><FormattedMessage id="message.shop" /></Link>
                   <Link to="/talisman" className={ location.pathname === "/talisman" ? "link-to-shop activeMenuDesctop" : "link-to-shop"}><FormattedMessage id="message.talisman" /></Link>
-                  <Link to="/glass" className={ location.pathname === "/glass" ? "link-to-shop activeMenuDesctop" : "link-to-shop"}><FormattedMessage id="message.glass" /></Link>
+                  {/*<Link to="/glass" className={ location.pathname === "/glass" ? "link-to-shop activeMenuDesctop" : "link-to-shop"}><FormattedMessage id="message.glass" /></Link>*/}
                   <Link to="/#aboutus"><div><FormattedMessage id="message.aboutUs" /></div></Link>
                   <div onClick={() => window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })}><FormattedMessage id="message.contacts" /></div>
                   <WrpaMobSocial>
@@ -188,6 +188,10 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
                       <img src={googn} alt="JewelCocktail"/>
                     </a>
                   </WrpaMobSocial>
+                  <div style={{ textAlign: "center" }}>
+                    <a href="https://wa.me/79688116711" target="_blank" style={{ maxWidth: "27px", display: "inline-block", marginRight: "10px" }}><img src={whatsapp} alt="JewelCocktail" style={{ maxWidth: "100%" }} /></a>
+                    <a href="https://t.me/AleksandraLuch" target="_blank" style={{ maxWidth: "27px", display: "inline-block", marginLeft: "10px" }}><img src={telegram} alt="JewelCockail" style={{ maxWidth: "100%" }} /></a>
+                  </div>
                 </WrapMenu>
               </div>
             </div>

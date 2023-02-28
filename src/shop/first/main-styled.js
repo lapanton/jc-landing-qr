@@ -1,12 +1,12 @@
 import styled, { keyframes } from 'styled-components';
-// import ins from "./instagram.png";
+import ins from "./instagram.png";
 import you from "./youtube.png";
 import goo from "./google.png";
-// import insn from "./instatgram-n.png";
+import insn from "./instatgram-n.png";
 import youn from "./youtube-n.png";
 import googn from "./google-n.png";
-import vkn from "./vk-n.png";
-import vk from "./vk.png";
+// import vkn from "./vk-n.png";
+// import vk from "./vk.png";
 
 const rotate = keyframes`
   from { transform: rotate(0deg); }
@@ -63,6 +63,9 @@ margin: 20px 30px;
     position: fixed;
     top: 0;
     width: 100%;
+    @media screen and (max-width: 768px) {
+      width: 90%;
+    }
     background: #2e2c2c;
     margin: 0;
     display: flex;
@@ -130,14 +133,14 @@ export const WrapSocial = styled.div`
     width: 28px;
     display: inline-block;
     div {
-      background: url(${vkn}) no-repeat;
+      background: url(${insn}) no-repeat;
       width: 28px;
       height: 21px;
       background-size: contain;
     }
     &:hover {
       div {
-        background: url(${vk}) no-repeat;
+        background: url(${ins}) no-repeat;
         width: 28px;
         height: 21px;
         background-size: contain;
