@@ -458,7 +458,7 @@ export const DorsTalisman = (props) => {
                 <FormattedMessage id="shop.complectation" />:
               </p>
               <p className="slave-text">
-                браслет, 2 сменных камня, система хранения камней фирменная коробка и пакет.
+                <FormattedMessage id="complectation.descr" />
               </p>
               <p className="main-text">
                 <FormattedMessage id="size.ketroy" />:

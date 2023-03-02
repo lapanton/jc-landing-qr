@@ -332,10 +332,10 @@ export const Pendants = (props) => {
             </div>
           </WrapStone>
           <p className="description">
-            { quasarStone === '1p' && "роза - символ страсти, красоты, энергии и любви"}
-            { quasarStone === '2p' && "океан - символ творчества,мечты, свободы и созидания"}
-            { quasarStone === '3p' && "жемчуг - символизирует чистоту, силу воли и благополучие"}
-            { quasarStone === '4p' && "родохрозит - романтичный камень, олицетворяет нежность и любовь"}
+            { quasarStone === '1p' && <FormattedMessage id="ketroy.roza" />}
+            { quasarStone === '2p' && <FormattedMessage id="wom.ocean" />}
+            { quasarStone === '3p' && <FormattedMessage id="wom.gemchiug" />}
+            { quasarStone === '4p' && <FormattedMessage id="wom.rodohit" />}
             { quasarStone === '5p' && "авантюрин - оптимизм, успех и удача на вашей стороне"}
           </p>
         </ChooseStone>

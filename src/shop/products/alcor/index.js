@@ -217,7 +217,7 @@ export const Alcor = (props) => {
     <Wrapper>
       <Inner>
         <div className="slider-wrap">
-          <h4>женский браслет<br/> Alcor</h4>
+          <h4><FormattedMessage id="braslet.woman" /><br/> Alcor</h4>
           <Slider {...settings} asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
             <div>
               <img src={one} alt="JewelCocktail" onClick={() => openZoom(1)}/>
@@ -333,11 +333,11 @@ export const Alcor = (props) => {
             </div>
           </WrapStone>
           <p className="description">
-            { alcorStone === '1a' && "роза - символ страсти, красоты, энергии и любви"}
-            { alcorStone === '2a' && "океан - символ творчества,мечты, свободы и созидания"}
-            { alcorStone === '3a' && "жемчуг - символизирует чистоту, силу воли и благополучие"}
-            { alcorStone === '4a' && "родохрозит - романтичный камень, олицетворяет нежность и любовь"}
-            { alcorStone === '5a' && "авантюрин - оптимизм, успех и удача на вашей стороне"}
+            { alcorStone === '1a' && <FormattedMessage id="ketroy.roza" />}
+            { alcorStone === '2a' && <FormattedMessage id="wom.ocean" />}
+            { alcorStone === '3a' && <FormattedMessage id="wom.gemchiug" />}
+            { alcorStone === '4a' && <FormattedMessage id="wom.rodohit" />}
+            { alcorStone === '5a' && <FormattedMessage id="wom.avantiiurin" />}
           </p>
         </ChooseStone>
         <PriceBuySection>
@@ -362,14 +362,12 @@ export const Alcor = (props) => {
           </DescriptionButton>
           {showDescr && (
             <DescriptionView>
-              <p className="slave-text">дизайнерский браслет
-                в стиле минимализм
-                на каждый день со сменными вставками (камнями)</p>
+              <p className="slave-text"><FormattedMessage id=" descriptions.dors" /> </p>
               <p className="main-text">
                 <FormattedMessage id="shop.complectation" />:
               </p>
               <p className="slave-text">
-                браслет, 2 сменных камня, система хранения камней фирменная коробка и пакет.
+                <FormattedMessage id="complectation.descr" />
               </p>
               <p className="main-text">
                 <FormattedMessage id="size.ketroy" />:

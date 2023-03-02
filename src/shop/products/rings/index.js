@@ -343,10 +343,10 @@ export const Rings = (props) => {
             </div>
           </WrapStone>
           <p className="description">
-            { ringStone === '1r' && "роза - символ страсти, красоты, энергии и любви"}
-            { ringStone === '2r' && "океан - символ творчества,мечты, свободы и созидания"}
-            { ringStone === '3r' && "жемчуг - символизирует чистоту, силу воли и благополучие"}
-            { ringStone === '4r' && "родохрозит - романтичный камень, олицетворяет нежность и любовь"}
+            { ringStone === '1r' && <FormattedMessage id="ketroy.roza" />}
+            { ringStone === '2r' && <FormattedMessage id="wom.ocean" />}
+            { ringStone === '3r' && <FormattedMessage id="wom.gemchiug" />}
+            { ringStone === '4r' && <FormattedMessage id="wom.rodohit" />}
             { ringStone === '5r' && "авантюрин - оптимизм, успех и удача на вашей стороне"}
           </p>
         </ChooseStone>
