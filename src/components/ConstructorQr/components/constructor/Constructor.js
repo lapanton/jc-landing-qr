@@ -57,6 +57,7 @@ import {BounceAnimation} from "../../../../animation/BounceAnimation";
 import {ConfettiAnimation} from "../../../../animation/Confetti";
 import removeIcon from "../../../ConstructorQrTalisman/components/constructor/remove.png";
 import { NotifyPopup } from "../notify-popup";
+import {FormattedMessage} from "react-intl";
 
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -255,12 +256,12 @@ export const Constructor = (props) => {
   return (
     <Wrapper>
 
-      {showVediteText && <NotifyPopup value={"Пожалуста введите текст послания"} />}
-      {uplFoto && <NotifyPopup value={"Пожалуста загрузите фото"} />}
-      {soglasie && <NotifyPopup value={"Пожалуста поставьте галочку на согласие: Политикой в отношении обработки персональных данных"} />}
-      {mailvalid && <NotifyPopup value={"Пожалуйста введите корректный адрес почты"} />}
+      {showVediteText && <NotifyPopup value={<FormattedMessage id="qr.validText" />} />}
+      {uplFoto && <NotifyPopup value={<FormattedMessage id="qr.validPhoto" />} />}
+      {soglasie && <NotifyPopup value={<FormattedMessage id="qr.soglasie" />} />}
+      {mailvalid && <NotifyPopup value={<FormattedMessage id="qr.mailvalid" />} />}
 
-        <h2 className={value?.status === 'completed' ? "completed": "notcompleted"}>Конструктор послания</h2>
+        <h2 className={value?.status === 'completed' ? "completed": "notcompleted"}><FormattedMessage id="qr.construcctor" /></h2>
       {value?.status === 'completed' && hide &&  (
         <ConfettiAnimation/>
       )}
@@ -269,14 +270,14 @@ export const Constructor = (props) => {
 
             <TextMessage>
               <img src={t} alt="JewelCocktail"/>
-              <div>Текст послания</div>
-              <span>Заполните текст послания до 400 символов</span>
+              <div><FormattedMessage id="qr.text" /></div>
+              <span><FormattedMessage id="qr.message" /></span>
             </TextMessage>
 
             <Fon>
               <img src={fon} alt="JewelCocktail"/>
-              <div>Фон</div>
-              <span>Добавьте до 3 фото</span>
+              <div><FormattedMessage id="qr.fon" /></div>
+              <span><FormattedMessage id="qr.photo" /></span>
               <br/>
               <br/>
               <br/>
@@ -293,14 +294,14 @@ export const Constructor = (props) => {
 
             <Podpsi>
               <img src={podpsi} alt="JewelCocktail"/>
-              <div>Подпись</div>
-              <span>Подпишите ваше послание</span>
+              <div><FormattedMessage id="qr.podpisi" /></div>
+              <span><FormattedMessage id="qr.podpisitext" /></span>
             </Podpsi>
 
             <ResultPrewiev>
               <img src={result} alt="JewelCocktail"/>
-              <div>Предварительный результат</div>
-              <span>Вид послания, которое увидит ваш адресат</span>
+              <div><FormattedMessage id="qr.prev" /></div>
+              <span><FormattedMessage id="qr.veiw" /></span>
             </ResultPrewiev>
 
           </SideArea>
@@ -308,17 +309,17 @@ export const Constructor = (props) => {
           <ConstructorArea className={value?.status === 'completed' ? "noMarging": "notcompleted"}>
             <TextMessageMob className={value?.status === 'completed' ? "completed": "notcompleted"}>
               <img src={t} alt="JewelCocktail"/>
-              <div>Текст послания</div>
+              <div><FormattedMessage id="qr.text" /></div>
             </TextMessageMob>
-            <p className={value?.status === 'completed' ? "completed": "notcompleted"}>Заполните текст послания до 400 символов</p>
+            <p className={value?.status === 'completed' ? "completed": "notcompleted"}><FormattedMessage id="qr.message" /></p>
             <textarea value={message} name="message" cols="30" rows="5" onChange={handleChangeMessage} className={value?.status === 'completed' ? "completed": "notcompleted"} />
 
             <WrapPhotoUpload className={value?.status === 'completed' ? "completed": "notcompleted"}>
               <FonMobile>
                 <img src={fon} alt="JewelCocktail"/>
-                <div>Фон</div>
+                <div><FormattedMessage id="qr.fon" /></div>
               </FonMobile>
-              <p>Добавьте до 3 фото</p>
+              <p><FormattedMessage id="qr.photo" /></p>
               <InnerPhoto>
                 <section className="container">
                   <ThumbsContainer>
@@ -336,9 +337,9 @@ export const Constructor = (props) => {
               <InnerSignatture>
                 <PodpsiMob>
                   <img src={podpsi} alt="JewelCocktail"/>
-                  <div>Подпись</div>
+                  <div><FormattedMessage id="qr.podpisi" /></div>
                 </PodpsiMob>
-                <p>Подпишите ваше послание</p>
+                <p><FormattedMessage id="qr.podpisitext" /></p>
                 <input value={signature} type="text" name="signature" onChange={handleChangeSignature} />
               </InnerSignatture>
             </WrapSignature>
@@ -347,9 +348,9 @@ export const Constructor = (props) => {
               <InnerPreviewResult>
                 <ResultPrewievMob className={value?.status === 'completed' ? "completed": "notcompleted"}>
                   <img src={result} alt="JewelCocktail"/>
-                  <div>Предварительный результат</div>
+                  <div><FormattedMessage id="qr.prev" /></div>
                 </ResultPrewievMob>
-                <p className={value?.status === 'completed' ? "completed": "notcompleted"}>Вид послания, которое увидит ваш адресат</p>
+                <p className={value?.status === 'completed' ? "completed": "notcompleted"}><FormattedMessage id="qr.veiw" /></p>
                 <MessageView className={value?.status === 'completed' ? "morePadding": "notcompleted messageInit"}>{value?.status === 'completed' ? messageBr.split('\n').map((item, i) => <p className="poezi" key={i}>{item}</p>) : message.split('\n').map((item, i) => <p className="poezi" key={i}>{item}</p>)}</MessageView>
                 <div className={value?.status === 'completed' ? "emptyHeightCompl": "emptyHeight"}>
                   <WrapSlider>
@@ -394,10 +395,10 @@ export const Constructor = (props) => {
                       <WrapInputCheckBox>
                         <input name="checked" type="checkbox" checked={checked}
                                onChange={e => setChecked(!checked)} className="checkbox-round" />
-                        <span>Подтверждая вы соглавшаетесь с <a href="/privacy" target="_blank"> политикой в отношении обработки персональных данных</a></span>
+                        <span><FormattedMessage id="qr.podone" /><a href="/privacy" target="_blank"><FormattedMessage id="qr.podtwo" /></a></span>
                       </WrapInputCheckBox>
                       <ButtonSubmit onClick={handleSubmit} className={value?.status === 'completed' ? "completed": "notcompleted"}>
-                      Создать послание
+                        <FormattedMessage id="qr.create" />
                       </ButtonSubmit>
                     </>
                   )}

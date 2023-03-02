@@ -114,5 +114,22 @@
   "yellow.organic": "yellow marble  - symbolizes warmth, summer, sun and joy",
   "two.brtwo": "2 bracelets + 2 diffirent stones",
   "pair.style": "Designer paired bracelet  in minimalist style for every day with interchangeable inserts (stones)",
-  "pair.complectation": "men`s and women`s bracelets, 2 men`s and 2 women`s stones, branded box"
+  "pair.complectation": "men`s and women`s bracelets, 2 men`s and 2 women`s stones, branded box",
+  "qr.title": "META - MESSAGE",
+  "qr.construcctor": "DIGITAL MESSAGE CONSTRUCTOR",
+  "qr.validText": "Please enter the text of your message",
+  "qr.validPhoto" : "Please upload a photo",
+  "qr.soglasie": "Please check the box to agree with the Personal Data Processing Policy",
+  "qr.mailvalid": "Please enter a valid email address",
+  "qr.text": "text",
+  "qr.message": "Fill in the text of the message up to 400 characters",
+  "qr.fon": "Background",
+  "qr.photo": "Add up to 3 photos",
+  "qr.podpisi": "Signature",
+  "qr.podpisitext": "Sign your message",
+  "qr.prev": "Preview",
+  "qr.veiw": "The look of message that your addressee will see",
+  "qr.podone": "By confirming ",
+  "qr.podtwo": "you agree to the policy regarding the processing of personal data",
+  "qr.create": "Create message"
 }

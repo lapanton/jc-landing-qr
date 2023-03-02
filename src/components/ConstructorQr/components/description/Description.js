@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from "react-intl";
 import {useLocation} from "react-router-dom";
 import { Wrapper } from "./description-style";
 import imgGift from './gift.png';
@@ -10,7 +11,7 @@ export const Description = (props) => {
     <Wrapper>
       {(pathname.includes('/letter') || pathname.includes('/qr/')) ?
         <>
-          <h1><span>МЕТА - послание</span></h1>
+          <h1><span><FormattedMessage id="qr.title" /></span></h1>
           <img className="letter-image" src={imgGift} alt="JewelCocktail"/>
         </>
         :
