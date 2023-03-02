@@ -26,6 +26,7 @@ import closeIcon from "./img/cross_white.svg";
 import whiteArrow from "./img/white-arrow.svg";
 
 import { Wrapper, Inner, ChooseStone, WrapStone, ChooseSize, SizeButton, PriceBuySection, DescriptionProduct, DescriptionButton, DescriptionView, ToRightMoveDesktop, WrapPrices, WrapperZoom, WrapZoomSlider } from "./styled-rings";
+import {FormattedMessage} from "react-intl";
 
 export const Rings = (props) => {
   const { card, setCard, setShowPopup } = props;
@@ -323,7 +324,7 @@ export const Rings = (props) => {
           </Slider>
         </div>
         <ChooseStone>
-          <p>выбери камень с qr-посланием</p>
+          <p><FormattedMessage id="choose.ketroy" /></p>
           <WrapStone>
             <div onClick={() => setRingStone('1r')} className={ringStone === '1r' ? 'active' : 'not' }>
               <img src={oneStone} alt="JewelCocktail"/>
@@ -371,15 +372,15 @@ export const Rings = (props) => {
             <img src={sale} alt="JewelCocktail" className="sale-icon"/>
           </WrapPrices>
           <p className="bonus">кольцо + 2 разных камня</p>
-          <div className="buy-button" onClick={() => buyRing()}>Купить</div>
+          <div className="buy-button" onClick={() => buyRing()}><FormattedMessage id="shop.buy" /></div>
           <div className="actsia">
             <img src={fire} alt="JewelCocktail"/>
-            <p className="actsia-text"><span>Акция!</span> второй камень <span>в подарок</span></p>
+            <p className="actsia-text"><span><FormattedMessage id="shop.action" /></span><FormattedMessage id="shop.secketr" /><span><FormattedMessage id="in.present" /></span></p>
           </div>
         </PriceBuySection>
         <DescriptionProduct>
           <DescriptionButton>
-            <span>Описание</span>
+            <span><FormattedMessage id="shop.descriptions" /></span>
             <div onClick={() => setShowDescr(!showDescr)} className={showDescr ? 'hide' : 'show'}>
               <img src={arDown} alt="JewelCocktail"/>
             </div>
@@ -388,16 +389,16 @@ export const Rings = (props) => {
             <DescriptionView>
               <p className="slave-text">дизайнерское кольцо в стиле минимализм на каждый день со сменными вставками (камнями)</p>
               <p className="main-text">
-                Комплектация:
+                <FormattedMessage id="shop.complectation" />:
               </p>
               <p className="slave-text">
                 кольцо, 2 сменных камня, система хранения камней фирменная коробка и пакет.
               </p>
               <p className="main-text">
-                Размер камня:
+                <FormattedMessage id="size.ketroy" />:
               </p>
               <p className="slave-text">
-                10x10 мм
+                10x10 <FormattedMessage id="size.mm" />
               </p>
 
               <ToRightMoveDesktop>
@@ -408,24 +409,23 @@ export const Rings = (props) => {
                 ONE SIZE
               </p>
               <p className="main-text">
-                Материал и цвет основы:
+                <FormattedMessage id="material.color" />:
               </p>
               <p className="slave-text">
-                Серебряный сплав, глянец
+                <FormattedMessage id="serebro.gleanets" />
               </p>
               <p className="main-text">
-                Тип вставки:
+                <FormattedMessage id="type.insert" />:
               </p>
               <p className="slave-text">
-                Натуральный или органический
-                камень ручной огранки
+                <FormattedMessage id="natural.ketroy" />
               </p>
               <p className="main-text">
-                бессрочная гарантия:
+                <FormattedMessage id="warranty.quality" />:
               </p>
               <p className="slave-text">
-                для членов клуба jewel cocktail
-                <a href="https://jewelcocktail.com/privacy" target="_blank" rel="noreferrer" >Подробнее</a>
+                <FormattedMessage id="club.jewel" />
+                <a href="https://jewelcocktail.com/privacy" target="_blank" rel="noreferrer" ><FormattedMessage id="read.more" /></a>
               </p>
               </ToRightMoveDesktop>
 

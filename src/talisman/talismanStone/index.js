@@ -71,6 +71,7 @@ import Mseventeen from "./man-stones/IMG_6053.png";
 import Meightteen from "./man-stones/IMG_6056.png";
 import Mnineteen from "./man-stones/IMG_6055.png";
 import Mtwenty from "./man-stones/IMG_6054.png";
+import {FormattedMessage} from "react-intl";
 
 
 export const TalismanStone = () => {
@@ -86,13 +87,13 @@ export const TalismanStone = () => {
         <GenderSelected className={gender === "wom" ? "woman": "no"} onClick={() => setGender("wom")}>
           <img src={wonIcon} alt="JewelCocktail.com"/>
           женские<br/>
-          10х10 мм
+          10х10 <FormattedMessage id="size.mm" />
         </GenderSelected>
 
         <GenderSelected className={gender === "man" ? "man": "no"} onClick={() => setGender("man")}>
           <img src={manIcon} alt="JewelCocktail.com"/>
           мужские<br/>
-          12х12 мм
+          12х12 <FormattedMessage id="size.mm" />
         </GenderSelected>
       </WrapGenderButton>
 

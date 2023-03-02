@@ -22,6 +22,7 @@ import sale from '../sale.png';
 import { Wrapper, Inner, ChooseStone, WrapStone, PriceBuySection, DescriptionProduct, DescriptionButton, DescriptionView, ToRightMoveDesktop, WrapPrices,  WrapperZoom, WrapZoomSlider } from "./styled-coupleBracelets";
 import whiteArrow from "../rings/img/white-arrow.svg";
 import closeIcon from "../rings/img/cross_white.svg";
+import {FormattedMessage} from "react-intl";
 
 export const CoupleBracelets = (props) => {
   const { card, setCard, setShowPopup } = props;
@@ -303,7 +304,7 @@ export const CoupleBracelets = (props) => {
         </Slider>
         </div>
         <ChooseStone>
-          <p>выбери камень с qr-посланием</p>
+          <p><FormattedMessage id="choose.ketroy" /></p>
           <WrapStone>
             <div onClick={() => setCoupleStone('1co')} className={coupleStone === '1co' ? 'active' : 'not' }>
               <img src={oneStone} alt="JewelCocktail"/>
@@ -328,15 +329,15 @@ export const CoupleBracelets = (props) => {
             <img src={sale} alt="JewelCocktail" className="sale-icon"/>
           </WrapPrices>
           <p className="bonus">2 браслета + 2 разных камня</p>
-          <div className="buy-button" onClick={() => buyCouple()}>Купить</div>
+          <div className="buy-button" onClick={() => buyCouple()}><FormattedMessage id="shop.buy" /></div>
           <div className="actsia">
             <img src={fire} alt="JewelCocktail"/>
-            <p className="actsia-text"><span>Акция!</span> второй камень <span>в подарок</span></p>
+            <p className="actsia-text"><span><FormattedMessage id="shop.action" /></span><FormattedMessage id="shop.secketr" /><span><FormattedMessage id="in.present" /></span></p>
           </div>
         </PriceBuySection>
         <DescriptionProduct>
           <DescriptionButton>
-            <span>Описание</span>
+            <span><FormattedMessage id="shop.descriptions" /></span>
             <div onClick={() => setShowDescr(!showDescr)} className={showDescr ? 'hide' : 'show'}>
               <img src={arDown} alt="JewelCocktail"/>
             </div>
@@ -345,37 +346,37 @@ export const CoupleBracelets = (props) => {
             <DescriptionView>
               <p className="slave-text">Парные браслеты в стиле минимализм на каждый день со сменными вставками (камнями)</p>
               <p className="main-text">
-                Комплектация:
+                <FormattedMessage id="shop.complectation" />:
               </p>
               <p className="slave-text">
                 браслет мужской и женский, 2 женских и 2 мужских камня, система хранения, комплект - фирменная коробка и пакет.
               </p>
               <p className="main-text">
-                Размер камня:
+                <FormattedMessage id="size.ketroy" />:
               </p>
               <p className="slave-text">
-                12x12 мм + 10x10 мм
+                12x12 <FormattedMessage id="size.mm" /> + 10x10 <FormattedMessage id="size.mm" />
               </p>
 
               <ToRightMoveDesktop>
               <p className="main-text">
-                Материал и цвет основы:
+                <FormattedMessage id="material.color" />:
               </p>
               <p className="slave-text">
-                Серебряный сплав, глянец
+                <FormattedMessage id="serebro.gleanets" />
               </p>
               <p className="main-text">
-                Тип вставки:
+                <FormattedMessage id="type.insert" />:
               </p>
               <p className="slave-text">
-                Натуральный или органический камень ручной огранки
+                <FormattedMessage id="natural.ketroy" />
               </p>
               <p className="main-text">
-                бессрочная гарантия:
+                <FormattedMessage id="warranty.quality" />:
               </p>
               <p className="slave-text">
-                для членов клуба jewel cocktail
-                <a href="https://jewelcocktail.com/privacy" target="_blank" rel="noreferrer" >Подробнее</a>
+                <FormattedMessage id="club.jewel" />
+                <a href="https://jewelcocktail.com/privacy" target="_blank" rel="noreferrer" ><FormattedMessage id="read.more" /></a>
               </p>
               </ToRightMoveDesktop>
 
