@@ -229,7 +229,7 @@ export const CoupleBraceletsTalisman = (props) => {
     <Wrapper>
       <Inner>
         <div className="slider-wrap">
-          <h4>Парные браслеты</h4>
+          <h4><FormattedMessage id="paired.bracelets" /></h4>
           <Slider {...settings} asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
             <div>
               <img src={one} alt="JewelCocktail" onClick={() => openZoom(1)} />
@@ -330,8 +330,8 @@ export const CoupleBraceletsTalisman = (props) => {
             </div>
           </WrapStone>
           <p className="description">
-            { coupleStone === '1co' && "огонь и роза - символ страсти, любви и красоты"}
-            { coupleStone === '2co' && "белый оникс - символ благополучия, энергии и созидания"}
+            { coupleStone === '1co' && <FormattedMessage id="fire.pair" />}
+            { coupleStone === '2co' && <FormattedMessage id="white.onix" />}
             { coupleStone === '3co' && "жёлтый органик - символ тепла, солнца и радости"}
           </p>
         </ChooseStone>
@@ -341,7 +341,7 @@ export const CoupleBraceletsTalisman = (props) => {
             <p className="old-price">14 140 ₽</p>
             <img src={sale} alt="JewelCocktail" className="sale-icon"/>
           </WrapPrices>
-          <p className="bonus">2 браслета + 2 разных камня</p>
+          <p className="bonus"><FormattedMessage id="two.brtwo" /></p>
           <div className="buy-button" onClick={() => buyCouple()}><FormattedMessage id="shop.buy" /></div>
           <div className="actsia">
             <img src={fire} alt="JewelCocktail"/>

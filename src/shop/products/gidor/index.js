@@ -217,7 +217,7 @@ export const Gidor = (props) => {
     <Wrapper>
       <Inner>
         <div className="slider-wrap">
-          <h4>мужской кулон<br/>Gidor</h4>
+          <h4><FormattedMessage id="man.culon" /><br/>Gidor</h4>
           <Slider {...settings} asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
             <div>
               <img src={one} alt="JewelCocktail" onClick={() => openZoom(1)} />
@@ -346,7 +346,7 @@ export const Gidor = (props) => {
             <p className="old-price">9 850 ₽</p>
             <img src={sale} alt="JewelCocktail" className="sale-icon"/>
           </WrapPrices>
-          <p className="bonus">кулон + 2 разных камня</p>
+          <p className="bonus"><FormattedMessage id="culon.twoketroys" /></p>
           <div className="buy-button" onClick={() => buyGidor()}><FormattedMessage id="shop.buy" /></div>
           <div className="actsia">
             <img src={fire} alt="JewelCocktail"/>
@@ -362,14 +362,12 @@ export const Gidor = (props) => {
           </DescriptionButton>
           {showDescr && (
             <DescriptionView>
-              <p className="slave-text">дизайнерский кулон
-                в стиле минимализм
-                на каждый день со сменными вставками (камнями)</p>
+              <p className="slave-text"><FormattedMessage id="dizainerskii.kulon" /></p>
               <p className="main-text">
                 <FormattedMessage id="shop.complectation" />:
               </p>
               <p className="slave-text">
-                кулон, шнурок, 2 сменных камня, система хранения камней фирменная коробка и пакет.
+                <FormattedMessage id="kulon.shnurok" />
               </p>
               <p className="main-text">
                 <FormattedMessage id="size.ketroy" />:

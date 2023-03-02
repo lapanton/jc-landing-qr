@@ -216,7 +216,7 @@ export const Pendants = (props) => {
     <Wrapper>
       <Inner>
         <div className="slider-wrap">
-          <h4>женская подвеска<br/> quasar</h4>
+          <h4><FormattedMessage id="wom.quasar" /><br/> quasar</h4>
           <Slider {...settings} asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
             <div>
               <img src={one} alt="JewelCocktail" onClick={() => openZoom(1)}/>
@@ -336,7 +336,7 @@ export const Pendants = (props) => {
             { quasarStone === '2p' && <FormattedMessage id="wom.ocean" />}
             { quasarStone === '3p' && <FormattedMessage id="wom.gemchiug" />}
             { quasarStone === '4p' && <FormattedMessage id="wom.rodohit" />}
-            { quasarStone === '5p' && "авантюрин - оптимизм, успех и удача на вашей стороне"}
+            { quasarStone === '5p' && <FormattedMessage id="wom.avantiiurin" />}
           </p>
         </ChooseStone>
         <PriceBuySection>
@@ -345,7 +345,7 @@ export const Pendants = (props) => {
             <p className="old-price">9 850 ₽</p>
             <img src={sale} alt="JewelCocktail" className="sale-icon"/>
           </WrapPrices>
-          <p className="bonus">подвеска + 2 разных камня</p>
+          <p className="bonus"><FormattedMessage id="culon.twoketroys" /></p>
           <div className="buy-button" onClick={() => buyPendant()}><FormattedMessage id="shop.buy" /></div>
           <div className="actsia">
             <img src={fire} alt="JewelCocktail"/>
@@ -361,14 +361,12 @@ export const Pendants = (props) => {
           </DescriptionButton>
           {showDescr && (
             <DescriptionView>
-              <p className="slave-text">дизайнерская подвеска
-                в стиле минимализм
-                на каждый день со сменными вставками (камнями)</p>
+              <p className="slave-text"><FormattedMessage id="quasar.description" /></p>
               <p className="main-text">
                 <FormattedMessage id="shop.complectation" />:
               </p>
               <p className="slave-text">
-                подвеска, 2 сменных камня, система хранения камней фирменная коробка и пакет.
+                <FormattedMessage id="quasar.twoketroys" />
               </p>
               <p className="main-text">
                 <FormattedMessage id="size.ketroy" />:

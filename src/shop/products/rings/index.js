@@ -227,7 +227,7 @@ export const Rings = (props) => {
     <Wrapper>
       <Inner>
         <div className="slider-wrap">
-          <h4>женское Кольцо<br/> Mellish</h4>
+          <h4><FormattedMessage id="wom.ring" /><br/> Mellish</h4>
           <Slider {...settings} asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
             <div>
               <img src={one} alt="JewelCocktail" onClick={() => openZoom(1)}/>
@@ -347,7 +347,7 @@ export const Rings = (props) => {
             { ringStone === '2r' && <FormattedMessage id="wom.ocean" />}
             { ringStone === '3r' && <FormattedMessage id="wom.gemchiug" />}
             { ringStone === '4r' && <FormattedMessage id="wom.rodohit" />}
-            { ringStone === '5r' && "авантюрин - оптимизм, успех и удача на вашей стороне"}
+            { ringStone === '5r' && <FormattedMessage id="wom.avantiiurin" />}
           </p>
         </ChooseStone>
         <ChooseSize>
@@ -371,7 +371,7 @@ export const Rings = (props) => {
             <p className="old-price">14 000 ₽</p>
             <img src={sale} alt="JewelCocktail" className="sale-icon"/>
           </WrapPrices>
-          <p className="bonus">кольцо + 2 разных камня</p>
+          <p className="bonus"><FormattedMessage id="ring.twoketroys" /></p>
           <div className="buy-button" onClick={() => buyRing()}><FormattedMessage id="shop.buy" /></div>
           <div className="actsia">
             <img src={fire} alt="JewelCocktail"/>
@@ -387,12 +387,12 @@ export const Rings = (props) => {
           </DescriptionButton>
           {showDescr && (
             <DescriptionView>
-              <p className="slave-text">дизайнерское кольцо в стиле минимализм на каждый день со сменными вставками (камнями)</p>
+              <p className="slave-text"><FormattedMessage id="ring.descr" /></p>
               <p className="main-text">
                 <FormattedMessage id="shop.complectation" />:
               </p>
               <p className="slave-text">
-                кольцо, 2 сменных камня, система хранения камней фирменная коробка и пакет.
+                <FormattedMessage id="ring.complectation" />
               </p>
               <p className="main-text">
                 <FormattedMessage id="size.ketroy" />:
@@ -403,7 +403,7 @@ export const Rings = (props) => {
 
               <ToRightMoveDesktop>
               <p className="main-text" style={{ display: "none" }}>
-                Размер кольца:
+                <FormattedMessage id="ring.size" />
               </p>
               <p className="slave-text" style={{ display: "none" }}>
                 ONE SIZE

@@ -216,7 +216,7 @@ export const CoupleBracelets = (props) => {
     <Wrapper>
       <Inner>
         <div className="slider-wrap">
-          <h4>Парные браслеты</h4>
+          <h4><FormattedMessage id="paired.bracelets" /></h4>
           <Slider {...settings} asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
             <div>
               <img src={one} alt="JewelCocktail" onClick={() => openZoom(1)} />
@@ -317,9 +317,9 @@ export const CoupleBracelets = (props) => {
             </div>
           </WrapStone>
           <p className="description">
-            { coupleStone === '1co' && "огонь и роза - символ страсти, любви и красоты"}
-            { coupleStone === '2co' && "белый оникс - символ благополучия, энергии и созидания"}
-            { coupleStone === '3co' && "жёлтый органик - символ тепла, солнца и радости"}
+            { coupleStone === '1co' && <FormattedMessage id="fire.pair" />}
+            { coupleStone === '2co' && <FormattedMessage id="white.onix" />}
+            { coupleStone === '3co' && <FormattedMessage id="yellow.organic" />}
           </p>
         </ChooseStone>
         <PriceBuySection>
@@ -328,7 +328,7 @@ export const CoupleBracelets = (props) => {
             <p className="old-price">14 140 ₽</p>
             <img src={sale} alt="JewelCocktail" className="sale-icon"/>
           </WrapPrices>
-          <p className="bonus">2 браслета + 2 разных камня</p>
+          <p className="bonus"><FormattedMessage id="two.brtwo" /></p>
           <div className="buy-button" onClick={() => buyCouple()}><FormattedMessage id="shop.buy" /></div>
           <div className="actsia">
             <img src={fire} alt="JewelCocktail"/>
@@ -344,12 +344,12 @@ export const CoupleBracelets = (props) => {
           </DescriptionButton>
           {showDescr && (
             <DescriptionView>
-              <p className="slave-text">Парные браслеты в стиле минимализм на каждый день со сменными вставками (камнями)</p>
+              <p className="slave-text"><FormattedMessage id="pair.style" /></p>
               <p className="main-text">
                 <FormattedMessage id="shop.complectation" />:
               </p>
               <p className="slave-text">
-                браслет мужской и женский, 2 женских и 2 мужских камня, система хранения, комплект - фирменная коробка и пакет.
+                <FormattedMessage id="pair.complectation" />
               </p>
               <p className="main-text">
                 <FormattedMessage id="size.ketroy" />:
