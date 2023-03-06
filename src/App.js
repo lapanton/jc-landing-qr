@@ -178,7 +178,7 @@ export const App = (props) => {
             } exact />
 
           <Route path="/privacy" element={<>
-            <PrivacyPolicy/>
+            <PrivacyPolicy langProps={props} />
             <Footer />
           </>
           } exact />
