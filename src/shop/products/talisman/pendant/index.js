@@ -560,7 +560,7 @@ export const PendantsTalisman = (props) => {
               </p>
               <p className="slave-text">
                 {langProps.locale === "ru" ?
-                "камень, дерево ручной огранки" : "handcraft stone"}
+                "камень ручной огранки" : "handcraft stone"}
               </p>
               <p className="main-text">
                 {langProps.locale === "ru" ?

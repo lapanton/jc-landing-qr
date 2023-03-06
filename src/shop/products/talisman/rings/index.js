@@ -506,7 +506,8 @@ export const RingsTalisman = (props) => {
         </ChooseStone>
         <ChooseSize>
           <span>
-            Размер кольца
+            { langProps.locale === "ru" ? "Размер кольца" : "Ring size" }
+
           </span>
           <SizeButton>ONE SIZE</SizeButton>
           {/*<SizeButton onClick={() => setSizeRing('sizes')} className={sizeRing === 'sizes' ? 'active' : 'no'}>*/}
@@ -543,12 +544,18 @@ export const RingsTalisman = (props) => {
           </DescriptionButton>
           {showDescr && (
             <DescriptionView>
-              <p className="slave-text">Кольцо Jewel Cocktail в стиле минимализм. Со сменными вставками из натуральных материалов. Особенная вставка с QR ссылкой на персональный талисман.</p>
+              <p className="slave-text">
+                {langProps.locale === "ru" ?
+                  "Кольцо-талисман Jewel Cocktail в стиле минимализм. Со сменными вставками из натуральных материалов. Особенная вставка с QR ссылкой на персональный талисман." :
+                  "Jewel Cocktail talisman-ring in minimalist style with replaceable natural stones. Special stone with QR link to your personal talisman"}
+
+              </p>
               <p className="main-text">
                 <FormattedMessage id="shop.complectation" />:
               </p>
               <p className="slave-text">
-                кольцо, 2 сменных камня, система хранения камней фирменная коробка и пакет.
+                {langProps.locale === "ru" ?
+                   "кольцо, вставка с QR, фирменная коробка" :"ring, engraved QR stone , branded box"}
               </p>
               <p className="main-text">
                 <FormattedMessage id="size.ketroy" />:
@@ -559,7 +566,8 @@ export const RingsTalisman = (props) => {
 
               <ToRightMoveDesktop>
               <p className="main-text" style={{ display: "none" }}>
-                Размер кольца:
+                {langProps.locale === "ru" ?
+                "Размер кольца:" : "Ring size"}
               </p>
               <p className="slave-text" style={{ display: "none" }}>
                 ONE SIZE

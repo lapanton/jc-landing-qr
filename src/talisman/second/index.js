@@ -33,9 +33,9 @@ export const SecondTalisman = (props) => {
         <WrapperDesktop>
           <LeftPart>
             <h1>Jewel Cocktail</h1>
-            <WrapSubtitle>hi-tech {langProps === "ru" ? "ТАЛИСМАН" : "TALISMAN"}</WrapSubtitle>
+            <WrapSubtitle>hi-tech {langProps.locale === "ru" ? "ТАЛИСМАН" : "TALISMAN"}</WrapSubtitle>
             <WrapDescription>
-              {langProps === "ru" ? <>
+              {langProps.locale === "ru" ? <>
               создай <span>талисман</span><br/>по своему смыслу усиль энергию шарма
               </> : <>
                 create <span>talisman</span>
@@ -43,7 +43,7 @@ export const SecondTalisman = (props) => {
               </> }
 
             </WrapDescription>
-            <GiftButton onClick={() => window.scrollTo({top: 1800, left: 0, behavior: 'smooth'})}>{langProps === "ru" ? "создать" : "create"}</GiftButton>
+            <GiftButton onClick={() => window.scrollTo({top: 1800, left: 0, behavior: 'smooth'})}>{langProps.locale === "ru" ? "создать" : "create"}</GiftButton>
           </LeftPart>
           <RightPart>
             <WrapVideo>

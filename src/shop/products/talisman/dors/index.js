@@ -260,7 +260,9 @@ export const DorsTalisman = (props) => {
     <Wrapper>
       <Inner>
         <div className="slider-wrap">
-          <h4>мужской<br/>браслет-талисман</h4>
+          {langProps.locale === "ru" ?
+          <h4>мужской<br/>браслет-талисман</h4>:
+          <h4>men`s<br/> talisman-bracelet</h4>}
           <Slider {...settings} asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
             <div>
               <img src={one} alt="JewelCocktail" onClick={() => openZoom(1)} />
@@ -453,15 +455,15 @@ export const DorsTalisman = (props) => {
           </DescriptionButton>
           {showDescr && (
             <DescriptionView>
-              <p className="slave-text">Мужской браслет Jewel Cocktail в стиле минимализм. Со сменными вставками из натуральных материалов. Особенная вставка с QR ссылкой на персональный талисман.</p>
+              <p className="slave-text">{langProps.locale === "ru" ? "Браслет-талисман Jewel Cocktail в стиле минимализм. Со сменными вставками из натуральных материалов. Особенная вставка с QR ссылкой на персональный талисман." : "Jewel Cocktail talisman-bracelet in minimalist style with replaceable natural stones. Special stone with QR link to your personal talisman"}</p>
               <p className="main-text">
                 <FormattedMessage id="shop.complectation" />:
               </p>
               <p className="slave-text">
-                <FormattedMessage id="complectation.descr" />
+                {langProps.locale === "ru" ? "Браслет, вставка с QR, фирменная коробка": "pendant, engraved QR stone , branded box"}
               </p>
               <p className="main-text">
-                <FormattedMessage id="size.ketroy" />:
+                {langProps.locale === "ru" ? "Размер вставки:": "Stone size:"}
               </p>
               <p className="slave-text">
                 12x12 <FormattedMessage id="size.mm" />
@@ -475,10 +477,10 @@ export const DorsTalisman = (props) => {
                 <FormattedMessage id="serebro.gleanets" />
               </p>
               <p className="main-text">
-                <FormattedMessage id="type.insert" />:
+                {langProps.locale === "ru" ? "материал вставки:": "Material of insert:"}
               </p>
               <p className="slave-text">
-                <FormattedMessage id="natural.ketroy" />
+                {langProps.locale === "ru" ? "камень ручной огранки": "handcraft stone"}
               </p>
               <p className="main-text">
                 <FormattedMessage id="warranty.quality" />:

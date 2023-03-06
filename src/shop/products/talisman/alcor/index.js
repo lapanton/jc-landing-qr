@@ -273,7 +273,10 @@ export const AlcorTalisman = (props) => {
     <Wrapper>
       <Inner>
         <div className="slider-wrap">
-          <h4>женский<br/> браслет-талисман</h4>
+          {langProps.locale === "ru" ?
+            <h4>женский<br/> браслет-талисман</h4> :
+            <h4>women`s<br/> talisman-bracelet</h4>
+          }
           <Slider {...settings} asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
             <div>
               <img src={one} alt="JewelCocktail" onClick={() => openZoom(1)}/>
@@ -519,12 +522,14 @@ export const AlcorTalisman = (props) => {
           </DescriptionButton>
           {showDescr && (
             <DescriptionView>
-              <p className="slave-text">Женский браслет Jewel Cocktail в стиле минимализм. Со сменными вставками из натуральных материалов. Особенная вставка с QR ссылкой на персональный талисман.</p>
-              <p className="main-text">
+              <p className="slave-text">
+                {langProps.locale === "ru" ?
+                "Браслет-талисман Jewel Cocktail в стиле минимализм. Со сменными вставками из натуральных материалов. Особенная вставка с QR ссылкой на персональный талисман." : "Jewel Cocktail talisman-bracelet in minimalist style with replaceable natural stones. Special stone with QR link to your personal talisman"}</p>
+                  <p className="main-text">
                 <FormattedMessage id="shop.complectation" />:
               </p>
               <p className="slave-text">
-                <FormattedMessage id="complectation.descr" />
+                {langProps.locale === "ru" ? "браслет, вставка с QR, фирменная коробка" : "bracelet, engraved QR stone , branded box"}
               </p>
               <p className="main-text">
                 <FormattedMessage id="size.ketroy" />:
@@ -535,10 +540,11 @@ export const AlcorTalisman = (props) => {
 
               <ToRightMoveDesktop>
               <p className="main-text">
-                <FormattedMessage id="material.color" />:
+                {langProps.locale === "ru" ? "материал вставки:": "Material of insert:"}
               </p>
               <p className="slave-text">
-                <FormattedMessage id="serebro.gleanets" />
+                {langProps.locale === "ru" ?
+                  "камень ручной огранки" : "handcraft stone"}
               </p>
               <p className="main-text">
                 <FormattedMessage id="type.insert" />:
