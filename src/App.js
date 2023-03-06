@@ -283,7 +283,7 @@ export const App = (props) => {
             <div>
               <PopupShopClose />
               <MainShop langProps={props} setShowPopup={setShowPopup} showPopup={showPopup} />
-              <TalismanStone />
+              <TalismanStone langProps={props} />
               <ContactsShop />
               <ScrollArrow />
             </div>

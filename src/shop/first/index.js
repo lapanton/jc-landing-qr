@@ -219,7 +219,8 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
 
         {location.pathname === "/talisman/stone" && (
           <WrapTitle className={show ? 'removeZindex' : 'addit'}>
-            <h1 className="stone-title">Jewel Cocktail <br/>Коллекция талисманов</h1>
+
+            <h1 className="stone-title">Jewel Cocktail<br/>{ locale !== "ru" ? "Коллекция талисманов" : "TALISMAN COLLECTION"  }</h1>
           </WrapTitle>
         )}
 
