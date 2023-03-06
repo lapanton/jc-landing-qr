@@ -65,7 +65,7 @@ import {Link} from "react-router-dom";
 import {FormattedMessage} from "react-intl";
 
 export const RingsTalisman = (props) => {
-  const { card, setCard, setShowPopup } = props;
+  const { card, setCard, setShowPopup, langProps } = props;
 
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
@@ -283,7 +283,7 @@ export const RingsTalisman = (props) => {
     <Wrapper>
       <Inner>
         <div className="slider-wrap">
-          <h4>женское<br/>Кольцо-талисман</h4>
+          <h4>{langProps.locale === "ru" ? <>женское<br/>Кольцо-талисман</> : <>women`s<br/>talisman-ring</>}</h4>
           <Slider {...settings} asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
             <div>
               <img src={one} alt="JewelCocktail" onClick={() => openZoom(1)}/>
@@ -355,7 +355,7 @@ export const RingsTalisman = (props) => {
           </Slider>
         </div>
         <ChooseStone>
-          <p>выбери вставку</p>
+          <p>{langProps.locale === "ru" ? "выбери QR вставку" : "choose QR stone"}</p>
           <WrapStone>
             <Slider {...settingsStones}>
               <div>
@@ -520,8 +520,8 @@ export const RingsTalisman = (props) => {
           {/*</SizeButton>*/}
         </ChooseSize>
         <PriceBuySection>
-          <p className="bonus">описание материалов в
-            <Link to="/talisman/stone">каталог</Link>
+          <p className="bonus">{langProps.locale === "ru" ? "описание материалов в" : "description of materials in the"}
+            <Link to="/talisman/stone">{langProps.locale === "ru" ? "каталог" : "CATALOG"}</Link>
           </p>
           <WrapPrices>
             <p className="price">{priceData["talisman-genskoe-kolitso"]}<span>₽</span></p>

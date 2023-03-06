@@ -62,7 +62,7 @@ export const ContactsShop = () => {
         <a href="https://t.me/AleksandraLuch" target="_blank"><img src={telegram} alt="JewelCockail"/></a>
       </BottomMobile>
       <Copyright>
-        Все права защищены
+        <FormattedMessage id="message.rights" />
         <br/>
         © JEWEL COCKTAIL 2022
       </Copyright>

@@ -50,7 +50,7 @@ import {Link} from "react-router-dom";
 import {FormattedMessage} from "react-intl";
 
 export const DorsTalisman = (props) => {
-  const { card, setCard, setShowPopup } = props;
+  const { card, setCard, setShowPopup, langProps } = props;
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
   const [dorsStone, setDorsStone] = useState('1d-t');
@@ -341,7 +341,7 @@ export const DorsTalisman = (props) => {
         </Slider>
         </div>
         <ChooseStone>
-          <p>выбери вставку</p>
+          <p>{langProps.locale === "ru" ? "выбери QR вставку" : "choose QR stone"}</p>
           <WrapStone>
             <Slider {...settingsStones}>
               <div>
@@ -430,8 +430,8 @@ export const DorsTalisman = (props) => {
           </p>
         </ChooseStone>
         <PriceBuySection>
-          <p className="bonus">описание материалов в
-            <Link to="/talisman/stone">каталог</Link>
+          <p className="bonus">{langProps.locale === "ru" ? "описание материалов в" : "description of materials in the"}
+            <Link to="/talisman/stone">{langProps.locale === "ru" ? "каталог" : "CATALOG"}</Link>
           </p>
           <WrapPrices>
             <p className="price">{priceData["talisman-mugskoi-braslet"]} <span>₽</span></p>

@@ -16,18 +16,18 @@ import {DorsTalisman} from "./talisman/dors";
 // import {CoupleBraceletsTalisman} from "./talisman/coupleBracelets";
 
 export const WrapProducts = (props) => {
-  const {showPopup, setShowPopup, card, setCard} = props;
+  const {showPopup, setShowPopup, card, setCard, langProps} = props;
   const location = useLocation()
   return (
     <>
       <WrapperProducts className={showPopup ? "showPopup": "noPopup"}>
         { location.pathname === "/talisman" ? (
           <>
-            <PendantsTalisman setCard={setCard} setShowPopup={setShowPopup} card={card} />
-            <RingsTalisman setCard={setCard} setShowPopup={setShowPopup} card={card} />
-            <AlcorTalisman setCard={setCard} setShowPopup={setShowPopup} card={card} />
-            <GidorTalisman setCard={setCard} setShowPopup={setShowPopup} card={card} />
-            <DorsTalisman setCard={setCard} setShowPopup={setShowPopup} card={card} />
+            <PendantsTalisman langProps={langProps} setCard={setCard} setShowPopup={setShowPopup} card={card} />
+            <RingsTalisman langProps={langProps} setCard={setCard} setShowPopup={setShowPopup} card={card} />
+            <AlcorTalisman langProps={langProps} setCard={setCard} setShowPopup={setShowPopup} card={card} />
+            <GidorTalisman langProps={langProps} setCard={setCard} setShowPopup={setShowPopup} card={card} />
+            <DorsTalisman langProps={langProps} setCard={setCard} setShowPopup={setShowPopup} card={card} />
           </>
         ) : (
           <>

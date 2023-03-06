@@ -2,7 +2,8 @@ import React, {useEffect, useState} from 'react';
 import { Wrapper,WrapperDesktop, LeftPart, RightPart, WrapVideo, WrapSubtitle, WrapDescription, GiftButton } from "./styles-second";
 import vid from './preview.mp4'
 
-export const SecondTalisman = () => {
+export const SecondTalisman = (props) => {
+  const { langProps } = props;
   const [width, setWidth] = useState(window.innerWidth);
   const handleWindowSizeChange = () => {
     setWidth(window.innerWidth);
@@ -32,9 +33,17 @@ export const SecondTalisman = () => {
         <WrapperDesktop>
           <LeftPart>
             <h1>Jewel Cocktail</h1>
-            <WrapSubtitle>hi-tech ТАЛИСМАН</WrapSubtitle>
-            <WrapDescription>создай <span>талисман</span><br/>по своему смыслу усиль энергию шарма</WrapDescription>
-            <GiftButton onClick={() => window.scrollTo({top: 1800, left: 0, behavior: 'smooth'})}>создать</GiftButton>
+            <WrapSubtitle>hi-tech {langProps === "ru" ? "ТАЛИСМАН" : "TALISMAN"}</WrapSubtitle>
+            <WrapDescription>
+              {langProps === "ru" ? <>
+              создай <span>талисман</span><br/>по своему смыслу усиль энергию шарма
+              </> : <>
+                create <span>talisman</span>
+                according to your meaning and use the energy of charm
+              </> }
+
+            </WrapDescription>
+            <GiftButton onClick={() => window.scrollTo({top: 1800, left: 0, behavior: 'smooth'})}>{langProps === "ru" ? "создать" : "create"}</GiftButton>
           </LeftPart>
           <RightPart>
             <WrapVideo>

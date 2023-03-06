@@ -78,7 +78,7 @@ import closeIcon from "../rings/img/cross_white.svg";
 import {FormattedMessage} from "react-intl";
 
 export const PendantsTalisman = (props) => {
-  const { card, setCard, setShowPopup } = props;
+  const { card, setCard, setShowPopup, langProps } = props;
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
   const [quasarStone, setQuasarStone] = useState('1p-t'); // 1pendant-talisman
@@ -280,13 +280,17 @@ export const PendantsTalisman = (props) => {
     setOpenZoomImage(true);
     sliderReferral.current?.slickGoTo(index);
   };
-
+  console.log('langProps', langProps.locale);
   return (
     <Wrapper>
       <Inner>
         <div className="slider-wrap">
-          <h4>талисман-кулон<br/>
-            женский</h4>
+          {langProps.locale === "ru" ? <>
+            <h4>талисман-кулон<br/>
+              женский</h4>
+          </> : <>
+            <h4>women`s<br/> talisman-pendant</h4>
+          </>}
           <Slider {...settings} asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
             <div>
               <img src={one} alt="JewelCocktail" onClick={() => openZoom(1)}/>
@@ -359,7 +363,7 @@ export const PendantsTalisman = (props) => {
           </Slider>
         </div>
         <ChooseStone>
-          <p>выбери вставку</p>
+          <p>{langProps.locale === "ru" ? "выбери QR вставку" : "choose QR stone"}</p>
           <WrapStone>
             <Slider {...settingsStones}>
               <div>
@@ -509,8 +513,8 @@ export const PendantsTalisman = (props) => {
           </p>
         </ChooseStone>
         <PriceBuySection>
-          <p className="bonus">описание материалов в
-            <Link to="/talisman/stone">каталог</Link>
+          <p className="bonus">{langProps.locale === "ru" ? "описание материалов в" : "description of materials in the"}
+            <Link to="/talisman/stone">{langProps.locale === "ru" ? "каталог" : "CATALOG"}</Link>
           </p>
           <WrapPrices>
             <p className="price">{priceData["talisman-kulon-genskii"]}<span> ₽</span></p>
@@ -532,12 +536,15 @@ export const PendantsTalisman = (props) => {
           </DescriptionButton>
           {showDescr && (
             <DescriptionView>
-              <p className="slave-text">Женский кулон Jewel Cocktail в стиле минимализм. Со сменными вставками из натуральных материалов. Особенная вставка с QR ссылкой на персональный талисман.</p>
+              <p className="slave-text">{langProps.locale === "ru" ? "Кулон Jewel Cocktail в стиле минимализм. Со сменными вставками из натуральных материалов. Особенная вставка с QR ссылкой на персональный талисман." :
+              "Jewel Cocktail talisman-pendant in minimalist style with replaceable natural stones. Special stone with QR link to your personal talisman"}</p>
               <p className="main-text">
                 <FormattedMessage id="shop.complectation" />:
               </p>
               <p className="slave-text">
-                подвеска, 2 сменные вставки (на выбор с QR-ссылкой), система хранения камней фирменная коробка и пакет.
+                {langProps.locale === "ru" ?
+                "подвеска, вставка с QR, фирменная коробка" :
+                  "pendant, engraved QR stone , branded box"}
               </p>
               {/*<p className="main-text">*/}
               {/*  материал вставки:*/}
@@ -548,13 +555,16 @@ export const PendantsTalisman = (props) => {
 
               <ToRightMoveDesktop>
               <p className="main-text">
-                материал вставки:
+                {langProps.locale === "ru" ?
+                "материал вставки:" : "Material of insert"}
               </p>
               <p className="slave-text">
-                камень, дерево или серебро
+                {langProps.locale === "ru" ?
+                "камень, дерево ручной огранки" : "handcraft stone"}
               </p>
               <p className="main-text">
-                Размер вставки:
+                {langProps.locale === "ru" ?
+                "Размер вставки:" : "Stone size"}
               </p>
               <p className="slave-text">
                 10x10 <FormattedMessage id="size.mm" />
