@@ -65,7 +65,7 @@ export const Main = ({langProps}) => {
               {/*<Link to="/glass" className="link-to-shop-desktop"><FormattedMessage id="message.glass" /></Link>*/}
             </WrapDesktopLinks>
             <div onClick={() => window.scrollTo({top: 3300, left: 0, behavior: 'smooth'})}><FormattedMessage id="message.gallery" /></div>
-            <div onClick={() => window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })}><FormattedMessage id="message.contacts" /></div>
+            {/*<div onClick={() => window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })}><FormattedMessage id="message.contacts" /></div>*/}
           </WrapList>
           <WrapSocial>
             <a href="https://www.instagram.com/jewelcocktail_official/" target="_blank" rel="noopener noreferrer" className="insta-social">
@@ -74,9 +74,9 @@ export const Main = ({langProps}) => {
             <a href="https://www.youtube.com/channel/UC44U3iU75Nx-Fv8LFb28I6w" target="_blank" rel="noopener noreferrer" className="youtube-social">
               <div/>
             </a>
-            <a href="mailto:contact@jewelcocktail.com" className="email-social">
-              <div/>
-            </a>
+            {/*<a href="mailto:contact@jewelcocktail.com" className="email-social">*/}
+            {/*  <div/>*/}
+            {/*</a>*/}
           </WrapSocial>
           <WrapLang>
             <div className="ru_lang" onClick={() => onLocaleChange('ru')}><img style={locale !== "ru" ? {opacity: 0.5} : {opacity: 1, transform: "scale(1.2)"}} src={ruimg} alt="JewelCocktail"/></div>
@@ -108,7 +108,7 @@ export const Main = ({langProps}) => {
                   <Link to="/talisman" className="link-to-shop"><FormattedMessage id="message.talisman" /></Link>
                   {/*<Link to="/glass" className="link-to-shop"><FormattedMessage id="message.glass" /></Link>*/}
                   <div onClick={() => window.scrollTo({top: 4225, left: 0, behavior: 'smooth'})}><FormattedMessage id="message.gallery" /></div>
-                  <div onClick={() => window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })}><FormattedMessage id="message.contacts" /></div>
+                  {/*<div onClick={() => window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })}><FormattedMessage id="message.contacts" /></div>*/}
                   <WrpaMobSocial>
                     <a href="https://www.instagram.com/jewelcocktail_official/" target="_blank" rel="noopener noreferrer" className="insta-social">
                       <img src={insn} alt="JewelCocktail"/>
@@ -116,9 +116,9 @@ export const Main = ({langProps}) => {
                     <a href="https://www.youtube.com/channel/UC44U3iU75Nx-Fv8LFb28I6w" target="_blank" rel="noopener noreferrer" className="youtube-social">
                       <img src={youn} alt="JewelCocktail"/>
                     </a>
-                    <a href="mailto:info@jewelcocktail.com" className="email-social">
-                      <img src={googn} alt="JewelCocktail"/>
-                    </a>
+                    {/*<a href="mailto:info@jewelcocktail.com" className="email-social">*/}
+                    {/*  <img src={googn} alt="JewelCocktail"/>*/}
+                    {/*</a>*/}
                   </WrpaMobSocial>
                   <div style={{ textAlign: "center" }}>
                     <a href="https://wa.me/79688116711" target="_blank" style={{ maxWidth: "27px", display: "inline-block", marginRight: "10px" }}><img src={whatsapp} alt="JewelCocktail" style={{ maxWidth: "100%" }} /></a>

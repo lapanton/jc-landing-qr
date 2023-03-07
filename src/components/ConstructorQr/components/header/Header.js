@@ -23,7 +23,7 @@ export const Header = (props) => {
         <div>О нас</div>
         <div>Галерея</div>
         <div>Наше производство</div>
-        <div>Контакты</div>
+        {/*<div>Контакты</div>*/}
         <div>Подарок</div>
       </Menu>
       {(value.status !== "completed") &&

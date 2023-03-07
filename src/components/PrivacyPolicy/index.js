@@ -1,6 +1,8 @@
 import React from 'react';
 import { Wrapper, HeaderDiv, WrapContacts, WrapLogo, WrapContent } from "./privacy-styled";
 import logo from "../first/logo.png";
+import whatsapp from "../../whatsapp.png";
+import telegram from "../../telegram.png";
 
 export const PrivacyPolicy = (props) => {
   const { langProps } = props;
@@ -15,9 +17,6 @@ export const PrivacyPolicy = (props) => {
             </a>
           </WrapLogo>
           <WrapContacts>
-            <a href="https://wa.me/79688116711">
-              +7 968 811 67 11
-            </a>
             <a href="mailto:contact@jewelcocktail.com" rel="noreferrer" >
               contact@jewelcocktail.com
             </a>
@@ -208,9 +207,6 @@ export const PrivacyPolicy = (props) => {
             </a>
           </WrapLogo>
           <WrapContacts>
-            <a href="https://wa.me/79688116711">
-              +7 968 811 67 11
-            </a>
             <a href="mailto:contact@jewelcocktail.com" rel="noreferrer" >
               contact@jewelcocktail.com
             </a>
