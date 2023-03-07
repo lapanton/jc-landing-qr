@@ -1,11 +1,12 @@
 import React from 'react';
 import { Wrapper } from "./description-style";
 
-export const Description = () => {
+export const Description = (props) => {
+  const { langProps } = props;
   return (
     <Wrapper>
         <>
-          <h1>Создай свой талисман</h1>
+          <h1>{langProps.locale === "ru" ? "Создай свой талисман" : "Create your own talisman"}</h1>
         </>
     </Wrapper>
   );

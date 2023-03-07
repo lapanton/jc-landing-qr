@@ -133,7 +133,7 @@ export const App = (props) => {
                    element={
                      <CheckStatusQR>
                        { (typeMessage) => {
-                         return (typeMessage === "letter" || typeMessage === undefined) ? <ConstructorQr/> : <ConstructorQrTalisman/>;
+                         return (typeMessage === "letter" || typeMessage === undefined) ? <ConstructorQr langProps={props} /> : <ConstructorQrTalisman langProps={props} />;
                        }}
                      </CheckStatusQR>
                    }
@@ -156,30 +156,30 @@ export const App = (props) => {
           {/* TODO remove */}
             <Route path="/qr1001" element={<>
                 <Qr1001/>
-                <Footer exact />
+                <Footer langProps={props} exact />
             </>
             } exact />
             <Route path="/qr1002" element={<>
                 <Qr1002/>
-                <Footer />
+                <Footer langProps={props} />
             </>
             } exact />
 
             <Route path="/qr00001" element={<>
                 <Qr00001/>
-                <Footer />
+                <Footer langProps={props} />
             </>
             } exact />
 
             <Route path="/qr1" element={<>
                 <Qr1/>
-                <Footer />
+                <Footer langProps={props} />
             </>
             } exact />
 
           <Route path="/privacy" element={<>
             <PrivacyPolicy langProps={props} />
-            <Footer />
+            <Footer langProps={props} />
           </>
           } exact />
 
@@ -190,7 +190,7 @@ export const App = (props) => {
               <Second/>
               <Info langProps={props} />
               <ShowHideSection langProps={props} />
-              <WrapProducts showPopup={showPopup} setShowPopup={setShowPopup} card={card} setCard={setCard} />
+              <WrapProducts langProps={props} showPopup={showPopup} setShowPopup={setShowPopup} card={card} setCard={setCard} />
               <SelfProductShop />
               <OsobennostiTehnologiiShop />
               <ContactsShop />

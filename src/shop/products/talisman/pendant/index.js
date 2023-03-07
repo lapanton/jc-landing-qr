@@ -24,39 +24,16 @@ import sale from '../sale.png';
 
 import oneS from "../../../../talisman/talismanStone/wom-stones/IMG_6136.png";
 import twoS from "../../../../talisman/talismanStone/wom-stones/IMG_6061.png";
-import threeS from "../../../../talisman/talismanStone/wom-stones/IMG_6066.png";
 import fourS from "../../../../talisman/talismanStone/wom-stones/IMG_6130.png";
 import fiveS from "../../../../talisman/talismanStone/wom-stones/IMG_6127.png";
 import sixS from "../../../../talisman/talismanStone/wom-stones/IMG_6051.png";
-import sevenS from "../../../../talisman/talismanStone/wom-stones/IMG_6137.png";
 import eighS from "../../../../talisman/talismanStone/wom-stones/IMG_6058.png";
 import nine from "../../../../talisman/talismanStone/wom-stones/IMG_6050.png";
-import ten from "../../../../talisman/talismanStone/wom-stones/IMG_6118.png";
-import eleven from "../../../../talisman/talismanStone/wom-stones/IMG_6114.png";
 import twelve from "../../../../talisman/talismanStone/wom-stones/IMG_6120.png";
-import thirteen from "../../../../talisman/talismanStone/wom-stones/IMG_6126.png";
 import fourteen from "../../../../talisman/talismanStone/wom-stones/IMG_6060.png";
 import fifteen from "../../../../talisman/talismanStone/wom-stones/IMG_6133.png";
-import sixteen from "../../../../talisman/talismanStone/wom-stones/IMG_6129.png";
 import seventeen from "../../../../talisman/talismanStone/wom-stones/IMG_6131.png";
-import eightteen from "../../../../talisman/talismanStone/wom-stones/IMG_6047.png";
-import nineteen from "../../../../talisman/talismanStone/wom-stones/IMG_6112.png";
-import twenty from "../../../../talisman/talismanStone/wom-stones/IMG_6049.png";
-import twentyone from "../../../../talisman/talismanStone/wom-stones/IMG_6134.png";
-import twentytwo from "../../../../talisman/talismanStone/wom-stones/IMG_6135.png";
-import twentythree from "../../../../talisman/talismanStone/wom-stones/IMG_6053.png";
-import twentyfour from "../../../../talisman/talismanStone/wom-stones/IMG_6119.png";
 import twentyfive from "../../../../talisman/talismanStone/wom-stones/IMG_6125.png";
-import twentysix from "../../../../talisman/talismanStone/wom-stones/IMG_6128.png";
-import twentyseven from "../../../../talisman/talismanStone/wom-stones/IMG_6138.png";
-import twentyeight from "../../../../talisman/talismanStone/wom-stones/IMG_6121.png";
-import twentynine from "../../../../talisman/talismanStone/wom-stones/IMG_6124.png";
-import thirty from "../../../../talisman/talismanStone/wom-stones/IMG_6115.png";
-import thirtyone from "../../../../talisman/talismanStone/wom-stones/IMG_6123.png";
-import thirtytwo from "../../../../talisman/talismanStone/wom-stones/IMG_6132.png";
-import thirtythree from "../../../../talisman/talismanStone/wom-stones/IMG_6113.png";
-import thirtyfour from "../../../../talisman/talismanStone/wom-stones/IMG_6116.png";
-import thirtyfive from "../../../../talisman/talismanStone/wom-stones/IMG_6117.png";
 
 
 import {
@@ -280,7 +257,7 @@ export const PendantsTalisman = (props) => {
     setOpenZoomImage(true);
     sliderReferral.current?.slickGoTo(index);
   };
-  console.log('langProps', langProps.locale);
+  // console.log('langProps', langProps.locale);
   return (
     <Wrapper>
       <Inner>
@@ -373,9 +350,6 @@ export const PendantsTalisman = (props) => {
                 <img src={twoS} alt="JewelCocktail"/>
               </div>
               <div>
-                <img src={threeS} alt="JewelCocktail"/>
-              </div>
-              <div>
                 <img src={fourS} alt="JewelCocktail"/>
               </div>
               <div>
@@ -385,131 +359,46 @@ export const PendantsTalisman = (props) => {
                 <img src={sixS} alt="JewelCocktail"/>
               </div>
               <div>
-                <img src={sevenS} alt="JewelCocktail"/>
-              </div>
-              <div>
                 <img src={eighS} alt="JewelCocktail"/>
               </div>
               <div>
                 <img src={nine} alt="JewelCocktail"/>
               </div>
-              <div>
-                <img src={ten} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={eleven} alt="JewelCocktail"/>
-              </div>
+
               <div>
                 <img src={twelve} alt="JewelCocktail"/>
               </div>
-              <div>
-                <img src={thirteen} alt="JewelCocktail"/>
-              </div>
+
               <div>
                 <img src={fourteen} alt="JewelCocktail"/>
               </div>
               <div>
                 <img src={fifteen} alt="JewelCocktail"/>
               </div>
-              <div>
-                <img src={sixteen} alt="JewelCocktail"/>
-              </div>
+
               <div>
                 <img src={seventeen} alt="JewelCocktail"/>
               </div>
-              <div>
-                <img src={eightteen} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={nineteen} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={twenty} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={twentyone} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={twentytwo} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={twentythree} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={twentyfour} alt="JewelCocktail"/>
-              </div>
+
               <div>
                 <img src={twentyfive} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={twentysix} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={twentyseven} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={twentyeight} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={twentynine} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={thirty} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={thirtyone} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={thirtytwo} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={thirtythree} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={thirtyfour} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={thirtyfive} alt="JewelCocktail"/>
               </div>
 
             </Slider>
           </WrapStone>
           <p className="description">
-            { quasarStone === '1p-t' && "Змеевик — поглотитель негативной энергии и защитник."}
-            { quasarStone === '2p-t' && "Агат - приносит здоровье, счастье и долголетие."}
-            { quasarStone === '3p-t' && "Агат - приносит здоровье, счастье и долголетие."}
-            { quasarStone === '4p-t' && "Яшма — источник доброй энергии. "}
-            { quasarStone === '5p-t' && "Говлит - официально был описан только в конце XIX века"}
-            { quasarStone === '6p-t' && "Обсидиан - является мощным поглотителем энергии и хранителем информации."}
-            { quasarStone === '7p-t' && "Яшма — источник доброй энергии."}
-            { quasarStone === '8p-t' && "Пирит - укрепляющет нервную систему"}
-            { quasarStone === '9p-t' && "Тигровый глаз — камень мудрецов и правителей."}
-            { quasarStone === '10p-t' && "Натуральный жемчуг — кладезь ценных микроэлементов."}
-            { quasarStone === '11p-t' && "Натуральный жемчуг — кладезь ценных микроэлементов."}
-            { quasarStone === '12p-t' && "Натуральный жемчуг — кладезь ценных микроэлементов."}
-            { quasarStone === '13p-t' && "Яшма — источник доброй энергии."}
-            { quasarStone === '14p-t' && "Гематит - один из сильнейших магических камней."}
-            { quasarStone === '15p-t' && "Родохрозит - имеет удивительные свойства."}
-            { quasarStone === '16p-t' && "Яшма — источник доброй энергии."}
-            { quasarStone === '17p-t' && "Нефрит - является олицетворением пяти качеств человека."}
-            { quasarStone === '18p-t' && "Орех — дерево победы над внешними обстоятельствами."}
-            { quasarStone === '19p-t' && "Сандалу - могущественная стихия Воздуха."}
-            { quasarStone === '20p-t' && "Красное дерево - помогает человеку жить в гармонии с природой."}
-            { quasarStone === '21p-t' && "Авантюрин - является амулетом в любовных отношениях."}
-            { quasarStone === '22p-t' && "Авантюрин - является амулетом в любовных отношениях."}
-            { quasarStone === '23p-t' && "Оникс - обладает сильной энергетикой."}
-            { quasarStone === '24p-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
-            { quasarStone === '25p-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
-            { quasarStone === '26p-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
-            { quasarStone === '27p-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
-            { quasarStone === '28p-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
-            { quasarStone === '29p-t' && "Лунно-зеленый опал по древним поверьям способен поддерживать таланты своего владельца."}
-            { quasarStone === '30p-t' && "Голубой опал - способен поддерживать таланты своего владельца."}
-            { quasarStone === '31p-t' && "Огненно-снежный опал - способен поддерживать таланты своего владельца."}
-            { quasarStone === '32p-t' && "Мрамор - быстро подстраивается под энергетику хозяина."}
-            { quasarStone === '33p-t' && "Серебро — это лунный металл."}
-            { quasarStone === '34p-t' && "Серебро — это лунный металл."}
-            { quasarStone === '35p-t' && "Серебро — это лунный металл."}
+            { quasarStone === '1p-t' && (langProps.locale === "ru" ? "Змеевик — поглотитель негативной энергии и защитник" : "Serpentine it is a mineral that is also called like Lizardite, Infinite or Healerite") }
+            { quasarStone === '2p-t' && (langProps.locale === "ru" ? "Агат - приносит здоровье, счастье и долголетие" : "Agate has a stable and grounding quality")}
+            { quasarStone === '3p-t' && (langProps.locale === "ru" ? "Яшма — источник доброй энергии" : "Jasper is a variety of Chalcedony")}
+            { quasarStone === '4p-t' && (langProps.locale === "ru" ? "Говлит - официально был описан только в конце XIX века" : "Howlight is also called like Snow Leopard Stone or as magnesite")}
+            { quasarStone === '5p-t' && (langProps.locale === "ru" ? "Обсидиан - является мощным поглотителем энергии и хранителем информации" : "Obsidian is truth-enhancing. A strongly protective stone")}
+            { quasarStone === '6p-t' && (langProps.locale === "ru" ? "Пирит - укрепляющет нервную систему" : "Pyrite is an iron sulfide mineral with a metallic luster")}
+            { quasarStone === '7p-t' && (langProps.locale === "ru" ? "Тигровый глаз — камень мудрецов и правителей" : "Tiger eye is a variety of Chalcedony, a cryptocrystalline form of silica")}
+            { quasarStone === '8p-t' && (langProps.locale === "ru" ? "Натуральный жемчуг — кладезь ценных микроэлементов." : "Natural pearls have long been a source of pure fascination")}
+            { quasarStone === '9p-t' && (langProps.locale === "ru" ? "Гематит - один из сильнейших магических камней" : "Hematite is also called like Blood stone")}
+            { quasarStone === '10p-t' && (langProps.locale === "ru" ? "Родохрозит - имеет удивительные свойства" : "Rhodochrosite is a stone that integrates physical and spiritual energies")}
+            { quasarStone === '11p-t' && (langProps.locale === "ru" ? "Нефрит - является олицетворением пяти качеств человека." : "Jade is a popular gemstone sometimes referred to as the stone of luck and happiness")}
+            { quasarStone === '12p-t' && (langProps.locale === "ru" ? "Кошачий глаз - минерал отводит от носителя смерть" : "The Cat’s Eye is also known as the Lehsunia stone")}
           </p>
         </ChooseStone>
         <PriceBuySection>

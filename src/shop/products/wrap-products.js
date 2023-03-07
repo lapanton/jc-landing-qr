@@ -17,7 +17,8 @@ import {DorsTalisman} from "./talisman/dors";
 
 export const WrapProducts = (props) => {
   const {showPopup, setShowPopup, card, setCard, langProps} = props;
-  const location = useLocation()
+  const location = useLocation();
+  console.log('dddd', langProps);
   return (
     <>
       <WrapperProducts className={showPopup ? "showPopup": "noPopup"}>

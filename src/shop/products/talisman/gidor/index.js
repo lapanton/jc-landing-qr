@@ -20,26 +20,15 @@ import arUp from './arrowUp.png';
 
 import sale from '../sale.png';
 
-import Mone from "../../../../talisman/talismanStone/man-stones/IMG_6046.png";
 import Mtwo from "../../../../talisman/talismanStone/man-stones/IMG_6052.png";
-import Mthree from "../../../../talisman/talismanStone/man-stones/IMG_6061.png";
-import Mfour from "../../../../talisman/talismanStone/man-stones/IMG_6066.png";
 import Mfive from "../../../../talisman/talismanStone/man-stones/IMG_6059.png";
 import Msix from "../../../../talisman/talismanStone/man-stones/IMG_6045.png";
-import Mseven from "../../../../talisman/talismanStone/man-stones/IMG_6051.png";
 import Meight from "../../../../talisman/talismanStone/man-stones/IMG_6057.png";
 import Mnine from "../../../../talisman/talismanStone/man-stones/IMG_6058.png";
-import Mten from "../../../../talisman/talismanStone/man-stones/IMG_6050.png";
 import Meleven from "../../../../talisman/talismanStone/man-stones/IMG_6043.png";
-import Mtwelve from "../../../../talisman/talismanStone/man-stones/IMG_6044.png";
 import Mthirteen from "../../../../talisman/talismanStone/man-stones/IMG_6060.png";
-import Mfourteen from "../../../../talisman/talismanStone/man-stones/IMG_6047.png";
-import Mfifteen from "../../../../talisman/talismanStone/man-stones/IMG_6112.png";
-import Msixteen from "../../../../talisman/talismanStone/man-stones/IMG_6049.png";
 import Mseventeen from "../../../../talisman/talismanStone/man-stones/IMG_6053.png";
-import Meightteen from "../../../../talisman/talismanStone/man-stones/IMG_6056.png";
-import Mnineteen from "../../../../talisman/talismanStone/man-stones/IMG_6055.png";
-import Mtwenty from "../../../../talisman/talismanStone/man-stones/IMG_6054.png";
+import Mtwenty from "../../../../talisman/talismanStone/wom-stones/IMG_6131.png";
 
 import { Wrapper, Inner, ChooseStone, WrapStone, PriceBuySection, DescriptionProduct, DescriptionButton, DescriptionView, ToRightMoveDesktop, WrapPrices,  WrapperZoom, WrapZoomSlider } from "./styled-rings";
 import whiteArrow from "../rings/img/white-arrow.svg";
@@ -335,16 +324,7 @@ export const GidorTalisman = (props) => {
           <WrapStone>
             <Slider {...settingsStones}>
               <div>
-                <img src={Mone} alt="JewelCocktail"/>
-              </div>
-              <div>
                 <img src={Mtwo} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={Mthree} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={Mfour} alt="JewelCocktail"/>
               </div>
               <div>
                 <img src={Mfive} alt="JewelCocktail"/>
@@ -353,43 +333,19 @@ export const GidorTalisman = (props) => {
                 <img src={Msix} alt="JewelCocktail"/>
               </div>
               <div>
-                <img src={Mseven} alt="JewelCocktail"/>
-              </div>
-              <div>
                 <img src={Meight} alt="JewelCocktail"/>
               </div>
               <div>
                 <img src={Mnine} alt="JewelCocktail"/>
               </div>
               <div>
-                <img src={Mten} alt="JewelCocktail"/>
-              </div>
-              <div>
                 <img src={Meleven} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={Mtwelve} alt="JewelCocktail"/>
               </div>
               <div>
                 <img src={Mthirteen} alt="JewelCocktail"/>
               </div>
               <div>
-                <img src={Mfourteen} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={Mfifteen} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={Msixteen} alt="JewelCocktail"/>
-              </div>
-              <div>
                 <img src={Mseventeen} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={Meightteen} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={Mnineteen} alt="JewelCocktail"/>
               </div>
               <div>
                 <img src={Mtwenty} alt="JewelCocktail"/>
@@ -397,27 +353,16 @@ export const GidorTalisman = (props) => {
             </Slider>
           </WrapStone>
           <p className="description">
-            { gidorStone === '1g-t' && "Яшма — источник доброй энергии."}
-            { gidorStone === '2g-t' && "Агат - приносит здоровье, счастье и долголетие."}
-            { gidorStone === '3g-t' && "Агат - приносит здоровье, счастье и долголетие."}
-            { gidorStone === '4g-t' && "Агат - приносит здоровье, счастье и долголетие."}
-            { gidorStone === '5g-t' && "Яшма — источник доброй энергии."}
-            { gidorStone === '6g-t' && "Лазурит имеет способность помогать своему владельцу."}
-            { gidorStone === '7g-t' && "Обсидиан является мощным поглотителем энерги."}
-            { gidorStone === '8g-t' && "Обсидиан является мощным поглотителем энерги."}
-            { gidorStone === '9g-t' && "Пирит — укрепляющего нервную систему."}
-            { gidorStone === '10g-t' && "Тигровый глаз — камень мудрецов и правителей."}
-            { gidorStone === '11g-t' && "Тигровый глаз — камень мудрецов и правителей."}
-            { gidorStone === '12g-t' && "Тигровый глаз — камень мудрецов и правителей."}
-            { gidorStone === '13g-t' && "Гематит - один из сильнейших магических камней."}
-            { gidorStone === '14g-t' && "Орех — дерево победы над внешними обстоятельствами."}
-            { gidorStone === '15g-t' && "Сандалу - могущественная стихия Воздуха."}
-            { gidorStone === '16g-t' && "Красное дерево - помогает человеку жить в гармонии с природой."}
-            { gidorStone === '17g-t' && "Оникс — обладает сильной энергетикой."}
-            { gidorStone === '18g-t' && "Серебро - это лунный металл."}
-            { gidorStone === '19g-t' && "Серебро - это лунный металл."}
-            { gidorStone === '20g-t' && "Серебро - это лунный металл."}
-          </p>
+            { gidorStone === '1g-t' && (langProps.locale === "ru" ? "Яшма — источник доброй энергии" : "Jasper is a variety of Chalcedony")}
+            { gidorStone === '2g-t' && (langProps.locale === "ru" ? "Агат - приносит здоровье, счастье и долголетие": "Agate has a stable and grounding quality")}
+            { gidorStone === '3g-t' && (langProps.locale === "ru" ? "Лазурит имеет способность помогать своему владельцу" : "Lapis Lazuli is a beautiful celestial deep blue stone")}
+            { gidorStone === '4g-t' && (langProps.locale === "ru" ? "Обсидиан является мощным поглотителем энерги" : "Obsidian is truth-enhancing. A strongly protective stone")}
+            { gidorStone === '5g-t' && (langProps.locale === "ru" ? "Яшма — источник доброй энергии" : "Pyrite is an iron sulfide mineral with a metallic luster")}
+            { gidorStone === '6g-t' && (langProps.locale === "ru" ? "Тигровый глаз — камень мудрецов и правителей" : "Tiger eye is a variety of Chalcedony")}
+            { gidorStone === '7g-t' && (langProps.locale === "ru" ? "Гематит - один из сильнейших магических камней" : "Hematite is also called like Blood stone")}
+            { gidorStone === '8g-t' && (langProps.locale === "ru" ? "Обсидиан является мощным поглотителем энерги." : "Onyx is a stone that offers up powerful vibrations of protection")}
+            { gidorStone === '9g-t' && (langProps.locale === "ru" ? "Нефрит - является олицетворением пяти качеств человека" : "Jade is a popular gemstone sometimes referred to as the stone")}
+            </p>
         </ChooseStone>
         <PriceBuySection>
           <p className="bonus">{langProps.locale === "ru" ? "описание материалов в" : "description of materials in the"}

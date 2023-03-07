@@ -64,6 +64,7 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 export const Constructor = (props) => {
   const { pathname } = useLocation();
   const value = props.value;
+  const langProps = props.langProps;
   const { id } = useParams();
   const [checked, setChecked] = useState(false);
     const [sendData, setSendData] = useState(false);
@@ -77,11 +78,11 @@ export const Constructor = (props) => {
     fileRejections.forEach((file) => {
       file.errors.forEach((err) => {
         if (err.code === "file-too-large") {
-          alert("Оптимизируйте пожалуста ваше фото, максимально  допустимый размер фото 10mb")
+          alert(langProps.locale === "ru" ? "Оптимизируйте пожалуста ваше фото, максимально  допустимый размер фото 10mb" : "Please optimize your photo, the maximum allowed size for the photo is 10MB.")
         }
 
         if (err.code === "file-invalid-type") {
-          alert("Неверный тип файла")
+          alert(langProps.locale === "ru" ? "Неверный тип файла" : "Invalid file type.")
         }
       });
     });
@@ -100,12 +101,12 @@ export const Constructor = (props) => {
           path: convertedBlobFile.name
         })
       setFiles(files.concat([convertedBlobFile]));
-      if (files.length >= 4) alert("Максимально допустимое количество 3 фото");
+      if (files.length >= 4) alert(langProps.locale === "ru" ? "Максимально допустимое количество 3 фото" : "The maximum allowed quantity is 3 photos");
       })
       .catch((e) => {
         console.log('Something goes wrong: ', e);
       });
-  }, [files]);
+  }, [files, langProps.locale]);
 
   const remove = file => {
     const newArray = files.filter((val) => val.name !== file.name);
@@ -388,7 +389,7 @@ export const Constructor = (props) => {
                     <>
                       <WrapPhoneEmail style={signature?.length !== 0 ? {marginTop: "0px"} : {marginTop: "50px"}}>
                         {!(pathname.includes('/letter') || pathname.includes('/qr/')) && (
-                          <div className="numberPhone"><div>Номер Телефона:</div> <input value={phone} type="tel" name="phone" onChange={handleChangePhone} /></div>
+                          <div className="numberPhone"><div>{langProps.locale === "ru" ? "Номер Телефона:" : "Phone number:"}</div> <input value={phone} type="tel" name="phone" onChange={handleChangePhone} /></div>
                         )}
                         <div className="emailUser"><div>Email:</div> <input value={authorEmail} type="email" name="authorEmail" onChange={handleChangeAuthorEmail} /></div>
                       </WrapPhoneEmail>

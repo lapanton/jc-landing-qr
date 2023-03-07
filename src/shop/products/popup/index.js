@@ -44,7 +44,7 @@ export const Popup = (props) => {
     setCard(newItem);
   };
   const sumPrice = card.reduce((a, b) => a + (b['price'] || 0), 0);
-  // console.log('card', card);
+   console.log('langProps.locale', langProps);
   return (
     <Wrapper className={showPopup ? "show" : "hide"} >
       <Inner>

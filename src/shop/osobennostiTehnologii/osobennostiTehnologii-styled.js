@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const WrapContainer = styled.div`
-  height: 43rem;
+  height: 35rem;
   &.onGlassPage {
     height: 22rem;
     @media screen and (max-width: 768px) {

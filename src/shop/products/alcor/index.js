@@ -362,7 +362,7 @@ export const Alcor = (props) => {
           </DescriptionButton>
           {showDescr && (
             <DescriptionView>
-              <p className="slave-text"><FormattedMessage id=" descriptions.dors" /> </p>
+              <p className="slave-text"><FormattedMessage id="descriptions.dors" /> </p>
               <p className="main-text">
                 <FormattedMessage id="shop.complectation" />:
               </p>

@@ -12,7 +12,7 @@ import vid from "./prev/vidtwo.mp4";
 
 export const ShowHideSection = (props) => {
   const { langProps } = props;
-  console.log('langProps', langProps.locale);
+  // console.log('langProps', langProps.locale);
   const [show, setShow] = useState(true);
 
   const [width, setWidth] = useState(window.innerWidth);

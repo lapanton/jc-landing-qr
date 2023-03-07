@@ -31,7 +31,7 @@ import nineteen from "./image/19.png";
 import twenty from "./image/20.png";
 import twentyone from "./image/21.png";
 
-export const BottomSlider = () => {
+export const BottomSlider = (props) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -56,11 +56,12 @@ export const BottomSlider = () => {
       }]
   };
   const { pathname } = useLocation();
+  const { langProps } = props;
   return (
     <>
     {!(pathname.includes('/letter') || pathname.includes('/qr/')) ?
       <Wrapper>
-          <h5>Красивые решения</h5>
+          <h5>{langProps.locale ? "Красивые решения" : "Beautiful solutions"}</h5>
         <Slider {...settings}>
           <div className="innerSliderItems">
             <img src={first} alt="JewelCocktail"/>
