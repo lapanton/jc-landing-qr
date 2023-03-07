@@ -49,7 +49,6 @@ const LocalizationWrapper = () => {
 
   useEffect(() => {
     if (localStorage.getItem('set_language')) {
-      setLocale(localStorage.getItem('set_language'));
       loadMessages(locale).then(setMessages);
     } else {
       getUserRegion().then((lang) => {
