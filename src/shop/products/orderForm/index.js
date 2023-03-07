@@ -5,7 +5,7 @@ import { WrapForm } from './styled-order-form';
 import { BounceAnimation } from "../../animation/BounceAnimation";
 
 export const OrderForm = (props) => {
-  const { card, showPopup, sumPrice, setCard, setShowPopup } = props;
+  const { card, showPopup, sumPrice, setCard, setShowPopup, langProps } = props;
   const [showAnimationOrder, setShowAnimationOrder] = useState(false);
   const [successMessage, setSuccessMessage] = useState(false);
   const [failMessage, setFailedMessage] = useState(false);
@@ -30,8 +30,8 @@ export const OrderForm = (props) => {
     // emailjs.sendForm('service_703tt8s', 'template_ppq46lh', form.current, 'user_vtAgdf3zaqK3Mf8SVKA8o')
 
     // emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_USER_ID')
-
-    emailjs.sendForm('service_703tt8s', 'template_4qtz2iq', form.current, 'user_vtAgdf3zaqK3Mf8SVKA8o')
+    const emailTemplate = langProps.locale === "ru" ?  'template_4qtz2iq' : 'template_dacpb7f';
+    emailjs.sendForm('service_703tt8s', emailTemplate, form.current, 'user_vtAgdf3zaqK3Mf8SVKA8o')
       .then((result) => {
         console.log(result.text);
         setShowAnimationOrder(false);
@@ -80,12 +80,12 @@ export const OrderForm = (props) => {
             <>
               {item.product === "ring" ?
                 <div key={index}>
-                  <input type="hidden" name="product_ring" value="Кольцо Mellish" />
-                  {item.stone === "1r" && <><input type="hidden" name="ring_stone" value="Камeнь: Роза" /></>}
-                  {item.stone === "2r" && <><input type="hidden" name="ring_stone" value="Камeнь: Океан" /></>}
-                  {item.stone === "3r" && <><input type="hidden" name="ring_stone" value="Камeнь: Жемчуг" /></>}
-                  {item.stone === "4r" && <><input type="hidden" name="ring_stone" value="Камeнь: Родохрозит" /></>}
-                  {item.stone === "5r" && <><input type="hidden" name="ring_stone" value="Камeнь: Авантюрин" /></>}
+                  <input type="hidden" name="product_ring" value={langProps.locale === "ru" ?  "Кольцо Mellish" : "Ring Mellish"} />
+                  {item.stone === "1r" && <><input type="hidden" name="ring_stone" value={langProps.locale === "ru" ? "Камeнь: Роза" : "Stone: Rose"} /></>}
+                  {item.stone === "2r" && <><input type="hidden" name="ring_stone" value={langProps.locale === "ru" ? "Камeнь: Роза" : "Stone: Ocean"} /></>}
+                  {item.stone === "3r" && <><input type="hidden" name="ring_stone" value={langProps.locale === "ru" ? "Камeнь: Жемчуг" : "Stone: Pearls"} /></>}
+                  {item.stone === "4r" && <><input type="hidden" name="ring_stone" value={langProps.locale === "ru" ? "Камeнь: Родохрозит" : "Stone: Rhodochrosite"} /></>}
+                  {item.stone === "5r" && <><input type="hidden" name="ring_stone" value={langProps.locale === "ru" ? "Камeнь: Авантюрин" : "Stone: Aventurine"} /></>}
 
                   </div>:
                 null
@@ -93,57 +93,57 @@ export const OrderForm = (props) => {
               {
                 item.product === "quasar" ?
                   <div key={index}>
-                    <input type="hidden" name="product_quasar" value="Подвеска quasar" />
-                    {item.stone === "1p" && <><input type="hidden" name="quasar_stone" value="Камeнь: Роза" /></>}
-                    {item.stone === "2p" && <><input type="hidden" name="quasar_stone" value="Камeнь: Камeнь: Океан" /></>}
-                    {item.stone === "3p" && <><input type="hidden" name="quasar_stone" value="Камeнь: Жемчуг" /></>}
-                    {item.stone === "4p" && <><input type="hidden" name="quasar_stone" value="Камeнь: Родохрозит" /></>}
-                    {item.stone === "5p" && <><input type="hidden" name="quasar_stone" value="Камeнь: Авантюрин" /></>}
+                    <input type="hidden" name="product_quasar" value={langProps.locale === "ru" ? "Подвеска quasar" : "Pendant Quasar"} />
+                    {item.stone === "1p" && <><input type="hidden" name="quasar_stone" value={langProps.locale === "ru" ? "Камeнь: Роза" : "Stone: Rose"} /></>}
+                    {item.stone === "2p" && <><input type="hidden" name="quasar_stone" value={langProps.locale === "ru" ? "Камeнь: Океан" : "Stone: Ocean"} /></>}
+                    {item.stone === "3p" && <><input type="hidden" name="quasar_stone" value={langProps.locale === "ru" ? "Камeнь: Жемчуг" : "Stone: Pearls"} /></>}
+                    {item.stone === "4p" && <><input type="hidden" name="quasar_stone" value={langProps.locale === "ru" ? "Камeнь: Родохрозит" : "Stone: Rhodochrosite"} /></>}
+                    {item.stone === "5p" && <><input type="hidden" name="quasar_stone" value={langProps.locale === "ru" ? "Камeнь: Авантюрин" : "Stone: Aventurine"} /></>}
                   </div> :
                   null
               }
               {item.product === "alcor" ?
                 <div key={index}>
-                  <input type="hidden" name="product_alcor" value="Браслет Alcor" />
-                  {item.stone === "1a" && <><input type="hidden" name="alcor_stone" value="Камeнь: Роза" /></>}
-                  {item.stone === "2a" && <><input type="hidden" name="alcor_stone" value="Камeнь: Океан" /></>}
-                  {item.stone === "3a" && <><input type="hidden" name="alcor_stone" value="Камeнь: Жемчуг" /></>}
-                  {item.stone === "4a" && <><input type="hidden" name="alcor_stone" value="Камeнь: Родохрозит" /></>}
-                  {item.stone === "5a" && <><input type="hidden" name="alcor_stone" value="Камeнь: Авантюрин" /></>}
+                  <input type="hidden" name="product_alcor" value={langProps.locale === "ru" ? "Браслет Alcor" : "Bracelet Alcor"} />
+                  {item.stone === "1a" && <><input type="hidden" name="alcor_stone" value={langProps.locale === "ru" ? "Камeнь: Роза" : "Stone: Rose"} /></>}
+                  {item.stone === "2a" && <><input type="hidden" name="alcor_stone" value={langProps.locale === "ru" ? "Камeнь: Океан" : "Stone: Ocean"} /></>}
+                  {item.stone === "3a" && <><input type="hidden" name="alcor_stone" value={langProps.locale === "ru" ? "Камeнь: Жемчуг" : "Stone: Pearls"} /></>}
+                  {item.stone === "4a" && <><input type="hidden" name="alcor_stone" value={langProps.locale === "ru" ? "Камeнь: Родохрозит" : "Stone: Rhodochrosite"} /></>}
+                  {item.stone === "5a" && <><input type="hidden" name="alcor_stone" value={langProps.locale === "ru" ? "Камeнь: Авантюрин" : "Stone: Aventurine"} /></>}
                 </div>
               :
                 null
               }
               {item.product === "gidor" ?
                 <div key={index}>
-                  <input type="hidden" name="product_gidor" value="Мужской кулон Gidor" />
-                  {item.stone === "1g" && <><input type="hidden" name="gidor_stone" value="Камeнь: Огонь" /></>}
-                  {item.stone === "2g" && <><input type="hidden" name="gidor_stone" value="Камeнь: Океан" /></>}
-                  {item.stone === "3g" && <><input type="hidden" name="gidor_stone" value="Камeнь: Жёлтый органик" /></>}
-                  {item.stone === "4g" && <><input type="hidden" name="gidor_stone" value="Камeнь: Черный сандал" /></>}
-                  {item.stone === "5g" && <><input type="hidden" name="gidor_stone" value="Камeнь: Белый оникс" /></>}
+                  <input type="hidden" name="product_gidor" value={langProps.locale === "ru" ? "Кулон Gidor" : "Pendant Gidor"} />
+                  {item.stone === "1g" && <><input type="hidden" name="gidor_stone" value={langProps.locale === "ru" ? "Камeнь: Огонь" : "Stone: Fire"} /></>}
+                  {item.stone === "2g" && <><input type="hidden" name="gidor_stone" value={langProps.locale === "ru" ? "Камeнь: Океан" : "Stone: Ocean"} /></>}
+                  {item.stone === "3g" && <><input type="hidden" name="gidor_stone" value={langProps.locale === "ru" ? "Камeнь: Жёлтый органик" : "Stone: Yellow marble"} /></>}
+                  {item.stone === "4g" && <><input type="hidden" name="gidor_stone" value={langProps.locale === "ru" ? "Камeнь: Черный сандал" : "Stone: Black sandalwood"} /></>}
+                  {item.stone === "5g" && <><input type="hidden" name="gidor_stone" value={langProps.locale === "ru" ? "Камeнь: Белый оникс" : "Stone: White onyx"} /></>}
                 </div>
               :
               null
               }
               {item.product === "dors" ?
                 <div key={index}>
-                  <input type="hidden" name="product_dors" value="Мужской браслет Dors" />
-                  {item.stone === "1d" && <><input type="hidden" name="dors_stone" value="Камeнь: Огонь" /></>}
-                  {item.stone === "2d" && <><input type="hidden" name="dors_stone" value="Камeнь: Океан" /></>}
-                  {item.stone === "3d" && <><input type="hidden" name="dors_stone" value="Камeнь: Жёлтый органик" /></>}
-                  {item.stone === "4d" && <><input type="hidden" name="dors_stone" value="Камeнь: Черный сандал" /></>}
-                  {item.stone === "5d" && <><input type="hidden" name="dors_stone" value="Камeнь: Белый оникс" /></>}
+                  <input type="hidden" name="product_dors" value={langProps.locale === "ru" ?  "Браслет Dors" : "Bracelet Dors"} />
+                  {item.stone === "1d" && <><input type="hidden" name="dors_stone" value={langProps.locale === "ru" ? "Камeнь: Огонь" : "Stone: Fire"} /></>}
+                  {item.stone === "2d" && <><input type="hidden" name="dors_stone" value={langProps.locale === "ru" ? "Камeнь: Океан" : "Stone: Ocean"} /></>}
+                  {item.stone === "3d" && <><input type="hidden" name="dors_stone" value={langProps.locale === "ru" ? "Камeнь: Жёлтый органик" : "Stone: Yellow marble"} /></>}
+                  {item.stone === "4d" && <><input type="hidden" name="dors_stone" value={langProps.locale === "ru" ? "Камeнь: Черный сандал" : "Stone: Black sandalwood"} /></>}
+                  {item.stone === "5d" && <><input type="hidden" name="dors_stone" value={langProps.locale === "ru" ? "Камeнь: Белый оникс" : "Stone: White onyx"} /></>}
                 </div>
                 :
                 null
               }
               {item.product === "couple" ?
                 <div key={index}>
-                  <input type="hidden" name="product_couple" value="парные браслеты" />
-                  {item.stone === "1co" && <><input type="hidden" name="couple_stone" value="Камeнь: Огонь и Роза" /></>}
-                  {item.stone === "2co" && <><input type="hidden" name="couple_stone" value="Камeнь: Белый оникс" /></>}
-                  {item.stone === "3co" && <><input type="hidden" name="couple_stone" value="Камeнь: Жёлтый органик" /></>}
+                  <input type="hidden" name="product_couple" value={langProps.locale === "ru" ? "парные браслеты" : "Paired bracelets"} />
+                  {item.stone === "1co" && <><input type="hidden" name="couple_stone" value={langProps.locale === "ru" ? "Камeнь: Огонь и Роза" : "Stone: Rose and Fire"} /></>}
+                  {item.stone === "2co" && <><input type="hidden" name="couple_stone" value={langProps.locale === "ru" ? "Камeнь: Белый оникс" : "Stone: White onyx"} /></>}
+                  {item.stone === "3co" && <><input type="hidden" name="couple_stone" value={langProps.locale === "ru" ? "Камeнь: Жёлтый органик" : "Stone: Yellow marble"} /></>}
                 </div>
                 :
                 null
@@ -158,7 +158,7 @@ export const OrderForm = (props) => {
 
               {item.product === "pendantTalisman" ?
                 <div key={index}>
-                  <input type="hidden" name="product_pendantTalisman" value="талисман-кулон женский" />
+                  <input type="hidden" name="product_pendantTalisman" value={langProps.locale === "ru" ?  "талисман-кулон женский" : "women`s talisman-pendant"} />
                   { item.stone === '1p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Змеевик — поглотитель негативной энергии и защитник." /></>}
                   { item.stone === '2p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Агат - приносит здоровье, счастье и долголетие." /></>}
                   { item.stone === '3p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Агат - приносит здоровье, счастье и долголетие." /></>}
@@ -202,7 +202,7 @@ export const OrderForm = (props) => {
 
               {item.product === "ringTalisman" ?
                 <div key={index}>
-                  <input type="hidden" name="product_ringTalisman" value="женское кольцо-талисман" />
+                  <input type="hidden" name="product_ringTalisman" value={langProps.locale === "ru" ? "женское Кольцо-талисман" : "women`s talisman-ring"} />
                   { item.stone === '1r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Змеевик — поглотитель негативной энергии и защитник." /></>}
                   { item.stone === '2r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Агат - приносит здоровье, счастье и долголетие." /></>}
                   { item.stone === '3r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Агат - приносит здоровье, счастье и долголетие." /></>}
@@ -245,7 +245,7 @@ export const OrderForm = (props) => {
 
               {item.product === "alcorTalisman" ?
                 <div key={index}>
-                  <input type="hidden" name="product_alcorTalisman" value="женское браслет-талисман" />
+                  <input type="hidden" name="product_alcorTalisman" value={langProps.locale === "ru" ? "женскии браслет-талисман" : "women`s talisman-bracelet"} />
                   { item.stone === '1a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Змеевик — поглотитель негативной энергии и защитник." /></>}
                   { item.stone === '2a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Агат - приносит здоровье, счастье и долголетие." /></>}
                   { item.stone === '3a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value="Талисман: Агат - приносит здоровье, счастье и долголетие." /></>}
@@ -288,7 +288,7 @@ export const OrderForm = (props) => {
 
               {item.product === "gidorTalisman" ?
                 <div key={index}>
-                  <input type="hidden" name="product_gidorTalisman" value="мужской кулон-талисман" />
+                  <input type="hidden" name="product_gidorTalisman" value={langProps.locale === "ru" ? "мужской кулон-талисман" : "men`s talisman-pendant"} />
 
                   { item.stone === '1g-t' && <><input type="hidden" name="gidorTalisman_stone" value="Талисман: Яшма — источник доброй энергии." /></>}
                   { item.stone === '2g-t' && <><input type="hidden" name="gidorTalisman_stone" value="Талисман: Агат - приносит здоровье, счастье и долголетие." /></>}
@@ -317,7 +317,7 @@ export const OrderForm = (props) => {
 
               {item.product === "dorsTalisman" ?
                 <div key={index}>
-                  <input type="hidden" name="product_dorsTalisman" value="мужской браслет-талисман" />
+                  <input type="hidden" name="product_dorsTalisman" value={langProps.locale === "ru" ? "мужской браслет-талисман" : "men`s talisman-bracelet"} />
 
                   { item.stone === '1d-t' && <><input type="hidden" name="dorsTalisman_stone" value="Талисман: Яшма — источник доброй энергии." /></>}
                   { item.stone === '2d-t' && <><input type="hidden" name="dorsTalisman_stone" value="Талисман: Агат - приносит здоровье, счастье и долголетие." /></>}

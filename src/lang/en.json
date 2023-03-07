@@ -131,5 +131,18 @@
   "qr.veiw": "The look of message that your addressee will see",
   "qr.podone": "By confirming ",
   "qr.podtwo": "you agree to the policy regarding the processing of personal data",
-  "qr.create": "Create message"
+  "qr.create": "Create message",
+  "second.gift": "Second stone as a gift: ",
+  "st.rose": "Stone with QR 'Rose'",
+  "st.ocean": "Stone with QR 'Ocean'",
+  "st.pearls": "Stone with QR 'Pearls'",
+  "st.rhod": "Stone with QR 'Rhodochrosite'",
+  "st.avant": "Stone with QR 'Aventurine'",
+  "st.fire": "Stone with QR 'Fire'",
+  "st.yeorg": "Stone with QR 'Yellow marble'",
+  "st.blsand": "Stone with QR 'Black sandalwood'",
+  "st.whiteon": "Stone with QR 'White onyx'",
+  "st.rosfir": "Stone with QR 'Fire and Rose'",
+  "st.twogift": "Two stones as a gift",
+  "shop.price": "Price"
 }

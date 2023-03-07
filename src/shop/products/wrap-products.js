@@ -43,7 +43,7 @@ export const WrapProducts = (props) => {
 
 
 
-        <Popup showPopup={showPopup} setShowPopup={setShowPopup} card={card} setCard={setCard} />
+        <Popup langProps={langProps} showPopup={showPopup} setShowPopup={setShowPopup} card={card} setCard={setCard} />
       </WrapperProducts>
     </>
   );
