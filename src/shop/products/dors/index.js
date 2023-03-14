@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { FormattedMessage } from "react-intl";
 import ReactDOM from "react-dom";
 import Slider from "react-slick";
 import one from './img/1.png';
@@ -218,7 +219,7 @@ export const Dors = (props) => {
     <Wrapper>
       <Inner>
         <div className="slider-wrap">
-          <h4>мужской браслет <br/>Dors</h4>
+          <h4><FormattedMessage id="dorsbraslet.men" /> <br/>Dors</h4>
           <Slider {...settings} asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
             <div>
               <img src={one} alt="JewelCocktail" onClick={() => openZoom(1)} />
@@ -315,7 +316,7 @@ export const Dors = (props) => {
         </Slider>
         </div>
         <ChooseStone>
-          <p>выбери камень с qr-посланием</p>
+          <p><FormattedMessage id="choose.ketroy" /></p>
           <WrapStone>
             <div onClick={() => setDorsStone('1d')} className={dorsStone === '1d' ? 'active' : 'not' }>
               <img src={oneStone} alt="JewelCocktail"/>
@@ -334,11 +335,11 @@ export const Dors = (props) => {
             </div>
           </WrapStone>
           <p className="description">
-            { dorsStone === '1d' && "огонь - символизирует страсть, красоту, энергию и любовь"}
-            { dorsStone === '2d' && "океан - символизирует творчество,мечты, свободу и свежесть ума"}
-            { dorsStone === '3d' && "жёлтый органик - символ тепла, лета, солнца и радости"}
-            { dorsStone === '4d' && "черный сандал - символ мудрости, силы духа и гармонии"}
-            { dorsStone === '5d' && "белый оникс - символ энергии света, добра, созидания"}
+            { dorsStone === '1d' && <FormattedMessage id="ketroy.fire" />}
+            { dorsStone === '2d' && <FormattedMessage id="ketroy.ocean" />}
+            { dorsStone === '3d' && <FormattedMessage id="ketroy.yeloworg" />}
+            { dorsStone === '4d' && <FormattedMessage id="ketroy.blacksandal" />}
+            { dorsStone === '5d' && <FormattedMessage id="ketroy.whiteonix" />}
           </p>
         </ChooseStone>
         <PriceBuySection>
@@ -347,58 +348,55 @@ export const Dors = (props) => {
             <p className="old-price">9 850 ₽</p>
             <img src={sale} alt="JewelCocktail" className="sale-icon"/>
           </WrapPrices>
-          <p className="bonus">браслет + 2 разных камня</p>
-          <div className="buy-button" onClick={() => buyDors()}>Купить</div>
+          <p className="bonus"><FormattedMessage id="braslet.twoketroys" /></p>
+          <div className="buy-button" onClick={() => buyDors()}><FormattedMessage id="shop.buy" /></div>
           <div className="actsia">
             <img src={fire} alt="JewelCocktail"/>
-            <p className="actsia-text"><span>Акция!</span> второй камень <span>в подарок</span></p>
+            <p className="actsia-text"><span><FormattedMessage id="shop.action" /></span><FormattedMessage id="shop.secketr" /><span><FormattedMessage id="in.present" /></span></p>
           </div>
         </PriceBuySection>
         <DescriptionProduct>
           <DescriptionButton>
-            <span>Описание</span>
+            <span><FormattedMessage id="shop.descriptions" /></span>
             <div onClick={() => setShowDescr(!showDescr)} className={showDescr ? 'hide' : 'show'}>
               <img src={arDown} alt="JewelCocktail"/>
             </div>
           </DescriptionButton>
           {showDescr && (
             <DescriptionView>
-              <p className="slave-text">дизайнерский браслет
-                в стиле минимализм
-                на каждый день со сменными вставками (камнями)</p>
+              <p className="slave-text"><FormattedMessage id="descriptions.dors" /></p>
               <p className="main-text">
-                Комплектация:
+                <FormattedMessage id="shop.complectation" />:
               </p>
               <p className="slave-text">
-                браслет, 2 сменных камня, система хранения камней фирменная коробка и пакет.
+                <FormattedMessage id="complectation.descr" />
               </p>
               <p className="main-text">
-                Размер камня:
+                <FormattedMessage id="size.ketroy" />:
               </p>
               <p className="slave-text">
-                12x12 мм
+                12x12 <FormattedMessage id="size.mm" />
               </p>
 
               <ToRightMoveDesktop>
               <p className="main-text">
-                Материал и цвет основы:
+                <FormattedMessage id="material.color" />:
               </p>
               <p className="slave-text">
-                Серебряный сплав, глянец
+                <FormattedMessage id="serebro.gleanets" />
               </p>
               <p className="main-text">
-                Тип вставки:
+                <FormattedMessage id="type.insert" />:
               </p>
               <p className="slave-text">
-                Натуральный или органический
-                камень ручной огранки
+                <FormattedMessage id="natural.ketroy" />
               </p>
               <p className="main-text">
-                бессрочная гарантия:
+                <FormattedMessage id="warranty.quality" />:
               </p>
               <p className="slave-text">
-                для членов клуба jewel cocktail
-                <a href="https://jewelcocktail.com/privacy" target="_blank" rel="noreferrer" >Подробнее</a>
+                <FormattedMessage id="club.jewel" />
+                <a href="https://jewelcocktail.com/privacy" target="_blank" rel="noreferrer" ><FormattedMessage id="read.more" /></a>
               </p>
               </ToRightMoveDesktop>
 

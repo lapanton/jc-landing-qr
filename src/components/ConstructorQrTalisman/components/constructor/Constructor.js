@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import axios from 'axios';
+import Compress from "browser-image-compression";
 import {useLocation, useParams} from 'react-router-dom';
 import {useDropzone} from 'react-dropzone';
 import Slider from "react-slick";
@@ -43,6 +44,8 @@ import ramka from './ramka.png';
 import result from './result.png';
 import plus from './plus.png';
 import {BounceAnimation} from "../../../../animation/BounceAnimation";
+import { NotifyPopup } from "../../../ConstructorQr/components/notify-popup";
+import {FormattedMessage} from "react-intl";
 // import {ConfettiAnimation} from "../../../../animation/Confetti";
 
 
@@ -50,6 +53,7 @@ const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 export const ConstructorTalisman = (props) => {
   const { pathname } = useLocation();
   const value = props.value;
+  const langProps = props.langProps;
   const { id } = useParams();
   const [checked, setChecked] = useState(false);
     const [sendData, setSendData] = useState(false);
@@ -57,19 +61,40 @@ export const ConstructorTalisman = (props) => {
     const [message, setMessage] = useState("");
     const [phone, setPhone] = useState("");
     const [authorEmail, setAuthorEmail] = useState("");
-  const onDrop = useCallback(acceptedFiles => {
+  const onDrop = useCallback((acceptedFiles, fileRejections) => {
 
-   const newFiles = acceptedFiles.map(file => Object.assign(file, {
-      preview: URL.createObjectURL(file)
-    }))
+    fileRejections.forEach((file) => {
+      file.errors.forEach((err) => {
+        if (err.code === "file-too-large") {
+          alert(langProps.locale === "ru" ? "Оптимизируйте пожалуста ваше фото, максимально  допустимый размер фото 10mb" : "Please optimize your photo, the maximum allowed size for the photo is 10MB.")
+        }
 
-    const totalfiles = files.length + newFiles.length;
+        if (err.code === "file-invalid-type") {
+          alert(langProps.locale === "ru" ? "Неверный тип файла" : "Invalid file type.")
+        }
+      });
+    });
 
-    if (totalfiles >= 11) return;
+    const options = {
+      maxSizeMB: 1,
+      maxWidthOrHeight: 800,
+      useWebWorker: true
+    }
 
-    setFiles([...files, ...newFiles]);
-
-  }, [files]);
+    Compress(acceptedFiles[0], options).then(compressedBlob => {
+      compressedBlob.lastModifiedDate = new Date()
+      const convertedBlobFile = new File([compressedBlob], acceptedFiles[0].name, { type: acceptedFiles[0].type, lastModified: Date.now()})
+      Object.assign(convertedBlobFile, {
+        preview: URL.createObjectURL(convertedBlobFile),
+        path: convertedBlobFile.name
+      })
+      setFiles(files.concat([convertedBlobFile]));
+      if (files.length >= 4) alert(langProps.locale === "ru" ? "Максимально допустимое количество 3 фото" : "The maximum allowed quantity is 3 photos");
+    })
+      .catch((e) => {
+        console.log('Something goes wrong: ', e);
+      });
+  }, [files, langProps.locale]);
 
   const remove = file => {
     // console.log('file', file, files);
@@ -81,6 +106,7 @@ export const ConstructorTalisman = (props) => {
       accept: 'image/*',
       maxFiles: 3,
       maxSize: 31457280,
+      multiple: false,
       onDrop,
       remove
     });
@@ -125,15 +151,34 @@ export const ConstructorTalisman = (props) => {
     }
   };
 
+  const [showVediteText, setShowVediteText] = useState(false);
+  const [uplFoto, setUplFoto] = useState(false);
+  const [soglasie, setSeoglasie] = useState(false);
+  const [mailvalid, setMailValid] = useState(false);
+
   const handleSubmit = async () => {
 
-    if (message === "") return alert('Пожалустаа введите послание');
+    if (message === "") {
+      setShowVediteText(true);
+      return setTimeout(() => {setShowVediteText(false)}, 3000);
+    }
 
-    if (files.length === 0) return alert('Пожалустаа загрузитее фото');
+    if (files.length === 0) {
+      setUplFoto(true);
+      return setTimeout(() => {setUplFoto(false)}, 3000);
+    }
 
-    if (!checked) return alert('Пожалустаа поставьте галочку на согласие: Политикой в отношении обработки персональных данных');
+    if (authorEmail === "" && !authorEmail.includes('@')) {
+      setMailValid(true);
+      return setTimeout(() => {setMailValid(false)}, 3000);
+    }
 
-    if (authorEmail === "" && !authorEmail.includes('@')) return alert('Пожалуста корректный адресс почты');
+
+    if (!checked) {
+      setSeoglasie(true);
+      return setTimeout(() => {setSeoglasie(false)}, 3000);
+    }
+
 
     const formData = new FormData();
 
@@ -202,6 +247,10 @@ export const ConstructorTalisman = (props) => {
   // }
   return (
     <Wrapper>
+      {showVediteText && <NotifyPopup value={<FormattedMessage id="qr.validText" />} />}
+      {uplFoto && <NotifyPopup value={<FormattedMessage id="qr.validPhoto" />} />}
+      {soglasie && <NotifyPopup value={<FormattedMessage id="qr.soglasie" />} />}
+      {mailvalid && <NotifyPopup value={<FormattedMessage id="qr.mailvalid" />} />}
         <h2 className={value?.status === 'completed' ? "completed": "notcompleted"}>Конструктор послания</h2>
       {/*{value?.status === 'completed' && hide &&  (*/}
       {/*  <ConfettiAnimation/>*/}
@@ -211,14 +260,14 @@ export const ConstructorTalisman = (props) => {
 
             <TextMessage>
               <img src={t} alt="JewelCocktail"/>
-              <div>Текст/символы</div>
-              <span>Заполните талисман<br/> до 400 символов</span>
+              <div>{langProps.locale === "ru" ? "Текст/символы" : "Text/characters"}</div>
+              <span>{langProps.locale === "ru" ? "Заполните талисман до 400 символов" : "Fill the talisman up to 400 characters"}</span>
             </TextMessage>
 
             <Fon>
               <img src={fon} alt="JewelCocktail"/>
-              <div>Изображение</div>
-              <span>Добавьте до 3 изображений </span>
+              <div>{langProps.locale === "ru" ? "Изображение" : "Images"}</div>
+              <span>{langProps.locale === "ru" ? "Добавьте до 3 изображений" : "Add up to 3 images"}</span>
               <br/>
               <br/>
               <br/>
@@ -234,8 +283,8 @@ export const ConstructorTalisman = (props) => {
 
             <ResultPrewiev>
               <img src={result} alt="JewelCocktail"/>
-              <div>Предварительный результат</div>
-              <span>Вид цифрового талисмана</span>
+              <div>{langProps.locale === "ru" ? "Предварительный результат" : "Preview"}</div>
+              <span>{langProps.locale === "ru" ? "Вид цифрового талисмана" : "Look of of a digital talisman"}</span>
             </ResultPrewiev>
 
           </SideArea>
@@ -243,24 +292,24 @@ export const ConstructorTalisman = (props) => {
           <ConstructorArea className={value?.status === 'completed' ? "noMarging": "notcompleted"}>
             <TextMessageMob className={value?.status === 'completed' ? "completed": "notcompleted"}>
               <img src={t} alt="JewelCocktail"/>
-              <div>Текст/символы</div>
+              <div>{langProps.locale === "ru" ? "Текст/символы" : "Text/characters"}</div>
             </TextMessageMob>
-            <p className={value?.status === 'completed' ? "completed": "notcompleted"}>Заполните талисман до 400 символов</p>
+            <p className={value?.status === 'completed' ? "completed": "notcompleted"}>{langProps.locale === "ru" ? "Заполните талисман до 400 символов" : "Fill the talisman up to 400 characters"}</p>
             <textarea value={message} name="message" cols="30" rows="5" onChange={handleChangeMessage} className={value?.status === 'completed' ? "completed": "notcompleted"} />
 
             <WrapPhotoUpload className={value?.status === 'completed' ? "completed": "notcompleted"}>
               <FonMobile>
                 <img src={fon} alt="JewelCocktail"/>
-                <div>Изображение</div>
+                <div>{langProps.locale === "ru" ? "Изображение" : "Images"}</div>
               </FonMobile>
-              <p>Добавьте до 3 изображений</p>
+              <p>{langProps.locale === "ru" ? "Добавьте до 3 изображений" : "Add up to 3 images"}</p>
               <InnerPhoto>
                 <section className="container">
 
                   <ThumbsContainer>
                     {thumbs}
                   </ThumbsContainer>
-                  <div {...getRootProps({className: 'dropzone'})}>
+                  <div {...getRootProps({className: 'dropzone'})} style={files.length >= 3 ? {pointerEvents: "none", opacity: 0.4} : {pointerEvents: "inherit", opacity: 1}}>
                     <input {...getInputProps()} />
                     <img src={plus} alt="JewelCocktail"/>
                   </div>
@@ -272,9 +321,9 @@ export const ConstructorTalisman = (props) => {
               <InnerPreviewResult>
                 <ResultPrewievMob className={value?.status === 'completed' ? "completed": "notcompleted"}>
                   <img src={result} alt="JewelCocktail"/>
-                  <div>Предварительный результат</div>
+                  <div>{langProps.locale === "ru" ? "Предварительный результат" : "Preview"}</div>
                 </ResultPrewievMob>
-                <p className={value?.status === 'completed' ? "completed": "notcompleted"}>Вид цифрового талисмана</p>
+                <p className={value?.status === 'completed' ? "completed": "notcompleted"}>{langProps.locale === "ru" ? "Вид цифрового талисмана" : "The look of digital talisman"}</p>
                 <MessageView className={value?.status === 'completed' ? "morePadding": "notcompleted messageInit"}>{value?.status === 'completed' ? messageBr.split('\n').map((item, i) => <p className="poezi" key={i}>{item}</p>) : message.split('\n').map((item, i) => <p className="poezi" key={i}>{item}</p>)}</MessageView>
                 <div className={value?.status === 'completed' ? "emptyHeightCompl": "emptyHeight"}>
                   <WrapSlider>
@@ -307,18 +356,18 @@ export const ConstructorTalisman = (props) => {
                     <>
                       <WrapPhoneEmail style={{marginTop: "50px"}}>
                         {!(pathname.includes('/letter') || pathname.includes('/qr/')) && (
-                          <div className="numberPhone" style={{display: "none"}}><div>Номер Телефона:</div> <input value={phone} type="tel" name="phone" onChange={handleChangePhone} /></div>
+                          <div className="numberPhone" style={{display: "none"}}><div>{langProps.locale === "ru" ? "Номер Телефона:" : "Phone number:"}</div> <input value={phone} type="tel" name="phone" onChange={handleChangePhone} /></div>
                         )}
                         <div className="emailUser"><div>Email:</div> <input value={authorEmail} type="email" name="authorEmail" onChange={handleChangeAuthorEmail} /></div>
                       </WrapPhoneEmail>
                       <WrapInputCheckBox>
                         <input name="checked" type="checkbox" checked={checked}
                                onChange={e => setChecked(!checked)} className="checkbox-round" />
-                        <span>Подтверждая вы соглавшаетесь с <a href="/privacy" target="_blank"> политикой в отношении обработки персональных данных</a></span>
+                        <span><FormattedMessage id="qr.podone" /><a href="/privacy" target="_blank"><FormattedMessage id="qr.podtwo" /></a></span>
                       </WrapInputCheckBox>
                       <ButtonSubmit onClick={handleSubmit} className={value?.status === 'completed' ? "completed": "notcompleted"}>
-                      Создать послание
-                      </ButtonSubmit>
+                        {langProps.locale === "ru" ? "Создай свой талисман" : "Create your digital talisman"}
+                          </ButtonSubmit>
                     </>
                   )}
               </InnerPreviewResult>

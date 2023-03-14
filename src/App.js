@@ -45,6 +45,7 @@ import {TalismanStone} from "./talisman/talismanStone";
 import {SecondTalisman} from "./talisman/second";
 import {ConstructorQrTalisman} from "./components/ConstructorQrTalisman/ConstructorQrTalisman";
 import {ExampleTalisman} from "./talisman/exampleTalisman";
+import {PopupShopClose} from "./components/popupshopclose";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -69,6 +70,7 @@ export const App = (props) => {
   // http://localhost:3000/qrt/uLuFx_XfzO
   // http://localhost:3000/letter/Kpvjc99Hdg
   // http://localhost:3000/qr/nOccLPeW9C with typeMessage
+  // for testing https://jewelcocktail.com/qr/9lddgEXDdo
 
   const dataFromStorage = localStorage.getItem('card-data');
   const [card, setCard] = useState((dataFromStorage?.length > 0) ? JSON.parse(dataFromStorage) : []);
@@ -110,6 +112,7 @@ export const App = (props) => {
         <Routes>
             <Route path="/" element={
               <div>
+                <PopupShopClose />
                 <GlobalStyle />
                 <Main langProps={props} />
                 <MoveStuffAround/>
@@ -130,7 +133,7 @@ export const App = (props) => {
                    element={
                      <CheckStatusQR>
                        { (typeMessage) => {
-                         return (typeMessage === "letter" || typeMessage === undefined) ? <ConstructorQr/> : <ConstructorQrTalisman/>;
+                         return (typeMessage === "letter" || typeMessage === undefined) ? <ConstructorQr langProps={props} /> : <ConstructorQrTalisman langProps={props} />;
                        }}
                      </CheckStatusQR>
                    }
@@ -153,40 +156,41 @@ export const App = (props) => {
           {/* TODO remove */}
             <Route path="/qr1001" element={<>
                 <Qr1001/>
-                <Footer exact />
+                <Footer langProps={props} exact />
             </>
             } exact />
             <Route path="/qr1002" element={<>
                 <Qr1002/>
-                <Footer />
+                <Footer langProps={props} />
             </>
             } exact />
 
             <Route path="/qr00001" element={<>
                 <Qr00001/>
-                <Footer />
+                <Footer langProps={props} />
             </>
             } exact />
 
             <Route path="/qr1" element={<>
                 <Qr1/>
-                <Footer />
+                <Footer langProps={props} />
             </>
             } exact />
 
           <Route path="/privacy" element={<>
-            <PrivacyPolicy/>
-            <Footer />
+            <PrivacyPolicy langProps={props} />
+            <Footer langProps={props} />
           </>
           } exact />
 
           <Route path="/shop" element={
             <>
               <MainShop langProps={props} setShowPopup={setShowPopup} showPopup={showPopup} />
+              <PopupShopClose />
               <Second/>
-              <Info />
-              <ShowHideSection />
-              <WrapProducts showPopup={showPopup} setShowPopup={setShowPopup} card={card} setCard={setCard} />
+              <Info langProps={props} />
+              <ShowHideSection langProps={props} />
+              <WrapProducts langProps={props} showPopup={showPopup} setShowPopup={setShowPopup} card={card} setCard={setCard} />
               <SelfProductShop />
               <OsobennostiTehnologiiShop />
               <ContactsShop />
@@ -197,6 +201,7 @@ export const App = (props) => {
           <Route path="/glass" element={
             <>
               <MainShop langProps={props} setShowPopup={setShowPopup} showPopup={showPopup} />
+              <PopupShopClose />
               <Glass card={card} setCard={setCard} setShowPopup={setShowPopup} showPopup={showPopup} />
               <OsobennostiTehnologiiShop />
               <ContactsShop />
@@ -207,6 +212,7 @@ export const App = (props) => {
           <Route path="/about" element={
             <div>
               <GlobalStyle />
+              <PopupShopClose />
               <Main langProps={props} />
               <MoveStuffAround/>
               <BlackSquare />
@@ -225,6 +231,7 @@ export const App = (props) => {
           <Route path="/gallery" element={
             <div>
               <GlobalStyle />
+              <PopupShopClose />
               <Main langProps={props} />
               <MoveStuffAround/>
               <BlackSquare />
@@ -244,6 +251,7 @@ export const App = (props) => {
           <Route path="/contact" element={
             <div>
               <GlobalStyle />
+              <PopupShopClose />
               <Main langProps={props} />
               <MoveStuffAround/>
               <BlackSquare />
@@ -261,9 +269,10 @@ export const App = (props) => {
           <Route path="/talisman" element={
             <div>
               <MainShop langProps={props} setShowPopup={setShowPopup} showPopup={showPopup} />
-              <SecondTalisman />
-              <ExampleTalisman />
-              <WrapProducts showPopup={showPopup} setShowPopup={setShowPopup} card={card} setCard={setCard} />
+              <PopupShopClose />
+              <SecondTalisman langProps={props}  />
+              <ExampleTalisman langProps={props} />
+              <WrapProducts langProps={props} showPopup={showPopup} setShowPopup={setShowPopup} card={card} setCard={setCard} />
               <SelfProductShop />
               <OsobennostiTehnologiiShop />
               <ContactsShop />
@@ -272,8 +281,9 @@ export const App = (props) => {
           } />
           <Route path="/talisman/stone" element={
             <div>
+              <PopupShopClose />
               <MainShop langProps={props} setShowPopup={setShowPopup} showPopup={showPopup} />
-              <TalismanStone />
+              <TalismanStone langProps={props} />
               <ContactsShop />
               <ScrollArrow />
             </div>

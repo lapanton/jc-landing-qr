@@ -1,4 +1,5 @@
 import React from 'react';
+import { FormattedMessage } from "react-intl";
 import { Wrapper, Inner, CloseButton, RemoveItem, WrapProductDescription, CardName, WrapCardPrice } from "./styled-popup";
 import close from './cross.svg';
 
@@ -32,7 +33,7 @@ import giftIcon from './gift_icon.png';
 import sales from '../sale.png';
 
 export const Popup = (props) => {
-  const { showPopup, setShowPopup, card, setCard } = props;
+  const { showPopup, setShowPopup, card, setCard, langProps } = props;
   const handleClick = () => {
     setShowPopup(!showPopup);
   }
@@ -43,14 +44,14 @@ export const Popup = (props) => {
     setCard(newItem);
   };
   const sumPrice = card.reduce((a, b) => a + (b['price'] || 0), 0);
-  // console.log('card', card);
+   console.log('langProps.locale', langProps);
   return (
     <Wrapper className={showPopup ? "show" : "hide"} >
       <Inner>
         <CloseButton onClick={() => handleClick()}>
           <img src={close} alt="JewelCocktail"/>
         </CloseButton>
-        <CardName>Корзина</CardName>
+        <CardName><FormattedMessage id="card.corzina" /></CardName>
         <div>
           {card.map((item, index) => {
             const currentPrice = item.price.toString().slice(0, -3) +" "+item.price.toString().slice(-3);
@@ -67,36 +68,36 @@ export const Popup = (props) => {
                     <WrapProductDescription>
                       <div style={{ textAlign: "left" }}>
                         <span style={{ color: "#727070", marginBottom: "10px", display: "inline-block" }}>
-                          Кольцо Mellish
-                          Рамер: ONE SIZE
+                          {langProps.locale === "ru" ?  "Кольцо Mellish" : "Ring Mellish"}
+                          {langProps.locale === "ru" ?  "Рамер: ONE SIZE" : "Size: ONE SIZE"}
                           {/*Рамер: {item.size === "sizes" && "S" } {item.size === "sizem" && "M" } {item.size === "sizel" && "L" }*/}
                         </span>
                         <div>
                           <div style={{ textAlign: "left", textTransform: "inherit" }}>
                             {item.stone === "1r" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "РОЗА": <img src={oneStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
-                              <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}><FormattedMessage id="st.rose" />: <img src={oneStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="second.gift" /><img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                               </>}
                             {item.stone === "2r" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "ОКЕАН": <img src={twoStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
-                              <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}><FormattedMessage id="st.ocean" />: <img src={twoStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="second.gift" /><img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                             {item.stone === "3r" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "ЖЕМЧУГ": <img src={threeStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
-                              <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}><FormattedMessage id="st.pearls" />: <img src={threeStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="second.gift" /><img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                             {item.stone === "4r" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "РОДОХРОЗИТ": <img src={fourStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
-                              <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} style={{transform: "translate(10px, 3px)", maxWidth: "17px"}} alt="JewelCocktail"/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}><FormattedMessage id="st.rhod" />: <img src={fourStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="second.gift" /><img src={giftIcon} style={{transform: "translate(10px, 3px)", maxWidth: "17px"}} alt="JewelCocktail"/></div>
                             </>}
                             {item.stone === "5r" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "АВАНТЮРИН": <img src={fiveStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
-                              <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}><FormattedMessage id="st.avant" />: <img src={fiveStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="second.gift" /><img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                           </div>
                         </div>
                         <WrapCardPrice>
-                          <div className="price-card">Цена: <span className="card-line-old">  14 000 ₽</span> <span className="price-card-new">= {currentPrice} ₽ </span></div>
+                          <div className="price-card"><FormattedMessage id="shop.price" />: <span className="card-line-old">  14 000 ₽</span> <span className="price-card-new">= {currentPrice} ₽ </span></div>
                           <img src={sales} alt="JewelCocktail" className="card-icon-sale" />
                         </WrapCardPrice>
                       </div>
@@ -120,34 +121,34 @@ export const Popup = (props) => {
                     <WrapProductDescription>
                       <div style={{ textAlign: "left" }}>
                         <span style={{ color: "#727070", marginBottom: "10px", display: "inline-block" }}>
-                          Подвеска quasar
+                          {langProps.locale === "ru" ? "Подвеска quasar" : "Pendant Quasar"}
                         </span>
                         <div>
                           <div style={{ textAlign: "left", textTransform: "inherit" }}>
                             {item.stone === "1p" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "РОЗА": <img src={oneStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
-                              <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}><FormattedMessage id="st.rose" />: <img src={oneStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="second.gift" /><img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                             {item.stone === "2p" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "ОКЕАН": <img src={twoStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
-                              <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}><FormattedMessage id="st.ocean" />: <img src={twoStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="second.gift" /><img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                             {item.stone === "3p" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "ЖЕМЧУГ": <img src={threeStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
-                              <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}><FormattedMessage id="st.pearls" />: <img src={threeStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="second.gift" /><img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                             {item.stone === "4p" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "РОДОХРОЗИТ": <img src={fourStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
-                              <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}><FormattedMessage id="st.rhod" />: <img src={fourStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="second.gift" /><img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                             {item.stone === "5p" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "АВАНТЮРИН": <img src={fiveStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
-                              <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}><FormattedMessage id="st.avant" />: <img src={fiveStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="second.gift" /><img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                           </div>
                         </div>
                         <WrapCardPrice>
-                          <div className="price-card">Цена: <span className="card-line-old">  9 850 ₽</span> <span className="price-card-new">= {currentPrice} ₽ </span></div>
+                          <div className="price-card"><FormattedMessage id="shop.price" />: <span className="card-line-old">  9 850 ₽</span> <span className="price-card-new">= {currentPrice} ₽ </span></div>
                           <img src={sales} alt="JewelCocktail" className="card-icon-sale" />
                         </WrapCardPrice>
                       </div>
@@ -171,34 +172,34 @@ export const Popup = (props) => {
                     <WrapProductDescription>
                       <div style={{ textAlign: "left" }}>
                         <span style={{ color: "#727070", marginBottom: "10px", display: "inline-block" }}>
-                          Браслет Alcor
+                          {langProps.locale === "ru" ? "Браслет Alcor" : "Bracelet Alcor"}
                         </span>
                         <div>
                           <div style={{ textAlign: "left", textTransform: "inherit" }}>
                             {item.stone === "1a" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "РОЗА": <img src={oneStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
-                              <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}><FormattedMessage id="st.rose" />: <img src={oneStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="second.gift" /><img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                             {item.stone === "2a" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "ОКЕАН": <img src={twoStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
-                              <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}><FormattedMessage id="st.ocean" />: <img src={twoStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="second.gift" /><img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                             {item.stone === "3a" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "ЖЕМЧУГ": <img src={threeStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
-                              <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}><FormattedMessage id="st.pearls" />: <img src={threeStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="second.gift" /><img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                             {item.stone === "4a" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "РОДОХРОЗИТ": <img src={fourStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
-                              <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}><FormattedMessage id="st.rhod" />: <img src={fourStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="second.gift" /><img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                             {item.stone === "5a" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "АВАНТЮРИН": <img src={fiveStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
-                              <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}><FormattedMessage id="st.avant" />: <img src={fiveStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="second.gift" /><img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                           </div>
                         </div>
                         <WrapCardPrice>
-                          <div className="price-card">Цена: <span className="card-line-old"> 9 570 ₽</span> <span className="price-card-new">= {currentPrice} ₽ </span></div>
+                          <div className="price-card"><FormattedMessage id="shop.price" />: <span className="card-line-old"> 9 570 ₽</span> <span className="price-card-new">= {currentPrice} ₽ </span></div>
                           <img src={sales} alt="JewelCocktail" className="card-icon-sale" />
                         </WrapCardPrice>
                       </div>
@@ -222,34 +223,34 @@ export const Popup = (props) => {
                     <WrapProductDescription>
                       <div style={{ textAlign: "left" }}>
                         <span style={{ color: "#727070", marginBottom: "10px", display: "inline-block" }}>
-                          Мужской кулон<br/>Gidor
+                          {langProps.locale === "ru" ? "Кулон Gidor" : "Pendant Gidor"}
                         </span>
                         <div>
                           <div style={{ textAlign: "left", textTransform: "inherit" }}>
                             {item.stone === "1g" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "ОГОНЬ": <img src={oneStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
-                              <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}><FormattedMessage id="st.fire" />: <img src={oneStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="second.gift" /><img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                             {item.stone === "2g" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "ОКЕАН": <img src={twoStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
-                              <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}> <FormattedMessage id="st.ocean" />: <img src={twoStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="second.gift" /><img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                             {item.stone === "3g" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "ЖЕЛТЫЙ ОРГАНИК": <img src={threeStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
-                              <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}><FormattedMessage id="st.yeorg" />: <img src={threeStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="second.gift" /><img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                             {item.stone === "4g" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "ЧЕРНЫЙ САНДАЛ": <img src={fourStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
-                              <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}><FormattedMessage id="st.blsand" />: <img src={fourStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="second.gift" /><img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                             {item.stone === "5g" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "БЕЛЫЙ ОНИКС": <img src={fiveStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
-                              <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}><FormattedMessage id="st.whiteon" />: <img src={fiveStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="second.gift" /><img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                           </div>
                         </div>
                         <WrapCardPrice>
-                          <div className="price-card">Цена: <span className="card-line-old">  9 850 ₽</span> <span className="price-card-new">= {currentPrice} ₽ </span></div>
+                          <div className="price-card"><FormattedMessage id="shop.price" />: <span className="card-line-old">  9 850 ₽</span> <span className="price-card-new">= {currentPrice} ₽ </span></div>
                           <img src={sales} alt="JewelCocktail" className="card-icon-sale" />
                         </WrapCardPrice>
                       </div>
@@ -273,34 +274,34 @@ export const Popup = (props) => {
                     <WrapProductDescription>
                       <div style={{ textAlign: "left" }}>
                         <span style={{ color: "#727070", marginBottom: "10px", display: "inline-block" }}>
-                          Мужской браслет<br/>Dors
+                          {langProps.locale === "ru" ?  "Браслет Dors" : "Bracelet Dors"}
                         </span>
                         <div>
                           <div style={{ textAlign: "left", textTransform: "inherit" }}>
                             {item.stone === "1d" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "ОГОНЬ": <img src={oneStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
-                              <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}><FormattedMessage id="st.fire" />: <img src={oneStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="second.gift" /><img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                             {item.stone === "2d" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "ОКЕАН": <img src={twoStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
-                              <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}> <FormattedMessage id="st.ocean" />: <img src={twoStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="second.gift" /><img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                             {item.stone === "3d" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "ЖЕЛТЫЙ ОРГАНИК": <img src={threeStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
-                              <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}><FormattedMessage id="st.yeorg" />: <img src={threeStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="second.gift" /><img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                             {item.stone === "4d" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "ЧЕРНЫЙ САНДАЛ": <img src={fourStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
-                              <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}><FormattedMessage id="st.blsand" />: <img src={fourStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="second.gift" /><img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                             {item.stone === "5d" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "БЕЛЫЙ ОНИКС": <img src={fiveStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
-                              <div style={{fontSize: "14px"}}>Второй камень в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}><FormattedMessage id="st.whiteon" />: <img src={fiveStoneM} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="second.gift" /><img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                           </div>
                         </div>
                         <WrapCardPrice>
-                          <div className="price-card">Цена: <span className="card-line-old">  9 850 ₽</span> <span className="price-card-new">= {currentPrice} ₽ </span></div>
+                          <div className="price-card"><FormattedMessage id="shop.price" />: <span className="card-line-old">  9 850 ₽</span> <span className="price-card-new">= {currentPrice} ₽ </span></div>
                           <img src={sales} alt="JewelCocktail" className="card-icon-sale" />
                         </WrapCardPrice>
                       </div>
@@ -324,26 +325,26 @@ export const Popup = (props) => {
                     <WrapProductDescription>
                       <div style={{ textAlign: "left" }}>
                         <span style={{ color: "#727070", marginBottom: "10px", display: "inline-block" }}>
-                          парные браслеты
+                          {langProps.locale === "ru" ? "парные браслеты" : "Paired bracelets"}
                         </span>
                         <div>
                           <div style={{ textAlign: "left", textTransform: "inherit" }}>
                             {item.stone === "1co" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "Огонь и Роза": <img src={oneStoneCouple} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
-                              <div style={{fontSize: "14px"}}>Два камня в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}><FormattedMessage id="st.rosfir" />: <img src={oneStoneCouple} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="st.twogift" />: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                             {item.stone === "2co" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "Белый оникс": <img src={twoStoneCouple} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
-                              <div style={{fontSize: "14px"}}>Два камня в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}><FormattedMessage id="st.whiteon" />: <img src={twoStoneCouple} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="st.twogift" />: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                             {item.stone === "3co" && <>
-                              <div style={{fontSize: "14px", marginBottom: "10px"}}>Камень с QR "Жёлтый органик": <img src={threeStoneCouple} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
-                              <div style={{fontSize: "14px"}}>Два камня в подарок: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}><FormattedMessage id="st.yeorg" />: <img src={threeStoneCouple} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="st.twogift" />: <img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
                             </>}
                           </div>
                         </div>
                         <WrapCardPrice>
-                          <div className="price-card">Цена: <span className="card-line-old"> 14 140 ₽</span> <span className="price-card-new">= {currentPrice} ₽ </span></div>
+                          <div className="price-card"><FormattedMessage id="shop.price" />: <span className="card-line-old"> 14 140 ₽</span> <span className="price-card-new">= {currentPrice} ₽ </span></div>
                           <img src={sales} alt="JewelCocktail" className="card-icon-sale" />
                         </WrapCardPrice>
                       </div>
@@ -370,7 +371,7 @@ export const Popup = (props) => {
                           Бокал-декантер JC
                         </span>
                         <WrapCardPrice>
-                          <div className="price-card">Цена: <span className="card-line-old"> 9 150 ₽</span> <span className="price-card-new">= {currentPrice} ₽ </span></div>
+                          <div className="price-card"><FormattedMessage id="shop.price" />: <span className="card-line-old"> 9 150 ₽</span> <span className="price-card-new">= {currentPrice} ₽ </span></div>
                           <img src={sales} alt="JewelCocktail" className="card-icon-sale" />
                         </WrapCardPrice>
                       </div>
@@ -395,10 +396,10 @@ export const Popup = (props) => {
                     <WrapProductDescription>
                       <div style={{ textAlign: "left" }}>
                         <span style={{ color: "#727070", marginBottom: "10px", display: "inline-block", textAlign: "center", marginTop: "10px" }}>
-                          талисман-кулон женский
+                          {langProps.locale === "ru" ?  "талисман-кулон женский" : "women`s talisman-pendant"}
                         </span>
                         <WrapCardPrice>
-                          <div className="price-card">Цена: <span className="card-line-old"> {priceData["talisman-kulon-genskii-old-price"]} ₽</span> <span className="price-card-new">{currentPrice} ₽ </span></div>
+                          <div className="price-card"><FormattedMessage id="shop.price" />: <span className="card-line-old"> {priceData["talisman-kulon-genskii-old-price"]} ₽</span> <span className="price-card-new">{currentPrice} ₽ </span></div>
                           <img src={sales} alt="JewelCocktail" className="card-icon-sale" />
                         </WrapCardPrice>
                       </div>
@@ -423,10 +424,10 @@ export const Popup = (props) => {
                     <WrapProductDescription>
                       <div style={{ textAlign: "left" }}>
                         <span style={{ color: "#727070", marginBottom: "10px", display: "inline-block", textAlign: "center", marginTop: "10px" }}>
-                          женское Кольцо-талисман
+                          {langProps.locale === "ru" ? "женское Кольцо-талисман" : "women`s talisman-ring"}
                         </span>
                         <WrapCardPrice>
-                          <div className="price-card">Цена: <span className="card-line-old"> {priceData["talisman-genskoe-kolitso-old-price"]} ₽</span> <span className="price-card-new">{currentPrice} ₽ </span></div>
+                          <div className="price-card"><FormattedMessage id="shop.price" />: <span className="card-line-old"> {priceData["talisman-genskoe-kolitso-old-price"]} ₽</span> <span className="price-card-new">{currentPrice} ₽ </span></div>
                           <img src={sales} alt="JewelCocktail" className="card-icon-sale" />
                         </WrapCardPrice>
                       </div>
@@ -451,10 +452,10 @@ export const Popup = (props) => {
                     <WrapProductDescription>
                       <div style={{ textAlign: "left" }}>
                         <span style={{ color: "#727070", marginBottom: "10px", display: "inline-block", textAlign: "center", marginTop: "10px" }}>
-                          женскии браслет-талисман
+                          {langProps.locale === "ru" ? "женскии браслет-талисман" : "women`s talisman-bracelet"}
                         </span>
                         <WrapCardPrice>
-                          <div className="price-card">Цена: <span className="card-line-old"> {priceData["talisman-genskii-braslet-old-price"]} ₽</span> <span className="price-card-new">{currentPrice} ₽ </span></div>
+                          <div className="price-card"><FormattedMessage id="shop.price" />: <span className="card-line-old"> {priceData["talisman-genskii-braslet-old-price"]} ₽</span> <span className="price-card-new">{currentPrice} ₽ </span></div>
                           <img src={sales} alt="JewelCocktail" className="card-icon-sale" />
                         </WrapCardPrice>
                       </div>
@@ -479,10 +480,10 @@ export const Popup = (props) => {
                     <WrapProductDescription>
                       <div style={{ textAlign: "left" }}>
                         <span style={{ color: "#727070", marginBottom: "10px", display: "inline-block", textAlign: "center", marginTop: "10px" }}>
-                          мужской кулон-талисман
+                          {langProps.locale === "ru" ? "мужской кулон-талисман" : "men`s talisman-pendant"}
                         </span>
                         <WrapCardPrice>
-                          <div className="price-card">Цена: <span className="card-line-old"> {priceData["talisman-mugskoi-kulon-old-price"]} ₽</span> <span className="price-card-new">{currentPrice} ₽ </span></div>
+                          <div className="price-card"><FormattedMessage id="shop.price" />: <span className="card-line-old"> {priceData["talisman-mugskoi-kulon-old-price"]} ₽</span> <span className="price-card-new">{currentPrice} ₽ </span></div>
                           <img src={sales} alt="JewelCocktail" className="card-icon-sale" />
                         </WrapCardPrice>
                       </div>
@@ -507,10 +508,10 @@ export const Popup = (props) => {
                     <WrapProductDescription>
                       <div style={{ textAlign: "left" }}>
                         <span style={{ color: "#727070", marginBottom: "10px", display: "inline-block", textAlign: "center", marginTop: "10px" }}>
-                          мужской браслет-талисман
+                          {langProps.locale === "ru" ? "мужской браслет-талисман" : "men`s talisman-bracelet"}
                         </span>
                         <WrapCardPrice>
-                          <div className="price-card">Цена: <span className="card-line-old"> {priceData["talisman-mugskoi-braslet-old-price"]} ₽</span><span className="price-card-new">{currentPrice} ₽ </span></div>
+                          <div className="price-card"><FormattedMessage id="shop.price" />: <span className="card-line-old"> {priceData["talisman-mugskoi-braslet-old-price"]} ₽</span><span className="price-card-new">{currentPrice} ₽ </span></div>
                           <img src={sales} alt="JewelCocktail" className="card-icon-sale" />
                         </WrapCardPrice>
                       </div>
@@ -529,8 +530,8 @@ export const Popup = (props) => {
           })
           }
         </div>
-        <div style={{ textAlign: "right" }}>Итого: {sumPrice} ₽</div>
-        <OrderForm card={card} sumPrice={sumPrice} setCard={setCard} showPopup={showPopup} setShowPopup={setShowPopup} />
+        <div style={{ textAlign: "right" }}><FormattedMessage id="card.total" />: {sumPrice} ₽</div>
+        <OrderForm langProps={langProps} card={card} sumPrice={sumPrice} setCard={setCard} showPopup={showPopup} setShowPopup={setShowPopup} />
       </Inner>
     </Wrapper>
   );

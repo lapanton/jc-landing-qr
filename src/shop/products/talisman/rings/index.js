@@ -20,39 +20,16 @@ import arUp from './arrowUp.png';
 
 import oneS from "../../../../talisman/talismanStone/wom-stones/IMG_6136.png";
 import twoS from "../../../../talisman/talismanStone/wom-stones/IMG_6061.png";
-import threeS from "../../../../talisman/talismanStone/wom-stones/IMG_6066.png";
 import fourS from "../../../../talisman/talismanStone/wom-stones/IMG_6130.png";
 import fiveS from "../../../../talisman/talismanStone/wom-stones/IMG_6127.png";
 import sixS from "../../../../talisman/talismanStone/wom-stones/IMG_6051.png";
-import sevenS from "../../../../talisman/talismanStone/wom-stones/IMG_6137.png";
 import eighS from "../../../../talisman/talismanStone/wom-stones/IMG_6058.png";
 import nine from "../../../../talisman/talismanStone/wom-stones/IMG_6050.png";
-import ten from "../../../../talisman/talismanStone/wom-stones/IMG_6118.png";
-import eleven from "../../../../talisman/talismanStone/wom-stones/IMG_6114.png";
 import twelve from "../../../../talisman/talismanStone/wom-stones/IMG_6120.png";
-import thirteen from "../../../../talisman/talismanStone/wom-stones/IMG_6126.png";
 import fourteen from "../../../../talisman/talismanStone/wom-stones/IMG_6060.png";
 import fifteen from "../../../../talisman/talismanStone/wom-stones/IMG_6133.png";
-import sixteen from "../../../../talisman/talismanStone/wom-stones/IMG_6129.png";
 import seventeen from "../../../../talisman/talismanStone/wom-stones/IMG_6131.png";
-import eightteen from "../../../../talisman/talismanStone/wom-stones/IMG_6047.png";
-import nineteen from "../../../../talisman/talismanStone/wom-stones/IMG_6112.png";
-import twenty from "../../../../talisman/talismanStone/wom-stones/IMG_6049.png";
-import twentyone from "../../../../talisman/talismanStone/wom-stones/IMG_6134.png";
-import twentytwo from "../../../../talisman/talismanStone/wom-stones/IMG_6135.png";
-import twentythree from "../../../../talisman/talismanStone/wom-stones/IMG_6053.png";
-import twentyfour from "../../../../talisman/talismanStone/wom-stones/IMG_6119.png";
 import twentyfive from "../../../../talisman/talismanStone/wom-stones/IMG_6125.png";
-import twentysix from "../../../../talisman/talismanStone/wom-stones/IMG_6128.png";
-import twentyseven from "../../../../talisman/talismanStone/wom-stones/IMG_6138.png";
-import twentyeight from "../../../../talisman/talismanStone/wom-stones/IMG_6121.png";
-import twentynine from "../../../../talisman/talismanStone/wom-stones/IMG_6124.png";
-import thirty from "../../../../talisman/talismanStone/wom-stones/IMG_6115.png";
-import thirtyone from "../../../../talisman/talismanStone/wom-stones/IMG_6123.png";
-import thirtytwo from "../../../../talisman/talismanStone/wom-stones/IMG_6132.png";
-import thirtythree from "../../../../talisman/talismanStone/wom-stones/IMG_6113.png";
-import thirtyfour from "../../../../talisman/talismanStone/wom-stones/IMG_6116.png";
-import thirtyfive from "../../../../talisman/talismanStone/wom-stones/IMG_6117.png";
 
 
 import sale from '../sale.png';
@@ -62,9 +39,10 @@ import whiteArrow from "./img/white-arrow.svg";
 
 import { Wrapper, Inner, ChooseStone, WrapStone, ChooseSize, SizeButton, PriceBuySection, DescriptionProduct, DescriptionButton, DescriptionView, ToRightMoveDesktop, WrapPrices, WrapperZoom, WrapZoomSlider } from "./styled-rings";
 import {Link} from "react-router-dom";
+import {FormattedMessage} from "react-intl";
 
 export const RingsTalisman = (props) => {
-  const { card, setCard, setShowPopup } = props;
+  const { card, setCard, setShowPopup, langProps } = props;
 
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
@@ -282,7 +260,7 @@ export const RingsTalisman = (props) => {
     <Wrapper>
       <Inner>
         <div className="slider-wrap">
-          <h4>женское<br/>Кольцо-талисман</h4>
+          <h4>{langProps.locale === "ru" ? <>женское<br/>Кольцо-талисман</> : <>women`s<br/>talisman-ring</>}</h4>
           <Slider {...settings} asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
             <div>
               <img src={one} alt="JewelCocktail" onClick={() => openZoom(1)}/>
@@ -354,7 +332,7 @@ export const RingsTalisman = (props) => {
           </Slider>
         </div>
         <ChooseStone>
-          <p>выбери вставку</p>
+          <p>{langProps.locale === "ru" ? "выбери QR вставку" : "choose QR stone"}</p>
           <WrapStone>
             <Slider {...settingsStones}>
               <div>
@@ -362,9 +340,6 @@ export const RingsTalisman = (props) => {
               </div>
               <div>
                 <img src={twoS} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={threeS} alt="JewelCocktail"/>
               </div>
               <div>
                 <img src={fourS} alt="JewelCocktail"/>
@@ -376,136 +351,52 @@ export const RingsTalisman = (props) => {
                 <img src={sixS} alt="JewelCocktail"/>
               </div>
               <div>
-                <img src={sevenS} alt="JewelCocktail"/>
-              </div>
-              <div>
                 <img src={eighS} alt="JewelCocktail"/>
               </div>
               <div>
                 <img src={nine} alt="JewelCocktail"/>
               </div>
-              <div>
-                <img src={ten} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={eleven} alt="JewelCocktail"/>
-              </div>
+
               <div>
                 <img src={twelve} alt="JewelCocktail"/>
               </div>
-              <div>
-                <img src={thirteen} alt="JewelCocktail"/>
-              </div>
+
               <div>
                 <img src={fourteen} alt="JewelCocktail"/>
               </div>
               <div>
                 <img src={fifteen} alt="JewelCocktail"/>
               </div>
-              <div>
-                <img src={sixteen} alt="JewelCocktail"/>
-              </div>
+
               <div>
                 <img src={seventeen} alt="JewelCocktail"/>
               </div>
-              <div>
-                <img src={eightteen} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={nineteen} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={twenty} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={twentyone} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={twentytwo} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={twentythree} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={twentyfour} alt="JewelCocktail"/>
-              </div>
+
               <div>
                 <img src={twentyfive} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={twentysix} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={twentyseven} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={twentyeight} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={twentynine} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={thirty} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={thirtyone} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={thirtytwo} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={thirtythree} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={thirtyfour} alt="JewelCocktail"/>
-              </div>
-              <div>
-                <img src={thirtyfive} alt="JewelCocktail"/>
               </div>
 
             </Slider>
           </WrapStone>
           <p className="description">
-            { ringStone === '1r-t' && "Змеевик — поглотитель негативной энергии и защитник."}
-            { ringStone === '2r-t' && "Агат - приносит здоровье, счастье и долголетие."}
-            { ringStone === '3r-t' && "Агат - приносит здоровье, счастье и долголетие."}
-            { ringStone === '4r-t' && "Яшма — источник доброй энергии. "}
-            { ringStone === '5r-t' && "Говлит - официально был описан только в конце XIX века"}
-            { ringStone === '6r-t' && "Обсидиан - является мощным поглотителем энергии и хранителем информации."}
-            { ringStone === '7r-t' && "Яшма — источник доброй энергии."}
-            { ringStone === '8r-t' && "Пирит - укрепляющет нервную систему"}
-            { ringStone === '9r-t' && "Тигровый глаз — камень мудрецов и правителей."}
-            { ringStone === '10r-t' && "Натуральный жемчуг — кладезь ценных микроэлементов."}
-            { ringStone === '11r-t' && "Натуральный жемчуг — кладезь ценных микроэлементов."}
-            { ringStone === '12r-t' && "Натуральный жемчуг — кладезь ценных микроэлементов."}
-            { ringStone === '13r-t' && "Яшма — источник доброй энергии."}
-            { ringStone === '14r-t' && "Гематит - один из сильнейших магических камней."}
-            { ringStone === '15r-t' && "Родохрозит - имеет удивительные свойства."}
-            { ringStone === '16r-t' && "Яшма — источник доброй энергии."}
-            { ringStone === '17r-t' && "Нефрит - является олицетворением пяти качеств человека."}
-            { ringStone === '18r-t' && "Орех — дерево победы над внешними обстоятельствами."}
-            { ringStone === '19r-t' && "Сандалу - могущественная стихия Воздуха."}
-            { ringStone === '20r-t' && "Красное дерево - помогает человеку жить в гармонии с природой."}
-            { ringStone === '21r-t' && "Авантюрин - является амулетом в любовных отношениях."}
-            { ringStone === '22r-t' && "Авантюрин - является амулетом в любовных отношениях."}
-            { ringStone === '23r-t' && "Оникс - обладает сильной энергетикой."}
-            { ringStone === '24r-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
-            { ringStone === '25r-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
-            { ringStone === '26r-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
-            { ringStone === '27r-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
-            { ringStone === '28r-t' && "Кошачий глаз - минерал отводит от носителя смерть."}
-            { ringStone === '29r-t' && "Лунно-зеленый опал по древним поверьям способен поддерживать таланты своего владельца."}
-            { ringStone === '30r-t' && "Голубой опал - способен поддерживать таланты своего владельца."}
-            { ringStone === '31r-t' && "Огненно-снежный опал - способен поддерживать таланты своего владельца."}
-            { ringStone === '32r-t' && "Мрамор - быстро подстраивается под энергетику хозяина."}
-            { ringStone === '33r-t' && "Серебро — это лунный металл."}
-            { ringStone === '34r-t' && "Серебро — это лунный металл."}
-            { ringStone === '35r-t' && "Серебро — это лунный металл."}
+            { ringStone === '1r-t' && (langProps.locale === "ru" ? "Змеевик — поглотитель негативной энергии и защитник" : "Serpentine it is a mineral that is also called like Lizardite, Infinite or Healerite") }
+            { ringStone === '2r-t' && (langProps.locale === "ru" ? "Агат - приносит здоровье, счастье и долголетие" : "Agate has a stable and grounding quality")}
+            { ringStone === '3r-t' && (langProps.locale === "ru" ? "Яшма — источник доброй энергии" : "Jasper is a variety of Chalcedony")}
+            { ringStone === '4r-t' && (langProps.locale === "ru" ? "Говлит - официально был описан только в конце XIX века" : "Howlight is also called like Snow Leopard Stone or as magnesite")}
+            { ringStone === '5r-t' && (langProps.locale === "ru" ? "Обсидиан - является мощным поглотителем энергии и хранителем информации" : "Obsidian is truth-enhancing. A strongly protective stone")}
+            { ringStone === '6r-t' && (langProps.locale === "ru" ? "Пирит - укрепляющет нервную систему" : "Pyrite is an iron sulfide mineral with a metallic luster")}
+            { ringStone === '7r-t' && (langProps.locale === "ru" ? "Тигровый глаз — камень мудрецов и правителей" : "Tiger eye is a variety of Chalcedony, a cryptocrystalline form of silica")}
+            { ringStone === '8r-t' && (langProps.locale === "ru" ? "Натуральный жемчуг — кладезь ценных микроэлементов" : "Natural pearls have long been a source of pure fascination")}
+            { ringStone === '9r-t' && (langProps.locale === "ru" ? "Гематит - один из сильнейших магических камней" : "Hematite is also called like Blood stone")}
+            { ringStone === '10r-t' && (langProps.locale === "ru" ? "Родохрозит - имеет удивительные свойства" : "Rhodochrosite is a stone that integrates physical and spiritual energies")}
+            { ringStone === '11r-t' && (langProps.locale === "ru" ? "Нефрит - является олицетворением пяти качеств человека" : "Jade is a popular gemstone sometimes referred to as the stone of luck and happiness")}
+            { ringStone === '12r-t' && (langProps.locale === "ru" ? "Кошачий глаз - минерал отводит от носителя смерть" : "The Cat’s Eye is also known as the Lehsunia stone")}
           </p>
         </ChooseStone>
         <ChooseSize>
           <span>
-            Размер кольца
+            { langProps.locale === "ru" ? "Размер кольца" : "Ring size" }
+
           </span>
           <SizeButton>ONE SIZE</SizeButton>
           {/*<SizeButton onClick={() => setSizeRing('sizes')} className={sizeRing === 'sizes' ? 'active' : 'no'}>*/}
@@ -519,69 +410,75 @@ export const RingsTalisman = (props) => {
           {/*</SizeButton>*/}
         </ChooseSize>
         <PriceBuySection>
-          <p className="bonus">описание материалов в
-            <Link to="/talisman/stone">каталог</Link>
+          <p className="bonus">{langProps.locale === "ru" ? "описание материалов в" : "description of materials in the"}
+            <Link to="/talisman/stone">{langProps.locale === "ru" ? "каталог" : "CATALOG"}</Link>
           </p>
           <WrapPrices>
             <p className="price">{priceData["talisman-genskoe-kolitso"]}<span>₽</span></p>
             <p className="old-price">{priceData["talisman-genskoe-kolitso-old-price"]} ₽</p>
             <img src={sale} alt="JewelCocktail" className="sale-icon"/>
           </WrapPrices>
-          <div className="buy-button" onClick={() => buyRing()}>Купить</div>
+          <div className="buy-button" onClick={() => buyRing()}><FormattedMessage id="shop.buy" /></div>
           <div className="actsia" style={{ visibility: "hidden" }}>
             <img src={fire} alt="JewelCocktail"/>
-            <p className="actsia-text" style={{ visibility: "hidden" }}><span>Акция!</span> второй камень <span>в подарок</span></p>
+            <p className="actsia-text" style={{ visibility: "hidden" }}><span><FormattedMessage id="shop.action" /></span><FormattedMessage id="shop.secketr" /><span><FormattedMessage id="in.present" /></span></p>
           </div>
         </PriceBuySection>
         <DescriptionProduct>
           <DescriptionButton>
-            <span>Описание</span>
+            <span><FormattedMessage id="shop.descriptions" /></span>
             <div onClick={() => setShowDescr(!showDescr)} className={showDescr ? 'hide' : 'show'}>
               <img src={arDown} alt="JewelCocktail"/>
             </div>
           </DescriptionButton>
           {showDescr && (
             <DescriptionView>
-              <p className="slave-text">Кольцо Jewel Cocktail в стиле минимализм. Со сменными вставками из натуральных материалов. Особенная вставка с QR ссылкой на персональный талисман.</p>
+              <p className="slave-text">
+                {langProps.locale === "ru" ?
+                  "Кольцо-талисман Jewel Cocktail в стиле минимализм. Со сменными вставками из натуральных материалов. Особенная вставка с QR ссылкой на персональный талисман." :
+                  "Jewel Cocktail talisman-ring in minimalist style with replaceable natural stones. Special stone with QR link to your personal talisman"}
+
+              </p>
               <p className="main-text">
-                Комплектация:
+                <FormattedMessage id="shop.complectation" />:
               </p>
               <p className="slave-text">
-                кольцо, 2 сменных камня, система хранения камней фирменная коробка и пакет.
+                {langProps.locale === "ru" ?
+                   "кольцо, вставка с QR, фирменная коробка" :"ring, engraved QR stone , branded box"}
               </p>
               <p className="main-text">
-                Размер камня:
+                <FormattedMessage id="size.ketroy" />:
               </p>
               <p className="slave-text">
-                10x10 мм
+                10x10 <FormattedMessage id="size.mm" />
               </p>
 
               <ToRightMoveDesktop>
               <p className="main-text" style={{ display: "none" }}>
-                Размер кольца:
+                {langProps.locale === "ru" ?
+                "Размер кольца:" : "Ring size"}
               </p>
               <p className="slave-text" style={{ display: "none" }}>
                 ONE SIZE
               </p>
               <p className="main-text">
-                Материал и цвет основы:
+                <FormattedMessage id="material.color" />:
               </p>
               <p className="slave-text">
-                Серебряный сплав, глянец
+                <FormattedMessage id="serebro.gleanets" />
               </p>
               <p className="main-text">
-                Тип вставки:
+                <FormattedMessage id="type.insert" />:
               </p>
               <p className="slave-text">
-                Натуральный или органический
-                камень ручной огранки
+                <FormattedMessage id="natural.ketroy" />
               </p>
               <p className="main-text">
-                бессрочная гарантия:
+                <FormattedMessage id="warranty.quality" />:
               </p>
               <p className="slave-text">
-                для членов клуба jewel cocktail
-                <a href="https://jewelcocktail.com/privacy" target="_blank" rel="noreferrer" >Подробнее</a>
+                <FormattedMessage id="club.jewel" />
+                <a href="https://jewelcocktail.com/privacy" target="_blank" rel="noreferrer" ><FormattedMessage id="read.more" /></a>
               </p>
               </ToRightMoveDesktop>
 

@@ -10,7 +10,7 @@ export const Contacts = () => {
       <WrapCart>
         <Ymaps />
         <WrapText>
-          <div className="phoneAddressEmail">+7 499 377 79 19</div>
+          <div className="phoneAddressEmail">+7 968 811 67 11</div>
           <div className="phoneAddressEmail">contact@jewelcocktail.com</div>
           <div className="phoneAddressEmail"><FormattedMessage id="message.adress" /></div>
           <div className="phoneAddressEmail"><FormattedMessage id="message.timework" /></div>

@@ -25,6 +25,7 @@ import sale from '../sale.png';
 import { Wrapper, Inner, ChooseStone, WrapStone, PriceBuySection, DescriptionProduct, DescriptionButton, DescriptionView, ToRightMoveDesktop, WrapPrices, WrapperZoom, WrapZoomSlider} from "./styled-rings";
 import whiteArrow from "../rings/img/white-arrow.svg";
 import closeIcon from "../rings/img/cross_white.svg";
+import {FormattedMessage} from "react-intl";
 
 export const Pendants = (props) => {
   const { card, setCard, setShowPopup } = props;
@@ -215,7 +216,7 @@ export const Pendants = (props) => {
     <Wrapper>
       <Inner>
         <div className="slider-wrap">
-          <h4>женская подвеска<br/> quasar</h4>
+          <h4><FormattedMessage id="wom.quasar" /><br/> quasar</h4>
           <Slider {...settings} asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
             <div>
               <img src={one} alt="JewelCocktail" onClick={() => openZoom(1)}/>
@@ -312,7 +313,7 @@ export const Pendants = (props) => {
           </Slider>
         </div>
         <ChooseStone>
-          <p>выбери камень с qr-посланием</p>
+          <p><FormattedMessage id="choose.ketroy" /></p>
           <WrapStone>
             <div onClick={() => setQuasarStone('1p')} className={quasarStone === '1p' ? 'active' : 'not' }>
               <img src={oneStone} alt="JewelCocktail"/>
@@ -331,11 +332,11 @@ export const Pendants = (props) => {
             </div>
           </WrapStone>
           <p className="description">
-            { quasarStone === '1p' && "роза - символ страсти, красоты, энергии и любви"}
-            { quasarStone === '2p' && "океан - символ творчества,мечты, свободы и созидания"}
-            { quasarStone === '3p' && "жемчуг - символизирует чистоту, силу воли и благополучие"}
-            { quasarStone === '4p' && "родохрозит - романтичный камень, олицетворяет нежность и любовь"}
-            { quasarStone === '5p' && "авантюрин - оптимизм, успех и удача на вашей стороне"}
+            { quasarStone === '1p' && <FormattedMessage id="ketroy.roza" />}
+            { quasarStone === '2p' && <FormattedMessage id="wom.ocean" />}
+            { quasarStone === '3p' && <FormattedMessage id="wom.gemchiug" />}
+            { quasarStone === '4p' && <FormattedMessage id="wom.rodohit" />}
+            { quasarStone === '5p' && <FormattedMessage id="wom.avantiiurin" />}
           </p>
         </ChooseStone>
         <PriceBuySection>
@@ -344,59 +345,55 @@ export const Pendants = (props) => {
             <p className="old-price">9 850 ₽</p>
             <img src={sale} alt="JewelCocktail" className="sale-icon"/>
           </WrapPrices>
-          <p className="bonus">подвеска + 2 разных камня</p>
-          <div className="buy-button" onClick={() => buyPendant()}>Купить</div>
+          <p className="bonus"><FormattedMessage id="culon.twoketroys" /></p>
+          <div className="buy-button" onClick={() => buyPendant()}><FormattedMessage id="shop.buy" /></div>
           <div className="actsia">
             <img src={fire} alt="JewelCocktail"/>
-            <p className="actsia-text"><span>Акция!</span> второй камень <span>в подарок</span></p>
+            <p className="actsia-text"><span><FormattedMessage id="shop.action" /></span><FormattedMessage id="shop.secketr" /><span><FormattedMessage id="in.present" /></span></p>
           </div>
         </PriceBuySection>
         <DescriptionProduct>
           <DescriptionButton>
-            <span>Описание</span>
+            <span><FormattedMessage id="shop.descriptions" /></span>
             <div onClick={() => setShowDescr(!showDescr)} className={showDescr ? 'hide' : 'show'}>
               <img src={arDown} alt="JewelCocktail"/>
             </div>
           </DescriptionButton>
           {showDescr && (
             <DescriptionView>
-              <p className="slave-text">дизайнерская подвеска
-                в стиле минимализм
-                на каждый день со сменными вставками (камнями)</p>
+              <p className="slave-text"><FormattedMessage id="quasar.description" /></p>
               <p className="main-text">
-                Комплектация:
+                <FormattedMessage id="shop.complectation" />:
               </p>
               <p className="slave-text">
-                подвеска, 2 сменных камня, система хранения камней фирменная коробка и пакет.
+                <FormattedMessage id="quasar.twoketroys" />
               </p>
               <p className="main-text">
-                Размер камня:
+                <FormattedMessage id="size.ketroy" />:
               </p>
               <p className="slave-text">
-                10x10 мм
+                10x10 <FormattedMessage id="size.mm" />
               </p>
 
               <ToRightMoveDesktop>
               <p className="main-text">
-                Материал и цвет основы:
+                <FormattedMessage id="material.color" />:
               </p>
               <p className="slave-text">
-                Натуральный или органический
-                камень ручной огранки
+                <FormattedMessage id="natural.ketroy" />
               </p>
               <p className="main-text">
-                Тип вставки:
+                <FormattedMessage id="type.insert" />:
               </p>
               <p className="slave-text">
-                Натуральный или органический
-                камень ручной огранки
+                <FormattedMessage id="natural.ketroy" />
               </p>
               <p className="main-text">
-                бессрочная гарантия:
+                <FormattedMessage id="warranty.quality" />:
               </p>
               <p className="slave-text">
-                для членов клуба jewel cocktail
-                <a href="https://jewelcocktail.com/privacy" target="_blank" rel="noreferrer" >Подробнее</a>
+                <FormattedMessage id="club.jewel" />
+                <a href="https://jewelcocktail.com/privacy" target="_blank" rel="noreferrer" ><FormattedMessage id="read.more" /></a>
               </p>
               </ToRightMoveDesktop>
 

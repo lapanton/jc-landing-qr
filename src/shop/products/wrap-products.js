@@ -13,21 +13,22 @@ import { PendantsTalisman } from "./talisman/pendant";
 import { AlcorTalisman } from "./talisman/alcor";
 import { GidorTalisman } from "./talisman/gidor";
 import {DorsTalisman} from "./talisman/dors";
-import {CoupleBraceletsTalisman} from "./talisman/coupleBracelets";
+// import {CoupleBraceletsTalisman} from "./talisman/coupleBracelets";
 
 export const WrapProducts = (props) => {
-  const {showPopup, setShowPopup, card, setCard} = props;
-  const location = useLocation()
+  const {showPopup, setShowPopup, card, setCard, langProps} = props;
+  const location = useLocation();
+  console.log('dddd', langProps);
   return (
     <>
       <WrapperProducts className={showPopup ? "showPopup": "noPopup"}>
         { location.pathname === "/talisman" ? (
           <>
-            <PendantsTalisman setCard={setCard} setShowPopup={setShowPopup} card={card} />
-            <RingsTalisman setCard={setCard} setShowPopup={setShowPopup} card={card} />
-            <AlcorTalisman setCard={setCard} setShowPopup={setShowPopup} card={card} />
-            <GidorTalisman setCard={setCard} setShowPopup={setShowPopup} card={card} />
-            <DorsTalisman setCard={setCard} setShowPopup={setShowPopup} card={card} />
+            <PendantsTalisman langProps={langProps} setCard={setCard} setShowPopup={setShowPopup} card={card} />
+            <RingsTalisman langProps={langProps} setCard={setCard} setShowPopup={setShowPopup} card={card} />
+            <AlcorTalisman langProps={langProps} setCard={setCard} setShowPopup={setShowPopup} card={card} />
+            <GidorTalisman langProps={langProps} setCard={setCard} setShowPopup={setShowPopup} card={card} />
+            <DorsTalisman langProps={langProps} setCard={setCard} setShowPopup={setShowPopup} card={card} />
           </>
         ) : (
           <>
@@ -43,7 +44,7 @@ export const WrapProducts = (props) => {
 
 
 
-        <Popup showPopup={showPopup} setShowPopup={setShowPopup} card={card} setCard={setCard} />
+        <Popup langProps={langProps} showPopup={showPopup} setShowPopup={setShowPopup} card={card} setCard={setCard} />
       </WrapperProducts>
     </>
   );

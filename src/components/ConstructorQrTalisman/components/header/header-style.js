@@ -40,7 +40,7 @@ export const Social = styled.div`
     height: inherit;
   }
   .vk {
-    width: 2rem;
+    width: 2.7rem;
   }
   .you {
     width: 2.8rem;

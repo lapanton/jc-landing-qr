@@ -1,9 +1,14 @@
 import React from 'react';
 import { Wrapper, HeaderDiv, WrapContacts, WrapLogo, WrapContent } from "./privacy-styled";
 import logo from "../first/logo.png";
+import whatsapp from "../../whatsapp.png";
+import telegram from "../../telegram.png";
 
-export const PrivacyPolicy = () => {
+export const PrivacyPolicy = (props) => {
+  const { langProps } = props;
   return (
+    <>
+    {langProps.locale === " ru" ?
       <Wrapper>
         <HeaderDiv>
           <WrapLogo>
@@ -12,9 +17,6 @@ export const PrivacyPolicy = () => {
             </a>
           </WrapLogo>
           <WrapContacts>
-            <a href="tel:+74993777919" rel="noreferrer" >
-              +7 499 377 79 19
-            </a>
             <a href="mailto:contact@jewelcocktail.com" rel="noreferrer" >
               contact@jewelcocktail.com
             </a>
@@ -147,7 +149,7 @@ export const PrivacyPolicy = () => {
           <span>–договоры, заключаемые между оператором и субъектом персональных данных;</span><br/>
           <span>– федеральные законы, иные нормативно-правовые акты в сфере защиты персональных данных;</span><br/>
           <span>– согласия Пользователей на обработку их персональных данных, на обработку персональных данных, разрешенных для распространения.</span><br/>
-          <span>8.2. Оператор обрабатывает персональные данные Пользователя только в случае их заполнения и/или отправки Пользователем самостоятельно через специальные формы, расположенные на сайте <a href="tel:+74993777919">+7 499 377 79 19</a> или направленные Оператору посредством электронной почты. Заполняя соответствующие формы и/или отправляя свои персональные данные Оператору, Пользователь выражает свое согласие с данной Политикой.</span><br/>
+          <span>8.2. Оператор обрабатывает персональные данные Пользователя только в случае их заполнения и/или отправки Пользователем самостоятельно через специальные формы, расположенные на сайте <a href="tel:+79688116711">+7 968 811 67 11</a> или направленные Оператору посредством электронной почты. Заполняя соответствующие формы и/или отправляя свои персональные данные Оператору, Пользователь выражает свое согласие с данной Политикой.</span><br/>
           <span>8.3. Оператор обрабатывает обезличенные данные о Пользователе в случае, если это разрешено в настройках браузера Пользователя (включено сохранение файлов «cookie» и использование технологии JavaScript).</span><br/>
           <span>8.4. Субъект персональных данных самостоятельно принимает решение о предоставлении его персональных данных и дает согласие свободно, своей волей и в своем интересе.</span><br/>
 
@@ -196,5 +198,174 @@ export const PrivacyPolicy = () => {
 
         </WrapContent>
       </Wrapper>
+      :
+      <Wrapper>
+        <HeaderDiv>
+          <WrapLogo>
+            <a href="/" className="wrapLogo">
+              <img src={logo} alt="JewelCocktail" />
+            </a>
+          </WrapLogo>
+          <WrapContacts>
+            <a href="mailto:contact@jewelcocktail.com" rel="noreferrer" >
+              contact@jewelcocktail.com
+            </a>
+          </WrapContacts>
+        </HeaderDiv>
+        <WrapContent>
+          <h2>Offer:</h2>
+          <p>Offers on the https://jewelcocktail.com it is not a public offer.</p>
+
+          <h2>Placement of prohibited content:</h2>
+          <p>Information, documents and materials posted by users on the site www.jewelcocktail.com , must not violate the law in the country of use, such as The General Data Protection Regulation (GDPR), The CCPA (California Consumer Privacy Act) and other laws and acts concerning the placement of personal data in a particular country. All responsibility for content that violates the law is shifted to the author.</p>
+
+          <h2>Warranty conditions and operating rules</h2>
+          <br/>
+          <h5>Terms of the perpetual warranty</h5>
+          <span>An indefinite warranty is provided for all products of the Jewel Cocktail brand, with the exception of consumables, accessories and electronic components. The warranty covers malfunctions and defects caused by the fault of the manufacturer (as a result of defects / errors).</span><br/>
+          <span>The warranty does not apply to breakdowns caused by:</span><br/>
+          <span>- violation of the rules of operation</span><br/>
+          <span>- obvious mechanical damage</span><br/>
+          <span>- attempts of independent or extraneous repair</span><br/>
+          <span>- violations of the rules of storage and transportation</span><br/>
+          <span>- natural wear of the product</span><br/>
+          <span>In case of detection of a factory defect, its elimination is guaranteed at the expense of the manufacturer.</span><br/>
+          <span>The term of the indefinite warranty on the product corresponds to the service life of the product.</span><br/>
+          <h5>Rules of operation, storage and transportation.</h5>
+          <span>Do not allow:</span><br/>
+          <span>- sudden temperature changes;</span><br/>
+          <span>- exposure to decorative and caring products for skin and hair (creams, varnishes, foams), perfumes, medicines and essential oils;</span>
+          <span>- prolonged contact with seawater</span><br/>
+          <span> - contact with chlorine, acetone, alkalis, iodine, potassium permanganate, sulfur and mercury, as well as with aggressive detergents and washing powders, stain removers and bleaches;</span>
+          <span>- contact with abrasive substances and objects with an abrasive surface: scrubs, sand, nail file.</span><br/>
+          <span>Storage and operation temperature: -45 to +45 C"</span><br/>
+
+          <h1>Personal Data Processing Policy</h1>
+          <h5>1. General provisions</h5>
+
+          <p>This personal data processing policy defines the procedure for processing personal data and measures to ensure the security of personal data taken by Jewel Cocktail (hereinafter referred to as the Operator).</p>
+
+          <span>1.1. The Operator sets as its most important goal and condition for the implementation of its activities the observance of human and civil rights and freedoms in the processing of his personal data, including the protection of the rights to privacy life, personal and family secrets.</span><br/>
+          <span>1.2. This Operator's policy regarding the processing of personal data (hereinafter referred to as the Policy) applies to all information that the Operator can receive about website visitors: https://www.jewelcocktail.com.</span>
+          <p>2. Basic concepts used in the Policy</p>
+          <span>2.1. Automated processing of personal data – processing of personal data using computer technology.</span><br/>
+          <span>2.2. Blocking of personal data – temporary termination of processing of personal data (except in cases where processing is necessary to clarify personal data).</span><br/>
+          <span>2.3. Website - a set of graphic and informational materials, as well as computer programs and databases that ensure their availability on the Internet at a network address https://www.jewelcocktail.com .</span><br/>
+          <span>2.4. Personal data information system — a set of personal data contained in databases, and information technologies and technical means that ensure their processing.</span><br/>
+          <span>2.5. Depersonalization of personal data — actions as a result of which it is impossible to determine, without the use of additional information, the identity of personal data to a specific User or other subject of personal data.</span><br/>
+          <span>2.6. Processing of personal data – any action (operation) or a set of actions (operations) performed with or without the use of automation tools with personal data, including collection, recording, systematization, accumulation, storage, clarification (updating, modification), extraction, use, transfer (distribution, provision, access), depersonalization, blocking, deletion, destruction of personal data.</span><br/>
+          <span>2.7. Operator – a state body, municipal body, legal entity or individual, independently or jointly with other persons organizing and (or) processing personal data, as well as determining the purposes of processing personal data, the composition of personal data to be processed, actions (operations) performed with personal data.</span><br/>
+          <span>2.8. Personal data – any information related directly or indirectly to a specific or identifiable User of the Website https://www.jewelcocktail.com .</span><br/>
+          <span>2.9. Personal data authorized by the subject of personal data for distribution - personal data to which an unlimited number of persons have access by the subject of personal data by giving consent to the processing of personal data authorized by the subject of personal data for distribution in accordance with the procedure provided for by the Law on Personal Data (hereinafter - personal data authorized for distribution).</span><br/>
+          <span>2.10. User – any visitor to the website https://www.jewelcocktail.com .</span><br/>
+          <span>2.11. Provision of personal data – actions aimed at disclosure of personal data to a certain person or a certain circle of persons.</span><br/>
+          <span>2.12. Dissemination of personal data – any actions aimed at disclosure of personal data to an indefinite circle of persons (transfer of personal data) or familiarization with personal data of an unlimited circle of persons, including the publication of personal data in the media, placement in information and telecommunications networks or providing access to personal data in any other way.</span><br/>
+          <span>2.13. Cross–border transfer of personal data - transfer of personal data to the territory of a foreign state to the authority of a foreign state, a foreign individual or a foreign legal entity.</span><br/>
+          <span>2.14. Destruction of personal data – any actions as a result of which personal data is permanently destroyed with the impossibility of further restoration of the content of personal data in the personal data information system and (or) the material carriers of personal data are destroyed.</span><br/>
+
+          <h5>3. Basic rights and obligations of the Operator</h5>
+
+          <span>3.1. The Operator has the right to:</span><br/>
+          <span>– receive reliable information and /or documents containing personal data from the subject of personal data</span><br/>
+          <span>– in case the subject of personal data withdraws consent to the processing of personal data, the Operator has the right to continue processing personal data without the consent of the subject of personal data if there are grounds specified in the Law on Personal Data;</span><br/>
+          <span>– independently determine the composition and list of measures necessary and sufficient to ensure the fulfillment of obligations provided for by the Law on Personal Data and regulatory legal acts adopted in accordance with it, unless otherwise provided by the Law on Personal Data or other federal laws.</span><br/>
+          <span>3.2. The Operator is obliged to:</span><br/>
+          <span>– to provide the subject of personal data, at his request, with information concerning the processing of his personal data;</span><br/>
+          <span>– organize the processing of personal data in accordance with the procedure established by the current legislation;</span><br/>
+          <span>– respond to requests and requests from personal data subjects and their legal representatives in accordance with the requirements on personal data;</span><br/>
+          <span>– publish or otherwise provide unrestricted access to this Policy regarding the processing of personal data;</span><br/>
+          <span>– take legal, organizational and technical measures to protect personal data from unauthorized or accidental access to them, destruction, modification, blocking, copying, provision, dissemination of personal data, as well as from other illegal actions with respect to personal data;</span><br/>
+          <span>– stop the transfer (distribution, provision, access) of personal data, stop processing and destroy personal data in the manner and cases provided for by the Law on Personal Data;</span><br/>
+
+          <h5>4. Basic rights and obligations of personal data subjects</h5>
+
+          <span>4.1. Personal data subjects have the right to:</span><br/>
+          <span>– receive information concerning the processing of his personal data, except in cases provided for by federal laws. The information is provided to the personal data subject by the Operator in an accessible form, and it should not contain personal data related to other personal data subjects, except in cases where there are legitimate grounds for disclosure of such personal data. The list of information and the procedure for obtaining it is established by the Law on Personal Data;</span><br/>
+          <span>– require the operator to clarify his personal data, block or destroy them if the personal data are incomplete, outdated, inaccurate, illegally obtained or are not necessary for the stated purpose of processing, as well as take measures provided by law to protect their rights;</span><br/>
+          <span>– to put forward a condition of prior consent when processing personal data in order to promote goods, works and services on the market;</span><br/>
+          <span>– to revoke consent to the processing of personal data;</span><br/>
+
+          <span>4.2. Personal data subjects are obliged to:</span><br/>
+          <span>– provide the Operator with reliable data about yourself;</span><br/>
+          <span>– inform the Operator about the clarification (update, change) of their personal data.</span><br/>
+
+          <span>4.3. Persons who have provided the Operator with false information about themselves or information about another personal data subject without the latter's consent are personally liable in accordance with the legislation of the country of use.</span><br/>
+
+          <h5>5. The Operator may process the following personal data of the User</h5>
+
+          <span>5.1. Surname, first name, patronymic.</span><br/>
+          <span>5.2.Email address.</span><br/>
+          <span>5.3. Phone numbers.</span><br/>
+          <span>5.4. Year, month, date and place of birth.</span><br/>
+          <span>5.5.Photos, text, video.</span><br/>
+          <span>5.6. The site also collects and processes depersonalized data about visitors (including cookies) using Internet statistics services (Google Analytics and others).</span><br/>
+          <span>5.7. The above data is further combined by the general concept of Personal Data in the text of the Policy</span><br/>
+          <span>5.8. Processing of special categories of personal data concerning race, nationality, political views, religious or philosophical beliefs, intimate life is not carried out by the Operator.</span><br/>
+
+          <h5>6. Principles of personal data processing</h5>
+
+          <span>6.1. The processing of personal data is carried out on a legal and fair basis.</span><br/>
+          <span>6.2. The processing of personal data is limited to the achievement of specific, predetermined and legitimate goals. Processing of personal data incompatible with the purposes of personal data collection is not allowed.</span><br/>
+          <span>6.3. It is not allowed to combine databases containing personal data, the processing of which is carried out for purposes incompatible with each other.</span><br/>
+          <span>6.4. Only personal data that meet the purposes of their processing are subject to processing.</span><br/>
+          <span>6.5. The content and volume of the processed personal data correspond to the stated purposes of processing. Redundancy of the processed personal data in relation to the stated purposes of their processing is not allowed.</span><br/>
+          <span>6.6. When processing personal data, the accuracy of personal data, their sufficiency, and, if necessary, relevance in relation to the purposes of personal data processing is ensured. The Operator takes the necessary measures and/or ensures that they are taken to delete or clarify incomplete or inaccurate data.</span><br/>
+
+          <h5>7. Purposes of personal data processing</h5>
+
+          <span>7.1. The purpose of processing the User's personal data:</span><br/>
+          <span>–informing the User by sending emails;</span><br/>
+          <span>–providing the User with access to the services, information and/or materials contained on the website https://www.jewelcocktail.com .</span><br/>
+          <span>7.2. The Operator also has the right to send notifications to the User about new products and services, special offers and various events. The User can always refuse to receive informational messages by sending an email to the Operator</span><br/>
+
+          <h5>8. Legal grounds for processing personal data</h5>
+          <span>8.1. The legal grounds for processing personal data by the Operator are:</span><br/>
+          <span>–statutory (constituent) documents of the Operator</span><br/>
+          <span>– contracts concluded between the operator and the subject of personal data;</span><br/>
+          <span>–laws and other regulatory legal acts in the field of personal data protection;</span><br/>
+          <span>– Users' consent to the processing of their personal data, to the processing of personal data allowed for distribution.</span><br/>
+          <span>8.2. The Operator processes the User's personal data only if they are filled in and /or sent by the User independently through special forms located on the website or sent to the Operator via e-mail. By filling out the appropriate forms and/or sending their personal data to the Operator, the User agrees with this Policy.</span><br/>
+          <span>8.3. The Operator processes depersonalized data about the User if this is allowed in the User's browser settings (the saving of cookies and the use of JavaScript technology are enabled).</span><br/>
+          <span>8.4. The subject of personal data independently decides on the provision of his personal data and gives consent freely, of his own free will and in his own interest.</span><br/>
+
+          <h5>9. Terms of personal data processing</h5>
+
+          <span>9.1. The processing of personal data is carried out with the consent of the personal data subject to the processing of his personal data.</span><br/>
+          <span>9.2. The processing of personal data is necessary for the execution of a contract to which the personal data subject is a party or beneficiary or guarantor, as well as for the conclusion of a contract on the initiative of the personal data subject or a contract under which the personal data subject will be the beneficiary or guarantor.</span><br/>
+          <span>9.3. The processing of personal data is necessary to exercise the rights and legitimate interests of the operator or third parties or to achieve socially significant goals, provided that the rights and freedoms of the personal data subject are not violated.</span><br/>
+          <span>9.4. Personal data is processed, access to which is granted to an unlimited number of persons by the subject of personal data or at his request (hereinafter referred to as publicly available personal data).</span><br/>
+
+          <h5>10. Procedure for the collection, storage, transfer and other types of personal data processing</h5>
+
+          <span>10.1. The Operator ensures the safety of personal data and takes all possible measures to exclude access to the personal data of unauthorized persons.</span><br/>
+          <span>10.2. In case of inaccuracies in personal data, the User can update them independently by sending a notification to the Operator to the Operator's email address contact@jewelcocktail.com marked "Updating of personal data".</span><br/>
+          <span>10.3. The term of personal data processing is determined by the achievement of the purposes for which personal data was collected, unless another term is provided for by the contract or current legislation. The User can withdraw his consent to the processing of personal data at any time by sending a notification to the Operator via e-mail to the Operator's e-mail address contact@jewelcocktail.com marked "Withdrawal of consent to the processing of personal data".</span><br/>
+          <span>10.4. All information collected by third-party services, including payment systems, means of communication and other service providers, is stored and processed by these persons (Operators) in accordance with their User Agreement and Privacy Policy. The subject of personal data and/or the User is obliged to familiarize themselves with these documents in a timely manner. The Operator is not responsible for the actions of third parties, including the service providers specified in this paragraph.</span><br/>
+          <span>10.5. The prohibitions established by the subject of personal data on the transfer (except for granting access), as well as on the processing or processing conditions (except for obtaining access) of personal data allowed for distribution, do not apply in cases of processing of personal data in the state, public and other public interests.</span><br/>
+          <span>10.6. The Operator ensures the confidentiality of personal data when processing personal data.</span><br/>
+          <span>10.7. The Operator stores personal data in a form that allows to determine the subject of personal data, no longer than the purposes of personal data processing require, unless the period of storage of personal data is established by an agreement to which the subject of personal data is a party, beneficiary or guarantor.</span><br/>
+          <span>10.8. The condition for the termination of personal data processing may be the achievement of the purposes of personal data processing, the expiration of the consent of the personal data subject or the withdrawal of consent by the personal data subject, as well as the identification of unlawful processing of personal data.</span><br/>
+
+          <h5>11. List of actions performed by the Operator with the received personal data</h5>
+
+          <span>11.1. The Operator collects, records, systematizes, accumulates, stores, clarifies (updates, changes), extracts, uses, transfers (distribution, provision, access), depersonalizes, blocks, deletes and destroys personal data.</span><br/>
+          <span>11.2. The Operator performs automated processing of personal data with or without receiving and/or transmitting the received information via information and telecommunication networks.</span><br/>
+
+          <h5>12. Cross-border transfer of personal data</h5>
+
+          <span>12.1. Before the start of the cross-border transfer of personal data, the Operator is obliged to make sure that the foreign state to whose territory the transfer of personal data is supposed to be carried out provides reliable protection of the rights of personal data subjects.</span><br/>
+          <span>12.2. Cross-border transfer of personal data on the territory of foreign states that do not meet the above requirements may be carried out only if there is written consent of the personal data subject to the cross-border transfer of his personal data and/or execution of the contract to which the personal data subject is a party.</span><br/>
+
+          <h5>13. Final provisions</h5>
+
+          <span>13.1. The User can receive any clarifications on issues of interest concerning the processing of his personal data by contacting the Operator via e-mail contact@jewelcocktail.com .</span><br/>
+          <span>13.2. This document will reflect any changes to the Operator's personal data processing policy. The policy is valid indefinitely until it is replaced by a new version.</span><br/>
+          <span>13.3. The current version of the Policy is freely available on the Internet at www.jewelcocktail.com/privacy .</span><br/>
+
+        </WrapContent>
+      </Wrapper>
+    }
+    </>
+
   )
 }

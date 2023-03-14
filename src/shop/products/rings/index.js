@@ -26,6 +26,7 @@ import closeIcon from "./img/cross_white.svg";
 import whiteArrow from "./img/white-arrow.svg";
 
 import { Wrapper, Inner, ChooseStone, WrapStone, ChooseSize, SizeButton, PriceBuySection, DescriptionProduct, DescriptionButton, DescriptionView, ToRightMoveDesktop, WrapPrices, WrapperZoom, WrapZoomSlider } from "./styled-rings";
+import {FormattedMessage} from "react-intl";
 
 export const Rings = (props) => {
   const { card, setCard, setShowPopup } = props;
@@ -226,7 +227,7 @@ export const Rings = (props) => {
     <Wrapper>
       <Inner>
         <div className="slider-wrap">
-          <h4>женское Кольцо<br/> Mellish</h4>
+          <h4><FormattedMessage id="wom.ring" /><br/> Mellish</h4>
           <Slider {...settings} asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
             <div>
               <img src={one} alt="JewelCocktail" onClick={() => openZoom(1)}/>
@@ -323,7 +324,7 @@ export const Rings = (props) => {
           </Slider>
         </div>
         <ChooseStone>
-          <p>выбери камень с qr-посланием</p>
+          <p><FormattedMessage id="choose.ketroy" /></p>
           <WrapStone>
             <div onClick={() => setRingStone('1r')} className={ringStone === '1r' ? 'active' : 'not' }>
               <img src={oneStone} alt="JewelCocktail"/>
@@ -342,11 +343,11 @@ export const Rings = (props) => {
             </div>
           </WrapStone>
           <p className="description">
-            { ringStone === '1r' && "роза - символ страсти, красоты, энергии и любви"}
-            { ringStone === '2r' && "океан - символ творчества,мечты, свободы и созидания"}
-            { ringStone === '3r' && "жемчуг - символизирует чистоту, силу воли и благополучие"}
-            { ringStone === '4r' && "родохрозит - романтичный камень, олицетворяет нежность и любовь"}
-            { ringStone === '5r' && "авантюрин - оптимизм, успех и удача на вашей стороне"}
+            { ringStone === '1r' && <FormattedMessage id="ketroy.roza" />}
+            { ringStone === '2r' && <FormattedMessage id="wom.ocean" />}
+            { ringStone === '3r' && <FormattedMessage id="wom.gemchiug" />}
+            { ringStone === '4r' && <FormattedMessage id="wom.rodohit" />}
+            { ringStone === '5r' && <FormattedMessage id="wom.avantiiurin" />}
           </p>
         </ChooseStone>
         <ChooseSize>
@@ -370,62 +371,61 @@ export const Rings = (props) => {
             <p className="old-price">14 000 ₽</p>
             <img src={sale} alt="JewelCocktail" className="sale-icon"/>
           </WrapPrices>
-          <p className="bonus">кольцо + 2 разных камня</p>
-          <div className="buy-button" onClick={() => buyRing()}>Купить</div>
+          <p className="bonus"><FormattedMessage id="ring.twoketroys" /></p>
+          <div className="buy-button" onClick={() => buyRing()}><FormattedMessage id="shop.buy" /></div>
           <div className="actsia">
             <img src={fire} alt="JewelCocktail"/>
-            <p className="actsia-text"><span>Акция!</span> второй камень <span>в подарок</span></p>
+            <p className="actsia-text"><span><FormattedMessage id="shop.action" /></span><FormattedMessage id="shop.secketr" /><span><FormattedMessage id="in.present" /></span></p>
           </div>
         </PriceBuySection>
         <DescriptionProduct>
           <DescriptionButton>
-            <span>Описание</span>
+            <span><FormattedMessage id="shop.descriptions" /></span>
             <div onClick={() => setShowDescr(!showDescr)} className={showDescr ? 'hide' : 'show'}>
               <img src={arDown} alt="JewelCocktail"/>
             </div>
           </DescriptionButton>
           {showDescr && (
             <DescriptionView>
-              <p className="slave-text">дизайнерское кольцо в стиле минимализм на каждый день со сменными вставками (камнями)</p>
+              <p className="slave-text"><FormattedMessage id="ring.descr" /></p>
               <p className="main-text">
-                Комплектация:
+                <FormattedMessage id="shop.complectation" />:
               </p>
               <p className="slave-text">
-                кольцо, 2 сменных камня, система хранения камней фирменная коробка и пакет.
+                <FormattedMessage id="ring.complectation" />
               </p>
               <p className="main-text">
-                Размер камня:
+                <FormattedMessage id="size.ketroy" />:
               </p>
               <p className="slave-text">
-                10x10 мм
+                10x10 <FormattedMessage id="size.mm" />
               </p>
 
               <ToRightMoveDesktop>
               <p className="main-text" style={{ display: "none" }}>
-                Размер кольца:
+                <FormattedMessage id="ring.size" />
               </p>
               <p className="slave-text" style={{ display: "none" }}>
                 ONE SIZE
               </p>
               <p className="main-text">
-                Материал и цвет основы:
+                <FormattedMessage id="material.color" />:
               </p>
               <p className="slave-text">
-                Серебряный сплав, глянец
+                <FormattedMessage id="serebro.gleanets" />
               </p>
               <p className="main-text">
-                Тип вставки:
+                <FormattedMessage id="type.insert" />:
               </p>
               <p className="slave-text">
-                Натуральный или органический
-                камень ручной огранки
+                <FormattedMessage id="natural.ketroy" />
               </p>
               <p className="main-text">
-                бессрочная гарантия:
+                <FormattedMessage id="warranty.quality" />:
               </p>
               <p className="slave-text">
-                для членов клуба jewel cocktail
-                <a href="https://jewelcocktail.com/privacy" target="_blank" rel="noreferrer" >Подробнее</a>
+                <FormattedMessage id="club.jewel" />
+                <a href="https://jewelcocktail.com/privacy" target="_blank" rel="noreferrer" ><FormattedMessage id="read.more" /></a>
               </p>
               </ToRightMoveDesktop>
 

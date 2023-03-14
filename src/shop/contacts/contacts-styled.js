@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   background: transparent;
   color: #fff;
-  padding: 4rem;
+  margin: 0 4rem 4rem 4rem;
   h3 {
     font-family: 'Organetto';
     font-size: 1.75rem;
@@ -122,22 +122,46 @@ export const BottomMobile = styled.div`
   position: relative;
   z-index: 99998;
   a {
-    color: #fff;
-    font-family: 'Organetto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 27px;
-    text-decoration: none;
+    margin: 0 10px;
+    max-width: 40px;
+    display: inline-block;
+    img {
+      max-width: 100%;
+    }
+  }
+  .emailConatact {
+    width: 100%;
+    display: inline;
+    span {
+      max-width: 100%;
+      text-decoration: none;
+      letter-spacing: 5px;
+    }
+
+    @media screen and (max-width: 768px) {
+
+        position: relative;
+        height: 30px;
+        display: inherit;
+      span {
+        position: absolute;
+        left: -74%;
+        transform: translateX(50%);
+        font-size: 10px;
+        letter-spacing: 1px;
+      }
+
+    }
   }
 `;
 
 export const BottomSocial = styled.div`
   text-align: center;
   display: block;
-  margin: 12px 0 24px 0;
   position: relative;
   z-index: 99998;
+  width: 160px;
+  margin: 0 auto;
 `;
 
 

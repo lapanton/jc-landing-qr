@@ -1,11 +1,12 @@
 import React from 'react';
 import { Wrapper } from "./footer-styled";
 
-export const Footer = () => {
+export const Footer = (props) => {
+  const { langProps } =props;
   return (
     <Wrapper>
       <p>© 2021 Jewel Cocktail</p>
-      <p>Использование любых материалов с данного ресурса возможно только после письменного согласия владельца авторских прав.</p>
+      <p>{langProps.locale === "ru" ? "Использование любых материалов с данного ресурса возможно только после письменного согласия владельца авторских прав." : "The use of any materials from this resource is possible only with the written consent of the owner of the copyright."}</p>
     </Wrapper>
   )
 }

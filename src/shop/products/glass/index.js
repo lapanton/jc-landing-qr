@@ -23,6 +23,7 @@ import { Wrapper, Inner, ChooseStone, PriceBuySection, DescriptionProduct, Descr
 import whiteArrow from "../rings/img/white-arrow.svg";
 import closeIcon from "../rings/img/cross_white.svg";
 import {Popup} from "../popup";
+import {FormattedMessage} from "react-intl";
 
 export const Glass = (props) => {
   const { card, setCard, setShowPopup, showPopup } = props;
@@ -319,7 +320,7 @@ export const Glass = (props) => {
             <p className="old-price">9 150 ₽</p>
             <img src={sale} alt="JewelCocktail" className="sale-icon"/>
           </WrapPrices>
-          <div className="buy-button" onClick={() => buyGlass()}>Купить</div>
+          <div className="buy-button" onClick={() => buyGlass()}><FormattedMessage id="shop.buy" /></div>
           <div className="actsia">
             <img src={fire} alt="JewelCocktail"/>
             <p className="actsia-text"><span>Бесплатная доставка по москве и МО</span></p>
@@ -327,7 +328,7 @@ export const Glass = (props) => {
         </PriceBuySection>
         <DescriptionProduct>
           <DescriptionButton>
-            <span>Описание</span>
+            <span><FormattedMessage id="shop.descriptions" /></span>
           </DescriptionButton>
             <DescriptionView>
               <p className="slave-text">Изящная минималистичная пара бокалов-декантер на длинной ножке для красных и белых вин.

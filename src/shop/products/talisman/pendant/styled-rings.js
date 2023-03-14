@@ -518,7 +518,7 @@ export const ToRightMoveDesktop = styled.span`
     position: absolute;
     left: 108%;
     z-index: 999999999999;
-    top: -48px;
+    top: -58px;
     width: 100%;
   }
 `;
