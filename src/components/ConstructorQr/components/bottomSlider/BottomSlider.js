@@ -61,7 +61,7 @@ export const BottomSlider = (props) => {
     <>
     {!(pathname.includes('/letter') || pathname.includes('/qr/')) ?
       <Wrapper>
-          <h5>{langProps.locale ? "Красивые решения" : "Beautiful solutions"}</h5>
+          <h5 style={{ display: "none" }}>{langProps.locale === "ru" ? "Красивые решения" : "Beautiful solutions"}</h5>
         <Slider {...settings}>
           <div className="innerSliderItems">
             <img src={first} alt="JewelCocktail"/>

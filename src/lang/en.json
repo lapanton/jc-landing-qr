@@ -144,5 +144,7 @@
   "st.whiteon": "Stone with QR 'White onyx'",
   "st.rosfir": "Stone with QR 'Fire and Rose'",
   "st.twogift": "Two stones as a gift",
-  "shop.price": "Price"
+  "shop.price": "Price",
+  "shop.createi": "Create"
+
 }

@@ -138,6 +138,15 @@ export const App = (props) => {
                      </CheckStatusQR>
                    }
                      exact />
+          <Route path="/i/:id"
+                 element={
+                   <CheckStatusQR>
+                     { (typeMessage) => {
+                       return (typeMessage === "letter" || typeMessage === undefined) ? <ConstructorQr langProps={props} /> : <ConstructorQrTalisman langProps={props} />;
+                     }}
+                   </CheckStatusQR>
+                 }
+                 exact />
           {/* TODO remove */}
           <Route path="/qrt/:id"
                  element={
