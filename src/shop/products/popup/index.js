@@ -98,7 +98,7 @@ export const Popup = (props) => {
                           </div>
                         </div>
                         <WrapCardPrice>
-                          <div className="price-card"><FormattedMessage id="shop.price" />: <span className="card-line-old">  14 000 ₽</span> <span className="price-card-new">= {currentPrice} ₽ </span></div>
+                          <div className="price-card"><FormattedMessage id="shop.price" />: <span className="card-line-old">  10 000 ₽</span> <span className="price-card-new">= {currentPrice} ₽ </span></div>
                           <img src={sales} alt="JewelCocktail" className="card-icon-sale" />
                         </WrapCardPrice>
                       </div>

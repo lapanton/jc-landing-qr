@@ -6,8 +6,8 @@
  <offers>
 <offer available="true" id="1" spc="12">
 <url>https://jewelcocktail.com/shop</url>
-<price>14000</price>
-<discount>9800</discount>
+<price>10000</price>
+<discount>7000</discount>
 <picture>https://jewelcocktail.com/img/1.png</picture>
 <video>https://youtu.be/XLzYEUDEk-k</video>
 <name>Hi-Tech кольцо с живым посланием</name>
