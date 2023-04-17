@@ -2,7 +2,7 @@ import styled, {keyframes} from 'styled-components';
 
 export const Wrapper = styled.div`
   @media screen and (min-width: 768px) {
-    margin-top: 70px;
+    //margin-top: 70px;
     .slick-slider {
       max-width: 450px;
       overflow: hidden;
@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
     }
   }
 
-  border-top: 1px solid #444545;
+  //border-top: 1px solid #444545;
   padding-top: 20px;
   /* the slides */
   .slick-slide {
