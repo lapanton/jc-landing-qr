@@ -8,9 +8,6 @@ import four from './img/4.png';
 import five from './img/5.png';
 import six from './img/6.png';
 import seven from './img/7.png';
-import eight from './img/8.png';
-import nine from './img/9.png';
-import ten from './img/10.png';
 
 import oneStone from './stone/1.png';
 import twoStone from './stone/2.png';
@@ -29,11 +26,11 @@ import whiteArrow from "../rings/img/white-arrow.svg";
 import closeIcon from "../rings/img/cross_white.svg";
 import {FormattedMessage} from "react-intl";
 
-export const Alcor = (props) => {
+export const Orion = (props) => {
   const { card, setCard, setShowPopup } = props;
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
-  const [alcorStone, setAlcorStone] = useState('1a');
+  const [orionStone, setOrionStone] = useState('1o');
   const [showDescr, setShowDescr] = useState(false);
   const [openZoomImage, setOpenZoomImage] = useState(false);
   const [indexImg, setIndexImg] = useState(1);
@@ -115,8 +112,8 @@ export const Alcor = (props) => {
     ],
   };
   const buyAlcor = () => {
-    const arr1 = [{ product: "alcor", stone: alcorStone, price: 6700 }];
-    const checkedItem = card.filter((value) => value.product !== "alcor");
+    const arr1 = [{ product: "orion", stone: orionStone, price: 7000 }];
+    const checkedItem = card.filter((value) => value.product !== "orion");
     setCard(() => [...checkedItem, ...arr1]);
     setShowPopup(true);
   };
@@ -219,7 +216,7 @@ export const Alcor = (props) => {
     <Wrapper>
       <Inner>
         <div className="slider-wrap">
-          <h4><FormattedMessage id="braslet.woman" /><br/> Alcor</h4>
+          <h4><FormattedMessage id="braslet.woman" /><br/> Orion</h4>
           <Slider {...settings} asNavFor={nav2} ref={(slider1) => setNav1(slider1)}>
             <div>
               <img src={one} alt="JewelCocktail" onClick={() => openZoom(1)}/>
@@ -241,15 +238,6 @@ export const Alcor = (props) => {
             </div>
             <div>
               <img src={seven} alt="JewelCocktail" onClick={() => openZoom(7)}/>
-            </div>
-            <div>
-              <img src={eight} alt="JewelCocktail" onClick={() => openZoom(8)}/>
-            </div>
-            <div>
-              <img src={nine} alt="JewelCocktail" onClick={() => openZoom(8)}/>
-            </div>
-            <div>
-              <img src={ten} alt="JewelCocktail" onClick={() => openZoom(8)}/>
             </div>
           </Slider>
           {
@@ -285,15 +273,6 @@ export const Alcor = (props) => {
                     <div>
                       <img src={seven} alt="JewelCocktail" />
                     </div>
-                    <div>
-                      <img src={eight} alt="JewelCocktail" />
-                    </div>
-                    <div>
-                      <img src={nine} alt="JewelCocktail" />
-                    </div>
-                    <div>
-                      <img src={ten} alt="JewelCocktail" />
-                    </div>
                   </Slider>
                 </WrapZoomSlider>
               </WrapperZoom>,
@@ -322,48 +301,39 @@ export const Alcor = (props) => {
             <div>
               <img src={seven} alt="JewelCocktail"/>
             </div>
-            <div>
-              <img src={eight} alt="JewelCocktail"/>
-            </div>
-            <div>
-              <img src={nine} alt="JewelCocktail"/>
-            </div>
-            <div>
-              <img src={ten} alt="JewelCocktail"/>
-            </div>
           </Slider>
         </div>
         <ChooseStone>
           <p><FormattedMessage id="choose.ketroy" /></p>
           <WrapStone>
-            <div onClick={() => setAlcorStone('1a')} className={alcorStone === '1a' ? 'active' : 'not' }>
+            <div onClick={() => setOrionStone('1o')} className={orionStone === '1o' ? 'active' : 'not' }>
               <img src={oneStone} alt="JewelCocktail"/>
             </div>
-            <div onClick={() => setAlcorStone('2a')} className={alcorStone === '2a' ? 'active' : 'not' }>
+            <div onClick={() => setOrionStone('2o')} className={orionStone === '2o' ? 'active' : 'not' }>
               <img src={twoStone} alt="JewelCocktail"/>
             </div>
-            <div onClick={() => setAlcorStone('3a')} className={alcorStone === '3a' ? 'active' : 'not' }>
+            <div onClick={() => setOrionStone('3o')} className={orionStone === '3o' ? 'active' : 'not' }>
               <img src={threeStone} alt="JewelCocktail"/>
             </div>
-            <div onClick={() => setAlcorStone('4a')} className={alcorStone === '4a' ? 'active' : 'not' }>
+            <div onClick={() => setOrionStone('4o')} className={orionStone === '4o' ? 'active' : 'not' }>
               <img src={fourStone} alt="JewelCocktail"/>
             </div>
-            <div onClick={() => setAlcorStone('5a')} className={alcorStone === '5a' ? 'active' : 'not' }>
+            <div onClick={() => setOrionStone('5o')} className={orionStone === '5o' ? 'active' : 'not' }>
               <img src={fiveStone} alt="JewelCocktail"/>
             </div>
           </WrapStone>
           <p className="description">
-            { alcorStone === '1a' && <FormattedMessage id="ketroy.roza" />}
-            { alcorStone === '2a' && <FormattedMessage id="wom.ocean" />}
-            { alcorStone === '3a' && <FormattedMessage id="wom.gemchiug" />}
-            { alcorStone === '4a' && <FormattedMessage id="wom.rodohit" />}
-            { alcorStone === '5a' && <FormattedMessage id="wom.avantiiurin" />}
+            { orionStone === '1o' && <FormattedMessage id="ketroy.roza" />}
+            { orionStone === '2o' && <FormattedMessage id="wom.ocean" />}
+            { orionStone === '3o' && <FormattedMessage id="wom.gemchiug" />}
+            { orionStone === '4o' && <FormattedMessage id="wom.rodohit" />}
+            { orionStone === '5o' && <FormattedMessage id="wom.avantiiurin" />}
           </p>
         </ChooseStone>
         <PriceBuySection>
           <WrapPrices>
-            <p className="price">6 700 <span>₽</span></p>
-            <p className="old-price">9 570 ₽</p>
+            <p className="price">7 000 <span>₽</span></p>
+            <p className="old-price">10 000 ₽</p>
             <img src={sale} alt="JewelCocktail" className="sale-icon"/>
           </WrapPrices>
           <p className="bonus"><FormattedMessage id="braslet.twoketroys" /></p>

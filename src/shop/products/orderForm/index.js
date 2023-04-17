@@ -114,6 +114,18 @@ export const OrderForm = (props) => {
               :
                 null
               }
+              {item.product === "orion" ?
+                <div key={index}>
+                  <input type="hidden" name="product_orion" value={langProps.locale === "ru" ? "Браслет Orion" : "Bracelet Orion"} />
+                  {item.stone === "1o" && <><input type="hidden" name="alcor_stone" value={langProps.locale === "ru" ? "Камeнь: Роза" : "Stone: Rose"} /></>}
+                  {item.stone === "2o" && <><input type="hidden" name="alcor_stone" value={langProps.locale === "ru" ? "Камeнь: Океан" : "Stone: Ocean"} /></>}
+                  {item.stone === "3o" && <><input type="hidden" name="alcor_stone" value={langProps.locale === "ru" ? "Камeнь: Жемчуг" : "Stone: Pearls"} /></>}
+                  {item.stone === "4o" && <><input type="hidden" name="alcor_stone" value={langProps.locale === "ru" ? "Камeнь: Родохрозит" : "Stone: Rhodochrosite"} /></>}
+                  {item.stone === "5o" && <><input type="hidden" name="alcor_stone" value={langProps.locale === "ru" ? "Камeнь: Авантюрин" : "Stone: Aventurine"} /></>}
+                </div>
+                :
+                null
+              }
               {item.product === "gidor" ?
                 <div key={index}>
                   <input type="hidden" name="product_gidor" value={langProps.locale === "ru" ? "Кулон Gidor" : "Pendant Gidor"} />

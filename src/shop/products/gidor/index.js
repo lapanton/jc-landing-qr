@@ -9,6 +9,7 @@ import five from './img/5.png';
 import six from './img/6.png';
 import seven from './img/7.png';
 import eight from './img/8.png';
+import nine from './img/9.png';
 
 import oneStone from './stone/1.png';
 import twoStone from './stone/2.png';
@@ -243,6 +244,9 @@ export const Gidor = (props) => {
             <div>
               <img src={eight} alt="JewelCocktail" onClick={() => openZoom(8)} />
             </div>
+            <div>
+              <img src={nine} alt="JewelCocktail" onClick={() => openZoom(8)} />
+            </div>
           </Slider>
           {
             openZoomImage &&
@@ -280,6 +284,9 @@ export const Gidor = (props) => {
                     <div>
                       <img src={eight} alt="JewelCocktail" />
                     </div>
+                    <div>
+                      <img src={nine} alt="JewelCocktail" />
+                    </div>
                   </Slider>
                 </WrapZoomSlider>
               </WrapperZoom>,
@@ -310,6 +317,9 @@ export const Gidor = (props) => {
             </div>
             <div>
               <img src={eight} alt="JewelCocktail"/>
+            </div>
+            <div>
+              <img src={nine} alt="JewelCocktail"/>
             </div>
           </Slider>
         </div>

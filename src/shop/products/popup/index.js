@@ -20,6 +20,7 @@ import {OrderForm} from "../orderForm";
 import ringImg from '../rings/img/1.png';
 import pendantImg from '../pendant/img/1.png';
 import alcorImg from '../alcor/img/1.png';
+import orionImg from '../orion/img/1.png';
 import gidorImg from '../gidor/img/1.png';
 import dorsImg from '../dors/img/1.png';
 import coupleImg from '../coupleBracelets/img/1.png';
@@ -200,6 +201,57 @@ export const Popup = (props) => {
                         </div>
                         <WrapCardPrice>
                           <div className="price-card"><FormattedMessage id="shop.price" />: <span className="card-line-old"> 9 570 ₽</span> <span className="price-card-new">= {currentPrice} ₽ </span></div>
+                          <img src={sales} alt="JewelCocktail" className="card-icon-sale" />
+                        </WrapCardPrice>
+                      </div>
+
+                    </WrapProductDescription>
+                    <br/>
+                    <hr/>
+                    <br/>
+                  </>
+                  :
+                  null
+                }
+                {item.product === "orion" ?
+                  <>
+                    <RemoveItem onClick={() => removeItem(item)}>
+                      <div style={{ textAlign: "right" }}>
+                        <img src={close} alt="JewelCocktail" style={{ maxWidth: "18px", opacity: "0.7" }}/>
+                      </div>
+                    </RemoveItem>
+                    <div style={{ textAlign: "center" }}><img style={{maxWidth: "100px"}} src={orionImg} alt="JewelCocktail"/></div>
+                    <WrapProductDescription>
+                      <div style={{ textAlign: "left" }}>
+                        <span style={{ color: "#727070", marginBottom: "10px", display: "inline-block" }}>
+                          {langProps.locale === "ru" ? "Браслет Alcor" : "Bracelet Alcor"}
+                        </span>
+                        <div>
+                          <div style={{ textAlign: "left", textTransform: "inherit" }}>
+                            {item.stone === "1o" && <>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}><FormattedMessage id="st.rose" />: <img src={oneStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="second.gift" /><img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                            </>}
+                            {item.stone === "2o" && <>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}><FormattedMessage id="st.ocean" />: <img src={twoStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="second.gift" /><img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                            </>}
+                            {item.stone === "3o" && <>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}><FormattedMessage id="st.pearls" />: <img src={threeStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="second.gift" /><img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                            </>}
+                            {item.stone === "4o" && <>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}><FormattedMessage id="st.rhod" />: <img src={fourStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="second.gift" /><img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                            </>}
+                            {item.stone === "5o" && <>
+                              <div style={{fontSize: "14px", marginBottom: "10px"}}><FormattedMessage id="st.avant" />: <img src={fiveStoneW} alt="JewelCocktail" style={{transform: "translate(10px, 3px)"}}/></div>
+                              <div style={{fontSize: "14px"}}><FormattedMessage id="second.gift" /><img src={giftIcon} alt="JewelCocktail" style={{transform: "translate(10px, 4px)", maxWidth: "17px"}}/></div>
+                            </>}
+                          </div>
+                        </div>
+                        <WrapCardPrice>
+                          <div className="price-card"><FormattedMessage id="shop.price" />: <span className="card-line-old"> 7 000 ₽</span> <span className="price-card-new">= {currentPrice} ₽ </span></div>
                           <img src={sales} alt="JewelCocktail" className="card-icon-sale" />
                         </WrapCardPrice>
                       </div>

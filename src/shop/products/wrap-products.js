@@ -13,6 +13,7 @@ import { PendantsTalisman } from "./talisman/pendant";
 import { AlcorTalisman } from "./talisman/alcor";
 import { GidorTalisman } from "./talisman/gidor";
 import {DorsTalisman} from "./talisman/dors";
+import { Orion } from "./orion";
 // import {CoupleBraceletsTalisman} from "./talisman/coupleBracelets";
 
 export const WrapProducts = (props) => {
@@ -32,6 +33,7 @@ export const WrapProducts = (props) => {
           </>
         ) : (
           <>
+            <Orion setCard={setCard} setShowPopup={setShowPopup} card={card} />
             <Dors setCard={setCard} setShowPopup={setShowPopup} card={card} />
             <Alcor setCard={setCard} setShowPopup={setShowPopup} card={card} />
             <Gidor setCard={setCard} setShowPopup={setShowPopup} card={card} />
