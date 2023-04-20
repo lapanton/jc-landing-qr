@@ -224,7 +224,7 @@ export const Popup = (props) => {
                     <WrapProductDescription>
                       <div style={{ textAlign: "left" }}>
                         <span style={{ color: "#727070", marginBottom: "10px", display: "inline-block" }}>
-                          {langProps.locale === "ru" ? "Браслет Alcor" : "Bracelet Alcor"}
+                          {langProps.locale === "ru" ? "Браслет Orion" : "Bracelet Orion"}
                         </span>
                         <div>
                           <div style={{ textAlign: "left", textTransform: "inherit" }}>
