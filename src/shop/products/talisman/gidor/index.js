@@ -7,6 +7,9 @@ import two from './img/2.jpg';
 import three from './img/3.png';
 import four from './img/4.png';
 import five from './img/5.png';
+import six from './img/6.png';
+import seven from './img/7.png';
+import eight from './img/8.png';
 
 // import oneStone from './stone/1.png';
 // import twoStone from './stone/2.png';
@@ -264,6 +267,15 @@ export const GidorTalisman = (props) => {
             <div>
               <img src={five} alt="JewelCocktail" onClick={() => openZoom(5)} />
             </div>
+            <div>
+              <img src={six} alt="JewelCocktail" onClick={() => openZoom(6)} />
+            </div>
+            <div>
+              <img src={seven} alt="JewelCocktail" onClick={() => openZoom(7)} />
+            </div>
+            <div>
+              <img src={eight} alt="JewelCocktail" onClick={() => openZoom(8)} />
+            </div>
 
           </Slider>
           {
@@ -293,6 +305,15 @@ export const GidorTalisman = (props) => {
                     <div>
                       <img src={five} alt="JewelCocktail" />
                     </div>
+                    <div>
+                      <img src={six} alt="JewelCocktail" />
+                    </div>
+                    <div>
+                      <img src={seven} alt="JewelCocktail" />
+                    </div>
+                    <div>
+                      <img src={eight} alt="JewelCocktail" />
+                    </div>
 
                   </Slider>
                 </WrapZoomSlider>
@@ -315,6 +336,15 @@ export const GidorTalisman = (props) => {
             </div>
             <div>
               <img src={five} alt="JewelCocktail"/>
+            </div>
+            <div>
+              <img src={six} alt="JewelCocktail"/>
+            </div>
+            <div>
+              <img src={seven} alt="JewelCocktail"/>
+            </div>
+            <div>
+              <img src={eight} alt="JewelCocktail"/>
             </div>
 
           </Slider>

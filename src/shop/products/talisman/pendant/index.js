@@ -8,6 +8,8 @@ import two from './img/2.png';
 import three from './img/3.png';
 import four from './img/4.png';
 import five from './img/5.png';
+import six from './img/6.png';
+import seven from './img/7.png';
 
 
 // import oneStone from './stone/1.png';
@@ -284,6 +286,12 @@ export const PendantsTalisman = (props) => {
             <div>
               <img src={five} alt="JewelCocktail" onClick={() => openZoom(5)}/>
             </div>
+            <div>
+              <img src={six} alt="JewelCocktail" onClick={() => openZoom(6)}/>
+            </div>
+            <div>
+              <img src={seven} alt="JewelCocktail" onClick={() => openZoom(7)}/>
+            </div>
 
           </Slider>
           {
@@ -313,6 +321,12 @@ export const PendantsTalisman = (props) => {
                     <div>
                       <img src={five} alt="JewelCocktail" />
                     </div>
+                    <div>
+                      <img src={six} alt="JewelCocktail" />
+                    </div>
+                    <div>
+                      <img src={seven} alt="JewelCocktail" />
+                    </div>
 
                   </Slider>
                 </WrapZoomSlider>
@@ -335,6 +349,12 @@ export const PendantsTalisman = (props) => {
             </div>
             <div>
               <img src={five} alt="JewelCocktail"/>
+            </div>
+            <div>
+              <img src={six} alt="JewelCocktail"/>
+            </div>
+            <div>
+              <img src={seven} alt="JewelCocktail"/>
             </div>
 
           </Slider>
