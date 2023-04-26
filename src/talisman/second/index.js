@@ -32,7 +32,7 @@ export const SecondTalisman = (props) => {
           <img src={telPhone} alt="JewelCocktail" className="desktopImg"/>
           <WrapDescription>
             {langProps.locale === "ru" ? <>
-              создай <span>талисман</span><br/>по своему смыслу усиль энергию камня
+              создай <span>талисман</span><br/>по своему смыслу<br/>усиль энергию камня
             </> : <>
               create <span>talisman</span>
               according to your meaning and use the energy of charm

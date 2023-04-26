@@ -420,7 +420,7 @@ export const RingsTalisman = (props) => {
             { ringStone === '9r-t' && (langProps.locale === "ru" ? "Гематит - один из сильнейших магических камней" : "Hematite is also called like Blood stone")}
             { ringStone === '10r-t' && (langProps.locale === "ru" ? "Родохрозит - имеет удивительные свойства" : "Rhodochrosite is a stone that integrates physical and spiritual energies")}
             { ringStone === '11r-t' && (langProps.locale === "ru" ? "Нефрит - является олицетворением пяти качеств человека" : "Jade is a popular gemstone sometimes referred to as the stone of luck and happiness")}
-            { ringStone === '12r-t' && (langProps.locale === "ru" ? "Кошачий глаз - минерал отводит от носителя смерть" : "The Cat’s Eye is also known as the Lehsunia stone")}
+            { ringStone === '12r-t' && (langProps.locale === "ru" ? "Кошачий глаз - защищает от бед и болезней" : "The Cat’s Eye is also known as the Lehsunia stone")}
           </p>
         </ChooseStone>
         <ChooseSize>

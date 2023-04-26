@@ -182,7 +182,7 @@ export const OrderForm = (props) => {
                   { item.stone === '9p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value={langProps.locale === "ru" ? "Гематит - один из сильнейших магических камней" : "Hematite is also called like Blood stone"} /></>}
                   { item.stone === '10p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value={langProps.locale === "ru" ? "Родохрозит - имеет удивительные свойства" : "Rhodochrosite is a stone that integrates physical and spiritual energies"} /></>}
                   { item.stone === '11p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value={langProps.locale === "ru" ? "Нефрит - является олицетворением пяти качеств человека." : "Jade is a popular gemstone sometimes referred to as the stone of luck and happiness"} /></>}
-                  { item.stone === '12p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value={langProps.locale === "ru" ? "Кошачий глаз - минерал отводит от носителя смерть" : "The Cat’s Eye is also known as the Lehsunia stone"} /></>}
+                  { item.stone === '12p-t' &&  <><input type="hidden" name="pendantTalisman_stone" value={langProps.locale === "ru" ? "Кошачий глаз - защищает от бед и болезней" : "The Cat’s Eye is also known as the Lehsunia stone"} /></>}
                 </div>
                 :
                 null
@@ -203,7 +203,7 @@ export const OrderForm = (props) => {
                   { item.stone === '9r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value={langProps.locale === "ru" ? "Гематит - один из сильнейших магических камней" : "Hematite is also called like Blood stone"} /></>}
                   { item.stone === '10r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value={langProps.locale === "ru" ? "Родохрозит - имеет удивительные свойства" : "Rhodochrosite is a stone that integrates physical and spiritual energies"} /></>}
                   { item.stone === '11r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value={langProps.locale === "ru" ? "Нефрит - является олицетворением пяти качеств человека" : "Jade is a popular gemstone sometimes referred to as the stone of luck and happiness"} /></>}
-                  { item.stone === '12r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value={langProps.locale === "ru" ? "Кошачий глаз - минерал отводит от носителя смерть" : "The Cat’s Eye is also known as the Lehsunia stone"} /></>}
+                  { item.stone === '12r-t' &&  <><input type="hidden" name="pendantTalisman_stone" value={langProps.locale === "ru" ? "Кошачий глаз - защищает от бед и болезней" : "The Cat’s Eye is also known as the Lehsunia stone"} /></>}
                  </div>
                 :
                 null
@@ -223,7 +223,7 @@ export const OrderForm = (props) => {
                   { item.stone === '9a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value={langProps.locale === "ru" ? "Гематит - один из сильнейших магических камней" : "Hematite is also called like Blood stone"} /></>}
                   { item.stone === '10a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value={langProps.locale === "ru" ? "Родохрозит - имеет удивительные свойства" : "Rhodochrosite is a stone that integrates physical and spiritual energies"} /></>}
                   { item.stone === '11a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value={langProps.locale === "ru" ? "Нефрит - является олицетворением пяти качеств человека" : "Jade is a popular gemstone sometimes referred to as the stone of luck and happiness"} /></>}
-                  { item.stone === '12a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value={langProps.locale === "ru" ? "Кошачий глаз - минерал отводит от носителя смерть" : "The Cat’s Eye is also known as the Lehsunia stone"} /></>}
+                  { item.stone === '12a-t' &&  <><input type="hidden" name="pendantTalisman_stone" value={langProps.locale === "ru" ? "Кошачий глаз - защищает от бед и болезней" : "The Cat’s Eye is also known as the Lehsunia stone"} /></>}
                 </div>
                 :
                 null

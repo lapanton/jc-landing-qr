@@ -418,7 +418,7 @@ export const PendantsTalisman = (props) => {
             { quasarStone === '9p-t' && (langProps.locale === "ru" ? "Гематит - один из сильнейших магических камней" : "Hematite is also called like Blood stone")}
             { quasarStone === '10p-t' && (langProps.locale === "ru" ? "Родохрозит - имеет удивительные свойства" : "Rhodochrosite is a stone that integrates physical and spiritual energies")}
             { quasarStone === '11p-t' && (langProps.locale === "ru" ? "Нефрит - является олицетворением пяти качеств человека." : "Jade is a popular gemstone sometimes referred to as the stone of luck and happiness")}
-            { quasarStone === '12p-t' && (langProps.locale === "ru" ? "Кошачий глаз - минерал отводит от носителя смерть" : "The Cat’s Eye is also known as the Lehsunia stone")}
+            { quasarStone === '12p-t' && (langProps.locale === "ru" ? "Кошачий глаз - минерал защищает от бед и болезней" : "The Cat’s Eye is also known as the Lehsunia stone")}
           </p>
         </ChooseStone>
         <PriceBuySection>

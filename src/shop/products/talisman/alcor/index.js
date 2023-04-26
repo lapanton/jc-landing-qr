@@ -425,7 +425,7 @@ export const AlcorTalisman = (props) => {
             { alcorStone === '9a-t' && (langProps.locale === "ru" ? "Гематит - один из сильнейших магических камней" : "Hematite is also called like Blood stone")}
             { alcorStone === '10a-t' && (langProps.locale === "ru" ? "Родохрозит - имеет удивительные свойства" : "Rhodochrosite is a stone that integrates physical and spiritual energies")}
             { alcorStone === '11a-t' && (langProps.locale === "ru" ? "Нефрит - является олицетворением пяти качеств человека" : "Jade is a popular gemstone sometimes referred to as the stone of luck and happiness")}
-            { alcorStone === '12a-t' && (langProps.locale === "ru" ? "Кошачий глаз - минерал отводит от носителя смерть" : "The Cat’s Eye is also known as the Lehsunia stone")}
+            { alcorStone === '12a-t' && (langProps.locale === "ru" ? "Кошачий глаз - защищает от бед и болезней" : "The Cat’s Eye is also known as the Lehsunia stone")}
           </p>
         </ChooseStone>
         <PriceBuySection>
