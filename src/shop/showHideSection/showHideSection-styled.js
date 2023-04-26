@@ -85,6 +85,8 @@ export const Wrapper = styled.div`
 `;
 
 export const BuyButton = styled.div`
+  opacity: 0;
+  pointer-events: none;
   padding: 25px 90px;
   background: #009933;
   color: #fff;

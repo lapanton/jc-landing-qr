@@ -9,6 +9,7 @@ import heeart from './heeeart.png';
 import qrcode from './qrcode.png';
 import { SecondVideo } from "./prev";
 import vid from "./prev/vidtwo.mp4";
+import {WrapVideo} from "../second/styles-second";
 
 export const ShowHideSection = (props) => {
   const { langProps } = props;
@@ -68,7 +69,14 @@ export const ShowHideSection = (props) => {
                     </Descr>
                   }
 
-                  <YouTube videoId="XLzYEUDEk-k" opts={opts} />
+                  <WrapVideo>
+                    <span>
+
+                      <video width="100%" height="100%" autoPlay loop muted playsInline >
+                        <source src={vid} type="video/mp4"/>
+                      </video>
+                    </span>
+                  </WrapVideo>
                   <BuyButton onClick={() => handleScroll()}>
                     {langProps.locale === "ru" ? "подарить" : "present" }
                   </BuyButton>
@@ -92,7 +100,14 @@ export const ShowHideSection = (props) => {
       <>
         <WrapDesktop>
           <LeftPart>
-            <YouTube videoId="XLzYEUDEk-k" opts={opts} />
+            <WrapVideo>
+                    <span>
+
+                      <video width="100%" height="100%" autoPlay loop muted playsInline >
+                        <source src={vid} type="video/mp4"/>
+                      </video>
+                    </span>
+            </WrapVideo>
           </LeftPart>
           <RightPart>
             <h2> <FormattedMessage id="shop.ra" /><br/>
