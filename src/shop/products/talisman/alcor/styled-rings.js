@@ -352,7 +352,7 @@ export const PriceBuySection = styled.div`
       line-height: 28px;
     }
     a {
-      background: rgba(255,255,255,0.17);
+      background: #009933;
       border-radius: 5px;
       text-transform: uppercase;
       color: #FFFFFF;

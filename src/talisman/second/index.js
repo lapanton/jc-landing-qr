@@ -37,9 +37,10 @@ export const SecondTalisman = (props) => {
               create <span>talisman</span>
               according to your meaning and use the energy of charm
             </> }
-            <h3>
-              {langProps.locale === "ru" ? "выбери вставку наполни смыслом носи с удовольствием" : "CHOOSE YOUR CHARM FILL WITH MEANING WEAR WITH PLEASURE"}
-            </h3>
+            <img src={conselation} alt="JewelCocktail" className="conselation" />
+            {/*<h3>*/}
+            {/*  {langProps.locale === "ru" ? "выбери вставку наполни смыслом носи с удовольствием" : "CHOOSE YOUR CHARM FILL WITH MEANING WEAR WITH PLEASURE"}*/}
+            {/*</h3>*/}
           </WrapDescription>
         </Wrapper>
       ) : (
@@ -55,9 +56,9 @@ export const SecondTalisman = (props) => {
                 create <span>talisman</span>
                 according to your meaning and use the energy of charm
               </> }
-              <h3>
-                {langProps.locale === "ru" ? "выбери вставку наполни смыслом носи с удовольствием" : "CHOOSE YOUR CHARM FILL WITH MEANING WEAR WITH PLEASURE"}
-              </h3>
+              {/*<h3>*/}
+              {/*  {langProps.locale === "ru" ? "выбери вставку наполни смыслом носи с удовольствием" : "CHOOSE YOUR CHARM FILL WITH MEANING WEAR WITH PLEASURE"}*/}
+              {/*</h3>*/}
             </WrapDescription>
             {/*<GiftButton onClick={() => window.scrollTo({top: 1800, left: 0, behavior: 'smooth'})}>{langProps.locale === "ru" ? "создать" : "create"}</GiftButton>*/}
           </LeftPart>

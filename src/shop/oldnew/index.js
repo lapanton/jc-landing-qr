@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {LeftPartSecond, RighhtPartSecond, SecondWrapDesktop, Wrapper, Inner} from "../showHideSection/showHideSection-styled";
-import vid from "../showHideSection/prev/vidtwo.mp4";
+import vid from "./preview.mp4";
 import heeart from "../showHideSection/heeeart.png";
 import qrcode from "../showHideSection/qrcode.png";
 import {SecondVideo} from "../showHideSection/prev";
@@ -26,7 +26,9 @@ export const Oldnew = (props) => {
    <>
     { isMobile ?
       <>
-       <SecondVideo />
+        <video width="100%" height="100%" autoPlay loop muted playsInline>
+          <source src={vid} type="video/mp4"/>
+        </video>
        <MobView className="main-text to-center">
               <span>
                 <img src={heeart} alt="JewelCocktail" className="heeeeeart"/>

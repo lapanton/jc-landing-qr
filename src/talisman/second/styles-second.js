@@ -107,6 +107,9 @@ export const WrapDescription = styled.div`
     line-height: 22px;
     padding: 0 20px;
   }
+  .conselation {
+    max-height: 10rem;
+  }
 `;
 export const GiftButton = styled.div`
   padding: 25px 90px;
