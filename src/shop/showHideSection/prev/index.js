@@ -1,6 +1,6 @@
 import React from 'react';
 import { Wrapper } from "./styles-second";
-import vid from './vidtwo.mp4';
+import vid from './preview.mp4';
 
 export const SecondVideo = () => {
   return (

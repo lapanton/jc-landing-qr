@@ -8,13 +8,14 @@ import {Descr} from "../info/info-styled";
 import heeart from './heeeart.png';
 import qrcode from './qrcode.png';
 import { SecondVideo } from "./prev";
-import vid from "./prev/vidtwo.mp4";
+import vid from "./prev/preview.mp4";
+
 import {WrapVideo} from "../second/styles-second";
 
 export const ShowHideSection = (props) => {
   const { langProps } = props;
   // console.log('langProps', langProps.locale);
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
 
   const [width, setWidth] = useState(window.innerWidth);
 
@@ -84,7 +85,7 @@ export const ShowHideSection = (props) => {
                     {langProps.locale === "ru" ?
                     "Чувства – это то, что живет в сердце, а подарок с душой скажет о вашем отношении лучше слов" : "Feelings are what live in the heart, and a gift with soul will speak better about your attitude than words."}</div>
 
-                  <div className="text-three"> {langProps.locale === "ru" ? "лучший подарок – это внимание и забота украшения Jewel Cocktail помогут сохранить яркие моменты и чувства " : "The best gift  is attention and care. Jewel Cocktail helps to fix bright moments and feelings "}</div>
+                  {/*<div className="text-three"> {langProps.locale === "ru" ? "лучший подарок – это внимание и забота украшения Jewel Cocktail помогут сохранить яркие моменты и чувства " : "The best gift  is attention and care. Jewel Cocktail helps to fix bright moments and feelings "}</div>*/}
                   <ButtonHide onClick={() => {
                     window.scrollTo({top: 300, left: 0, behavior: 'smooth'});
                     setShow(!show);

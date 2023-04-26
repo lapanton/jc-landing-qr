@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import {LeftPartSecond, RighhtPartSecond, SecondWrapDesktop, Wrapper, Inner} from "../showHideSection/showHideSection-styled";
-import vid from "./preview.mp4";
+import vid from "./vidtwo.mp4";
 import heeart from "../showHideSection/heeeart.png";
 import qrcode from "../showHideSection/qrcode.png";
 import {SecondVideo} from "../showHideSection/prev";

@@ -19,7 +19,7 @@ import { Orion } from "./orion";
 export const WrapProducts = (props) => {
   const {showPopup, setShowPopup, card, setCard, langProps} = props;
   const location = useLocation();
-  console.log('dddd', langProps);
+
   return (
     <>
       <WrapperProducts className={showPopup ? "showPopup": "noPopup"}>
