@@ -282,7 +282,7 @@ export const App = (props) => {
               <MainShop langProps={props} setShowPopup={setShowPopup} showPopup={showPopup} />
               <PopupShopClose />
               <SecondTalisman langProps={props}  />
-              <ExampleTalisman langProps={props} />
+              {/*<ExampleTalisman langProps={props} />*/}
               <WrapProducts langProps={props} showPopup={showPopup} setShowPopup={setShowPopup} card={card} setCard={setCard} />
               <SelfProductShop />
               <OsobennostiTehnologiiShop />

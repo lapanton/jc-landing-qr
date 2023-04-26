@@ -7,6 +7,22 @@ export const Wrapper = styled.div`
   margin: 40px auto 0 auto;
   @media screen and (max-width: 768px) {
     margin: 0 auto;
+    text-align: center;
+    img {
+      max-height: 15rem;
+    }
+  }
+  h2 {
+    max-width: 530px;
+    margin: 0 auto 30px auto;
+    font-family: 'organetto';
+    font-size: 30px;
+    letter-spacing: 0.425em;
+    white-space: nowrap;
+    text-transform: uppercase;
+    @media screen and (max-width: 980px) {
+      font-size: 22px;
+    }
   }
 `;
 
@@ -29,6 +45,9 @@ export const WrapperDesktop = styled.div`
     @media screen and (max-width: 980px) {
       font-size: 22px;
     }
+  }
+  .conselation {
+    max-width: 260px;
   }
 `;
 
@@ -65,6 +84,10 @@ export const WrapSubtitle = styled.div`
   letter-spacing: 0.21em;
   text-transform: uppercase;
   white-space: nowrap;
+  color: #fff;
+  @media screen and (max-width: 768px) {
+    transform: translate(0px, -50px);
+  }
 `;
 export const WrapDescription = styled.div`
   max-width: 480px;
@@ -77,6 +100,12 @@ export const WrapDescription = styled.div`
   letter-spacing: 0.21em;
   span {
     color: rgba(165, 82, 72, 1);
+  }
+  @media screen and (max-width: 768px) {
+    color: #fff;
+    font-size: 14px;
+    line-height: 22px;
+    padding: 0 20px;
   }
 `;
 export const GiftButton = styled.div`

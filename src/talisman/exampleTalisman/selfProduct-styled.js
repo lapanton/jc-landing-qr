@@ -190,4 +190,7 @@ export const WrapRight = styled.div`
     width: 100%;
     display: none;
   }
+  .conselationDesktop {
+    width: 70%;
+  }
 `;

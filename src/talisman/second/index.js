@@ -1,6 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import { Wrapper,WrapperDesktop, LeftPart, RightPart, WrapVideo, WrapSubtitle, WrapDescription, GiftButton } from "./styles-second";
 import vid from './preview.mp4'
+import telPhone from "../exampleTalisman/phone_preview.gif";
+import {WrapRight} from "../exampleTalisman/selfProduct-styled";
+import conselation from "../exampleTalisman/constellation.png";
 
 export const SecondTalisman = (props) => {
   const { langProps } = props;
@@ -25,15 +28,26 @@ export const SecondTalisman = (props) => {
     <>
       {isMobile ? (
         <Wrapper>
-          <video width="100%" height="100%" autoPlay loop muted playsInline >
-            <source src={vid} type="video/mp4"/>
-          </video>
+          <WrapSubtitle>hi-tech {langProps.locale === "ru" ? "ТАЛИСМАН" : "TALISMAN"}</WrapSubtitle>
+          <img src={telPhone} alt="JewelCocktail" className="desktopImg"/>
+          <WrapDescription>
+            {langProps.locale === "ru" ? <>
+              создай <span>талисман</span><br/>по своему смыслу усиль энергию камня
+            </> : <>
+              create <span>talisman</span>
+              according to your meaning and use the energy of charm
+            </> }
+            <h3>
+              {langProps.locale === "ru" ? "выбери вставку наполни смыслом носи с удовольствием" : "CHOOSE YOUR CHARM FILL WITH MEANING WEAR WITH PLEASURE"}
+            </h3>
+          </WrapDescription>
         </Wrapper>
       ) : (
         <WrapperDesktop>
           <LeftPart>
             <h1>Jewel Cocktail</h1>
             <WrapSubtitle>hi-tech {langProps.locale === "ru" ? "ТАЛИСМАН" : "TALISMAN"}</WrapSubtitle>
+            <img src={conselation} alt="JewelCocktail" className="conselation" />
             <WrapDescription>
               {langProps.locale === "ru" ? <>
               создай <span>талисман</span><br/>по своему смыслу усиль энергию камня
@@ -41,18 +55,16 @@ export const SecondTalisman = (props) => {
                 create <span>talisman</span>
                 according to your meaning and use the energy of charm
               </> }
-
+              <h3>
+                {langProps.locale === "ru" ? "выбери вставку наполни смыслом носи с удовольствием" : "CHOOSE YOUR CHARM FILL WITH MEANING WEAR WITH PLEASURE"}
+              </h3>
             </WrapDescription>
-            <GiftButton onClick={() => window.scrollTo({top: 1800, left: 0, behavior: 'smooth'})}>{langProps.locale === "ru" ? "создать" : "create"}</GiftButton>
+            {/*<GiftButton onClick={() => window.scrollTo({top: 1800, left: 0, behavior: 'smooth'})}>{langProps.locale === "ru" ? "создать" : "create"}</GiftButton>*/}
           </LeftPart>
           <RightPart>
-            <WrapVideo>
-              <span>
-                <video width="100%" height="100%" autoPlay loop muted playsInline >
-                  <source src={vid} type="video/mp4"/>
-                </video>
-              </span>
-            </WrapVideo>
+            <WrapRight>
+              <img src={telPhone} alt="JewelCocktail" className="desktopImg conselationDesktop"/>
+            </WrapRight>
           </RightPart>
         </WrapperDesktop>
       )}

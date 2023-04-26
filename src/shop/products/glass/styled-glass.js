@@ -569,7 +569,7 @@ export const WrapZoomSlider = styled.div`
     width: 100%;
     height: auto;
     @media screen and (min-width: 900px) {
-      max-width: 70%;
+      max-width: 30%;
     }
     &.recom-page-zoom {
       width: 40%;
