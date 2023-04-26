@@ -375,14 +375,14 @@ export const DorsTalisman = (props) => {
             </Slider>
           </WrapStone>
           <p className="description">
-            { dorsStone === '1d-t' && (langProps.locale === "ru" ? "Яшма — источник доброй энергии" : "Jasper is a variety of Chalcedony")}
-            { dorsStone === '2d-t' && (langProps.locale === "ru" ? "Агат - приносит здоровье, счастье и долголетие": "Agate has a stable and grounding quality")}
+            { dorsStone === '1d-t' && (langProps.locale === "ru" ? "Агат — источник доброй энергии" : "Jasper is a variety of Chalcedony")}
+            { dorsStone === '2d-t' && (langProps.locale === "ru" ? "Яшма - приносит здоровье, счастье и долголетие": "Agate has a stable and grounding quality")}
             { dorsStone === '3d-t' && (langProps.locale === "ru" ? "Лазурит имеет способность помогать своему владельцу" : "Lapis Lazuli is a beautiful celestial deep blue stone")}
             { dorsStone === '4d-t' && (langProps.locale === "ru" ? "Обсидиан является мощным поглотителем энерги" : "Obsidian is truth-enhancing. A strongly protective stone")}
-            { dorsStone === '5d-t' && (langProps.locale === "ru" ? "Яшма — источник доброй энергии" : "Pyrite is an iron sulfide mineral with a metallic luster")}
+            { dorsStone === '5d-t' && (langProps.locale === "ru" ? "Пирит — источник доброй энергии" : "Pyrite is an iron sulfide mineral with a metallic luster")}
             { dorsStone === '6d-t' && (langProps.locale === "ru" ? "Тигровый глаз — камень мудрецов и правителей" : "Tiger eye is a variety of Chalcedony")}
             { dorsStone === '7d-t' && (langProps.locale === "ru" ? "Гематит - один из сильнейших магических камней" : "Hematite is also called like Blood stone")}
-            { dorsStone === '8d-t' && (langProps.locale === "ru" ? "Обсидиан является мощным поглотителем энерги." : "Onyx is a stone that offers up powerful vibrations of protection")}
+            { dorsStone === '8d-t' && (langProps.locale === "ru" ? "Оникс является мощным поглотителем энерги." : "Onyx is a stone that offers up powerful vibrations of protection")}
             { dorsStone === '9d-t' && (langProps.locale === "ru" ? "Нефрит - является олицетворением пяти качеств человека" : "Jade is a popular gemstone sometimes referred to as the stone")}
           </p>
         </ChooseStone>

@@ -233,14 +233,14 @@ export const OrderForm = (props) => {
                 <div key={index}>
                   <input type="hidden" name="product_gidorTalisman" value={langProps.locale === "ru" ? "мужской кулон-талисман" : "men`s talisman-pendant"} />
 
-                  { item.stone === '1g-t' && <><input type="hidden" name="gidorTalisman_stone" value={langProps.locale === "ru" ? "Яшма — источник доброй энергии" : "Jasper is a variety of Chalcedony"} /></>}
-                  { item.stone === '2g-t' && <><input type="hidden" name="gidorTalisman_stone" value={langProps.locale === "ru" ? "Агат - приносит здоровье, счастье и долголетие": "Agate has a stable and grounding quality"} /></>}
+                  { item.stone === '1g-t' && <><input type="hidden" name="gidorTalisman_stone" value={langProps.locale === "ru" ? "Агат — источник доброй энергии" : "Jasper is a variety of Chalcedony"} /></>}
+                  { item.stone === '2g-t' && <><input type="hidden" name="gidorTalisman_stone" value={langProps.locale === "ru" ? "Яшма - приносит здоровье, счастье и долголетие": "Agate has a stable and grounding quality"} /></>}
                   { item.stone === '3g-t' && <><input type="hidden" name="gidorTalisman_stone" value={langProps.locale === "ru" ? "Лазурит имеет способность помогать своему владельцу" : "Lapis Lazuli is a beautiful celestial deep blue stone"} /></>}
                   { item.stone === '4g-t' && <><input type="hidden" name="gidorTalisman_stone" value={langProps.locale === "ru" ? "Обсидиан является мощным поглотителем энерги" : "Obsidian is truth-enhancing. A strongly protective stone"} /></>}
-                  { item.stone === '5g-t' && <><input type="hidden" name="gidorTalisman_stone" value={langProps.locale === "ru" ? "Яшма — источник доброй энергии" : "Pyrite is an iron sulfide mineral with a metallic luster"} /></>}
+                  { item.stone === '5g-t' && <><input type="hidden" name="gidorTalisman_stone" value={langProps.locale === "ru" ? "Пирит — источник доброй энергии" : "Pyrite is an iron sulfide mineral with a metallic luster"} /></>}
                   { item.stone === '6g-t' && <><input type="hidden" name="gidorTalisman_stone" value={langProps.locale === "ru" ? "Тигровый глаз — камень мудрецов и правителей" : "Tiger eye is a variety of Chalcedony"} /></>}
                   { item.stone === '7g-t' && <><input type="hidden" name="gidorTalisman_stone" value={langProps.locale === "ru" ? "Гематит - один из сильнейших магических камней" : "Hematite is also called like Blood stone"} /></>}
-                  { item.stone === '8g-t' && <><input type="hidden" name="gidorTalisman_stone" value={langProps.locale === "ru" ? "Обсидиан является мощным поглотителем энерги." : "Onyx is a stone that offers up powerful vibrations of protection"} /></>}
+                  { item.stone === '8g-t' && <><input type="hidden" name="gidorTalisman_stone" value={langProps.locale === "ru" ? "Оникс является мощным поглотителем энерги." : "Onyx is a stone that offers up powerful vibrations of protection"} /></>}
                   { item.stone === '9g-t' && <><input type="hidden" name="gidorTalisman_stone" value={langProps.locale === "ru" ? "Нефрит - является олицетворением пяти качеств человека" : "Jade is a popular gemstone sometimes referred to as the stone"} /></>}
 
                 </div>
@@ -252,14 +252,14 @@ export const OrderForm = (props) => {
                 <div key={index}>
                   <input type="hidden" name="product_dorsTalisman" value={langProps.locale === "ru" ? "мужской браслет-талисман" : "men`s talisman-bracelet"} />
 
-                  { item.stone === '1d-t' && <><input type="hidden" name="dorsTalisman_stone" value={langProps.locale === "ru" ? "Яшма — источник доброй энергии" : "Jasper is a variety of Chalcedony"} /></>}
-                  { item.stone === '2d-t' && <><input type="hidden" name="dorsTalisman_stone" value={langProps.locale === "ru" ? "Агат - приносит здоровье, счастье и долголетие": "Agate has a stable and grounding quality"} /></>}
+                  { item.stone === '1d-t' && <><input type="hidden" name="dorsTalisman_stone" value={langProps.locale === "ru" ? "Агат — источник доброй энергии" : "Jasper is a variety of Chalcedony"} /></>}
+                  { item.stone === '2d-t' && <><input type="hidden" name="dorsTalisman_stone" value={langProps.locale === "ru" ? "Яшма - приносит здоровье, счастье и долголетие": "Agate has a stable and grounding quality"} /></>}
                   { item.stone === '3d-t' && <><input type="hidden" name="dorsTalisman_stone" value={langProps.locale === "ru" ? "Лазурит имеет способность помогать своему владельцу" : "Lapis Lazuli is a beautiful celestial deep blue stone"} /></>}
                   { item.stone === '4d-t' && <><input type="hidden" name="dorsTalisman_stone" value={langProps.locale === "ru" ? "Обсидиан является мощным поглотителем энерги" : "Obsidian is truth-enhancing. A strongly protective stone"} /></>}
-                  { item.stone === '5d-t' && <><input type="hidden" name="dorsTalisman_stone" value={langProps.locale === "ru" ? "Яшма — источник доброй энергии" : "Pyrite is an iron sulfide mineral with a metallic luster"} /></>}
+                  { item.stone === '5d-t' && <><input type="hidden" name="dorsTalisman_stone" value={langProps.locale === "ru" ? "Пирит — источник доброй энергии" : "Pyrite is an iron sulfide mineral with a metallic luster"} /></>}
                   { item.stone === '6d-t' && <><input type="hidden" name="dorsTalisman_stone" value={langProps.locale === "ru" ? "Тигровый глаз — камень мудрецов и правителей" : "Tiger eye is a variety of Chalcedony"} /></>}
                   { item.stone === '7d-t' && <><input type="hidden" name="dorsTalisman_stone" value={langProps.locale === "ru" ? "Гематит - один из сильнейших магических камней" : "Hematite is also called like Blood stone"} /></>}
-                  { item.stone === '8d-t' && <><input type="hidden" name="dorsTalisman_stone" value={langProps.locale === "ru" ? "Обсидиан является мощным поглотителем энерги." : "Onyx is a stone that offers up powerful vibrations of protection"} /></>}
+                  { item.stone === '8d-t' && <><input type="hidden" name="dorsTalisman_stone" value={langProps.locale === "ru" ? "Оникс является мощным поглотителем энерги." : "Onyx is a stone that offers up powerful vibrations of protection"} /></>}
                   { item.stone === '9d-t' && <><input type="hidden" name="dorsTalisman_stone" value={langProps.locale === "ru" ? "Нефрит - является олицетворением пяти качеств человека" : "Jade is a popular gemstone sometimes referred to as the stone"} /></>}
 
                 </div>
