@@ -1,5 +1,4 @@
 import React, {useEffect, useState} from 'react';
-import { FormattedMessage } from "react-intl";
 import { Wrapper, Qr } from "./info-styled";
 import qr from './qr.png'
 
@@ -24,7 +23,7 @@ export const Info = (props) => {
             <img src={qr} alt="JewelCocktail"/>
           </Qr>
           <div className="add-special-width">
-            {langProps.location === " ru" ?
+            {langProps.locale === "ru" ?
             <>
               <h3>особый <span>подарок</span> с цифровым посланием</h3>
               <p className="how-it-works">как это работает</p>

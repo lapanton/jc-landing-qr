@@ -111,7 +111,7 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
   }, [show]);
   const talismanUrlStone  = location.pathname === "/talisman/stone";
   const talismanUrl  = location.pathname === "/talisman";
-  const valueHeader = talismanUrl ? {height: "19rem"} : {height: "15rem"};
+  const valueHeader = talismanUrl ? {height: "9rem"} : {height: "15rem"};
   return (
     <ConttainerWrap className={sticky ? 'sticky' : ' '} style={!isMobile ? valueHeader : talismanUrlStone ? {height: "15rem"} : {}}>
       <Wrapper>

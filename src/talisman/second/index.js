@@ -36,7 +36,7 @@ export const SecondTalisman = (props) => {
             <WrapSubtitle>hi-tech {langProps.locale === "ru" ? "ТАЛИСМАН" : "TALISMAN"}</WrapSubtitle>
             <WrapDescription>
               {langProps.locale === "ru" ? <>
-              создай <span>талисман</span><br/>по своему смыслу усиль энергию шарма
+              создай <span>талисман</span><br/>по своему смыслу усиль энергию камня
               </> : <>
                 create <span>talisman</span>
                 according to your meaning and use the energy of charm

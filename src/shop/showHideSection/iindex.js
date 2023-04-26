@@ -72,17 +72,10 @@ export const ShowHideSection = (props) => {
                   <BuyButton onClick={() => handleScroll()}>
                     {langProps.locale === "ru" ? "подарить" : "present" }
                   </BuyButton>
-                  <div className="main-text to-center">
-              <span>
-                <img src={heeart} alt="JewelCocktail" className="heeeeeart"/>
-                {langProps.locale === "ru" ? "Старые и новые решения" : "Old and new solutions" }
-                <img src={qrcode} alt="JewelCocktail" className="qqqrcode"/>
-              </span>
-                  </div>
                   <div className="second-text to-center">
                     {langProps.locale === "ru" ?
                     "Чувства – это то, что живет в сердце, а подарок с душой скажет о вашем отношении лучше слов" : "Feelings are what live in the heart, and a gift with soul will speak better about your attitude than words."}</div>
-                  <SecondVideo />
+
                   <div className="text-three"> {langProps.locale === "ru" ? "лучший подарок – это внимание и забота украшения Jewel Cocktail помогут сохранить яркие моменты и чувства " : "The best gift  is attention and care. Jewel Cocktail helps to fix bright moments and feelings "}</div>
                   <ButtonHide onClick={() => {
                     window.scrollTo({top: 300, left: 0, behavior: 'smooth'});
@@ -117,27 +110,6 @@ export const ShowHideSection = (props) => {
             }
           </RightPart>
         </WrapDesktop>
-        <SecondWrapDesktop>
-          <LeftPartSecond>
-            {langProps.locale === "ru" ?
-              <>
-                <h3>Старые и новые решения</h3>
-                <p>лучший подарок – внимание и забота
-                  украшения Jewel Cocktail помогут сохранить яркие моменты и чувства</p>
-              </> :
-              <>
-                <h3>Old and new solutions</h3>
-                <p>The best gift  is attention and care. Jewel Cocktail helps to fix bright moments and feelings </p>
-              </>
-            }
-
-          </LeftPartSecond>
-          <RighhtPartSecond>
-            <video width="100%" height="100%" autoPlay loop muted playsInline>
-              <source src={vid} type="video/mp4"/>
-            </video>
-          </RighhtPartSecond>
-        </SecondWrapDesktop>
       </>
     }
     </>

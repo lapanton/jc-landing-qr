@@ -287,8 +287,10 @@ export const WrapTitle = styled.div`
     color: #fff;
     letter-spacing: 0.425em;
     text-transform: uppercase;
+    display: none;
     @media screen and (max-width: 768px) {
       font-size: 1.5rem;
+      display: block;
     }
   }
   .stone-title {

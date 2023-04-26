@@ -46,6 +46,7 @@ import {SecondTalisman} from "./talisman/second";
 import {ConstructorQrTalisman} from "./components/ConstructorQrTalisman/ConstructorQrTalisman";
 import {ExampleTalisman} from "./talisman/exampleTalisman";
 import {PopupShopClose} from "./components/popupshopclose";
+import { Oldnew } from "./shop/oldnew";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -200,6 +201,7 @@ export const App = (props) => {
               <Info langProps={props} />
               <ShowHideSection langProps={props} />
               <WrapProducts langProps={props} showPopup={showPopup} setShowPopup={setShowPopup} card={card} setCard={setCard} />
+              <Oldnew langProps={props} />
               <SelfProductShop />
               <OsobennostiTehnologiiShop />
               <ContactsShop />
