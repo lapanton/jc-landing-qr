@@ -155,6 +155,8 @@ export const ConstructorTalisman = (props) => {
   const [uplFoto, setUplFoto] = useState(false);
   const [soglasie, setSeoglasie] = useState(false);
   const [mailvalid, setMailValid] = useState(false);
+  const [statusAds, setStatusAds] = useState(true);
+  const [voiceAudio, setVoiceAudio] = useState("");
 
   const handleSubmit = async () => {
 
@@ -190,6 +192,8 @@ export const ConstructorTalisman = (props) => {
       phone: phone,
       sendEmail: true,
       shortId: id,
+      ads: statusAds,
+      audio: voiceAudio
     }
 
     files.forEach(file => formData.append('img', file));
@@ -364,6 +368,11 @@ export const ConstructorTalisman = (props) => {
                         <input name="checked" type="checkbox" checked={checked}
                                onChange={e => setChecked(!checked)} className="checkbox-round" />
                         <span><FormattedMessage id="qr.podone" /><a href="/privacy" target="_blank"><FormattedMessage id="qr.podtwo" /></a></span>
+                      </WrapInputCheckBox>
+                      <WrapInputCheckBox>
+                        <input name="checked" type="checkbox" checked={statusAds}
+                               onChange={e => setStatusAds(!statusAds)} className="checkbox-round" />
+                        <span>Разрешаю использовать контент в маркетинговых целях</span>
                       </WrapInputCheckBox>
                       <ButtonSubmit onClick={handleSubmit} className={value?.status === 'completed' ? "completed": "notcompleted"}>
                         {langProps.locale === "ru" ? "Создай свой талисман" : "Create your digital talisman"}
