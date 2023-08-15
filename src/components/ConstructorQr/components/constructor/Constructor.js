@@ -58,6 +58,8 @@ import {ConfettiAnimation} from "../../../../animation/Confetti";
 import removeIcon from "../../../ConstructorQrTalisman/components/constructor/remove.png";
 import { NotifyPopup } from "../notify-popup";
 import {FormattedMessage} from "react-intl";
+import AudioPlayerRecorder from "../../../audioComponent/audioComponent";
+import microphone from "../../../audioComponent/audioComponent/microphone.svg";
 
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -73,6 +75,8 @@ export const Constructor = (props) => {
     const [signature, setSignature] = useState("");
     const [phone, setPhone] = useState("");
     const [authorEmail, setAuthorEmail] = useState("");
+  const [audioBlob, setAudioBlob] = useState(null);
+
   const onDrop = useCallback((acceptedFiles, fileRejections) => {
 
     fileRejections.forEach((file) => {
@@ -172,9 +176,23 @@ export const Constructor = (props) => {
   const [soglasie, setSeoglasie] = useState(false);
   const [mailvalid, setMailValid] = useState(false);
   const [statusAds, setStatusAds] = useState(true);
-  const [voiceAudio, setVoiceAudio] = useState("");
-  const handleSubmit = async () => {
+  const [validAudio, setValidAudio] = useState(false);
+  const [audioData, setAudioData] = useState(null)
 
+  const blobToBinary = (blob) => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        resolve(event.target.result);
+      };
+      reader.onerror = function(error) {
+        reject(error);
+      };
+      reader.readAsArrayBuffer(blob);
+    });
+  };
+
+  const handleSubmit = async () => {
     if (message === "") {
       setShowVediteText(true);
       return setTimeout(() => {setShowVediteText(false)}, 3000);
@@ -196,6 +214,11 @@ export const Constructor = (props) => {
     return setTimeout(() => {setSeoglasie(false)}, 3000);
     }
 
+    // if (audioData === null) {
+    //   setValidAudio(true);
+    //   return setTimeout(() => {setValidAudio(false)}, 3000);
+    // }
+
 
     const formData = new FormData();
 
@@ -208,10 +231,17 @@ export const Constructor = (props) => {
       sendEmail: true,
       shortId: id,
       ads: statusAds,
-      audio: voiceAudio
-    }
+    };
 
-    files.forEach(file => formData.append('img', file));
+    files.forEach(file => formData.append('media', file));
+
+    // Convert audioData Blob to binary ArrayBuffer and append to formData
+    if (audioData) {
+      const audioBinary = await blobToBinary(audioData);
+      const audioBlob = new Blob([audioBinary], { type: 'audio/ogg' });
+      formData.append('media', audioBlob, 'filename.ogg');  // Adding the audio with filename
+      // formData.append('audioPreview', URL.createObjectURL(audioBlob)); // Adding audio preview
+    }
 
     Object.entries(rest).forEach(([key, value]) => {
       formData.append(key, value);
@@ -219,18 +249,22 @@ export const Constructor = (props) => {
 
     try {
       setSendData(true);
+      for (let [key, value] of formData.entries()) {
+        console.log(key, value);
+      }
       await axios.patch(`https://admin.jewelcocktail.com/v1/qrcodes/${id}`, formData).then(() => {
         setTimeout(() => {
           window.location.reload();
         }, 100);
       });
     } catch (error) {
-      console.log('something goes wroong, error: ', error);
+      console.log('something goes wrong, error: ', error);
     } finally {
-      console.log('finaly')
+      console.log('finally', formData);
     }
 
   };
+
 
   const [hide, setHide] = useState(true);
 
@@ -265,6 +299,7 @@ export const Constructor = (props) => {
       {uplFoto && <NotifyPopup value={<FormattedMessage id="qr.validPhoto" />} />}
       {soglasie && <NotifyPopup value={<FormattedMessage id="qr.soglasie" />} />}
       {mailvalid && <NotifyPopup value={<FormattedMessage id="qr.mailvalid" />} />}
+      {validAudio && <NotifyPopup value="Пожалуйста, добавьте аудио" />}
 
         <h2 className={value?.status === 'completed' ? "completed": "notcompleted"}><FormattedMessage id="qr.construcctor" /></h2>
       {value?.status === 'completed' && hide &&  (
@@ -301,6 +336,12 @@ export const Constructor = (props) => {
               <img src={podpsi} alt="JewelCocktail"/>
               <div><FormattedMessage id="qr.podpisi" /></div>
               <span><FormattedMessage id="qr.podpisitext" /></span>
+            </Podpsi>
+
+            <Podpsi style={{ marginTop: "135px" }}>
+              <img src={microphone} alt="JewelCocktail" style={{width: "22px"}} />
+              <div>Aудиозапись</div>
+              <span>Добавьте аудио сообщение или песню до 1 минуты</span>
             </Podpsi>
 
             <ResultPrewiev>
@@ -347,6 +388,10 @@ export const Constructor = (props) => {
                 <p><FormattedMessage id="qr.podpisitext" /></p>
                 <input value={signature} type="text" name="signature" onChange={handleChangeSignature} />
               </InnerSignatture>
+            </WrapSignature>
+
+            <WrapSignature className={value?.status === 'completed' ? "completed": "notcompleted"}>
+              <AudioPlayerRecorder setAudioBlob={setAudioBlob} audioBlob={audioBlob} setAudioData={setAudioData} />
             </WrapSignature>
 
             <WrapPreviewResult>
