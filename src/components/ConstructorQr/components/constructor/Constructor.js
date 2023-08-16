@@ -60,6 +60,7 @@ import { NotifyPopup } from "../notify-popup";
 import { FormattedMessage } from "react-intl";
 import AudioPlayerRecorder from "../../../audioComponent/audioComponent";
 import microphone from "../../../audioComponent/audioComponent/microphone.svg";
+import AudioPlayer from "../../../audioComponent/audioPlayer";
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 export const Constructor = (props) => {
@@ -84,7 +85,7 @@ export const Constructor = (props) => {
             alert(
               langProps.locale === "ru"
                 ? "Оптимизируйте пожалуста ваше фото, максимально  допустимый размер фото 10mb"
-                : "Please optimize your photo, the maximum allowed size for the photo is 10MB."
+                : "Please optimize your photo, the maximum allowed size for the photo is 10MB.",
             );
           }
 
@@ -92,7 +93,7 @@ export const Constructor = (props) => {
             alert(
               langProps.locale === "ru"
                 ? "Неверный тип файла"
-                : "Invalid file type."
+                : "Invalid file type.",
             );
           }
         });
@@ -110,7 +111,7 @@ export const Constructor = (props) => {
           const convertedBlobFile = new File(
             [compressedBlob],
             acceptedFiles[0].name,
-            { type: acceptedFiles[0].type, lastModified: Date.now() }
+            { type: acceptedFiles[0].type, lastModified: Date.now() },
           );
           Object.assign(convertedBlobFile, {
             preview: URL.createObjectURL(convertedBlobFile),
@@ -121,14 +122,14 @@ export const Constructor = (props) => {
             alert(
               langProps.locale === "ru"
                 ? "Максимально допустимое количество 3 фото"
-                : "The maximum allowed quantity is 3 photos"
+                : "The maximum allowed quantity is 3 photos",
             );
         })
         .catch((e) => {
           console.log("Something goes wrong: ", e);
         });
     },
-    [files, langProps.locale]
+    [files, langProps.locale],
   );
 
   const remove = (file) => {
@@ -263,7 +264,7 @@ export const Constructor = (props) => {
         console.log(key, value);
       }
       await axios
-        .patch(`http://localhost:3001/v1/qrcodes/${id}`, formData)
+        .patch(`https://admin.jewelcocktail.com/v1/qrcodes/${id}`, formData)
         .then(() => {
           setTimeout(() => {
             window.location.reload();
@@ -661,6 +662,14 @@ export const Constructor = (props) => {
                     <FormattedMessage id="qr.create" />
                   </ButtonSubmit>
                 </>
+              )}
+
+              {value?.status === "completed" && value.audio.length > 0 && (
+                <div style={{ marginTop: "30px" }}>
+                  {value?.status === "completed" && value.audio.length > 0 && (
+                    <AudioPlayer audioData={value?.audio[0]} />
+                  )}
+                </div>
               )}
             </InnerPreviewResult>
           </WrapPreviewResult>
