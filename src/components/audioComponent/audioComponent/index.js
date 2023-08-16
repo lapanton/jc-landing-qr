@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
-import {trimAudio} from "../helpers/trimAuio";
-import microphone from './microphone.svg';
+import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+import { trimAudio } from "../helpers/trimAuio";
+import microphone from "./microphone.svg";
 
 // Styled Components
 const Container = styled.div`
@@ -20,7 +20,7 @@ const Container = styled.div`
 const Title = styled.div`
   text-align: center;
   display: none;
-  background: #673E37;
+  background: #673e37;
   color: #fff;
   padding: 18px 22px 21px 22px;
   border-radius: 10px 10px 0 0;
@@ -30,12 +30,12 @@ const Title = styled.div`
       width: inherit;
       height: inherit;
     }
-    background: #673E37;
+    background: #673e37;
     display: flex;
     div {
       padding-left: 7px;
       padding-top: 6px;
-      font-family: 'Inter', sans-serif;
+      font-family: "Inter", sans-serif;
       font-weight: 500;
     }
   }
@@ -45,7 +45,7 @@ const Title = styled.div`
 `;
 
 const Button = styled.button`
-  background: #A55248;
+  background: #a55248;
   color: white;
   border: none;
   padding: 10px 15px;
@@ -78,119 +78,123 @@ const FileInput = styled.input`
 
 const FileInfo = styled.div`
   margin-top: 10px;
-  color: #A55248;
+  color: #a55248;
 `;
 
 const Timer = styled.div`
   font-size: 20px;
   margin-top: 10px;
-  color: #A55248;
+  color: #a55248;
 `;
 
 function AudioPlayerRecorder(props) {
-    const {audioBlob, setAudioBlob, setAudioData}  = props;
-    const [isRecording, setIsRecording] = useState(false);
-    const [mediaRecorder, setMediaRecorder] = useState(null);
-    const [time, setTime] = useState(60);
-    const [chosenFileName, setChosenFileName] = useState('');
-    const [tempAudioBlob, setTempAudioBlob] = useState(null);
+  const { audioBlob, setAudioBlob, setAudioData } = props;
+  const [isRecording, setIsRecording] = useState(false);
+  const [mediaRecorder, setMediaRecorder] = useState(null);
+  const [time, setTime] = useState(60);
+  const [chosenFileName, setChosenFileName] = useState("");
+  const [tempAudioBlob, setTempAudioBlob] = useState(null);
 
-    useEffect(() => {
-        if (isRecording && time > 0) {
-            const timer = setTimeout(() => {
-                setTime(time - 1);
-            }, 1000);
-            return () => clearTimeout(timer);
-        }
-        if (time === 0) {
-            stopRecording();
-        }
-    }, [isRecording, time]);
+  useEffect(() => {
+    if (isRecording && time > 0) {
+      const timer = setTimeout(() => {
+        setTime(time - 1);
+      }, 1000);
+      return () => clearTimeout(timer);
+    }
+    if (time === 0) {
+      stopRecording();
+    }
+  }, [isRecording, time]);
 
-    const startRecording = async () => {
-        const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-        const newMediaRecorder = new MediaRecorder(stream);
-        const audioChunks = [];
-        newMediaRecorder.ondataavailable = event => {
-            audioChunks.push(event.data);
-        };
-        newMediaRecorder.onstop = () => {
-            const audioBlob = new Blob(audioChunks);
-            const audioUrl = URL.createObjectURL(audioBlob);
-            setAudioData(audioBlob);
-            setAudioBlob(audioUrl);
-        };
-        newMediaRecorder.start();
-        setIsRecording(true);
-        setMediaRecorder(newMediaRecorder);
+  const startRecording = async () => {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    const newMediaRecorder = new MediaRecorder(stream);
+    const audioChunks = [];
+    newMediaRecorder.ondataavailable = (event) => {
+      audioChunks.push(event.data);
     };
-
-    const stopRecording = () => {
-        if (mediaRecorder) {
-            mediaRecorder.stop();
-            setIsRecording(false);
-            setTime(60);
-        }
+    newMediaRecorder.onstop = () => {
+      const audioBlob = new Blob(audioChunks, {
+        type: "audio/ogg; codecs=opus",
+      });
+      const audioUrl = URL.createObjectURL(audioBlob);
+      setAudioData(audioBlob);
+      setAudioBlob(audioUrl);
     };
+    newMediaRecorder.start();
+    setIsRecording(true);
+    setMediaRecorder(newMediaRecorder);
+  };
 
-    const handleFileChange = (event) => {
-        const file = event.target.files[0];
-        if (file) {
-            setChosenFileName(file.name);
-            trimAudio(file, (trimmedBlob) => {
-                const audioUrl = URL.createObjectURL(trimmedBlob);
-                setAudioData(trimmedBlob);
-                setTempAudioBlob(audioUrl);
-            });
-        }
-    };
+  const stopRecording = () => {
+    if (mediaRecorder) {
+      mediaRecorder.stop();
+      setIsRecording(false);
+      setTime(60);
+    }
+  };
 
-    const acceptAudio = () => {
-        setAudioBlob(tempAudioBlob);
-        setTempAudioBlob(null);
-    };
+  const handleFileChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      setChosenFileName(file.name);
+      trimAudio(file, (trimmedBlob) => {
+        const audioUrl = URL.createObjectURL(trimmedBlob);
+        setAudioData(trimmedBlob);
+        setTempAudioBlob(audioUrl);
+      });
+    }
+  };
 
-    const rejectAudio = () => {
-        setTempAudioBlob(null);
-        setChosenFileName('');
-    };
-    // console.log('XXXX', audioBlob);
-    return (
-        <Container>
-            <Title>
-                <img src={microphone} alt="JewelCocktail"/>
-                <div>Запись аудио</div>
-            </Title>
-            {!audioBlob && !tempAudioBlob ? (
-                <div>
-                    {isRecording ? (
-                        <Button onClick={stopRecording}>Остановить запись</Button>
-                    ) : (
-                        <Button onClick={startRecording}>Начать запись</Button>
-                    )}
-                    <Timer>{time} секунд</Timer>
-                    <FileInputLabel>
-                        Выбрать файл
-                        <FileInput type="file" accept="audio/*" onChange={handleFileChange} />
-                    </FileInputLabel>
-                    <FileInfo>
-                        {chosenFileName || 'Файл не выбран'}
-                    </FileInfo>
-                </div>
-            ) : tempAudioBlob ? (
-                <div>
-                    <audio controls src={tempAudioBlob}></audio>
-                    <Button onClick={acceptAudio}>Принять</Button>
-                    <Button onClick={rejectAudio}>Отклонить</Button>
-                </div>
-            ) : (
-                <div>
-                    <audio controls src={audioBlob}></audio>
-                    <Button onClick={() => setAudioBlob(null)}>Перезаписать</Button>
-                </div>
-            )}
-        </Container>
-    );
+  const acceptAudio = () => {
+    setAudioBlob(tempAudioBlob);
+    setTempAudioBlob(null);
+  };
+
+  const rejectAudio = () => {
+    setTempAudioBlob(null);
+    setChosenFileName("");
+  };
+  // console.log('XXXX', audioBlob);
+  return (
+    <Container>
+      <Title>
+        <img src={microphone} alt="JewelCocktail" />
+        <div>Запись аудио</div>
+      </Title>
+      {!audioBlob && !tempAudioBlob ? (
+        <div>
+          {isRecording ? (
+            <Button onClick={stopRecording}>Остановить запись</Button>
+          ) : (
+            <Button onClick={startRecording}>Начать запись</Button>
+          )}
+          <Timer>{time} секунд</Timer>
+          <FileInputLabel>
+            Выбрать файл
+            <FileInput
+              type="file"
+              accept="audio/*"
+              onChange={handleFileChange}
+            />
+          </FileInputLabel>
+          <FileInfo>{chosenFileName || "Файл не выбран"}</FileInfo>
+        </div>
+      ) : tempAudioBlob ? (
+        <div>
+          <audio controls src={tempAudioBlob}></audio>
+          <Button onClick={acceptAudio}>Принять</Button>
+          <Button onClick={rejectAudio}>Отклонить</Button>
+        </div>
+      ) : (
+        <div>
+          <audio controls src={audioBlob}></audio>
+          <Button onClick={() => setAudioBlob(null)}>Перезаписать</Button>
+        </div>
+      )}
+    </Container>
+  );
 }
 
 export default AudioPlayerRecorder;
