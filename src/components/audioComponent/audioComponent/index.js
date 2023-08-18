@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { trimAudio } from "../helpers/trimAuio";
 import microphone from "./microphone.svg";
+import RecordRTC from 'recordrtc';
 
 // Styled Components
 const Container = styled.div`
@@ -109,27 +110,29 @@ function AudioPlayerRecorder(props) {
 
   const startRecording = async () => {
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-    const newMediaRecorder = new MediaRecorder(stream);
-    const audioChunks = [];
-    newMediaRecorder.ondataavailable = (event) => {
-      audioChunks.push(event.data);
-    };
-    newMediaRecorder.onstop = () => {
-      const audioBlob = new Blob(audioChunks, {
-        type: "audio/ogg; codecs=opus",
-      });
-      const audioUrl = URL.createObjectURL(audioBlob);
-      setAudioData(audioBlob);
-      setAudioBlob(audioUrl);
-    };
-    newMediaRecorder.start();
+
+    let recorder = RecordRTC(stream, {
+      type: 'audio',
+      mimeType: 'audio/wav',
+      numberOfAudioChannels: 1
+    });
+
+    recorder.startRecording();
+
     setIsRecording(true);
-    setMediaRecorder(newMediaRecorder);
+    setMediaRecorder(recorder);
   };
 
   const stopRecording = () => {
     if (mediaRecorder) {
-      mediaRecorder.stop();
+      mediaRecorder.stopRecording(() => {
+        const blob = mediaRecorder.getBlob();
+
+        const audioUrl = URL.createObjectURL(blob);
+        setAudioData(blob);
+        setAudioBlob(audioUrl);
+      });
+      
       setIsRecording(false);
       setTime(60);
     }
@@ -156,7 +159,7 @@ function AudioPlayerRecorder(props) {
     setTempAudioBlob(null);
     setChosenFileName("");
   };
-  // console.log('XXXX', audioBlob);
+
   return (
     <Container>
       <Title>
