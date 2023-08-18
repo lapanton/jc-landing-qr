@@ -178,7 +178,7 @@ function AudioPlayerRecorder(props) {
             Выбрать файл
             <FileInput
               type="file"
-              accept="audio/*"
+              accept="audio/*,audio/wav,.mp3,audio/mp3,.wav"
               onChange={handleFileChange}
             />
           </FileInputLabel>
