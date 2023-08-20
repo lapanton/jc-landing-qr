@@ -68,7 +68,7 @@ export const Constructor = (props) => {
   const value = props.value;
   const langProps = props.langProps;
   const { id } = useParams();
-  const [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useState(true);
   const [sendData, setSendData] = useState(false);
   const [files, setFiles] = useState([]);
   const [message, setMessage] = useState("");
@@ -440,7 +440,7 @@ export const Constructor = (props) => {
                 <FormattedMessage id="qr.fon" />
               </div>
             </FonMobile>
-            <p>
+            <p style={{ color: "white" }}>
               <FormattedMessage id="qr.photo" />
             </p>
             <InnerPhoto>
@@ -473,7 +473,7 @@ export const Constructor = (props) => {
                   <FormattedMessage id="qr.podpisi" />
                 </div>
               </PodpsiMob>
-              <p>
+              <p style={{ color: "white" }}>
                 <FormattedMessage id="qr.podpisitext" />
               </p>
               <input

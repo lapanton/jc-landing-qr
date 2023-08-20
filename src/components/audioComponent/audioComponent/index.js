@@ -49,6 +49,7 @@ const Title = styled.div`
     top: 50%;
     right: 5px;
     background: red;
+    color: #fff;
     border-radius: 8px;
     border: 1px solid white;
     text-transform: uppercase;
@@ -61,31 +62,36 @@ const Title = styled.div`
 `;
 
 const Button = styled.button`
-  background: #a55248;
-  color: white;
+  background: linear-gradient(45deg, #ffc1a1, #ff847c);
+  color: #000;
   border: none;
   padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.2s;
   margin: 5px;
-
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
   &:hover {
-    background: #823c33;
+    background: linear-gradient(45deg, #ffc1a1, #ff847c);
   }
 `;
 
 const FileInputLabel = styled.label`
   display: block;
   padding: 10px 15px;
-  color: #fff;
-  background: rgb(165, 82, 72);
-  //border: 1px solid #fff;
+  background: linear-gradient(45deg, #ffc1a1, #ff847c);
+  color: #000;
   border-radius: 5px;
-  margin-top: 10px;
   cursor: pointer;
   text-align: center;
   margin: 10px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 500;
 `;
 
 const FileInput = styled.input`
@@ -94,13 +100,13 @@ const FileInput = styled.input`
 
 const FileInfo = styled.div`
   margin-top: 10px;
-  color: #a55248;
+  color: rgb(107 15 3);
 `;
 
 const Timer = styled.div`
   font-size: 20px;
   margin-top: 10px;
-  color: #a55248;
+  color: rgb(107 15 3);
 `;
 
 function AudioPlayerRecorder(props) {
