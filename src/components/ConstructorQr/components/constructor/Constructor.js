@@ -383,6 +383,7 @@ export const Constructor = (props) => {
             />
             <div>Aудиозапись</div>
             <span>Добавьте аудио сообщение или песню до 1 минуты</span>
+            <div className="new-label-icon">новинка!</div>
           </Podpsi>
 
           <ResultPrewiev>
@@ -415,6 +416,7 @@ export const Constructor = (props) => {
             className={
               value?.status === "completed" ? "completed" : "notcompleted"
             }
+            style={{ color: "white" }}
           >
             <FormattedMessage id="qr.message" />
           </p>
@@ -513,6 +515,7 @@ export const Constructor = (props) => {
                 className={
                   value?.status === "completed" ? "completed" : "notcompleted"
                 }
+                style={{ color: "white" }}
               >
                 <FormattedMessage id="qr.veiw" />
               </p>

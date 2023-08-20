@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import cover from './cover.png';
+import cover from "./cover.png";
 
 export const Wrapper = styled.div`
   .completed {
@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
     margin-top: 0rem;
   }
   h2 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 1.875rem;
     font-weight: 400;
     text-transform: uppercase;
@@ -35,7 +35,7 @@ export const WrapConstructorArea = styled.div`
 `;
 
 export const SideArea = styled.div`
-  background: #673E37;
+  background: #673e37;
   width: 246px;
   height: 100%;
   position: absolute;
@@ -51,7 +51,7 @@ export const SideArea = styled.div`
 
 export const ConstructorArea = styled.div`
   margin-left: 310px;
-  background: #A79086;
+  background: #a79086;
   padding: 2.2rem 2.8rem;
   textarea {
     resize: none;
@@ -81,7 +81,7 @@ export const ConstructorArea = styled.div`
       display: block;
       padding: 10px 22px 15px 22px;
       color: rgba(255, 255, 255, 0.71);
-      font-family: 'Inter', sans-serif;
+      font-family: "Inter", sans-serif;
       font-weight: 400;
       text-align: center;
     }
@@ -91,7 +91,7 @@ export const ConstructorArea = styled.div`
 export const TextMessage = styled.div`
   position: relative;
   div {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 500;
     color: #fff;
     padding-left: 35px;
@@ -99,7 +99,7 @@ export const TextMessage = styled.div`
   }
   span {
     color: rgba(255, 255, 255, 0.38);
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 400;
     margin-top: 1rem;
   }
@@ -112,7 +112,7 @@ export const Fon = styled.div`
   position: relative;
   margin-top: 66px;
   div {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 500;
     color: #fff;
     padding-left: 35px;
@@ -120,7 +120,7 @@ export const Fon = styled.div`
   }
   span {
     color: rgba(255, 255, 255, 0.38);
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 400;
     margin-top: 1rem;
   }
@@ -133,7 +133,7 @@ export const Ramka = styled.div`
   position: relative;
   margin-top: 100px;
   div {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 500;
     color: #fff;
     padding-left: 35px;
@@ -141,21 +141,21 @@ export const Ramka = styled.div`
   }
   span {
     color: rgba(255, 255, 255, 0.38);
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 400;
     margin-top: 1rem;
   }
   img {
     position: absolute;
   }
-  display: none
+  display: none;
 `;
 
 export const ResultPrewiev = styled.div`
   position: relative;
   margin-top: 45px;
   div {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 500;
     color: #fff;
     padding-left: 35px;
@@ -163,7 +163,7 @@ export const ResultPrewiev = styled.div`
   }
   span {
     color: rgba(255, 255, 255, 0.38);
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 400;
     margin-top: 1rem;
   }
@@ -176,7 +176,7 @@ export const Podpsi = styled.div`
   position: relative;
   margin-top: 50px;
   div {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 500;
     color: #fff;
     padding-left: 35px;
@@ -184,7 +184,7 @@ export const Podpsi = styled.div`
   }
   span {
     color: rgba(255, 255, 255, 0.38);
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 400;
     margin-top: 1rem;
   }
@@ -194,11 +194,25 @@ export const Podpsi = styled.div`
   @media screen and (max-width: 768px) {
     margin-top: 50px;
   }
+  .new-label-icon {
+    position: absolute;
+    top: 0;
+    right: -10px;
+    background: red;
+    color: #fff;
+    border-radius: 8px;
+    border: 1px solid white;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
 `;
 
 export const TextMessageMob = styled.div`
   display: none;
-  background: #673E37;
+  background: #673e37;
   color: #fff;
   padding: 18px 22px 21px 22px;
   border-radius: 10px 10px 0 0;
@@ -206,7 +220,7 @@ export const TextMessageMob = styled.div`
     display: flex;
     div {
       padding-left: 20px;
-      font-family: 'Inter', sans-serif;
+      font-family: "Inter", sans-serif;
       font-weight: 500;
     }
   }
@@ -218,7 +232,7 @@ export const WrapPhotoUpload = styled.div`
   margin: 28px 0 0 0;
   p {
     @media screen and (max-width: 768px) {
-      background: #A79086;
+      background: #a79086;
     }
   }
 `;
@@ -226,7 +240,7 @@ export const WrapPhotoUpload = styled.div`
 export const InnerPhoto = styled.div`
   padding: 19px;
   @media screen and (max-width: 768px) {
-    background: #A79086;
+    background: #a79086;
   }
   .container {
     display: flex;
@@ -248,7 +262,7 @@ export const InnerPhoto = styled.div`
     border-style: dashed;
     color: #bdbdbd;
     outline: none;
-    transition: border .24s ease-in-out;
+    transition: border 0.24s ease-in-out;
     background: transparent;
     &:hover {
       cursor: pointer;
@@ -317,16 +331,16 @@ export const Img = styled.img`
 
 export const FonMobile = styled.div`
   display: none;
-  background: #673E37;
+  background: #673e37;
   color: #fff;
   padding: 18px 22px 21px 22px;
   border-radius: 10px 10px 0 0;
   @media screen and (max-width: 768px) {
-    background: #673E37;
+    background: #673e37;
     display: flex;
     div {
       padding-left: 20px;
-      font-family: 'Inter', sans-serif;
+      font-family: "Inter", sans-serif;
       font-weight: 500;
     }
   }
@@ -341,27 +355,27 @@ export const InnerBoard = styled.div`
   @media screen and (max-width: 768px) {
     text-align: center;
   }
-    img {
-      width: 72px;
-      height: 56px;
-      margin-right: 20px;
-      &:hover {
-        cursor: pointer;
-      }
-      &.active {
-        transform: scale(1.1);
-      }
-      @media screen and (max-width: 768px) {
-        &:last-child {
-          margin-top: 11px;
-        }
+  img {
+    width: 72px;
+    height: 56px;
+    margin-right: 20px;
+    &:hover {
+      cursor: pointer;
+    }
+    &.active {
+      transform: scale(1.1);
+    }
+    @media screen and (max-width: 768px) {
+      &:last-child {
+        margin-top: 11px;
       }
     }
+  }
 `;
 
 export const RamkaMob = styled.div`
   display: none;
-  background: #673E37;
+  background: #673e37;
   color: #fff;
   padding: 18px 22px 21px 22px;
   border-radius: 10px 10px 0 0;
@@ -370,11 +384,11 @@ export const RamkaMob = styled.div`
       width: inherit;
       height: inherit;
     }
-    background: #673E37;
+    background: #673e37;
     display: flex;
     div {
       padding-left: 20px;
-      font-family: 'Inter', sans-serif;
+      font-family: "Inter", sans-serif;
       font-weight: 500;
     }
   }
@@ -403,7 +417,7 @@ export const InnerSignatture = styled.div`
 
 export const PodpsiMob = styled.div`
   display: none;
-  background: #673E37;
+  background: #673e37;
   color: #fff;
   padding: 18px 22px 21px 22px;
   border-radius: 10px 10px 0 0;
@@ -412,11 +426,11 @@ export const PodpsiMob = styled.div`
       width: inherit;
       height: inherit;
     }
-    background: #673E37;
+    background: #673e37;
     display: flex;
     div {
       padding-left: 20px;
-      font-family: 'Inter', sans-serif;
+      font-family: "Inter", sans-serif;
       font-weight: 500;
     }
   }
@@ -437,7 +451,7 @@ export const WrapPreviewResult = styled.div`
       border-bottom-right-radius: 4px;
     }
   }
-  .emptyHeightCompl{
+  .emptyHeightCompl {
     height: auto;
     @media screen and (max-width: 768px) {
       height: auto;
@@ -449,7 +463,7 @@ export const InnerPreviewResult = styled.div`
 `;
 
 export const MessageView = styled.div`
-  color: #FFFFFF;
+  color: #ffffff;
   margin-bottom: 40px;
   .poezi {
     display: block !important;
@@ -460,7 +474,7 @@ export const MessageView = styled.div`
     padding: 0 22px 40px 22px;
     margin-bottom: 0;
   }
-  &.morePadding{
+  &.morePadding {
     @media screen and (max-width: 768px) {
       padding-top: 40px;
     }
@@ -479,7 +493,7 @@ export const MessageView = styled.div`
 
 export const ButtonSubmit = styled.div`
   padding: 25px 96px;
-  background: #A55248;
+  background: #a55248;
   border-radius: 5px;
   display: inline-block;
   color: #fff;
@@ -498,14 +512,14 @@ export const WrapName = styled.div`
   padding: 12px 55px;
   display: inline-block;
   color: #000;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 500;
   margin: 40px 0 20px 0;
   font-size: 14px;
   z-index: 3;
   position: relative;
   &:after {
-    content: '';
+    content: "";
     position: absolute;
     background-image: url(${cover});
     background-position: 50% 50%;
@@ -527,9 +541,8 @@ export const WrapName = styled.div`
     }
   }
   &.color_1 {
-    
   }
-  &.color_2{
+  &.color_2 {
     bottom: -8px;
     padding: 8px 55px;
     color: #000;
@@ -570,7 +583,7 @@ export const WrapName = styled.div`
 
 export const ResultPrewievMob = styled.div`
   display: none;
-  background: #673E37;
+  background: #673e37;
   color: #fff;
   padding: 18px 22px 21px 22px;
   border-radius: 10px 10px 0 0;
@@ -579,24 +592,21 @@ export const ResultPrewievMob = styled.div`
       width: inherit;
       height: inherit;
     }
-    background: #673E37;
+    background: #673e37;
     display: flex;
     div {
       padding-left: 7px;
       padding-top: 6px;
-      font-family: 'Inter', sans-serif;
+      font-family: "Inter", sans-serif;
       font-weight: 500;
     }
   }
 `;
 
-export const WrapSlider = styled.div`
-
-`;
+export const WrapSlider = styled.div``;
 export const WrapBorderView = styled.div`
   position: relative;
 `;
-
 
 export const InnerWrapSlider = styled.div`
   max-width: 610px;
@@ -607,7 +617,7 @@ export const InnerWrapSlider = styled.div`
   }
   @media screen and (max-width: 1080px) {
     max-width: 240px;
-    min-width: 240px
+    min-width: 240px;
   }
   @media screen and (max-width: 768px) {
     max-width: inherit;
@@ -618,8 +628,8 @@ export const InnerWrapSlider = styled.div`
     min-width: 610px;
     @media screen and (max-width: 1150px) {
       max-width: 440px;
-    min-width: 440px
-  }
+      min-width: 440px;
+    }
     @media screen and (max-width: 1080px) {
       max-width: 240px;
       min-width: 240px;
@@ -629,9 +639,9 @@ export const InnerWrapSlider = styled.div`
     }
   }
   .slick-track {
-    margin:auto;
+    margin: auto;
   }
-  .slick-prev{
+  .slick-prev {
     z-index: 2;
     top: 270px;
     left: -65px;
@@ -639,7 +649,7 @@ export const InnerWrapSlider = styled.div`
       top: 120px;
     }
   }
-  .slick-next{
+  .slick-next {
     z-index: 2;
     top: 270px;
     right: -65px;
@@ -647,7 +657,7 @@ export const InnerWrapSlider = styled.div`
       top: 120px;
     }
   }
-  .slick-list{
+  .slick-list {
     max-height: auto;
   }
   .imageInnerSlider {
@@ -671,12 +681,12 @@ export const InnerWrapSlider = styled.div`
       border: 5px solid #000;
     }
   }
-  .slick-dots li button:before{
+  .slick-dots li button:before {
     @media screen and (max-width: 768px) {
       color: transparent;
-      border: 5px solid rgba(0,0,0,.25);
+      border: 5px solid rgba(0, 0, 0, 0.25);
     }
-    }
+  }
   .slick-dots li {
     @media screen and (max-width: 768px) {
       margin: 15px;
@@ -696,7 +706,7 @@ export const WrapInnerBorder = styled.div`
   position: absolute;
   z-index: 1;
   left: 50%;
-  transform: translate(-50%,-4px);
+  transform: translate(-50%, -4px);
   @media screen and (max-width: 1080px) {
     max-width: 100%;
     min-width: 100%;
@@ -713,11 +723,11 @@ export const WrapInnerBorder = styled.div`
 export const WrapperPending = styled.div`
   text-align: center;
   margin-top: 2rem;
-  background: #673E37;
+  background: #673e37;
   padding: 10px;
   color: #fff;
   h2 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 2rem;
     font-weight: 300;
     text-transform: uppercase;
@@ -743,7 +753,7 @@ export const WrapInputCheckBox = styled.div`
   }
 
   .checkbox-round:checked {
-    background-color: #A55248;
+    background-color: #a55248;
   }
   span {
     text-align: left;
@@ -774,13 +784,12 @@ export const WrapPhoneEmail = styled.div`
     padding: 11px 22px;
     border: 1px solid #fff;
     color: #fff;
-    width: 100%
+    width: 100%;
   }
   .numberPhone {
     margin-bottom: 20px;
   }
   .emailUser {
-    
   }
   @media screen and (max-width: 768px) {
     margin-top: 0px;
