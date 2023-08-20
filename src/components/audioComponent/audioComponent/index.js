@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { trimAudio } from "../helpers/trimAuio";
 import microphone from "./microphone.svg";
-import RecordRTC from 'recordrtc';
+import RecordRTC from "recordrtc";
 
 // Styled Components
 const Container = styled.div`
@@ -20,6 +20,7 @@ const Container = styled.div`
 
 const Title = styled.div`
   text-align: center;
+  position: relative;
   display: none;
   background: #673e37;
   color: #fff;
@@ -42,6 +43,20 @@ const Title = styled.div`
   }
   img {
     width: 21px;
+  }
+  .new-label-icon {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    background: red;
+    border-radius: 8px;
+    border: 1px solid white;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    transform: translateY(-52%);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
   }
 `;
 
@@ -112,9 +127,9 @@ function AudioPlayerRecorder(props) {
     const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
 
     let recorder = RecordRTC(stream, {
-      type: 'audio',
-      mimeType: 'audio/wav',
-      numberOfAudioChannels: 1
+      type: "audio",
+      mimeType: "audio/wav",
+      numberOfAudioChannels: 1,
     });
 
     recorder.startRecording();
@@ -132,7 +147,7 @@ function AudioPlayerRecorder(props) {
         setAudioData(blob);
         setAudioBlob(audioUrl);
       });
-      
+
       setIsRecording(false);
       setTime(60);
     }
@@ -164,6 +179,7 @@ function AudioPlayerRecorder(props) {
     <Container>
       <Title>
         <img src={microphone} alt="JewelCocktail" />
+        <div className="new-label-icon">новинка!</div>
         <div>Запись аудио</div>
       </Title>
       {!audioBlob && !tempAudioBlob ? (
