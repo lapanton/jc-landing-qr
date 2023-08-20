@@ -62,6 +62,7 @@ export const ConstructorArea = styled.div`
     padding: 11px 22px;
     border: 1px solid #fff;
     color: #fff;
+    font-size: 17px;
   }
   @media screen and (max-width: 768px) {
     margin-left: 0;
@@ -790,6 +791,9 @@ export const WrapPhoneEmail = styled.div`
     margin-bottom: 20px;
   }
   .emailUser {
+    input {
+      font-size: 17px;
+    }
   }
   @media screen and (max-width: 768px) {
     margin-top: 0px;

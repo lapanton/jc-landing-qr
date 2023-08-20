@@ -649,6 +649,7 @@ export const Constructor = (props) => {
                       checked={statusAds}
                       onChange={(e) => setStatusAds(!statusAds)}
                       className="checkbox-round"
+                      style={{opacity: 0}}
                     />
                     <span>
                       Разрешаю использовать контент в маркетинговых целях

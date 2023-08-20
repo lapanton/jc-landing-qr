@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 import { trimAudio } from "../helpers/trimAuio";
 import microphone from "./microphone.svg";
 import RecordRTC from "recordrtc";
@@ -109,6 +109,28 @@ const Timer = styled.div`
   color: rgb(107 15 3);
 `;
 
+const BounceRec = keyframes`
+  0% {
+    opacity: 0.3;
+  },
+  50% {
+    opacitty: 1;
+  },
+ 100% {
+    opacitty: 0.3;
+ }
+`;
+
+const WrapRecord = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .rec-circle {
+    animation: ${BounceRec} 1s infinite alternate;
+  }
+`;
+
 function AudioPlayerRecorder(props) {
   const { audioBlob, setAudioBlob, setAudioData } = props;
   const [isRecording, setIsRecording] = useState(false);
@@ -191,7 +213,16 @@ function AudioPlayerRecorder(props) {
       {!audioBlob && !tempAudioBlob ? (
         <div>
           {isRecording ? (
-            <Button onClick={stopRecording}>Остановить запись</Button>
+            <WrapRecord>
+              <div>
+                <svg width="50" height="70" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="25" cy="25" r="10" fill="red" className="rec-circle" />
+                  <text x="25" y="60" font-family="Arial" font-size="12" fill="red" text-anchor="middle">REC</text>
+                </svg>
+              </div>
+              <Button onClick={stopRecording}>Остановить запись</Button>
+            </WrapRecord>
+          
           ) : (
             <Button onClick={startRecording}>Начать запись</Button>
           )}
