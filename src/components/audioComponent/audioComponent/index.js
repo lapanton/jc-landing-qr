@@ -3,6 +3,7 @@ import styled, {keyframes} from "styled-components";
 import { trimAudio } from "../helpers/trimAuio";
 import microphone from "./microphone.svg";
 import RecordRTC from "recordrtc";
+import { FormattedMessage } from "react-intl";
 
 // Styled Components
 const Container = styled.div`
@@ -207,8 +208,8 @@ function AudioPlayerRecorder(props) {
     <Container>
       <Title>
         <img src={microphone} alt="JewelCocktail" />
-        <div className="new-label-icon">новинка!</div>
-        <div>Запись аудио</div>
+        <div className="new-label-icon"><FormattedMessage id="audio.new" /></div>
+        <div><FormattedMessage id="audio.recording" /></div>
       </Title>
       {!audioBlob && !tempAudioBlob ? (
         <div>
@@ -217,18 +218,18 @@ function AudioPlayerRecorder(props) {
               <div>
                 <svg width="50" height="70" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="25" cy="25" r="10" fill="red" className="rec-circle" />
-                  <text x="25" y="60" font-family="Arial" font-size="12" fill="red" text-anchor="middle">REC</text>
+                  <text x="25" y="60" fontFamily="Arial" fontSize="12" fill="red" textAnchor="middle">REC</text>
                 </svg>
               </div>
-              <Button onClick={stopRecording}>Остановить запись</Button>
+              <Button onClick={stopRecording}><FormattedMessage id="audio.stop" /></Button>
             </WrapRecord>
           
           ) : (
-            <Button onClick={startRecording}>Начать запись</Button>
+            <Button onClick={startRecording}><FormattedMessage id="audio.save" /></Button>
           )}
-          <Timer>{time} секунд</Timer>
+          <Timer>{time} <FormattedMessage id="audio.seconds" /></Timer>
           <FileInputLabel>
-            Выбрать файл
+          <FormattedMessage id="audio.choose" />
             <FileInput
               type="file"
               accept="audio/*,audio/wav,.mp3,audio/mp3,.wav"
@@ -240,13 +241,13 @@ function AudioPlayerRecorder(props) {
       ) : tempAudioBlob ? (
         <div>
           <audio controls src={tempAudioBlob}></audio>
-          <Button onClick={acceptAudio}>Принять</Button>
-          <Button onClick={rejectAudio}>Отклонить</Button>
+          <Button onClick={acceptAudio}><FormattedMessage id="audio.accept" /></Button>
+          <Button onClick={rejectAudio}><FormattedMessage id="audio.reject" /></Button>
         </div>
       ) : (
         <div>
           <audio controls src={audioBlob}></audio>
-          <Button onClick={() => setAudioBlob(null)}>Перезаписать</Button>
+          <Button onClick={() => setAudioBlob(null)}><FormattedMessage id="audio.rewrite" /></Button>
         </div>
       )}
     </Container>

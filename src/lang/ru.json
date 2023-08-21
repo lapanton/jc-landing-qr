@@ -145,5 +145,16 @@
   "st.rosfir": "Камень с QR 'Огонь и Роза'",
   "st.twogift": "Два камня в подарок",
   "shop.price": "Цена",
-  "shop.createi": "Создать"
+  "shop.createi": "Создать",
+  "audio.new": "новинка!",
+  "audio.recording": "Запись аудио",
+  "audio.add": "Добавьте аудио сообщение или песню до 1 минуты",
+  "permit": "Разрешаю использовать контент в маркетинговых целях",
+  "audio.stop": "Остановить запись",
+  "audio.save": "Сохранить запись",
+  "audio.accept": "Принять",
+  "audio.reject": "Отклонить",
+  "audio.rewrite": "Перезаписать",
+  "audio.choose": "Выбрать файл",
+  "audio.seconds": "секунд"
 }

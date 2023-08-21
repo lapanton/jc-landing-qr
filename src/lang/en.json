@@ -145,6 +145,17 @@
   "st.rosfir": "Stone with QR 'Fire and Rose'",
   "st.twogift": "Two stones as a gift",
   "shop.price": "Price",
-  "shop.createi": "Create"
+  "shop.createi": "Create",
+  "audio.new": "new",
+  "audio.recording": "Audio recording",
+  "audio.add": "Add an audio message or song up to 1 minute",
+  "permit": "I authorize the use of content for marketing purposes",
+  "audio.stop": "Stop Recording",
+  "audio.save": "Save entry",
+  "audio.accept": "Accept",
+  "audio.reject": "Reject",
+  "audio.rewrite": "Overwrite",
+  "audio.choose": "Select a file",
+  "audio.seconds": "seconds"
 
 }

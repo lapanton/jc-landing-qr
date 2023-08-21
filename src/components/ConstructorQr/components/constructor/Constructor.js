@@ -193,7 +193,7 @@ export const Constructor = (props) => {
   const [uplFoto, setUplFoto] = useState(false);
   const [soglasie, setSeoglasie] = useState(false);
   const [mailvalid, setMailValid] = useState(false);
-  const [statusAds, setStatusAds] = useState(true);
+  const [statusAds, setStatusAds] = useState(false);
   const [validAudio, setValidAudio] = useState(false);
   const [audioData, setAudioData] = useState(null);
 
@@ -381,9 +381,9 @@ export const Constructor = (props) => {
               alt="JewelCocktail"
               style={{ width: "22px" }}
             />
-            <div>Aудиозапись</div>
-            <span>Добавьте аудио сообщение или песню до 1 минуты</span>
-            <div className="new-label-icon">новинка!</div>
+            <div><FormattedMessage id="audio.recording" /></div>
+            <span><FormattedMessage id="audio.add" /></span>
+            <div className="new-label-icon"><FormattedMessage id="audio.new" /></div>
           </Podpsi>
 
           <ResultPrewiev>
@@ -649,10 +649,9 @@ export const Constructor = (props) => {
                       checked={statusAds}
                       onChange={(e) => setStatusAds(!statusAds)}
                       className="checkbox-round"
-                      style={{opacity: 0}}
                     />
                     <span>
-                      Разрешаю использовать контент в маркетинговых целях
+                      <FormattedMessage id="permit" />
                     </span>
                   </WrapInputCheckBox>
                   <ButtonSubmit

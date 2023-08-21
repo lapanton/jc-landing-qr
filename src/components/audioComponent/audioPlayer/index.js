@@ -29,7 +29,7 @@ function AudioPlayer({ audioData, baseUrl }) {
   }, [audioData]);
 
   if (!audioURL) {
-    return <div>No audio data available</div>;
+    return <div style={{opacity: 0}}>No audio data available</div>;
   }
 
   const togglePlayback = () => {
@@ -44,7 +44,7 @@ function AudioPlayer({ audioData, baseUrl }) {
   };
 
   if (!audioURL) {
-    return <div>No audio data available</div>;
+    return <div style={{opacity: 0}}>No audio data available</div>;
   }
   const PlayIcon = (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none">

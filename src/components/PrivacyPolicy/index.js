@@ -6,9 +6,10 @@ import telegram from "../../telegram.png";
 
 export const PrivacyPolicy = (props) => {
   const { langProps } = props;
+  console.log('langProps.locale', langProps.locale);
   return (
     <>
-    {langProps.locale === " ru" ?
+    {langProps.locale === "ru" ?
       <Wrapper>
         <HeaderDiv>
           <WrapLogo>
