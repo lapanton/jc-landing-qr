@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styled, {keyframes} from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { trimAudio } from "../helpers/trimAuio";
 import microphone from "./microphone.svg";
 import RecordRTC from "recordrtc";
@@ -102,23 +102,29 @@ const FileInput = styled.input`
 const FileInfo = styled.div`
   margin-top: 10px;
   color: rgb(107 15 3);
+  &.isRalisman {
+    color: #fff;
+  }
 `;
 
 const Timer = styled.div`
   font-size: 20px;
   margin-top: 10px;
   color: rgb(107 15 3);
+  &.isRalisman {
+    color: white;
+  }
 `;
 
 const BounceRec = keyframes`
   0% {
     opacity: 0.3;
-  },
+  }
   50% {
-    opacitty: 1;
-  },
+    opacity: 1;
+  }
  100% {
-    opacitty: 0.3;
+    opacity: 0.3;
  }
 `;
 
@@ -133,13 +139,13 @@ const WrapRecord = styled.div`
 `;
 
 function AudioPlayerRecorder(props) {
-  const { audioBlob, setAudioBlob, setAudioData } = props;
+  const { audioBlob, setAudioBlob, setAudioData, isRalisman } = props;
   const [isRecording, setIsRecording] = useState(false);
   const [mediaRecorder, setMediaRecorder] = useState(null);
   const [time, setTime] = useState(60);
   const [chosenFileName, setChosenFileName] = useState("");
   const [tempAudioBlob, setTempAudioBlob] = useState(null);
-
+  console.log("isRalisman", isRalisman);
   useEffect(() => {
     if (isRecording && time > 0) {
       const timer = setTimeout(() => {
@@ -208,8 +214,12 @@ function AudioPlayerRecorder(props) {
     <Container>
       <Title>
         <img src={microphone} alt="JewelCocktail" />
-        <div className="new-label-icon"><FormattedMessage id="audio.new" /></div>
-        <div><FormattedMessage id="audio.recording" /></div>
+        <div className="new-label-icon">
+          <FormattedMessage id="audio.new" />
+        </div>
+        <div>
+          <FormattedMessage id="audio.recording" />
+        </div>
       </Title>
       {!audioBlob && !tempAudioBlob ? (
         <div>
@@ -217,37 +227,65 @@ function AudioPlayerRecorder(props) {
             <WrapRecord>
               <div>
                 <svg width="50" height="70" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="25" cy="25" r="10" fill="red" className="rec-circle" />
-                  <text x="25" y="60" fontFamily="Arial" fontSize="12" fill="red" textAnchor="middle">REC</text>
+                  <circle
+                    cx="25"
+                    cy="25"
+                    r="10"
+                    fill="red"
+                    className="rec-circle"
+                  />
+                  <text
+                    x="25"
+                    y="60"
+                    fontFamily="Arial"
+                    fontSize="12"
+                    fill="red"
+                    textAnchor="middle"
+                  >
+                    REC
+                  </text>
                 </svg>
               </div>
-              <Button onClick={stopRecording}><FormattedMessage id="audio.stop" /></Button>
+              <Button onClick={stopRecording}>
+                <FormattedMessage id="audio.stop" />
+              </Button>
             </WrapRecord>
-          
           ) : (
-            <Button onClick={startRecording}><FormattedMessage id="audio.save" /></Button>
+            <Button onClick={startRecording}>
+              <FormattedMessage id="audio.save" />
+            </Button>
           )}
-          <Timer>{time} <FormattedMessage id="audio.seconds" /></Timer>
+          <Timer className={isRalisman ? "isRalisman" : "noisRalisman"}>
+            {time} <FormattedMessage id="audio.seconds" />
+          </Timer>
           <FileInputLabel>
-          <FormattedMessage id="audio.choose" />
+            <FormattedMessage id="audio.choose" />
             <FileInput
               type="file"
               accept="audio/*,audio/wav,.mp3,audio/mp3,.wav"
               onChange={handleFileChange}
             />
           </FileInputLabel>
-          <FileInfo>{chosenFileName || "Файл не выбран"}</FileInfo>
+          <FileInfo className={isRalisman ? "isRalisman" : "noisRalisman"}>
+            {chosenFileName || "Файл не выбран"}
+          </FileInfo>
         </div>
       ) : tempAudioBlob ? (
         <div>
           <audio controls src={tempAudioBlob}></audio>
-          <Button onClick={acceptAudio}><FormattedMessage id="audio.accept" /></Button>
-          <Button onClick={rejectAudio}><FormattedMessage id="audio.reject" /></Button>
+          <Button onClick={acceptAudio}>
+            <FormattedMessage id="audio.accept" />
+          </Button>
+          <Button onClick={rejectAudio}>
+            <FormattedMessage id="audio.reject" />
+          </Button>
         </div>
       ) : (
         <div>
           <audio controls src={audioBlob}></audio>
-          <Button onClick={() => setAudioBlob(null)}><FormattedMessage id="audio.rewrite" /></Button>
+          <Button onClick={() => setAudioBlob(null)}>
+            <FormattedMessage id="audio.rewrite" />
+          </Button>
         </div>
       )}
     </Container>

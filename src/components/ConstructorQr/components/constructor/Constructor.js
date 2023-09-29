@@ -381,9 +381,15 @@ export const Constructor = (props) => {
               alt="JewelCocktail"
               style={{ width: "22px" }}
             />
-            <div><FormattedMessage id="audio.recording" /></div>
-            <span><FormattedMessage id="audio.add" /></span>
-            <div className="new-label-icon"><FormattedMessage id="audio.new" /></div>
+            <div>
+              <FormattedMessage id="audio.recording" />
+            </div>
+            <span>
+              <FormattedMessage id="audio.add" />
+            </span>
+            <div className="new-label-icon">
+              <FormattedMessage id="audio.new" />
+            </div>
           </Podpsi>
 
           <ResultPrewiev>
@@ -496,6 +502,7 @@ export const Constructor = (props) => {
               setAudioBlob={setAudioBlob}
               audioBlob={audioBlob}
               setAudioData={setAudioData}
+              isRalisman={false}
             />
           </WrapSignature>
 
