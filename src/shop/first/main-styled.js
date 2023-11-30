@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 import ins from "./instagram.png";
 import you from "./youtube.png";
 import goo from "./google.png";
@@ -49,7 +49,7 @@ export const Inner = styled.div`
   }
   @media screen and (max-width: 1200px) {
     padding: 0;
-margin: 20px 30px;
+    margin: 20px 30px;
   }
   @media screen and (max-width: 968px) {
     padding: 0;
@@ -84,22 +84,22 @@ export const WrapList = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  div{
+  div {
     margin-right: 3.3rem;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     color: #fff;
     font-weight: 300;
     font-size: 1rem;
   }
   a {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     color: #fff;
     font-weight: 300;
     font-size: 1rem;
     text-decoration: none;
   }
   @media screen and (max-width: 1200px) {
-    div{
+    div {
       margin-right: 2rem;
     }
   }
@@ -155,7 +155,7 @@ export const WrapSocial = styled.div`
       background: url(${youn});
       width: 28px;
       height: 28px;
-      background-size: contain;  
+      background-size: contain;
     }
     &:hover {
       div {
@@ -281,7 +281,7 @@ export const WrapTitle = styled.div`
     z-index: -1;
   }
   h1 {
-    font-family: 'organetto';
+    font-family: "organetto";
     font-weight: 200;
     font-size: 4rem;
     color: #fff;
@@ -300,7 +300,7 @@ export const WrapTitle = styled.div`
     }
   }
   h2 {
-    font-family: 'organetto';
+    font-family: "organetto";
     text-transform: uppercase;
     font-weight: 500;
     font-size: 1.5rem;
@@ -313,8 +313,8 @@ export const WrapTitle = styled.div`
     }
   }
   p {
-    color: #FFFFFF8F;
-    font-family: 'Inter', sans-serif;
+    color: #ffffff8f;
+    font-family: "Inter", sans-serif;
     font-weight: 300;
     margin-top: 1.063rem;
     @media screen and (max-width: 768px) {
@@ -377,15 +377,15 @@ export const InnerLoadMore = styled.div`
   &:hover {
     background: #000;
     border-radius: 50%;
-    
+
     cursor: pointer;
     .rotated {
       opacity: 1;
       width: 135%;
     }
   }
-  &:hover:after { 
-    border: none 
+  &:hover:after {
+    border: none;
   }
   @media screen and (max-width: 768px) {
     width: 135px;
@@ -432,7 +432,7 @@ export const WrapMobile = styled.div`
 `;
 
 export const WrapMenu = styled.div`
-  font-family: 'organetto';
+  font-family: "organetto";
   padding: 50px 0;
   text-align: left;
   position: absolute;
@@ -469,20 +469,19 @@ export const WrapMenu = styled.div`
     margin: 0 20px;
     font-size: 15px;
     font-weight: lighter;
-    border-bottom: 1px solid rgba(255,255,255,0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     text-decoration: none;
     width: 100%;
     display: block;
   }
   .activeMenuDesctop {
     font-weight: bolder;
-    text-shadow: 0 0 14px rgba(255,255,255,1);
+    text-shadow: 0 0 14px rgba(255, 255, 255, 1);
   }
-  a  {
+  a {
     text-decoration: none;
   }
 `;
-
 
 export const WrpaMobSocial = styled.div`
   border-bottom: none !important;
@@ -542,6 +541,6 @@ export const WrapDesktopLinks = styled.span`
   }
   .activeMenuDesctop {
     font-weight: bolder;
-    text-shadow: 0 0 14px rgba(255,255,255,1);
+    text-shadow: 0 0 14px rgba(255, 255, 255, 1);
   }
 `;
