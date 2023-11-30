@@ -163,7 +163,7 @@ function AudioPlayerRecorder(props) {
 
     let recorder = RecordRTC(stream, {
       type: "audio",
-      mimeType: "audio/wav",
+      mimeType: "audio/mpeg",
       numberOfAudioChannels: 1,
     });
 
