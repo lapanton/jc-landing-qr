@@ -23,7 +23,7 @@ import arDown from "./arrowDown.png";
 import arUp from "./arrowUp.png";
 
 import sale from "../sale.png";
-import Mthirteen from "../../../talisman/talismanStone/man-stones/IMG_6060.png";
+import Mthirteen from "./stone/IMG_6061.png";
 
 import {
   Wrapper,

@@ -1126,7 +1126,7 @@ export const Popup = (props) => {
                                     marginBottom: "10px",
                                   }}
                                 >
-                                  <FormattedMessage id="st.blsand" />:{" "}
+                                  <FormattedMessage id="st.agat" />:{" "}
                                   <img
                                     src={fourStoneM}
                                     alt="JewelCocktail"
@@ -1353,7 +1353,7 @@ export const Popup = (props) => {
                                     marginBottom: "10px",
                                   }}
                                 >
-                                  <FormattedMessage id="st.blsand" />:{" "}
+                                  <FormattedMessage id="st.agat" />:{" "}
                                   <img
                                     src={fourStoneM}
                                     alt="JewelCocktail"
