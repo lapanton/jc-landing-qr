@@ -313,7 +313,6 @@ export const Orion = (props) => {
               </WrapperZoom>,
               document.body,
             )}
-          }
           <Slider
             {...settingsTwo}
             asNavFor={nav1}

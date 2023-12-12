@@ -22,6 +22,7 @@ import arDown from "./arrowDown.png";
 import arUp from "./arrowUp.png";
 
 import sale from "../sale.png";
+import Mthirteen from "../../../talisman/talismanStone/man-stones/IMG_6060.png";
 
 import {
   Wrapper,
@@ -332,7 +333,6 @@ export const Gidor = (props) => {
               </WrapperZoom>,
               document.body,
             )}
-          }
           <Slider
             {...settingsTwo}
             asNavFor={nav1}
@@ -396,7 +396,7 @@ export const Gidor = (props) => {
               onClick={() => setGidorStone("4g")}
               className={gidorStone === "4g" ? "active" : "not"}
             >
-              <img src={fourStone} alt="JewelCocktail" />
+              <img src={Mthirteen} alt="JewelCocktail" />
             </div>
             <div
               onClick={() => setGidorStone("5g")}
@@ -409,9 +409,7 @@ export const Gidor = (props) => {
             {gidorStone === "1g" && <FormattedMessage id="ketroy.fire" />}
             {gidorStone === "2g" && <FormattedMessage id="ketroy.ocean" />}
             {gidorStone === "3g" && <FormattedMessage id="ketroy.yeloworg" />}
-            {gidorStone === "4g" && (
-              <FormattedMessage id="ketroy.blacksandal" />
-            )}
+            {gidorStone === "4g" && <FormattedMessage id="agat.prinosit" />}
             {gidorStone === "5g" && <FormattedMessage id="ketroy.whiteonix" />}
           </p>
         </ChooseStone>

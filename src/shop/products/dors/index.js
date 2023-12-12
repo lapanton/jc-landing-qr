@@ -23,6 +23,7 @@ import arDown from "./arrowDown.png";
 import arUp from "./arrowUp.png";
 
 import sale from "../sale.png";
+import Mthirteen from "../../../talisman/talismanStone/man-stones/IMG_6060.png";
 
 import {
   Wrapper,
@@ -395,7 +396,7 @@ export const Dors = (props) => {
               onClick={() => setDorsStone("4d")}
               className={dorsStone === "4d" ? "active" : "not"}
             >
-              <img src={fourStone} alt="JewelCocktail" />
+              <img src={Mthirteen} alt="JewelCocktail" />
             </div>
             <div
               onClick={() => setDorsStone("5d")}
@@ -408,7 +409,7 @@ export const Dors = (props) => {
             {dorsStone === "1d" && <FormattedMessage id="ketroy.fire" />}
             {dorsStone === "2d" && <FormattedMessage id="ketroy.ocean" />}
             {dorsStone === "3d" && <FormattedMessage id="ketroy.yeloworg" />}
-            {dorsStone === "4d" && <FormattedMessage id="ketroy.blacksandal" />}
+            {dorsStone === "4d" && <FormattedMessage id="agat.prinosit" />}
             {dorsStone === "5d" && <FormattedMessage id="ketroy.whiteonix" />}
           </p>
         </ChooseStone>

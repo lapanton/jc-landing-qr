@@ -339,7 +339,6 @@ export const Rings = (props) => {
               </WrapperZoom>,
               document.body,
             )}
-          }
           <Slider
             {...settingsTwo}
             asNavFor={nav1}

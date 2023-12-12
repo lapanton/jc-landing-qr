@@ -338,7 +338,6 @@ export const Alcor = (props) => {
               </WrapperZoom>,
               document.body,
             )}
-          }
           <Slider
             {...settingsTwo}
             asNavFor={nav1}
