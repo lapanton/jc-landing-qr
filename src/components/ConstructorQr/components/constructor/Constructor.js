@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useEffect, useState, useCallback, Fragment } from "react";
 import axios from "axios";
 import Compress from "browser-image-compression";
 // import Compressor from 'compressorjs';
@@ -305,6 +305,25 @@ export const Constructor = (props) => {
 
   const messageBr = value.msg?.split("<br/>").join("\n");
 
+  const replaceURLsWithLinks = (str) => {
+    const urlRegex = /(https?:\/\/[^\s]+)/g;
+
+    return str.replace(urlRegex, (url) => {
+      return `<a href="${url}" target="_blank" rel="noopener noreferrer" style="color: rgb(255 209 0); text-decoration: underline">${url}</a>`;
+    });
+  };
+  const renderMessage = (item) => {
+    const messageWithLinks = replaceURLsWithLinks(item);
+
+    return (
+      <div>
+        <p
+          className="poezi"
+          dangerouslySetInnerHTML={{ __html: messageWithLinks }}
+        />
+      </div>
+    );
+  };
   return (
     <Wrapper>
       {showVediteText && (
@@ -534,16 +553,16 @@ export const Constructor = (props) => {
                 }
               >
                 {value?.status === "completed"
-                  ? messageBr.split("\n").map((item, i) => (
-                      <p className="poezi" key={i}>
-                        {item}
-                      </p>
-                    ))
-                  : message.split("\n").map((item, i) => (
-                      <p className="poezi" key={i}>
-                        {item}
-                      </p>
-                    ))}
+                  ? messageBr.split("\n").map((item, i) => {
+                      return <Fragment key={i}>{renderMessage(item)}</Fragment>;
+                    })
+                  : message.split("\n").map((item, i) => {
+                      return (
+                        <p className="poezi" key={i}>
+                          {item}
+                        </p>
+                      );
+                    })}
               </MessageView>
               <div
                 className={
