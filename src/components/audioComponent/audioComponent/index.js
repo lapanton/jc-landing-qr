@@ -194,6 +194,7 @@ function AudioPlayerRecorder(props) {
       setChosenFileName(file.name);
       trimAudio(file, (trimmedBlob) => {
         const audioUrl = URL.createObjectURL(trimmedBlob);
+        console.log("trimmedBlob", trimmedBlob);
         setAudioData(trimmedBlob);
         setTempAudioBlob(audioUrl);
       });
