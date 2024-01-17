@@ -1443,23 +1443,25 @@ export const OrderForm = (props) => {
             </div>
           </>
         )}
-        <div>
-          <p>
-            WE CONTACT YOU AND PLACE A BILL IN SAFE{" "}
-            <a
-              style={{ color: "rgb(0, 153, 51)" }}
-              href="https://www.shopify.com/shop-pay"
-              target="_blank"
-            >
-              {" "}
-              SHOP pay
-            </a>{" "}
-            ecosystem
-          </p>
-          <span>
-            * Please Check your contact and address with zip/ postcode
-          </span>
-        </div>
+        {langProps.locale === "en" && (
+          <div>
+            <p>
+              WE CONTACT YOU AND PLACE A BILL IN SAFE{" "}
+              <a
+                style={{ color: "rgb(0, 153, 51)" }}
+                href="https://www.shopify.com/shop-pay"
+                target="_blank"
+              >
+                {" "}
+                SHOP pay
+              </a>{" "}
+              ecosystem
+            </p>
+            <span>
+              * Please Check your contact and address with zip/ postcode
+            </span>
+          </div>
+        )}
 
         <input
           disabled={card.length === 0}
