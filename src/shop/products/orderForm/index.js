@@ -1433,12 +1433,34 @@ export const OrderForm = (props) => {
           type="text"
           name="to_comment"
         />
-        <div style={{ display: "flex" }}>
-          <FormattedMessage id="card.offer" />
+        {langProps.locale === "ru" && (
+          <>
+            <div style={{ display: "flex" }}>
+              <FormattedMessage id="card.offer" />
+            </div>
+            <div style={{ color: "#464343", marginTop: "5px" }}>
+              <FormattedMessage id="card.deliverycosts" />
+            </div>
+          </>
+        )}
+        <div>
+          <p>
+            WE CONTACT YOU AND PLACE A BILL IN SAFE{" "}
+            <a
+              style={{ color: "rgb(0, 153, 51)" }}
+              href="https://www.shopify.com/shop-pay"
+              target="_blank"
+            >
+              {" "}
+              SHOP pay
+            </a>{" "}
+            ecosystem
+          </p>
+          <span>
+            * Please Check your contact and address with zip/ postcode
+          </span>
         </div>
-        <div style={{ color: "#464343", marginTop: "5px" }}>
-          <FormattedMessage id="card.deliverycosts" />
-        </div>
+
         <input
           disabled={card.length === 0}
           className="makeorder"

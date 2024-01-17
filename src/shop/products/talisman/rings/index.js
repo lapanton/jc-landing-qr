@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
 import ReactDOM from "react-dom";
-import priceData from "../../../../prices/price.json";
 import Slider from "react-slick";
 import one from "./img/1.png";
 import two from "./img/2.png";
@@ -57,9 +56,23 @@ import {
 } from "./styled-rings";
 import { Link } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
+import saleten from "../../saleten.png";
 
 export const RingsTalisman = (props) => {
   const { card, setCard, setShowPopup, langProps } = props;
+  const getPriceData = () => {
+    let jsonData;
+
+    // Import JSON files based on the detected locale
+    if (langProps.locale === "ru") {
+      jsonData = require("../../../../prices/price.json");
+    } else {
+      jsonData = require("../../../../prices/prices-en.json");
+    }
+
+    return jsonData;
+  };
+  const priceData = getPriceData();
 
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
@@ -556,12 +569,17 @@ export const RingsTalisman = (props) => {
           <WrapPrices>
             <p className="price">
               {priceData["talisman-genskoe-kolitso"]}
-              <span>₽</span>
+              <span> {langProps.locale === "ru" ? "₽" : "USD"}</span>
             </p>
             <p className="old-price">
-              {priceData["talisman-genskoe-kolitso-old-price"]} ₽
+              {priceData["talisman-genskoe-kolitso-old-price"]}{" "}
+              {langProps.locale === "ru" ? "₽" : "USD"}
             </p>
-            <img src={sale} alt="JewelCocktail" className="sale-icon" />
+            <img
+              src={langProps.locale === "ru" ? sale : saleten}
+              alt="JewelCocktail"
+              className="sale-icon"
+            />
           </WrapPrices>
           <div className="buy-button" onClick={() => buyRing()}>
             <FormattedMessage id="shop.buy" />
@@ -632,19 +650,24 @@ export const RingsTalisman = (props) => {
                 <p className="slave-text">
                   <FormattedMessage id="natural.ketroy" />
                 </p>
-                <p className="main-text">
-                  <FormattedMessage id="warranty.quality" />:
-                </p>
-                <p className="slave-text">
-                  <FormattedMessage id="club.jewel" />
-                  <a
-                    href="https://jewelcocktail.com/privacy"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FormattedMessage id="read.more" />
-                  </a>
-                </p>
+                {langProps.locale === "ru" && (
+                  <>
+                    <p className="main-text">
+                      <FormattedMessage id="warranty.quality" />:
+                    </p>
+
+                    <p className="slave-text">
+                      <FormattedMessage id="club.jewel" />
+                      <a
+                        href="https://jewelcocktail.com/privacy"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <FormattedMessage id="read.more" />
+                      </a>
+                    </p>
+                  </>
+                )}
               </ToRightMoveDesktop>
 
               <div

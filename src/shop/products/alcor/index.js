@@ -23,6 +23,7 @@ import arDown from "./arrowDown.png";
 import arUp from "./arrowUp.png";
 
 import sale from "../sale.png";
+import saleten from "../saleten.png";
 
 import {
   Wrapper,
@@ -43,7 +44,20 @@ import closeIcon from "../rings/img/cross_white.svg";
 import { FormattedMessage } from "react-intl";
 
 export const Alcor = (props) => {
-  const { card, setCard, setShowPopup } = props;
+  const { card, setCard, setShowPopup, langProps } = props;
+  const getPriceData = () => {
+    let jsonData;
+
+    // Import JSON files based on the detected locale
+    if (langProps.locale === "ru") {
+      jsonData = require("../../../prices/price.json");
+    } else {
+      jsonData = require("../../../prices/prices-en.json");
+    }
+
+    return jsonData;
+  };
+  const priceData = getPriceData();
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
   const [alcorStone, setAlcorStone] = useState("1a");
@@ -128,7 +142,13 @@ export const Alcor = (props) => {
     ],
   };
   const buyAlcor = () => {
-    const arr1 = [{ product: "alcor", stone: alcorStone, price: 6700 }];
+    const arr1 = [
+      {
+        product: "alcor",
+        stone: alcorStone,
+        price: +priceData["genskii-alcor"],
+      },
+    ];
     const checkedItem = card.filter((value) => value.product !== "alcor");
     setCard(() => [...checkedItem, ...arr1]);
     setShowPopup(true);
@@ -232,7 +252,7 @@ export const Alcor = (props) => {
         <div className="slider-wrap">
           <h4>
             <FormattedMessage id="braslet.woman" />
-            <br /> Alcor
+            <br /> <span style={{ color: "rgb(0, 153, 51)" }}>Alcor</span>
           </h4>
           <Slider
             {...settings}
@@ -424,10 +444,18 @@ export const Alcor = (props) => {
         <PriceBuySection>
           <WrapPrices>
             <p className="price">
-              6 700 <span>₽</span>
+              {priceData["genskii-alcor"]}{" "}
+              <span> {langProps.locale === "ru" ? "₽" : "USD"}</span>
             </p>
-            <p className="old-price">9 570 ₽</p>
-            <img src={sale} alt="JewelCocktail" className="sale-icon" />
+            <p className="old-price">
+              {priceData["genskii-alcor-old"]}{" "}
+              {langProps.locale === "ru" ? "₽" : "USD"}
+            </p>
+            <img
+              src={langProps.locale === "ru" ? sale : saleten}
+              alt="JewelCocktail"
+              className="sale-icon"
+            />
           </WrapPrices>
           <p className="bonus">
             <FormattedMessage id="braslet.twoketroys" />
@@ -491,19 +519,24 @@ export const Alcor = (props) => {
                 <p className="slave-text">
                   <FormattedMessage id="natural.ketroy" />
                 </p>
-                <p className="main-text">
-                  <FormattedMessage id="warranty.quality" />:
-                </p>
-                <p className="slave-text">
-                  <FormattedMessage id="club.jewel" />
-                  <a
-                    href="https://jewelcocktail.com/privacy"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FormattedMessage id="read.more" />
-                  </a>
-                </p>
+                {langProps.locale === "ru" && (
+                  <>
+                    <p className="main-text">
+                      <FormattedMessage id="warranty.quality" />:
+                    </p>
+
+                    <p className="slave-text">
+                      <FormattedMessage id="club.jewel" />
+                      <a
+                        href="https://jewelcocktail.com/privacy"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <FormattedMessage id="read.more" />
+                      </a>
+                    </p>
+                  </>
+                )}
               </ToRightMoveDesktop>
 
               <div

@@ -1,9 +1,12 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Wrapper = styled.div`
   background: transparent;
   color: #fff;
   display: flex;
+  &.align-to-center {
+    justify-content: center;
+  }
   .boldp {
     font-weight: bolder;
   }
@@ -19,7 +22,7 @@ export const Wrapper = styled.div`
     position: relative;
   }
   p {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 300;
     color: #fff;
     font-size: 1rem;
@@ -44,7 +47,6 @@ export const Wrapper = styled.div`
   }
   @media screen and (max-width: 968px) {
     img {
-
     }
   }
   @media screen and (max-width: 768px) {
@@ -96,7 +98,7 @@ export const WrapText = styled.div`
         display: none;
       }
     }
-    p{
+    p {
       text-align: left;
       padding-left: 30px;
       padding-right: 30px;
@@ -106,8 +108,3 @@ export const WrapText = styled.div`
     }
   }
 `;
-
-
-
-
-

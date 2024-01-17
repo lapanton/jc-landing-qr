@@ -36,6 +36,7 @@ import {
 import whiteArrow from "../rings/img/white-arrow.svg";
 import closeIcon from "../rings/img/cross_white.svg";
 import { FormattedMessage } from "react-intl";
+import saleten from "../../saleten.png";
 
 export const CoupleBraceletsTalisman = (props) => {
   const { card, setCard, setShowPopup } = props;
@@ -310,7 +311,6 @@ export const CoupleBraceletsTalisman = (props) => {
               </WrapperZoom>,
               document.body,
             )}
-          }
           <Slider
             {...settingsTwo}
             asNavFor={nav1}
@@ -375,10 +375,16 @@ export const CoupleBraceletsTalisman = (props) => {
         <PriceBuySection>
           <WrapPrices>
             <p className="price">
-              9 900 <span>₽</span>
+              9 900 <span> {langProps.locale === "ru" ? "₽" : "USD"}</span>
             </p>
-            <p className="old-price">14 140 ₽</p>
-            <img src={sale} alt="JewelCocktail" className="sale-icon" />
+            <p className="old-price">
+              14 140 {langProps.locale === "ru" ? "₽" : "USD"}
+            </p>
+            <img
+              src={langProps.locale === "ru" ? sale : saleten}
+              alt="JewelCocktail"
+              className="sale-icon"
+            />
           </WrapPrices>
           <p className="bonus">
             <FormattedMessage id="two.brtwo" />
@@ -445,19 +451,24 @@ export const CoupleBraceletsTalisman = (props) => {
                 <p className="slave-text">
                   <FormattedMessage id="natural.ketroy" />
                 </p>
-                <p className="main-text">
-                  <FormattedMessage id="warranty.quality" />:
-                </p>
-                <p className="slave-text">
-                  <FormattedMessage id="club.jewel" />
-                  <a
-                    href="https://jewelcocktail.com/privacy"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FormattedMessage id="read.more" />
-                  </a>
-                </p>
+                {langProps.locale === "ru" && (
+                  <>
+                    <p className="main-text">
+                      <FormattedMessage id="warranty.quality" />:
+                    </p>
+
+                    <p className="slave-text">
+                      <FormattedMessage id="club.jewel" />
+                      <a
+                        href="https://jewelcocktail.com/privacy"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <FormattedMessage id="read.more" />
+                      </a>
+                    </p>
+                  </>
+                )}
               </ToRightMoveDesktop>
 
               <div

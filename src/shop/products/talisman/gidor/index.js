@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
 import ReactDOM from "react-dom";
-import priceData from "../../../../prices/price.json";
 import Slider from "react-slick";
 import one from "./img/1.png";
 import two from "./img/2.png";
@@ -51,9 +50,23 @@ import whiteArrow from "../rings/img/white-arrow.svg";
 import closeIcon from "../rings/img/cross_white.svg";
 import { Link } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
+import saleten from "../../saleten.png";
 
 export const GidorTalisman = (props) => {
   const { card, setCard, setShowPopup, langProps } = props;
+  const getPriceData = () => {
+    let jsonData;
+
+    // Import JSON files based on the detected locale
+    if (langProps.locale === "ru") {
+      jsonData = require("../../../../prices/price.json");
+    } else {
+      jsonData = require("../../../../prices/prices-en.json");
+    }
+
+    return jsonData;
+  };
+  const priceData = getPriceData();
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
   const [gidorStone, setGidorStone] = useState("1g-t");
@@ -493,12 +506,18 @@ export const GidorTalisman = (props) => {
           </p>
           <WrapPrices>
             <p className="price">
-              {priceData["talisman-mugskoi-kulon"]} <span>₽</span>
+              {priceData["talisman-mugskoi-kulon"]}{" "}
+              <span> {langProps.locale === "ru" ? "₽" : "USD"}</span>
             </p>
             <p className="old-price">
-              {priceData["talisman-mugskoi-kulon-old-price"]} ₽
+              {priceData["talisman-mugskoi-kulon-old-price"]}{" "}
+              {langProps.locale === "ru" ? "₽" : "USD"}
             </p>
-            <img src={sale} alt="JewelCocktail" className="sale-icon" />
+            <img
+              src={langProps.locale === "ru" ? sale : saleten}
+              alt="JewelCocktail"
+              className="sale-icon"
+            />
           </WrapPrices>
           <div className="buy-button" onClick={() => buyGidor()}>
             <FormattedMessage id="shop.buy" />
@@ -566,19 +585,24 @@ export const GidorTalisman = (props) => {
                     ? "камень ручной огранки"
                     : "handcraft stone"}
                 </p>
-                <p className="main-text">
-                  <FormattedMessage id="warranty.quality" />:
-                </p>
-                <p className="slave-text">
-                  <FormattedMessage id="club.jewel" />
-                  <a
-                    href="https://jewelcocktail.com/privacy"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FormattedMessage id="read.more" />
-                  </a>
-                </p>
+                {langProps.locale === "ru" && (
+                  <>
+                    <p className="main-text">
+                      <FormattedMessage id="warranty.quality" />:
+                    </p>
+
+                    <p className="slave-text">
+                      <FormattedMessage id="club.jewel" />
+                      <a
+                        href="https://jewelcocktail.com/privacy"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <FormattedMessage id="read.more" />
+                      </a>
+                    </p>
+                  </>
+                )}
               </ToRightMoveDesktop>
               <div
                 onClick={() => setShowDescr(!showDescr)}

@@ -41,9 +41,23 @@ import {
 } from "./styled-rings";
 import whiteArrow from "../rings/img/white-arrow.svg";
 import closeIcon from "../rings/img/cross_white.svg";
+import saleten from "../saleten.png";
 
 export const Dors = (props) => {
-  const { card, setCard, setShowPopup } = props;
+  const { card, setCard, setShowPopup, langProps } = props;
+  const getPriceData = () => {
+    let jsonData;
+
+    // Import JSON files based on the detected locale
+    if (langProps.locale === "ru") {
+      jsonData = require("../../../prices/price.json");
+    } else {
+      jsonData = require("../../../prices/prices-en.json");
+    }
+
+    return jsonData;
+  };
+  const priceData = getPriceData();
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
   const [dorsStone, setDorsStone] = useState("1d");
@@ -128,7 +142,9 @@ export const Dors = (props) => {
     ],
   };
   const buyDors = () => {
-    const arr1 = [{ product: "dors", stone: dorsStone, price: 6900 }];
+    const arr1 = [
+      { product: "dors", stone: dorsStone, price: +priceData["mugskoi-dors"] },
+    ];
     const checkedItem = card.filter((value) => value.product !== "dors");
     setCard(() => [...checkedItem, ...arr1]);
     setShowPopup(true);
@@ -232,7 +248,7 @@ export const Dors = (props) => {
         <div className="slider-wrap">
           <h4>
             <FormattedMessage id="dorsbraslet.men" /> <br />
-            Dors
+            <span style={{ color: "rgb(0, 153, 51)" }}>Dors </span>
           </h4>
           <Slider
             {...settings}
@@ -416,10 +432,18 @@ export const Dors = (props) => {
         <PriceBuySection>
           <WrapPrices>
             <p className="price">
-              6 900 <span>₽</span>
+              {priceData["mugskoi-dors"]}{" "}
+              <span> {langProps.locale === "ru" ? "₽" : "USD"}</span>
             </p>
-            <p className="old-price">9 850 ₽</p>
-            <img src={sale} alt="JewelCocktail" className="sale-icon" />
+            <p className="old-price">
+              {priceData["mugskoi-dors-old"]}{" "}
+              {langProps.locale === "ru" ? "₽" : "USD"}
+            </p>
+            <img
+              src={langProps.locale === "ru" ? sale : saleten}
+              alt="JewelCocktail"
+              className="sale-icon"
+            />
           </WrapPrices>
           <p className="bonus">
             <FormattedMessage id="braslet.twoketroys" />
@@ -483,19 +507,24 @@ export const Dors = (props) => {
                 <p className="slave-text">
                   <FormattedMessage id="natural.ketroy" />
                 </p>
-                <p className="main-text">
-                  <FormattedMessage id="warranty.quality" />:
-                </p>
-                <p className="slave-text">
-                  <FormattedMessage id="club.jewel" />
-                  <a
-                    href="https://jewelcocktail.com/privacy"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FormattedMessage id="read.more" />
-                  </a>
-                </p>
+                {langProps.locale === "ru" && (
+                  <>
+                    <p className="main-text">
+                      <FormattedMessage id="warranty.quality" />:
+                    </p>
+
+                    <p className="slave-text">
+                      <FormattedMessage id="club.jewel" />
+                      <a
+                        href="https://jewelcocktail.com/privacy"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <FormattedMessage id="read.more" />
+                      </a>
+                    </p>
+                  </>
+                )}
               </ToRightMoveDesktop>
 
               <div
