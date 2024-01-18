@@ -10,9 +10,11 @@ import {
   GiftButton,
 } from "./styles-second";
 import vid from "./preview.mp4";
+import vide from "./vide.mp4";
 import telPhone from "../exampleTalisman/phone_preview.gif";
 import { WrapRight } from "../exampleTalisman/selfProduct-styled";
 import conselation from "../exampleTalisman/constellation.png";
+import YouTube from "react-youtube";
 
 export const SecondTalisman = (props) => {
   const { langProps } = props;
@@ -32,6 +34,16 @@ export const SecondTalisman = (props) => {
     document.body.style.background = "#000";
     return () => (document.body.style.background = "#DBDDDE");
   }, []);
+
+  const opts = {
+    height: isMobile ? "300" : "460",
+    width: isMobile ? "360px" : "600px",
+    playerVars: {
+      // https://developers.google.com/youtube/player_parameters
+      autoplay: 0,
+      mute: 1,
+    },
+  };
 
   return (
     <>
@@ -116,6 +128,18 @@ export const SecondTalisman = (props) => {
                   alt="JewelCocktail"
                   className="desktopImg conselationDesktop"
                 />
+              )}
+              {langProps.locale === "en" && (
+                <video
+                  width="100%"
+                  height="100%"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                >
+                  <source src={vide} type="video/mp4" />
+                </video>
               )}
             </WrapRight>
           </RightPart>

@@ -403,7 +403,7 @@ export const CoupleBracelets = (props) => {
               {langProps.locale === "ru" ? "₽" : "USD"}
             </p>
             <img
-              src={langProps.locale === "ru" ? sale : saleten}
+              src={langProps.locale === "ru" ? sale : sale}
               alt="JewelCocktail"
               className="sale-icon"
             />

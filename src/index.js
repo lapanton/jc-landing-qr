@@ -1,14 +1,16 @@
-import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
+import React, { useState, useEffect } from "react";
+import ReactDOM from "react-dom";
 import { IntlProvider } from "react-intl";
-import { App } from './App';
-
+import { App } from "./App";
 
 const initLocale = () => {
-  if (navigator.language.substr(0, 2) === "ru" && !window.location.href.includes("https://jewelcocktail.com/i/")) {
-    return "ru";
+  if (
+    navigator.language.substr(0, 2) === "ru" &&
+    !window.location.href.includes("https://jewelcocktail.com/i/")
+  ) {
+    return "en";
   } else {
-    return "en"
+    return "en";
   }
 };
 
@@ -33,19 +35,17 @@ const LocalizationWrapper = () => {
     loadMessages(locale).then(setMessages);
   }, [locale]);
 
-
   return messages ? (
     <IntlProvider locale={locale} messages={messages}>
       <App locale={locale} onLocaleChange={(locale) => setLocale(locale)} />
     </IntlProvider>
   ) : null;
-}
+};
 export default LocalizationWrapper;
-
 
 ReactDOM.render(
   <React.StrictMode>
-      <LocalizationWrapper />
+    <LocalizationWrapper />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root"),
 );

@@ -1449,7 +1449,7 @@ export const OrderForm = (props) => {
               WE CONTACT YOU AND PLACE A BILL IN SAFE{" "}
               <a
                 style={{ color: "rgb(0, 153, 51)" }}
-                href="https://www.shopify.com/shop-pay"
+                href="https://hitechjc.com"
                 target="_blank"
               >
                 {" "}

@@ -18,7 +18,7 @@ export const Different = (props) => {
             : { opacity: "1" }
         }
       />
-      <WrapText>
+      <WrapText id="english-scroll">
         <h3>
           <FormattedMessage id="message.ukrashenia" />
         </h3>

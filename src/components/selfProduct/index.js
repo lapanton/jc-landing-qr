@@ -9,14 +9,25 @@ export const SelfProduct = (props) => {
   const location = useLocation();
   const { langProps } = props;
 
+  const scrollOptions = {
+    behavior: "smooth",
+    block: "center",
+  };
+
   useEffect(() => {
-    if (location.hash === "#aboutus") {
+    const scrollElementId =
+      langProps.locale === "ru" ? "#aboutus" : "#english-scroll";
+    const anchor = document.querySelector(scrollElementId);
+
+    console.log("scrollElementId:", scrollElementId);
+    console.log("anchor:", anchor);
+
+    if (anchor) {
       setTimeout(() => {
-        const anchor = document.querySelector("#aboutus");
-        anchor.scrollIntoView({ behavior: "smooth", block: "center" });
+        anchor.scrollIntoView(scrollOptions);
       }, 500);
     }
-  }, [location]);
+  }, [location, langProps.locale]);
   if (langProps.locale === "en") return null;
   return (
     <Wrapper id="aboutus">

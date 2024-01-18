@@ -245,7 +245,7 @@ export const Alcor = (props) => {
     setOpenZoomImage(true);
     sliderReferral.current?.slickGoTo(index);
   };
-
+  const [hovered, setHovered] = useState(false);
   return (
     <Wrapper>
       <Inner>
@@ -452,7 +452,7 @@ export const Alcor = (props) => {
               {langProps.locale === "ru" ? "₽" : "USD"}
             </p>
             <img
-              src={langProps.locale === "ru" ? sale : saleten}
+              src={langProps.locale === "ru" ? sale : sale}
               alt="JewelCocktail"
               className="sale-icon"
             />

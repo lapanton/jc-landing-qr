@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
 export const Wrapper = styled.div`
   @media screen and (min-width: 768px) {
@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
       margin: auto;
     }
   }
-  
+
   border-top: 1px solid #444545;
   padding-top: 20px;
   /* the slides */
@@ -20,9 +20,8 @@ export const Wrapper = styled.div`
   .slick-list {
     margin: 0 -10px;
   }
-  
-  .slick-current {
 
+  .slick-current {
   }
 
   .rings-slider-two {
@@ -39,7 +38,7 @@ export const Wrapper = styled.div`
       }
     }
   }
-  
+
   position: relative;
   z-index: 999999999;
   overflow: hidden;
@@ -145,7 +144,7 @@ export const Wrapper = styled.div`
   h4 {
     margin-bottom: 10px;
     color: #fff;
-    font-family: 'Organetto';
+    font-family: "Organetto";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -177,18 +176,18 @@ export const Inner = styled.div`
 `;
 export const ChooseStone = styled.div`
   p {
-    font-family: 'Organetto';
+    font-family: "Organetto";
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 184.52%;
-    color: #FFFFFF;
+    color: #ffffff;
     white-space: nowrap;
     text-align: center;
     margin: 10px 0;
   }
   .description {
-    font-family: 'Organetto';
+    font-family: "Organetto";
     font-style: normal;
     font-weight: 300;
     font-size: 9px;
@@ -248,12 +247,12 @@ export const WrapStone = styled.div`
 export const ChooseSize = styled.div`
   padding-bottom: 15px;
   span {
-    font-family: 'Organetto';
+    font-family: "Organetto";
     font-style: normal;
     font-weight: 400;
     font-size: 13px;
     line-height: 184.52%;
-    color: #FFFFFF;
+    color: #ffffff;
     margin-right: 20px;
   }
 `;
@@ -262,7 +261,7 @@ export const SizeButton = styled.span`
   background: rgba(255, 255, 255, 0.17);
   border-radius: 5px;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 15px;
   padding: 5px 10px;
   &.active {
@@ -275,10 +274,10 @@ export const PriceBuySection = styled.div`
   text-align: center;
   position: relative;
   .bonus {
-    font-family: 'Organetto';
+    font-family: "Organetto";
     font-style: normal;
     font-weight: 400;
-    font-size: 11px;
+    font-size: 10px;
     line-height: 15px;
     text-align: center;
     color: rgba(255, 255, 255, 0.76);
@@ -293,7 +292,7 @@ export const PriceBuySection = styled.div`
     }
   }
   .actsia-text {
-    font-family: 'Organetto';
+    font-family: "Organetto";
     font-style: normal;
     font-weight: 300;
     font-size: 11px;
@@ -301,8 +300,8 @@ export const PriceBuySection = styled.div`
     text-transform: uppercase;
     color: #fff;
     span {
-      color: #A55248;
-      font-family: 'Organetto';
+      color: #a55248;
+      font-family: "Organetto";
       font-style: normal;
       font-weight: 300;
       font-size: 11px;
@@ -313,14 +312,14 @@ export const PriceBuySection = styled.div`
   .buy-button {
     background: #009933;
     border-radius: 5px;
-    font-family: 'Organetto';
+    font-family: "Organetto";
     text-transform: uppercase;
     color: #fff;
     display: inline-block;
     padding: 12px 40px;
     margin: 17px 0 17px 0;
     &:hover {
-      cursor: pointer
+      cursor: pointer;
     }
   }
   @media screen and (min-width: 768px) {
@@ -336,7 +335,7 @@ export const DescriptionProduct = styled.div`
     padding: 20px 100px 20px 100px;
   }
 `;
-const pulse= keyframes`
+const pulse = keyframes`
   0% {
     transform: scale(.9);
     box-shadow: 0 0 0 #fff;
@@ -356,12 +355,12 @@ export const DescriptionButton = styled.div`
   position: relative;
   margin: 20px 0;
   span {
-    font-family: 'Organetto';
+    font-family: "Organetto";
     font-style: normal;
     font-weight: 300;
     font-size: 15px;
     line-height: 184.52%;
-    color: #FFFFFF;
+    color: #ffffff;
   }
   .hide {
     display: none;
@@ -427,7 +426,6 @@ export const DescriptionView = styled.div`
     }
 `;
 
-
 export const ToRightMoveDesktop = styled.span`
   @media screen and (min-width: 768px) {
     position: absolute;
@@ -444,23 +442,23 @@ export const WrapPrices = styled.div`
   align-items: center;
   margin: 10px 0 15px 0;
   .price {
-    font-family: 'Organetto';
+    font-family: "Organetto";
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
-    color: #FFFFFF;
+    color: #ffffff;
     span {
       font-size: 22px;
-      color: rgba(255,255,255,0.76);
+      color: rgba(255, 255, 255, 0.76);
     }
     margin-right: 10px;
   }
   .old-price {
-    font-family: 'Organetto';
+    font-family: "Organetto";
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
-    color: rgba(255,255,255,0.76);
+    color: rgba(255, 255, 255, 0.76);
     //color: #A55248;
     position: relative;
   }
@@ -470,7 +468,7 @@ export const WrapPrices = styled.div`
     width: 100%;
     left: 1px;
     bottom: 9px;
-    border-bottom: 1px solid #A55248;
+    border-bottom: 1px solid #a55248;
     transform: rotate(-5deg);
   }
   .sale-icon {

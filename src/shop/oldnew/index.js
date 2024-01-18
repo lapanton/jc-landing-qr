@@ -29,7 +29,7 @@ export const Oldnew = (props) => {
     <Wrapper>
       <Inner>
         <>
-          {isMobile ? (
+          {isMobile && langProps.locale === "ru" ? (
             <>
               <video width="100%" height="100%" autoPlay loop muted playsInline>
                 <source src={vid} type="video/mp4" />
@@ -69,16 +69,20 @@ export const Oldnew = (props) => {
                   )}
                 </LeftPartSecond>
                 <RighhtPartSecond>
-                  <video
-                    width="100%"
-                    height="100%"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                  >
-                    <source src={vid} type="video/mp4" />
-                  </video>
+                  {langProps.locale === "ru" && (
+                    <>
+                      <video
+                        width="100%"
+                        height="100%"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                      >
+                        <source src={vid} type="video/mp4" />
+                      </video>
+                    </>
+                  )}
                 </RighhtPartSecond>
               </SecondWrapDesktop>
               <br />

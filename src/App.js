@@ -124,8 +124,8 @@ export const App = (props) => {
               <MoveStuffAround />
               <BlackSquare />
               <WithUs />
-              <Uverenosti />
-              <Freedom />
+              <Uverenosti langProps={props} />
+              <Freedom langProps={props} />
               <Different langProps={props} />
               <Carousel langProps={props} />
               <SelfProduct langProps={props} />
@@ -305,14 +305,14 @@ export const App = (props) => {
               <MoveStuffAround />
               <BlackSquare />
               <WithUs />
-              <Uverenosti />
+              <Uverenosti langProps={props} />
               <Freedom />
-              <Different />
+              <Different langProps={props} />
               <Carousel langProps={props} />
               <SelfProduct langProps={props} />
               <OsobennostiTehnologii langProps={props} />
               <ImgBottom />
-              <Contacts />
+              <Contacts langProps={props} />
             </div>
           }
           exact
@@ -328,14 +328,14 @@ export const App = (props) => {
               <MoveStuffAround />
               <BlackSquare />
               <WithUs />
-              <Uverenosti />
-              <Freedom />
-              <Different />
+              <Uverenosti langProps={props} />
+              <Freedom langProps={props} />
+              <Different langProps={props} />
               <Carousel langProps={props} />
               <SelfProduct langProps={props} />
               <OsobennostiTehnologii langProps={props} />
               <ImgBottom />
-              <Contacts />
+              <Contacts langProps={props} />
             </div>
           }
           exact
@@ -351,14 +351,14 @@ export const App = (props) => {
               <MoveStuffAround />
               <BlackSquare />
               <WithUs />
-              <Uverenosti />
-              <Freedom />
-              <Different />
+              <Uverenosti langProps={props} />
+              <Freedom langProps={props} />
+              <Different langProps={props} />
               <Carousel langProps={props} />
               <SelfProduct langProps={props} />
               <OsobennostiTehnologii langProps={props} />
               <ImgBottom />
-              <Contacts />
+              <Contacts langProps={props} />
             </div>
           }
           exact

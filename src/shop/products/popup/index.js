@@ -308,7 +308,7 @@ export const Popup = (props) => {
                             </span>
                           </div>
                           <img
-                            src={langProps.locale === "ru" ? sale : saleten}
+                            src={langProps.locale === "ru" ? sale : sale}
                             alt="JewelCocktail"
                             className="card-icon-sale"
                           />
@@ -539,7 +539,7 @@ export const Popup = (props) => {
                             </span>
                           </div>
                           <img
-                            src={langProps.locale === "ru" ? sale : saleten}
+                            src={langProps.locale === "ru" ? sale : sale}
                             alt="JewelCocktail"
                             className="card-icon-sale"
                           />
@@ -770,7 +770,7 @@ export const Popup = (props) => {
                             </span>
                           </div>
                           <img
-                            src={langProps.locale === "ru" ? sale : saleten}
+                            src={langProps.locale === "ru" ? sale : sale}
                             alt="JewelCocktail"
                             className="card-icon-sale"
                           />
@@ -1001,7 +1001,7 @@ export const Popup = (props) => {
                             </span>
                           </div>
                           <img
-                            src={langProps.locale === "ru" ? sale : saleten}
+                            src={langProps.locale === "ru" ? sale : sale}
                             alt="JewelCocktail"
                             className="card-icon-sale"
                           />
@@ -1233,7 +1233,7 @@ export const Popup = (props) => {
                             </span>
                           </div>
                           <img
-                            src={langProps.locale === "ru" ? sale : saleten}
+                            src={langProps.locale === "ru" ? sale : sale}
                             alt="JewelCocktail"
                             className="card-icon-sale"
                           />
@@ -1465,7 +1465,7 @@ export const Popup = (props) => {
                             </span>
                           </div>
                           <img
-                            src={langProps.locale === "ru" ? sale : saleten}
+                            src={langProps.locale === "ru" ? sale : sale}
                             alt="JewelCocktail"
                             className="card-icon-sale"
                           />
@@ -1630,7 +1630,7 @@ export const Popup = (props) => {
                             </span>
                           </div>
                           <img
-                            src={langProps.locale === "ru" ? sale : saleten}
+                            src={langProps.locale === "ru" ? sale : sale}
                             alt="JewelCocktail"
                             className="card-icon-sale"
                           />
