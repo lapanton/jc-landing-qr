@@ -22,7 +22,7 @@ export const SelfProduct = (props) => {
     console.log("scrollElementId:", scrollElementId);
     console.log("anchor:", anchor);
 
-    if (anchor) {
+    if (anchor && location.hash === "#aboutus") {
       setTimeout(() => {
         anchor.scrollIntoView(scrollOptions);
       }, 500);

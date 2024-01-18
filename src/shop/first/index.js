@@ -149,7 +149,7 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
             </WrapDesktopLinks>
             <div>
               <a
-                href="https://jewelcocktail.com/about"
+                href="https://jewelcocktail.com/#about"
                 target="_blank"
                 rel="noreferrer"
               >
