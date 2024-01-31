@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Wrapper = styled.div`
   position: relative;
@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   h3 {
-    font-family: 'Organetto';
+    font-family: "Organetto";
     font-style: normal;
     font-weight: 400;
     font-size: 1.5rem;
@@ -19,15 +19,15 @@ export const Wrapper = styled.div`
     color: #fff;
     margin-bottom: 1.75rem;
     span {
-      color: #A55248;
+      color: rgb(0, 153, 51);
       text-transform: uppercase;
-      font-family: 'Organetto';
+      font-family: "Organetto";
       letter-spacing: 0.21em;
     }
   }
   @media screen and (max-width: 768px) {
     padding: 1.25rem 1.25rem 0 1.25rem;
-  height: 9rem;
+    height: 9rem;
     h3 {
       font-size: 1rem;
       letter-spacing: 0.1rem;
@@ -44,7 +44,7 @@ export const Wrapper = styled.div`
     }
   }
   .how-it-works {
-    font-family: 'Organetto';
+    font-family: "Organetto";
     font-style: normal;
     font-weight: 300;
     font-size: 13px;
@@ -70,7 +70,7 @@ export const Descr = styled.div`
   font-size: 1.313rem;
   line-height: 144.5%;
   span {
-    color: #A55248;
+    color: rgb(0, 153, 51)
     text-transform: uppercase;
     font-family: 'Organetto';
   }

@@ -242,7 +242,6 @@ export const WrapStone = styled.div`
     transform: scale(1.3);
   }
   img {
-    border: 1px solid #fff;
     @media screen and (max-width: 768px) {
       width: 40px;
     }

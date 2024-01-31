@@ -381,7 +381,7 @@ export const CoupleBraceletsTalisman = (props) => {
               14 140 {langProps.locale === "ru" ? "₽" : "USD"}
             </p>
             <img
-              src={langProps.locale === "ru" ? sale : saleten}
+              src={langProps.locale === "ru" ? saleten : saleten}
               alt="JewelCocktail"
               className="sale-icon"
             />
