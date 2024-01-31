@@ -11,8 +11,6 @@ import {
 } from "./styled-popup";
 import close from "./cross.svg";
 
-import priceData from "../../../prices/price.json";
-
 import oneStoneM from "./stone/m/1.png";
 import twoStoneM from "./stone/m/2.png";
 import threeStoneM from "./stone/m/3.png";
@@ -40,9 +38,24 @@ import glass from "../glass/img/1.png";
 import giftIcon from "./gift_icon.png";
 
 import sales from "../sale.png";
+import sale from "../sale.png";
+import saleten from "../saleten.png";
 
 export const Popup = (props) => {
   const { showPopup, setShowPopup, card, setCard, langProps } = props;
+  const getPriceData = () => {
+    let jsonData;
+
+    // Import JSON files based on the detected locale
+    if (langProps.locale === "ru") {
+      jsonData = require("../../../prices/price.json");
+    } else {
+      jsonData = require("../../../prices/prices-en.json");
+    }
+
+    return jsonData;
+  };
+  const priceData = getPriceData();
   const handleClick = () => {
     setShowPopup(!showPopup);
   };
@@ -284,13 +297,18 @@ export const Popup = (props) => {
                         <WrapCardPrice>
                           <div className="price-card">
                             <FormattedMessage id="shop.price" />:{" "}
-                            <span className="card-line-old"> 10 000 ₽</span>{" "}
+                            <span className="card-line-old">
+                              {" "}
+                              {priceData["genskii-mellish-old"]}{" "}
+                              {langProps.locale === "ru" ? "₽" : "USD"}
+                            </span>{" "}
                             <span className="price-card-new">
-                              = {currentPrice} ₽{" "}
+                              = {currentPrice}{" "}
+                              {langProps.locale === "ru" ? "₽" : "USD"}{" "}
                             </span>
                           </div>
                           <img
-                            src={sales}
+                            src={langProps.locale === "ru" ? sale : sale}
                             alt="JewelCocktail"
                             className="card-icon-sale"
                           />
@@ -510,13 +528,18 @@ export const Popup = (props) => {
                         <WrapCardPrice>
                           <div className="price-card">
                             <FormattedMessage id="shop.price" />:{" "}
-                            <span className="card-line-old"> 9 850 ₽</span>{" "}
+                            <span className="card-line-old">
+                              {" "}
+                              {priceData["genskii-quasar-old"]}{" "}
+                              {langProps.locale === "ru" ? "₽" : "USD"}
+                            </span>{" "}
                             <span className="price-card-new">
-                              = {currentPrice} ₽{" "}
+                              = {currentPrice}{" "}
+                              {langProps.locale === "ru" ? "₽" : "USD"}{" "}
                             </span>
                           </div>
                           <img
-                            src={sales}
+                            src={langProps.locale === "ru" ? sale : sale}
                             alt="JewelCocktail"
                             className="card-icon-sale"
                           />
@@ -736,13 +759,18 @@ export const Popup = (props) => {
                         <WrapCardPrice>
                           <div className="price-card">
                             <FormattedMessage id="shop.price" />:{" "}
-                            <span className="card-line-old"> 9 570 ₽</span>{" "}
+                            <span className="card-line-old">
+                              {" "}
+                              {priceData["genskii-alcor-old"]}{" "}
+                              {langProps.locale === "ru" ? "₽" : "USD"}
+                            </span>{" "}
                             <span className="price-card-new">
-                              = {currentPrice} ₽{" "}
+                              = {currentPrice}{" "}
+                              {langProps.locale === "ru" ? "₽" : "USD"}{" "}
                             </span>
                           </div>
                           <img
-                            src={sales}
+                            src={langProps.locale === "ru" ? sale : sale}
                             alt="JewelCocktail"
                             className="card-icon-sale"
                           />
@@ -962,13 +990,18 @@ export const Popup = (props) => {
                         <WrapCardPrice>
                           <div className="price-card">
                             <FormattedMessage id="shop.price" />:{" "}
-                            <span className="card-line-old"> 10 000 ₽</span>{" "}
+                            <span className="card-line-old">
+                              {" "}
+                              {priceData["genskii-orion-old"]}{" "}
+                              {langProps.locale === "ru" ? "₽" : "USD"}
+                            </span>{" "}
                             <span className="price-card-new">
-                              = {currentPrice} ₽{" "}
+                              = {currentPrice}{" "}
+                              {langProps.locale === "ru" ? "₽" : "USD"}{" "}
                             </span>
                           </div>
                           <img
-                            src={sales}
+                            src={langProps.locale === "ru" ? sale : sale}
                             alt="JewelCocktail"
                             className="card-icon-sale"
                           />
@@ -1189,13 +1222,18 @@ export const Popup = (props) => {
                         <WrapCardPrice>
                           <div className="price-card">
                             <FormattedMessage id="shop.price" />:{" "}
-                            <span className="card-line-old"> 9 850 ₽</span>{" "}
+                            <span className="card-line-old">
+                              {" "}
+                              {priceData["mugskoi-gidor-old"]}{" "}
+                              {langProps.locale === "ru" ? "₽" : "USD"}
+                            </span>{" "}
                             <span className="price-card-new">
-                              = {currentPrice} ₽{" "}
+                              = {currentPrice}{" "}
+                              {langProps.locale === "ru" ? "₽" : "USD"}{" "}
                             </span>
                           </div>
                           <img
-                            src={sales}
+                            src={langProps.locale === "ru" ? sale : sale}
                             alt="JewelCocktail"
                             className="card-icon-sale"
                           />
@@ -1416,13 +1454,18 @@ export const Popup = (props) => {
                         <WrapCardPrice>
                           <div className="price-card">
                             <FormattedMessage id="shop.price" />:{" "}
-                            <span className="card-line-old"> 9 850 ₽</span>{" "}
+                            <span className="card-line-old">
+                              {" "}
+                              {priceData["mugskoi-dors-old"]}{" "}
+                              {langProps.locale === "ru" ? "₽" : "USD"}
+                            </span>{" "}
                             <span className="price-card-new">
-                              = {currentPrice} ₽{" "}
+                              = {currentPrice}{" "}
+                              {langProps.locale === "ru" ? "₽" : "USD"}{" "}
                             </span>
                           </div>
                           <img
-                            src={sales}
+                            src={langProps.locale === "ru" ? sale : sale}
                             alt="JewelCocktail"
                             className="card-icon-sale"
                           />
@@ -1576,13 +1619,18 @@ export const Popup = (props) => {
                         <WrapCardPrice>
                           <div className="price-card">
                             <FormattedMessage id="shop.price" />:{" "}
-                            <span className="card-line-old"> 14 140 ₽</span>{" "}
+                            <span className="card-line-old">
+                              {" "}
+                              {priceData["parnie-brasleti-old"]}{" "}
+                              {langProps.locale === "ru" ? "₽" : "USD"}
+                            </span>{" "}
                             <span className="price-card-new">
-                              = {currentPrice} ₽{" "}
+                              = {currentPrice}{" "}
+                              {langProps.locale === "ru" ? "₽" : "USD"}{" "}
                             </span>
                           </div>
                           <img
-                            src={sales}
+                            src={langProps.locale === "ru" ? sale : sale}
                             alt="JewelCocktail"
                             className="card-icon-sale"
                           />
@@ -1626,13 +1674,17 @@ export const Popup = (props) => {
                         <WrapCardPrice>
                           <div className="price-card">
                             <FormattedMessage id="shop.price" />:{" "}
-                            <span className="card-line-old"> 9 150 ₽</span>{" "}
+                            <span className="card-line-old">
+                              {" "}
+                              9 150 {langProps.locale === "ru" ? "₽" : "USD"}
+                            </span>{" "}
                             <span className="price-card-new">
-                              = {currentPrice} ₽{" "}
+                              = {currentPrice}{" "}
+                              {langProps.locale === "ru" ? "₽" : "USD"}{" "}
                             </span>
                           </div>
                           <img
-                            src={sales}
+                            src={langProps.locale === "ru" ? sale : saleten}
                             alt="JewelCocktail"
                             className="card-icon-sale"
                           />
@@ -1683,14 +1735,18 @@ export const Popup = (props) => {
                             <FormattedMessage id="shop.price" />:{" "}
                             <span className="card-line-old">
                               {" "}
-                              {priceData["talisman-kulon-genskii-old-price"]} ₽
+                              {
+                                priceData["talisman-kulon-genskii-old-price"]
+                              }{" "}
+                              {langProps.locale === "ru" ? "₽" : "USD"}
                             </span>{" "}
                             <span className="price-card-new">
-                              {currentPrice} ₽{" "}
+                              {currentPrice}{" "}
+                              {langProps.locale === "ru" ? "₽" : "USD"}{" "}
                             </span>
                           </div>
                           <img
-                            src={sales}
+                            src={langProps.locale === "ru" ? sale : saleten}
                             alt="JewelCocktail"
                             className="card-icon-sale"
                           />
@@ -1744,14 +1800,15 @@ export const Popup = (props) => {
                               {
                                 priceData["talisman-genskoe-kolitso-old-price"]
                               }{" "}
-                              ₽
+                              {langProps.locale === "ru" ? "₽" : "USD"}
                             </span>{" "}
                             <span className="price-card-new">
-                              {currentPrice} ₽{" "}
+                              {currentPrice}{" "}
+                              {langProps.locale === "ru" ? "₽" : "USD"}{" "}
                             </span>
                           </div>
                           <img
-                            src={sales}
+                            src={langProps.locale === "ru" ? sale : saleten}
                             alt="JewelCocktail"
                             className="card-icon-sale"
                           />
@@ -1805,14 +1862,15 @@ export const Popup = (props) => {
                               {
                                 priceData["talisman-genskii-braslet-old-price"]
                               }{" "}
-                              ₽
+                              {langProps.locale === "ru" ? "₽" : "USD"}
                             </span>{" "}
                             <span className="price-card-new">
-                              {currentPrice} ₽{" "}
+                              {currentPrice}{" "}
+                              {langProps.locale === "ru" ? "₽" : "USD"}{" "}
                             </span>
                           </div>
                           <img
-                            src={sales}
+                            src={langProps.locale === "ru" ? sale : saleten}
                             alt="JewelCocktail"
                             className="card-icon-sale"
                           />
@@ -1863,14 +1921,18 @@ export const Popup = (props) => {
                             <FormattedMessage id="shop.price" />:{" "}
                             <span className="card-line-old">
                               {" "}
-                              {priceData["talisman-mugskoi-kulon-old-price"]} ₽
+                              {
+                                priceData["talisman-mugskoi-kulon-old-price"]
+                              }{" "}
+                              {langProps.locale === "ru" ? "₽" : "USD"}
                             </span>{" "}
                             <span className="price-card-new">
-                              {currentPrice} ₽{" "}
+                              {currentPrice}{" "}
+                              {langProps.locale === "ru" ? "₽" : "USD"}{" "}
                             </span>
                           </div>
                           <img
-                            src={sales}
+                            src={langProps.locale === "ru" ? sale : saleten}
                             alt="JewelCocktail"
                             className="card-icon-sale"
                           />
@@ -1924,14 +1986,15 @@ export const Popup = (props) => {
                               {
                                 priceData["talisman-mugskoi-braslet-old-price"]
                               }{" "}
-                              ₽
+                              {langProps.locale === "ru" ? "₽" : "USD"}
                             </span>
                             <span className="price-card-new">
-                              {currentPrice} ₽{" "}
+                              {currentPrice}{" "}
+                              {langProps.locale === "ru" ? "₽" : "USD"}{" "}
                             </span>
                           </div>
                           <img
-                            src={sales}
+                            src={langProps.locale === "ru" ? sale : saleten}
                             alt="JewelCocktail"
                             className="card-icon-sale"
                           />
@@ -1948,7 +2011,8 @@ export const Popup = (props) => {
           })}
         </div>
         <div style={{ textAlign: "right" }}>
-          <FormattedMessage id="card.total" />: {sumPrice} ₽
+          <FormattedMessage id="card.total" />: {sumPrice}{" "}
+          {langProps.locale === "ru" ? "₽" : "USD"}
         </div>
         <OrderForm
           langProps={langProps}

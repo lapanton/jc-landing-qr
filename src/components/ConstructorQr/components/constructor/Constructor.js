@@ -248,8 +248,8 @@ export const Constructor = (props) => {
 
     // Convert audioData Blob to binary ArrayBuffer and append to formData
     if (audioData) {
-      const fileAudio = new File([audioData], "recording.ogg", {
-        type: "audio/ogg",
+      const fileAudio = new File([audioData], "recording.mp3", {
+        type: "audio/mp3",
       });
       formData.append("media", fileAudio);
     }

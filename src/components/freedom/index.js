@@ -1,42 +1,52 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
 import { Wrapper, Inner, WrapperMob } from "./withus-styled";
-import star from './star.png';
-import bgmob from './bgmob.png';
+import star from "./star.png";
+import bgmob from "./bgmob.png";
 
-
-export const Freedom = () => {
+export const Freedom = (props) => {
+  const { langProps } = props;
   const [width, setWidth] = useState(window.innerWidth);
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
   }
   useEffect(() => {
-    window.addEventListener('resize', handleWindowSizeChange);
+    window.addEventListener("resize", handleWindowSizeChange);
     return () => {
-      window.removeEventListener('resize', handleWindowSizeChange);
-    }
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
   }, []);
 
   const isMobile = width <= 768;
+  if (langProps.locale === "en") return null;
   return (
     <>
-      {
-        isMobile ?
-          <WrapperMob>
-            <h3><FormattedMessage id="message.freedom" /></h3>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;<FormattedMessage id="message.purchase" /></p>
-            <img src={bgmob} alt="JewelCocktail"/>
-          </WrapperMob>
-          :
-          <Wrapper>
-            <Inner>
-              <img src={star} alt="JewelCocktail" className="freedomStar"/>
-              <h3><FormattedMessage id="message.freedom" /></h3>
-              <p>&nbsp;&nbsp;&nbsp;&nbsp;<FormattedMessage id="message.purchase" /></p>
-            </Inner>
-          </Wrapper>
-      }
+      {isMobile ? (
+        <WrapperMob>
+          <h3>
+            <FormattedMessage id="message.freedom" />
+          </h3>
+          <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <FormattedMessage id="message.purchase" />
+          </p>
+          <img src={bgmob} alt="JewelCocktail" />
+        </WrapperMob>
+      ) : (
+        <Wrapper>
+          <Inner>
+            <img src={star} alt="JewelCocktail" className="freedomStar" />
+            <h3>
+              <FormattedMessage id="message.freedom" />
+            </h3>
+            <p>
+              &nbsp;&nbsp;&nbsp;&nbsp;
+              <FormattedMessage id="message.purchase" />
+            </p>
+          </Inner>
+        </Wrapper>
+      )}
     </>
-  )
-}
+  );
+};

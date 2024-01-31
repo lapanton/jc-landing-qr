@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes } from "styled-components";
 
 export const Wrapper = styled.div`
   background: transparent;
@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   @media screen and (max-width: 768px) {
-      max-width: inherit;
+    max-width: inherit;
     margin-left: inherit;
     margin-right: inherit;
   }
@@ -25,7 +25,7 @@ export const Wrapper = styled.div`
   .main-text {
     padding: 23px 0 5px 0;
   }
-  .main-text .heeeeeart{
+  .main-text .heeeeeart {
     position: absolute;
     top: 23px;
     left: -29px;
@@ -35,50 +35,50 @@ export const Wrapper = styled.div`
     top: 23px;
     right: -94px;
   }
-    .main-text span {
-      position: relative;
-      color: #fff;
-      font-family: 'Organetto';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 180.8%;
-      text-align: center;
-      letter-spacing: 0.21em;
-      padding: 20px 0 10px 0;
+  .main-text span {
+    position: relative;
+    color: #fff;
+    font-family: "Organetto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 180.8%;
+    text-align: center;
+    letter-spacing: 0.21em;
+    padding: 20px 0 10px 0;
+  }
+  .second-text {
+    padding: 0 10px;
+    color: #fff;
+    font-family: "Organetto";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 184.52%;
+    text-align: center;
+    margin-bottom: 25px;
+    @media screen and (min-width: 768px) {
+      max-width: 740px;
+      display: block;
+      margin: 20px auto 30px !important;
     }
-    .second-text {
-      padding: 0 10px;
-      color: #fff;
-      font-family: 'Organetto';
-      font-style: normal;
-      font-weight: 300;
-      font-size: 12px;
-      line-height: 184.52%;
-      text-align: center;
-      margin-bottom: 25px;
-      @media screen and (min-width: 768px) {
-        max-width: 740px;
-        display: block;
-        margin: 20px auto 30px !important;
-      }
+  }
+  .text-three {
+    color: #fff;
+    font-family: "Organetto";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 184.52%;
+    text-align: center;
+    margin: 30px 0 60px;
+    @media screen and (min-width: 768px) {
+      max-width: 740px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
-    .text-three {
-      color: #fff;
-      font-family: 'Organetto';
-      font-style: normal;
-      font-weight: 300;
-      font-size: 16px;
-      line-height: 184.52%;
-      text-align: center;
-      margin: 30px 0 60px;
-      @media screen and (min-width: 768px) {
-        max-width: 740px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
-    }
+  }
   .videoTag {
     height: 360px;
   }
@@ -92,13 +92,13 @@ export const BuyButton = styled.div`
   color: #fff;
   text-transform: uppercase;
   border-radius: 5px;
-  font-family: 'Organetto';
+  font-family: "Organetto";
   font-style: normal;
   font-weight: 400;
   display: block !important;
   width: 120px;
   margin: 50px auto 0 auto;
-  font-family: 'Organetto';
+  font-family: "Organetto";
   font-size: 15px;
   line-height: 40%;
   &:hover {
@@ -114,7 +114,7 @@ export const Inner = styled.div`
     margin: 0 auto;
   }
   .second-text {
-    font-family: 'Organetto';
+    font-family: "Organetto";
     font-style: normal;
     font-weight: 300;
     font-size: 12px;
@@ -122,7 +122,7 @@ export const Inner = styled.div`
     margin-bottom: 10px;
   }
   .podarok-s-dushoi {
-    font-family: 'Organetto';
+    font-family: "Organetto";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -136,7 +136,7 @@ export const Inner = styled.div`
   }
 `;
 
-const pulse= keyframes`
+const pulse = keyframes`
   0% {
     transform: scale(.9);
     box-shadow: 0 0 0 #fff;
@@ -161,7 +161,7 @@ export const ButtonShow = styled.div`
     border-radius: 50%;
   }
 
-/*  &:hover {
+  /*  &:hover {
     -webkit-animation: none;
   }*/
 `;
@@ -184,7 +184,7 @@ export const WrapDesktop = styled.div`
   h1 {
     max-width: 530px;
     margin: 0 auto 30px auto;
-    font-family: 'organetto';
+    font-family: "organetto";
     font-size: 30px;
     letter-spacing: 0.425em;
     white-space: nowrap;
@@ -208,7 +208,7 @@ export const RightPart = styled.div`
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    font-family: 'organetto';
+    font-family: "organetto";
     font-weight: 400;
     font-size: 19px;
     line-height: 180.8%;
@@ -221,13 +221,13 @@ export const RightPart = styled.div`
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
-    font-family: 'Organetto';
+    font-family: "Organetto";
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
     line-height: 144.5%;
     span {
-      color: rgba(165, 82, 72, 1);
+      color: rgb(0, 153, 51);
     }
   }
 `;
@@ -248,7 +248,7 @@ export const LeftPartSecond = styled.div`
   h3 {
     margin: 0 auto;
     max-width: 80%;
-    font-family: 'Organetto';
+    font-family: "Organetto";
     font-style: normal;
     font-weight: 400;
     font-size: 22px;
@@ -260,7 +260,7 @@ export const LeftPartSecond = styled.div`
   p {
     margin: 0 auto;
     max-width: 80%;
-    font-family: 'Organetto';
+    font-family: "Organetto";
     font-style: normal;
     font-weight: 300;
     font-size: 19px;

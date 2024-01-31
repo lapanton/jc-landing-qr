@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
 import ReactDOM from "react-dom";
-import priceData from "../../../../prices/price.json";
 import Slider from "react-slick";
 import one from "./img/1.png";
 import two from "./img/2.png";
@@ -50,9 +49,23 @@ import whiteArrow from "../rings/img/white-arrow.svg";
 import closeIcon from "../rings/img/cross_white.svg";
 import { Link } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
+import saleten from "../../saleten.png";
 
 export const DorsTalisman = (props) => {
   const { card, setCard, setShowPopup, langProps } = props;
+  const getPriceData = () => {
+    let jsonData;
+
+    // Import JSON files based on the detected locale
+    if (langProps.locale === "ru") {
+      jsonData = require("../../../../prices/price.json");
+    } else {
+      jsonData = require("../../../../prices/prices-en.json");
+    }
+
+    return jsonData;
+  };
+  const priceData = getPriceData();
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
   const [dorsStone, setDorsStone] = useState("1d-t");
@@ -474,12 +487,18 @@ export const DorsTalisman = (props) => {
           </p>
           <WrapPrices>
             <p className="price">
-              {priceData["talisman-mugskoi-braslet"]} <span>₽</span>
+              {priceData["talisman-mugskoi-braslet"]}{" "}
+              <span> {langProps.locale === "ru" ? "₽" : "USD"}</span>
             </p>
             <p className="old-price">
-              {priceData["talisman-mugskoi-braslet-old-price"]} ₽
+              {priceData["talisman-mugskoi-braslet-old-price"]}{" "}
+              {langProps.locale === "ru" ? "₽" : "USD"}
             </p>
-            <img src={sale} alt="JewelCocktail" className="sale-icon" />
+            <img
+              src={langProps.locale === "ru" ? saleten : saleten}
+              alt="JewelCocktail"
+              className="sale-icon"
+            />
           </WrapPrices>
           <div className="buy-button" onClick={() => buyDors()}>
             <FormattedMessage id="shop.buy" />
@@ -548,19 +567,24 @@ export const DorsTalisman = (props) => {
                     ? "камень ручной огранки"
                     : "handcraft stone"}
                 </p>
-                <p className="main-text">
-                  <FormattedMessage id="warranty.quality" />:
-                </p>
-                <p className="slave-text">
-                  <FormattedMessage id="club.jewel" />
-                  <a
-                    href="https://jewelcocktail.com/privacy"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FormattedMessage id="read.more" />
-                  </a>
-                </p>
+                {langProps.locale === "ru" && (
+                  <>
+                    <p className="main-text">
+                      <FormattedMessage id="warranty.quality" />:
+                    </p>
+
+                    <p className="slave-text">
+                      <FormattedMessage id="club.jewel" />
+                      <a
+                        href="https://jewelcocktail.com/privacy"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <FormattedMessage id="read.more" />
+                      </a>
+                    </p>
+                  </>
+                )}
               </ToRightMoveDesktop>
 
               <div

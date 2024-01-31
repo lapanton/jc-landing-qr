@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Wrapper = styled.div`
   position: relative;
@@ -22,7 +22,7 @@ export const WrapperDesktop = styled.div`
   h1 {
     max-width: 530px;
     margin: 0 auto 30px auto;
-    font-family: 'organetto';
+    font-family: "organetto";
     font-size: 30px;
     letter-spacing: 0.425em;
     white-space: nowrap;
@@ -62,7 +62,7 @@ export const WrapSubtitle = styled.div`
   max-width: 480px;
   margin: 0 auto;
   font-size: 17px;
-  font-family: 'organetto';
+  font-family: "organetto";
   letter-spacing: 0.21em;
   text-transform: uppercase;
   white-space: nowrap;
@@ -70,14 +70,14 @@ export const WrapSubtitle = styled.div`
 export const WrapDescription = styled.div`
   max-width: 480px;
   margin: 40px auto 0 auto;
-  font-family: 'organetto';
+  font-family: "organetto";
   font-weight: 400;
   font-size: 20px;
   line-height: 38px;
   text-align: center;
   letter-spacing: 0.21em;
   span {
-    color: rgba(165, 82, 72, 1);
+    color: rgb(0, 153, 51);
   }
 `;
 export const GiftButton = styled.div`
@@ -91,7 +91,7 @@ export const GiftButton = styled.div`
   display: block !important;
   width: 120px;
   margin: 50px auto 0 auto;
-  font-family: 'Organetto';
+  font-family: "Organetto";
   font-size: 15px;
   line-height: 40%;
   &:hover {

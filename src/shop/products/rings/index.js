@@ -42,9 +42,23 @@ import {
   WrapZoomSlider,
 } from "./styled-rings";
 import { FormattedMessage } from "react-intl";
+import saleten from "../saleten.png";
 
 export const Rings = (props) => {
-  const { card, setCard, setShowPopup } = props;
+  const { card, setCard, setShowPopup, langProps } = props;
+  const getPriceData = () => {
+    let jsonData;
+
+    // Import JSON files based on the detected locale
+    if (langProps.locale === "ru") {
+      jsonData = require("../../../prices/price.json");
+    } else {
+      jsonData = require("../../../prices/prices-en.json");
+    }
+
+    return jsonData;
+  };
+  const priceData = getPriceData();
 
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
@@ -133,7 +147,12 @@ export const Rings = (props) => {
 
   const buyRing = () => {
     const arr1 = [
-      { product: "ring", stone: ringStone, size: sizeRing, price: 7000 },
+      {
+        product: "ring",
+        stone: ringStone,
+        size: sizeRing,
+        price: +priceData["genskii-mellish"],
+      },
     ];
     const checkedItem = card.filter((value) => value.product !== "ring");
     setCard(() => [...checkedItem, ...arr1]);
@@ -245,7 +264,7 @@ export const Rings = (props) => {
         <div className="slider-wrap">
           <h4>
             <FormattedMessage id="wom.ring" />
-            <br /> Mellish
+            <br /> <span style={{ color: "rgb(0, 153, 51)" }}>Mellish</span>
           </h4>
           <Slider
             {...settings}
@@ -432,10 +451,18 @@ export const Rings = (props) => {
         <PriceBuySection>
           <WrapPrices>
             <p className="price">
-              7 000 <span>₽</span>
+              {priceData["genskii-mellish"]}{" "}
+              <span> {langProps.locale === "ru" ? "₽" : "USD"}</span>
             </p>
-            <p className="old-price">10 000 ₽</p>
-            <img src={sale} alt="JewelCocktail" className="sale-icon" />
+            <p className="old-price">
+              {priceData["genskii-mellish-old"]}{" "}
+              {langProps.locale === "ru" ? "₽" : "USD"}
+            </p>
+            <img
+              src={langProps.locale === "ru" ? sale : sale}
+              alt="JewelCocktail"
+              className="sale-icon"
+            />
           </WrapPrices>
           <p className="bonus">
             <FormattedMessage id="ring.twoketroys" />
@@ -505,19 +532,24 @@ export const Rings = (props) => {
                 <p className="slave-text">
                   <FormattedMessage id="natural.ketroy" />
                 </p>
-                <p className="main-text">
-                  <FormattedMessage id="warranty.quality" />:
-                </p>
-                <p className="slave-text">
-                  <FormattedMessage id="club.jewel" />
-                  <a
-                    href="https://jewelcocktail.com/privacy"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FormattedMessage id="read.more" />
-                  </a>
-                </p>
+                {langProps.locale === "ru" && (
+                  <>
+                    <p className="main-text">
+                      <FormattedMessage id="warranty.quality" />:
+                    </p>
+
+                    <p className="slave-text">
+                      <FormattedMessage id="club.jewel" />
+                      <a
+                        href="https://jewelcocktail.com/privacy"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <FormattedMessage id="read.more" />
+                      </a>
+                    </p>
+                  </>
+                )}
               </ToRightMoveDesktop>
 
               <div

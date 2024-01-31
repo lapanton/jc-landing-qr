@@ -36,9 +36,23 @@ import {
 import whiteArrow from "../rings/img/white-arrow.svg";
 import closeIcon from "../rings/img/cross_white.svg";
 import { FormattedMessage } from "react-intl";
+import saleten from "../saleten.png";
 
 export const CoupleBracelets = (props) => {
-  const { card, setCard, setShowPopup } = props;
+  const { card, setCard, setShowPopup, langProps } = props;
+  const getPriceData = () => {
+    let jsonData;
+
+    // Import JSON files based on the detected locale
+    if (langProps.locale === "ru") {
+      jsonData = require("../../../prices/price.json");
+    } else {
+      jsonData = require("../../../prices/prices-en.json");
+    }
+
+    return jsonData;
+  };
+  const priceData = getPriceData();
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
   const [coupleStone, setCoupleStone] = useState("1co");
@@ -123,7 +137,13 @@ export const CoupleBracelets = (props) => {
     ],
   };
   const buyCouple = () => {
-    const arr1 = [{ product: "couple", stone: coupleStone, price: 9900 }];
+    const arr1 = [
+      {
+        product: "couple",
+        stone: coupleStone,
+        price: +priceData["parnie-brasleti"],
+      },
+    ];
     const checkedItem = card.filter((value) => value.product !== "couple");
     setCard(() => [...checkedItem, ...arr1]);
     setShowPopup(true);
@@ -226,7 +246,9 @@ export const CoupleBracelets = (props) => {
       <Inner>
         <div className="slider-wrap">
           <h4>
-            <FormattedMessage id="paired.bracelets" />
+            <span style={{ color: "rgb(0, 153, 51)" }}>
+              <FormattedMessage id="paired.bracelets" />
+            </span>
           </h4>
           <Slider
             {...settings}
@@ -310,7 +332,6 @@ export const CoupleBracelets = (props) => {
               </WrapperZoom>,
               document.body,
             )}
-          }
           <Slider
             {...settingsTwo}
             asNavFor={nav1}
@@ -374,10 +395,18 @@ export const CoupleBracelets = (props) => {
         <PriceBuySection>
           <WrapPrices>
             <p className="price">
-              9 900 <span>₽</span>
+              {priceData["parnie-brasleti"]}{" "}
+              <span> {langProps.locale === "ru" ? "₽" : "USD"}</span>
             </p>
-            <p className="old-price">14 140 ₽</p>
-            <img src={sale} alt="JewelCocktail" className="sale-icon" />
+            <p className="old-price">
+              {priceData["parnie-brasleti-old"]}{" "}
+              {langProps.locale === "ru" ? "₽" : "USD"}
+            </p>
+            <img
+              src={langProps.locale === "ru" ? sale : sale}
+              alt="JewelCocktail"
+              className="sale-icon"
+            />
           </WrapPrices>
           <p className="bonus">
             <FormattedMessage id="two.brtwo" />
@@ -442,19 +471,24 @@ export const CoupleBracelets = (props) => {
                 <p className="slave-text">
                   <FormattedMessage id="natural.ketroy" />
                 </p>
-                <p className="main-text">
-                  <FormattedMessage id="warranty.quality" />:
-                </p>
-                <p className="slave-text">
-                  <FormattedMessage id="club.jewel" />
-                  <a
-                    href="https://jewelcocktail.com/privacy"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FormattedMessage id="read.more" />
-                  </a>
-                </p>
+                {langProps.locale === "ru" && (
+                  <>
+                    <p className="main-text">
+                      <FormattedMessage id="warranty.quality" />:
+                    </p>
+
+                    <p className="slave-text">
+                      <FormattedMessage id="club.jewel" />
+                      <a
+                        href="https://jewelcocktail.com/privacy"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <FormattedMessage id="read.more" />
+                      </a>
+                    </p>
+                  </>
+                )}
               </ToRightMoveDesktop>
 
               <div

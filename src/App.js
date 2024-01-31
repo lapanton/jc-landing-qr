@@ -124,15 +124,15 @@ export const App = (props) => {
               <MoveStuffAround />
               <BlackSquare />
               <WithUs />
-              <Uverenosti />
-              <Freedom />
-              <Different />
-              <Carousel />
-              <SelfProduct />
-              <OsobennostiTehnologii />
+              <Uverenosti langProps={props} />
+              <Freedom langProps={props} />
+              <Different langProps={props} />
+              <Carousel langProps={props} />
+              <SelfProduct langProps={props} />
+              <OsobennostiTehnologii langProps={props} />
               <ImgBottom />
               {/*<Contacts/>*/}
-              <ContactsShop />
+              <ContactsShop langProps={props} />
             </div>
           }
           exact
@@ -251,7 +251,7 @@ export const App = (props) => {
                 showPopup={showPopup}
               />
               <PopupShopClose />
-              <Second />
+              <Second langProps={props} />
               <Info langProps={props} />
               <ShowHideSection langProps={props} />
               <WrapProducts
@@ -262,9 +262,9 @@ export const App = (props) => {
                 setCard={setCard}
               />
               <Oldnew langProps={props} />
-              <SelfProductShop />
-              <OsobennostiTehnologiiShop />
-              <ContactsShop />
+              <SelfProductShop langProps={props} />
+              <OsobennostiTehnologiiShop langProps={props} />
+              <ContactsShop langProps={props} />
               <ScrollArrow />
             </>
           }
@@ -287,8 +287,8 @@ export const App = (props) => {
                 setShowPopup={setShowPopup}
                 showPopup={showPopup}
               />
-              <OsobennostiTehnologiiShop />
-              <ContactsShop />
+              <OsobennostiTehnologiiShop langProps={props} />
+              <ContactsShop langProps={props} />
               <ScrollArrow />
             </>
           }
@@ -305,14 +305,14 @@ export const App = (props) => {
               <MoveStuffAround />
               <BlackSquare />
               <WithUs />
-              <Uverenosti />
+              <Uverenosti langProps={props} />
               <Freedom />
-              <Different />
-              <Carousel />
-              <SelfProduct />
-              <OsobennostiTehnologii />
+              <Different langProps={props} />
+              <Carousel langProps={props} />
+              <SelfProduct langProps={props} />
+              <OsobennostiTehnologii langProps={props} />
               <ImgBottom />
-              <Contacts />
+              <Contacts langProps={props} />
             </div>
           }
           exact
@@ -328,14 +328,14 @@ export const App = (props) => {
               <MoveStuffAround />
               <BlackSquare />
               <WithUs />
-              <Uverenosti />
-              <Freedom />
-              <Different />
-              <Carousel />
-              <SelfProduct />
-              <OsobennostiTehnologii />
+              <Uverenosti langProps={props} />
+              <Freedom langProps={props} />
+              <Different langProps={props} />
+              <Carousel langProps={props} />
+              <SelfProduct langProps={props} />
+              <OsobennostiTehnologii langProps={props} />
               <ImgBottom />
-              <Contacts />
+              <Contacts langProps={props} />
             </div>
           }
           exact
@@ -351,14 +351,14 @@ export const App = (props) => {
               <MoveStuffAround />
               <BlackSquare />
               <WithUs />
-              <Uverenosti />
-              <Freedom />
-              <Different />
-              <Carousel />
-              <SelfProduct />
-              <OsobennostiTehnologii />
+              <Uverenosti langProps={props} />
+              <Freedom langProps={props} />
+              <Different langProps={props} />
+              <Carousel langProps={props} />
+              <SelfProduct langProps={props} />
+              <OsobennostiTehnologii langProps={props} />
               <ImgBottom />
-              <Contacts />
+              <Contacts langProps={props} />
             </div>
           }
           exact
@@ -382,9 +382,9 @@ export const App = (props) => {
                 card={card}
                 setCard={setCard}
               />
-              <SelfProductShop />
-              <OsobennostiTehnologiiShop />
-              <ContactsShop />
+              <SelfProductShop langProps={props} />
+              <OsobennostiTehnologiiShop langProps={props} />
+              <ContactsShop langProps={props} />
               <ScrollArrow />
             </div>
           }
@@ -400,7 +400,7 @@ export const App = (props) => {
                 showPopup={showPopup}
               />
               <TalismanStone langProps={props} />
-              <ContactsShop />
+              <ContactsShop langProps={props} />
               <ScrollArrow />
             </div>
           }

@@ -38,9 +38,23 @@ import {
 import whiteArrow from "../rings/img/white-arrow.svg";
 import closeIcon from "../rings/img/cross_white.svg";
 import { FormattedMessage } from "react-intl";
+import saleten from "../saleten.png";
 
 export const Orion = (props) => {
-  const { card, setCard, setShowPopup } = props;
+  const { card, setCard, setShowPopup, langProps } = props;
+  const getPriceData = () => {
+    let jsonData;
+
+    // Import JSON files based on the detected locale
+    if (langProps.locale === "ru") {
+      jsonData = require("../../../prices/price.json");
+    } else {
+      jsonData = require("../../../prices/prices-en.json");
+    }
+
+    return jsonData;
+  };
+  const priceData = getPriceData();
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
   const [orionStone, setOrionStone] = useState("1o");
@@ -125,7 +139,13 @@ export const Orion = (props) => {
     ],
   };
   const buyAlcor = () => {
-    const arr1 = [{ product: "orion", stone: orionStone, price: 7000 }];
+    const arr1 = [
+      {
+        product: "orion",
+        stone: orionStone,
+        price: +priceData["genskii-orion"],
+      },
+    ];
     const checkedItem = card.filter((value) => value.product !== "orion");
     setCard(() => [...checkedItem, ...arr1]);
     setShowPopup(true);
@@ -229,7 +249,7 @@ export const Orion = (props) => {
         <div className="slider-wrap">
           <h4>
             <FormattedMessage id="braslet.woman" />
-            <br /> Orion
+            <br /> <span style={{ color: "rgb(0, 153, 51)" }}>Orion</span>
           </h4>
           <Slider
             {...settings}
@@ -390,10 +410,18 @@ export const Orion = (props) => {
         <PriceBuySection>
           <WrapPrices>
             <p className="price">
-              7 000 <span>₽</span>
+              {priceData["genskii-orion"]}{" "}
+              <span> {langProps.locale === "ru" ? "₽" : "USD"}</span>
             </p>
-            <p className="old-price">10 000 ₽</p>
-            <img src={sale} alt="JewelCocktail" className="sale-icon" />
+            <p className="old-price">
+              {priceData["genskii-orion-old"]}{" "}
+              {langProps.locale === "ru" ? "₽" : "USD"}
+            </p>
+            <img
+              src={langProps.locale === "ru" ? sale : sale}
+              alt="JewelCocktail"
+              className="sale-icon"
+            />
           </WrapPrices>
           <p className="bonus">
             <FormattedMessage id="braslet.twoketroys" />
@@ -457,19 +485,24 @@ export const Orion = (props) => {
                 <p className="slave-text">
                   <FormattedMessage id="natural.ketroy" />
                 </p>
-                <p className="main-text">
-                  <FormattedMessage id="warranty.quality" />:
-                </p>
-                <p className="slave-text">
-                  <FormattedMessage id="club.jewel" />
-                  <a
-                    href="https://jewelcocktail.com/privacy"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <FormattedMessage id="read.more" />
-                  </a>
-                </p>
+                {langProps.locale === "ru" && (
+                  <>
+                    <p className="main-text">
+                      <FormattedMessage id="warranty.quality" />:
+                    </p>
+
+                    <p className="slave-text">
+                      <FormattedMessage id="club.jewel" />
+                      <a
+                        href="https://jewelcocktail.com/privacy"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <FormattedMessage id="read.more" />
+                      </a>
+                    </p>
+                  </>
+                )}
               </ToRightMoveDesktop>
 
               <div

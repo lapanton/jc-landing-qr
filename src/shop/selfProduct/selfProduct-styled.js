@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Wrapper = styled.div`
   background: transparent;
@@ -20,7 +20,7 @@ export const Wrapper = styled.div`
     position: relative;
   }
   p {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 300;
     color: #fff;
     font-size: 1rem;
@@ -58,7 +58,7 @@ export const Wrapper = styled.div`
     display: none;
   }
   @media screen and (max-width: 768px) {
-    height: 31rem;
+    height: 25rem;
     padding: 0 0 0 0;
     display: flex;
     flex-direction: column-reverse;
@@ -117,7 +117,6 @@ export const WrapText = styled.div`
   }
   @media screen and (max-width: 968px) {
     padding-left: 0;
-
   }
   @media screen and (max-width: 768px) {
     padding-left: 0;
@@ -146,7 +145,7 @@ export const WrapText = styled.div`
   }
   .noboldp {
     text-align: center;
-    font-family: 'Organetto';
+    font-family: "Organetto";
     font-style: normal;
     font-weight: 300;
     font-size: 12px;
@@ -161,9 +160,5 @@ export const InnerWrapSelfProduct = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
+  justify-content: center;
 `;
-
-
-
-
-
