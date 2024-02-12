@@ -263,7 +263,7 @@ function AudioPlayerRecorder(props) {
             <FormattedMessage id="audio.choose" />
             <FileInput
               type="file"
-              accept="audio/*,audio/wav,.mp3,audio/mp3,.wav"
+              accept="audio/*,audio/wav,.mp3,audio/mp3,.wav,audio/ogg,audio/mp4"
               onChange={handleFileChange}
             />
           </FileInputLabel>
