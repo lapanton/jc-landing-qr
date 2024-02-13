@@ -173,7 +173,7 @@ function AudioPlayerRecorder({
       });
 
       mediaRecorder.addEventListener("stop", () => {
-        const blob = new Blob(chunks, { type: "audio/mp3" }); // Updated MIME type
+        const blob = new Blob(chunks, { type: "audio/mp4" });
         const audioUrl = URL.createObjectURL(blob);
         setAudioData(blob);
         setAudioBlob(audioUrl);
