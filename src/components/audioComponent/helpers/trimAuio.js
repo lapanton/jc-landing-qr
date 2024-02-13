@@ -67,7 +67,7 @@ export const trimAudio = (audioBlob, callback) => {
         }
 
         // create Blob
-        return new Blob([buffer], { type: "audio/mpeg" });
+        return new Blob([buffer], { type: "audio/mp3" });
 
         function setUint16(data) {
           view.setUint16(pos, data, true);
