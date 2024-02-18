@@ -138,14 +138,18 @@ const WrapRecord = styled.div`
   }
 `;
 
-function AudioPlayerRecorder(props) {
-  const { audioBlob, setAudioBlob, setAudioData, isRalisman } = props;
+function AudioPlayerRecorder({
+  audioBlob,
+  setAudioBlob,
+  setAudioData,
+  isRalisman,
+}) {
   const [isRecording, setIsRecording] = useState(false);
   const [mediaRecorder, setMediaRecorder] = useState(null);
   const [time, setTime] = useState(60);
   const [chosenFileName, setChosenFileName] = useState("");
   const [tempAudioBlob, setTempAudioBlob] = useState(null);
-  console.log("isRalisman", isRalisman);
+
   useEffect(() => {
     if (isRecording && time > 0) {
       const timer = setTimeout(() => {
@@ -159,30 +163,33 @@ function AudioPlayerRecorder(props) {
   }, [isRecording, time]);
 
   const startRecording = async () => {
-    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const mediaRecorder = new MediaRecorder(stream);
+      const chunks = [];
 
-    let recorder = RecordRTC(stream, {
-      type: "audio",
-      mimeType: "audio/mpeg",
-      numberOfAudioChannels: 1,
-    });
+      mediaRecorder.addEventListener("dataavailable", (event) => {
+        chunks.push(event.data);
+      });
 
-    recorder.startRecording();
-
-    setIsRecording(true);
-    setMediaRecorder(recorder);
-  };
-
-  const stopRecording = () => {
-    if (mediaRecorder) {
-      mediaRecorder.stopRecording(() => {
-        const blob = mediaRecorder.getBlob();
-
+      mediaRecorder.addEventListener("stop", () => {
+        const blob = new Blob(chunks, { type: "audio/mp4" });
         const audioUrl = URL.createObjectURL(blob);
         setAudioData(blob);
         setAudioBlob(audioUrl);
       });
 
+      mediaRecorder.start();
+      setMediaRecorder(mediaRecorder);
+      setIsRecording(true);
+    } catch (error) {
+      console.error("Error accessing microphone:", error);
+    }
+  };
+
+  const stopRecording = () => {
+    if (mediaRecorder && mediaRecorder.state !== "inactive") {
+      mediaRecorder.stop();
       setIsRecording(false);
       setTime(60);
     }
@@ -263,7 +270,7 @@ function AudioPlayerRecorder(props) {
             <FormattedMessage id="audio.choose" />
             <FileInput
               type="file"
-              accept="audio/*,audio/wav,.mp3,audio/mp3,.wav,audio/ogg,audio/mp4"
+              accept="audio/*,audio/wav,.mp3,audio/mp3,.wav"
               onChange={handleFileChange}
             />
           </FileInputLabel>

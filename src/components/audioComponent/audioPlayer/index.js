@@ -17,7 +17,7 @@ function AudioPlayer({ audioData, baseUrl }) {
           // This is where you would use web-audio-api and audio-decode to process the buffer.
           // Once you get the resultant buffer in the desired format, you can generate a blob URL.
 
-          const audioBlob = new Blob([buffer], { type: "audio/wav" });
+          const audioBlob = new Blob([buffer], { type: "audio/mpeg" });
           const blobURL = URL.createObjectURL(audioBlob);
 
           setAudioURL(blobURL);
