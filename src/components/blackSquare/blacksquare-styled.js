@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Wrapper = styled.div`
   padding: 8.875rem 10.5rem 8.563rem 10.5rem;
@@ -15,6 +15,8 @@ export const Wrapper = styled.div`
     margin-left: 2rem;
     z-index: 99998;
     position: relative;
+    text-align: justify;
+  }
     span {
       color: #fff;
     }

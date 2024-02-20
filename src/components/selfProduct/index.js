@@ -28,27 +28,27 @@ export const SelfProduct = (props) => {
       }, 500);
     }
   }, [location, langProps.locale]);
-  if (langProps.locale === "en") return null;
-  return (
-    <Wrapper id="aboutus">
-      <img src={magazin} alt="JewelCocktail" className="magazin" />
-      <WrapText>
-        <h3>
-          <FormattedMessage id="message.sobstvennoe" />
-        </h3>
-        <div className="mobileImg">
-          <img src={bg} alt="JewelCocktail" />
-        </div>
-        <p>
-          <span>&nbsp;&nbsp;</span>&nbsp;&nbsp;
-          <FormattedMessage id="message.nashiuvelirnie" />
-        </p>
-        <p className="boldp">
-          <span>&nbsp;&nbsp;</span>&nbsp;&nbsp;
-          <FormattedMessage id="message.cozmojnosti" />
-        </p>
-      </WrapText>
-      <img src={bg} alt="JewelCocktail" className="logoDesktop" />
-    </Wrapper>
-  );
+  return null;
+  // return (
+  //   <Wrapper id="aboutus">
+  //     <img src={magazin} alt="JewelCocktail" className="magazin" />
+  //     <WrapText>
+  //       <h3>
+  //         <FormattedMessage id="message.sobstvennoe" />
+  //       </h3>
+  //       <div className="mobileImg">
+  //         <img src={bg} alt="JewelCocktail" />
+  //       </div>
+  //       <p>
+  //         <span>&nbsp;&nbsp;</span>&nbsp;&nbsp;
+  //         <FormattedMessage id="message.nashiuvelirnie" />
+  //       </p>
+  //       <p className="boldp">
+  //         <span>&nbsp;&nbsp;</span>&nbsp;&nbsp;
+  //         <FormattedMessage id="message.cozmojnosti" />
+  //       </p>
+  //     </WrapText>
+  //     <img src={bg} alt="JewelCocktail" className="logoDesktop" />
+  //   </Wrapper>
+  // );
 };

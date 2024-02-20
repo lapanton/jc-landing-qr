@@ -19,34 +19,34 @@ export const Freedom = (props) => {
   }, []);
 
   const isMobile = width <= 768;
-  if (langProps.locale === "en") return null;
-  return (
-    <>
-      {isMobile ? (
-        <WrapperMob>
-          <h3>
-            <FormattedMessage id="message.freedom" />
-          </h3>
-          <p>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <FormattedMessage id="message.purchase" />
-          </p>
-          <img src={bgmob} alt="JewelCocktail" />
-        </WrapperMob>
-      ) : (
-        <Wrapper>
-          <Inner>
-            <img src={star} alt="JewelCocktail" className="freedomStar" />
-            <h3>
-              <FormattedMessage id="message.freedom" />
-            </h3>
-            <p>
-              &nbsp;&nbsp;&nbsp;&nbsp;
-              <FormattedMessage id="message.purchase" />
-            </p>
-          </Inner>
-        </Wrapper>
-      )}
-    </>
-  );
+  return null;
+  // return (
+  //   <>
+  //     {isMobile ? (
+  //       <WrapperMob>
+  //         <h3>
+  //           <FormattedMessage id="message.freedom" />
+  //         </h3>
+  //         <p>
+  //           &nbsp;&nbsp;&nbsp;&nbsp;
+  //           <FormattedMessage id="message.purchase" />
+  //         </p>
+  //         <img src={bgmob} alt="JewelCocktail" />
+  //       </WrapperMob>
+  //     ) : (
+  //       <Wrapper>
+  //         <Inner>
+  //           <img src={star} alt="JewelCocktail" className="freedomStar" />
+  //           <h3>
+  //             <FormattedMessage id="message.freedom" />
+  //           </h3>
+  //           <p>
+  //             &nbsp;&nbsp;&nbsp;&nbsp;
+  //             <FormattedMessage id="message.purchase" />
+  //           </p>
+  //         </Inner>
+  //       </Wrapper>
+  //     )}
+  //   </>
+  // );
 };

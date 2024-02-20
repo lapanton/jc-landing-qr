@@ -53,12 +53,12 @@ export const Uverenosti = (props) => {
         </h3>
         <p>
           <span>&nbsp;&nbsp;</span>&nbsp;&nbsp;
-          {langProps.locale === "ru" && (
-            <FormattedMessage
-              id="message.miPredlagaem"
-              values={{ br: <br /> }}
-            />
-          )}
+          {/*{langProps.locale === "ru" && (*/}
+          {/*  <FormattedMessage*/}
+          {/*    id="message.miPredlagaem"*/}
+          {/*    values={{ br: <br /> }}*/}
+          {/*  />*/}
+          {/*)}*/}
         </p>
         <div style={{ position: "relative", zIndex: "9999999" }}>
           <WrapImage>

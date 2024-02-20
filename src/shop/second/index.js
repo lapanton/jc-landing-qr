@@ -10,7 +10,6 @@ import {
   WrapDescription,
   GiftButton,
 } from "./styles-second";
-import vid from "./preview.mp4";
 import YouTube from "react-youtube";
 
 export const Second = (props) => {
@@ -40,10 +39,13 @@ export const Second = (props) => {
     <>
       {isMobile ? (
         <Wrapper>
-          <YouTube
-            videoId={langProps.locale === "ru" ? "XLzYEUDEk-k" : "BFUTARA-E9U"}
-            opts={opts}
-          />
+          <RightPart>
+            {langProps.locale === "ru" ? (
+              <YouTube videoId="tvd7oLTpQTs" opts={opts} />
+            ) : (
+              <YouTube videoId="mqJdg9Z0Ius" opts={opts} />
+            )}
+          </RightPart>
         </Wrapper>
       ) : (
         <WrapperDesktop>
@@ -69,12 +71,11 @@ export const Second = (props) => {
             </GiftButton>
           </LeftPart>
           <RightPart>
-            <YouTube
-              videoId={
-                langProps.locale === "ru" ? "XLzYEUDEk-k" : "BFUTARA-E9U"
-              }
-              opts={opts}
-            />
+            {langProps.locale === "ru" ? (
+              <YouTube videoId="tvd7oLTpQTs" opts={opts} />
+            ) : (
+              <YouTube videoId="mqJdg9Z0Ius" opts={opts} />
+            )}
           </RightPart>
         </WrapperDesktop>
       )}

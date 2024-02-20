@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Wrapper = styled.div`
   position: fixed;
@@ -6,7 +6,9 @@ export const Wrapper = styled.div`
   left: 0;
   right: 0;
   top: 0;
-  transition: top .3s linear, oppacity .3s linear;
+  transition:
+    top 0.3s linear,
+    oppacity 0.3s linear;
   max-width: 100vw;
   max-height: 100vh;
   z-index: 999999999999999;
@@ -14,8 +16,7 @@ export const Wrapper = styled.div`
   &.show {
     top: 0;
     opacity: 1;
-    background-color: rgba(0,0,0,.5);
-   
+    background-color: rgba(0, 0, 0, 0.5);
   }
   &.hide {
     top: -110%;
@@ -44,7 +45,7 @@ export const Inner = styled.div`
       border-radius: 8px;
     }
     &::-webkit-scrollbar-track {
-      background: #FFFFFF;
+      background: #ffffff;
     }
   }
 `;
@@ -70,7 +71,7 @@ export const WrapProductDescription = styled.div`
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  font-family: 'Organetto';
+  font-family: "Organetto";
   font-size: 16px;
   img {
     max-width: 15px;
@@ -78,7 +79,7 @@ export const WrapProductDescription = styled.div`
 `;
 
 export const CardName = styled.div`
-  font-family: 'Organetto';
+  font-family: "Organetto";
   text-align: center;
   text-transform: uppercase;
   transform: translateY(-15px);
@@ -114,9 +115,30 @@ export const WrapCardPrice = styled.div`
       width: 100%;
       left: 1px;
       bottom: 9px;
-      border-bottom: 1px solid #A55248;
+      border-bottom: 1px solid #a55248;
       transform: rotate(-5deg);
     }
-    }
+  }
+`;
+
+export const WrapDiscountButton = styled.button`
+  background: rgb(0, 153, 51);
+  border-radius: 5px;
+  font-family: Organetto;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  display: inline-block;
+  padding: 12px 40px;
+  margin: 17px 0px;
+  border: none;
+  max-width: 320px;
+`;
+
+export const WrapDiscount = styled.div`
+  text-align: center;
+  margin-top: 10px;
+  input {
+    max-width: 320px;
+    height: 30px;
   }
 `;

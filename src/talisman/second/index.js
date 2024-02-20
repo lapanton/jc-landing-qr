@@ -4,14 +4,9 @@ import {
   WrapperDesktop,
   LeftPart,
   RightPart,
-  WrapVideo,
   WrapSubtitle,
   WrapDescription,
-  GiftButton,
 } from "./styles-second";
-import vid from "./preview.mp4";
-import vide from "./vide.mp4";
-import telPhone from "../exampleTalisman/phone_preview.gif";
 import { WrapRight } from "../exampleTalisman/selfProduct-styled";
 import conselation from "../exampleTalisman/constellation.png";
 import YouTube from "react-youtube";
@@ -52,16 +47,7 @@ export const SecondTalisman = (props) => {
           <WrapSubtitle>
             hi-tech {langProps.locale === "ru" ? "ТАЛИСМАН" : "TALISMAN"}
           </WrapSubtitle>
-          {langProps.locale === "ru" && (
-            <img src={telPhone} alt="JewelCocktail" className="desktopImg" />
-          )}
-          {langProps.locale === "en" && (
-            <img
-              src={conselation}
-              alt="JewelCocktail"
-              className="conselation"
-            />
-          )}
+          <YouTube videoId="KCECIDz_gdA" opts={opts} />
           <WrapDescription>
             {langProps.locale === "ru" ? (
               <>
@@ -77,16 +63,12 @@ export const SecondTalisman = (props) => {
                 the energy of charm
               </>
             )}
-            {langProps.locale === "ru" && (
-              <img
-                src={conselation}
-                alt="JewelCocktail"
-                className="conselation"
-              />
-            )}
-            {/*<h3>*/}
-            {/*  {langProps.locale === "ru" ? "выбери вставку наполни смыслом носи с удовольствием" : "CHOOSE YOUR CHARM FILL WITH MEANING WEAR WITH PLEASURE"}*/}
-            {/*</h3>*/}
+
+            <img
+              src={conselation}
+              alt="JewelCocktail"
+              className="conselation"
+            />
           </WrapDescription>
         </Wrapper>
       ) : (
@@ -114,33 +96,11 @@ export const SecondTalisman = (props) => {
                   according to your meaning and use the energy of charm
                 </>
               )}
-              {/*<h3>*/}
-              {/*  {langProps.locale === "ru" ? "выбери вставку наполни смыслом носи с удовольствием" : "CHOOSE YOUR CHARM FILL WITH MEANING WEAR WITH PLEASURE"}*/}
-              {/*</h3>*/}
             </WrapDescription>
-            {/*<GiftButton onClick={() => window.scrollTo({top: 1800, left: 0, behavior: 'smooth'})}>{langProps.locale === "ru" ? "создать" : "create"}</GiftButton>*/}
           </LeftPart>
           <RightPart>
             <WrapRight>
-              {langProps.locale === "ru" && (
-                <img
-                  src={telPhone}
-                  alt="JewelCocktail"
-                  className="desktopImg conselationDesktop"
-                />
-              )}
-              {langProps.locale === "en" && (
-                <video
-                  width="100%"
-                  height="100%"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                >
-                  <source src={vide} type="video/mp4" />
-                </video>
-              )}
+              <YouTube videoId="KCECIDz_gdA" opts={opts} />
             </WrapRight>
           </RightPart>
         </WrapperDesktop>

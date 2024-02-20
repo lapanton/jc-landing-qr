@@ -68,7 +68,7 @@ export const OsobennostiTehnologii = (props) => {
   // });
   // paves.resize();
   // }, []);
-
+  return null;
   return (
     <WrapContainer
       id="containerTwo"

@@ -5,7 +5,15 @@ import { WrapForm } from "./styled-order-form";
 import { BounceAnimation } from "../../animation/BounceAnimation";
 
 export const OrderForm = (props) => {
-  const { card, showPopup, sumPrice, setCard, setShowPopup, langProps } = props;
+  const {
+    card,
+    showPopup,
+    sumPrice,
+    promocode,
+    setCard,
+    setShowPopup,
+    langProps,
+  } = props;
   const [showAnimationOrder, setShowAnimationOrder] = useState(false);
   const [successMessage, setSuccessMessage] = useState(false);
   const [failMessage, setFailedMessage] = useState(false);
@@ -1411,6 +1419,7 @@ export const OrderForm = (props) => {
         })}
 
         <input type="hidden" name="sum_order" value={sumPrice} />
+        <input type="hidden" name="promocode" value={promocode} />
         <input
           placeholder={intl.formatMessage({ id: "card.name" })}
           type="text"

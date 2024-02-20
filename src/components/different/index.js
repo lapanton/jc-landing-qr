@@ -12,11 +12,7 @@ export const Different = (props) => {
       <img
         src={bg}
         alt="JewelCocktail"
-        style={
-          langProps.locale === "en"
-            ? { opacity: "0", display: "none" }
-            : { opacity: "1" }
-        }
+        style={{ opacity: "0", display: "none" }}
       />
       <WrapText id="english-scroll">
         <h3>
@@ -28,9 +24,9 @@ export const Different = (props) => {
         </p>
         <p>
           <span>&nbsp;&nbsp;</span>&nbsp;&nbsp;
-          {langProps.locale === "ru" && (
-            <FormattedMessage id="message.codego" />
-          )}
+          {/*{langProps.locale === "ru" && (*/}
+          {/*  <FormattedMessage id="message.codego" />*/}
+          {/*)}*/}
           {langProps.locale === "en" && (
             <>
               <span>{"   "}</span> Technically, on the reverse side of the

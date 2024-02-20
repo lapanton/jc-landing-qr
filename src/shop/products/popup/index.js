@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FormattedMessage } from "react-intl";
 import {
   Wrapper,
@@ -8,6 +8,8 @@ import {
   WrapProductDescription,
   CardName,
   WrapCardPrice,
+  WrapDiscountButton,
+  WrapDiscount,
 } from "./styled-popup";
 import close from "./cross.svg";
 
@@ -66,8 +68,73 @@ export const Popup = (props) => {
       localStorage.setItem("card-data", JSON.stringify([]));
     setCard(newItem);
   };
-  const sumPrice = card.reduce((a, b) => a + (b["price"] || 0), 0);
-  console.log("langProps.locale", langProps);
+
+  const [inputValue, setInputValue] = useState("");
+  const [discount, setDiscount] = useState(null);
+  const [discountResults, setDiscountResults] = useState(null);
+  const [promo, setPromo] = useState(null);
+
+  const handleCheckDiscount = async () => {
+    try {
+      const url = `https://admin.jewelcocktail.com/v1/discounts/code?name=${encodeURIComponent(
+        inputValue,
+      )}`;
+      const response = await fetch(url);
+
+      if (!response.ok) {
+        throw new Error("Failed to fetch discount");
+      }
+
+      const data = await response.json();
+      setPromo(inputValue);
+      setDiscount(data);
+    } catch (error) {
+      console.error("Error checking discount:", error);
+      // Handle error, show message to user, etc.
+    }
+  };
+
+  useEffect(() => {
+    if (discount && card.length > 0) {
+      const discountType = discount.typeProduct;
+      const discountPercent = discount.discount;
+
+      // Apply discount logic to each product in the card array
+      const discounts = card.map((item) => {
+        let discountedPrice = item.price; // Initialize with original price
+        if (
+          discountType.includes("talisman") &&
+          item.product.includes("Talisman")
+        ) {
+          // Apply discount only if product type is talisman
+          discountedPrice = item.price * (1 - discountPercent / 100);
+        }
+        if (
+          discountType.includes("jewerly") &&
+          !item.product.includes("Talisman")
+        ) {
+          // Apply discount only if product type is jewelry
+          discountedPrice = item.price * (1 - discountPercent / 100);
+        }
+        return { ...item, discountedPrice };
+      });
+
+      setDiscountResults(discounts);
+    }
+  }, [discount, card]);
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  const sumPrice =
+    discountResults === null
+      ? card.reduce((a, b) => a + (b["price"] || 0), 0)
+      : discountResults.reduce(
+          (total, item) => total + item.discountedPrice,
+          0,
+        );
+
   return (
     <Wrapper className={showPopup ? "show" : "hide"}>
       <Inner>
@@ -2010,10 +2077,26 @@ export const Popup = (props) => {
             );
           })}
         </div>
-        <div style={{ textAlign: "right" }}>
-          <FormattedMessage id="card.total" />: {sumPrice}{" "}
-          {langProps.locale === "ru" ? "₽" : "USD"}
-        </div>
+        {card.length > 0 && (
+          <div style={{ textAlign: "right" }}>
+            <FormattedMessage id="card.total" />: {sumPrice}{" "}
+            {langProps.locale === "ru" ? "₽" : "USD"}
+          </div>
+        )}
+        {card.length > 0 && (
+          <WrapDiscount>
+            <input
+              type="text"
+              value={inputValue}
+              onChange={handleInputChange}
+              placeholder=""
+            />
+            <WrapDiscountButton onClick={handleCheckDiscount}>
+              <FormattedMessage id="check.discount" />
+            </WrapDiscountButton>
+          </WrapDiscount>
+        )}
+
         <OrderForm
           langProps={langProps}
           card={card}
@@ -2021,6 +2104,7 @@ export const Popup = (props) => {
           setCard={setCard}
           showPopup={showPopup}
           setShowPopup={setShowPopup}
+          promocode={promo}
         />
       </Inner>
     </Wrapper>
