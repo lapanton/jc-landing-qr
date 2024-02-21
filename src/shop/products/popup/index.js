@@ -77,7 +77,7 @@ export const Popup = (props) => {
   const handleCheckDiscount = async () => {
     try {
       const url = `https://admin.jewelcocktail.com/v1/discounts/code?name=${encodeURIComponent(
-        inputValue,
+        inputValue.toLowerCase(),
       )}`;
       const response = await fetch(url);
 
