@@ -33,6 +33,8 @@ import ruimg from "./ru.svg";
 import cnimg from "./cn.svg";
 import whatsapp from "../../whatsapp.png";
 import telegram from "../../telegram.png";
+import dzen from "../ConstructorQr/components/header/dzen.png";
+import inn from "../../shop/contacts/img/innn.png";
 
 export const Main = ({ langProps }) => {
   const { locale, onLocaleChange } = langProps;
@@ -96,7 +98,7 @@ export const Main = ({ langProps }) => {
             {/*<div onClick={() => window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })}><FormattedMessage id="message.contacts" /></div>*/}
           </WrapList>
           <WrapSocial>
-            {locale === "ru" && (
+            {locale === "ruz" && (
               <>
                 <a
                   href="https://www.instagram.com/jewelcocktail_official/"
@@ -272,12 +274,15 @@ export const Main = ({ langProps }) => {
                           <img src={insn} alt="JewelCocktail" />
                         </a>
                         <a
-                          href="https://www.youtube.com/channel/UC44U3iU75Nx-Fv8LFb28I6w"
-                          target="_blank"
-                          rel="noopener noreferrer"
+                          href="https://dzen.ru/jewelcocktail.com"
                           className="youtube-social"
+                          target="_blank"
                         >
-                          <img src={youn} alt="JewelCocktail" />
+                          <img
+                            src={dzen}
+                            alt="JewelCocktail"
+                            style={{ width: "90%", background: "#fff" }}
+                          />
                         </a>
                       </>
                     )}
@@ -308,7 +313,6 @@ export const Main = ({ langProps }) => {
                       style={{
                         maxWidth: "27px",
                         display: "inline-block",
-                        marginLeft: "10px",
                       }}
                     >
                       <img
@@ -317,6 +321,18 @@ export const Main = ({ langProps }) => {
                         style={{ maxWidth: "100%" }}
                       />
                     </a>
+                    {locale === "en" && (
+                      <a
+                        href="https://www.instagram.com/jewel_hitech"
+                        target="_blank"
+                      >
+                        <img
+                          src={inn}
+                          alt="JewelCocktail"
+                          style={{ transform: "translate(-36px, 6px)" }}
+                        />
+                      </a>
+                    )}
                   </div>
                 </WrapMenu>
               </div>

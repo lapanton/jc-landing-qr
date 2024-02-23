@@ -10,6 +10,7 @@ import {
   WrapCardPrice,
   WrapDiscountButton,
   WrapDiscount,
+  ErrorMessage,
 } from "./styled-popup";
 import close from "./cross.svg";
 
@@ -73,10 +74,14 @@ export const Popup = (props) => {
   const [discount, setDiscount] = useState(null);
   const [discountResults, setDiscountResults] = useState(null);
   const [promo, setPromo] = useState(null);
+  const [errorPromo, setErrorPromo] = useState(null);
+  const [disableButton, setDisableButton] = useState(false);
+  const [oldSum, setOldSum] = useState(null);
 
   const handleCheckDiscount = async () => {
+    setDisableButton(true);
     try {
-      const url = `https://admin.jewelcocktail.com/v1/discounts/code?name=${encodeURIComponent(
+      const url = `https://admin.jewelcocktail.com/v1/discounts/${encodeURIComponent(
         inputValue.toLowerCase(),
       )}`;
       const response = await fetch(url);
@@ -86,11 +91,26 @@ export const Popup = (props) => {
       }
 
       const data = await response.json();
+
+      if (data.status !== "enabled") {
+        setDisableButton(false);
+        setErrorPromo(true);
+        setTimeout(() => {
+          setErrorPromo(false);
+        }, 2500);
+        return;
+      }
+
+      setDisableButton(false);
       setPromo(inputValue);
       setDiscount(data);
     } catch (error) {
       console.error("Error checking discount:", error);
-      // Handle error, show message to user, etc.
+      setErrorPromo(true);
+      setDisableButton(false);
+      setTimeout(() => {
+        setErrorPromo(false);
+      }, 2500);
     }
   };
 
@@ -134,6 +154,9 @@ export const Popup = (props) => {
           (total, item) => total + item.discountedPrice,
           0,
         );
+  useEffect(() => {
+    setOldSum(card.reduce((a, b) => a + (b["price"] || 0), 0));
+  }, [card]);
 
   return (
     <Wrapper className={showPopup ? "show" : "hide"}>
@@ -2078,12 +2101,25 @@ export const Popup = (props) => {
           })}
         </div>
         {card.length > 0 && (
-          <div style={{ textAlign: "right" }}>
-            <FormattedMessage id="card.total" />: {sumPrice}{" "}
-            {langProps.locale === "ru" ? "₽" : "USD"}
+          <div
+            style={{
+              textAlign: "right",
+              fontFamily: "Organetto",
+              marginBottom: "20px",
+            }}
+          >
+            <FormattedMessage id="card.total" />:{" "}
+            {promo != null && (
+              <span style={{ textDecoration: "line-through", color: "#ccc" }}>
+                {oldSum} {langProps.locale === "ru" ? "₽" : "USD"}
+              </span>
+            )}{" "}
+            <span style={{ fontWeight: "bolder" }}>
+              {sumPrice} {langProps.locale === "ru" ? "₽" : "USD"}
+            </span>
           </div>
         )}
-        {card.length > 0 && (
+        {card.length > 0 && !(promo != null) && (
           <WrapDiscount>
             <input
               type="text"
@@ -2091,10 +2127,18 @@ export const Popup = (props) => {
               onChange={handleInputChange}
               placeholder=""
             />
-            <WrapDiscountButton onClick={handleCheckDiscount}>
+            <WrapDiscountButton
+              onClick={handleCheckDiscount}
+              className={disableButton ? "disable-this" : "no-disable-this"}
+            >
               <FormattedMessage id="check.discount" />
             </WrapDiscountButton>
           </WrapDiscount>
+        )}
+        {errorPromo && (
+          <ErrorMessage>
+            <FormattedMessage id="card.errorpromo" />
+          </ErrorMessage>
         )}
 
         <OrderForm

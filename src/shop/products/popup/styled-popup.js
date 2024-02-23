@@ -132,6 +132,13 @@ export const WrapDiscountButton = styled.button`
   margin: 17px 0px;
   border: none;
   max-width: 320px;
+  &:hover {
+    cursor: pointer;
+  }
+  &.disable-this {
+    pointer-events: none;
+    filter: grayscale(1);
+  }
 `;
 
 export const WrapDiscount = styled.div`
@@ -141,4 +148,11 @@ export const WrapDiscount = styled.div`
     max-width: 320px;
     height: 30px;
   }
+`;
+
+export const ErrorMessage = styled.span`
+  color: rgb(239, 103, 112);
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
 `;

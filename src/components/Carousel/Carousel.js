@@ -19,17 +19,17 @@ import thirteen from "./image/13.png";
 import fourteen from "./image/14.png";
 import fifteen from "./image/15.png";
 import sixteen from "./image/16.png";
-import seventeen from "./image/17.png";
-import eigtteen from "./image/18.png";
-import nineteen from "./image/19.png";
-import twenty from "./image/20.png";
-import twentyone from "./image/21.png";
-
-import twentytwo from "./image/22.png";
-import twentythree from "./image/23.png";
-import twentyfour from "./image/24.png";
-import twentyfive from "./image/25.png";
-import twentysix from "./image/26.png";
+// import seventeen from "./image/17.png";
+// import eigtteen from "./image/18.png";
+// import nineteen from "./image/19.png";
+// import twenty from "./image/20.png";
+// import twentyone from "./image/21.png";
+//
+// import twentytwo from "./image/22.png";
+// import twentythree from "./image/23.png";
+// import twentyfour from "./image/24.png";
+// import twentyfive from "./image/25.png";
+// import twentysix from "./image/26.png";
 
 export const Carousel = (props) => {
   const { langProps } = props;
@@ -98,68 +98,68 @@ export const Carousel = (props) => {
               <WrapInner className="innerSliderItems">
                 <img src={seven} alt="JewelCocktail" />
               </WrapInner>
-              <WrapInner className="innerSliderItems">
-                <img src={eight} alt="JewelCocktail" />
-              </WrapInner>
-              <WrapInner className="innerSliderItems">
-                <img src={nine} alt="JewelCocktail" />
-              </WrapInner>
+              {/*<WrapInner className="innerSliderItems">*/}
+              {/*  <img src={eight} alt="JewelCocktail" />*/}
+              {/*</WrapInner>*/}
+              {/*<WrapInner className="innerSliderItems">*/}
+              {/*  <img src={nine} alt="JewelCocktail" />*/}
+              {/*</WrapInner>*/}
 
               {/*<WrapInner className="innerSliderItems">*/}
               {/*  <img src={ten} alt="JewelCocktail" />*/}
               {/*</WrapInner>*/}
-              <WrapInner className="innerSliderItems">
-                <img src={eleven} alt="JewelCocktail" />
-              </WrapInner>
+              {/*<WrapInner className="innerSliderItems">*/}
+              {/*  <img src={eleven} alt="JewelCocktail" />*/}
+              {/*</WrapInner>*/}
               {/*<WrapInner className="innerSliderItems">*/}
               {/*  <img src={twelve} alt="JewelCocktail" />*/}
               {/*</WrapInner>*/}
 
-              <WrapInner className="innerSliderItems">
-                <img src={thirteen} alt="JewelCocktail" />
-              </WrapInner>
-              <WrapInner className="innerSliderItems">
-                <img src={fourteen} alt="JewelCocktail" />
-              </WrapInner>
-              <WrapInner className="innerSliderItems">
-                <img src={fifteen} alt="JewelCocktail" />
-              </WrapInner>
+              {/*<WrapInner className="innerSliderItems">*/}
+              {/*  <img src={thirteen} alt="JewelCocktail" />*/}
+              {/*</WrapInner>*/}
+              {/*<WrapInner className="innerSliderItems">*/}
+              {/*  <img src={fourteen} alt="JewelCocktail" />*/}
+              {/*</WrapInner>*/}
+              {/*<WrapInner className="innerSliderItems">*/}
+              {/*  <img src={fifteen} alt="JewelCocktail" />*/}
+              {/*</WrapInner>*/}
 
               {/*<WrapInner className="innerSliderItems">*/}
               {/*  <img src={sixteen} alt="JewelCocktail" />*/}
               {/*</WrapInner>*/}
-              <WrapInner className="innerSliderItems">
-                <img src={seventeen} alt="JewelCocktail" />
-              </WrapInner>
-              <WrapInner className="innerSliderItems">
-                <img src={eigtteen} alt="JewelCocktail" />
-              </WrapInner>
+              {/*<WrapInner className="innerSliderItems">*/}
+              {/*  <img src={seventeen} alt="JewelCocktail" />*/}
+              {/*</WrapInner>*/}
+              {/*<WrapInner className="innerSliderItems">*/}
+              {/*  <img src={eigtteen} alt="JewelCocktail" />*/}
+              {/*</WrapInner>*/}
 
-              <WrapInner className="innerSliderItems">
-                <img src={nineteen} alt="JewelCocktail" />
-              </WrapInner>
+              {/*<WrapInner className="innerSliderItems">*/}
+              {/*  <img src={nineteen} alt="JewelCocktail" />*/}
+              {/*</WrapInner>*/}
               {/*<WrapInner className="innerSliderItems">*/}
               {/*  <img src={twenty} alt="JewelCocktail" />*/}
               {/*</WrapInner>*/}
-              <WrapInner className="innerSliderItems">
-                <img src={twentyone} alt="JewelCocktail" />
-              </WrapInner>
+              {/*<WrapInner className="innerSliderItems">*/}
+              {/*  <img src={twentyone} alt="JewelCocktail" />*/}
+              {/*</WrapInner>*/}
 
-              <WrapInner className="innerSliderItems">
-                <img src={twentytwo} alt="JewelCocktail" />
-              </WrapInner>
-              <WrapInner className="innerSliderItems">
-                <img src={twentythree} alt="JewelCocktail" />
-              </WrapInner>
-              <WrapInner className="innerSliderItems">
-                <img src={twentyfour} alt="JewelCocktail" />
-              </WrapInner>
-              <WrapInner className="innerSliderItems">
-                <img src={twentyfive} alt="JewelCocktail" />
-              </WrapInner>
-              <WrapInner className="innerSliderItems">
-                <img src={twentysix} alt="JewelCocktail" />
-              </WrapInner>
+              {/*<WrapInner className="innerSliderItems">*/}
+              {/*  <img src={twentytwo} alt="JewelCocktail" />*/}
+              {/*</WrapInner>*/}
+              {/*<WrapInner className="innerSliderItems">*/}
+              {/*  <img src={twentythree} alt="JewelCocktail" />*/}
+              {/*</WrapInner>*/}
+              {/*<WrapInner className="innerSliderItems">*/}
+              {/*  <img src={twentyfour} alt="JewelCocktail" />*/}
+              {/*</WrapInner>*/}
+              {/*<WrapInner className="innerSliderItems">*/}
+              {/*  <img src={twentyfive} alt="JewelCocktail" />*/}
+              {/*</WrapInner>*/}
+              {/*<WrapInner className="innerSliderItems">*/}
+              {/*  <img src={twentysix} alt="JewelCocktail" />*/}
+              {/*</WrapInner>*/}
             </Slider>
           </div>
         </div>

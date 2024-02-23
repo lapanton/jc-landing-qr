@@ -14,10 +14,11 @@ import email from "./img/email.png";
 import marker from "./img/marker.png";
 import timer from "./img/timer.png";
 import emailbig from "./img/email-bottom.png";
-import yout from "./img/youtube.png";
+import dzen from "./img/dzen.png";
 import inst from "./img/instatgram-n.png";
 import whatsapp from "../../whatsapp.png";
 import telegram from "../../telegram.png";
+import inn from "./img/innn.png";
 
 export const ContactsShop = (props) => {
   const { langProps } = props;
@@ -50,6 +51,7 @@ export const ContactsShop = (props) => {
       {/*     </div>*/}
       {/*   </WrapText>*/}
       {/* </WrapCart>*/}
+
       {langProps.locale === "ru" && (
         <BottomSocial>
           <div className="bottom-social">
@@ -60,15 +62,29 @@ export const ContactsShop = (props) => {
               <img src={inst} alt="JewelCocktail" style={{ width: "100%" }} />
             </a>
             <a
-              href="https://www.youtube.com/channel/UC44U3iU75Nx-Fv8LFb28I6w"
+              href="https://dzen.ru/jewelcocktail.com"
               style={{ margin: "0 25px" }}
             >
-              <img src={yout} alt="JewelCocktail" />
+              <img
+                src={dzen}
+                alt="JewelCocktail"
+                style={{ background: "#fff", width: "28px" }}
+              />
             </a>
             <a href="mailto:contact@jewelcocktail.com">
               <img src={emailbig} alt="JewelCocktail" />
             </a>
           </div>
+        </BottomSocial>
+      )}
+
+      {langProps.locale === "ru" ? (
+        <div></div>
+      ) : (
+        <BottomSocial style={{ width: "auto" }}>
+          <a href="https://www.instagram.com/jewel_hitech" target="_blank">
+            <img src={inn} alt="JewelCocktail" style={{ width: "100px" }} />
+          </a>
         </BottomSocial>
       )}
 

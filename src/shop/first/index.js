@@ -158,7 +158,7 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
             </div>
             {/*<div onClick={() => window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" })}><FormattedMessage id="message.contacts" /></div>*/}
           </WrapList>
-          {locale === "ru" && (
+          {locale === "ruz" && (
             <>
               <WrapSocial>
                 <a

@@ -2,7 +2,7 @@ import React from "react";
 import { Wrapper, Menu, Social, WrapPhone } from "./header-style";
 import logo from "./logo.png";
 import ins from "./ins.png";
-import youtube from "./youtube.png";
+import dzen from "./dzen.png";
 import google from "./google.png";
 import { WrapperPending } from "../constructor/constructor-style";
 import whatsapp from "../../../../whatsapp.png";
@@ -41,11 +41,15 @@ export const Header = (props) => {
                   <img src={ins} alt="JewelCocktail" />
                 </a>
                 <a
-                  href="https://www.youtube.com/channel/UC44U3iU75Nx-Fv8LFb28I6w"
+                  href="https://dzen.ru/jewelcocktail.com"
                   className="you"
                   target="_blank"
                 >
-                  <img src={youtube} alt="JewelCocktail" />
+                  <img
+                    src={dzen}
+                    alt="JewelCocktail"
+                    style={{ width: "90%" }}
+                  />
                 </a>
                 <a href="mailto:contact@jewelcocktail.com" className="goo">
                   <img src={google} alt="JewelCocktail" />

@@ -10,7 +10,7 @@ const initLocale = () => {
   ) {
     return "ru";
   } else {
-    return "en";
+    return "ru";
   }
 };
 

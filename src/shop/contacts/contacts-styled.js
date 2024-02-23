@@ -1,11 +1,11 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Wrapper = styled.div`
   background: transparent;
   color: #fff;
   margin: 0 4rem 4rem 4rem;
   h3 {
-    font-family: 'Organetto';
+    font-family: "Organetto";
     font-size: 1.75rem;
     line-height: 2.563rem;
     color: #fff;
@@ -16,7 +16,7 @@ export const Wrapper = styled.div`
     position: relative;
     text-align: center;
     display: block;
-    padding-bottom: 3rem;
+    padding-bottom: 1.5rem;
   }
   @media screen and (max-width: 768px) {
     padding: 0;
@@ -25,7 +25,7 @@ export const Wrapper = styled.div`
     color: #fff;
     transform: translate(18px, -3px);
     display: inline-block;
-    font-family: 'Organetto';
+    font-family: "Organetto";
     font-size: 12px;
   }
 `;
@@ -53,7 +53,7 @@ export const WrapText = styled.div`
   color: #fff;
   margin-left: 4.8rem;
   @media screen and (max-width: 1200px) {
-    left: 30rem
+    left: 30rem;
   }
   @media screen and (max-width: 968px) {
     left: 20rem;
@@ -64,7 +64,8 @@ export const WrapText = styled.div`
     margin-left: 0;
     padding: 30px;
   }
-  div, p {
+  div,
+  p {
     position: relative;
     z-index: 99998;
     color: #fff;
@@ -85,11 +86,10 @@ export const WrapText = styled.div`
     font-weight: lighter;
     white-space: nowrap;
     &.laast {
-      font-family: 'Organetto';
+      font-family: "Organetto";
       font-size: 12px;
       padding-left: 34px;
     }
-
   }
   .timeWork {
     font-weight: bolder;
@@ -108,7 +108,7 @@ export const Copyright = styled.div`
   @media screen and (max-width: 768px) {
     margin-bottom: 40px;
     padding-bottom: 40px;
-    font-family: 'Organetto';
+    font-family: "Organetto";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -139,10 +139,9 @@ export const BottomMobile = styled.div`
     }
 
     @media screen and (max-width: 768px) {
-
-        position: relative;
-        height: 30px;
-        display: inherit;
+      position: relative;
+      height: 30px;
+      display: inherit;
       span {
         position: absolute;
         left: -74%;
@@ -150,7 +149,6 @@ export const BottomMobile = styled.div`
         font-size: 10px;
         letter-spacing: 1px;
       }
-
     }
   }
 `;
@@ -163,5 +161,3 @@ export const BottomSocial = styled.div`
   width: 160px;
   margin: 0 auto;
 `;
-
-
