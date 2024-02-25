@@ -103,9 +103,7 @@ export const ContactsShop = (props) => {
           <img src={telegram} alt="JewelCockail" />
         </a>
       </BottomMobile>
-      <Copyright>
-        {langProps.locale === "ru" && "© JEWEL COCKTAIL 2022"}
-      </Copyright>
+      <Copyright>{langProps.locale === "ru" && "© JEWEL COCKTAIL"}</Copyright>
     </Wrapper>
   );
 };
