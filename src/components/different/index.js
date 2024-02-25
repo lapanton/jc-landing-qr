@@ -18,22 +18,18 @@ export const Different = (props) => {
         <h3>
           <FormattedMessage id="message.ukrashenia" />
         </h3>
-        <p>
-          <span>&nbsp;&nbsp;</span>&nbsp;&nbsp;
+        <p style={{textAlign: "justify"}}>
           <FormattedMessage id="message.youcan" />
         </p>
-        <p>
-          <span>&nbsp;&nbsp;</span>&nbsp;&nbsp;
-          {/*{langProps.locale === "ru" && (*/}
-          {/*  <FormattedMessage id="message.codego" />*/}
-          {/*)}*/}
+        <p style={{textAlign: "justify"}}>
+      
           {langProps.locale === "en" && (
             <>
-              <span>{"   "}</span> Technically, on the reverse side of the
+               Technically, on the reverse side of the
               insert, an engraving with unique QR code{" "}
               <span style={{ color: "rgb(0, 153, 51)", display: "inline" }}>
                 (INVISIBLE TO OTHERS).
-              </span>{" "}
+              </span>
               QR-link to your personal creation PRESENT OR TALISMAN card.
               Jewellery with a digital message is an unique opportunity to make
               a gift with meaning and to keep the moments that are important to

@@ -14,20 +14,6 @@ export const SelfProduct = (props) => {
     block: "center",
   };
 
-  useEffect(() => {
-    const scrollElementId =
-      langProps.locale === "ru" ? "#aboutus" : "#english-scroll";
-    const anchor = document.querySelector(scrollElementId);
-
-    console.log("scrollElementId:", scrollElementId);
-    console.log("anchor:", anchor);
-
-    if (anchor && location.hash === "#aboutus") {
-      setTimeout(() => {
-        anchor.scrollIntoView(scrollOptions);
-      }, 500);
-    }
-  }, [location, langProps.locale]);
   return null;
   // return (
   //   <Wrapper id="aboutus">
