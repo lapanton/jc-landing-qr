@@ -14,6 +14,7 @@ import {
   WrpaMobSocial,
   WrapLang,
   WrapDesktopLinks,
+  WraapInsWhhTel
 } from "./main-styled"; // WrapLoadMore, InnerLoadMore,
 import logo from "./logo.png";
 // import arrowDown from "./arrow-down.svg";
@@ -199,7 +200,7 @@ export const Main = ({ langProps }) => {
               contact@jewelcocktail.com
             </a>
           </WrapPhone>
-          <WrapMobile>
+          <WrapMobile className="mobi-mainpage">
             <div className="menuMobWrapper" onClick={handleMenu}>
               <img src={mobMenu} alt="JewelCocktail" />
               <div className={show ? "show-menu" : "hide-menu"}>
@@ -274,6 +275,27 @@ export const Main = ({ langProps }) => {
                           <img src={insn} alt="JewelCocktail" />
                         </a>
                         <a
+                      href="https://wa.me/79688116711"
+                      target="_blank"
+              
+                    >
+                      <img
+                        src={whatsapp}
+                        alt="JewelCocktail"
+                    
+                      />
+                    </a>
+                    <a
+                      href="https://t.me/AleksandraLuch"
+                      target="_blank"
+                    >
+                      <img
+                        src={telegram}
+                        alt="JewelCockail"
+                    
+                      />
+                    </a>
+                        <a
                           href="https://dzen.ru/jewelcocktail.com"
                           className="youtube-social"
                           target="_blank"
@@ -287,41 +309,31 @@ export const Main = ({ langProps }) => {
                       </>
                     )}
 
-                    {/*<a href="mailto:info@jewelcocktail.com" className="email-social">*/}
-                    {/*  <img src={googn} alt="JewelCocktail"/>*/}
-                    {/*</a>*/}
                   </WrpaMobSocial>
-                  <div style={{ textAlign: "center" }}>
+                  {locale === "en" && (
+                  <WraapInsWhhTel>
                     <a
                       href="https://wa.me/79688116711"
                       target="_blank"
-                      style={{
-                        maxWidth: "27px",
-                        display: "inline-block",
-                        marginRight: "10px",
-                      }}
+              
                     >
                       <img
                         src={whatsapp}
                         alt="JewelCocktail"
-                        style={{ maxWidth: "100%" }}
+                    
                       />
                     </a>
                     <a
                       href="https://t.me/AleksandraLuch"
                       target="_blank"
-                      style={{
-                        maxWidth: "27px",
-                        display: "inline-block",
-                      }}
                     >
                       <img
                         src={telegram}
                         alt="JewelCockail"
-                        style={{ maxWidth: "100%" }}
+                    
                       />
                     </a>
-                    {locale === "en" && (
+                   
                       <a
                         href="https://www.instagram.com/jewel_hitech"
                         target="_blank"
@@ -329,11 +341,12 @@ export const Main = ({ langProps }) => {
                         <img
                           src={inn}
                           alt="JewelCocktail"
-                          style={{ transform: "translate(-36px, 6px)" }}
+                        
                         />
                       </a>
-                    )}
-                  </div>
+                   
+                  </WraapInsWhhTel>
+                  )}
                 </WrapMenu>
               </div>
             </div>

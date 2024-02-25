@@ -401,7 +401,7 @@ export const WrpaMobSocial = styled.div`
   border-bottom: none !important;
   display: flex !important;
   margin: 23px 0 0 0 !important;
-  justify-content: space-around !important;
+  justify-content: center !important;
   border-bottom: none !important;
   padding-top: 0 !important;
   div {
@@ -451,5 +451,23 @@ export const WrapDesktopLinks = styled.span`
   }
   a:hover {
     text-decoration: underline;
+  }
+`;
+
+export const WraapInsWhhTel = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a  {
+    margin: 0;
+    width: 30px;
+  }
+  a:nth-child(2) {
+    margin: 0 10px;
+  }
+  a:nth-child(3) {
+    img {
+      transform: scale(2);
+    }
   }
 `;

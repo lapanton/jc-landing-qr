@@ -487,7 +487,7 @@ export const WrpaMobSocial = styled.div`
   border-bottom: none !important;
   display: flex !important;
   margin: 0px 0 0 0 !important;
-  justify-content: space-around !important;
+  justify-content: center !important;
   border-bottom: none !important;
   div {
     border-bottom: none !important;
@@ -542,5 +542,23 @@ export const WrapDesktopLinks = styled.span`
   .activeMenuDesctop {
     font-weight: bolder;
     text-shadow: 0 0 14px rgba(255, 255, 255, 1);
+  }
+`;
+
+export const WraapInsWhhTel = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a  {
+    margin: 0;
+    width: 30px;
+  }
+  a:nth-child(2) {
+    margin: 0 10px;
+  }
+  a:nth-child(3) {
+    img {
+      transform: scale(2);
+    }
   }
 `;
