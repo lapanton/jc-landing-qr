@@ -17,6 +17,7 @@ import {
   CounterCart,
   WrapCardIconMobile,
   WrapDesktopLinks,
+  WraapInsWhhTel
 } from "./main-styled"; // WrapLoadMore, InnerLoadMore,
 import logo from "./logo.png";
 import mobMenu from "./mob-menu.svg";
@@ -32,6 +33,7 @@ import cnimg from "./cn.svg";
 import cardicon from "./cart-icon.png";
 import whatsapp from "../../whatsapp.png";
 import telegram from "../../telegram.png";
+import inn from "../../shop/contacts/img/innn.png";
 
 export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
   const { locale, onLocaleChange } = langProps;
@@ -338,6 +340,27 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
                           <img src={insn} alt="JewelCocktail" />
                         </a>
                         <a
+                      href="https://wa.me/79688116711"
+                      target="_blank"
+              
+                    >
+                      <img
+                        src={whatsapp}
+                        alt="JewelCocktail"
+                    
+                      />
+                    </a>
+                    <a
+                      href="https://t.me/AleksandraLuch"
+                      target="_blank"
+                    >
+                      <img
+                        src={telegram}
+                        alt="JewelCockail"
+                    
+                      />
+                    </a>
+                        <a
                           href="https://www.youtube.com/channel/UC44U3iU75Nx-Fv8LFb28I6w"
                           target="_blank"
                           rel="noopener noreferrer"
@@ -345,45 +368,47 @@ export const MainShop = ({ langProps, setShowPopup, showPopup }) => {
                         >
                           <img src={youn} alt="JewelCocktail" />
                         </a>
-                        {/*<a href="mailto:info@jewelcocktail.com" className="email-social">*/}
-                        {/*  <img src={googn} alt="JewelCocktail"/>*/}
-                        {/*</a>*/}
                       </WrpaMobSocial>
                     </>
                   )}
+                   {locale === "en" && (
 
-                  <div style={{ textAlign: "center" }}>
+<WraapInsWhhTel>
                     <a
                       href="https://wa.me/79688116711"
                       target="_blank"
-                      style={{
-                        maxWidth: "27px",
-                        display: "inline-block",
-                        marginRight: "10px",
-                      }}
+              
                     >
                       <img
                         src={whatsapp}
                         alt="JewelCocktail"
-                        style={{ maxWidth: "100%" }}
+                    
                       />
                     </a>
                     <a
                       href="https://t.me/AleksandraLuch"
                       target="_blank"
-                      style={{
-                        maxWidth: "27px",
-                        display: "inline-block",
-                        marginLeft: "10px",
-                      }}
                     >
                       <img
                         src={telegram}
                         alt="JewelCockail"
-                        style={{ maxWidth: "100%" }}
+                    
                       />
                     </a>
-                  </div>
+                   
+                      <a
+                        href="https://www.instagram.com/jewel_hitech"
+                        target="_blank"
+                      >
+                        <img
+                          src={inn}
+                          alt="JewelCocktail"
+                        
+                        />
+                      </a>
+                   
+                  </WraapInsWhhTel>
+                  )}
                 </WrapMenu>
               </div>
             </div>
