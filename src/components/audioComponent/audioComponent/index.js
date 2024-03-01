@@ -270,7 +270,7 @@ function AudioPlayerRecorder({
             <FormattedMessage id="audio.choose" />
             <FileInput
               type="file"
-              accept="audio/*,audio/wav,.mp3,audio/mp3,.wav,audio/mp4,.mp4"
+              accept="audio/*,audio/wav,.mp3,audio/mp3,.wav,audio/mp4,.mp4,audio/mp4a-latm,.m4a"
               onChange={handleFileChange}
             />
           </FileInputLabel>
