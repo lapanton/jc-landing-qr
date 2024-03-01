@@ -151,7 +151,7 @@
   "audio.add": "Add an audio message or song up to 1 minute",
   "permit": "I authorize the use of content for marketing purposes",
   "audio.stop": "Stop Recording",
-  "audio.save": "Save entry",
+  "audio.save": "record voice",
   "audio.accept": "Accept",
   "audio.reject": "Reject",
   "audio.rewrite": "Overwrite",

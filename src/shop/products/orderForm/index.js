@@ -1457,7 +1457,7 @@ export const OrderForm = (props) => {
             <p>
               WE CONTACT YOU AND PLACE A BILL IN SAFE{" "}
               <a
-                style={{ color: "rgb(0, 153, 51)" }}
+                style={{ color: "rgb(0, 153, 51)", display: "none" }}
                 href="https://hitechjc.com"
                 target="_blank"
               >
