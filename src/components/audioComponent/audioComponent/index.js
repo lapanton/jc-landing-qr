@@ -270,12 +270,12 @@ function AudioPlayerRecorder({
             <FormattedMessage id="audio.choose" />
             <FileInput
               type="file"
-              accept="audio/*,audio/wav,.mp3,audio/mp3,.wav"
+              accept="audio/*,audio/wav,.mp3,audio/mp3,.wav,audio/mp4,.mp4"
               onChange={handleFileChange}
             />
           </FileInputLabel>
           <FileInfo className={isRalisman ? "isRalisman" : "noisRalisman"}>
-            {chosenFileName || "Файл не выбран"}
+            {chosenFileName || <FormattedMessage id="not.selected" />}
           </FileInfo>
         </div>
       ) : tempAudioBlob ? (

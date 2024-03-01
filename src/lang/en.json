@@ -160,5 +160,6 @@
   "agat.prinosit": "Jasper is a variety of Chalcedony",
   "st.agat": "Stone with QR 'Agate'",
   "check.discount": "Add a promotional code",
-  "card.errorpromo": "Invalid promo code. Please try again."
+  "card.errorpromo": "Invalid promo code. Please try again.",
+  "not.selected": "File not selected"
 }
