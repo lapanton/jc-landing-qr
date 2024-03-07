@@ -600,7 +600,9 @@ export const ConstructorTalisman = (props) => {
                       className="checkbox-round"
                     />
                     <span>
-                      Разрешаю использовать контент в маркетинговых целях
+                      {langProps.locale === "ru"
+                        ? "Разрешаю использовать контент в маркетинговых целях"
+                        : "Agree to use my content in ads"}
                     </span>
                   </WrapInputCheckBox>
                   <ButtonSubmit
