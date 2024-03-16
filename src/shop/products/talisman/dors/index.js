@@ -440,12 +440,13 @@ export const DorsTalisman = (props) => {
           <p className="description">
             {dorsStone === "1d-t" &&
               (langProps.locale === "ru"
-                ? "Агат — источник доброй энергии"
-                : "Jasper is a variety of Chalcedony")}
-            {dorsStone === "2d-t" &&
-              (langProps.locale === "ru"
                 ? "Яшма - приносит здоровье, счастье и долголетие"
                 : "Agate has a stable and grounding quality")}
+            {dorsStone === "2d-t" &&
+              (langProps.locale === "ru"
+                ? "Агат — источник доброй энергии"
+                : "Jasper is a variety of Chalcedony")}
+
             {dorsStone === "3d-t" &&
               (langProps.locale === "ru"
                 ? "Лазурит имеет способность помогать своему владельцу"

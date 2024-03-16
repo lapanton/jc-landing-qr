@@ -459,12 +459,13 @@ export const GidorTalisman = (props) => {
           <p className="description">
             {gidorStone === "1g-t" &&
               (langProps.locale === "ru"
-                ? "Агат — источник доброй энергии"
-                : "Jasper is a variety of Chalcedony")}
-            {gidorStone === "2g-t" &&
-              (langProps.locale === "ru"
                 ? "Яшма - приносит здоровье, счастье и долголетие"
                 : "Agate has a stable and grounding quality")}
+            {gidorStone === "2g-t" &&
+              (langProps.locale === "ru"
+                ? "Агат — источник доброй энергии"
+                : "Jasper is a variety of Chalcedony")}
+
             {gidorStone === "3g-t" &&
               (langProps.locale === "ru"
                 ? "Лазурит имеет способность помогать своему владельцу"

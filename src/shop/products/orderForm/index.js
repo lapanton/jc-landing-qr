@@ -1170,8 +1170,8 @@ export const OrderForm = (props) => {
                         name="gidorTalisman_stone"
                         value={
                           langProps.locale === "ru"
-                            ? "Агат — источник доброй энергии"
-                            : "Jasper is a variety of Chalcedony"
+                            ? "Яшма - приносит здоровье, счастье и долголетие"
+                            : "Agate has a stable and grounding quality"
                         }
                       />
                     </>
@@ -1183,8 +1183,8 @@ export const OrderForm = (props) => {
                         name="gidorTalisman_stone"
                         value={
                           langProps.locale === "ru"
-                            ? "Яшма - приносит здоровье, счастье и долголетие"
-                            : "Agate has a stable and grounding quality"
+                            ? "Агат — источник доброй энергии"
+                            : "Jasper is a variety of Chalcedony"
                         }
                       />
                     </>
@@ -1302,8 +1302,8 @@ export const OrderForm = (props) => {
                         name="dorsTalisman_stone"
                         value={
                           langProps.locale === "ru"
-                            ? "Агат — источник доброй энергии"
-                            : "Jasper is a variety of Chalcedony"
+                            ? "Яшма - приносит здоровье, счастье и долголетие"
+                            : "Agate has a stable and grounding quality"
                         }
                       />
                     </>
@@ -1315,8 +1315,8 @@ export const OrderForm = (props) => {
                         name="dorsTalisman_stone"
                         value={
                           langProps.locale === "ru"
-                            ? "Яшма - приносит здоровье, счастье и долголетие"
-                            : "Agate has a stable and grounding quality"
+                            ? "Агат — источник доброй энергии"
+                            : "Jasper is a variety of Chalcedony"
                         }
                       />
                     </>
