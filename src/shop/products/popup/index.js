@@ -37,6 +37,7 @@ import oneStoneCouple from "../coupleBracelets/stone/1.png";
 import twoStoneCouple from "../coupleBracelets/stone/2.png";
 import threeStoneCouple from "../coupleBracelets/stone/3.png";
 import glass from "../glass/img/1.png";
+import tolimanImg from "../keyHolder/img/1.png";
 
 import giftIcon from "./gift_icon.png";
 
@@ -1507,6 +1508,238 @@ export const Popup = (props) => {
                               </>
                             )}
                             {item.stone === "5d" && (
+                              <>
+                                <div
+                                  style={{
+                                    fontSize: "14px",
+                                    marginBottom: "10px",
+                                  }}
+                                >
+                                  <FormattedMessage id="st.whiteon" />:{" "}
+                                  <img
+                                    src={fiveStoneM}
+                                    alt="JewelCocktail"
+                                    style={{
+                                      transform: "translate(10px, 3px)",
+                                    }}
+                                  />
+                                </div>
+                                <div
+                                  className="opacityzero"
+                                  style={{ fontSize: "14px" }}
+                                >
+                                  <FormattedMessage id="second.gift" />
+                                  <img
+                                    src={giftIcon}
+                                    alt="JewelCocktail"
+                                    style={{
+                                      transform: "translate(10px, 4px)",
+                                      maxWidth: "17px",
+                                    }}
+                                  />
+                                </div>
+                              </>
+                            )}
+                          </div>
+                        </div>
+                        <WrapCardPrice>
+                          <div className="price-card">
+                            <FormattedMessage id="shop.price" />:{" "}
+                            <span className="card-line-old">
+                              {" "}
+                              {priceData["mugskoi-dors-old"]}{" "}
+                              {langProps.locale === "ru" ? "₽" : "USD"}
+                            </span>{" "}
+                            <span className="price-card-new">
+                              = {currentPrice}{" "}
+                              {langProps.locale === "ru" ? "₽" : "USD"}{" "}
+                            </span>
+                          </div>
+                          <img
+                            src={langProps.locale === "ru" ? sale : sale}
+                            alt="JewelCocktail"
+                            className="card-icon-sale"
+                          />
+                        </WrapCardPrice>
+                      </div>
+                    </WrapProductDescription>
+                    <br />
+                    <hr />
+                    <br />
+                  </>
+                ) : null}
+                {item.product === "keyholder" ? (
+                  <>
+                    <RemoveItem onClick={() => removeItem(item)}>
+                      <div style={{ textAlign: "right" }}>
+                        <img
+                          src={close}
+                          alt="JewelCocktail"
+                          style={{ maxWidth: "18px", opacity: "0.7" }}
+                        />
+                      </div>
+                    </RemoveItem>
+                    <div style={{ textAlign: "center" }}>
+                      <img
+                        style={{ maxWidth: "100px" }}
+                        src={tolimanImg}
+                        alt="JewelCocktail"
+                      />
+                    </div>
+                    <WrapProductDescription>
+                      <div style={{ textAlign: "left" }}>
+                        <span
+                          style={{
+                            color: "#727070",
+                            marginBottom: "10px",
+                            display: "inline-block",
+                          }}
+                        >
+                          {langProps.locale === "ru"
+                            ? "БРЕЛОК TOLIMAN"
+                            : "KEY HOLDER TOLIMAN"}
+                        </span>
+                        <div>
+                          <div
+                            style={{
+                              textAlign: "left",
+                              textTransform: "inherit",
+                            }}
+                          >
+                            {item.stone === "1k" && (
+                              <>
+                                <div
+                                  style={{
+                                    fontSize: "14px",
+                                    marginBottom: "10px",
+                                  }}
+                                >
+                                  <FormattedMessage id="st.fire" />:{" "}
+                                  <img
+                                    src={oneStoneM}
+                                    alt="JewelCocktail"
+                                    style={{
+                                      transform: "translate(10px, 3px)",
+                                    }}
+                                  />
+                                </div>
+                                <div
+                                  className="opacityzero"
+                                  style={{ fontSize: "14px" }}
+                                >
+                                  <FormattedMessage id="second.gift" />
+                                  <img
+                                    src={giftIcon}
+                                    alt="JewelCocktail"
+                                    style={{
+                                      transform: "translate(10px, 4px)",
+                                      maxWidth: "17px",
+                                    }}
+                                  />
+                                </div>
+                              </>
+                            )}
+                            {item.stone === "2k" && (
+                              <>
+                                <div
+                                  style={{
+                                    fontSize: "14px",
+                                    marginBottom: "10px",
+                                  }}
+                                >
+                                  {" "}
+                                  <FormattedMessage id="st.ocean" />:{" "}
+                                  <img
+                                    src={twoStoneM}
+                                    alt="JewelCocktail"
+                                    style={{
+                                      transform: "translate(10px, 3px)",
+                                    }}
+                                  />
+                                </div>
+                                <div
+                                  className="opacityzero"
+                                  style={{ fontSize: "14px" }}
+                                >
+                                  <FormattedMessage id="second.gift" />
+                                  <img
+                                    src={giftIcon}
+                                    alt="JewelCocktail"
+                                    style={{
+                                      transform: "translate(10px, 4px)",
+                                      maxWidth: "17px",
+                                    }}
+                                  />
+                                </div>
+                              </>
+                            )}
+                            {item.stone === "3k" && (
+                              <>
+                                <div
+                                  style={{
+                                    fontSize: "14px",
+                                    marginBottom: "10px",
+                                  }}
+                                >
+                                  <FormattedMessage id="st.yeorg" />:{" "}
+                                  <img
+                                    src={threeStoneM}
+                                    alt="JewelCocktail"
+                                    style={{
+                                      transform: "translate(10px, 3px)",
+                                    }}
+                                  />
+                                </div>
+                                <div
+                                  className="opacityzero"
+                                  style={{ fontSize: "14px" }}
+                                >
+                                  <FormattedMessage id="second.gift" />
+                                  <img
+                                    src={giftIcon}
+                                    alt="JewelCocktail"
+                                    style={{
+                                      transform: "translate(10px, 4px)",
+                                      maxWidth: "17px",
+                                    }}
+                                  />
+                                </div>
+                              </>
+                            )}
+                            {item.stone === "4k" && (
+                              <>
+                                <div
+                                  style={{
+                                    fontSize: "14px",
+                                    marginBottom: "10px",
+                                  }}
+                                >
+                                  <FormattedMessage id="st.agat" />:{" "}
+                                  <img
+                                    src={fourStoneM}
+                                    alt="JewelCocktail"
+                                    style={{
+                                      transform: "translate(10px, 3px)",
+                                    }}
+                                  />
+                                </div>
+                                <div
+                                  className="opacityzero"
+                                  style={{ fontSize: "14px" }}
+                                >
+                                  <FormattedMessage id="second.gift" />
+                                  <img
+                                    src={giftIcon}
+                                    alt="JewelCocktail"
+                                    style={{
+                                      transform: "translate(10px, 4px)",
+                                      maxWidth: "17px",
+                                    }}
+                                  />
+                                </div>
+                              </>
+                            )}
+                            {item.stone === "5k" && (
                               <>
                                 <div
                                   style={{

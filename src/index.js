@@ -8,7 +8,7 @@ const initLocale = () => {
     navigator.language.substr(0, 2) === "ru" &&
     !window.location.href.includes("https://jewelcocktail.com/i/")
   ) {
-    return "en";
+    return "ru";
   } else {
     return "en";
   }

@@ -579,6 +579,84 @@ export const OrderForm = (props) => {
                   )}
                 </div>
               ) : null}
+              {item.product === "keyholder" ? (
+                <div key={index}>
+                  <input
+                    type="hidden"
+                    name="keyholder"
+                    value={
+                      langProps.locale === "ru"
+                        ? "БРЕЛОК TOLIMAN"
+                        : "KEY HOLDER TOLIMAN"
+                    }
+                  />
+                  {item.stone === "1k" && (
+                    <>
+                      <input
+                        type="hidden"
+                        name="keyHolderStone"
+                        value={
+                          langProps.locale === "ru"
+                            ? "Камeнь: Огонь"
+                            : "Stone: Fire"
+                        }
+                      />
+                    </>
+                  )}
+                  {item.stone === "2k" && (
+                    <>
+                      <input
+                        type="hidden"
+                        name="keyHolderStone"
+                        value={
+                          langProps.locale === "ru"
+                            ? "Камeнь: Океан"
+                            : "Stone: Ocean"
+                        }
+                      />
+                    </>
+                  )}
+                  {item.stone === "3k" && (
+                    <>
+                      <input
+                        type="hidden"
+                        name="keyHolderStone"
+                        value={
+                          langProps.locale === "ru"
+                            ? "Камeнь: Жёлтый органик"
+                            : "Stone: Yellow marble"
+                        }
+                      />
+                    </>
+                  )}
+                  {item.stone === "4k" && (
+                    <>
+                      <input
+                        type="hidden"
+                        name="keyHolderStone"
+                        value={
+                          langProps.locale === "ru"
+                            ? "Камeнь: Агат"
+                            : "Stone: Agate"
+                        }
+                      />
+                    </>
+                  )}
+                  {item.stone === "5k" && (
+                    <>
+                      <input
+                        type="hidden"
+                        name="keyHolderStone"
+                        value={
+                          langProps.locale === "ru"
+                            ? "Камeнь: Белый оникс"
+                            : "Stone: White onyx"
+                        }
+                      />
+                    </>
+                  )}
+                </div>
+              ) : null}
               {item.product === "couple" ? (
                 <div key={index}>
                   <input
