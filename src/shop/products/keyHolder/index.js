@@ -489,7 +489,9 @@ export const KeyHolder = (props) => {
           {showDescr && (
             <DescriptionView>
               <p className="slave-text">
-                <FormattedMessage id="descriptions.dors" />
+                {langProps.locale === "ru"
+                  ? "дизайнерский БРЕЛОК в стиле минимализм на каждый день со сменными вставками (камнями)"
+                  : "Designer KEY HOLDER TOLIMAN in minimalist style for every day with interchangeable inserts (stones)"}
               </p>
               <p className="main-text">
                 <FormattedMessage id="shop.complectation" />:
