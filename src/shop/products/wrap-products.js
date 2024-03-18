@@ -15,6 +15,7 @@ import { GidorTalisman } from "./talisman/gidor";
 import { DorsTalisman } from "./talisman/dors";
 import { Orion } from "./orion";
 import { KeyHolder } from "./keyHolder";
+import { KeyHolderTalisman } from "./talisman/holderTalisman";
 // import {CoupleBraceletsTalisman} from "./talisman/coupleBracelets";
 
 export const WrapProducts = (props) => {
@@ -26,6 +27,12 @@ export const WrapProducts = (props) => {
       <WrapperProducts className={showPopup ? "showPopup" : "noPopup"}>
         {location.pathname === "/talisman" ? (
           <>
+            <KeyHolderTalisman
+              langProps={langProps}
+              setCard={setCard}
+              setShowPopup={setShowPopup}
+              card={card}
+            />
             <PendantsTalisman
               langProps={langProps}
               setCard={setCard}

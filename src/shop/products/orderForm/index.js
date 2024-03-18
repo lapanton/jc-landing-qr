@@ -1492,6 +1492,137 @@ export const OrderForm = (props) => {
                   )}
                 </div>
               ) : null}
+              {item.product === "keyHolderTalisman" ? (
+                <div key={index}>
+                  <input
+                    type="hidden"
+                    name="keyHolderTalisman"
+                    value={
+                      langProps.locale === "ru"
+                        ? "БРЕЛОК-ТАЛИСМАН"
+                        : "KEY HOLDER-TALISMAN"
+                    }
+                  />
+
+                  {item.stone === "1k-t" && (
+                    <>
+                      <input
+                        type="hidden"
+                        name="keyHolder_stone"
+                        value={
+                          langProps.locale === "ru"
+                            ? "Агат — источник доброй энергии"
+                            : "Agate has a stable and grounding quality"
+                        }
+                      />
+                    </>
+                  )}
+                  {item.stone === "2k-t" && (
+                    <>
+                      <input
+                        type="hidden"
+                        name="keyHolder_stone"
+                        value={
+                          langProps.locale === "ru"
+                            ? "Яшма - приносит здоровье, счастье и долголетие"
+                            : "Jasper is a variety of Chalcedony"
+                        }
+                      />
+                    </>
+                  )}
+                  {item.stone === "3k-t" && (
+                    <>
+                      <input
+                        type="hidden"
+                        name="keyHolder_stone"
+                        value={
+                          langProps.locale === "ru"
+                            ? "Лазурит имеет способность помогать своему владельцу"
+                            : "Lapis Lazuli is a beautiful celestial deep blue stone"
+                        }
+                      />
+                    </>
+                  )}
+                  {item.stone === "4k-t" && (
+                    <>
+                      <input
+                        type="hidden"
+                        name="keyHolder_stone"
+                        value={
+                          langProps.locale === "ru"
+                            ? "Обсидиан является мощным поглотителем энерги"
+                            : "Obsidian is truth-enhancing. A strongly protective stone"
+                        }
+                      />
+                    </>
+                  )}
+                  {item.stone === "5k-t" && (
+                    <>
+                      <input
+                        type="hidden"
+                        name="keyHolder_stone"
+                        value={
+                          langProps.locale === "ru"
+                            ? "Пирит — источник доброй энергии"
+                            : "Pyrite is an iron sulfide mineral with a metallic luster"
+                        }
+                      />
+                    </>
+                  )}
+                  {item.stone === "6k-t" && (
+                    <>
+                      <input
+                        type="hidden"
+                        name="keyHolder_stone"
+                        value={
+                          langProps.locale === "ru"
+                            ? "Тигровый глаз — камень мудрецов и правителей"
+                            : "Tiger eye is a variety of Chalcedony"
+                        }
+                      />
+                    </>
+                  )}
+                  {item.stone === "7k-t" && (
+                    <>
+                      <input
+                        type="hidden"
+                        name="keyHolder_stone"
+                        value={
+                          langProps.locale === "ru"
+                            ? "Гематит - один из сильнейших магических камней"
+                            : "Hematite is also called like Blood stone"
+                        }
+                      />
+                    </>
+                  )}
+                  {item.stone === "8k-t" && (
+                    <>
+                      <input
+                        type="hidden"
+                        name="keyHolder_stone"
+                        value={
+                          langProps.locale === "ru"
+                            ? "Оникс является мощным поглотителем энерги."
+                            : "Onyx is a stone that offers up powerful vibrations of protection"
+                        }
+                      />
+                    </>
+                  )}
+                  {item.stone === "9k-t" && (
+                    <>
+                      <input
+                        type="hidden"
+                        name="keyHolder_stone"
+                        value={
+                          langProps.locale === "ru"
+                            ? "Нефрит - является олицетворением пяти качеств человека"
+                            : "Jade is a popular gemstone sometimes referred to as the stone"
+                        }
+                      />
+                    </>
+                  )}
+                </div>
+              ) : null}
             </>
           );
         })}

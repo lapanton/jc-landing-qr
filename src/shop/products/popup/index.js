@@ -44,6 +44,15 @@ import giftIcon from "./gift_icon.png";
 import sales from "../sale.png";
 import sale from "../sale.png";
 import saleten from "../saleten.png";
+import Mtwo from "../../../talisman/talismanStone/man-stones/IMG_6052.png";
+import Mfive from "../../../talisman/talismanStone/man-stones/IMG_6059.png";
+import Msix from "../../../talisman/talismanStone/man-stones/IMG_6045.png";
+import Meight from "../../../talisman/talismanStone/man-stones/IMG_6057.png";
+import Mnine from "../../../talisman/talismanStone/man-stones/IMG_6058.png";
+import Meleven from "../../../talisman/talismanStone/man-stones/IMG_6043.png";
+import Mthirteen from "../../../talisman/talismanStone/man-stones/IMG_6060.png";
+import Mseventeen from "../../../talisman/talismanStone/man-stones/IMG_6053.png";
+import Mtwenty from "../../../talisman/talismanStone/wom-stones/IMG_6131.png";
 
 export const Popup = (props) => {
   const { showPopup, setShowPopup, card, setCard, langProps } = props;
@@ -2309,6 +2318,388 @@ export const Popup = (props) => {
                               {
                                 priceData["talisman-mugskoi-braslet-old-price"]
                               }{" "}
+                              {langProps.locale === "ru" ? "₽" : "USD"}
+                            </span>
+                            <span className="price-card-new">
+                              {currentPrice}{" "}
+                              {langProps.locale === "ru" ? "₽" : "USD"}{" "}
+                            </span>
+                          </div>
+                          <img
+                            src={langProps.locale === "ru" ? sale : saleten}
+                            alt="JewelCocktail"
+                            className="card-icon-sale"
+                          />
+                        </WrapCardPrice>
+                      </div>
+                    </WrapProductDescription>
+                    <br />
+                    <hr />
+                    <br />
+                  </>
+                ) : null}
+                {item.product === "keyHolderTalisman" ? (
+                  <>
+                    <RemoveItem onClick={() => removeItem(item)}>
+                      <div style={{ textAlign: "right" }}>
+                        <img
+                          src={close}
+                          alt="JewelCocktail"
+                          style={{ maxWidth: "18px", opacity: "0.7" }}
+                        />
+                      </div>
+                    </RemoveItem>
+                    <div style={{ textAlign: "center" }}>
+                      <img
+                        style={{ maxWidth: "100px" }}
+                        src={tolimanImg}
+                        alt="JewelCocktail"
+                      />
+                    </div>
+                    <WrapProductDescription>
+                      <div style={{ textAlign: "left" }}>
+                        <span
+                          style={{
+                            color: "#727070",
+                            marginBottom: "10px",
+                            display: "inline-block",
+                            textAlign: "center",
+                            marginTop: "10px",
+                          }}
+                        >
+                          {langProps.locale === "ru"
+                            ? "БРЕЛОК-ТАЛИСМАН"
+                            : "KEY HOLDER-TALISMAN"}
+                        </span>
+                        <div>
+                          <div
+                            style={{
+                              textAlign: "left",
+                              textTransform: "inherit",
+                            }}
+                          >
+                            {item.stone === "1k-t" && (
+                              <>
+                                <div
+                                  style={{
+                                    fontSize: "14px",
+                                    marginBottom: "10px",
+                                  }}
+                                >
+                                  {langProps.locale === "ru"
+                                    ? "Яшма - приносит здоровье, счастье и долголетие"
+                                    : "Agate has a stable and grounding quality"}
+                                  <img
+                                    src={Mtwo}
+                                    alt="JewelCocktail"
+                                    style={{
+                                      transform: "translate(10px, 3px)",
+                                    }}
+                                  />
+                                </div>
+                                <div
+                                  className="opacityzero"
+                                  style={{ fontSize: "14px" }}
+                                >
+                                  <FormattedMessage id="st.twogift" />:{" "}
+                                  <img
+                                    src={giftIcon}
+                                    alt="JewelCocktail"
+                                    style={{
+                                      transform: "translate(10px, 4px)",
+                                      maxWidth: "17px",
+                                    }}
+                                  />
+                                </div>
+                              </>
+                            )}
+                            {item.stone === "2k-t" && (
+                              <>
+                                <div
+                                  style={{
+                                    fontSize: "14px",
+                                    marginBottom: "10px",
+                                  }}
+                                >
+                                  {langProps.locale === "ru"
+                                    ? "Агат — источник доброй энергии"
+                                    : "Jasper is a variety of Chalcedony"}
+                                  <img
+                                    src={Mfive}
+                                    alt="JewelCocktail"
+                                    style={{
+                                      transform: "translate(10px, 3px)",
+                                    }}
+                                  />
+                                </div>
+                                <div
+                                  className="opacityzero"
+                                  style={{ fontSize: "14px" }}
+                                >
+                                  <FormattedMessage id="st.twogift" />:{" "}
+                                  <img
+                                    src={giftIcon}
+                                    alt="JewelCocktail"
+                                    style={{
+                                      transform: "translate(10px, 4px)",
+                                      maxWidth: "17px",
+                                    }}
+                                  />
+                                </div>
+                              </>
+                            )}
+                            {item.stone === "3k-t" && (
+                              <>
+                                <div
+                                  style={{
+                                    fontSize: "14px",
+                                    marginBottom: "10px",
+                                  }}
+                                >
+                                  {langProps.locale === "ru"
+                                    ? "Лазурит имеет способность помогать своему владельцу"
+                                    : "Lapis Lazuli is a beautiful celestial deep blue stone"}
+                                  <img
+                                    src={Msix}
+                                    alt="JewelCocktail"
+                                    style={{
+                                      transform: "translate(10px, 3px)",
+                                    }}
+                                  />
+                                </div>
+                                <div
+                                  className="opacityzero"
+                                  style={{ fontSize: "14px" }}
+                                >
+                                  <FormattedMessage id="st.twogift" />:{" "}
+                                  <img
+                                    src={giftIcon}
+                                    alt="JewelCocktail"
+                                    style={{
+                                      transform: "translate(10px, 4px)",
+                                      maxWidth: "17px",
+                                    }}
+                                  />
+                                </div>
+                              </>
+                            )}
+                            {item.stone === "4k-t" && (
+                              <>
+                                <div
+                                  style={{
+                                    fontSize: "14px",
+                                    marginBottom: "10px",
+                                  }}
+                                >
+                                  {langProps.locale === "ru"
+                                    ? "Обсидиан является мощным поглотителем энерги"
+                                    : "Obsidian is truth-enhancing. A strongly protective stone"}
+                                  <img
+                                    src={Meight}
+                                    alt="JewelCocktail"
+                                    style={{
+                                      transform: "translate(10px, 3px)",
+                                    }}
+                                  />
+                                </div>
+                                <div
+                                  className="opacityzero"
+                                  style={{ fontSize: "14px" }}
+                                >
+                                  <FormattedMessage id="st.twogift" />:{" "}
+                                  <img
+                                    src={giftIcon}
+                                    alt="JewelCocktail"
+                                    style={{
+                                      transform: "translate(10px, 4px)",
+                                      maxWidth: "17px",
+                                    }}
+                                  />
+                                </div>
+                              </>
+                            )}
+                            {item.stone === "5k-t" && (
+                              <>
+                                <div
+                                  style={{
+                                    fontSize: "14px",
+                                    marginBottom: "10px",
+                                  }}
+                                >
+                                  {langProps.locale === "ru"
+                                    ? "Пирит — источник доброй энергии"
+                                    : "Pyrite is an iron sulfide mineral with a metallic luster"}
+                                  <img
+                                    src={Mnine}
+                                    alt="JewelCocktail"
+                                    style={{
+                                      transform: "translate(10px, 3px)",
+                                    }}
+                                  />
+                                </div>
+                                <div
+                                  className="opacityzero"
+                                  style={{ fontSize: "14px" }}
+                                >
+                                  <FormattedMessage id="st.twogift" />:{" "}
+                                  <img
+                                    src={giftIcon}
+                                    alt="JewelCocktail"
+                                    style={{
+                                      transform: "translate(10px, 4px)",
+                                      maxWidth: "17px",
+                                    }}
+                                  />
+                                </div>
+                              </>
+                            )}
+                            {item.stone === "6k-t" && (
+                              <>
+                                <div
+                                  style={{
+                                    fontSize: "14px",
+                                    marginBottom: "10px",
+                                  }}
+                                >
+                                  {langProps.locale === "ru"
+                                    ? "Тигровый глаз — камень мудрецов и правителей"
+                                    : "Tiger eye is a variety of Chalcedony"}
+                                  <img
+                                    src={Meleven}
+                                    alt="JewelCocktail"
+                                    style={{
+                                      transform: "translate(10px, 3px)",
+                                    }}
+                                  />
+                                </div>
+                                <div
+                                  className="opacityzero"
+                                  style={{ fontSize: "14px" }}
+                                >
+                                  <img
+                                    src={giftIcon}
+                                    alt="JewelCocktail"
+                                    style={{
+                                      transform: "translate(10px, 4px)",
+                                      maxWidth: "17px",
+                                    }}
+                                  />
+                                </div>
+                              </>
+                            )}
+                            {item.stone === "7k-t" && (
+                              <>
+                                <div
+                                  style={{
+                                    fontSize: "14px",
+                                    marginBottom: "10px",
+                                  }}
+                                >
+                                  {langProps.locale === "ru"
+                                    ? "Гематит - один из сильнейших магических камней"
+                                    : "Hematite is also called like Blood stone"}
+                                  <img
+                                    src={Mthirteen}
+                                    alt="JewelCocktail"
+                                    style={{
+                                      transform: "translate(10px, 3px)",
+                                    }}
+                                  />
+                                </div>
+                                <div
+                                  className="opacityzero"
+                                  style={{ fontSize: "14px" }}
+                                >
+                                  <FormattedMessage id="st.twogift" />:{" "}
+                                  <img
+                                    src={giftIcon}
+                                    alt="JewelCocktail"
+                                    style={{
+                                      transform: "translate(10px, 4px)",
+                                      maxWidth: "17px",
+                                    }}
+                                  />
+                                </div>
+                              </>
+                            )}
+                            {item.stone === "8k-t" && (
+                              <>
+                                <div
+                                  style={{
+                                    fontSize: "14px",
+                                    marginBottom: "10px",
+                                  }}
+                                >
+                                  {langProps.locale === "ru"
+                                    ? "Оникс является мощным поглотителем энерги."
+                                    : "Onyx is a stone that offers up powerful vibrations of protection"}
+                                  <img
+                                    src={Mseventeen}
+                                    alt="JewelCocktail"
+                                    style={{
+                                      transform: "translate(10px, 3px)",
+                                    }}
+                                  />
+                                </div>
+                                <div
+                                  className="opacityzero"
+                                  style={{ fontSize: "14px" }}
+                                >
+                                  <FormattedMessage id="st.twogift" />:{" "}
+                                  <img
+                                    src={giftIcon}
+                                    alt="JewelCocktail"
+                                    style={{
+                                      transform: "translate(10px, 4px)",
+                                      maxWidth: "17px",
+                                    }}
+                                  />
+                                </div>
+                              </>
+                            )}
+                            {item.stone === "9k-t" && (
+                              <>
+                                <div
+                                  style={{
+                                    fontSize: "14px",
+                                    marginBottom: "10px",
+                                  }}
+                                >
+                                  {langProps.locale === "ru"
+                                    ? "Нефрит - является олицетворением пяти качеств человека"
+                                    : "Jade is a popular gemstone sometimes referred to as the stone"}
+                                  <img
+                                    src={Mtwenty}
+                                    alt="JewelCocktail"
+                                    style={{
+                                      transform: "translate(10px, 3px)",
+                                    }}
+                                  />
+                                </div>
+                                <div
+                                  className="opacityzero"
+                                  style={{ fontSize: "14px" }}
+                                >
+                                  <FormattedMessage id="st.twogift" />:{" "}
+                                  <img
+                                    src={giftIcon}
+                                    alt="JewelCocktail"
+                                    style={{
+                                      transform: "translate(10px, 4px)",
+                                      maxWidth: "17px",
+                                    }}
+                                  />
+                                </div>
+                              </>
+                            )}
+                          </div>
+                        </div>
+                        <WrapCardPrice>
+                          <div className="price-card">
+                            <FormattedMessage id="shop.price" />:{" "}
+                            <span className="card-line-old">
+                              {" "}
+                              {priceData["talisman-keyhoder-old"]}{" "}
                               {langProps.locale === "ru" ? "₽" : "USD"}
                             </span>
                             <span className="price-card-new">
