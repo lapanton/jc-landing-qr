@@ -1248,7 +1248,7 @@ export const OrderForm = (props) => {
                         name="gidorTalisman_stone"
                         value={
                           langProps.locale === "ru"
-                            ? "Яшма - приносит здоровье, счастье и долголетие"
+                            ? "Agate has a stable and grounding quality"
                             : "Agate has a stable and grounding quality"
                         }
                       />
@@ -1262,7 +1262,7 @@ export const OrderForm = (props) => {
                         value={
                           langProps.locale === "ru"
                             ? "Агат — источник доброй энергии"
-                            : "Jasper is a variety of Chalcedony"
+                            : "Яшма - приносит здоровье, счастье и долголетие"
                         }
                       />
                     </>
@@ -1380,7 +1380,7 @@ export const OrderForm = (props) => {
                         name="dorsTalisman_stone"
                         value={
                           langProps.locale === "ru"
-                            ? "Яшма - приносит здоровье, счастье и долголетие"
+                            ? "Агат — источник доброй энергии "
                             : "Agate has a stable and grounding quality"
                         }
                       />
@@ -1393,7 +1393,7 @@ export const OrderForm = (props) => {
                         name="dorsTalisman_stone"
                         value={
                           langProps.locale === "ru"
-                            ? "Агат — источник доброй энергии"
+                            ? "Яшма - приносит здоровье, счастье и долголетие"
                             : "Jasper is a variety of Chalcedony"
                         }
                       />
