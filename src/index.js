@@ -23,7 +23,7 @@ const loadMessages = (locale) => {
     case "zh":
       return import("./lang/zh.json");
     default:
-      return import("./lang/ru.json");
+      return import("./lang/en.json");
   }
 };
 

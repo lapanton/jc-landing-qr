@@ -5,7 +5,7 @@ import {
   WrapperDesktop,
   LeftPart,
   RightPart,
-  WrapVideo,
+  // WrapVideo,
   WrapSubtitle,
   WrapDescription,
   GiftButton,

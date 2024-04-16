@@ -7,7 +7,6 @@ import {
 } from "./selfProduct-styled";
 
 export const ExampleTalisman = (props) => {
-  const { langProps } = props;
   return (
     <Wrapper
       id="selfProduct"
