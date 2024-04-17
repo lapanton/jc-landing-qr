@@ -16,6 +16,7 @@ import twelve from "./img/12.png";
 import thirteen from "./img/13.png";
 import fourteen from "./img/14.png";
 import fifteen from "./img/15.png";
+import oneone from "./img/11111.png";
 
 // import oneStone from './stone/1.png';
 // import twoStone from './stone/2.png';
@@ -282,7 +283,7 @@ export const KeyHolderTalisman = (props) => {
     setOpenZoomImage(true);
     sliderReferral.current?.slickGoTo(index);
   };
-  if (langProps.locale === "ru") return null;
+
   return (
     <Wrapper>
       <Inner>
@@ -300,6 +301,14 @@ export const KeyHolderTalisman = (props) => {
             <div>
               <img src={one} alt="JewelCocktail" onClick={() => openZoom(1)} />
             </div>
+            <div>
+              <img
+                src={oneone}
+                alt="JewelCocktail"
+                onClick={() => openZoom(1)}
+              />
+            </div>
+
             <div>
               <img src={two} alt="JewelCocktail" onClick={() => openZoom(2)} />
             </div>
@@ -457,6 +466,10 @@ export const KeyHolderTalisman = (props) => {
             <div>
               <img src={one} alt="JewelCocktail" />
             </div>
+            <div>
+              <img src={oneone} alt="JewelCocktail" />
+            </div>
+
             <div>
               <img src={two} alt="JewelCocktail" />
             </div>

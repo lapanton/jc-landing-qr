@@ -244,7 +244,7 @@ export const KeyHolder = (props) => {
     setOpenZoomImage(true);
     sliderReferral.current?.slickGoTo(index);
   };
-  if (langProps.locale === "ru") return null;
+
   return (
     <Wrapper>
       <Inner>

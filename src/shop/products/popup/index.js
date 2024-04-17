@@ -1788,7 +1788,7 @@ export const Popup = (props) => {
                             <FormattedMessage id="shop.price" />:{" "}
                             <span className="card-line-old">
                               {" "}
-                              {priceData["mugskoi-dors-old"]}{" "}
+                              {priceData["keyhoder-old"]}{" "}
                               {langProps.locale === "ru" ? "₽" : "USD"}
                             </span>{" "}
                             <span className="price-card-new">
