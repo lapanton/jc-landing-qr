@@ -28,7 +28,7 @@ const loadMessages = (locale) => {
 };
 
 const LocalizationWrapper = () => {
-  const [locale, setLocale] = useState("ru");
+  const [locale, setLocale] = useState(initLocale);
   const [messages, setMessages] = useState(null);
 
   useEffect(() => {
