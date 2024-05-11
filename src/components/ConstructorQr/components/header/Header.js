@@ -10,7 +10,6 @@ import telegram from "../../../../telegram.png";
 
 export const Header = (props) => {
   const { value, langProps } = props;
-  console.log("value.status", value.status);
   return (
     <Wrapper>
       {value.status !== "completed" && (

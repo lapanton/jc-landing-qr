@@ -9,6 +9,28 @@ import { Description } from "./components/description/Description";
 import { ConstructorTalisman } from "./components/constructor/Constructor";
 import { WrapperPending } from "./components/constructor/constructor-style";
 import StarfieldAnimation from "react-starfield-animation";
+import logo from "../../components/withUs/logo.png";
+import styled from "styled-components";
+
+const WrapCloseText = styled.span`
+  &.itCloseText {
+    transform: translate(3%, 0%);
+    display: inline-block;
+    font-family: "Organetto";
+    white-space: nowrap;
+    color: #fff;
+    pointer-events: none;
+    position: absolute;
+    left: 5rem;
+    top: 50%;
+    &:hover {
+      text-decoration: none;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
+    }
+  }
+`;
 
 export const ConstructorQrTalisman = (props) => {
   const { langProps } = props;
@@ -57,6 +79,28 @@ export const ConstructorQrTalisman = (props) => {
         <Description langProps={langProps} />
       )}
       <ConstructorTalisman value={value} langProps={langProps} />
+      {value.status === "completed" && (
+        <div
+          style={{
+            position: "relative",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <a
+            href="/"
+            style={{ width: "5rem", height: "5rem", display: "inlineBlock" }}
+          >
+            <img src={logo} alt="JewelCocktail" style={{ maxWidth: "100%" }} />
+            {value.status === "completed" && (
+              <WrapCloseText className="itCloseText">
+                ...closer than it seems
+              </WrapCloseText>
+            )}
+          </a>
+        </div>
+      )}
     </div>
   );
 };
