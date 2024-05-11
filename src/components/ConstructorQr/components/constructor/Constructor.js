@@ -295,6 +295,7 @@ export const Constructor = (props) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    lazyLoad: true,
   };
 
   if (value?.status === "pending") {
