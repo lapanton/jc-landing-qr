@@ -10,16 +10,19 @@ import telegram from "../../../../telegram.png";
 
 export const Header = (props) => {
   const { value, langProps } = props;
+  console.log("value.status", value.status);
   return (
     <Wrapper>
-      <div style={{ position: "relative" }}>
-        <a href="/">
-          <img src={logo} alt="JewelCocktail" />
-          {value.status === "completed" && (
-            <span className="itCloseText">...closer than it seems</span>
-          )}
-        </a>
-      </div>
+      {value.status !== "completed" && (
+        <div style={{ position: "relative" }}>
+          <a href="/">
+            <img src={logo} alt="JewelCocktail" />
+            {value.status === "completed" && (
+              <span className="itCloseText">...closer than it seems</span>
+            )}
+          </a>
+        </div>
+      )}
 
       <Menu>
         <div>О нас</div>
