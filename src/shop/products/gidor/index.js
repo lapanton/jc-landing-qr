@@ -450,7 +450,11 @@ export const Gidor = (props) => {
             />
           </WrapPrices>
           <p className="bonus">
-            <FormattedMessage id="culon.twoketroys" />
+            {langProps.locale === "ru" ? (
+              "Кулон, вставка с qr-кодом, фирменная коробка"
+            ) : (
+              <FormattedMessage id="culon.twoketroys" />
+            )}
           </p>
           <div className="buy-button" onClick={() => buyGidor()}>
             <FormattedMessage id="shop.buy" />

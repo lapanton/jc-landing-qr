@@ -409,7 +409,11 @@ export const CoupleBracelets = (props) => {
             />
           </WrapPrices>
           <p className="bonus">
-            <FormattedMessage id="two.brtwo" />
+            {langProps.locale === "ru" ? (
+              "2 Браслета, 2 вставки с qr-кодом, фирменная коробка"
+            ) : (
+              <FormattedMessage id="two.brtwo" />
+            )}
           </p>
           <div className="buy-button" onClick={() => buyCouple()}>
             <FormattedMessage id="shop.buy" />

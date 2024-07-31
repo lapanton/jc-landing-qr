@@ -465,7 +465,11 @@ export const Rings = (props) => {
             />
           </WrapPrices>
           <p className="bonus">
-            <FormattedMessage id="ring.twoketroys" />
+            {langProps.locale === "ru" ? (
+              "Кольцо,вставка с qr-кодом, фирменная коробка"
+            ) : (
+              <FormattedMessage id="ring.twoketroys" />
+            )}
           </p>
           <div className="buy-button" onClick={() => buyRing()}>
             <FormattedMessage id="shop.buy" />
