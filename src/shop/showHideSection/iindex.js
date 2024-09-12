@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FormattedMessage } from "react-intl";
-import YouTube from "react-youtube";
+// import YouTube from "react-youtube";
 import {
   Wrapper,
   Inner,
@@ -10,16 +10,16 @@ import {
   WrapDesktop,
   LeftPart,
   RightPart,
-  SecondWrapDesktop,
-  LeftPartSecond,
-  RighhtPartSecond,
+  // SecondWrapDesktop,
+  // LeftPartSecond,
+  // RighhtPartSecond,
 } from "./showHideSection-styled";
 import arrowDown from "./arrowDown.png";
 import arrowUp from "./arrowUp.png";
 import { Descr } from "../info/info-styled";
-import heeart from "./heeeart.png";
-import qrcode from "./qrcode.png";
-import { SecondVideo } from "./prev";
+// import heeart from "./heeeart.png";
+// import qrcode from "./qrcode.png";
+// import { SecondVideo } from "./prev";
 import vid from "./prev/preview.mp4";
 import viden from "./prev/preview-en.mp4";
 
@@ -49,15 +49,15 @@ export const ShowHideSection = (props) => {
       behavior: "smooth",
     });
   };
-  const opts = {
-    height: isMobile ? "300" : "460",
-    width: isMobile ? "360px" : "600px",
-    playerVars: {
-      // https://developers.google.com/youtube/player_parameters
-      autoplay: 0,
-      mute: 1,
-    },
-  };
+  // const opts = {
+  //   height: isMobile ? "300" : "460",
+  //   width: isMobile ? "360px" : "600px",
+  //   playerVars: {
+  //     // https://developers.google.com/youtube/player_parameters
+  //     autoplay: 0,
+  //     mute: 1,
+  //   },
+  // };
   return (
     <>
       {isMobile ? (

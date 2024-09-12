@@ -47,6 +47,7 @@ import { ConstructorQrTalisman } from "./components/ConstructorQrTalisman/Constr
 import { ExampleTalisman } from "./talisman/exampleTalisman";
 import { PopupShopClose } from "./components/popupshopclose";
 import { Oldnew } from "./shop/oldnew";
+import { PixelArt } from "./pixelart/pixelArt";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -404,6 +405,17 @@ export const App = (props) => {
               <ScrollArrow />
             </div>
           }
+        />
+        <Route
+          path="/pixelart"
+          element={
+            <>
+              <GlobalStyle />
+              <PixelArt />
+              {/*<Footer langProps={props} exact />*/}
+            </>
+          }
+          exact
         />
       </Routes>
     </Router>
