@@ -235,7 +235,7 @@ export const App = (props) => {
           element={
             <>
               <PrivacyPolicy langProps={props} />
-              <Footer langProps={props} />
+              <Footer langProps={props} color={true} />
             </>
           }
           exact
