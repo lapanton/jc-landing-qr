@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Top.Mail.Ru counter -->
-    <script type="text/javascript">
-      var _tmr = window._tmr || (window._tmr = []);
-      _tmr.push({id: "3512782", type: "pageView", start: (new Date()).getTime()});
-      (function (d, w, id) {
-        if (d.getElementById(id)) return;
-        var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
-        ts.src = "https://top-fwz1.mail.ru/js/code.js";
-        var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
-        if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
-      })(document, window, "tmr-code");
+    <script>
+      fetch('https://ipinfo.io/json')
+        .then((res) => res.json())
+        .then((data) => {
+          if (data.country !== "RU") {
+            window.location.href =  "https://jewelcocktail.ru";
+          }
+        })
+        .catch((err) => {
+          console.warn("IP lookup failed:", err);
+        });
     </script>
-    <noscript><div><img src="https://top-fwz1.mail.ru/counter?id=3512782;js=na" style="position:absolute;left:-9999px;" alt="Top.Mail.Ru" /></div></noscript>
-    <!-- /Top.Mail.Ru counter -->
+
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript" >
       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
@@ -28,8 +27,6 @@
         webvisor:true
       });
     </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/86799297" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
     <noscript><div><img src="https://mc.yandex.ru/watch/86799297" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
     <meta charset="utf-8" />
@@ -48,8 +45,6 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
     <meta name="theme-color" content="#000000" />
-    <!-- Description in Russian -->
-    <meta name="description" lang="ru" content="ЖИВЫЕ HI-TECH УКРАШЕНИЯ JEWEL COCKTAIL С META-ПОСЛАНИЕМ.  Особый подарок-талисман с душой: наполни своим смыслом." />
 
     <!-- Description in English -->
     <meta name="description" lang="en" content="CUSTOMISABLE HI-TECH JEWERLY WITH META-MESSAGE. Unique gift with soul to fix your bright moments and feelings." />
