@@ -3,27 +3,44 @@ import ReactDOM from "react-dom";
 import { IntlProvider } from "react-intl";
 import { App } from "./App";
 
-// Force locale to "en"
-const locale = "en";
+const initLocale = () => {
+  if (
+    navigator.language.substr(0, 2) === "ru" &&
+    !window.location.href.includes("https://jewelcocktail.com/i/")
+  ) {
+    return "ru";
+  } else {
+    return "en";
+  }
+};
 
-const loadMessages = () => {
-  return import("./lang/en.json");
+const loadMessages = (locale) => {
+  switch (locale) {
+    case "en":
+      return import("./lang/en.json");
+    case "ru":
+      return import("./lang/ru.json");
+    case "zh":
+      return import("./lang/zh.json");
+    default:
+      return import("./lang/ru.json");
+  }
 };
 
 const LocalizationWrapper = () => {
+  const [locale, setLocale] = useState(initLocale);
   const [messages, setMessages] = useState(null);
 
   useEffect(() => {
-    loadMessages().then(setMessages);
-  }, []);
+    loadMessages(locale).then(setMessages);
+  }, [locale]);
 
   return messages ? (
     <IntlProvider locale={locale} messages={messages}>
-      <App locale={locale} onLocaleChange={() => {}} />
+      <App locale={locale} onLocaleChange={(locale) => setLocale(locale)} />
     </IntlProvider>
   ) : null;
 };
-
 export default LocalizationWrapper;
 
 ReactDOM.render(
