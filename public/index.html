@@ -5,8 +5,11 @@
       fetch('https://ipinfo.io/json')
         .then((res) => res.json())
         .then((data) => {
-          if (data.country === "RU") {
-            window.location.href =  "https://jewelcocktail.ru";
+          if (
+            data.country === "RU" &&
+            !window.location.href.toLowerCase().includes("https://jewelcocktail.com/qr")
+          ) {
+            window.location.replace("https://jewelcocktail.ru");
           }
         })
         .catch((err) => {
