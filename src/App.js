@@ -23,6 +23,7 @@ import { Carousel } from "./components/Carousel/Carousel";
 import { ConstructorQr } from "./components/ConstructorQr/ConstructorQr";
 import CheckStatusQR from "./hocs/CheckStatusQR";
 import { PrivacyPolicy } from "./components/PrivacyPolicy";
+import { PrivacyPolicyQr } from "./components/PrivacyPolicyQr";
 
 // Shop
 import { SelfProductShop } from "./shop/selfProduct";
@@ -240,6 +241,20 @@ export const App = (props) => {
           }
           exact
         />
+
+        <Route
+          path="/privacyqr"
+          element={
+            <>
+              <PrivacyPolicyQr langProps={props} />
+              <Footer langProps={props} color={true} />
+            </>
+          }
+          exact
+        />
+
+
+
 
         <Route
           path="/shop"

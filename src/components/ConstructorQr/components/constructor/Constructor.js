@@ -663,9 +663,9 @@ export const Constructor = (props) => {
                       className="checkbox-round"
                     />
                     <span>
-                      <FormattedMessage id="qr.podone" />
-                      <a href="/privacy" target="_blank">
-                        <FormattedMessage id="qr.podtwo" />
+                      By confirming you agree to
+                      <a href="/privacyqr" target="_blank">
+                        User Agreement for Creating Digital Messages
                       </a>
                     </span>
                   </WrapInputCheckBox>
